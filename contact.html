@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="/support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="icon" type="image/png" href="/favicon.png" />
+<link rel="apple-touch-icon" href="/favicon.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  body { margin: 0; background: #ffffff; color: #1f2429; font-family: Archivo, Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: #06708f; text-decoration: none; }
+  a:hover { color: #16304f; text-decoration: underline; }
+  p { text-wrap: pretty; }
+  input, button, select, textarea { font-family: inherit; }
+  :focus-visible { outline: 2px solid #0b9fd8; outline-offset: 2px; }
+  ::selection { background: #bfe8f8; }
+  @keyframes ocFade { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes ocRise { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+
+  /* Responsive layout — media queries cannot be expressed as inline styles.
+     Everything that must change together fires at the same width. */
+  @media (max-width: 1180px) {
+    [style*="grid-template-columns: 262px"], [style*="grid-template-columns: 264px"],
+    [style*="grid-template-columns: 268px"], [style*="grid-template-columns: 274px"],
+    [style*="grid-template-columns: 296px"], [style*="grid-template-columns: 300px"],
+    [style*="grid-template-columns: 400px"], [style*="grid-template-columns: 1fr 400px"],
+    [style*="1fr) 340px"], [style*="1fr) 360px"], [style*="1fr) 380px"],
+    [style*="1fr) 396px"], [style*="1fr) 400px"], [style*="1fr) 404px"],
+    [style*="1fr) 412px"], [style*="1fr) 420px"], [style*="1fr) 424px"],
+    [style*="1fr) 430px"], [style*="1fr) 460px"], [style*="1fr) 480px"] {
+      grid-template-columns: 1fr !important;
+    }
+    [style*="position: sticky"] { position: static !important; }
+    [style*="display: flex"] { flex-wrap: wrap; }
+    [style*="flex: 1 1 auto"] { min-width: 0; }
+    [style*="height: 84px"], [style*="height: 82px"], [style*="height: 48px"] { height: auto !important; }
+    [style*="height: 38px"] { height: auto !important; padding-top: 7px; padding-bottom: 7px; }
+    [style*="max-width: 660px"], [style*="max-width: 620px"], [style*="max-width: 560px"],
+    [style*="max-width: 480px"] { max-width: 100% !important; }
+  }
+  @media (max-width: 900px) {
+    [style*="grid-template-columns: repeat"] {
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)) !important;
+    }
+    [style*="columns: 3"] { columns: 2 !important; }
+  }
+  @media (max-width: 700px) {
+    [style*="display: grid"] { grid-template-columns: 1fr !important; }
+    [style*="columns: 3"] { columns: 1 !important; }
+  }
+</style>
+</helmet>
+
+<div style="width: 100%; background: #ffffff;">
+
+  <div style="background: #0b1c2e; color: #a9bed4; font-size: 13.5px;">
+    <div style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 36px); height: 38px; display: flex; align-items: center; gap: 26px;">
+      <span style="display: flex; align-items: center; gap: 8px;"><span style="width: 6px; height: 6px; border-radius: 50%; background: {{ openDot }};"></span>{{ openNow }}</span>
+      <span style="display: flex; align-items: center; gap: 8px; padding-left: 26px; border-left: 1px solid #24456b;"><span style="font-family: 'IBM Plex Mono', monospace; color: #9ab0c6; letter-spacing: 0.08em;">MELBOURNE</span>{{ localTime }}</span>
+      <span style="margin-left: auto; display: flex; align-items: center; gap: 22px;">
+        <a href="/datasheets.html" style="color: #d6e4f2; text-decoration: none;">Datasheets</a>
+        <a href="/brands.html" style="color: #d6e4f2; text-decoration: none;">Brands</a>
+        <a href="#" style="color: #d6e4f2; text-decoration: none;">Shipping</a>
+        <a href="#" style="color: #ffffff; font-family: 'IBM Plex Mono', monospace; text-decoration: none;">+61 3 9708 2390</a>
+      </span>
+    </div>
+  </div>
+
+  <div style="background: #ffffff; border-bottom: 1px solid #dbe2e8;">
+    <div style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 36px); height: 84px; display: flex; align-items: center; gap: 28px;">
+      <a href="/index.html" style="flex: 0 0 auto; display: block;" aria-label="Ocean Controls home">
+        <img src="/uploads/OceanControls-Design-Assets/02-brand-assets/ocean-controls-logo.png" alt="Ocean Controls" style="height: 42px; width: auto; display: block;" />
+      </a>
+      <div style="flex: 1 1 auto; max-width: 560px; display: flex; height: 46px; border: 1.5px solid #16304f;">
+        <input type="text" placeholder="Search 2,279 products — name, SKU, MPN or spec" style="flex: 1 1 auto; border: 0; outline: none; padding: 0 14px; font-size: 15.5px; min-width: 0;" aria-label="Search products" />
+        <a href="/search.html" style="display: flex; align-items: center; justify-content: center; text-decoration: none; flex: 0 0 auto; border: 0; background: #16304f; color: #ffffff; padding: 0 24px; font-size: 14.5px; font-weight: 600; cursor: pointer;" style-hover="background: #0673a2;">Search</a>
+      </div>
+      <div style="margin-left: auto; display: flex; align-items: center; gap: 8px;">
+        <a href="#" style="display: flex; flex-direction: column; padding: 7px 14px; border: 1px solid #dbe2e8; text-decoration: none; color: #16304f;" style-hover="border-color: #16304f; text-decoration: none;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #667380;">Account</span>
+          <span style="font-size: 14.5px; font-weight: 600;">Sign in</span>
+        </a>
+        <a href="/cart.html" style="display: flex; align-items: center; gap: 11px; padding: 9px 15px; background: #16304f; color: #ffffff; text-decoration: none;" style-hover="background: #0b1c2e; text-decoration: none;">
+          <span style="position: relative; display: block; width: 17px; height: 17px; border: 1.5px solid #ffffff; border-top-color: transparent;">
+            <span style="position: absolute; top: -5px; left: 2px; right: 2px; height: 5px; border: 1.5px solid #ffffff; border-bottom: 0;"></span>
+          </span>
+          <span style="display: flex; flex-direction: column; line-height: 1.25;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #90b4d4;">0 items</span>
+            <span style="font-size: 14.5px; font-weight: 600;">$0.00</span>
+          </span>
+        </a>
+      </div>
+    </div>
+
+    <div style="background: #16304f;">
+      <div style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 36px); display: flex; align-items: stretch;">
+        <a href="/shop.html" style="display: flex; align-items: center; gap: 11px; padding: 0 20px; height: 48px; background: #0673a2; color: #ffffff; font-size: 15px; font-weight: 600; text-decoration: none; flex: 0 0 auto;" style-hover="background: #06708f; text-decoration: none;">
+          <span style="display: flex; flex-direction: column; gap: 3px;">
+            <span style="display: block; width: 15px; height: 2px; background: #ffffff;"></span>
+            <span style="display: block; width: 15px; height: 2px; background: #ffffff;"></span>
+            <span style="display: block; width: 15px; height: 2px; background: #ffffff;"></span>
+          </span>
+          Shop by category
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; font-weight: 600; color: #ffffff;">237</span>
+        </a>
+        <a href="/shop.html" style="display: flex; align-items: center; padding: 0 15px; color: #d6e4f2; font-size: 15px; font-weight: 500; text-decoration: none;" style-hover="background: #24456b; color: #ffffff; text-decoration: none;">New arrivals</a>
+        <a href="/brands.html" style="display: flex; align-items: center; padding: 0 15px; color: #d6e4f2; font-size: 15px; font-weight: 500; text-decoration: none;" style-hover="background: #24456b; color: #ffffff; text-decoration: none;">Brands</a>
+        <a href="/about.html" style="display: flex; align-items: center; padding: 0 15px; color: #d6e4f2; font-size: 15px; font-weight: 500; text-decoration: none;" style-hover="background: #24456b; color: #ffffff; text-decoration: none;">Engineering services</a>
+        <a href="/datasheets.html" style="display: flex; align-items: center; padding: 0 15px; color: #d6e4f2; font-size: 15px; font-weight: 500; text-decoration: none;" style-hover="background: #24456b; color: #ffffff; text-decoration: none;">Datasheets</a>
+        <a href="/about.html" style="display: flex; align-items: center; padding: 0 15px; color: #d6e4f2; font-size: 15px; font-weight: 500; text-decoration: none;" style-hover="background: #24456b; color: #ffffff; text-decoration: none;">About</a>
+        <a href="/contact.html" style="display: flex; align-items: center; padding: 0 15px; background: #24456b; color: #ffffff; font-size: 15px; font-weight: 600; text-decoration: none; box-shadow: inset 0 -2px 0 #0b9fd8;">Contact</a>
+        <a href="#" style="margin-left: auto; display: flex; align-items: center; gap: 9px; padding: 0 18px; background: #0673a2; color: #ffffff; font-size: 14.5px; font-weight: 600; text-decoration: none;" style-hover="background: #6fd0f5; color: #0b1c2e; text-decoration: none;">
+          <span style="font-family: 'IBM Plex Mono', monospace;">+61 3 9708 2390</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <section data-screen-label="Contact hero" style="background: #0b1c2e; position: relative; overflow: hidden;">
+    <div style="position: absolute; inset: 0; background-image: linear-gradient(90deg, rgba(11,159,216,0.08) 1px, transparent 1px), linear-gradient(180deg, rgba(11,159,216,0.08) 1px, transparent 1px); background-size: 60px 60px;"></div>
+    <div style="position: absolute; top: -220px; right: -150px; width: 640px; height: 640px; border-radius: 50%; background: radial-gradient(circle, rgba(11,159,216,0.2), rgba(11,159,216,0) 66%);"></div>
+
+    <div style="position: relative; max-width: 1440px; margin: 0 auto; padding: 52px 36px 0;">
+      <div style="max-width: 46em; animation: ocRise 0.5s ease-out;">
+        <div style="display: inline-flex; align-items: center; gap: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #6fd0f5; border: 1px solid rgba(111,208,245,0.35); padding: 6px 12px; margin-bottom: 24px;">
+          <span style="width: 6px; height: 6px; background: #6fd0f5;"></span>Contact our team
+        </div>
+        <h1 style="margin: 0 0 18px; font-size: 48px; line-height: 1.06; font-weight: 800; letter-spacing: -0.03em; color: #ffffff;">Ask an engineer, not a call centre.</h1>
+        <p style="margin: 0; font-size: 18.5px; line-height: 1.65; color: #a9bed4;">Whether you have a question about a product, need help with an order, or want to talk through a project, our team is ready to assist. Reach us by phone, by email, or in person at the Carrum Downs store.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(235px, 1fr)); gap: 1px; background: #24456b; border: 1px solid #24456b; margin-top: 36px;">
+        <sc-for list="{{ channels }}" as="c" hint-placeholder-count="0">
+          <div style="background: #0b1c2e; padding: 22px 24px 24px; display: flex; flex-direction: column;">
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #9ab0c6; margin-bottom: 10px;">{{ c.k }}</div>
+            <div style="font-size: 18.5px; font-weight: 700; color: #ffffff; letter-spacing: -0.015em; margin-bottom: 6px;">{{ c.v }}</div>
+            <p style="margin: 0 0 12px; font-size: 14px; line-height: 1.6; color: #a9bed4; flex: 1 1 auto;">{{ c.body }}</p>
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: {{ c.etaFg }};">{{ c.eta }}</div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Form and details" style="background: #ffffff; padding: 40px 0 78px;">
+    <div style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 36px); display: grid; grid-template-columns: minmax(0, 1fr) 420px; gap: 40px; align-items: start;">
+
+      <div>
+        <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
+          <div style="border: 1px solid #dbe2e8;">
+            <div style="padding: 22px 26px 20px; border-bottom: 1px solid #dbe2e8;">
+              <div style="display: flex; align-items: center; gap: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #06708f; margin-bottom: 12px;">
+                <span style="width: 22px; height: 1px; background: #0673a2;"></span>Send us a message
+              </div>
+              <h2 style="margin: 0 0 8px; font-size: 27px; line-height: 1.15; font-weight: 700; letter-spacing: -0.02em; color: #0b1c2e;">What is this about?</h2>
+              <p style="margin: 0; font-size: 15.5px; line-height: 1.6; color: #667380;">Pick the closest match and the form asks only for what we actually need to answer you.</p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(265px, 1fr)); gap: 1px; background: #dbe2e8; border-bottom: 1px solid #dbe2e8;">
+              <sc-for list="{{ topics }}" as="t" hint-placeholder-count="0">
+                <button onClick="{{ t.pick }}" style="{{ t.style }}">
+                  <span style="display: flex; align-items: center; gap: 9px;">
+                    <span style="{{ t.radioStyle }}"></span>
+                    <span style="font-size: 15px; font-weight: 600;">{{ t.label }}</span>
+                  </span>
+                  <span style="display: block; font-size: 13.5px; line-height: 1.5; color: {{ t.bodyFg }}; margin-top: 7px; padding-left: 25px;">{{ t.body }}</span>
+                </button>
+              </sc-for>
+            </div>
+
+            <div style="padding: 24px 26px 26px;">
+              <div style="display: flex; align-items: flex-start; gap: 12px; border-left: 3px solid #0b9fd8; background: #f2f9fd; padding: 13px 16px; margin-bottom: 22px;">
+                <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #06708f; flex: 0 0 auto; padding-top: 2px;">Goes to</span>
+                <p style="margin: 0; font-size: 14.5px; line-height: 1.6; color: #24456b;">{{ topicNote }}</p>
+              </div>
+
+              <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px;">
+                <sc-for list="{{ fields }}" as="f" hint-placeholder-count="0">
+                  <label style="{{ f.wrapStyle }}">
+                    <span style="display: flex; align-items: baseline; justify-content: space-between; gap: 10px;">
+                      <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #667380;">{{ f.label }}</span>
+                      <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; color: {{ f.hintFg }};">{{ f.hint }}</span>
+                    </span>
+                    <input type="text" placeholder="{{ f.placeholder }}" value="{{ f.value }}" onInput="{{ f.onInput }}" style="{{ f.inputStyle }}" />
+                    <span style="display: block; font-size: 13px; color: #c2364a; min-height: 19px;">{{ f.error }}</span>
+                  </label>
+                </sc-for>
+
+                <label style="grid-column: span 2; display: flex; flex-direction: column; gap: 6px;">
+                  <span style="display: flex; align-items: baseline; justify-content: space-between; gap: 10px;">
+                    <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #667380;">Message</span>
+                    <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; color: #c2364a;">Required</span>
+                  </span>
+                  <textarea placeholder="{{ messagePlaceholder }}" value="{{ message }}" onInput="{{ onMessage }}" style="{{ messageStyle }}"></textarea>
+                  <span style="display: flex; align-items: baseline; justify-content: space-between; gap: 10px;">
+                    <span style="font-size: 13px; color: #c2364a; min-height: 19px;">{{ messageError }}</span>
+                    <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #667380;">{{ messageCount }}</span>
+                  </span>
+                </label>
+              </div>
+
+              <div style="display: flex; align-items: center; gap: 16px; margin-top: 12px; padding-top: 20px; border-top: 1px solid #eef2f5;">
+                <button onClick="{{ submit }}" style="padding: 15px 28px; background: #16304f; color: #ffffff; border: 0; font-size: 16px; font-weight: 700; cursor: pointer;" style-hover="background: #0673a2;">{{ submitLabel }}</button>
+                <div style="font-size: 14px; line-height: 1.55; color: #667380; max-width: 34em;">{{ privacyNote }}</div>
+              </div>
+            </div>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+          <div style="border: 1px solid #dbe2e8; border-top: 3px solid #2fd07e; animation: ocRise 0.4s ease-out;">
+            <div style="padding: 34px 30px 30px; border-bottom: 1px solid #dbe2e8;">
+              <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #157a45; margin-bottom: 14px;">Message sent</div>
+              <h2 style="margin: 0 0 12px; font-size: 29px; line-height: 1.14; font-weight: 700; letter-spacing: -0.025em; color: #0b1c2e;">{{ sentTitle }}</h2>
+              <p style="margin: 0 0 22px; font-size: 16.5px; line-height: 1.7; color: #4b5560; max-width: 54em;">{{ sentBody }}</p>
+              <div style="display: flex; gap: 12px;">
+                <button onClick="{{ reset }}" style="padding: 13px 22px; background: #16304f; color: #ffffff; border: 0; font-size: 15px; font-weight: 600; cursor: pointer;" style-hover="background: #0673a2;">Send another message</button>
+                <a href="/shop.html" style="padding: 13px 22px; border: 1px solid #c9d3dc; color: #16304f; font-size: 15px; font-weight: 600; text-decoration: none;" style-hover="border-color: #16304f; text-decoration: none;">Back to the catalogue</a>
+              </div>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(265px, 1fr)); gap: 1px; background: #dbe2e8;">
+              <sc-for list="{{ sentFacts }}" as="s" hint-placeholder-count="0">
+                <div style="background: #ffffff; padding: 16px 20px;">
+                  <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #667380;">{{ s.k }}</div>
+                  <div style="font-size: 15.5px; font-weight: 600; color: #16304f; margin-top: 4px; line-height: 1.45;">{{ s.v }}</div>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+        </sc-if>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(265px, 1fr)); gap: 1px; background: #dbe2e8; border: 1px solid #dbe2e8; margin-top: 26px;">
+          <sc-for list="{{ selfServe }}" as="s" hint-placeholder-count="0">
+            <a href="{{ s.href }}" style="background: #ffffff; padding: 22px 24px 24px; text-decoration: none; display: flex; flex-direction: column;" style-hover="background: #f7f9fb; text-decoration: none;">
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #06708f; margin-bottom: 10px;">Answer it yourself</span>
+              <span style="font-size: 17px; font-weight: 700; color: #0b1c2e; letter-spacing: -0.01em; margin-bottom: 6px;">{{ s.title }}</span>
+              <span style="font-size: 14.5px; line-height: 1.6; color: #667380; flex: 1 1 auto;">{{ s.body }}</span>
+              <span style="font-size: 14px; font-weight: 600; color: #06708f; margin-top: 12px;">{{ s.cta }} →</span>
+            </a>
+          </sc-for>
+        </div>
+      </div>
+
+      <div>
+        <div style="border: 1px solid #dbe2e8; margin-bottom: 20px;">
+          <div style="padding: 16px 20px; background: #16304f; color: #ffffff;">
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #6fd0f5;">Ocean Controls Pty Ltd</div>
+            <div style="font-size: 20.5px; font-weight: 700; letter-spacing: -0.015em; margin-top: 4px;">Carrum Downs, Victoria</div>
+          </div>
+
+          <div style="height: 224px; background: #eef2f5; border-bottom: 1px solid #dbe2e8; position: relative; overflow: hidden;">
+            <div style="position: absolute; inset: 0; background-image: linear-gradient(90deg, rgba(22,48,79,0.07) 1px, transparent 1px), linear-gradient(180deg, rgba(22,48,79,0.07) 1px, transparent 1px); background-size: 26px 26px;"></div>
+            <div style="position: absolute; top: 0; bottom: 0; left: 33%; width: 14px; background: #dbe2e8;"></div>
+            <div style="position: absolute; left: 0; right: 0; top: 54%; height: 18px; background: #d3dce4; border-top: 1px solid #c9d3dc; border-bottom: 1px solid #c9d3dc;"></div>
+            <div style="position: absolute; left: 47%; top: 28%; width: 78px; height: 48px; background: #16304f; display: flex; align-items: center; justify-content: center; font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.1em; color: #6fd0f5;">OCEAN</div>
+            <div style="position: absolute; left: calc(47% + 90px); top: 31%; display: flex; flex-direction: column; gap: 3px;">
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 600; color: #16304f;">44 Frankston Gardens Dr</span>
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #667380;">Carrum Downs VIC 3201</span>
+            </div>
+            <div style="position: absolute; left: 5%; top: 58.5%; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.06em; color: #667380;">FRANKSTON – DANDENONG RD</div>
+            <div style="position: absolute; left: 34.5%; top: 7%; font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #667380;">M3</div>
+            <div style="position: absolute; right: 10px; bottom: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #667380; background: #ffffff; border: 1px solid #dbe2e8; padding: 4px 7px;">Schematic — live map on build</div>
+          </div>
+
+          <sc-for list="{{ details }}" as="d" hint-placeholder-count="0">
+            <div style="display: grid; grid-template-columns: 116px minmax(0, 1fr); gap: 14px; padding: 13px 20px; border-bottom: 1px solid #eef2f5;">
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #667380; padding-top: 2px;">{{ d.k }}</span>
+              <span style="font-size: 15px; line-height: 1.55; color: #16304f; font-weight: 500; white-space: pre-line;">{{ d.v }}</span>
+            </div>
+          </sc-for>
+
+          <div style="padding: 18px 20px; background: #f7f9fb; display: flex; gap: 10px;">
+            <a href="#" style="flex: 1 1 auto; text-align: center; padding: 12px; background: #16304f; color: #ffffff; font-size: 14.5px; font-weight: 600; text-decoration: none;" style-hover="background: #0673a2; text-decoration: none;">Get directions</a>
+            <a href="#" style="flex: 1 1 auto; text-align: center; padding: 12px; background: #ffffff; border: 1px solid #c9d3dc; color: #16304f; font-size: 14.5px; font-weight: 600; text-decoration: none;" style-hover="border-color: #16304f; text-decoration: none;">Call the store</a>
+          </div>
+        </div>
+
+        <div style="border: 1px solid #dbe2e8; margin-bottom: 20px;">
+          <div style="padding: 13px 20px; background: #f7f9fb; border-bottom: 1px solid #dbe2e8; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #667380;">Visiting the store</div>
+          <div style="padding: 18px 20px;">
+            <p style="margin: 0 0 14px; font-size: 15px; line-height: 1.65; color: #4b5560;">You are welcome to browse, speak with our team, or collect an order in person, Monday to Friday between 9am and 5pm.</p>
+            <div style="display: flex; align-items: flex-start; gap: 12px; border-left: 3px solid #d99b2b; background: #fdf8ef; padding: 13px 15px; margin-bottom: 16px;">
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #a5620a; flex: 0 0 auto; padding-top: 2px;">Tip</span>
+              <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #6b4a12;">Call ahead before visiting to confirm stock. The website inventory is kept up to date, but we would rather have the part waiting for you than have you drive out for nothing.</p>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: #dbe2e8; border: 1px solid #dbe2e8;">
+              <sc-for list="{{ visitFacts }}" as="v" hint-placeholder-count="0">
+                <div style="background: #ffffff; padding: 13px 15px;">
+                  <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #667380;">{{ v.k }}</div>
+                  <div style="font-size: 15px; font-weight: 600; color: #16304f; margin-top: 4px; line-height: 1.45; white-space: pre-line;">{{ v.v }}</div>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+        </div>
+
+        <div style="border: 1px solid #dbe2e8;">
+          <div style="padding: 13px 20px; background: #f7f9fb; border-bottom: 1px solid #dbe2e8; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #667380;">Payment we accept</div>
+          <div style="padding: 18px 20px;">
+            <div style="display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 14px;">
+              <sc-for list="{{ payments }}" as="p" hint-placeholder-count="0">
+                <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; border: 1px solid #dbe2e8; padding: 7px 11px; color: #24456b;">{{ p }}</span>
+              </sc-for>
+            </div>
+            <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #667380;">In store and online. A surcharge may apply to American Express transactions. Approved trade accounts can pay on 30-day terms against a purchase order.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Distributors" style="background: #f7f9fb; border-top: 1px solid #dbe2e8; border-bottom: 1px solid #dbe2e8; padding: 70px 0 76px;">
+    <div style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 36px);">
+      <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 44px; margin-bottom: 30px;">
+        <div>
+          <div style="display: flex; align-items: center; gap: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #06708f; margin-bottom: 14px;">
+            <span style="width: 22px; height: 1px; background: #0673a2;"></span>Outside Australia
+          </div>
+          <h2 style="margin: 0 0 12px; font-size: 33px; line-height: 1.12; font-weight: 700; letter-spacing: -0.025em; color: #0b1c2e;">Distributors &amp; resellers</h2>
+          <p style="margin: 0; font-size: 17px; line-height: 1.7; color: #667380; max-width: 56em;">The companies below carry various Ocean Controls products. Our range sells worldwide — contact your local distributor for a more convenient purchase, particularly for the Davis Instruments weather station interfaces.</p>
+        </div>
+        <div style="flex: 0 0 auto; display: flex; gap: 4px;">
+          <sc-for list="{{ regionTabs }}" as="r" hint-placeholder-count="0">
+            <button onClick="{{ r.pick }}" style="{{ r.style }}">
+              <span>{{ r.label }}</span>
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; opacity: 0.7;">{{ r.count }}</span>
+            </button>
+          </sc-for>
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(265px, 1fr)); gap: 16px; animation: ocFade 0.24s ease-out;">
+        <sc-for list="{{ distributors }}" as="d" hint-placeholder-count="0">
+          <div style="background: #ffffff; border: 1px solid #dbe2e8; border-top: 2px solid #dbe2e8; display: flex; flex-direction: column;" style-hover="border-color: #b6c6d4; border-top-color: #0673a2; box-shadow: 0 14px 30px -20px rgba(11,28,46,0.5);">
+            <div style="padding: 18px 20px 16px; border-bottom: 1px solid #eef2f5;">
+              <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 9px;">
+                <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; background: #16304f; color: #ffffff; padding: 3px 7px;">{{ d.country }}</span>
+                <sc-if value="{{ d.hasNote }}" hint-placeholder-val="{{ false }}">
+                  <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; background: #eaf6fc; color: #06708f; padding: 3px 7px;">{{ d.note }}</span>
+                </sc-if>
+              </div>
+              <div style="font-size: 18.5px; font-weight: 700; color: #0b1c2e; letter-spacing: -0.015em; margin-bottom: 6px;">{{ d.name }}</div>
+              <a href="#" style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 500;">{{ d.web }}</a>
+            </div>
+            <div style="padding: 16px 20px 18px; display: flex; flex-direction: column; flex: 1 1 auto;">
+              <p style="margin: 0 0 14px; font-size: 14.5px; line-height: 1.6; color: #4b5560; flex: 1 1 auto;">{{ d.carries }}</p>
+              <div style="display: flex; flex-direction: column; gap: 1px; background: #dbe2e8; border: 1px solid #dbe2e8;">
+                <sc-for list="{{ d.rows }}" as="r" hint-placeholder-count="0">
+                  <div style="background: #ffffff; padding: 10px 13px;">
+                    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #667380;">{{ r.k }}</div>
+                    <div style="font-size: 14px; color: #16304f; margin-top: 3px; line-height: 1.5; white-space: pre-line;">{{ r.v }}</div>
+                  </div>
+                </sc-for>
+              </div>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+
+      <div style="display: grid; grid-template-columns: minmax(0, 1fr) 400px; gap: 20px; margin-top: 20px; align-items: stretch;">
+        <div style="background: #16304f; color: #ffffff; padding: 30px 32px; display: flex; flex-direction: column; justify-content: center;">
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #6fd0f5; margin-bottom: 12px;">Carry our range</div>
+          <h3 style="margin: 0 0 12px; font-size: 25px; line-height: 1.2; font-weight: 700; letter-spacing: -0.02em;">Want to be a distributor or reseller?</h3>
+          <p style="margin: 0 0 20px; font-size: 16px; line-height: 1.7; color: #b7cade; max-width: 46em;">Nine companies across six countries already resell the Ocean Controls range — mostly the Davis Instruments weather station interfaces and our electronic kits. If you want to add them to your catalogue, or you manufacture equipment you would like us to represent in Australia, get in touch.</p>
+          <div style="display: flex; gap: 12px;">
+            <button onClick="{{ pickDistributor }}" style="padding: 13px 22px; background: #0673a2; color: #ffffff; border: 0; font-size: 15px; font-weight: 600; cursor: pointer;" style-hover="background: #ffffff; color: #0b1c2e;">Start a distributor enquiry</button>
+            <a href="/brands.html" style="padding: 13px 22px; border: 1px solid #3a5878; color: #ffffff; font-size: 15px; font-weight: 600; text-decoration: none;" style-hover="border-color: #ffffff; text-decoration: none;">See the brands we carry</a>
+          </div>
+        </div>
+        <div style="background: #ffffff; border: 1px solid #dbe2e8;">
+          <div style="padding: 13px 18px; background: #f7f9fb; border-bottom: 1px solid #dbe2e8; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #667380;">Reach, at a glance</div>
+          <sc-for list="{{ reachRows }}" as="r" hint-placeholder-count="0">
+            <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding: 13px 18px; border-bottom: 1px solid #eef2f5;">
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #667380;">{{ r.k }}</span>
+              <span style="font-size: 16.5px; font-weight: 700; color: #0b1c2e; font-variant-numeric: tabular-nums;">{{ r.v }}</span>
+            </div>
+          </sc-for>
+          <div style="padding: 14px 18px; font-size: 13.5px; line-height: 1.6; color: #667380;">Counted from the distributor list on the current site. Six countries: United States, Mexico, France, Spain, Finland and the United Kingdom.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer data-screen-label="Footer" style="background: #0b1c2e; color: #a9bed4; padding: 54px 0 0;">
+    <div style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 36px);">
+      <div style="display: grid; grid-template-columns: 1.3fr 1fr 1fr 1fr 1.2fr; gap: 44px; padding-bottom: 46px; border-bottom: 1px solid #24456b;">
+        <div>
+          <div style="background: #ffffff; display: inline-block; padding: 10px 12px; margin-bottom: 20px;">
+            <img src="/uploads/OceanControls-Design-Assets/02-brand-assets/ocean-controls-logo.png" alt="Ocean Controls" style="height: 34px; width: auto; display: block;" />
+          </div>
+          <p style="margin: 0 0 18px; font-size: 15px; line-height: 1.65; color: #a9bed4; max-width: 30em;">Australia's specialist supplier of industrial automation and control equipment, and a custom engineering shop for the jobs the catalogue can't cover.</p>
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; line-height: 1.9; color: #a9bed4;">
+            <div>44 Frankston Gardens Drive</div>
+            <div>Carrum Downs VIC 3201, Australia</div>
+            <div style="margin-top: 8px; color: #d6e4f2;">+61 3 9708 2390</div>
+            <div><a href="#" style="color: #6fd0f5;">info@oceancontrols.com.au</a></div>
+            <div style="margin-top: 8px;">ABN 28 659 967 398</div>
+          </div>
+        </div>
+        <div>
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #9ab0c6; margin-bottom: 16px;">Get in touch</div>
+          <div style="display: flex; flex-direction: column; gap: 9px; font-size: 15px;">
+            <sc-for list="{{ footerTopics }}" as="f" hint-placeholder-count="0">
+              <button onClick="{{ f.pick }}" style="border: 0; background: none; padding: 0; font-family: inherit; font-size: 15px; color: #d6e4f2; cursor: pointer; text-align: left;" style-hover="color: #6fd0f5;">{{ f.label }}</button>
+            </sc-for>
+          </div>
+        </div>
+        <div>
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #9ab0c6; margin-bottom: 16px;">Shop</div>
+          <div style="display: flex; flex-direction: column; gap: 9px; font-size: 15px;">
+            <a href="/shop.html" style="color: #d6e4f2; text-decoration: none;">All products</a>
+            <a href="/shop.html" style="color: #d6e4f2; text-decoration: none;">New arrivals</a>
+            <a href="/shop.html" style="color: #d6e4f2; text-decoration: none;">Clearance &amp; sale</a>
+            <a href="/brands.html" style="color: #d6e4f2; text-decoration: none;">All brands</a>
+            <a href="/datasheets.html" style="color: #d6e4f2; text-decoration: none;">Datasheets</a>
+          </div>
+        </div>
+        <div>
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #9ab0c6; margin-bottom: 16px;">Company</div>
+          <div style="display: flex; flex-direction: column; gap: 9px; font-size: 15px;">
+            <a href="/about.html" style="color: #d6e4f2; text-decoration: none;">About us</a>
+            <a href="/about.html" style="color: #d6e4f2; text-decoration: none;">Engineering services</a>
+            <a href="/articles.html" style="color: #d6e4f2; text-decoration: none;">Articles &amp; news</a>
+            <a href="/contact.html" style="color: #d6e4f2; text-decoration: none;">Distributors &amp; resellers</a>
+            <a href="#" style="color: #d6e4f2; text-decoration: none;">Shipping &amp; delivery</a>
+            <a href="#" style="color: #d6e4f2; text-decoration: none;">Returns &amp; warranty</a>
+          </div>
+        </div>
+        <div>
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #9ab0c6; margin-bottom: 16px;">Product updates</div>
+          <p style="margin: 0 0 14px; font-size: 15px; line-height: 1.6; color: #a9bed4;">New releases, price changes and application notes. Roughly monthly, no marketing filler.</p>
+          <div style="display: flex; margin-bottom: 22px;">
+            <input type="text" placeholder="you@company.com.au" style="flex: 1 1 auto; height: 42px; background: rgba(255,255,255,0.06); border: 1px solid #3a5878; border-right: 0; color: #ffffff; padding: 0 12px; font-size: 14.5px; outline: none; min-width: 0;" aria-label="Email address" />
+            <button style="flex: 0 0 auto; height: 42px; padding: 0 16px; background: #0673a2; color: #ffffff; border: 0; font-size: 14px; font-weight: 600; cursor: pointer;" style-hover="background: #ffffff; color: #0b1c2e;">Join</button>
+          </div>
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #9ab0c6; margin-bottom: 10px;">Payment accepted</div>
+          <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; border: 1px solid #3a5878; padding: 5px 9px; color: #d6e4f2;">VISA</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; border: 1px solid #3a5878; padding: 5px 9px; color: #d6e4f2;">MASTERCARD</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; border: 1px solid #3a5878; padding: 5px 9px; color: #d6e4f2;">AMEX</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; border: 1px solid #3a5878; padding: 5px 9px; color: #d6e4f2;">EFTPOS</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; border: 1px solid #3a5878; padding: 5px 9px; color: #d6e4f2;">ACCOUNT</span>
+          </div>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; justify-content: space-between; gap: 30px; padding: 22px 0 26px; font-size: 13.5px; color: #9ab0c6;">
+        <span>© 2026 Ocean Controls Pty Ltd. ABN 28 659 967 398. All prices in AUD and exclude GST unless stated.</span>
+        <span style="display: flex; gap: 22px;">
+          <a href="#" style="color: #a9bed4; text-decoration: none;">Privacy</a>
+          <a href="#" style="color: #a9bed4; text-decoration: none;">Terms of sale</a>
+          <a href="#" style="color: #a9bed4; text-decoration: none;">Sitemap</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440},&quot;defaultTopic&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Product question&quot;,&quot;Help with an order&quot;,&quot;Custom project&quot;,&quot;Trade or wholesale account&quot;,&quot;Distributor enquiry&quot;,&quot;Returns or warranty&quot;],&quot;default&quot;:&quot;Product question&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Contact&quot;},&quot;showDistributors&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Contact&quot;}}">
+// Enquiry routes. [label, blurb, routedTo, responseTime, extraFieldKeys]
+const TOPICS = [
+  ['Product question', 'Which part suits the job, what it will and will not do.', 'an engineer on the technical desk', 'Same business day', ['company', 'phone', 'sku']],
+  ['Help with an order', 'Order status, changes, a missing or damaged delivery.', 'the orders team, who monitor the website through the day', 'Same business day', ['company', 'phone', 'orderRef']],
+  ['Custom project', 'Hardware design, PLC code, HMI screens, a test rig.', 'the engineering team — advice is freely given by phone or email', '1–2 business days', ['company', 'phone']],
+  ['Trade or wholesale account', 'Contract pricing, 30-day terms, overseas wholesale.', 'the trade desk', '1–2 business days', ['company', 'phone', 'abn']],
+  ['Distributor enquiry', 'Reselling our range, or proposing a brand for us to carry.', 'the distributor desk', '2–3 business days', ['company', 'phone', 'country']],
+  ['Returns or warranty', 'A fault, a return, or a warranty claim.', 'the returns team — do not send anything back before you hear from us', 'Same business day', ['company', 'phone', 'orderRef']]
+];
+
+const FIELD_SPECS = {
+  name: ['Your name', 'First and last name', true, false],
+  email: ['Your email', 'you@company.com.au', true, false],
+  company: ['Company', 'Optional if you are buying as an individual', false, false],
+  phone: ['Phone', 'Fastest way to reach you', false, false],
+  subject: ['Subject', 'One line — what this is about', true, true],
+  sku: ['SKU or part number', 'e.g. KTA-402 — helps us answer precisely', false, false],
+  orderRef: ['Order or invoice number', 'e.g. OC-48782 or INV-20418', false, false],
+  abn: ['ABN', 'For trade account applications', false, false],
+  country: ['Country', 'Where you would be reselling', false, false]
+};
+
+const CHANNELS = [
+  ['By phone', '+61 3 9708 2390', 'The fastest route. You get an engineer, not a queue. Mon–Fri, 9am–5pm AEST.', 'Answered during business hours', '#6fd0f5'],
+  ['By email', 'info@oceancontrols.com.au', 'Send the model number, a drawing, or the problem in a sentence. Read by a person, not a bot.', 'Same business day, usually', '#6fd0f5'],
+  ['In person', '44 Frankston Gardens Dr', 'Walk in with the old part in a bag — the quickest way to the right answer. Mon–Fri, 9am–5pm.', 'Call ahead to confirm stock', '#f0a35a'],
+  ['Order pickup', 'Order by 11am', 'Collect from the Carrum Downs counter after 2pm the same business day, free of charge.', 'Same day, no freight charge', '#2fd07e']
+];
+
+const SELF_SERVE = [
+  ['Track an order', 'Order status, invoices and backorder ETAs all sit in your account — no need to ask.', 'Open your account', '/account.html'],
+  ['Find a datasheet', '3,319 files across 1,743 products, free to download without signing in.', 'Search the library', '/datasheets.html'],
+  ['Check stock and price', 'Live quantities from the Carrum Downs shelf, with quantity breaks shown on every product.', 'Browse the catalogue', '/shop.html']
+];
+
+// Distributors exactly as listed on the current site.
+const DISTRIBUTORS = [
+  ['North America', 'United States', 'Electronics123', 'www.electronics123.com',
+    'Sells a range of our electronic kits and modules, and will special-order items they do not yet carry in stock.',
+    '', [
+      ['Contact', 'Johan Smit'],
+      ['Address', 'Electronics123 Inc\nPO Box 21, Columbiana, OH 44408'],
+      ['Phone', '1-888-549-3749 (USA & Canada)\n(330) 482-9944'],
+      ['Email', 'general@electronics123.com']
+    ]],
+  ['North America', 'United States', 'Scaled Instruments', 'www.scaledinstruments.com',
+    'Davis Instruments recommended part supplier and an authorised dealer.',
+    'Davis specialist', [
+      ['Contact', 'Ryan Wilhour'],
+      ['Address', '14260 W Newberry Road #151\nNewberry, FL 32669-2765'],
+      ['Phone', '352-262-6119'],
+      ['Web', 'www.scaledinstruments.com']
+    ]],
+  ['Central America', 'Mexico', 'Disime', 'disime.com.mx',
+    'Sells a range of our electronic kits and our Davis Instruments weather station interfaces.',
+    '', [
+      ['Dirección', 'Playa Villa del Mar 180, Iztacalco\nMilitar Marte, 08830 Ciudad de México, CDMX'],
+      ['Teléfono', '(55) 5634 1091 · (55) 5634 1095\n(55) 5634 1073 · (55) 5634 0829'],
+      ['Correo', 'ventas@disime.com.mx']
+    ]],
+  ['Central America', 'Mexico', 'PDIVM', 'pdivm.com.mx',
+    'Sells a range of our Davis Instruments weather station interfaces.',
+    'Davis specialist', [
+      ['Dirección', 'Bosques de América 7, Col. Bosques de Aragón\nCP 57170 Nezahualcóyotl, Edo. de México'],
+      ['Teléfono', '(55) 24 56 91 98'],
+      ['Correo', 'ventas@pdivm.com.mx']
+    ]],
+  ['Europe', 'France', 'CIMA Technologie', 'www.davis-meteo.com',
+    'Sells a range of our Davis Instruments weather station interface modules.',
+    'Davis specialist', [
+      ['Address', '142 Allée du Berfayet\nMontanay 69250, France'],
+      ['Phone', '+33 (0)4 78 91 41 05'],
+      ['Email', 'info@davis-meteo.com']
+    ]],
+  ['Europe', 'Spain', 'Darrera S.A.', 'www.darrera.com',
+    'Sells a range of our Davis Instruments weather station interface modules in Spain and Portugal.',
+    'Spain & Portugal', [
+      ['Address', "Carrer de l'Església 5-7-9\n08950 Esplugues de Llobregat, Barcelona"],
+      ['Phone', '+34 934 734 532'],
+      ['Email', 'sales@darrera.com']
+    ]],
+  ['Europe', 'Finland', 'Ilkka Lilja Oy Ltd', 'www.iloy.fi',
+    'Sells a range of our Davis Instruments weather station interface modules.',
+    'Davis specialist', [
+      ['Address', 'ITU 2, 40530 Jyväskylä\nFinland'],
+      ['Phone', '+358 14 3722134'],
+      ['Email', 'iloy@iloy.fi']
+    ]],
+  ['Europe', 'France', 'Meteo-Shopping', 'www.meteo-shopping.fr',
+    'Sells a range of our Davis Instruments weather station interface modules.',
+    'Davis specialist', [
+      ['Address', '2 Rue des Peupliers\n56490 Saint Malo des Trois Fontaines, France'],
+      ['Phone', '+33 (0)2 30 96 03 63'],
+      ['Email', 'commercial@meteo-shopping.fr']
+    ]],
+  ['Europe', 'United Kingdom', 'Prodata Weather Systems', 'www.weatherstations.co.uk',
+    'The UK Davis specialists — sells a range of our Davis Instruments weather station interface modules.',
+    'UK Davis specialist', [
+      ['Address', 'Prodata Associates Ltd\n14B Egremont Street, Ely, Cambs CB6 1AE'],
+      ['Phone', '01353 664175'],
+      ['Email', 'sales@prodata.co.uk']
+    ]]
+];
+
+const REGIONS = ['All regions', 'North America', 'Central America', 'Europe'];
+
+class Component extends DCLogic {
+  state = {
+    topic: 0, region: 0, sent: false, touched: false,
+    values: {}, message: ''
+  };
+
+  set(key, v) {
+    this.setState(s => ({ values: Object.assign({}, s.values, { [key]: v }) }));
+  }
+
+  keysFor(i) {
+    return ['name', 'email'].concat(TOPICS[i][4].slice(0, 2)).concat(['subject']).concat(TOPICS[i][4].slice(2));
+  }
+
+  errorFor(key) {
+    const st = this.state;
+    if (!st.touched) return '';
+    const spec = FIELD_SPECS[key];
+    const v = (st.values[key] || '').trim();
+    if (spec[2] && !v) return spec[0] + ' is required';
+    if (key === 'email' && v && v.indexOf('@') < 1) return 'That does not look like an email address';
+    return '';
+  }
+
+  valid() {
+    const keys = this.keysFor(this.state.topic);
+    const bad = keys.some(k => FIELD_SPECS[k][2] && !(this.state.values[k] || '').trim());
+    const email = (this.state.values.email || '').trim();
+    return !bad && email.indexOf('@') > 0 && this.state.message.trim().length >= 10;
+  }
+
+  submit() {
+    this.setState({ touched: true });
+    if (this.valid()) {
+      this.setState({ sent: true });
+      window.scrollTo(0, 240);
+    }
+  }
+
+  renderVals() {
+    const st = this.state;
+    const t = TOPICS[st.topic];
+    const keys = this.keysFor(st.topic);
+
+    const hour = new Date().getHours();
+    const day = new Date().getDay();
+    const open = day >= 1 && day <= 5 && hour >= 9 && hour < 17;
+
+    const region = REGIONS[st.region];
+    const list = st.region === 0 ? DISTRIBUTORS : DISTRIBUTORS.filter(d => d[0] === region);
+
+    return {
+      openNow: open
+        ? 'Open now — the Carrum Downs counter is staffed until 5pm'
+        : 'Closed right now — we are open Monday to Friday, 9am to 5pm',
+      openDot: open ? '#2fd07e' : '#d99b2b',
+      localTime: new Date().toLocaleTimeString('en-AU', { hour: 'numeric', minute: '2-digit' }) + ' local time',
+
+      channels: CHANNELS.map(c => ({ k: c[0], v: c[1], body: c[2], eta: c[3], etaFg: c[4] })),
+
+      topics: TOPICS.map((x, i) => {
+        const on = i === st.topic;
+        return {
+          label: x[0], body: x[1],
+          bodyFg: on ? '#b7cade' : '#667380',
+          pick: () => this.setState({ topic: i, touched: false }),
+          style: 'display: block; width: 100%; padding: 16px 18px 18px; border: 0; cursor: pointer; text-align: left;'
+            + ' background: ' + (on ? '#16304f' : '#ffffff') + ';'
+            + ' color: ' + (on ? '#ffffff' : '#24456b') + ';',
+          radioStyle: 'display: block; width: 16px; height: 16px; border-radius: 50%; flex: 0 0 auto;'
+            + ' border: ' + (on ? '5px solid #0b9fd8' : '1px solid #c9d3dc') + '; background: #ffffff;'
+        };
+      }),
+      topicNote: 'This goes to ' + t[2] + '. Typical reply: ' + t[3].toLowerCase() + '.',
+
+      fields: keys.map(k => {
+        const spec = FIELD_SPECS[k];
+        const err = this.errorFor(k);
+        return {
+          label: spec[0], placeholder: spec[1], value: st.values[k] || '',
+          hint: spec[2] ? 'Required' : 'Optional',
+          hintFg: spec[2] ? '#c2364a' : '#667380',
+          wrapStyle: 'display: flex; flex-direction: column; gap: 6px;' + (spec[3] ? ' grid-column: span 2;' : ''),
+          inputStyle: 'height: 44px; padding: 0 13px; font-size: 15.5px; outline: none;'
+            + ' border: 1px solid ' + (err ? '#c2364a' : '#dbe2e8') + ';'
+            + ' background: ' + (err ? '#fdeef0' : '#ffffff') + ';',
+          error: err,
+          onInput: e => this.set(k, e.target.value)
+        };
+      }),
+
+      message: st.message,
+      onMessage: e => this.setState({ message: e.target.value }),
+      messagePlaceholder: st.topic === 0
+        ? 'What are you trying to make work? Include the range, output signal or the part you are replacing if you know it.'
+        : (st.topic === 2
+          ? 'Describe the project — what the machine or system has to do, and any platform it must talk to.'
+          : 'Tell us what you need. The more detail, the fewer emails back and forth.'),
+      messageStyle: 'height: 132px; padding: 11px 13px; font-size: 15.5px; line-height: 1.6; outline: none; resize: vertical;'
+        + ' border: 1px solid ' + (st.touched && st.message.trim().length < 10 ? '#c2364a' : '#dbe2e8') + ';'
+        + ' background: ' + (st.touched && st.message.trim().length < 10 ? '#fdeef0' : '#ffffff') + ';',
+      messageError: st.touched && st.message.trim().length < 10 ? 'Please give us a little more to go on' : '',
+      messageCount: st.message.length + ' characters',
+
+      submitLabel: 'Send to ' + t[0].toLowerCase(),
+      submit: () => this.submit(),
+      privacyNote: 'We use your details to answer this enquiry and nothing else. No marketing list, no third parties.',
+
+      notSent: !st.sent,
+      sent: st.sent,
+      sentTitle: 'Thanks — your ' + t[0].toLowerCase() + ' is with us.',
+      sentBody: 'A copy has gone to ' + ((st.values.email || '').trim() || 'your email address') + '. It has been routed to ' + t[2] + ', and you should hear back within ' + t[3].toLowerCase() + '. If it is urgent, call +61 3 9708 2390 and quote the reference below.',
+      sentFacts: [
+        { k: 'Reference', v: 'ENQ-' + (48200 + Math.floor(Math.random() * 700)) },
+        { k: 'Routed to', v: t[0] },
+        { k: 'Expected reply', v: t[3] }
+      ],
+      reset: () => this.setState({ sent: false, touched: false, values: {}, message: '' }),
+
+      selfServe: SELF_SERVE.map(s => ({ title: s[0], body: s[1], cta: s[2], href: s[3] })),
+
+      details: [
+        { k: 'Address', v: '44 Frankston Gardens Drive\nCarrum Downs VIC 3201, Australia' },
+        { k: 'Phone', v: '+61 3 9708 2390' },
+        { k: 'Email', v: 'info@oceancontrols.com.au' },
+        { k: 'Business hours', v: '9am to 5pm, Monday to Friday\nexcept public holidays' },
+        { k: 'ABN', v: '28 659 967 398' }
+      ],
+
+      visitFacts: [
+        { k: 'Counter hours', v: 'Mon – Fri\n9am – 5pm' },
+        { k: 'Public holidays', v: 'Closed' },
+        { k: 'Same-day pickup', v: 'Order by 11am\ncollect after 2pm' },
+        { k: 'Pickup cost', v: 'Free' }
+      ],
+
+      payments: ['VISA', 'MASTERCARD', 'AMERICAN EXPRESS', 'EFTPOS', 'ACCOUNT — 30 DAYS'],
+
+      regionTabs: REGIONS.map((r, i) => {
+        const on = i === st.region;
+        const n = i === 0 ? DISTRIBUTORS.length : DISTRIBUTORS.filter(d => d[0] === r).length;
+        return {
+          label: r, count: n,
+          pick: () => this.setState({ region: i }),
+          style: 'display: flex; align-items: center; gap: 9px; font-family: inherit; font-size: 14.5px; font-weight: 600; padding: 11px 16px; cursor: pointer;'
+            + ' border: 1px solid ' + (on ? '#16304f' : '#dbe2e8') + ';'
+            + ' background: ' + (on ? '#16304f' : '#ffffff') + ';'
+            + ' color: ' + (on ? '#ffffff' : '#24456b') + ';'
+        };
+      }),
+      distributors: list.map(d => ({
+        country: d[1], name: d[2], web: d[3], carries: d[4],
+        hasNote: !!d[5], note: d[5],
+        rows: d[6].map(r => ({ k: r[0], v: r[1] }))
+      })),
+      reachRows: [
+        { k: 'Distributors', v: String(DISTRIBUTORS.length) },
+        { k: 'Countries', v: '6' },
+        { k: 'Regions', v: '3' },
+        { k: 'Own products resold', v: '93' }
+      ],
+      pickDistributor: () => {
+        this.setState({ topic: 4, sent: false, touched: false });
+        window.scrollTo(0, 620);
+      },
+
+      footerTopics: TOPICS.map((x, i) => ({
+        label: x[0],
+        pick: () => {
+          this.setState({ topic: i, sent: false, touched: false });
+          window.scrollTo(0, 620);
+        }
+      }))
+    };
+  }
+}
+
+</script>
+</body>
+</html>

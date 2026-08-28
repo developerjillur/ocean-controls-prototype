@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="/support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="icon" type="image/png" href="/favicon.png" />
+<link rel="apple-touch-icon" href="/favicon.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  body { margin: 0; background: #ffffff; color: #1f2429; font-family: Archivo, Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: #06708f; text-decoration: none; }
+  a:hover { color: #16304f; text-decoration: underline; }
+  p { text-wrap: pretty; }
+  input, button, select, textarea { font-family: inherit; }
+  :focus-visible { outline: 2px solid #0673a2; outline-offset: 2px; }
+  ::selection { background: #bfe8f8; }
+  @keyframes ocFade { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes ocRise { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+
+  /* Responsive layout — media queries cannot be expressed as inline styles.
+     Everything that must change together fires at the same width. */
+  @media (max-width: 1180px) {
+    [style*="grid-template-columns: 262px"], [style*="grid-template-columns: 264px"],
+    [style*="grid-template-columns: 268px"], [style*="grid-template-columns: 274px"],
+    [style*="grid-template-columns: 296px"], [style*="grid-template-columns: 300px"],
+    [style*="grid-template-columns: 400px"], [style*="grid-template-columns: 1fr 400px"],
+    [style*="1fr) 340px"], [style*="1fr) 360px"], [style*="1fr) 380px"],
+    [style*="1fr) 396px"], [style*="1fr) 400px"], [style*="1fr) 404px"],
+    [style*="1fr) 412px"], [style*="1fr) 420px"], [style*="1fr) 424px"],
+    [style*="1fr) 430px"], [style*="1fr) 460px"], [style*="1fr) 480px"] {
+      grid-template-columns: 1fr !important;
+    }
+    [style*="position: sticky"] { position: static !important; }
+    [style*="display: flex"] { flex-wrap: wrap; }
+    [style*="flex: 1 1 auto"] { min-width: 0; }
+    [style*="height: 84px"], [style*="height: 82px"], [style*="height: 48px"] { height: auto !important; }
+    [style*="height: 38px"] { height: auto !important; padding-top: 7px; padding-bottom: 7px; }
+    [style*="max-width: 660px"], [style*="max-width: 620px"], [style*="max-width: 560px"],
+    [style*="max-width: 480px"] { max-width: 100% !important; }
+  }
+  @media (max-width: 900px) {
+    [style*="grid-template-columns: repeat"] {
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)) !important;
+    }
+    [style*="columns: 3"] { columns: 2 !important; }
+  }
+  @media (max-width: 700px) {
+    [style*="display: grid"] { grid-template-columns: 1fr !important; }
+    [style*="columns: 3"] { columns: 1 !important; }
+  }
+</style>
+</helmet>
+
+<div style="width: 100%; background: #ffffff;">
+
+  <div style="background: #0b1c2e; color: #a9bed4; font-size: 13.5px;">
+    <div style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 36px); height: 38px; display: flex; align-items: center; gap: 26px;">
+      <span style="display: flex; align-items: center; gap: 8px;"><span style="width: 6px; height: 6px; border-radius: 50%; background: #2fd07e;"></span>In-stock orders dispatched within 2 business days</span>
+      <span style="margin-left: auto; display: flex; align-items: center; gap: 22px;">
+        <a href="/datasheets.html" style="color: #d6e4f2; text-decoration: none;">Datasheets</a>
+        <a href="/contact.html" style="color: #d6e4f2; text-decoration: none;">Contact</a>
+        <a href="#" style="color: #ffffff; font-family: 'IBM Plex Mono', monospace; text-decoration: none;">+61 3 9708 2390</a>
+      </span>
+    </div>
+  </div>
+
+  <div style="background: #ffffff; border-bottom: 1px solid #dbe2e8;">
+    <div style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 36px); height: 84px; display: flex; align-items: center; gap: 28px;">
+      <a href="/index.html" style="flex: 0 0 auto; display: block;" aria-label="Ocean Controls home">
+        <img src="/uploads/OceanControls-Design-Assets/02-brand-assets/ocean-controls-logo.png" alt="Ocean Controls" style="height: 42px; width: auto; display: block;" />
+      </a>
+      <div style="flex: 1 1 auto; max-width: 560px; display: flex; height: 46px; border: 1.5px solid #16304f;">
+        <input type="text" placeholder="Search 2,279 products — name, SKU, MPN or spec" style="flex: 1 1 auto; border: 0; outline: none; padding: 0 14px; font-size: 15.5px; min-width: 0;" aria-label="Search products" />
+        <a href="/search.html" style="display: flex; align-items: center; justify-content: center; text-decoration: none; flex: 0 0 auto; background: #16304f; color: #ffffff; padding: 0 24px; font-size: 14.5px; font-weight: 600;">Search</a>
+      </div>
+      <div style="margin-left: auto; display: flex; align-items: center; gap: 8px;">
+        <a href="/sign-in.html" style="display: flex; flex-direction: column; padding: 7px 14px; border: 1px solid #dbe2e8; text-decoration: none; color: #16304f;" style-hover="border-color: #16304f; text-decoration: none;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #667380;">Account</span>
+          <span style="font-size: 14.5px; font-weight: 600;">Sign in</span>
+        </a>
+        <a href="/cart.html" style="display: flex; align-items: center; gap: 11px; padding: 9px 15px; background: #16304f; color: #ffffff; text-decoration: none;" style-hover="background: #0b1c2e; text-decoration: none;">
+          <span style="position: relative; display: block; width: 17px; height: 17px; border: 1.5px solid #ffffff; border-top-color: transparent;">
+            <span style="position: absolute; top: -5px; left: 2px; right: 2px; height: 5px; border: 1.5px solid #ffffff; border-bottom: 0;"></span>
+          </span>
+          <span style="display: flex; flex-direction: column; line-height: 1.25;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #90b4d4;">0 items</span>
+            <span style="font-size: 14.5px; font-weight: 600;">$0.00</span>
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div style="background: #f7f9fb; border-bottom: 1px solid #dbe2e8;">
+    <div style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 36px); height: 46px; display: flex; align-items: center; gap: 12px;">
+      <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #667380;">Preview state</span>
+      <sc-for list="{{ tabs }}" as="t" hint-placeholder-count="0">
+        <button onClick="{{ t.pick }}" style="{{ t.style }}">{{ t.label }}</button>
+      </sc-for>
+      <span style="margin-left: auto; font-size: 13.5px; color: #667380;">These are the states the site falls into when something is missing, broken or empty.</span>
+    </div>
+  </div>
+
+  <section data-screen-label="Error state" style="background: #ffffff;">
+    <div style="max-width: 1440px; margin: 0 auto; padding: 52px 36px 78px; {{ stateAnim }}">
+
+      <div style="display: grid; grid-template-columns: minmax(0, 1fr) 400px; gap: 56px; align-items: start; margin-bottom: 44px;">
+        <div>
+          <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 22px;">
+            <span style="{{ s.codeStyle }}">{{ s.code }}</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: {{ s.kickerFg }};">{{ s.kicker }}</span>
+          </div>
+          <h1 style="margin: 0 0 16px; font-size: 42px; line-height: 1.08; font-weight: 800; letter-spacing: -0.03em; color: #0b1c2e; max-width: 17em;">{{ s.title }}</h1>
+          <p style="margin: 0 0 16px; font-size: 18.5px; line-height: 1.65; color: #4b5560; max-width: 40em;">{{ s.body }}</p>
+          <p style="margin: 0 0 30px; font-size: 16.5px; line-height: 1.7; color: #667380; max-width: 40em;">{{ s.body2 }}</p>
+
+          <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+            <a href="{{ s.primaryHref }}" style="display: inline-flex; align-items: center; gap: 10px; padding: 15px 26px; background: #16304f; color: #ffffff; font-size: 16px; font-weight: 600; text-decoration: none;" style-hover="background: #0673a2; text-decoration: none;">{{ s.primary }}<span>→</span></a>
+            <a href="{{ s.secondaryHref }}" style="display: inline-flex; align-items: center; padding: 15px 26px; border: 1px solid #c9d3dc; color: #16304f; font-size: 16px; font-weight: 600; text-decoration: none;" style-hover="border-color: #16304f; text-decoration: none;">{{ s.secondary }}</a>
+          </div>
+
+          <sc-if value="{{ s.hasSearch }}" hint-placeholder-val="{{ false }}">
+            <div style="border: 1px solid #dbe2e8; margin-top: 32px; max-width: 44em;">
+              <div style="padding: 13px 16px; background: #f7f9fb; border-bottom: 1px solid #dbe2e8; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #667380;">{{ s.searchLabel }}</div>
+              <div style="padding: 16px; display: flex; gap: 8px;">
+                <input type="text" placeholder="{{ s.searchPlaceholder }}" value="{{ query }}" onInput="{{ onQuery }}" style="flex: 1 1 auto; height: 48px; border: 1px solid #dbe2e8; padding: 0 14px; font-size: 16.5px; outline: none; min-width: 0;" aria-label="Search" />
+                <a href="/search.html" style="flex: 0 0 auto; display: flex; align-items: center; height: 48px; padding: 0 24px; background: #0673a2; color: #ffffff; font-size: 15.5px; font-weight: 600; text-decoration: none;" style-hover="background: #16304f; text-decoration: none;">Search</a>
+              </div>
+              <div style="padding: 0 16px 16px; display: flex; align-items: center; gap: 9px; flex-wrap: wrap;">
+                <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #667380;">Popular</span>
+                <sc-for list="{{ examples }}" as="e" hint-placeholder-count="0">
+                  <a href="/search.html" style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; border: 1px solid #dbe2e8; color: #24456b; padding: 6px 10px; text-decoration: none;" style-hover="border-color: #0673a2; color: #06708f; text-decoration: none;">{{ e }}</a>
+                </sc-for>
+              </div>
+            </div>
+          </sc-if>
+        </div>
+
+        <div style="{{ s.panelWrapStyle }}">
+          <div style="padding: 16px 20px; background: {{ s.panelHeadBg }}; color: #ffffff;">
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: {{ s.panelKickerFg }};">{{ s.panelKicker }}</div>
+            <div style="font-size: 19.5px; font-weight: 700; letter-spacing: -0.015em; margin-top: 3px;">{{ s.panelTitle }}</div>
+          </div>
+          <sc-for list="{{ s.panelRows }}" as="r" hint-placeholder-count="0">
+            <div style="display: flex; align-items: flex-start; gap: 12px; padding: 14px 20px; border-bottom: 1px solid #eef2f5;">
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #0673a2; flex: 0 0 auto; padding-top: 3px;">{{ r.n }}</span>
+              <span>
+                <span style="display: block; font-size: 15px; font-weight: 600; color: #16304f; margin-bottom: 3px;">{{ r.title }}</span>
+                <span style="display: block; font-size: 14px; line-height: 1.6; color: #667380;">{{ r.body }}</span>
+              </span>
+            </div>
+          </sc-for>
+          <div style="padding: 16px 20px; background: #f7f9fb;">
+            <div style="font-size: 14.5px; font-weight: 600; color: #0b1c2e; margin-bottom: 4px;">{{ s.panelFootTitle }}</div>
+            <p style="margin: 0 0 8px; font-size: 14px; line-height: 1.6; color: #667380;">{{ s.panelFootBody }}</p>
+            <a href="/contact.html" style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; font-weight: 500;">+61 3 9708 2390</a>
+          </div>
+        </div>
+      </div>
+
+      <sc-if value="{{ s.hasSuggestions }}" hint-placeholder-val="{{ false }}">
+        <div>
+          <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 30px; border-bottom: 2px solid #16304f; padding-bottom: 14px; margin-bottom: 22px;">
+            <h2 style="margin: 0; font-size: 23px; font-weight: 700; letter-spacing: -0.02em; color: #0b1c2e;">{{ s.suggestHeading }}</h2>
+            <a href="/shop.html" style="font-size: 15px; font-weight: 600;">Browse everything →</a>
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(235px, 1fr)); gap: 16px;">
+            <sc-for list="{{ suggestions }}" as="p" hint-placeholder-count="0">
+              <a href="/product.html" style="background: #ffffff; border: 1px solid #dbe2e8; border-top: 2px solid #dbe2e8; display: flex; flex-direction: column; text-decoration: none;" style-hover="border-color: #b6c6d4; border-top-color: #0673a2; box-shadow: 0 14px 30px -20px rgba(11,28,46,0.5); text-decoration: none;">
+                <span style="display: block; padding: 16px; border-bottom: 1px solid #eef2f5;">
+                  <span style="{{ p.imgStyle }}"></span>
+                </span>
+                <span style="display: flex; flex-direction: column; flex: 1 1 auto; padding: 12px 14px 14px;">
+                  <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; color: #667380; margin-bottom: 6px;">{{ p.brand }}</span>
+                  <span style="display: block; font-size: 14.5px; font-weight: 500; line-height: 1.35; color: #16304f; min-height: 60px;">{{ p.name }}</span>
+                  <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #667380; margin: 8px 0 10px;">{{ p.sku }}</span>
+                  <span style="display: flex; align-items: baseline; gap: 8px; margin-top: auto;">
+                    <span style="font-size: 20.5px; font-weight: 700; color: #0b1c2e; letter-spacing: -0.015em; font-variant-numeric: tabular-nums;">{{ p.price }}</span>
+                    <span style="font-size: 12.5px; color: #667380;">ex GST</span>
+                  </span>
+                </span>
+              </a>
+            </sc-for>
+          </div>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{ s.hasLinks }}" hint-placeholder-val="{{ false }}">
+        <div style="margin-top: 44px;">
+          <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 30px; border-bottom: 2px solid #16304f; padding-bottom: 14px; margin-bottom: 22px;">
+            <h2 style="margin: 0; font-size: 23px; font-weight: 700; letter-spacing: -0.02em; color: #0b1c2e;">Where people usually meant to go</h2>
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(265px, 1fr)); gap: 1px; background: #dbe2e8; border: 1px solid #dbe2e8;">
+            <sc-for list="{{ destinations }}" as="d" hint-placeholder-count="0">
+              <a href="{{ d.href }}" style="background: #ffffff; padding: 22px 24px 24px; text-decoration: none; display: flex; flex-direction: column;" style-hover="background: #f7f9fb; text-decoration: none;">
+                <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #06708f; margin-bottom: 10px;">{{ d.n }}</span>
+                <span style="display: block; font-size: 17.5px; font-weight: 700; color: #0b1c2e; letter-spacing: -0.01em; margin-bottom: 6px;">{{ d.title }}</span>
+                <span style="display: block; font-size: 14.5px; line-height: 1.6; color: #667380; flex: 1 1 auto;">{{ d.body }}</span>
+                <span style="display: block; font-size: 14px; font-weight: 600; color: #06708f; margin-top: 12px;">{{ d.cta }} →</span>
+              </a>
+            </sc-for>
+          </div>
+        </div>
+      </sc-if>
+    </div>
+  </section>
+
+  <footer data-screen-label="Footer" style="background: #0b1c2e; color: #a9bed4;">
+    <div style="max-width: 1440px; margin: 0 auto; padding: 34px 36px; display: flex; align-items: center; gap: 40px;">
+      <div style="background: #ffffff; padding: 9px 11px;">
+        <img src="/uploads/OceanControls-Design-Assets/02-brand-assets/ocean-controls-logo.png" alt="Ocean Controls" style="height: 28px; width: auto; display: block;" />
+      </div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; line-height: 1.8; color: #a9bed4;">
+        <div>44 Frankston Gardens Drive, Carrum Downs VIC 3201</div>
+        <div>+61 3 9708 2390 · info@oceancontrols.com.au · ABN 28 659 967 398</div>
+      </div>
+      <span style="margin-left: auto; display: flex; gap: 20px; font-size: 13.5px;">
+        <a href="/shop.html" style="color: #a9bed4; text-decoration: none;">Shop</a>
+        <a href="/datasheets.html" style="color: #a9bed4; text-decoration: none;">Datasheets</a>
+        <a href="/policies.html" style="color: #a9bed4; text-decoration: none;">Policies</a>
+        <a href="/contact.html" style="color: #a9bed4; text-decoration: none;">Contact</a>
+      </span>
+    </div>
+  </footer>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440},&quot;state&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;404&quot;,&quot;product-gone&quot;,&quot;out-of-stock&quot;,&quot;server&quot;,&quot;maintenance&quot;],&quot;default&quot;:&quot;404&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Page&quot;}}">
+const IMGDIR = 'uploads/OceanControls-Design-Assets/03-product-images/';
+
+const SUGGEST = [
+  ['KTA-387', 'Modbus Data Logger — Dual RS-485, 100-Channel', 'Ocean Controls', 145.03, 'Data-Loggers__KTA-387.png'],
+  ['GJS-002', 'DS18B20 1-Wire Waterproof Temperature Sensor, 15 m', 'GJY Electronics', 19.93, 'Sensors__GJS-002.jpg'],
+  ['ADW-002', 'HD67671 BACnet/IP Slave / Modbus Master Converter', 'ADF Web', 489.31, 'Modbus-Bacnet-MBus-Products__ADW-002.jpg'],
+  ['KTA-402', 'BACnet MS/TP Weather Station Gateway for Davis', 'Ocean Controls', 241.50, 'Weather__KTA-402.jpg']
+];
+
+const DESTINATIONS = [
+  ['01', 'The catalogue', 'All 2,279 products across 237 categories, with live stock figures and quantity breaks.', 'Browse the shop', '/shop.html'],
+  ['02', 'The technical library', '3,319 datasheets, manuals, wiring diagrams and configuration tools. Free, no sign-in.', 'Search datasheets', '/datasheets.html'],
+  ['03', 'Your account', 'Order history, invoices, saved lists and the parts we have on order for you.', 'Sign in', '/sign-in.html'],
+  ['04', 'Brands', 'Forty-eight manufacturers, one purchase order — including our own 93-product range.', 'See all brands', '/brands.html'],
+  ['05', 'Engineering services', 'When the part you need is not on anyone\'s shelf, we design and build it.', 'What we do', '/about.html'],
+  ['06', 'Talk to someone', 'Advice is freely given by our engineering staff. No purchase order needed to ask.', 'Contact us', '/contact.html']
+];
+
+const STATES = [
+  {
+    key: '404',
+    tab: '404 — page not found',
+    code: '404',
+    codeTone: 'quiet',
+    kicker: 'Page not found',
+    title: 'That page has moved, or never existed.',
+    body: 'We rebuilt this site and reorganised 237 categories in the process, so a bookmark from the old X-Cart site may not land where it used to.',
+    body2: 'The fastest route to what you want is the search below — it looks inside product names, SKUs, manufacturer part numbers, specification text, categories, brands and datasheets all at once.',
+    primary: 'Browse the catalogue', primaryHref: '/shop.html',
+    secondary: 'Go to the homepage', secondaryHref: '/index.html',
+    hasSearch: true,
+    searchLabel: 'Search everything',
+    searchPlaceholder: 'Product, SKU, MPN, brand or spec — try KTA-402',
+    panelTone: 'navy',
+    panelKicker: 'If you followed a link',
+    panelTitle: 'Three things worth trying',
+    panelRows: [
+      ['01', 'Search the part number', 'Old product URLs are gone, but every SKU and manufacturer part number still resolves. KTA-402, HD67671, UR75 all work.'],
+      ['02', 'Check the category', 'Products move between categories as the range grows. The category tree in the shop is the current structure.'],
+      ['03', 'It may be discontinued', 'If a line has been replaced we can tell you what supersedes it — usually there is a direct equivalent.']
+    ],
+    panelFootTitle: 'Still stuck?',
+    panelFootBody: 'Tell us the part number you were looking for and we will point you at it, or at what replaced it.',
+    hasSuggestions: true,
+    suggestHeading: 'Popular right now',
+    hasLinks: true
+  },
+  {
+    key: 'product-gone',
+    tab: 'Discontinued product',
+    code: '410',
+    codeTone: 'amber',
+    kicker: 'No longer stocked',
+    title: 'KTA-302 has been superseded.',
+    body: 'This gateway was replaced by the KTA-402 for BACnet MS/TP. Same job, same price, and the documentation set has grown to twelve files including the BACnet object list.',
+    body2: 'We keep discontinued product pages alive rather than deleting them, so an old bookmark or a purchase order raised two years ago still lands somewhere useful.',
+    primary: 'View the KTA-402', primaryHref: '/product.html',
+    secondary: 'Read what changed', secondaryHref: '/articles.html',
+    hasSearch: false,
+    panelTone: 'amber',
+    panelKicker: 'Migration',
+    panelTitle: 'Moving from the KTA-302',
+    panelRows: [
+      ['01', 'The point list is compatible', 'Your existing BACnet configuration transfers across. Call us before you swap the hardware and we will confirm it against your setup.'],
+      ['02', 'Price is unchanged', '$241.50 ex GST, the same as the unit it replaces.'],
+      ['03', 'Spares still available', 'We hold a small number of KTA-302 spares for sites that cannot change hardware yet. Ask.']
+    ],
+    panelFootTitle: 'Running a fleet of these?',
+    panelFootBody: 'If you have several installations to migrate, talk to us about doing it in one consignment.',
+    hasSuggestions: true,
+    suggestHeading: 'The current range',
+    hasLinks: false
+  },
+  {
+    key: 'out-of-stock',
+    tab: 'Out of stock',
+    code: '—',
+    codeTone: 'amber',
+    kicker: 'Temporarily unavailable',
+    title: 'This one is on backorder.',
+    body: 'The HD67933 Modbus to MQTT converter is not on the shelf right now. It is on our purchasing run, and the manufacturer consignment is expected on 9 September.',
+    body2: 'You can order it today at the normal price and we will ship the moment it lands — or we can suggest an alternative that does the same job from stock.',
+    primary: 'Order on backorder', primaryHref: '/product.html',
+    secondary: 'See alternatives', secondaryHref: '/shop.html',
+    hasSearch: false,
+    panelTone: 'amber',
+    panelKicker: 'What backorder means here',
+    panelTitle: 'No surprises',
+    panelRows: [
+      ['01', 'Confirmed in writing', 'You get the expected date by email the same day you order, not a vague "shipping soon".'],
+      ['02', 'Split shipping is free', 'If the rest of your order is in stock we ship that now and the backordered line later, at no extra freight.'],
+      ['03', 'Nothing charged early', 'Card orders are authorised, not captured, until the item is ready to dispatch.']
+    ],
+    panelFootTitle: 'Need it sooner?',
+    panelFootBody: 'Sometimes we can air-freight a single unit or find an equivalent from another manufacturer. Worth a call.',
+    hasSuggestions: true,
+    suggestHeading: 'Available from stock instead',
+    hasLinks: false
+  },
+  {
+    key: 'server',
+    tab: '500 — server error',
+    code: '500',
+    codeTone: 'red',
+    kicker: 'Something broke at our end',
+    title: 'That did not work, and it is our fault.',
+    body: 'The page failed to load because of an error on our server, not anything you did. It has been logged and someone will look at it.',
+    body2: 'Your cart and your account are unaffected — nothing has been lost. Try again in a moment, or use one of the routes below.',
+    primary: 'Try again', primaryHref: '#',
+    secondary: 'Go to the homepage', secondaryHref: '/index.html',
+    hasSearch: false,
+    panelTone: 'red',
+    panelKicker: 'While this is down',
+    panelTitle: 'You can still order',
+    panelRows: [
+      ['01', 'By phone', 'Call +61 3 9708 2390, Monday to Friday 9am to 5pm. An engineer answers, not a queue.'],
+      ['02', 'By email', 'Send a parts list to info@oceancontrols.com.au and we will confirm stock and freight.'],
+      ['03', 'In person', 'The counter at 44 Frankston Gardens Drive, Carrum Downs, is open regardless of what the website is doing.']
+    ],
+    panelFootTitle: 'If it keeps happening',
+    panelFootBody: 'Tell us what you were trying to do. Knowing the page helps us find it faster than the logs do.',
+    hasSuggestions: false,
+    hasLinks: true
+  },
+  {
+    key: 'maintenance',
+    tab: 'Maintenance',
+    code: '503',
+    codeTone: 'quiet',
+    kicker: 'Scheduled maintenance',
+    title: 'Back shortly — we are updating the catalogue.',
+    body: 'The site is briefly offline while we push a stock and pricing update. This usually takes under fifteen minutes and is scheduled outside business hours.',
+    body2: 'Orders already placed are unaffected and will dispatch as normal. If you need something urgently, the phone still works.',
+    primary: 'Call the counter', primaryHref: '/contact.html',
+    secondary: 'Try again', secondaryHref: '#',
+    hasSearch: false,
+    panelTone: 'navy',
+    panelKicker: 'During maintenance',
+    panelTitle: 'What is and is not affected',
+    panelRows: [
+      ['01', 'Orders are safe', 'Anything already placed is in our system and will be picked and dispatched on schedule.'],
+      ['02', 'Phone and email work', 'The counter, the orders team and the technical desk are all unaffected.'],
+      ['03', 'Prices may change', 'That is often what the update is. The price you see after we come back is the current one.']
+    ],
+    panelFootTitle: 'Urgent order?',
+    panelFootBody: 'Call and we will take it manually. Order before 11am and you can still collect after 2pm.',
+    hasSuggestions: false,
+    hasLinks: false
+  }
+];
+
+class Component extends DCLogic {
+  state = { state: null, query: '' };
+
+  // The prop seeds which state is shown; the tab bar takes over.
+  idx() {
+    if (this.state.state !== null) return this.state.state;
+    const i = STATES.map(s => s.key).indexOf(this.props.state);
+    return i > -1 ? i : 0;
+  }
+
+  money(v) { return '$' + v.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ','); }
+
+  box(url, h) {
+    return 'display: block; width: 100%; height: ' + h + '; flex: 0 0 auto;'
+      + ' background-image: url("' + url + '");'
+      + ' background-size: contain; background-position: center; background-repeat: no-repeat;';
+  }
+
+  renderVals() {
+    const i = this.idx();
+    const s = STATES[i];
+
+    const tone = {
+      quiet: { code: '#667380', codeBg: '#f4f6f8', kicker: '#667380', head: '#16304f', kickerFg: '#6fd0f5' },
+      amber: { code: '#a5620a', codeBg: '#fdf8ef', kicker: '#a5620a', head: '#a5620a', kickerFg: '#fde3b8' },
+      red: { code: '#c2364a', codeBg: '#fdeef0', kicker: '#c2364a', head: '#8a2436', kickerFg: '#f7c9d0' }
+    };
+    const t = tone[s.codeTone] || tone.quiet;
+    const pt = tone[s.panelTone] || tone.quiet;
+
+    return {
+      stateAnim: 'animation: ' + (i % 2 ? 'ocFade' : 'ocRise') + ' 0.3s ease-out;',
+
+      tabs: STATES.map((x, j) => {
+        const on = j === i;
+        return {
+          label: x.tab,
+          pick: () => { this.setState({ state: j }); window.scrollTo(0, 0); },
+          style: 'font-family: inherit; font-size: 13.5px; font-weight: 600; padding: 6px 11px; cursor: pointer;'
+            + ' border: 1px solid ' + (on ? '#16304f' : '#dbe2e8') + ';'
+            + ' background: ' + (on ? '#16304f' : '#ffffff') + ';'
+            + ' color: ' + (on ? '#ffffff' : '#24456b') + ';'
+        };
+      }),
+
+      s: {
+        code: s.code,
+        codeStyle: 'display: inline-flex; align-items: center; justify-content: center; min-width: 62px; padding: 8px 14px;'
+          + ' font-family: "IBM Plex Mono", monospace; font-size: 23px; font-weight: 600; letter-spacing: -0.01em;'
+          + ' background: ' + t.codeBg + '; color: ' + t.code + ';',
+        kicker: s.kicker,
+        kickerFg: t.kicker,
+        title: s.title,
+        body: s.body,
+        body2: s.body2,
+        primary: s.primary, primaryHref: s.primaryHref,
+        secondary: s.secondary, secondaryHref: s.secondaryHref,
+        hasSearch: s.hasSearch,
+        searchLabel: s.searchLabel || '',
+        searchPlaceholder: s.searchPlaceholder || '',
+        panelWrapStyle: 'border: 1px solid #dbe2e8;',
+        panelHeadBg: s.panelTone === 'navy' ? '#16304f' : (s.panelTone === 'red' ? '#8a2436' : '#a5620a'),
+        panelKickerFg: pt.kickerFg,
+        panelKicker: s.panelKicker,
+        panelTitle: s.panelTitle,
+        panelRows: s.panelRows.map(r => ({ n: r[0], title: r[1], body: r[2] })),
+        panelFootTitle: s.panelFootTitle,
+        panelFootBody: s.panelFootBody,
+        hasSuggestions: s.hasSuggestions,
+        suggestHeading: s.suggestHeading || '',
+        hasLinks: s.hasLinks
+      },
+
+      query: this.state.query,
+      onQuery: e => this.setState({ query: e.target.value }),
+      examples: ['KTA-402', '4-20 mA', 'Modbus', 'PT100', 'Mean Well'],
+
+      suggestions: SUGGEST.map(p => ({
+        sku: 'SKU ' + p[0], name: p[1], brand: p[2],
+        price: this.money(p[3]),
+        imgStyle: this.box(IMGDIR + p[4], '118px')
+      })),
+
+      destinations: DESTINATIONS.map(d => ({ n: d[0], title: d[1], body: d[2], cta: d[3], href: d[4] }))
+    };
+  }
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="/support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="icon" type="image/png" href="/favicon.png" />
+<link rel="apple-touch-icon" href="/favicon.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  body { margin: 0; background: #ffffff; color: #1f2429; font-family: Archivo, Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: #06708f; text-decoration: none; }
+  a:hover { color: #16304f; text-decoration: underline; }
+  p { text-wrap: pretty; }
+  input, button, select, textarea { font-family: inherit; }
+  :focus-visible { outline: 2px solid #0b9fd8; outline-offset: 2px; }
+  ::selection { background: #bfe8f8; }
+  @keyframes ocFade { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes ocRise { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+
+  /* Responsive layout — media queries cannot be expressed as inline styles.
+     Everything that must change together fires at the same width. */
+  @media (max-width: 1180px) {
+    [style*="grid-template-columns: 262px"], [style*="grid-template-columns: 264px"],
+    [style*="grid-template-columns: 268px"], [style*="grid-template-columns: 274px"],
+    [style*="grid-template-columns: 296px"], [style*="grid-template-columns: 300px"],
+    [style*="grid-template-columns: 400px"], [style*="grid-template-columns: 1fr 400px"],
+    [style*="1fr) 340px"], [style*="1fr) 360px"], [style*="1fr) 380px"],
+    [style*="1fr) 396px"], [style*="1fr) 400px"], [style*="1fr) 404px"],
+    [style*="1fr) 412px"], [style*="1fr) 420px"], [style*="1fr) 424px"],
+    [style*="1fr) 430px"], [style*="1fr) 460px"], [style*="1fr) 480px"] {
+      grid-template-columns: 1fr !important;
+    }
+    [style*="position: sticky"] { position: static !important; }
+    [style*="display: flex"] { flex-wrap: wrap; }
+    [style*="flex: 1 1 auto"] { min-width: 0; }
+    [style*="height: 84px"], [style*="height: 82px"], [style*="height: 48px"] { height: auto !important; }
+    [style*="height: 38px"] { height: auto !important; padding-top: 7px; padding-bottom: 7px; }
+    [style*="max-width: 660px"], [style*="max-width: 620px"], [style*="max-width: 560px"],
+    [style*="max-width: 480px"] { max-width: 100% !important; }
+  }
+  @media (max-width: 900px) {
+    [style*="grid-template-columns: repeat"] {
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)) !important;
+    }
+    [style*="columns: 3"] { columns: 2 !important; }
+  }
+  @media (max-width: 700px) {
+    [style*="display: grid"] { grid-template-columns: 1fr !important; }
+    [style*="columns: 3"] { columns: 1 !important; }
+  }
+</style>
+</helmet>
+
+<div style="width: 100%; background: #ffffff;">
+
+  <div style="background: #0b1c2e; color: #a9bed4; font-size: 13.5px;">
+    <div style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 36px); height: 38px; display: flex; align-items: center; gap: 26px;">
+      <span style="display: flex; align-items: center; gap: 8px;"><span style="width: 6px; height: 6px; border-radius: 50%; background: #2fd07e;"></span>Signed in as Ocean Controls Pty Ltd — approved trade account</span>
+      <span style="margin-left: auto; display: flex; align-items: center; gap: 22px;">
+        <a href="#" style="color: #d6e4f2; text-decoration: none;">Shipping</a>
+        <a href="#" style="color: #d6e4f2; text-decoration: none;">Returns</a>
+        <a href="#" style="color: #ffffff; font-family: 'IBM Plex Mono', monospace; text-decoration: none;">+61 3 9708 2390</a>
+      </span>
+    </div>
+  </div>
+
+  <div style="background: #ffffff; border-bottom: 1px solid #dbe2e8;">
+    <div style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 36px); height: 82px; display: flex; align-items: center; gap: 30px;">
+      <a href="/index.html" style="flex: 0 0 auto; display: block;" aria-label="Ocean Controls home">
+        <img src="/uploads/OceanControls-Design-Assets/02-brand-assets/ocean-controls-logo.png" alt="Ocean Controls" style="height: 42px; width: auto; display: block;" />
+      </a>
+      <div style="flex: 1 1 auto; max-width: 480px; display: flex; height: 44px; border: 1.5px solid #16304f;">
+        <input type="text" placeholder="Search your orders, invoices or the catalogue" style="flex: 1 1 auto; border: 0; outline: none; padding: 0 13px; font-size: 15px; min-width: 0;" aria-label="Search" />
+        <a href="/search.html" style="display: flex; align-items: center; justify-content: center; text-decoration: none; flex: 0 0 auto; border: 0; background: #16304f; color: #ffffff; padding: 0 20px; font-size: 14px; font-weight: 600; cursor: pointer;" style-hover="background: #0673a2;">Search</a>
+      </div>
+      <div style="margin-left: auto; display: flex; align-items: center; gap: 10px;">
+        <div style="display: flex; flex-direction: column; align-items: flex-end; padding-right: 14px; border-right: 1px solid #dbe2e8;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #667380;">Trade account</span>
+          <span style="font-size: 14.5px; font-weight: 600; color: #16304f;">TRADE-0418</span>
+        </div>
+        <a href="#" style="font-size: 14.5px; font-weight: 600; color: #16304f;">Sign out</a>
+        <a href="/cart.html" style="display: flex; align-items: center; gap: 10px; padding: 9px 15px; background: #16304f; color: #ffffff; text-decoration: none;" style-hover="background: #0b1c2e; text-decoration: none;">
+          <span style="position: relative; display: block; width: 16px; height: 16px; border: 1.5px solid #ffffff; border-top-color: transparent;">
+            <span style="position: absolute; top: -5px; left: 2px; right: 2px; height: 5px; border: 1.5px solid #ffffff; border-bottom: 0;"></span>
+          </span>
+          <span style="display: flex; flex-direction: column; line-height: 1.25;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #90b4d4;">5 items</span>
+            <span style="font-size: 14.5px; font-weight: 600;">$1,530.90</span>
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div style="background: #16304f;">
+    <div style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 36px); display: flex; align-items: stretch;">
+      <a href="/shop.html" style="display: flex; align-items: center; padding: 0 16px 0 0; height: 46px; color: #d6e4f2; font-size: 15px; font-weight: 500; text-decoration: none;" style-hover="color: #ffffff; text-decoration: none;">Shop all</a>
+      <a href="/product.html" style="display: flex; align-items: center; padding: 0 16px; color: #d6e4f2; font-size: 15px; font-weight: 500; text-decoration: none;" style-hover="background: #24456b; color: #ffffff; text-decoration: none;">New arrivals</a>
+      <a href="/datasheets.html" style="display: flex; align-items: center; padding: 0 16px; color: #d6e4f2; font-size: 15px; font-weight: 500; text-decoration: none;" style-hover="background: #24456b; color: #ffffff; text-decoration: none;">Datasheets</a>
+      <a href="/about.html" style="display: flex; align-items: center; padding: 0 16px; color: #d6e4f2; font-size: 15px; font-weight: 500; text-decoration: none;" style-hover="background: #24456b; color: #ffffff; text-decoration: none;">Engineering services</a>
+      <span style="margin-left: auto; display: flex; align-items: center; gap: 9px; padding-left: 18px; font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #6fd0f5;">
+        <span style="width: 7px; height: 7px; border-radius: 50%; background: #2fd07e;"></span>Contract pricing active — {{ discountLabel }}
+      </span>
+    </div>
+  </div>
+
+  <section data-screen-label="Account" style="background: #ffffff;">
+    <div style="max-width: 1440px; margin: 0 auto; padding: 30px 36px 78px; display: grid; grid-template-columns: 262px minmax(0, 1fr); gap: 34px; align-items: start;">
+
+      <aside style="position: sticky; top: 24px;">
+        <div style="border: 1px solid #dbe2e8;">
+          <div style="padding: 16px 18px; background: #f7f9fb; border-bottom: 1px solid #dbe2e8;">
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #667380;">Signed in as</div>
+            <div style="font-size: 16px; font-weight: 700; color: #0b1c2e; margin-top: 4px; line-height: 1.3;">Ocean Controls Pty Ltd</div>
+            <div style="font-size: 14px; color: #667380; margin-top: 2px;">ivan@oceancontrols.com.au</div>
+          </div>
+          <sc-for list="{{ navItems }}" as="n" hint-placeholder-count="0">
+            <button onClick="{{ n.pick }}" style="{{ n.style }}">
+              <span style="flex: 1 1 auto; text-align: left;">{{ n.label }}</span>
+              <sc-if value="{{ n.hasBadge }}" hint-placeholder-val="{{ false }}">
+                <span style="{{ n.badgeStyle }}">{{ n.badge }}</span>
+              </sc-if>
+            </button>
+          </sc-for>
+        </div>
+
+        <div style="border: 1px solid #dbe2e8; border-top: 0; background: #0b1c2e; color: #ffffff; padding: 16px 18px;">
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #6fd0f5; margin-bottom: 8px;">Account manager</div>
+          <div style="font-size: 15px; font-weight: 600;">Ocean Controls trade desk</div>
+          <p style="margin: 6px 0 10px; font-size: 13.5px; line-height: 1.55; color: #a9bed4;">Same engineers who build the panels. Call before you order if the spec is tight.</p>
+          <a href="#" style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: #6fd0f5;">+61 3 9708 2390</a>
+        </div>
+      </aside>
+
+      <div style="{{ viewAnim }}">
+
+        <sc-if value="{{ isDash }}" hint-placeholder-val="{{ true }}">
+          <div>
+            <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 30px; margin-bottom: 22px;">
+              <div>
+                <div style="display: flex; align-items: center; gap: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #06708f; margin-bottom: 12px;">
+                  <span style="width: 22px; height: 1px; background: #0673a2;"></span>Account overview
+                </div>
+                <h1 style="margin: 0 0 7px; font-size: 31px; line-height: 1.1; font-weight: 700; letter-spacing: -0.025em; color: #0b1c2e;">Good morning, Ivan.</h1>
+                <p style="margin: 0; font-size: 16px; color: #667380;">{{ dashLine }}</p>
+              </div>
+              <a href="/shop.html" style="flex: 0 0 auto; padding: 13px 20px; background: #16304f; color: #ffffff; font-size: 15px; font-weight: 600; text-decoration: none;" style-hover="background: #0673a2; text-decoration: none;">Start a new order</a>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(235px, 1fr)); gap: 1px; background: #dbe2e8; border: 1px solid #dbe2e8; margin-bottom: 20px;">
+              <sc-for list="{{ stats }}" as="s" hint-placeholder-count="0">
+                <div style="background: #ffffff; padding: 18px 20px;">
+                  <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #667380;">{{ s.k }}</div>
+                  <div style="font-size: 27px; font-weight: 800; letter-spacing: -0.025em; color: {{ s.fg }}; margin-top: 5px; font-variant-numeric: tabular-nums;">{{ s.n }}</div>
+                  <div style="font-size: 13.5px; color: #667380; margin-top: 2px;">{{ s.note }}</div>
+                </div>
+              </sc-for>
+            </div>
+
+            <div style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(280px, 340px); gap: 20px; align-items: start;">
+              <div>
+                <div style="border: 1px solid #dbe2e8; margin-bottom: 20px;">
+                  <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 13px 16px; background: #f7f9fb; border-bottom: 1px solid #dbe2e8;">
+                    <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #667380;">Recent orders</span>
+                    <button onClick="{{ goOrders }}" style="border: 0; background: none; padding: 0; font-family: inherit; font-size: 13.5px; font-weight: 600; color: #06708f; cursor: pointer;">All orders →</button>
+                  </div>
+                  <div style="display: grid; grid-template-columns: 88px 74px minmax(0, 1fr) 88px 100px 80px; background: #16304f; color: #ffffff;">
+                    <div style="padding: 10px 11px; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase;">Order</div>
+                    <div style="padding: 10px 11px; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase;">Date</div>
+                    <div style="padding: 10px 11px; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase;">Contents</div>
+                    <div style="padding: 10px 11px; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; text-align: right;">Total</div>
+                    <div style="padding: 10px 11px; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase;">Status</div>
+                    <div style="padding: 10px 11px;"></div>
+                  </div>
+                  <sc-for list="{{ recentOrders }}" as="o" hint-placeholder-count="0">
+                    <div style="display: grid; grid-template-columns: 88px 74px minmax(0, 1fr) 88px 100px 80px; align-items: center; border-top: 1px solid #eef2f5;">
+                      <div style="padding: 11px 11px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 500; color: #16304f;">{{ o.no }}</div>
+                      <div style="padding: 11px 11px; font-size: 13.5px; color: #4b5560;">{{ o.date }}</div>
+                      <div style="padding: 11px 11px; min-width: 0; font-size: 14px; color: #16304f; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{ o.contents }}</div>
+                      <div style="padding: 11px 11px; text-align: right; font-size: 14.5px; font-weight: 700; color: #0b1c2e; font-variant-numeric: tabular-nums;">{{ o.total }}</div>
+                      <div style="padding: 11px 11px;"><span style="{{ o.statusStyle }}">{{ o.status }}</span></div>
+                      <div style="padding: 8px 11px;">
+                        <button onClick="{{ o.reorder }}" style="width: 100%; height: 30px; border: 1px solid #dbe2e8; background: #ffffff; color: #16304f; font-size: 13px; font-weight: 600; cursor: pointer;" style-hover="border-color: #16304f; background: #f4f6f8;">Reorder</button>
+                      </div>
+                    </div>
+                  </sc-for>
+                </div>
+
+                <div style="border: 1px solid #dbe2e8;">
+                  <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 13px 16px; background: #fdf8ef; border-bottom: 1px solid #dbe2e8;">
+                    <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #a5620a;">Parts on order for you</span>
+                    <span style="font-size: 13.5px; color: #6b4a12;">{{ backCount }}</span>
+                  </div>
+                  <sc-for list="{{ backorders }}" as="b" hint-placeholder-count="0">
+                    <div style="display: grid; grid-template-columns: 32px minmax(120px, 1fr) 40px; align-items: center; gap: 10px; padding: 11px 14px; border-bottom: 1px solid #eef2f5;">
+                      <div style="{{ b.imgStyle }}"></div>
+                      <div style="min-width: 0;">
+                        <div style="font-size: 14px; font-weight: 500; color: #16304f; line-height: 1.35;">{{ b.name }}</div>
+                        <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-top: 4px;">
+                          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #667380;">{{ b.sku }}</span>
+                          <span style="font-size: 13px; color: #667380;">{{ b.eta }}</span>
+                          <span style="{{ b.statusStyle }}">{{ b.status }}</span>
+                        </div>
+                      </div>
+                      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #4b5560; text-align: right;">× {{ b.qty }}</div>
+                    </div>
+                  </sc-for>
+                  <div style="padding: 13px 16px; font-size: 14px; line-height: 1.6; color: #667380;">Backordered lines from your orders sit here until the manufacturer consignment lands. We confirm each lead time in writing and update this list as the shipment moves.</div>
+                </div>
+              </div>
+
+              <div>
+                <div style="border: 1px solid #dbe2e8; margin-bottom: 20px;">
+                  <div style="padding: 14px 16px; background: #16304f; color: #ffffff;">
+                    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #6fd0f5;">Your pricing</div>
+                    <div style="font-size: 18.5px; font-weight: 700; margin-top: 3px;">Approved trade account</div>
+                  </div>
+                  <sc-for list="{{ pricingRows }}" as="r" hint-placeholder-count="0">
+                    <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding: 11px 16px; border-bottom: 1px solid #eef2f5;">
+                      <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #667380;">{{ r.k }}</span>
+                      <span style="font-size: 14.5px; font-weight: 600; color: {{ r.fg }}; text-align: right;">{{ r.v }}</span>
+                    </div>
+                  </sc-for>
+                  <div style="padding: 13px 16px; font-size: 13.5px; line-height: 1.55; color: #667380;">Your rate replaces retail everywhere on the site while you are signed in. Quantity breaks still apply on top where they beat your contract rate.</div>
+                </div>
+
+                <div style="border: 1px solid #dbe2e8;">
+                  <div style="padding: 13px 16px; background: #f7f9fb; border-bottom: 1px solid #dbe2e8; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #667380;">Reorder by part number</div>
+                  <div style="padding: 16px;">
+                    <p style="margin: 0 0 12px; font-size: 14px; line-height: 1.55; color: #667380;">Paste a parts list straight from your spreadsheet.</p>
+                    <input type="text" placeholder="KTA-402, GJS-002, CGL-004" value="{{ padValue }}" onInput="{{ onPad }}" onKeyDown="{{ onPadKey }}" style="width: 100%; height: 42px; border: 1px solid #dbe2e8; padding: 0 12px; font-size: 15px; font-family: 'IBM Plex Mono', monospace; outline: none; margin-bottom: 8px;" aria-label="Reorder by part number" />
+                    <button onClick="{{ addPad }}" style="width: 100%; height: 42px; background: #16304f; color: #ffffff; border: 0; font-size: 14.5px; font-weight: 600; cursor: pointer;" style-hover="background: #0673a2;">Add to order</button>
+                    <div style="font-size: 13px; color: {{ padNoteFg }}; margin-top: 8px; min-height: 20px;">{{ padNote }}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ isOrders }}" hint-placeholder-val="{{ false }}">
+          <div>
+            <h1 style="margin: 0 0 7px; font-size: 31px; line-height: 1.1; font-weight: 700; letter-spacing: -0.025em; color: #0b1c2e;">Orders</h1>
+            <p style="margin: 0 0 20px; font-size: 16px; color: #667380;">{{ ordersLine }}</p>
+
+            <div style="display: flex; align-items: center; gap: 9px; flex-wrap: wrap; margin-bottom: 16px;">
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #667380;">Status</span>
+              <sc-for list="{{ orderFilters }}" as="f" hint-placeholder-count="0">
+                <button onClick="{{ f.pick }}" style="{{ f.style }}">{{ f.label }}</button>
+              </sc-for>
+            </div>
+
+            <div style="border: 1px solid #dbe2e8;">
+              <div style="display: grid; grid-template-columns: 116px 100px 122px minmax(0, 1fr) 76px 112px 124px 104px; background: #16304f; color: #ffffff;">
+                <div style="padding: 11px 12px; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase;">Order</div>
+                <div style="padding: 11px 12px; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase;">Date</div>
+                <div style="padding: 11px 12px; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase;">Your PO</div>
+                <div style="padding: 11px 12px; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase;">Contents</div>
+                <div style="padding: 11px 12px; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase;">Lines</div>
+                <div style="padding: 11px 12px; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; text-align: right;">Total</div>
+                <div style="padding: 11px 12px; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase;">Status</div>
+                <div style="padding: 11px 12px;"></div>
+              </div>
+              <sc-for list="{{ orders }}" as="o" hint-placeholder-count="0">
+                <div>
+                  <div style="display: grid; grid-template-columns: 116px 100px 122px minmax(0, 1fr) 76px 112px 124px 104px; align-items: center; border-top: 1px solid #eef2f5;">
+                    <div style="padding: 11px 12px;">
+                      <button onClick="{{ o.expand }}" style="border: 0; background: none; padding: 0; font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 500; color: #06708f; cursor: pointer;">{{ o.no }}</button>
+                    </div>
+                    <div style="padding: 11px 12px; font-size: 13.5px; color: #4b5560;">{{ o.date }}</div>
+                    <div style="padding: 11px 12px; font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; color: #667380;">{{ o.po }}</div>
+                    <div style="padding: 11px 12px; min-width: 0; font-size: 14px; color: #16304f; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{ o.contents }}</div>
+                    <div style="padding: 11px 12px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #4b5560;">{{ o.lines }}</div>
+                    <div style="padding: 11px 12px; text-align: right; font-size: 14.5px; font-weight: 700; color: #0b1c2e; font-variant-numeric: tabular-nums;">{{ o.total }}</div>
+                    <div style="padding: 11px 12px;"><span style="{{ o.statusStyle }}">{{ o.status }}</span></div>
+                    <div style="padding: 8px 12px;">
+                      <button onClick="{{ o.reorder }}" style="width: 100%; height: 30px; border: 1px solid #dbe2e8; background: #ffffff; color: #16304f; font-size: 13px; font-weight: 600; cursor: pointer;" style-hover="border-color: #16304f; background: #f4f6f8;">Reorder</button>
+                    </div>
+                  </div>
+                  <sc-if value="{{ o.open }}" hint-placeholder-val="{{ false }}">
+                    <div style="background: #f7f9fb; border-top: 1px solid #dbe2e8; padding: 14px 16px;">
+                      <div style="display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 10px;">
+                        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #667380;">Lines on {{ o.no }}</span>
+                        <span style="display: flex; gap: 14px;">
+                          <a href="#" style="font-size: 13.5px; font-weight: 600;">Invoice PDF ↓</a>
+                          <a href="#" style="font-size: 13.5px; font-weight: 600;">Packing slip ↓</a>
+                          <a href="#" style="font-size: 13.5px; font-weight: 600;">Track consignment →</a>
+                        </span>
+                      </div>
+                      <sc-for list="{{ o.items }}" as="i" hint-placeholder-count="0">
+                        <div style="display: grid; grid-template-columns: 52px 108px minmax(0, 1fr) 64px 104px 104px; align-items: center; gap: 12px; padding: 8px 0; border-top: 1px solid #dbe2e8; background: none;">
+                          <div style="{{ i.imgStyle }}"></div>
+                          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; color: #16304f;">{{ i.sku }}</div>
+                          <div style="min-width: 0; font-size: 14px; color: #24456b; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{ i.name }}</div>
+                          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #4b5560;">× {{ i.qty }}</div>
+                          <div style="text-align: right; font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #4b5560;">{{ i.unit }}</div>
+                          <div style="text-align: right; font-size: 14.5px; font-weight: 600; color: #0b1c2e; font-variant-numeric: tabular-nums;">{{ i.total }}</div>
+                        </div>
+                      </sc-for>
+                    </div>
+                  </sc-if>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ isInvoices }}" hint-placeholder-val="{{ false }}">
+          <div>
+            <h1 style="margin: 0 0 7px; font-size: 31px; line-height: 1.1; font-weight: 700; letter-spacing: -0.025em; color: #0b1c2e;">Invoices</h1>
+            <p style="margin: 0 0 20px; font-size: 16px; color: #667380;">{{ invoiceLine }}</p>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(265px, 1fr)); gap: 1px; background: #dbe2e8; border: 1px solid #dbe2e8; margin-bottom: 20px;">
+              <sc-for list="{{ invoiceStats }}" as="s" hint-placeholder-count="0">
+                <div style="background: #ffffff; padding: 16px 18px;">
+                  <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #667380;">{{ s.k }}</div>
+                  <div style="font-size: 23px; font-weight: 800; letter-spacing: -0.02em; color: {{ s.fg }}; margin-top: 4px; font-variant-numeric: tabular-nums;">{{ s.n }}</div>
+                </div>
+              </sc-for>
+            </div>
+
+            <div style="border: 1px solid #dbe2e8;">
+              <div style="display: grid; grid-template-columns: 130px 116px 108px 108px minmax(0, 1fr) 124px 108px; background: #16304f; color: #ffffff;">
+                <div style="padding: 11px 12px; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase;">Invoice</div>
+                <div style="padding: 11px 12px; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase;">Order</div>
+                <div style="padding: 11px 12px; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase;">Issued</div>
+                <div style="padding: 11px 12px; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase;">Due</div>
+                <div style="padding: 11px 12px; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; text-align: right;">Amount inc GST</div>
+                <div style="padding: 11px 12px; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase;">Status</div>
+                <div style="padding: 11px 12px;"></div>
+              </div>
+              <sc-for list="{{ invoices }}" as="i" hint-placeholder-count="0">
+                <div style="display: grid; grid-template-columns: 130px 116px 108px 108px minmax(0, 1fr) 124px 108px; align-items: center; border-top: 1px solid #eef2f5;">
+                  <div style="padding: 11px 12px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 500; color: #16304f;">{{ i.no }}</div>
+                  <div style="padding: 11px 12px; font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; color: #667380;">{{ i.order }}</div>
+                  <div style="padding: 11px 12px; font-size: 13.5px; color: #4b5560;">{{ i.issued }}</div>
+                  <div style="padding: 11px 12px; font-size: 13.5px; color: {{ i.dueFg }};">{{ i.due }}</div>
+                  <div style="padding: 11px 12px; text-align: right; font-size: 15px; font-weight: 700; color: #0b1c2e; font-variant-numeric: tabular-nums;">{{ i.amount }}</div>
+                  <div style="padding: 11px 12px;"><span style="{{ i.statusStyle }}">{{ i.status }}</span></div>
+                  <div style="padding: 8px 12px;">
+                    <a href="#" style="display: block; text-align: center; height: 30px; line-height: 30px; border: 1px solid #dbe2e8; color: #16304f; font-size: 13px; font-weight: 600; text-decoration: none;" style-hover="border-color: #16304f; background: #f4f6f8; text-decoration: none;">PDF ↓</a>
+                  </div>
+                </div>
+              </sc-for>
+            </div>
+
+            <div style="display: flex; align-items: center; gap: 14px; margin-top: 16px;">
+              <a href="#" style="font-size: 14.5px; font-weight: 600;">Export all invoices as CSV ↓</a>
+              <span style="color: #c9d3dc;">·</span>
+              <a href="#" style="font-size: 14.5px; font-weight: 600;">Statement of account ↓</a>
+            </div>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ isLists }}" hint-placeholder-val="{{ false }}">
+          <div>
+            <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 30px; margin-bottom: 20px;">
+              <div>
+                <h1 style="margin: 0 0 7px; font-size: 31px; line-height: 1.1; font-weight: 700; letter-spacing: -0.025em; color: #0b1c2e;">Saved lists</h1>
+                <p style="margin: 0; font-size: 16px; color: #667380;">Standing kits and site spares, ready to drop into an order.</p>
+              </div>
+              <button style="flex: 0 0 auto; padding: 12px 18px; border: 1px solid #16304f; background: #ffffff; color: #16304f; font-size: 14.5px; font-weight: 600; cursor: pointer;" style-hover="background: #16304f; color: #ffffff;">+ New list</button>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 18px;">
+              <sc-for list="{{ lists }}" as="L" hint-placeholder-count="0">
+                <div style="border: 1px solid #dbe2e8;">
+                  <div style="display: flex; align-items: center; gap: 16px; padding: 14px 16px; background: #f7f9fb; border-bottom: 1px solid #dbe2e8;">
+                    <div>
+                      <div style="font-size: 17px; font-weight: 700; color: #0b1c2e;">{{ L.name }}</div>
+                      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #667380; margin-top: 2px;">{{ L.meta }}</div>
+                    </div>
+                    <div style="margin-left: auto; display: flex; align-items: center; gap: 12px;">
+                      <span style="font-size: 16px; font-weight: 700; color: #0b1c2e; font-variant-numeric: tabular-nums;">{{ L.total }}</span>
+                      <button onClick="{{ L.addAll }}" style="padding: 10px 16px; background: #16304f; color: #ffffff; border: 0; font-size: 14px; font-weight: 600; cursor: pointer;" style-hover="background: #0673a2;">Add all to order</button>
+                    </div>
+                  </div>
+                  <sc-for list="{{ L.items }}" as="i" hint-placeholder-count="0">
+                    <div style="display: grid; grid-template-columns: 56px 112px minmax(0, 1fr) 64px 112px 108px; align-items: center; gap: 12px; padding: 10px 16px; border-bottom: 1px solid #eef2f5;">
+                      <div style="{{ i.imgStyle }}"></div>
+                      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #16304f;">{{ i.sku }}</div>
+                      <div style="min-width: 0; font-size: 14px; color: #24456b; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{ i.name }}</div>
+                      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #4b5560;">× {{ i.qty }}</div>
+                      <div style="text-align: right; font-size: 14.5px; font-weight: 600; color: #0b1c2e; font-variant-numeric: tabular-nums;">{{ i.total }}</div>
+                      <div style="text-align: right; font-size: 13px; color: {{ i.stockFg }};">{{ i.stock }}</div>
+                    </div>
+                  </sc-for>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ isDownloads }}" hint-placeholder-val="{{ false }}">
+          <div>
+            <h1 style="margin: 0 0 7px; font-size: 31px; line-height: 1.1; font-weight: 700; letter-spacing: -0.025em; color: #0b1c2e;">Your downloads</h1>
+            <p style="margin: 0 0 20px; font-size: 16px; line-height: 1.6; color: #667380; max-width: 60em;">Documentation for everything you have bought, kept together. Datasheets are free to anyone — this list just saves you finding them again.</p>
+            <div style="border: 1px solid #dbe2e8;">
+              <sc-for list="{{ userDownloads }}" as="d" hint-placeholder-count="0">
+                <a href="#" style="display: grid; grid-template-columns: 56px 116px minmax(0, 1fr) 92px 108px 104px; align-items: center; gap: 14px; padding: 12px 16px; border-bottom: 1px solid #eef2f5; text-decoration: none;" style-hover="background: #f7f9fb; text-decoration: none;">
+                  <div style="{{ d.imgStyle }}"></div>
+                  <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #16304f;">{{ d.sku }}</div>
+                  <div style="min-width: 0;">
+                    <div style="font-size: 14.5px; font-weight: 500; color: #16304f; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{ d.name }}</div>
+                    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #667380; margin-top: 2px;">{{ d.file }}</div>
+                  </div>
+                  <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.06em; color: #ffffff; background: #16304f; padding: 4px 7px; text-align: center;">{{ d.kind }}</div>
+                  <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; color: #667380;">{{ d.size }}</div>
+                  <div style="text-align: right; font-size: 14px; font-weight: 600; color: #06708f;">Download ↓</div>
+                </a>
+              </sc-for>
+            </div>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ isDetails }}" hint-placeholder-val="{{ false }}">
+          <div>
+            <h1 style="margin: 0 0 7px; font-size: 31px; line-height: 1.1; font-weight: 700; letter-spacing: -0.025em; color: #0b1c2e;">Account details</h1>
+            <p style="margin: 0 0 22px; font-size: 16px; color: #667380;">Company, contacts and the addresses we ship to.</p>
+
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; align-items: start;">
+              <div style="border: 1px solid #dbe2e8;">
+                <div style="padding: 13px 16px; background: #f7f9fb; border-bottom: 1px solid #dbe2e8; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #667380;">Company &amp; contact</div>
+                <div style="padding: 18px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px;">
+                  <sc-for list="{{ detailFields }}" as="f" hint-placeholder-count="0">
+                    <label style="{{ f.wrapStyle }}">
+                      <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #667380;">{{ f.label }}</span>
+                      <input type="text" value="{{ f.value }}" onInput="{{ f.onInput }}" style="height: 42px; border: 1px solid #dbe2e8; padding: 0 12px; font-size: 15px; outline: none;" />
+                    </label>
+                  </sc-for>
+                  <div style="grid-column: span 2; display: flex; gap: 10px;">
+                    <button onClick="{{ saveDetails }}" style="padding: 12px 20px; background: #16304f; color: #ffffff; border: 0; font-size: 14.5px; font-weight: 600; cursor: pointer;" style-hover="background: #0673a2;">Save changes</button>
+                    <button style="padding: 12px 20px; background: #ffffff; border: 1px solid #dbe2e8; color: #16304f; font-size: 14.5px; font-weight: 600; cursor: pointer;" style-hover="border-color: #16304f;">Change password</button>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <div style="border: 1px solid #dbe2e8; margin-bottom: 20px;">
+                  <div style="padding: 13px 16px; background: #f7f9fb; border-bottom: 1px solid #dbe2e8; display: flex; align-items: center; justify-content: space-between; gap: 12px;">
+                    <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #667380;">Addresses</span>
+                    <button style="border: 0; background: none; padding: 0; font-family: inherit; font-size: 13.5px; font-weight: 600; color: #06708f; cursor: pointer;">+ Add address</button>
+                  </div>
+                  <sc-for list="{{ addresses }}" as="a" hint-placeholder-count="0">
+                    <div style="padding: 15px 16px; border-bottom: 1px solid #eef2f5;">
+                      <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 6px;">
+                        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #667380;">{{ a.kind }}</span>
+                        <sc-if value="{{ a.isDefault }}" hint-placeholder-val="{{ false }}">
+                          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.08em; background: #16304f; color: #ffffff; padding: 3px 6px;">DEFAULT</span>
+                        </sc-if>
+                        <button style="margin-left: auto; border: 0; background: none; padding: 0; font-family: inherit; font-size: 13px; color: #06708f; cursor: pointer; text-decoration: underline;">Edit</button>
+                      </div>
+                      <div style="font-size: 14.5px; line-height: 1.6; color: #16304f; white-space: pre-line;">{{ a.body }}</div>
+                    </div>
+                  </sc-for>
+                </div>
+
+                <div style="border: 1px solid #dbe2e8;">
+                  <div style="padding: 14px 16px; background: #16304f; color: #ffffff;">
+                    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #6fd0f5;">Trade terms</div>
+                    <div style="font-size: 17.5px; font-weight: 700; margin-top: 3px;">TRADE-0418 · {{ discountLabel }}</div>
+                  </div>
+                  <sc-for list="{{ pricingRows }}" as="r" hint-placeholder-count="0">
+                    <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding: 11px 16px; border-bottom: 1px solid #eef2f5;">
+                      <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #667380;">{{ r.k }}</span>
+                      <span style="font-size: 14.5px; font-weight: 600; color: {{ r.fg }}; text-align: right;">{{ r.v }}</span>
+                    </div>
+                  </sc-for>
+                  <div style="padding: 13px 16px;">
+                    <a href="#" style="font-size: 14px; font-weight: 600;">Ask the trade desk about your rate →</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </sc-if>
+      </div>
+    </div>
+  </section>
+
+  <footer style="background: #0b1c2e; color: #a9bed4;">
+    <div style="max-width: 1440px; margin: 0 auto; padding: 34px 36px; display: flex; align-items: center; gap: 40px;">
+      <div style="background: #ffffff; padding: 9px 11px;">
+        <img src="/uploads/OceanControls-Design-Assets/02-brand-assets/ocean-controls-logo.png" alt="Ocean Controls" style="height: 28px; width: auto; display: block;" />
+      </div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; line-height: 1.8; color: #a9bed4;">
+        <div>44 Frankston Gardens Drive, Carrum Downs VIC 3201</div>
+        <div>+61 3 9708 2390 · orders@oceancontrols.com.au · ABN 28 659 967 398</div>
+      </div>
+      <span style="margin-left: auto; display: flex; gap: 20px; font-size: 13.5px;">
+        <a href="#" style="color: #a9bed4; text-decoration: none;">Terms of sale</a>
+        <a href="#" style="color: #a9bed4; text-decoration: none;">Privacy</a>
+        <a href="#" style="color: #a9bed4; text-decoration: none;">Returns policy</a>
+      </span>
+    </div>
+  </footer>
+
+  <sc-if value="{{ toastOn }}" hint-placeholder-val="{{ false }}">
+    <div style="position: fixed; right: 28px; bottom: 28px; z-index: 90; background: #0b1c2e; color: #ffffff; border-left: 3px solid #2fd07e; padding: 14px 20px; box-shadow: 0 24px 48px -18px rgba(11,28,46,0.6); animation: ocFade 0.18s ease-out; max-width: 360px;">
+      <div style="font-size: 15px; font-weight: 600; margin-bottom: 3px;">{{ toastTitle }}</div>
+      <div style="font-size: 14px; color: #a9bed4;">{{ toast }}</div>
+    </div>
+  </sc-if>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440},&quot;startView&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Dashboard&quot;,&quot;Orders&quot;,&quot;Invoices&quot;,&quot;Saved lists&quot;,&quot;Downloads&quot;,&quot;Account details&quot;],&quot;default&quot;:&quot;Dashboard&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Account&quot;},&quot;tradeDiscount&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;min&quot;:5,&quot;max&quot;:40,&quot;step&quot;:1,&quot;unit&quot;:&quot;%&quot;,&quot;default&quot;:15,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Account&quot;}}">
+const IMGDIR = 'uploads/OceanControls-Design-Assets/03-product-images/';
+const DISCOUNT = 15;
+
+const RAW = [
+  ['KTA-387','Modbus Data Logger — Dual RS-485, 100-Channel, SD Card Logging',145.03,1,'Data-Loggers__KTA-387.png'],
+  ['KTA-402','BACnet MS/TP Weather Station Gateway for Davis Weather Stations',241.50,48,'Weather__KTA-402.jpg'],
+  ['KTA-401','BACnet IP Weather Station Gateway for Davis Weather Stations',241.50,8,'Weather__KTA-401.jpg'],
+  ['GJS-002','DS18B20 1-Wire Waterproof Digital Temperature Sensor, 15 m cable',19.93,18,'Sensors__GJS-002.jpg'],
+  ['TCS-001','TST100 1-Wire Temperature Sensor with IP65 Protection',39.43,6,'Sensors__TCS-001.jpg'],
+  ['ADW-002','HD67671 BACnet/IP Slave / Modbus Master Converter',489.31,6,'Modbus-Bacnet-MBus-Products__ADW-002.jpg'],
+  ['ADW-003','HD67933 Modbus Master / MQTT Converter',520.72,1,'Modbus-Bacnet-MBus-Products__ADW-003.jpg'],
+  ['CGL-004','PG9 Grey Cable Gland',1.76,39,'Electrical-Terminals-Wiring__CGL-004.jpg'],
+  ['PSM-900','20 kA Surge Protector',19.98,2,'Power-Supplies__PSM-900.jpg'],
+  ['ULC-141','UR41L 4G Mini Industrial Cellular Router',138.53,8,'Industrial-IoT__ULC-141.webp'],
+  ['ULC-075','UR75 Industrial 5G Router',681.12,6,'Industrial-IoT__ULC-075.webp'],
+  ['HNR-100','Multi-Function Timer MA4N-B',43.19,9,'Timers__HNR-100.jpg'],
+  ['AKB-001','NPT4 Slimline Temperature Transmitter',121.42,5,'Signal-Conditioners__AKB-001.jpg'],
+  ['SPE-015','Grey CE-Approved ABS Waterproof Enclosure, 400 × 300 × 160 mm',81.40,41,'Enclosures__SPE-015.jpg'],
+  ['HET-100','Signal Generator 4-20 mA / 0-10 V / 0-5 V Voltage & Current Simulator',104.97,10,'Test-Equipment__HET-100.jpg'],
+  ['RKS-002A','RK100-01G Wind Speed Sensor, 0–10 VDC Output',158.65,5,'Weather__RKS-002A.jpg'],
+  ['DBI-032','AC Volt-Current Input 4-Digit Process Indicator, 1 Relay, 24 VDC',112.36,3,'Panel-Meters__DBI-032.jpg'],
+  ['NTR-180','10 Input Relay Alarm Module',282.35,1,'Relays-&-Relay-Cards__NTR-180.jpg']
+];
+
+const CATALOGUE = {};
+RAW.forEach(function (r) {
+  CATALOGUE[r[0]] = { sku: r[0], name: r[1], price: r[2], stock: r[3], img: IMGDIR + r[4].replace(/&/g, '%26') };
+});
+
+// no, date, po, status, [[sku, qty], …]
+const ORDERS = [
+  ['OC-48782', '26 Aug 2026', 'PO-88213', 'Processing', [['KTA-387', 2], ['GJS-002', 6], ['ADW-002', 1], ['CGL-004', 24]]],
+  ['OC-48610', '12 Aug 2026', 'PO-87994', 'Part shipped', [['ADW-003', 1], ['ULC-141', 2], ['PSM-900', 4]]],
+  ['OC-48455', '29 Jul 2026', 'PO-87710', 'Delivered', [['KTA-402', 3], ['RKS-002A', 1], ['SPE-015', 2]]],
+  ['OC-48301', '15 Jul 2026', 'PO-87502', 'Delivered', [['GJS-002', 12], ['TCS-001', 6], ['HNR-100', 4]]],
+  ['OC-48120', '01 Jul 2026', 'PO-87255', 'Delivered', [['ULC-075', 1], ['DBI-032', 2]]],
+  ['OC-47988', '18 Jun 2026', 'PO-87041', 'Delivered', [['AKB-001', 5], ['HET-100', 1], ['CGL-004', 50]]],
+  ['OC-47844', '03 Jun 2026', 'PO-86880', 'Cancelled', [['NTR-180', 1]]]
+];
+
+const BACKORDERS = [
+  ['ADW-003', 1, 'ETA 09 Sep 2026', 'On purchase order'],
+  ['KTA-387', 2, 'ETA 04 Sep 2026', 'In assembly'],
+  ['NTR-180', 1, 'ETA confirmed 12 Sep', 'Awaiting supplier']
+];
+
+const LISTS = [
+  ['Pump station spares — Site 4', [['GJS-002', 4], ['CGL-004', 20], ['PSM-900', 2], ['HNR-100', 2]]],
+  ['Davis weather station kit — BMS', [['KTA-402', 1], ['RKS-002A', 1], ['SPE-015', 1]]],
+  ['Standing panel build kit', [['ADW-002', 2], ['DBI-032', 4], ['CGL-004', 40], ['SPE-015', 2]]]
+];
+
+const DOWNLOAD_FILES = [
+  ['KTA-387', 'KTA-387 Modbus Data Logger — datasheet', 'kta-387-datasheet.pdf', 'Datasheet', '1.2 MB'],
+  ['KTA-387', 'KTA-387 configuration utility (Windows)', 'kta-387-config.zip', 'Software', '8.4 MB'],
+  ['ADW-002', 'HD67671 BACnet/IP to Modbus — user manual', 'hd67671-manual.pdf', 'Manual', '3.4 MB'],
+  ['KTA-402', 'KTA-402 BACnet MS/TP gateway — wiring diagram', 'kta-402-wiring.pdf', 'Wiring', '620 KB'],
+  ['GJS-002', 'DS18B20 1-Wire probe — datasheet', 'ds18b20-datasheet.pdf', 'Datasheet', '420 KB'],
+  ['ULC-075', 'UR75 industrial 5G router — quick start', 'ur75-quickstart.pdf', 'Guide', '1.8 MB'],
+  ['AKB-001', 'NPT4 slimline transmitter — datasheet', 'npt4-datasheet.pdf', 'Datasheet', '780 KB'],
+  ['DBI-032', 'Process indicator 48×96 — manual', 'dbi-032-manual.pdf', 'Manual', '1.4 MB']
+];
+
+const ADDRESSES = [
+  ['Billing', 'Ocean Controls Pty Ltd\n44 Frankston Gardens Drive\nCarrum Downs VIC 3201', true],
+  ['Delivery — workshop', 'Attn: Goods receiving\n44 Frankston Gardens Drive\nCarrum Downs VIC 3201\nDock hours 8am–4pm', true],
+  ['Delivery — Site 4 pump station', 'Attn: Site supervisor\n190 Wells Road\nChelsea Heights VIC 3196\nCall on arrival', false]
+];
+
+const NAV = ['Dashboard', 'Orders', 'Invoices', 'Saved lists', 'Downloads', 'Account details'];
+
+function statusChip(s) {
+  const map = {
+    'Processing': ['#06708f', '#eaf6fc'],
+    'Part shipped': ['#a5620a', '#fdf8ef'],
+    'Delivered': ['#157a45', '#eef8f2'],
+    'Cancelled': ['#667380', '#f4f6f8'],
+    'On purchase order': ['#a5620a', '#fdf8ef'],
+    'In assembly': ['#06708f', '#eaf6fc'],
+    'Awaiting supplier': ['#a5620a', '#fdf8ef'],
+    'Paid': ['#157a45', '#eef8f2'],
+    'Outstanding': ['#a5620a', '#fdf8ef'],
+    'Overdue': ['#c2364a', '#fdeef0']
+  };
+  const c = map[s] || ['#4b5560', '#f4f6f8'];
+  return 'display: inline-block; font-family: "IBM Plex Mono", monospace; font-size: 11.5px; font-weight: 600;'
+    + ' letter-spacing: 0.06em; text-transform: uppercase; padding: 4px 8px;'
+    + ' color: ' + c[0] + '; background: ' + c[1] + ';';
+}
+
+class Component extends DCLogic {
+  state = {
+    view: 0, orderFilter: 0, openOrder: null,
+    padValue: '', padNote: '', padOk: true,
+    details: {
+      company: 'Ocean Controls Pty Ltd', abn: '28 659 967 398',
+      contact: 'Ivan Garcia', role: 'Financial Controller',
+      email: 'ivan@oceancontrols.com.au', phone: '+61 3 9708 2390'
+    },
+    toast: '', toastTitle: ''
+  };
+
+  componentWillUnmount() { clearTimeout(this._t); }
+
+  money(v) { return '$' + v.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ','); }
+
+  trade(v) { return v * (1 - DISCOUNT / 100); }
+
+  box(url, h, opts) {
+    const o = opts || {};
+    return 'width: ' + (o.w || h) + '; height: ' + h + '; flex: 0 0 auto;'
+      + ' background-image: url("' + url + '");'
+      + ' background-size: contain; background-position: center; background-repeat: no-repeat;'
+      + ' border: 1px solid #eef2f5;';
+  }
+
+  fire(title, body) {
+    this.setState({ toastTitle: title, toast: body });
+    clearTimeout(this._t);
+    this._t = setTimeout(() => this.setState({ toast: '', toastTitle: '' }), 3000);
+  }
+
+  orderTotal(items) {
+    let sub = 0;
+    items.forEach(i => { sub += this.trade(CATALOGUE[i[0]].price) * i[1]; });
+    return sub * 1.1;
+  }
+
+  contentsLine(items) {
+    const first = CATALOGUE[items[0][0]].name;
+    return items.length > 1 ? first + ' + ' + (items.length - 1) + ' more' : first;
+  }
+
+  runPad() {
+    const tokens = this.state.padValue.toUpperCase().split(/[,;\s]+/).filter(Boolean);
+    if (!tokens.length) { this.setState({ padNote: 'Paste a part number first.', padOk: false }); return; }
+    const found = tokens.filter(t => CATALOGUE[t]);
+    const missing = tokens.filter(t => !CATALOGUE[t]);
+    if (!found.length) {
+      this.setState({ padNote: 'No match for ' + missing.join(', ') + '.', padOk: false });
+      return;
+    }
+    this.setState({
+      padValue: '', padOk: true,
+      padNote: found.length + ' line' + (found.length > 1 ? 's' : '') + ' added at your trade rate' + (missing.length ? ' · not found: ' + missing.join(', ') : '')
+    });
+    this.fire('Added to order', found.join(', ') + ' — at ' + DISCOUNT + '% off retail');
+  }
+
+  renderVals() {
+    const st = this.state;
+    const filters = ['All', 'Processing', 'Part shipped', 'Delivered', 'Cancelled'];
+    const filtered = st.orderFilter === 0 ? ORDERS : ORDERS.filter(o => o[3] === filters[st.orderFilter]);
+
+    const orderRow = o => {
+      const total = this.orderTotal(o[4]);
+      return {
+        no: o[0], date: o[1], po: o[2], status: o[3],
+        statusStyle: statusChip(o[3]),
+        contents: this.contentsLine(o[4]),
+        lines: o[4].length,
+        total: this.money(total),
+        open: st.openOrder === o[0],
+        expand: () => this.setState(s => ({ openOrder: s.openOrder === o[0] ? null : o[0] })),
+        reorder: () => this.fire('Added to order', o[4].length + ' lines from ' + o[0] + ' at your trade rate'),
+        items: o[4].map(i => {
+          const p = CATALOGUE[i[0]];
+          const unit = this.trade(p.price);
+          return {
+            sku: p.sku, name: p.name, qty: i[1],
+            imgStyle: this.box(p.img, '40px'),
+            unit: this.money(unit),
+            total: this.money(unit * i[1])
+          };
+        })
+      };
+    };
+
+    const invoices = ORDERS.filter(o => o[3] !== 'Cancelled').map((o, i) => {
+      const total = this.orderTotal(o[4]);
+      const status = i === 0 ? 'Outstanding' : (i === 1 ? 'Outstanding' : 'Paid');
+      return {
+        no: 'INV-' + (20418 + i * 7), order: o[0], issued: o[1],
+        due: i === 0 ? '25 Sep 2026' : (i === 1 ? '11 Sep 2026' : 'Paid in full'),
+        dueFg: status === 'Outstanding' ? '#a5620a' : '#4b5560',
+        amount: this.money(total),
+        status: status, statusStyle: statusChip(status)
+      };
+    });
+
+    const outstanding = invoices.filter(i => i.status === 'Outstanding')
+      .reduce((t, i) => t + parseFloat(i.amount.replace(/[$,]/g, '')), 0);
+    const spendYtd = ORDERS.filter(o => o[3] !== 'Cancelled').reduce((t, o) => t + this.orderTotal(o[4]), 0);
+
+    const detail = (key, label, span) => ({
+      label: label, value: st.details[key],
+      wrapStyle: 'display: flex; flex-direction: column; gap: 5px;' + (span ? ' grid-column: span 2;' : ''),
+      onInput: e => {
+        const v = e.target.value;
+        this.setState(s => ({ details: Object.assign({}, s.details, { [key]: v }) }));
+      }
+    });
+
+    return {
+      discountLabel: DISCOUNT + '% off retail',
+      viewAnim: 'animation: ' + (st.view % 2 ? 'ocFade' : 'ocRise') + ' 0.3s ease-out;',
+
+      navItems: NAV.map((n, i) => {
+        const on = i === st.view;
+        const badge = n === 'Orders' ? String(ORDERS.length) : (n === 'Invoices' ? '2' : (n === 'Downloads' ? String(DOWNLOAD_FILES.length) : ''));
+        return {
+          label: n, hasBadge: !!badge, badge: badge,
+          pick: () => this.setState({ view: i, openOrder: null }),
+          style: 'width: 100%; display: flex; align-items: center; gap: 10px; padding: 12px 16px; border: 0; cursor: pointer; text-align: left;'
+            + ' border-bottom: 1px solid #eef2f5; font-family: inherit; font-size: 15px;'
+            + ' border-left: 3px solid ' + (on ? '#0673a2' : 'transparent') + ';'
+            + ' background: ' + (on ? '#f2f9fd' : '#ffffff') + ';'
+            + ' color: ' + (on ? '#0b1c2e' : '#24456b') + '; font-weight: ' + (on ? '600' : '400') + ';',
+          badgeStyle: 'font-family: "IBM Plex Mono", monospace; font-size: 12px; padding: 2px 6px;'
+            + ' background: ' + (on ? '#0673a2' : '#eef2f5') + '; color: ' + (on ? '#ffffff' : '#667380') + ';'
+        };
+      }),
+
+      isDash: st.view === 0,
+      isOrders: st.view === 1,
+      isInvoices: st.view === 2,
+      isLists: st.view === 3,
+      isDownloads: st.view === 4,
+      isDetails: st.view === 5,
+
+      dashLine: ORDERS.length + ' orders on file · ' + BACKORDERS.length + ' lines on backorder · contract pricing at ' + DISCOUNT + '% off retail',
+      goOrders: () => this.setState({ view: 1 }),
+      stats: [
+        { k: 'Spend this FY', n: this.money(spendYtd), note: 'inc GST, 6 orders', fg: '#0b1c2e' },
+        { k: 'Open orders', n: '2', note: 'processing or part shipped', fg: '#06708f' },
+        { k: 'Lines on backorder', n: String(BACKORDERS.length), note: 'on our purchasing run', fg: '#a5620a' },
+        { k: 'Outstanding', n: this.money(outstanding), note: '30-day terms', fg: '#a5620a' }
+      ],
+      recentOrders: ORDERS.slice(0, 5).map(orderRow),
+
+      backCount: BACKORDERS.length + ' lines',
+      backorders: BACKORDERS.map(b => {
+        const p = CATALOGUE[b[0]];
+        return {
+          sku: p.sku, name: p.name, qty: b[1], eta: b[2],
+          status: b[3], statusStyle: statusChip(b[3]),
+          imgStyle: this.box(p.img, '32px')
+        };
+      }),
+
+      pricingRows: [
+        { k: 'Account', v: 'TRADE-0418', fg: '#16304f' },
+        { k: 'Contract rate', v: DISCOUNT + '% off retail', fg: '#157a45' },
+        { k: 'Payment terms', v: '30 days from invoice', fg: '#16304f' },
+        { k: 'Credit available', v: '$12,480.00', fg: '#157a45' },
+        { k: 'Freight', v: 'Quoted against terms', fg: '#16304f' }
+      ],
+
+      padValue: st.padValue,
+      onPad: e => this.setState({ padValue: e.target.value, padNote: '' }),
+      onPadKey: e => { if (e.key === 'Enter') this.runPad(); },
+      addPad: () => this.runPad(),
+      padNote: st.padNote,
+      padNoteFg: st.padOk ? '#157a45' : '#a5620a',
+
+      ordersLine: filtered.length + ' of ' + ORDERS.length + ' orders · click an order number to see its lines',
+      orderFilters: filters.map((f, i) => ({
+        label: f,
+        pick: () => this.setState({ orderFilter: i, openOrder: null }),
+        style: 'font-family: inherit; font-size: 13.5px; padding: 6px 11px; cursor: pointer;'
+          + ' border: 1px solid ' + (i === st.orderFilter ? '#16304f' : '#dbe2e8') + ';'
+          + ' background: ' + (i === st.orderFilter ? '#16304f' : '#ffffff') + ';'
+          + ' color: ' + (i === st.orderFilter ? '#ffffff' : '#24456b') + ';'
+      })),
+      orders: filtered.map(orderRow),
+
+      invoiceLine: invoices.length + ' invoices · ' + this.money(outstanding) + ' outstanding on 30-day terms',
+      invoiceStats: [
+        { k: 'Outstanding', n: this.money(outstanding), fg: '#a5620a' },
+        { k: 'Paid this FY', n: this.money(spendYtd - outstanding), fg: '#157a45' },
+        { k: 'Credit available', n: '$12,480.00', fg: '#0b1c2e' }
+      ],
+      invoices: invoices,
+
+      lists: LISTS.map(L => {
+        let total = 0;
+        const items = L[1].map(i => {
+          const p = CATALOGUE[i[0]];
+          const unit = this.trade(p.price);
+          total += unit * i[1];
+          const low = p.stock <= 3;
+          return {
+            sku: p.sku, name: p.name, qty: i[1],
+            imgStyle: this.box(p.img, '44px'),
+            total: this.money(unit * i[1]),
+            stock: p.stock <= 0 ? 'Backorder' : (low ? 'Low — ' + p.stock : 'In stock'),
+            stockFg: p.stock <= 0 || low ? '#a5620a' : '#157a45'
+          };
+        });
+        return {
+          name: L[0],
+          meta: L[1].length + ' lines · saved list · trade rate applied',
+          total: this.money(total),
+          items: items,
+          addAll: () => this.fire('Added to order', L[1].length + ' lines from “' + L[0] + '”')
+        };
+      }),
+
+      userDownloads: DOWNLOAD_FILES.map(d => ({
+        sku: d[0], name: d[1], file: d[2], kind: d[3], size: d[4],
+        imgStyle: this.box(CATALOGUE[d[0]].img, '44px')
+      })),
+
+      detailFields: [
+        detail('company', 'Company', true),
+        detail('abn', 'ABN'),
+        detail('contact', 'Primary contact'),
+        detail('role', 'Role'),
+        detail('email', 'Email'),
+        detail('phone', 'Phone')
+      ],
+      saveDetails: () => this.fire('Saved', 'Account details updated'),
+      addresses: ADDRESSES.map(a => ({ kind: a[0], body: a[1], isDefault: a[2] })),
+
+      toastOn: !!st.toast,
+      toastTitle: st.toastTitle,
+      toast: st.toast
+    };
+  }
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,1439 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="/support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="icon" type="image/png" href="/favicon.png" />
+<link rel="apple-touch-icon" href="/favicon.png" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  body { margin: 0; background: #22303d; color: #1f2429; font-family: Archivo, Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: #06708f; text-decoration: none; }
+  a:hover { color: #16304f; }
+  p { text-wrap: pretty; }
+  input, button, select, textarea { font-family: inherit; }
+  :focus-visible { outline: 2px solid #0b9fd8; outline-offset: 2px; }
+  ::selection { background: #bfe8f8; }
+  ::-webkit-scrollbar { width: 0; height: 0; }
+  @keyframes ocFade { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes ocRise { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+  @keyframes ocSheet { from { transform: translateY(100%); } to { transform: none; } }
+  @keyframes ocDrawer { from { transform: translateX(-100%); } to { transform: none; } }
+
+  /* Responsive layout — media queries cannot be expressed as inline styles.
+     Everything that must change together fires at the same width. */
+  @media (max-width: 1180px) {
+    [style*="grid-template-columns: 262px"], [style*="grid-template-columns: 264px"],
+    [style*="grid-template-columns: 268px"], [style*="grid-template-columns: 274px"],
+    [style*="grid-template-columns: 296px"], [style*="grid-template-columns: 300px"],
+    [style*="grid-template-columns: 400px"], [style*="grid-template-columns: 1fr 400px"],
+    [style*="1fr) 340px"], [style*="1fr) 360px"], [style*="1fr) 380px"],
+    [style*="1fr) 396px"], [style*="1fr) 400px"], [style*="1fr) 404px"],
+    [style*="1fr) 412px"], [style*="1fr) 420px"], [style*="1fr) 424px"],
+    [style*="1fr) 430px"], [style*="1fr) 460px"], [style*="1fr) 480px"] {
+      grid-template-columns: 1fr !important;
+    }
+    [style*="position: sticky"] { position: static !important; }
+    [style*="display: flex"] { flex-wrap: wrap; }
+    [style*="flex: 1 1 auto"] { min-width: 0; }
+    [style*="height: 84px"], [style*="height: 82px"], [style*="height: 48px"] { height: auto !important; }
+    [style*="height: 38px"] { height: auto !important; padding-top: 7px; padding-bottom: 7px; }
+    [style*="max-width: 660px"], [style*="max-width: 620px"], [style*="max-width: 560px"],
+    [style*="max-width: 480px"] { max-width: 100% !important; }
+  }
+  @media (max-width: 900px) {
+    [style*="grid-template-columns: repeat"] {
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)) !important;
+    }
+    [style*="columns: 3"] { columns: 2 !important; }
+  }
+  @media (max-width: 700px) {
+    [style*="display: grid"] { grid-template-columns: 1fr !important; }
+    [style*="columns: 3"] { columns: 1 !important; }
+  }
+</style>
+</helmet>
+
+<div style="width: 100%; max-width: 430px; margin: 0 auto; min-height: 100vh; background: #ffffff; position: relative; overflow-x: hidden; box-shadow: 0 0 0 1px rgba(0,0,0,0.35), 0 40px 80px -30px rgba(0,0,0,0.6);">
+
+  <div style="position: sticky; top: 0; z-index: 60; background: #ffffff; border-bottom: 1px solid #dbe2e8;">
+    <div style="background: #0b1c2e; padding: 7px 14px; display: flex; align-items: center; gap: 8px;">
+      <span style="width: 6px; height: 6px; border-radius: 50%; background: #2fd07e; flex: 0 0 auto;"></span>
+      <span style="font-size: 12px; color: #a9bed4; line-height: 1.35;">{{ utilityLine }}</span>
+      <a href="#" style="margin-left: auto; flex: 0 0 auto; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #6fd0f5;">Call</a>
+    </div>
+
+    <div style="height: 56px; padding: 0 12px; display: flex; align-items: center; gap: 10px;">
+      <button onClick="{{ openMenu }}" aria-label="Open menu" style="width: 40px; height: 40px; flex: 0 0 auto; border: 1px solid #dbe2e8; background: #ffffff; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; cursor: pointer;">
+        <span style="display: block; width: 16px; height: 2px; background: #16304f;"></span>
+        <span style="display: block; width: 16px; height: 2px; background: #16304f;"></span>
+        <span style="display: block; width: 16px; height: 2px; background: #16304f;"></span>
+      </button>
+      <button onClick="{{ goHome }}" style="flex: 1 1 auto; min-width: 0; border: 0; background: none; padding: 0; cursor: pointer; display: flex; align-items: center;" aria-label="Ocean Controls home">
+        <img src="/uploads/OceanControls-Design-Assets/02-brand-assets/ocean-controls-logo.png" alt="Ocean Controls" style="height: 30px; width: auto; display: block;" />
+      </button>
+      <button onClick="{{ openSearch }}" aria-label="Search" style="width: 40px; height: 40px; flex: 0 0 auto; border: 1px solid #dbe2e8; background: #ffffff; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+        <span style="position: relative; display: block; width: 13px; height: 13px; border: 2px solid #16304f; border-radius: 50%;">
+          <span style="position: absolute; right: -6px; bottom: -5px; width: 7px; height: 2px; background: #16304f; transform: rotate(45deg);"></span>
+        </span>
+      </button>
+      <button onClick="{{ goCart }}" aria-label="Cart" style="position: relative; height: 40px; padding: 0 12px; flex: 0 0 auto; border: 0; background: #16304f; color: #ffffff; display: flex; align-items: center; gap: 8px; cursor: pointer;">
+        <span style="position: relative; display: block; width: 15px; height: 15px; border: 1.5px solid #ffffff; border-top-color: transparent;">
+          <span style="position: absolute; top: -5px; left: 2px; right: 2px; height: 5px; border: 1.5px solid #ffffff; border-bottom: 0;"></span>
+        </span>
+        <span style="font-size: 13.5px; font-weight: 700; font-variant-numeric: tabular-nums;">{{ cartCount }}</span>
+      </button>
+    </div>
+  </div>
+
+  <sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
+    <div style="animation: ocFade 0.2s ease-out;">
+      <div style="background: #0b1c2e; position: relative; overflow: hidden; padding: 26px 18px 24px;">
+        <div style="position: absolute; inset: 0; background-image: linear-gradient(90deg, rgba(11,159,216,0.08) 1px, transparent 1px), linear-gradient(180deg, rgba(11,159,216,0.08) 1px, transparent 1px); background-size: 44px 44px;"></div>
+        <div style="position: relative;">
+          <div style="display: inline-flex; align-items: center; gap: 8px; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #6fd0f5; border: 1px solid rgba(111,208,245,0.35); padding: 5px 9px; margin-bottom: 16px;">
+            <span style="width: 5px; height: 5px; background: #6fd0f5;"></span>Carrum Downs, Victoria
+          </div>
+          <h1 style="margin: 0 0 12px; font-size: 31px; line-height: 1.08; font-weight: 800; letter-spacing: -0.025em; color: #ffffff;">The part, the spec sheet and the stock figure.</h1>
+          <p style="margin: 0 0 20px; font-size: 16px; line-height: 1.6; color: #a9bed4;">2,279 products from 48 manufacturers, held on our own shelves. Not drop-shipped.</p>
+          <button onClick="{{ goShop }}" style="width: 100%; height: 50px; background: #0673a2; color: #ffffff; border: 0; font-size: 16.5px; font-weight: 700; cursor: pointer; margin-bottom: 9px;">Browse the catalogue</button>
+          <a href="/contact.html" style="display: flex; align-items: center; justify-content: center; height: 48px; border: 1px solid #3a5878; color: #ffffff; font-size: 16px; font-weight: 600;">Talk to an engineer</a>
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: #24456b;">
+        <sc-for list="{{ stats }}" as="s" hint-placeholder-count="0">
+          <div style="background: #0b1c2e; padding: 14px 16px;">
+            <div style="font-size: 21.5px; font-weight: 800; color: #ffffff; letter-spacing: -0.02em; font-variant-numeric: tabular-nums;">{{ s.n }}</div>
+            <div style="font-size: 12.5px; line-height: 1.35; color: #a9bed4; margin-top: 2px;">{{ s.label }}</div>
+          </div>
+        </sc-for>
+      </div>
+
+      <div style="padding: 24px 16px 8px;">
+        <div style="display: flex; align-items: center; gap: 9px; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #06708f; margin-bottom: 10px;">
+          <span style="width: 18px; height: 1px; background: #0673a2;"></span>01 — Catalogue
+        </div>
+        <h2 style="margin: 0 0 4px; font-size: 23px; line-height: 1.15; font-weight: 700; letter-spacing: -0.02em; color: #0b1c2e;">Shop by category</h2>
+        <p style="margin: 0 0 16px; font-size: 15px; line-height: 1.55; color: #667380;">Twenty-nine groups, 237 categories.</p>
+      </div>
+      <div style="padding: 0 16px 8px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: #dbe2e8; border: 1px solid #dbe2e8;">
+        <sc-for list="{{ catTiles }}" as="t" hint-placeholder-count="0">
+          <button onClick="{{ t.pick }}" style="background: #ffffff; border: 0; padding: 14px 12px 12px; cursor: pointer; text-align: left;">
+            <span style="{{ t.imgStyle }}"></span>
+            <span style="display: block; font-size: 14px; font-weight: 600; color: #16304f; line-height: 1.3; margin-top: 10px; min-height: 36px;">{{ t.name }}</span>
+            <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; color: #667380; margin-top: 6px; padding-top: 6px; border-top: 1px solid #eef2f5;">{{ t.count }}</span>
+          </button>
+        </sc-for>
+      </div>
+      <div style="padding: 12px 16px 22px;">
+        <button onClick="{{ openMenu }}" style="width: 100%; height: 44px; border: 1px solid #c9d3dc; background: #ffffff; color: #16304f; font-size: 15px; font-weight: 600; cursor: pointer;">All 237 categories →</button>
+      </div>
+
+      <div style="background: #f7f9fb; border-top: 1px solid #dbe2e8; padding: 22px 16px 24px;">
+        <div style="display: flex; align-items: center; gap: 9px; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #06708f; margin-bottom: 10px;">
+          <span style="width: 18px; height: 1px; background: #0673a2;"></span>02 — Order pad
+        </div>
+        <h2 style="margin: 0 0 6px; font-size: 21.5px; line-height: 1.18; font-weight: 700; letter-spacing: -0.02em; color: #0b1c2e;">Reordering? Paste your part numbers</h2>
+        <p style="margin: 0 0 14px; font-size: 14.5px; line-height: 1.55; color: #667380;">Straight from the parts list, comma separated.</p>
+        <input type="text" placeholder="KTA-387, GJS-002" value="{{ padValue }}" onInput="{{ onPad }}" style="width: 100%; height: 48px; border: 1px solid #dbe2e8; background: #ffffff; padding: 0 13px; font-size: 16.5px; font-family: 'IBM Plex Mono', monospace; outline: none; margin-bottom: 9px;" aria-label="Order pad" />
+        <button onClick="{{ addPad }}" style="width: 100%; height: 48px; background: #16304f; color: #ffffff; border: 0; font-size: 15.5px; font-weight: 600; cursor: pointer;">Add to order</button>
+        <div style="font-size: 13.5px; color: {{ padNoteFg }}; margin-top: 9px; min-height: 21px; line-height: 1.5;">{{ padNote }}</div>
+      </div>
+
+      <div style="padding: 24px 16px 8px;">
+        <div style="display: flex; align-items: center; gap: 9px; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #06708f; margin-bottom: 10px;">
+          <span style="width: 18px; height: 1px; background: #0673a2;"></span>03 — Moving stock
+        </div>
+        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 14px;">
+          <h2 style="margin: 0; font-size: 23px; line-height: 1.15; font-weight: 700; letter-spacing: -0.02em; color: #0b1c2e;">New arrivals</h2>
+          <a href="#" style="font-size: 14px; font-weight: 600;">All →</a>
+        </div>
+      </div>
+      <div style="padding: 0 16px 26px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;">
+        <sc-for list="{{ homeProducts }}" as="p" hint-placeholder-count="0">
+          <div style="border: 1px solid #dbe2e8; border-top: 2px solid #0b9fd8; display: flex; flex-direction: column;">
+            <button onClick="{{ p.open }}" style="position: relative; border: 0; background: none; padding: 12px; border-bottom: 1px solid #eef2f5; cursor: pointer;">
+              <sc-if value="{{ p.hasBadge }}" hint-placeholder-val="{{ false }}">
+                <span style="{{ p.badgeStyle }}">{{ p.badge }}</span>
+              </sc-if>
+              <span style="{{ p.imgStyle }}"></span>
+            </button>
+            <div style="padding: 10px 11px 12px; display: flex; flex-direction: column; flex: 1 1 auto;">
+              <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: #667380; margin-bottom: 5px;">{{ p.brand }}</div>
+              <button onClick="{{ p.open }}" style="border: 0; background: none; padding: 0; font-family: inherit; font-size: 13.5px; font-weight: 500; line-height: 1.35; color: #16304f; text-align: left; min-height: 55px; cursor: pointer;">{{ p.name }}</button>
+              <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; color: #667380; margin: 6px 0 5px;">{{ p.sku }}</div>
+              <div style="display: flex; align-items: center; gap: 5px; font-size: 12px; color: {{ p.stockFg }}; margin-bottom: 8px;">
+                <span style="{{ p.dotStyle }}"></span>{{ p.stock }}
+              </div>
+              <div style="margin-top: auto;">
+                <div style="font-size: 18.5px; font-weight: 700; color: #0b1c2e; letter-spacing: -0.015em; font-variant-numeric: tabular-nums;">{{ p.price }}</div>
+                <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #06708f; min-height: 16px;">{{ p.tier }}</div>
+                <button onClick="{{ p.add }}" style="width: 100%; height: 40px; margin-top: 8px; background: #16304f; color: #ffffff; border: 0; font-size: 14.5px; font-weight: 600; cursor: pointer;">Add</button>
+              </div>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+
+      <div style="background: #16304f; color: #ffffff; padding: 26px 16px 28px;">
+        <div style="display: flex; align-items: center; gap: 9px; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #6fd0f5; margin-bottom: 12px;">
+          <span style="width: 18px; height: 1px; background: #6fd0f5;"></span>04 — Two ways to buy
+        </div>
+        <h2 style="margin: 0 0 12px; font-size: 24px; line-height: 1.16; font-weight: 700; letter-spacing: -0.02em;">Quantity breaks for everyone. Contract pricing for accounts.</h2>
+        <p style="margin: 0 0 18px; font-size: 15.5px; line-height: 1.65; color: #b7cade;">Tiered pricing shows on 2,097 products with no login. Approved trade accounts sign in and the catalogue re-prices.</p>
+        <div style="display: flex; flex-direction: column; gap: 2px; margin-bottom: 16px;">
+          <sc-for list="{{ tierRows }}" as="t" hint-placeholder-count="0">
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 14px; background: rgba(255,255,255,0.05); border: 1px solid #24456b;">
+              <span style="font-size: 14.5px; color: #ffffff;">{{ t.qty }}</span>
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 15px; color: #ffffff; font-variant-numeric: tabular-nums;">{{ t.each }}</span>
+            </div>
+          </sc-for>
+        </div>
+        <a href="/trade-account.html" style="display: flex; align-items: center; justify-content: center; height: 48px; background: #0673a2; color: #ffffff; font-size: 16px; font-weight: 600;">Apply for a trade account</a>
+      </div>
+
+      <div style="padding: 24px 16px 26px;">
+        <div style="display: flex; align-items: center; gap: 9px; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #06708f; margin-bottom: 12px;">
+          <span style="width: 18px; height: 1px; background: #0673a2;"></span>05 — Why buy here
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 1px; background: #dbe2e8; border: 1px solid #dbe2e8;">
+          <sc-for list="{{ benefits }}" as="b" hint-placeholder-count="0">
+            <div style="background: #ffffff; padding: 16px 15px; display: flex; gap: 13px;">
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #0673a2; flex: 0 0 auto; padding-top: 3px;">{{ b.n }}</span>
+              <span>
+                <span style="display: block; font-size: 15.5px; font-weight: 600; color: #0b1c2e; margin-bottom: 4px;">{{ b.title }}</span>
+                <span style="display: block; font-size: 14px; line-height: 1.55; color: #667380;">{{ b.body }}</span>
+              </span>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ isShop }}" hint-placeholder-val="{{ false }}">
+    <div style="animation: ocFade 0.2s ease-out;">
+      <div style="background: #f7f9fb; border-bottom: 1px solid #dbe2e8; padding: 11px 16px; display: flex; align-items: center; gap: 8px; font-size: 13.5px; color: #667380;">
+        <button onClick="{{ goHome }}" style="border: 0; background: none; padding: 0; font-family: inherit; font-size: 13.5px; color: #06708f; cursor: pointer;">Home</button>
+        <span style="color: #c9d3dc;">/</span>
+        <span style="color: #16304f; font-weight: 600;">{{ shopCatName }}</span>
+      </div>
+
+      <div style="padding: 18px 16px 14px;">
+        <h1 style="margin: 0 0 6px; font-size: 26px; line-height: 1.12; font-weight: 700; letter-spacing: -0.025em; color: #0b1c2e;">{{ shopCatName }}</h1>
+        <p style="margin: 0 0 14px; font-size: 14.5px; line-height: 1.55; color: #667380;">{{ shopBlurb }}</p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(265px, 1fr)); gap: 1px; background: #dbe2e8; border: 1px solid #dbe2e8;">
+          <sc-for list="{{ shopStats }}" as="s" hint-placeholder-count="0">
+            <div style="background: #ffffff; padding: 10px 11px;">
+              <div style="font-size: 16.5px; font-weight: 700; color: #0b1c2e; letter-spacing: -0.015em; font-variant-numeric: tabular-nums;">{{ s.n }}</div>
+              <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: #667380; margin-top: 2px;">{{ s.k }}</div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+
+      <div style="position: sticky; top: 84px; z-index: 40; background: #ffffff; border-top: 1px solid #dbe2e8; border-bottom: 1px solid #dbe2e8; padding: 9px 16px; display: flex; align-items: center; gap: 8px;">
+        <button onClick="{{ openFilters }}" style="flex: 1 1 auto; height: 42px; border: 1px solid {{ filterEdge }}; background: {{ filterBg }}; color: {{ filterFg }}; font-size: 14.5px; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px;">
+          <span>Filter</span>
+          <sc-if value="{{ hasFilters }}" hint-placeholder-val="{{ false }}">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; background: #ffffff; color: #16304f; padding: 2px 6px;">{{ filterCount }}</span>
+          </sc-if>
+        </button>
+        <button onClick="{{ openSort }}" style="flex: 1 1 auto; height: 42px; border: 1px solid #dbe2e8; background: #ffffff; color: #24456b; font-size: 14.5px; font-weight: 600; cursor: pointer;">{{ sortLabel }}</button>
+        <button onClick="{{ toggleDensity }}" aria-label="Change layout" style="width: 42px; height: 42px; flex: 0 0 auto; border: 1px solid #dbe2e8; background: #ffffff; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 2px;">
+          <span style="{{ densityIcon1 }}"></span>
+          <span style="{{ densityIcon2 }}"></span>
+        </button>
+      </div>
+
+      <div style="padding: 12px 16px 8px; font-size: 14px; color: #667380;">{{ shopShowing }}</div>
+
+      <sc-if value="{{ isTwoCol }}" hint-placeholder-val="{{ true }}">
+        <div style="padding: 0 16px 24px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;">
+          <sc-for list="{{ shopProducts }}" as="p" hint-placeholder-count="0">
+            <div style="border: 1px solid #dbe2e8; border-top: 2px solid #dbe2e8; display: flex; flex-direction: column;">
+              <button onClick="{{ p.open }}" style="position: relative; border: 0; background: none; padding: 12px; border-bottom: 1px solid #eef2f5; cursor: pointer;">
+                <sc-if value="{{ p.hasBadge }}" hint-placeholder-val="{{ false }}">
+                  <span style="{{ p.badgeStyle }}">{{ p.badge }}</span>
+                </sc-if>
+                <span style="{{ p.imgStyle }}"></span>
+              </button>
+              <div style="padding: 10px 11px 12px; display: flex; flex-direction: column; flex: 1 1 auto;">
+                <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: #667380; margin-bottom: 5px;">{{ p.brand }}</div>
+                <button onClick="{{ p.open }}" style="border: 0; background: none; padding: 0; font-family: inherit; font-size: 13.5px; font-weight: 500; line-height: 1.35; color: #16304f; text-align: left; min-height: 55px; cursor: pointer;">{{ p.name }}</button>
+                <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; color: #667380; margin: 6px 0 5px;">{{ p.sku }}</div>
+                <div style="display: flex; align-items: center; gap: 5px; font-size: 12px; color: {{ p.stockFg }}; margin-bottom: 8px;">
+                  <span style="{{ p.dotStyle }}"></span>{{ p.stock }}
+                </div>
+                <div style="margin-top: auto;">
+                  <div style="font-size: 18.5px; font-weight: 700; color: #0b1c2e; letter-spacing: -0.015em; font-variant-numeric: tabular-nums;">{{ p.price }}</div>
+                  <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #06708f; min-height: 16px;">{{ p.tier }}</div>
+                  <button onClick="{{ p.add }}" style="width: 100%; height: 40px; margin-top: 8px; background: #16304f; color: #ffffff; border: 0; font-size: 14.5px; font-weight: 600; cursor: pointer;">Add</button>
+                </div>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{ isRows }}" hint-placeholder-val="{{ false }}">
+        <div style="padding: 0 0 24px;">
+          <sc-for list="{{ shopProducts }}" as="p" hint-placeholder-count="0">
+            <div style="display: grid; grid-template-columns: 84px minmax(0, 1fr); gap: 12px; padding: 14px 16px; border-bottom: 1px solid #eef2f5;">
+              <button onClick="{{ p.open }}" style="position: relative; border: 1px solid #eef2f5; background: none; padding: 6px; cursor: pointer;">
+                <span style="{{ p.imgStyleRow }}"></span>
+              </button>
+              <div style="min-width: 0;">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 5px;">
+                  <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: #667380;">{{ p.brand }}</span>
+                  <sc-if value="{{ p.hasBadge }}" hint-placeholder-val="{{ false }}">
+                    <span style="{{ p.badgeStyleInline }}">{{ p.badge }}</span>
+                  </sc-if>
+                </div>
+                <button onClick="{{ p.open }}" style="border: 0; background: none; padding: 0; font-family: inherit; font-size: 15px; font-weight: 600; line-height: 1.35; color: #16304f; text-align: left; cursor: pointer;">{{ p.name }}</button>
+                <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #667380; margin: 6px 0;">{{ p.sku }}</div>
+                <div style="display: flex; align-items: center; gap: 5px; font-size: 13px; color: {{ p.stockFg }}; margin-bottom: 9px;">
+                  <span style="{{ p.dotStyle }}"></span>{{ p.stock }}
+                </div>
+                <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 12px;">
+                  <div>
+                    <div style="font-size: 20.5px; font-weight: 700; color: #0b1c2e; letter-spacing: -0.015em; font-variant-numeric: tabular-nums;">{{ p.price }}</div>
+                    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; color: #06708f; min-height: 17px;">{{ p.tier }}</div>
+                  </div>
+                  <button onClick="{{ p.add }}" style="flex: 0 0 auto; height: 42px; padding: 0 22px; background: #16304f; color: #ffffff; border: 0; font-size: 15px; font-weight: 600; cursor: pointer;">Add</button>
+                </div>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </sc-if>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ isProduct }}" hint-placeholder-val="{{ false }}">
+    <div style="animation: ocFade 0.2s ease-out; padding-bottom: 84px;">
+      <div style="background: #f7f9fb; border-bottom: 1px solid #dbe2e8; padding: 11px 16px; display: flex; align-items: center; gap: 8px; font-size: 13.5px; color: #667380;">
+        <button onClick="{{ goShop }}" style="border: 0; background: none; padding: 0; font-family: inherit; font-size: 13.5px; color: #06708f; cursor: pointer;">← {{ product.cat }}</button>
+        <span style="margin-left: auto; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #667380;">{{ product.sku }}</span>
+      </div>
+
+      <div style="position: relative; padding: 20px 16px 0;">
+        <sc-if value="{{ product.hasBadge }}" hint-placeholder-val="{{ false }}">
+          <span style="{{ product.badgeStyle }}">{{ product.badge }}</span>
+        </sc-if>
+        <div style="{{ product.imgStyle }}"></div>
+      </div>
+
+      <div style="padding: 16px 16px 0;">
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #06708f;">{{ product.brand }}</span>
+          <span style="width: 1px; height: 11px; background: #dbe2e8;"></span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; color: #667380;">{{ product.mpn }}</span>
+        </div>
+        <h1 style="margin: 0 0 12px; font-size: 23px; line-height: 1.24; font-weight: 700; letter-spacing: -0.02em; color: #0b1c2e;">{{ product.name }}</h1>
+
+        <div style="display: flex; align-items: baseline; gap: 10px; margin-bottom: 4px;">
+          <span style="font-size: 33px; font-weight: 800; color: #0b1c2e; letter-spacing: -0.03em; font-variant-numeric: tabular-nums;">{{ product.price }}</span>
+          <span style="font-size: 13.5px; color: #667380;">ex GST</span>
+        </div>
+        <div style="font-size: 14px; color: #667380; margin-bottom: 14px;">{{ product.incGst }}</div>
+
+        <div style="display: flex; align-items: center; gap: 9px; font-size: 15.5px; font-weight: 600; color: {{ product.stockFg }}; padding: 12px 14px; background: #f7f9fb; border: 1px solid #dbe2e8; margin-bottom: 8px;">
+          <span style="{{ product.dotStyleBig }}"></span>{{ product.stock }}
+        </div>
+        <div style="font-size: 14px; line-height: 1.55; color: #667380; margin-bottom: 18px;">{{ product.dispatch }}</div>
+
+        <sc-if value="{{ product.hasTiers }}" hint-placeholder-val="{{ true }}">
+          <div style="border: 1px solid #dbe2e8; margin-bottom: 18px;">
+            <div style="padding: 11px 14px; background: #f7f9fb; border-bottom: 1px solid #dbe2e8; display: flex; align-items: baseline; justify-content: space-between; gap: 10px;">
+              <span style="font-size: 14.5px; font-weight: 700; color: #0b1c2e;">Buy more for less</span>
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; color: #667380;">{{ product.tierCount }}</span>
+            </div>
+            <sc-for list="{{ product.tiers }}" as="t" hint-placeholder-count="0">
+              <div style="{{ t.rowStyle }}">
+                <span style="font-size: 14px; font-weight: {{ t.weight }}; color: #16304f;">{{ t.qty }}</span>
+                <span style="font-family: 'IBM Plex Mono', monospace; font-size: 14.5px; color: #0b1c2e; font-variant-numeric: tabular-nums;">{{ t.each }}</span>
+                <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: {{ t.saveFg }}; text-align: right;">{{ t.save }}</span>
+              </div>
+            </sc-for>
+          </div>
+        </sc-if>
+
+        <div style="display: flex; gap: 8px; margin-bottom: 10px;">
+          <div style="display: flex; border: 1px solid #dbe2e8; height: 52px; flex: 0 0 auto;">
+            <button onClick="{{ product.dec }}" style="width: 46px; border: 0; background: none; cursor: pointer; color: #667380; font-size: 21.5px;">−</button>
+            <div style="width: 46px; display: flex; align-items: center; justify-content: center; font-size: 17.5px; font-weight: 700; font-variant-numeric: tabular-nums; border-left: 1px solid #eef2f5; border-right: 1px solid #eef2f5;">{{ product.qty }}</div>
+            <button onClick="{{ product.inc }}" style="width: 46px; border: 0; background: none; cursor: pointer; color: #667380; font-size: 21.5px;">+</button>
+          </div>
+          <button onClick="{{ product.add }}" style="flex: 1 1 auto; height: 52px; background: #16304f; color: #ffffff; border: 0; font-size: 16.5px; font-weight: 700; cursor: pointer;">Add to cart</button>
+        </div>
+        <div style="font-size: 13.5px; color: {{ product.liveFg }}; min-height: 21px; margin-bottom: 18px;">{{ product.liveLine }}</div>
+
+        <div style="display: flex; align-items: flex-start; gap: 11px; background: #fdf8ef; border-left: 3px solid #d99b2b; padding: 13px 14px; margin-bottom: 22px;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #a5620a; flex: 0 0 auto; padding-top: 2px;">Account</span>
+          <p style="margin: 0; font-size: 13.5px; line-height: 1.55; color: #6b4a12;">Registered customers only — we do not take guest orders. Trade accounts see contract pricing here.</p>
+        </div>
+      </div>
+
+      <div style="border-top: 1px solid #dbe2e8;">
+        <sc-for list="{{ product.sections }}" as="s" hint-placeholder-count="0">
+          <div style="border-bottom: 1px solid #dbe2e8;">
+            <button onClick="{{ s.toggle }}" style="width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px; border: 0; background: {{ s.headBg }}; cursor: pointer; text-align: left;">
+              <span style="display: flex; align-items: center; gap: 10px;">
+                <span style="font-size: 16.5px; font-weight: 600; color: #0b1c2e;">{{ s.label }}</span>
+                <sc-if value="{{ s.hasCount }}" hint-placeholder-val="{{ false }}">
+                  <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; background: #eef2f5; color: #667380; padding: 3px 6px;">{{ s.count }}</span>
+                </sc-if>
+              </span>
+              <span style="font-size: 19.5px; color: #667380; line-height: 1;">{{ s.chev }}</span>
+            </button>
+            <sc-if value="{{ s.open }}" hint-placeholder-val="{{ false }}">
+              <div style="padding: 2px 16px 18px; animation: ocFade 0.2s ease-out;">
+                <sc-for list="{{ s.paras }}" as="p" hint-placeholder-count="0">
+                  <p style="margin: 0 0 12px; font-size: 15px; line-height: 1.7; color: #4b5560;">{{ p.t }}</p>
+                </sc-for>
+                <sc-for list="{{ s.rows }}" as="r" hint-placeholder-count="0">
+                  <div style="{{ r.rowStyle }}">
+                    <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.06em; text-transform: uppercase; color: #667380;">{{ r.k }}</span>
+                    <span style="font-size: 14.5px; font-weight: 500; color: #16304f; text-align: right;">{{ r.v }}</span>
+                  </div>
+                </sc-for>
+                <sc-for list="{{ s.files }}" as="f" hint-placeholder-count="0">
+                  <a href="#" style="display: flex; align-items: center; gap: 11px; padding: 12px 0; border-bottom: 1px solid #eef2f5;">
+                    <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.06em; background: #16304f; color: #ffffff; padding: 4px 6px; flex: 0 0 auto;">{{ f.kind }}</span>
+                    <span style="flex: 1 1 auto; min-width: 0; font-size: 14px; color: #24456b;">{{ f.name }}</span>
+                    <span style="flex: 0 0 auto; font-size: 13.5px; font-weight: 600; color: #06708f;">↓</span>
+                  </a>
+                </sc-for>
+              </div>
+            </sc-if>
+          </div>
+        </sc-for>
+      </div>
+
+      <div style="padding: 22px 16px 8px;">
+        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px; border-bottom: 2px solid #16304f; padding-bottom: 11px; margin-bottom: 14px;">
+          <h2 style="margin: 0; font-size: 19.5px; font-weight: 700; letter-spacing: -0.015em; color: #0b1c2e;">More in {{ product.cat }}</h2>
+          <button onClick="{{ goShop }}" style="border: 0; background: none; padding: 0; font-family: inherit; font-size: 14px; font-weight: 600; color: #06708f; cursor: pointer;">All →</button>
+        </div>
+      </div>
+      <div style="padding: 0 16px 24px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;">
+        <sc-for list="{{ product.related }}" as="r" hint-placeholder-count="0">
+          <button onClick="{{ r.open }}" style="border: 1px solid #dbe2e8; background: #ffffff; padding: 0; display: flex; flex-direction: column; cursor: pointer; text-align: left;">
+            <span style="display: block; width: 100%; padding: 12px; border-bottom: 1px solid #eef2f5;">
+              <span style="{{ r.imgStyle }}"></span>
+            </span>
+            <span style="display: flex; flex-direction: column; padding: 10px 11px 12px; width: 100%;">
+              <span style="display: block; font-size: 13px; font-weight: 500; line-height: 1.35; color: #16304f; min-height: 53px;">{{ r.name }}</span>
+              <span style="display: block; font-size: 16.5px; font-weight: 700; color: #0b1c2e; margin-top: 8px; font-variant-numeric: tabular-nums;">{{ r.price }}</span>
+            </span>
+          </button>
+        </sc-for>
+      </div>
+    </div>
+
+    <div style="position: fixed; left: 0; right: 0; bottom: 0; z-index: 70; width: 100%; max-width: 430px; margin: 0 auto; background: #ffffff; border-top: 1px solid #c9d3dc; box-shadow: 0 -14px 32px -22px rgba(11,28,46,0.5); padding: 10px 16px 12px; display: flex; align-items: center; gap: 10px;">
+      <div style="flex: 0 1 auto; min-width: 0;">
+        <div style="font-size: 20.5px; font-weight: 800; color: #0b1c2e; letter-spacing: -0.02em; font-variant-numeric: tabular-nums;">{{ product.price }}</div>
+        <div style="font-size: 12px; color: {{ product.stockFg }};">{{ product.stockShort }}</div>
+      </div>
+      <button onClick="{{ product.add }}" style="flex: 1 1 auto; height: 50px; background: #16304f; color: #ffffff; border: 0; font-size: 16.5px; font-weight: 700; cursor: pointer;">Add {{ product.qty }} to cart</button>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ isCart }}" hint-placeholder-val="{{ false }}">
+    <div style="animation: ocFade 0.2s ease-out; padding-bottom: 100px;">
+      <div style="padding: 20px 16px 14px;">
+        <h1 style="margin: 0 0 5px; font-size: 26px; line-height: 1.12; font-weight: 700; letter-spacing: -0.025em; color: #0b1c2e;">Your order</h1>
+        <p style="margin: 0; font-size: 14.5px; color: #667380;">{{ cartSummary }}</p>
+      </div>
+
+      <sc-if value="{{ cartEmpty }}" hint-placeholder-val="{{ false }}">
+        <div style="margin: 0 16px 24px; border: 1px dashed #c9d3dc; padding: 44px 22px; text-align: center;">
+          <div style="font-size: 17px; font-weight: 600; color: #16304f; margin-bottom: 8px;">Nothing on this order</div>
+          <p style="margin: 0 0 18px; font-size: 14.5px; line-height: 1.6; color: #667380;">Add a product, or paste part numbers into the order pad on the home screen.</p>
+          <button onClick="{{ goShop }}" style="width: 100%; height: 46px; background: #16304f; color: #ffffff; border: 0; font-size: 15.5px; font-weight: 600; cursor: pointer;">Browse the catalogue</button>
+        </div>
+      </sc-if>
+
+      <sc-for list="{{ cartLines }}" as="l" hint-placeholder-count="0">
+        <div style="border-top: 1px solid #eef2f5; padding: 14px 16px;">
+          <div style="display: grid; grid-template-columns: 68px minmax(0, 1fr); gap: 12px;">
+            <div style="{{ l.imgStyle }}"></div>
+            <div style="min-width: 0;">
+              <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 10px; margin-bottom: 4px;">
+                <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #667380;">{{ l.sku }}</span>
+                <button onClick="{{ l.remove }}" style="border: 0; background: none; padding: 0; font-family: inherit; font-size: 13px; color: #667380; cursor: pointer; text-decoration: underline;">Remove</button>
+              </div>
+              <div style="font-size: 14.5px; font-weight: 500; line-height: 1.4; color: #16304f; margin-bottom: 9px;">{{ l.name }}</div>
+              <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px;">
+                <div style="display: flex; border: 1px solid #dbe2e8; height: 40px;">
+                  <button onClick="{{ l.dec }}" style="width: 38px; border: 0; background: none; cursor: pointer; color: #667380; font-size: 18.5px;">−</button>
+                  <div style="width: 38px; display: flex; align-items: center; justify-content: center; font-size: 15.5px; font-weight: 600; font-variant-numeric: tabular-nums; border-left: 1px solid #eef2f5; border-right: 1px solid #eef2f5;">{{ l.qty }}</div>
+                  <button onClick="{{ l.inc }}" style="width: 38px; border: 0; background: none; cursor: pointer; color: #667380; font-size: 18.5px;">+</button>
+                </div>
+                <div style="text-align: right;">
+                  <div style="font-size: 17.5px; font-weight: 700; color: #0b1c2e; font-variant-numeric: tabular-nums;">{{ l.total }}</div>
+                  <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #667380;">{{ l.each }}</div>
+                </div>
+              </div>
+              <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #157a45; margin-top: 7px; min-height: 17px;">{{ l.saveNote }}</div>
+            </div>
+          </div>
+          <sc-if value="{{ l.hasNudge }}" hint-placeholder-val="{{ false }}">
+            <div style="margin-top: 11px; background: #f2f9fd; border: 1px solid #bfe8f8; padding: 11px 13px;">
+              <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #06708f; margin-bottom: 5px;">Buy more for less</div>
+              <div style="font-size: 14px; line-height: 1.55; color: #24456b; margin-bottom: 9px;">{{ l.nudge }}</div>
+              <button onClick="{{ l.takeNudge }}" style="width: 100%; height: 38px; border: 1px solid #0b9fd8; background: #ffffff; color: #06708f; font-size: 14px; font-weight: 600; cursor: pointer;">{{ l.nudgeCta }}</button>
+            </div>
+          </sc-if>
+        </div>
+      </sc-for>
+
+      <sc-if value="{{ cartHasLines }}" hint-placeholder-val="{{ false }}">
+        <div style="border-top: 1px solid #dbe2e8; background: #f7f9fb; padding: 18px 16px 20px; margin-top: 8px;">
+          <div style="display: flex; flex-direction: column; gap: 9px; margin-bottom: 16px;">
+            <sc-for list="{{ cartTotals }}" as="t" hint-placeholder-count="0">
+              <div style="{{ t.rowStyle }}">
+                <span style="font-size: {{ t.size }}; font-weight: {{ t.weight }}; color: {{ t.fg }};">{{ t.k }}</span>
+                <span style="font-size: {{ t.vSize }}; font-weight: {{ t.vWeight }}; color: {{ t.vFg }}; font-variant-numeric: tabular-nums; text-align: right;">{{ t.v }}</span>
+              </div>
+            </sc-for>
+          </div>
+          <div style="display: flex; align-items: flex-start; gap: 10px; padding-top: 14px; border-top: 1px solid #dbe2e8;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #a5620a; flex: 0 0 auto; padding-top: 2px;">Account</span>
+            <span style="font-size: 13px; line-height: 1.55; color: #667380;">Registered customers only. An account keeps invoices, order history and datasheet downloads together.</span>
+          </div>
+        </div>
+      </sc-if>
+    </div>
+
+    <sc-if value="{{ cartHasLines }}" hint-placeholder-val="{{ false }}">
+      <div style="position: fixed; left: 0; right: 0; bottom: 0; z-index: 70; width: 100%; max-width: 430px; margin: 0 auto; background: #ffffff; border-top: 1px solid #c9d3dc; box-shadow: 0 -14px 32px -22px rgba(11,28,46,0.5); padding: 11px 16px 13px;">
+        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 9px;">
+          <span style="font-size: 14.5px; color: #667380;">Total inc GST</span>
+          <span style="font-size: 22.5px; font-weight: 800; color: #0b1c2e; letter-spacing: -0.02em; font-variant-numeric: tabular-nums;">{{ cartTotalInc }}</span>
+        </div>
+        <button style="width: 100%; height: 52px; background: #16304f; color: #ffffff; border: 0; font-size: 17px; font-weight: 700; cursor: pointer;">Checkout</button>
+      </div>
+    </sc-if>
+  </sc-if>
+
+  <sc-if value="{{ isAccount }}" hint-placeholder-val="{{ false }}">
+    <div style="animation: ocFade 0.2s ease-out; padding-bottom: 20px;">
+      <div style="background: #0b1c2e; color: #ffffff; padding: 22px 16px 24px;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #6fd0f5; margin-bottom: 8px;">Approved trade account · 15% off retail</div>
+        <div style="font-size: 23px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 3px;">Ocean Controls Pty Ltd</div>
+        <div style="font-size: 14.5px; color: #a9bed4;">ivan@oceancontrols.com.au · TRADE-0418</div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: #dbe2e8; border-bottom: 1px solid #dbe2e8;">
+        <sc-for list="{{ accountStats }}" as="s" hint-placeholder-count="0">
+          <div style="background: #ffffff; padding: 15px 16px;">
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: #667380;">{{ s.k }}</div>
+            <div style="font-size: 22.5px; font-weight: 800; color: {{ s.fg }}; letter-spacing: -0.02em; margin-top: 4px; font-variant-numeric: tabular-nums;">{{ s.n }}</div>
+            <div style="font-size: 12.5px; color: #667380; margin-top: 2px;">{{ s.note }}</div>
+          </div>
+        </sc-for>
+      </div>
+
+      <div style="padding: 20px 16px 8px;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #667380; margin-bottom: 11px;">Recent orders</div>
+      </div>
+      <sc-for list="{{ accountOrders }}" as="o" hint-placeholder-count="0">
+        <div style="border-top: 1px solid #eef2f5; padding: 14px 16px;">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 7px;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; font-weight: 600; color: #16304f;">{{ o.no }}</span>
+            <span style="{{ o.statusStyle }}">{{ o.status }}</span>
+          </div>
+          <div style="font-size: 14px; line-height: 1.5; color: #667380; margin-bottom: 9px;">{{ o.contents }}</div>
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px;">
+            <span style="font-size: 13px; color: #667380;">{{ o.date }} · {{ o.lines }} lines</span>
+            <span style="display: flex; align-items: center; gap: 12px;">
+              <span style="font-size: 16.5px; font-weight: 700; color: #0b1c2e; font-variant-numeric: tabular-nums;">{{ o.total }}</span>
+              <button onClick="{{ o.reorder }}" style="height: 36px; padding: 0 14px; border: 1px solid #dbe2e8; background: #ffffff; color: #16304f; font-size: 14px; font-weight: 600; cursor: pointer;">Reorder</button>
+            </span>
+          </div>
+        </div>
+      </sc-for>
+
+      <div style="margin: 20px 16px 0; border: 1px solid #dbe2e8;">
+        <div style="padding: 12px 14px; background: #fdf8ef; border-bottom: 1px solid #dbe2e8; display: flex; align-items: baseline; justify-content: space-between; gap: 10px;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #a5620a;">Parts on order for you</span>
+          <span style="font-size: 13px; color: #6b4a12;">3 lines</span>
+        </div>
+        <sc-for list="{{ backorders }}" as="b" hint-placeholder-count="0">
+          <div style="display: grid; grid-template-columns: 34px minmax(0, 1fr) 34px; gap: 11px; align-items: center; padding: 11px 14px; border-bottom: 1px solid #eef2f5;">
+            <div style="{{ b.imgStyle }}"></div>
+            <div style="min-width: 0;">
+              <div style="font-size: 14px; font-weight: 500; color: #16304f; line-height: 1.35;">{{ b.name }}</div>
+              <div style="display: flex; align-items: center; gap: 9px; flex-wrap: wrap; margin-top: 4px;">
+                <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #667380;">{{ b.sku }}</span>
+                <span style="font-size: 12.5px; color: #667380;">{{ b.eta }}</span>
+              </div>
+            </div>
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #4b5560; text-align: right;">× {{ b.qty }}</div>
+          </div>
+        </sc-for>
+      </div>
+
+      <div style="padding: 20px 16px 8px;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #667380; margin-bottom: 11px;">Your account</div>
+        <div style="display: flex; flex-direction: column; gap: 1px; background: #dbe2e8; border: 1px solid #dbe2e8;">
+          <sc-for list="{{ accountLinks }}" as="a" hint-placeholder-count="0">
+            <a href="#" style="background: #ffffff; padding: 15px 15px; display: flex; align-items: center; gap: 12px;">
+              <span style="flex: 1 1 auto; font-size: 15.5px; font-weight: 500; color: #16304f;">{{ a.label }}</span>
+              <sc-if value="{{ a.hasCount }}" hint-placeholder-val="{{ false }}">
+                <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; background: #eef2f5; color: #667380; padding: 3px 6px;">{{ a.count }}</span>
+              </sc-if>
+              <span style="flex: 0 0 auto; color: #667380; font-size: 17.5px; line-height: 1;">›</span>
+            </a>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+
+  <div style="height: 68px;"></div>
+
+  <div style="position: fixed; left: 0; right: 0; bottom: 0; z-index: 55; width: 100%; max-width: 430px; margin: 0 auto; background: #ffffff; border-top: 1px solid #dbe2e8; display: grid; grid-template-columns: repeat(auto-fit, minmax(195px, 1fr)); box-shadow: 0 -10px 26px -20px rgba(11,28,46,0.4);">
+    <sc-for list="{{ tabs }}" as="t" hint-placeholder-count="0">
+      <button onClick="{{ t.pick }}" style="{{ t.style }}">
+        <span style="{{ t.iconStyle }}">{{ t.glyph }}</span>
+        <span style="font-size: 12px; font-weight: {{ t.weight }};">{{ t.label }}</span>
+      </button>
+    </sc-for>
+  </div>
+
+  <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+    <div style="position: fixed; inset: 0; z-index: 90; display: flex;">
+      <div onClick="{{ closeMenu }}" style="position: absolute; inset: 0; background: rgba(11,28,46,0.55);"></div>
+      <div style="position: relative; width: 100%; max-width: 430px; margin: 0 auto; height: 100%; background: #ffffff; display: flex; flex-direction: column; animation: ocDrawer 0.22s ease-out;">
+        <div style="background: #0b1c2e; padding: 16px; display: flex; align-items: center; gap: 12px;">
+          <div style="flex: 1 1 auto;">
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #6fd0f5;">Shop by category</div>
+            <div style="font-size: 18.5px; font-weight: 700; color: #ffffff; margin-top: 3px;">{{ menuTitle }}</div>
+          </div>
+          <button onClick="{{ closeMenu }}" style="width: 40px; height: 40px; flex: 0 0 auto; border: 1px solid #3a5878; background: none; color: #ffffff; font-size: 21.5px; line-height: 1; cursor: pointer;">×</button>
+        </div>
+
+        <sc-if value="{{ menuAtRoot }}" hint-placeholder-val="{{ true }}">
+          <div style="flex: 1 1 auto; overflow-y: auto;">
+            <sc-for list="{{ menuCats }}" as="c" hint-placeholder-count="0">
+              <button onClick="{{ c.open }}" style="width: 100%; display: flex; align-items: center; gap: 12px; padding: 15px 16px; border: 0; border-bottom: 1px solid #eef2f5; background: #ffffff; cursor: pointer; text-align: left;">
+                <span style="flex: 1 1 auto; font-size: 16px; font-weight: 500; color: #16304f;">{{ c.name }}</span>
+                <span style="flex: 0 0 auto; font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; color: #667380; font-variant-numeric: tabular-nums;">{{ c.count }}</span>
+                <span style="flex: 0 0 auto; color: #667380; font-size: 18.5px; line-height: 1;">›</span>
+              </button>
+            </sc-for>
+          </div>
+          <div style="border-top: 1px solid #dbe2e8; padding: 14px 16px 18px; display: flex; flex-direction: column; gap: 9px;">
+            <sc-for list="{{ menuLinks }}" as="m" hint-placeholder-count="0">
+              <a href="#" style="font-size: 15.5px; font-weight: 500; color: #24456b;">{{ m }}</a>
+            </sc-for>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ menuInCat }}" hint-placeholder-val="{{ false }}">
+          <div style="flex: 1 1 auto; overflow-y: auto;">
+            <button onClick="{{ menuBack }}" style="width: 100%; display: flex; align-items: center; gap: 10px; padding: 13px 16px; border: 0; border-bottom: 1px solid #dbe2e8; background: #f7f9fb; cursor: pointer; text-align: left;">
+              <span style="color: #06708f; font-size: 17.5px; line-height: 1;">‹</span>
+              <span style="font-size: 14.5px; font-weight: 600; color: #06708f;">All categories</span>
+            </button>
+            <button onClick="{{ menuGoAll }}" style="width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 15px 16px; border: 0; border-bottom: 1px solid #eef2f5; background: #ffffff; cursor: pointer; text-align: left;">
+              <span style="font-size: 16px; font-weight: 700; color: #0b1c2e;">{{ menuAllLabel }}</span>
+              <span style="color: #06708f; font-size: 18.5px; line-height: 1;">›</span>
+            </button>
+            <sc-for list="{{ menuSubs }}" as="s" hint-placeholder-count="0">
+              <button onClick="{{ menuGoAll }}" style="width: 100%; display: flex; align-items: center; gap: 12px; padding: 14px 16px 14px 26px; border: 0; border-bottom: 1px solid #eef2f5; background: #ffffff; cursor: pointer; text-align: left;">
+                <span style="flex: 1 1 auto; font-size: 15px; color: #24456b;">{{ s.name }}</span>
+                <span style="flex: 0 0 auto; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #667380; font-variant-numeric: tabular-nums;">{{ s.count }}</span>
+              </button>
+            </sc-for>
+          </div>
+        </sc-if>
+      </div>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ searchOpen }}" hint-placeholder-val="{{ false }}">
+    <div style="position: fixed; inset: 0; z-index: 95; background: #ffffff; width: 100%; max-width: 430px; margin: 0 auto; display: flex; flex-direction: column; animation: ocFade 0.16s ease-out;">
+      <div style="background: #0b1c2e; padding: 12px 14px; display: flex; align-items: center; gap: 10px;">
+        <div style="flex: 1 1 auto; display: flex; height: 46px; background: #ffffff;">
+          <input type="text" ref="{{ searchRef }}" placeholder="Product, SKU, brand or spec" value="{{ searchQ }}" onInput="{{ onSearch }}" style="flex: 1 1 auto; border: 0; outline: none; padding: 0 13px; font-size: 16.5px; min-width: 0;" aria-label="Search" />
+          <sc-if value="{{ hasQuery }}" hint-placeholder-val="{{ false }}">
+            <button onClick="{{ clearSearch }}" style="width: 42px; border: 0; background: none; color: #667380; font-size: 19.5px; cursor: pointer;">×</button>
+          </sc-if>
+        </div>
+        <button onClick="{{ closeSearch }}" style="flex: 0 0 auto; height: 46px; padding: 0 14px; border: 1px solid #3a5878; background: none; color: #ffffff; font-size: 15px; font-weight: 600; cursor: pointer;">Done</button>
+      </div>
+
+      <div style="padding: 11px 16px; background: #f7f9fb; border-bottom: 1px solid #dbe2e8; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #667380;">{{ searchLabel }}</div>
+
+      <div style="flex: 1 1 auto; overflow-y: auto;">
+        <sc-for list="{{ searchGroups }}" as="g" hint-placeholder-count="0">
+          <div>
+            <div style="padding: 11px 16px 7px; display: flex; align-items: baseline; justify-content: space-between; gap: 12px; border-bottom: 1px solid #eef2f5;">
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #06708f;">{{ g.label }}</span>
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #667380;">{{ g.count }}</span>
+            </div>
+            <sc-for list="{{ g.items }}" as="i" hint-placeholder-count="0">
+              <button onClick="{{ i.pick }}" style="width: 100%; display: grid; grid-template-columns: 42px minmax(0, 1fr) auto; gap: 12px; align-items: center; padding: 11px 16px; border: 0; border-bottom: 1px solid #eef2f5; background: #ffffff; cursor: pointer; text-align: left;">
+                <span style="{{ i.imgStyle }}"></span>
+                <span style="min-width: 0;">
+                  <span style="display: block; font-size: 14.5px; font-weight: 500; color: #16304f; line-height: 1.35;">{{ i.pre }}<span style="background: #fff3bf; color: #0b1c2e;">{{ i.mid }}</span>{{ i.post }}</span>
+                  <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #667380; margin-top: 3px;">{{ i.meta }}</span>
+                </span>
+                <span style="flex: 0 0 auto; text-align: right;">
+                  <span style="display: block; font-size: 15px; font-weight: 700; color: #0b1c2e; font-variant-numeric: tabular-nums;">{{ i.price }}</span>
+                  <span style="display: block; font-size: 12px; color: {{ i.stockFg }}; margin-top: 2px;">{{ i.stock }}</span>
+                </span>
+              </button>
+            </sc-for>
+          </div>
+        </sc-for>
+        <sc-if value="{{ searchEmpty }}" hint-placeholder-val="{{ false }}">
+          <div style="padding: 40px 24px; text-align: center;">
+            <div style="font-size: 16px; font-weight: 600; color: #16304f; margin-bottom: 7px;">{{ searchEmptyTitle }}</div>
+            <p style="margin: 0 0 16px; font-size: 14px; line-height: 1.6; color: #667380;">Try a SKU like KTA-387, a brand like Mean Well, or a spec term like 4-20 mA.</p>
+            <a href="#" style="font-family: 'IBM Plex Mono', monospace; font-size: 14.5px; font-weight: 500;">Call +61 3 9708 2390</a>
+          </div>
+        </sc-if>
+      </div>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ filtersOpen }}" hint-placeholder-val="{{ false }}">
+    <div style="position: fixed; inset: 0; z-index: 92; display: flex; align-items: flex-end;">
+      <div onClick="{{ closeFilters }}" style="position: absolute; inset: 0; background: rgba(11,28,46,0.55);"></div>
+      <div style="position: relative; width: 100%; max-width: 430px; margin: 0 auto; max-height: 86%; background: #ffffff; display: flex; flex-direction: column; animation: ocSheet 0.22s ease-out;">
+        <div style="padding: 15px 16px; border-bottom: 1px solid #dbe2e8; display: flex; align-items: center; gap: 12px;">
+          <div style="flex: 1 1 auto;">
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #06708f;">Refine</div>
+            <div style="font-size: 18.5px; font-weight: 700; color: #0b1c2e; margin-top: 2px;">{{ filterSheetTitle }}</div>
+          </div>
+          <button onClick="{{ closeFilters }}" style="width: 38px; height: 38px; flex: 0 0 auto; border: 1px solid #dbe2e8; background: #ffffff; font-size: 20.5px; line-height: 1; color: #667380; cursor: pointer;">×</button>
+        </div>
+        <div style="flex: 1 1 auto; overflow-y: auto; padding: 4px 16px 12px;">
+          <sc-for list="{{ filterGroups }}" as="fg" hint-placeholder-count="0">
+            <div style="padding: 14px 0 6px; border-bottom: 1px solid #eef2f5;">
+              <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #667380; margin-bottom: 10px;">{{ fg.label }}</div>
+              <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                <sc-for list="{{ fg.options }}" as="o" hint-placeholder-count="0">
+                  <button onClick="{{ o.toggle }}" style="{{ o.style }}">
+                    <span>{{ o.label }}</span>
+                    <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; opacity: 0.65;">{{ o.count }}</span>
+                  </button>
+                </sc-for>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+        <div style="border-top: 1px solid #dbe2e8; padding: 12px 16px 14px; display: flex; gap: 9px;">
+          <button onClick="{{ clearFilters }}" style="flex: 0 0 auto; height: 50px; padding: 0 20px; border: 1px solid #c9d3dc; background: #ffffff; color: #16304f; font-size: 15.5px; font-weight: 600; cursor: pointer;">Clear</button>
+          <button onClick="{{ closeFilters }}" style="flex: 1 1 auto; height: 50px; background: #16304f; color: #ffffff; border: 0; font-size: 16.5px; font-weight: 700; cursor: pointer;">{{ filterApplyLabel }}</button>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ sortOpen }}" hint-placeholder-val="{{ false }}">
+    <div style="position: fixed; inset: 0; z-index: 92; display: flex; align-items: flex-end;">
+      <div onClick="{{ closeSort }}" style="position: absolute; inset: 0; background: rgba(11,28,46,0.55);"></div>
+      <div style="position: relative; width: 100%; max-width: 430px; margin: 0 auto; background: #ffffff; animation: ocSheet 0.22s ease-out;">
+        <div style="padding: 15px 16px; border-bottom: 1px solid #dbe2e8; font-size: 18.5px; font-weight: 700; color: #0b1c2e;">Sort by</div>
+        <sc-for list="{{ sortOptions }}" as="s" hint-placeholder-count="0">
+          <button onClick="{{ s.pick }}" style="{{ s.style }}">
+            <span style="{{ s.radioStyle }}"></span>
+            <span style="flex: 1 1 auto; text-align: left; font-size: 16px;">{{ s.label }}</span>
+          </button>
+        </sc-for>
+        <div style="padding: 12px 16px 16px;">
+          <button onClick="{{ closeSort }}" style="width: 100%; height: 50px; background: #16304f; color: #ffffff; border: 0; font-size: 16.5px; font-weight: 700; cursor: pointer;">Done</button>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ toastOn }}" hint-placeholder-val="{{ false }}">
+    <div style="position: fixed; left: 12px; right: 12px; bottom: 84px; z-index: 88; max-width: 406px; margin: 0 auto; background: #0b1c2e; color: #ffffff; border-left: 3px solid #2fd07e; padding: 13px 15px; box-shadow: 0 18px 40px -16px rgba(11,28,46,0.7); animation: ocRise 0.18s ease-out;">
+      <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 14px; margin-bottom: 3px;">
+        <span style="font-size: 15px; font-weight: 600;">{{ toastTitle }}</span>
+        <button onClick="{{ goCart }}" style="border: 0; background: none; padding: 0; font-family: inherit; font-size: 13.5px; font-weight: 600; color: #6fd0f5; cursor: pointer;">View →</button>
+      </div>
+      <div style="font-size: 13.5px; line-height: 1.5; color: #a9bed4;">{{ toast }}</div>
+    </div>
+  </sc-if>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:430,&quot;height&quot;:900},&quot;startScreen&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;home&quot;,&quot;shop&quot;,&quot;product&quot;,&quot;cart&quot;,&quot;account&quot;],&quot;default&quot;:&quot;home&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Mobile&quot;},&quot;showBottomTabs&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Mobile&quot;}}">
+const IMGDIR = 'uploads/OceanControls-Design-Assets/03-product-images/';
+
+// [sku, name, brand, price, stock, tiers, category, imageFile, mpn]
+const RAW = [
+  ['KTA-387', 'Modbus Data Logger — Dual RS-485, 100-Channel, SD Card', 'Ocean Controls', 145.03, 1, 3, 'Data Loggers', 'Data-Loggers__KTA-387.png', ''],
+  ['KTA-397', '4G LTE SMS Controller with Relay Outputs', 'Ocean Controls', 293.93, 41, 2, 'Controllers', 'Controllers__KTA-397.jpg', ''],
+  ['KTA-402', 'BACnet MS/TP Weather Station Gateway for Davis', 'Ocean Controls', 241.50, 48, 3, 'Weather', 'Weather__KTA-402.jpg', ''],
+  ['GJS-002', 'DS18B20 1-Wire Waterproof Temperature Sensor, 15 m', 'GJY Electronics', 19.93, 18, 3, 'Sensors', 'Sensors__GJS-002.jpg', 'DS18B20'],
+  ['TCS-001', 'TST100 1-Wire Temperature Sensor, IP65', 'Teracom', 39.43, 6, 3, 'Sensors', 'Sensors__TCS-001.jpg', 'TST100'],
+  ['RKS-070', 'RK95-51 Mounting Bracket for PH, EC, DO, ORP Sensors', 'Rika Sensor', 73.74, 3, 3, 'Sensors', 'Sensors__RKS-070.png', 'RK95-51'],
+  ['ADW-002', 'HD67671 BACnet/IP Slave / Modbus Master Converter', 'ADF Web', 489.31, 6, 2, 'Modbus & BACnet', 'Modbus-Bacnet-MBus-Products__ADW-002.jpg', 'HD67671'],
+  ['ADW-003', 'HD67933 Modbus Master / MQTT Converter', 'ADF Web', 520.72, 1, 2, 'Modbus & BACnet', 'Modbus-Bacnet-MBus-Products__ADW-003.jpg', 'HD67933'],
+  ['ULC-075', 'UR75 Industrial 5G Router', 'Milesight', 681.12, 6, 2, 'Industrial IoT', 'Industrial-IoT__ULC-075.webp', 'UR75'],
+  ['ULC-141', 'UR41L 4G Mini Industrial Cellular Router', 'Milesight', 138.53, 8, 2, 'Industrial IoT', 'Industrial-IoT__ULC-141.webp', 'UR41L'],
+  ['AKB-001', 'NPT4 Slimline Temperature Transmitter', 'Akytec', 121.42, 5, 3, 'Signal Conditioners', 'Signal-Conditioners__AKB-001.jpg', 'NPT4'],
+  ['DBI-032', 'AC Volt-Current 4-Digit Process Indicator, 1 Relay', 'DCBox', 112.36, 3, 3, 'Panel Meters', 'Panel-Meters__DBI-032.jpg', ''],
+  ['PSM-900', '20 kA Surge Protector', 'Mean Well / ESI', 19.98, 2, 0, 'Power Supplies', 'Power-Supplies__PSM-900.jpg', ''],
+  ['CGL-004', 'PG9 Grey Cable Gland', 'SMS', 1.76, 39, 2, 'Terminals & Wiring', 'Electrical-Terminals-Wiring__CGL-004.jpg', 'PG9'],
+  ['NTR-180', '10 Input Relay Alarm Module', 'Foxtam Controls', 282.35, 1, 3, 'Relays', 'Relays-%26-Relay-Cards__NTR-180.jpg', ''],
+  ['HNL-022', '24 VDC Multi-Level Signal Tower + Buzzer', 'Hanyoung Nux', 112.48, 9, 3, 'Lighting', 'Lighting__HNL-022.jpg', ''],
+  ['SPE-015', 'ABS Waterproof Enclosure, 400 × 300 × 160 mm', 'Saip Group', 81.40, 41, 0, 'Enclosures', 'Enclosures__SPE-015.jpg', ''],
+  ['HET-100', 'Signal Generator 4-20 mA / 0-10 V Simulator', 'Z_AE', 104.97, 10, 3, 'Test Equipment', 'Test-Equipment__HET-100.jpg', ''],
+  ['SMC-055', 'EM882S 8.2 A Open-Loop Stepper Drive', 'Leadshine', 134.06, 2, 3, 'Motor Drivers', 'Motor-Drivers-%26-Controllers__SMC-055.jpg', 'EM882S'],
+  ['LAJ-002', 'CB25 LabJack Terminal Board for Digital I/O', 'LabJack', 101.67, 4, 3, 'Data Acquisition', 'Data-Acquisition__LAJ-002.jpg', 'CB25'],
+  ['HNR-100', 'Multi-Function Timer MA4N-B', 'Hanyoung Nux', 43.19, 9, 3, 'Timers', 'Timers__HNR-100.jpg', 'MA4N-B'],
+  ['FMI-110', 'Fema B44-C1 4-Digit Counter, 100 mm Display, IP65', 'Fema', 825.57, 2, 3, 'Large Displays', 'Large-Displays__FMI-110.jpg', 'B44-C1']
+];
+
+const CATALOGUE = {};
+RAW.forEach(function (r) {
+  CATALOGUE[r[0]] = {
+    sku: r[0], name: r[1], brand: r[2], price: r[3], stock: r[4], tiers: r[5],
+    cat: r[6], img: IMGDIR + r[7], mpn: r[8]
+  };
+});
+
+const NEW_SKUS = { 'KTA-387': 1, 'KTA-397': 1, 'ULC-075': 1, 'ADW-003': 1 };
+const SALE = { 'AKB-001': 202.35 };
+
+const CATS = [
+  ['Sensors', 569, ['Inductive Proximity|85', 'Pressure Transducers|81', 'Temperature & Humidity|65', 'PhotoElectric Switches|44', 'Inclinometers / Tilt|39', 'Current Transducers|34', 'RTD - PT100|34', 'Float Switches|32']],
+  ['Power Supplies', 281, ['DC-DC Converter Cage|80', 'Caged / Enclosed|45', 'DIN Rail ≥100 W|36', 'DIN Rail|33', 'IP67 & LED|21', 'MultiRail|13']],
+  ['Modbus, BACnet & M-Bus', 139, ['IO Modules Modbus RTU|62', 'Gateways|30', 'HVAC|22', 'IO Modules Modbus TCP|18', 'Loggers|10']],
+  ['Controllers', 127, ['Process (PID)|53', 'Temperature|29', 'HVAC|15', 'Ethernet|12', '4G / 5G|11', 'Process (On-Off)|11']],
+  ['Panel Meters', 124, ['Process Meters ≥48×96|29', 'Counters|15', 'Process Meters 24×48|14', 'Speed & Tachometers|13', 'Timers|11']],
+  ['Relays & Relay Cards', 112, ['SSRs & Accessories|28', 'Alarm & Fault|22', 'DIN Rail Mount|19', 'Relay Cards|15', 'Contactors|10']],
+  ['Motor Drivers & Controllers', 102, ['Accessories|34', 'Stepper Drivers Open Loop|22', 'VFDs|14', 'Motion Controllers|13']],
+  ['Electrical Terminals & Wiring', 90, ['DIN Rail & Accessories|26', 'Special Function Terminals|25', 'Wire Labels|17', 'Cable Glands|9']],
+  ['Motors & Accessories', 85, ['Stepper w/ Encoder|17', 'Stepper Open Loop|16', 'Shaft Couplers|13', 'Encoders|7']],
+  ['Communications', 82, ['Adapters|21', 'Wireless Accessories|18', 'Fibre Converters|12', 'Serial Converters|11']],
+  ['Weather', 77, ['Sensors|53', 'Station Accessories|15', 'Modbus Gateways|3', 'Station Kits|3', 'BACnet Gateways|2']],
+  ['Signal Conditioners', 68, ['Signal Isolators|38', 'Isolated Converters|21', 'Non-isolated|14', 'Load Cell|9']],
+  ['Electrical Switches', 59, ['22 mm Switches|37', 'Control Stations|21', 'Foot / Lever|2']],
+  ['PLCs & HMIs', 58, ['PLRs Teco|17', 'PLCs Delta|10', 'PLRs Akytec|9', 'I/O Modules Delta|8', 'HMIs Emko|6']],
+  ['Enclosures', 48, ['Plastic|25', 'ABS Control Box|22', 'DIN Rail PCB Mounts|15', 'DIN Rail Enclosures|4']],
+  ['Data Acquisition', 43, ['RS-485 ASCII|31', 'LabJack Accessories|27', 'LabJack Modules|15']],
+  ['Prototyping', 39, ['Circuit Breakers|14', 'Fans|12', 'Wireless & RFID|12']],
+  ['Lighting', 33, ['Strip Lighting|14', 'Light Towers|9', 'Strip Accessories|6', 'Warning Lights|4']],
+  ['Data Loggers', 30, ['Universal Input|14', 'Accessories|6', 'Temperature & Humidity|5', 'Voltage & Current|5']],
+  ['Industrial IoT', 22, ['Wireless|24', '3G / 4G Routers|8', 'Remote Monitoring|5', 'SMS Alarming|3']],
+  ['Timers', 17, ['Panel Mount|11', 'Timeclocks|7', 'DIN Rail|6']],
+  ['Large Displays', 13, ['Process 4-20 mA|6', 'Counter / Timer|3', 'Freq-Tacho|3']],
+  ['Test Equipment', 12, ['Calibrators & Generators|12', 'Temperature|1']],
+  ['Software', 8, ['DAQFactory|3', 'Configuration tools|3', 'Modbus utilities|2']]
+];
+
+const HOME_TILES = ['Sensors', 'Power Supplies', 'Modbus, BACnet & M-Bus', 'Controllers', 'Panel Meters', 'Relays & Relay Cards'];
+const TILE_IMG = {
+  'Sensors': 'Sensors__GJS-002.jpg',
+  'Power Supplies': 'Power-Supplies__PSM-900.jpg',
+  'Modbus, BACnet & M-Bus': 'Modbus-Bacnet-MBus-Products__ADW-002.jpg',
+  'Controllers': 'Controllers__KTA-397.jpg',
+  'Panel Meters': 'Panel-Meters__DBI-032.jpg',
+  'Relays & Relay Cards': 'Relays-%26-Relay-Cards__NTR-180.jpg'
+};
+
+const SPECS = {
+  'KTA-387': [['Channels', '100'], ['Ports', '2 × RS-485'], ['Protocol', 'Modbus RTU'], ['Storage', 'SD card'], ['Mounting', 'DIN rail'], ['Origin', 'Built in Carrum Downs']],
+  'GJS-002': [['Element', 'DS18B20'], ['Interface', '1-Wire'], ['Cable', '15 m'], ['Protection', 'Waterproof probe'], ['Output', 'Digital']],
+  'ADW-003': [['Protocol A', 'Modbus master'], ['Protocol B', 'MQTT'], ['Port', 'Ethernet'], ['Mounting', 'DIN rail'], ['Made in', 'Italy']],
+  'ULC-075': [['Network', '5G'], ['Model', 'UR75'], ['Interfaces', 'Ethernet, serial'], ['Mounting', 'DIN rail / wall']]
+};
+
+const DESCRIPTIONS = {
+  'KTA-387': [
+    'The KTA-387 sits on a DIN rail between your instruments and your records. Two independent RS-485 ports let it poll one network while reporting on the other, and up to 100 channels of Modbus registers are written to a removable SD card.',
+    'One of the 93 products we design and build ourselves in Carrum Downs — so the person who answers the phone can open the firmware, not just the manual.'
+  ],
+  'GJS-002': [
+    'The DS18B20 is the workhorse digital temperature sensor: one data line, a 64-bit unique address per device, and enough of them on a single bus to instrument a whole plant room without a cable per point.',
+    'Sealed in a waterproof stainless probe on a 15-metre lead — the length people usually wish they had bought.'
+  ]
+};
+
+const SHIPPING_ROWS = [
+  ['Dispatch', 'In-stock items leave Carrum Downs within 2 business days.'],
+  ['Carriers', 'AusPost Express and Parcel Post, DHL, FedEx. Live rates at checkout.'],
+  ['Store collection', 'Free. Order by 11am, collect after 2pm, Mon–Fri 9am–5pm.'],
+  ['International', 'We ship worldwide, and 9 distributors resell our range overseas.']
+];
+
+const RETURNS_ROWS = [
+  ['Return window', '14 days from the dispatch date.'],
+  ['Before you send', 'Contact us first — email info@oceancontrols.com.au or call and we will confirm eligibility.'],
+  ['Faulty on arrival', 'Tell us within 7 days. Replacement or refund including freight both ways.'],
+  ['Our own range', 'Warranted and repaired by us, in Carrum Downs.']
+];
+
+const DOC_KINDS = ['Datasheet', 'Manual', 'Wiring', 'Software', 'Drawing', 'CE', 'Guide', 'Firmware', 'App note', 'Objects', 'Registers', 'Test'];
+const DOC_COUNT = { 'KTA-402': 12, 'KTA-401': 12, 'ULC-075': 1, 'ADW-002': 3, 'ADW-003': 3, 'AKB-001': 3, 'KTA-387': 1, 'GJS-002': 1, 'SMC-055': 3, 'LAJ-002': 1 };
+
+const AVAIL = [['In stock', 'in'], ['Low stock', 'low'], ['Backorder', 'out']];
+const PRICES = [['Under $25', 0, 25], ['$25 – $100', 25, 100], ['$100 – $300', 100, 300], ['$300+', 300, 1e9]];
+const DATA_F = [['Has datasheet', 'docs'], ['Quantity breaks', 'tiers'], ['Our own range', 'own']];
+const SORTS = ['Relevance', 'Price — low to high', 'Price — high to low', 'Name A–Z', 'In stock first'];
+const SORT_SHORT = ['Sort', 'Price ↑', 'Price ↓', 'A–Z', 'Stock'];
+
+const MENU_LINKS = ['New arrivals', 'Clearance & sale', 'All brands', 'Datasheets', 'Engineering services', 'About us', 'Contact'];
+
+const TAB_DEFS = [
+  ['Home', '⌂', 'home'],
+  ['Shop', '▦', 'shop'],
+  ['Search', '⌕', 'search'],
+  ['Cart', '⌗', 'cart'],
+  ['Account', '⊙', 'account']
+];
+
+function tierFactor(n) { return n >= 25 ? 0.86 : n >= 10 ? 0.9 : n >= 5 ? 0.95 : 1; }
+function nextBreak(n) { return n < 5 ? 5 : n < 10 ? 10 : n < 25 ? 25 : null; }
+
+class Component extends DCLogic {
+  state = {
+    screen: null, sku: 'KTA-387', qty: 1,
+    menuOpen: false, menuCat: null,
+    searchOpen: false, searchQ: '',
+    filtersOpen: false, sortOpen: false, sort: 0, density: 0,
+    avail: {}, price: {}, data: {},
+    shopCat: null, openSection: 'desc',
+    cart: { 'KTA-387': 2, 'GJS-002': 6 },
+    toast: '', toastTitle: ''
+  };
+
+  constructor(props) {
+    super(props);
+    this.searchRef = React.createRef();
+  }
+
+  componentWillUnmount() { clearTimeout(this._t); }
+
+  money(v) { return '$' + v.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ','); }
+
+  // The prop seeds which screen opens; the tab bar takes over after that.
+  screen() {
+    if (this.state.screen) return this.state.screen;
+    const want = this.props.startScreen;
+    return ['home', 'shop', 'product', 'cart', 'account'].indexOf(want) > -1 ? want : 'home';
+  }
+
+  box(url, h, opts) {
+    const o = opts || {};
+    return 'display: block; width: ' + (o.w || '100%') + '; height: ' + h + '; flex: 0 0 auto;'
+      + ' background-image: url("' + url + '");'
+      + ' background-size: contain; background-position: center; background-repeat: no-repeat;'
+      + (o.extra || '');
+  }
+
+  thumb(url, s) {
+    return this.box(url, s, { w: s, extra: ' border: 1px solid #eef2f5; background-color: #ffffff;' });
+  }
+
+  fire(title, body) {
+    this.setState({ toastTitle: title, toast: body });
+    clearTimeout(this._t);
+    this._t = setTimeout(() => this.setState({ toast: '', toastTitle: '' }), 2800);
+  }
+
+  go(screen) {
+    this.setState({ screen: screen, menuOpen: false, searchOpen: false, filtersOpen: false, sortOpen: false });
+    window.scrollTo(0, 0);
+  }
+
+  openProduct(sku) {
+    this.setState({ screen: 'product', sku: sku, qty: 1, openSection: 'desc', searchOpen: false, menuOpen: false });
+    window.scrollTo(0, 0);
+  }
+
+  add(sku, n) {
+    const q = n || 1;
+    this.setState(s => ({ cart: Object.assign({}, s.cart, { [sku]: (s.cart[sku] || 0) + q }) }));
+    this.fire('Added to order', q + ' × ' + sku + ' — ' + CATALOGUE[sku].name);
+  }
+
+  setLine(sku, q) {
+    this.setState(s => {
+      const c = Object.assign({}, s.cart);
+      if (q <= 0) delete c[sku]; else c[sku] = q;
+      return { cart: c };
+    });
+  }
+
+  flip(group, key) {
+    this.setState(s => {
+      const g = Object.assign({}, s[group]);
+      if (g[key]) delete g[key]; else g[key] = true;
+      return { [group]: g };
+    });
+  }
+
+  stockOf(sku) {
+    const p = CATALOGUE[sku];
+    if (p.stock <= 0) return { text: 'Available on backorder', short: 'Backorder', fg: '#a5620a', band: 'out', dispatch: 'Lead time confirmed in writing when you order' };
+    if (p.stock <= 3) return { text: 'Low stock — ' + p.stock + ' in Carrum Downs', short: 'Low · ' + p.stock, fg: '#a5620a', band: 'low', dispatch: 'Ships within 2 business days · free store collection' };
+    return { text: 'In stock — ' + p.stock + ' in Carrum Downs', short: 'In stock', fg: '#157a45', band: 'in', dispatch: 'Ships within 2 business days · free store collection' };
+  }
+
+  card(sku) {
+    const p = CATALOGUE[sku];
+    const st = this.stockOf(sku);
+    const was = SALE[sku];
+    const badge = was ? '-' + Math.round((1 - p.price / was) * 100) + '%' : (NEW_SKUS[sku] ? 'NEW' : '');
+    return {
+      sku: 'SKU ' + p.sku, name: p.name, brand: p.brand,
+      price: this.money(p.price),
+      tier: p.tiers > 0 ? '5+ ' + this.money(p.price * 0.95) : '',
+      stock: st.short, stockFg: st.fg,
+      dotStyle: 'display: block; width: 5px; height: 5px; border-radius: 50%; flex: 0 0 auto; background: ' + st.fg + ';',
+      imgStyle: this.box(p.img, '92px'),
+      imgStyleRow: this.box(p.img, '68px'),
+      hasBadge: !!badge, badge: badge,
+      badgeStyle: 'position: absolute; top: 7px; left: 7px; font-family: "IBM Plex Mono", monospace; font-size: 10.5px; font-weight: 700; letter-spacing: 0.06em; padding: 3px 5px; color: #ffffff; background: ' + (was ? '#c2364a' : '#0673a2') + ';',
+      badgeStyleInline: 'font-family: "IBM Plex Mono", monospace; font-size: 10.5px; font-weight: 700; letter-spacing: 0.06em; padding: 2px 5px; color: #ffffff; background: ' + (was ? '#c2364a' : '#0673a2') + ';',
+      open: () => this.openProduct(sku),
+      add: () => this.add(sku, 1)
+    };
+  }
+
+  shopList() {
+    const st = this.state;
+    let list = RAW.map(r => r[0]);
+    if (st.shopCat) list = list.filter(s => CATALOGUE[s].cat === st.shopCat);
+    const av = Object.keys(st.avail);
+    if (av.length) list = list.filter(s => av.indexOf(this.stockOf(s).band) > -1);
+    const pr = Object.keys(st.price);
+    if (pr.length) list = list.filter(s => pr.some(k => {
+      const d = PRICES[parseInt(k, 10)];
+      return CATALOGUE[s].price >= d[1] && CATALOGUE[s].price < d[2];
+    }));
+    if (st.data.docs) list = list.filter(s => (DOC_COUNT[s] || 0) > 0);
+    if (st.data.tiers) list = list.filter(s => CATALOGUE[s].tiers > 0);
+    if (st.data.own) list = list.filter(s => CATALOGUE[s].brand === 'Ocean Controls');
+    if (st.sort === 1) list = list.slice().sort((a, b) => CATALOGUE[a].price - CATALOGUE[b].price);
+    if (st.sort === 2) list = list.slice().sort((a, b) => CATALOGUE[b].price - CATALOGUE[a].price);
+    if (st.sort === 3) list = list.slice().sort((a, b) => CATALOGUE[a].name.localeCompare(CATALOGUE[b].name));
+    if (st.sort === 4) list = list.slice().sort((a, b) => CATALOGUE[b].stock - CATALOGUE[a].stock);
+    return list;
+  }
+
+  chip(on) {
+    return 'display: flex; align-items: center; gap: 7px; padding: 10px 13px; cursor: pointer; font-family: inherit; font-size: 14.5px; font-weight: 500;'
+      + ' border: 1px solid ' + (on ? '#16304f' : '#dbe2e8') + ';'
+      + ' background: ' + (on ? '#16304f' : '#ffffff') + ';'
+      + ' color: ' + (on ? '#ffffff' : '#24456b') + ';';
+  }
+
+  renderVals() {
+    const st = this.state;
+    const screen = this.screen();
+    const p = CATALOGUE[st.sku];
+    const pStock = this.stockOf(st.sku);
+    const q = st.searchQ.trim().toLowerCase();
+
+    // ---- search ------------------------------------------------------
+    const groups = [];
+    const rowFor = (sku, i) => {
+      const c = CATALOGUE[sku];
+      const s = this.stockOf(sku);
+      const pre = i > -1 ? c.name.slice(0, i) : c.name;
+      const mid = i > -1 ? c.name.slice(i, i + q.length) : '';
+      const post = i > -1 ? c.name.slice(i + q.length) : '';
+      return {
+        pre: pre, mid: mid, post: post,
+        meta: c.sku + (c.mpn ? ' · ' + c.mpn : '') + ' · ' + c.brand,
+        price: this.money(c.price), stock: s.short, stockFg: s.fg,
+        imgStyle: this.thumb(c.img, '42px'),
+        pick: () => this.openProduct(sku)
+      };
+    };
+    if (!q) {
+      groups.push({ label: 'Popular right now', count: '', items: ['KTA-387', 'GJS-002', 'ULC-075', 'ADW-002', 'AKB-001'].map(s => rowFor(s, -1)) });
+    } else {
+      const prod = [];
+      RAW.forEach(r => {
+        const ni = r[1].toLowerCase().indexOf(q);
+        if (ni > -1) { prod.push({ sku: r[0], i: ni }); return; }
+        if ((r[0] + ' ' + r[2] + ' ' + r[8]).toLowerCase().indexOf(q) > -1) prod.push({ sku: r[0], i: -1 });
+      });
+      const cats = CATS.filter(c => c[0].toLowerCase().indexOf(q) > -1);
+      if (prod.length) groups.push({ label: 'Products', count: prod.length + ' found', items: prod.slice(0, 8).map(x => rowFor(x.sku, x.i)) });
+      if (cats.length) {
+        groups.push({
+          label: 'Categories', count: cats.length + ' found',
+          items: cats.slice(0, 4).map(c => ({
+            pre: c[0], mid: '', post: '',
+            meta: c[2].length + ' subcategories',
+            price: c[1], stock: 'products', stockFg: '#667380',
+            imgStyle: 'display: block; width: 42px; height: 42px; background: #f4f6f8; border: 1px solid #eef2f5;',
+            pick: () => { this.setState({ shopCat: null, searchOpen: false }); this.go('shop'); }
+          }))
+        });
+      }
+    }
+
+    // ---- product sections -------------------------------------------
+    const docN = DOC_COUNT[st.sku] || 0;
+    const specRows = (SPECS[st.sku] || [['Brand', p.brand], ['Category', p.cat], ['SKU', p.sku]]).concat([
+      ['Ocean Controls SKU', p.sku],
+      ['Manufacturer part', p.mpn || p.sku + ' (own range)'],
+      ['Quantity breaks', p.tiers > 0 ? p.tiers + ' tiers' : 'Single price']
+    ]);
+    const descParas = DESCRIPTIONS[st.sku] || [
+      'The ' + p.sku + ' is a ' + p.name.toLowerCase() + ' from ' + p.brand + ', held in stock in Carrum Downs and shipped Australia-wide within two business days.',
+      'On the live site this panel carries the full product description migrated into WooCommerce, along with the manufacturer application notes.'
+    ];
+
+    const rowStyle = i => 'display: grid; grid-template-columns: 1fr auto; gap: 14px; align-items: baseline; padding: 11px 0;'
+      + (i > 0 ? ' border-top: 1px solid #eef2f5;' : '');
+
+    const sectionDefs = [
+      ['desc', 'Description', '', descParas.map(t => ({ t: t })), [], []],
+      ['spec', 'Specification', String(specRows.length), [], specRows.map((r, i) => ({ k: r[0], v: r[1], rowStyle: rowStyle(i) })), []],
+      ['docs', 'Downloads', String(docN), docN === 0 ? [{ t: 'No files are attached to this SKU yet. Call +61 3 9708 2390 and we will email the manufacturer documentation the same day.' }] : [], [],
+        Array.from({ length: Math.min(docN, 12) }, (_, i) => ({ kind: DOC_KINDS[i], name: p.sku + ' — ' + DOC_KINDS[i].toLowerCase() + '.pdf' }))],
+      ['ship', 'Shipping', '', [], SHIPPING_ROWS.map((r, i) => ({ k: r[0], v: r[1], rowStyle: rowStyle(i) })), []],
+      ['ret', 'Returns & warranty', '', [], RETURNS_ROWS.map((r, i) => ({ k: r[0], v: r[1], rowStyle: rowStyle(i) })), []]
+    ];
+
+    // ---- cart --------------------------------------------------------
+    const lineSkus = Object.keys(st.cart);
+    let sub = 0, listSub = 0, count = 0;
+    lineSkus.forEach(s => {
+      const c = CATALOGUE[s];
+      const n = st.cart[s];
+      const f = c.tiers > 0 ? tierFactor(n) : 1;
+      sub += c.price * f * n;
+      listSub += c.price * n;
+      count += n;
+    });
+    const savings = listSub - sub;
+
+    const totalRows = [
+      { k: 'Subtotal, ex GST', v: this.money(sub), size: '13.5px', weight: '400', fg: '#4b5560', vSize: '14px', vWeight: '600', vFg: '#0b1c2e', rowStyle: 'display: flex; align-items: baseline; justify-content: space-between; gap: 12px;' }
+    ];
+    if (savings > 0.02) {
+      totalRows.push({ k: 'Quantity breaks applied', v: '−' + this.money(savings), size: '13.5px', weight: '400', fg: '#157a45', vSize: '14px', vWeight: '600', vFg: '#157a45', rowStyle: 'display: flex; align-items: baseline; justify-content: space-between; gap: 12px;' });
+    }
+    totalRows.push({ k: 'GST 10%', v: this.money(sub * 0.1), size: '13.5px', weight: '400', fg: '#4b5560', vSize: '14px', vWeight: '600', vFg: '#0b1c2e', rowStyle: 'display: flex; align-items: baseline; justify-content: space-between; gap: 12px;' });
+    totalRows.push({ k: 'Freight', v: 'Live rates at checkout', size: '13.5px', weight: '400', fg: '#4b5560', vSize: '12px', vWeight: '600', vFg: '#4b5560', rowStyle: 'display: flex; align-items: baseline; justify-content: space-between; gap: 12px;' });
+    totalRows.push({ k: 'Total inc GST, AUD', v: this.money(sub * 1.1), size: '15px', weight: '700', fg: '#0b1c2e', vSize: '20px', vWeight: '800', vFg: '#0b1c2e', rowStyle: 'display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding-top: 11px; border-top: 1px solid #dbe2e8;' });
+
+    // ---- shop --------------------------------------------------------
+    const shopSkus = this.shopList();
+    const filterCount = Object.keys(st.avail).length + Object.keys(st.price).length + Object.keys(st.data).length;
+    const menuCat = st.menuCat !== null ? CATS[st.menuCat] : null;
+
+    const countBand = b => RAW.filter(r => this.stockOf(r[0]).band === b).length;
+
+    return {
+      utilityLine: 'In-stock orders dispatched within 2 business days',
+      cartCount: count,
+
+      isHome: screen === 'home',
+      isShop: screen === 'shop',
+      isProduct: screen === 'product',
+      isCart: screen === 'cart',
+      isAccount: screen === 'account',
+
+      goHome: () => this.go('home'),
+      goShop: () => this.go('shop'),
+      goCart: () => this.go('cart'),
+
+      tabs: TAB_DEFS.map(t => {
+        const on = screen === t[2] || (t[2] === 'search' && st.searchOpen);
+        return {
+          label: t[0], glyph: t[1], weight: on ? '600' : '500',
+          pick: () => { if (t[2] === 'search') { this.setState({ searchOpen: true }); } else { this.go(t[2]); } },
+          style: (this.props.showBottomTabs === false ? 'display: none;' : 'display: flex;')
+            + ' flex-direction: column; align-items: center; justify-content: center; gap: 4px; height: 62px;'
+            + ' border: 0; background: none; cursor: pointer;'
+            + ' color: ' + (on ? '#0b1c2e' : '#667380') + ';'
+            + ' box-shadow: ' + (on ? 'inset 0 2px 0 #0b9fd8' : 'none') + ';',
+          iconStyle: 'font-size: 18.5px; line-height: 1; color: ' + (on ? '#0673a2' : '#667380') + ';'
+        };
+      }),
+
+      // home
+      stats: [['2,279', 'products stocked'], ['237', 'categories'], ['48', 'manufacturers'], ['3,319', 'datasheets free']].map(s => ({ n: s[0], label: s[1] })),
+      catTiles: HOME_TILES.map(name => {
+        const c = CATS.filter(x => x[0] === name)[0];
+        return {
+          name: name, count: (c ? c[1] : 0) + ' products',
+          imgStyle: this.box(IMGDIR + TILE_IMG[name], '62px'),
+          pick: () => { this.setState({ shopCat: null }); this.go('shop'); }
+        };
+      }),
+      homeProducts: ['KTA-387', 'ULC-075', 'ADW-003', 'KTA-397'].map(s => this.card(s)),
+      tierRows: [['1 – 4 items', this.money(121.42)], ['5 – 9 items', this.money(115.35)], ['10 – 24 items', this.money(109.28)], ['Trade account', this.money(103.21)]].map(t => ({ qty: t[0], each: t[1] + ' ea' })),
+      benefits: [
+        ['01', 'We hold the stock', 'One to three of every in-stock line on the shelf at Carrum Downs. Real counts, not a supplier feed.'],
+        ['02', 'The datasheet is free', '3,319 files across 1,743 products, no account needed.'],
+        ['03', 'Engineers answer', 'Advice is freely given by phone or email. No purchase order needed to ask.']
+      ].map(b => ({ n: b[0], title: b[1], body: b[2] })),
+
+      padValue: st.padValue || '',
+      onPad: e => this.setState({ padValue: e.target.value, padNote: '' }),
+      addPad: () => {
+        const tokens = (this.state.padValue || '').toUpperCase().split(/[,;\s]+/).filter(Boolean);
+        const found = tokens.filter(t => CATALOGUE[t]);
+        const missing = tokens.filter(t => !CATALOGUE[t]);
+        if (!tokens.length) { this.setState({ padNote: 'Type a part number first.', padOk: false }); return; }
+        if (!found.length) { this.setState({ padNote: 'No match for ' + missing.join(', ') + '. Try KTA-387.', padOk: false }); return; }
+        this.setState(s => {
+          const c = Object.assign({}, s.cart);
+          found.forEach(t => { c[t] = (c[t] || 0) + 1; });
+          return { cart: c, padValue: '', padOk: true, padNote: found.length + ' added' + (missing.length ? ' · not found: ' + missing.join(', ') : '') };
+        });
+        this.fire('Order pad', found.join(', ') + ' added');
+      },
+      padNote: st.padNote || '',
+      padNoteFg: st.padOk === false ? '#a5620a' : '#157a45',
+
+      // shop
+      shopCatName: st.shopCat || 'All products',
+      shopBlurb: st.shopCat
+        ? 'Held in stock in Carrum Downs, shipped Australia-wide within two business days.'
+        : 'The full catalogue — 2,279 products across 237 categories from 48 manufacturers.',
+      shopStats: st.shopCat
+        ? [{ n: shopSkus.length, k: 'shown' }, { n: '48', k: 'brands' }, { n: '2 days', k: 'dispatch' }]
+        : [{ n: '2,279', k: 'products' }, { n: '237', k: 'categories' }, { n: '48', k: 'brands' }],
+      shopShowing: 'Showing ' + shopSkus.length + ' photographed products' + (filterCount ? ' · ' + filterCount + ' filters on' : ''),
+      shopProducts: shopSkus.map(s => this.card(s)),
+      isTwoCol: st.density === 0,
+      isRows: st.density === 1,
+      toggleDensity: () => this.setState({ density: st.density === 0 ? 1 : 0 }),
+      densityIcon1: 'display: block; width: 6px; height: 14px; background: ' + (st.density === 0 ? '#16304f' : '#c9d3dc') + ';',
+      densityIcon2: 'display: block; width: 6px; height: 14px; background: ' + (st.density === 0 ? '#16304f' : '#c9d3dc') + ';',
+
+      openFilters: () => this.setState({ filtersOpen: true }),
+      closeFilters: () => this.setState({ filtersOpen: false }),
+      filtersOpen: st.filtersOpen,
+      hasFilters: filterCount > 0,
+      filterCount: filterCount,
+      filterBg: filterCount > 0 ? '#16304f' : '#ffffff',
+      filterFg: filterCount > 0 ? '#ffffff' : '#24456b',
+      filterEdge: filterCount > 0 ? '#16304f' : '#dbe2e8',
+      filterSheetTitle: filterCount > 0 ? filterCount + ' filters applied' : 'Filter the catalogue',
+      filterApplyLabel: 'Show ' + shopSkus.length + ' products',
+      clearFilters: () => this.setState({ avail: {}, price: {}, data: {} }),
+      filterGroups: [
+        {
+          label: 'Availability',
+          options: AVAIL.map(a => ({
+            label: a[0], count: countBand(a[1]),
+            style: this.chip(!!st.avail[a[1]]),
+            toggle: () => this.flip('avail', a[1])
+          }))
+        },
+        {
+          label: 'Price, ex GST',
+          options: PRICES.map((d, i) => ({
+            label: d[0], count: RAW.filter(r => CATALOGUE[r[0]].price >= d[1] && CATALOGUE[r[0]].price < d[2]).length,
+            style: this.chip(!!st.price[i]),
+            toggle: () => this.flip('price', i)
+          }))
+        },
+        {
+          label: 'Product data',
+          options: DATA_F.map(d => ({
+            label: d[0],
+            count: d[1] === 'docs' ? RAW.filter(r => (DOC_COUNT[r[0]] || 0) > 0).length
+              : (d[1] === 'tiers' ? RAW.filter(r => CATALOGUE[r[0]].tiers > 0).length
+                : RAW.filter(r => CATALOGUE[r[0]].brand === 'Ocean Controls').length),
+            style: this.chip(!!st.data[d[1]]),
+            toggle: () => this.flip('data', d[1])
+          }))
+        }
+      ],
+
+      openSort: () => this.setState({ sortOpen: true }),
+      closeSort: () => this.setState({ sortOpen: false }),
+      sortOpen: st.sortOpen,
+      sortLabel: SORT_SHORT[st.sort],
+      sortOptions: SORTS.map((s, i) => {
+        const on = i === st.sort;
+        return {
+          label: s,
+          pick: () => this.setState({ sort: i, sortOpen: false }),
+          style: 'width: 100%; display: flex; align-items: center; gap: 12px; padding: 15px 16px; border: 0; border-bottom: 1px solid #eef2f5;'
+            + ' background: ' + (on ? '#f2f9fd' : '#ffffff') + '; cursor: pointer;'
+            + ' color: ' + (on ? '#0b1c2e' : '#24456b') + '; font-weight: ' + (on ? '600' : '400') + ';',
+          radioStyle: 'display: block; width: 17px; height: 17px; border-radius: 50%; flex: 0 0 auto;'
+            + ' border: ' + (on ? '5px solid #0b9fd8' : '1px solid #c9d3dc') + '; background: #ffffff;'
+        };
+      }),
+
+      // product
+      product: {
+        sku: 'SKU ' + p.sku, name: p.name, brand: p.brand, cat: p.cat,
+        mpn: p.mpn ? 'MPN ' + p.mpn : 'Own range',
+        imgStyle: this.box(p.img, '250px'),
+        hasBadge: !!(SALE[p.sku] || NEW_SKUS[p.sku]),
+        badge: SALE[p.sku] ? '-40%' : 'NEW',
+        badgeStyle: 'position: absolute; top: 26px; left: 22px; z-index: 2; font-family: "IBM Plex Mono", monospace; font-size: 11.5px; font-weight: 700; letter-spacing: 0.08em; padding: 4px 8px; color: #ffffff; background: ' + (SALE[p.sku] ? '#c2364a' : '#0673a2') + ';',
+        price: this.money(p.price),
+        incGst: this.money(p.price * 1.1) + ' including GST',
+        stock: pStock.text, stockShort: pStock.short, stockFg: pStock.fg, dispatch: pStock.dispatch,
+        dotStyleBig: 'display: block; width: 9px; height: 9px; border-radius: 50%; flex: 0 0 auto; background: ' + pStock.fg + ';',
+        hasTiers: p.tiers > 0,
+        tierCount: p.tiers + ' tiers',
+        tiers: [['1 – 4', 1], ['5 – 9', 0.95], ['10 – 24', 0.9], ['25+', 0.86]].map((t, i) => {
+          const active = (st.qty >= 25 ? 3 : st.qty >= 10 ? 2 : st.qty >= 5 ? 1 : 0) === i;
+          return {
+            qty: t[0] + ' items', each: this.money(p.price * t[1]) + ' ea',
+            save: i === 0 ? '—' : 'save ' + Math.round((1 - t[1]) * 100) + '%',
+            weight: active ? '700' : '400',
+            saveFg: active ? '#06708f' : '#667380',
+            rowStyle: 'display: grid; grid-template-columns: 1fr auto 62px; gap: 12px; align-items: center; padding: 11px 14px; border-bottom: 1px solid #eef2f5;'
+              + ' background: ' + (active ? '#f2f9fd' : '#ffffff') + ';'
+              + (active ? ' box-shadow: inset 3px 0 0 #0b9fd8;' : '')
+          };
+        }),
+        qty: st.qty,
+        inc: () => this.setState(s => ({ qty: s.qty + 1 })),
+        dec: () => this.setState(s => ({ qty: Math.max(1, s.qty - 1) })),
+        add: () => this.add(st.sku, st.qty),
+        liveLine: p.tiers > 0 && st.qty >= 5
+          ? 'Tier price applied — ' + this.money(p.price * tierFactor(st.qty)) + ' each'
+          : (p.tiers > 0 ? 'Add ' + (5 - st.qty) + ' more for the 5+ price' : 'Single price on this SKU'),
+        liveFg: p.tiers > 0 && st.qty >= 5 ? '#157a45' : '#667380',
+        sections: sectionDefs.map(s => {
+          const open = st.openSection === s[0];
+          return {
+            label: s[1], hasCount: !!s[2], count: s[2],
+            open: open, chev: open ? '−' : '+',
+            headBg: open ? '#f7f9fb' : '#ffffff',
+            toggle: () => this.setState({ openSection: open ? null : s[0] }),
+            paras: s[3], rows: s[4], files: s[5]
+          };
+        }),
+        related: RAW.filter(r => r[0] !== st.sku && r[6] === p.cat)
+          .concat(RAW.filter(r => r[0] !== st.sku && r[6] !== p.cat))
+          .slice(0, 4)
+          .map(r => ({
+            name: CATALOGUE[r[0]].name,
+            price: this.money(CATALOGUE[r[0]].price),
+            imgStyle: this.box(CATALOGUE[r[0]].img, '76px'),
+            open: () => this.openProduct(r[0])
+          }))
+      },
+
+      // cart
+      cartSummary: lineSkus.length + ' line' + (lineSkus.length === 1 ? '' : 's') + ' · ' + count + ' item' + (count === 1 ? '' : 's') + ' · ex GST',
+      cartEmpty: lineSkus.length === 0,
+      cartHasLines: lineSkus.length > 0,
+      cartLines: lineSkus.map(s => {
+        const c = CATALOGUE[s];
+        const n = st.cart[s];
+        const f = c.tiers > 0 ? tierFactor(n) : 1;
+        const unit = c.price * f;
+        const nb = c.tiers > 0 ? nextBreak(n) : null;
+        const nbF = nb ? tierFactor(nb) : 1;
+        const saveEach = nb ? c.price * (f - nbF) : 0;
+        return {
+          sku: 'SKU ' + c.sku, name: c.name, qty: n,
+          imgStyle: this.box(c.img, '68px', { w: '68px', extra: ' border: 1px solid #eef2f5;' }),
+          each: this.money(unit) + ' ea',
+          total: this.money(unit * n),
+          saveNote: f < 1 ? 'Quantity break applied — ' + Math.round((1 - f) * 100) + '% off' : '',
+          hasNudge: !!(nb && saveEach > 0.02),
+          nudge: nb ? 'Add ' + (nb - n) + ' more (' + nb + ' total) and the unit price drops to ' + this.money(c.price * nbF) + ' — saves ' + this.money(saveEach * nb) + ' on this line.' : '',
+          nudgeCta: nb ? 'Make it ' + nb : '',
+          takeNudge: () => this.setLine(s, nb),
+          inc: () => this.setLine(s, n + 1),
+          dec: () => this.setLine(s, n - 1),
+          remove: () => this.setLine(s, 0)
+        };
+      }),
+      cartTotals: totalRows,
+      cartTotalInc: this.money(sub * 1.1),
+
+      // account
+      accountStats: [
+        { k: 'Spend this FY', n: '$8,420', note: 'inc GST, 6 orders', fg: '#0b1c2e' },
+        { k: 'Open orders', n: '2', note: 'processing or part shipped', fg: '#06708f' },
+        { k: 'On backorder', n: '3', note: 'lines on our purchasing run', fg: '#a5620a' },
+        { k: 'Outstanding', n: '$2,180', note: '30-day terms', fg: '#a5620a' }
+      ],
+      accountOrders: [
+        { no: 'OC-48782', date: '26 Aug 2026', lines: 4, contents: 'Modbus Data Logger + 3 more', total: '$1,684.20', status: 'Processing', statusStyle: 'font-family: "IBM Plex Mono", monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; padding: 4px 7px; color: #06708f; background: #eaf6fc;', reorder: () => this.fire('Added to order', '4 lines from OC-48782') },
+        { no: 'OC-48610', date: '12 Aug 2026', lines: 3, contents: 'HD67933 MQTT Converter + 2 more', total: '$948.10', status: 'Part shipped', statusStyle: 'font-family: "IBM Plex Mono", monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; padding: 4px 7px; color: #a5620a; background: #fdf8ef;', reorder: () => this.fire('Added to order', '3 lines from OC-48610') },
+        { no: 'OC-48455', date: '29 Jul 2026', lines: 3, contents: 'BACnet Weather Gateway + 2 more', total: '$795.60', status: 'Delivered', statusStyle: 'font-family: "IBM Plex Mono", monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; padding: 4px 7px; color: #157a45; background: #eef8f2;', reorder: () => this.fire('Added to order', '3 lines from OC-48455') }
+      ],
+      backorders: [
+        { sku: 'ADW-003', name: 'HD67933 Modbus Master / MQTT Converter', qty: 1, eta: 'ETA 09 Sep', imgStyle: this.thumb(CATALOGUE['ADW-003'].img, '34px') },
+        { sku: 'KTA-387', name: 'Modbus Data Logger, dual RS-485', qty: 2, eta: 'ETA 04 Sep', imgStyle: this.thumb(CATALOGUE['KTA-387'].img, '34px') },
+        { sku: 'NTR-180', name: '10 Input Relay Alarm Module', qty: 1, eta: 'ETA 12 Sep', imgStyle: this.thumb(CATALOGUE['NTR-180'].img, '34px') }
+      ],
+      accountLinks: [
+        { label: 'All orders', hasCount: true, count: '7' },
+        { label: 'Invoices', hasCount: true, count: '2 due' },
+        { label: 'Saved lists', hasCount: true, count: '3' },
+        { label: 'Your downloads', hasCount: true, count: '8' },
+        { label: 'Account details', hasCount: false, count: '' },
+        { label: 'Sign out', hasCount: false, count: '' }
+      ],
+
+      // menu drawer
+      menuOpen: st.menuOpen,
+      openMenu: () => this.setState({ menuOpen: true, menuCat: null, searchOpen: false }),
+      closeMenu: () => this.setState({ menuOpen: false, menuCat: null }),
+      menuAtRoot: st.menuCat === null,
+      menuInCat: st.menuCat !== null,
+      menuTitle: menuCat ? menuCat[0] : '237 categories',
+      menuCats: CATS.map((c, i) => ({
+        name: c[0], count: c[1],
+        open: () => this.setState({ menuCat: i })
+      })),
+      menuSubs: menuCat ? menuCat[2].map(s => ({ name: s.split('|')[0], count: s.split('|')[1] })) : [],
+      menuAllLabel: menuCat ? 'All ' + menuCat[1] + ' in ' + menuCat[0] : '',
+      menuBack: () => this.setState({ menuCat: null }),
+      menuGoAll: () => { this.setState({ shopCat: null, menuOpen: false, menuCat: null }); this.go('shop'); },
+      menuLinks: MENU_LINKS,
+
+      // search overlay
+      searchOpen: st.searchOpen,
+      searchRef: this.searchRef,
+      openSearch: () => this.setState({ searchOpen: true }),
+      closeSearch: () => this.setState({ searchOpen: false }),
+      clearSearch: () => this.setState({ searchQ: '' }),
+      hasQuery: !!st.searchQ,
+      searchQ: st.searchQ,
+      onSearch: e => this.setState({ searchQ: e.target.value }),
+      searchLabel: q
+        ? groups.reduce((t, g) => t + g.items.length, 0) + ' results for “' + st.searchQ.trim() + '”'
+        : 'Popular right now',
+      searchGroups: groups,
+      searchEmpty: !!q && groups.length === 0,
+      searchEmptyTitle: 'No match for “' + st.searchQ.trim() + '”',
+
+      toastOn: !!st.toast,
+      toastTitle: st.toastTitle,
+      toast: st.toast
+    };
+  }
+}
+
+</script>
+</body>
+</html>

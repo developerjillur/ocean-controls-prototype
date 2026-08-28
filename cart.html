@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="/support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="icon" type="image/png" href="/favicon.png" />
+<link rel="apple-touch-icon" href="/favicon.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  body { margin: 0; background: #ffffff; color: #1f2429; font-family: Archivo, Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: #06708f; text-decoration: none; }
+  a:hover { color: #16304f; text-decoration: underline; }
+  p { text-wrap: pretty; }
+  input, button, select, textarea { font-family: inherit; }
+  :focus-visible { outline: 2px solid #0b9fd8; outline-offset: 2px; }
+  ::selection { background: #bfe8f8; }
+  @keyframes ocFade { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes ocRise { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+
+  /* Responsive layout — media queries cannot be expressed as inline styles.
+     Everything that must change together fires at the same width. */
+  @media (max-width: 1180px) {
+    [style*="grid-template-columns: 262px"], [style*="grid-template-columns: 264px"],
+    [style*="grid-template-columns: 268px"], [style*="grid-template-columns: 274px"],
+    [style*="grid-template-columns: 296px"], [style*="grid-template-columns: 300px"],
+    [style*="grid-template-columns: 400px"], [style*="grid-template-columns: 1fr 400px"],
+    [style*="1fr) 340px"], [style*="1fr) 360px"], [style*="1fr) 380px"],
+    [style*="1fr) 396px"], [style*="1fr) 400px"], [style*="1fr) 404px"],
+    [style*="1fr) 412px"], [style*="1fr) 420px"], [style*="1fr) 424px"],
+    [style*="1fr) 430px"], [style*="1fr) 460px"], [style*="1fr) 480px"] {
+      grid-template-columns: 1fr !important;
+    }
+    [style*="position: sticky"] { position: static !important; }
+    [style*="display: flex"] { flex-wrap: wrap; }
+    [style*="flex: 1 1 auto"] { min-width: 0; }
+    [style*="height: 84px"], [style*="height: 82px"], [style*="height: 48px"] { height: auto !important; }
+    [style*="height: 38px"] { height: auto !important; padding-top: 7px; padding-bottom: 7px; }
+    [style*="max-width: 660px"], [style*="max-width: 620px"], [style*="max-width: 560px"],
+    [style*="max-width: 480px"] { max-width: 100% !important; }
+  }
+  @media (max-width: 900px) {
+    [style*="grid-template-columns: repeat"] {
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)) !important;
+    }
+    [style*="columns: 3"] { columns: 2 !important; }
+  }
+  @media (max-width: 700px) {
+    [style*="display: grid"] { grid-template-columns: 1fr !important; }
+    [style*="columns: 3"] { columns: 1 !important; }
+  }
+</style>
+</helmet>
+
+<div style="width: 100%; background: #ffffff;">
+
+  <div style="background: #0b1c2e; color: #a9bed4; font-size: 13.5px;">
+    <div style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 36px); height: 38px; display: flex; align-items: center; gap: 26px;">
+      <span style="display: flex; align-items: center; gap: 8px;"><span style="width: 6px; height: 6px; border-radius: 50%; background: #2fd07e;"></span>Local stock in Carrum Downs — in-stock orders dispatched within 2 business days</span>
+      <span style="display: flex; align-items: center; gap: 8px; padding-left: 26px; border-left: 1px solid #24456b;"><span style="font-family: 'IBM Plex Mono', monospace; color: #9ab0c6; letter-spacing: 0.08em;">PICKUP</span>Order by 11am, collect after 2pm</span>
+      <span style="margin-left: auto; display: flex; align-items: center; gap: 22px;">
+        <a href="#" style="color: #d6e4f2; text-decoration: none;">Shipping</a>
+        <a href="#" style="color: #d6e4f2; text-decoration: none;">Returns</a>
+        <a href="/contact.html" style="color: #d6e4f2; text-decoration: none;">Contact</a>
+        <a href="#" style="color: #ffffff; font-family: 'IBM Plex Mono', monospace; text-decoration: none;">+61 3 9708 2390</a>
+      </span>
+    </div>
+  </div>
+
+  <div style="background: #ffffff; border-bottom: 1px solid #dbe2e8;">
+    <div style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 36px); height: 82px; display: flex; align-items: center; gap: 32px;">
+      <a href="/index.html" style="flex: 0 0 auto; display: block;" aria-label="Ocean Controls home">
+        <img src="/uploads/OceanControls-Design-Assets/02-brand-assets/ocean-controls-logo.png" alt="Ocean Controls" style="height: 42px; width: auto; display: block;" />
+      </a>
+      <div style="display: flex; align-items: center; gap: 11px; padding-left: 32px; border-left: 1px solid #dbe2e8;">
+        <span style="position: relative; display: block; width: 15px; height: 17px; border: 1.5px solid #16304f; border-radius: 2px;">
+          <span style="position: absolute; top: -5px; left: 2px; right: 2px; height: 6px; border: 1.5px solid #16304f; border-bottom: 0; border-radius: 3px 3px 0 0;"></span>
+        </span>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #16304f;">Secure checkout</span>
+      </div>
+      <div style="margin-left: auto; display: flex; align-items: center; gap: 20px;">
+        <div style="text-align: right;">
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #667380;">Need a hand with this order?</div>
+          <a href="#" style="font-family: 'IBM Plex Mono', monospace; font-size: 15.5px; font-weight: 500;">+61 3 9708 2390</a>
+        </div>
+        <a href="/shop.html" style="display: flex; align-items: center; gap: 8px; padding: 11px 16px; border: 1px solid #dbe2e8; font-size: 14.5px; font-weight: 600; color: #16304f; text-decoration: none;" style-hover="border-color: #16304f; text-decoration: none;">← Keep shopping</a>
+      </div>
+    </div>
+  </div>
+
+  <div style="background: #f7f9fb; border-bottom: 1px solid #dbe2e8;">
+    <div style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 36px);">
+      <div style="display: flex; align-items: stretch;">
+        <sc-for list="{{ steps }}" as="s" hint-placeholder-count="0">
+          <button onClick="{{ s.pick }}" style="{{ s.style }}">
+            <span style="{{ s.numStyle }}">{{ s.num }}</span>
+            <span style="display: flex; flex-direction: column; align-items: flex-start; line-height: 1.3;">
+              <span style="font-size: 15px; font-weight: 600;">{{ s.label }}</span>
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.06em; opacity: 0.8;">{{ s.hint }}</span>
+            </span>
+          </button>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+
+  <section data-screen-label="Checkout" style="background: #ffffff;">
+    <div style="max-width: 1440px; margin: 0 auto; padding: 34px 36px 76px; display: grid; grid-template-columns: minmax(0, 1fr) 412px; gap: 40px; align-items: start;">
+
+      <div style="{{ stepAnim }}">
+
+        <sc-if value="{{ isCart }}" hint-placeholder-val="{{ true }}">
+          <div>
+            <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 30px; margin-bottom: 20px;">
+              <div>
+                <h1 style="margin: 0 0 7px; font-size: 31px; line-height: 1.1; font-weight: 700; letter-spacing: -0.025em; color: #0b1c2e;">Your order</h1>
+                <p style="margin: 0; font-size: 15.5px; color: #667380;">{{ cartSummaryLine }}</p>
+              </div>
+              <button onClick="{{ clearCart }}" style="border: 0; background: none; padding: 0; font-family: inherit; font-size: 14px; color: #06708f; cursor: pointer; text-decoration: underline;">Empty the order</button>
+            </div>
+
+            <sc-if value="{{ cartEmpty }}" hint-placeholder-val="{{ false }}">
+              <div style="border: 1px dashed #c9d3dc; padding: 60px 32px; text-align: center;">
+                <div style="font-size: 18.5px; font-weight: 600; color: #16304f; margin-bottom: 8px;">There is nothing on this order</div>
+                <p style="margin: 0 auto 20px; font-size: 15.5px; line-height: 1.6; color: #667380; max-width: 40em;">Paste your part numbers below, or browse the catalogue.</p>
+                <a href="/shop.html" style="display: inline-block; padding: 12px 20px; background: #16304f; color: #ffffff; font-size: 14.5px; font-weight: 600; text-decoration: none;" style-hover="background: #0673a2; text-decoration: none;">Browse the catalogue</a>
+              </div>
+            </sc-if>
+
+            <sc-if value="{{ hasLines }}" hint-placeholder-val="{{ true }}">
+              <div style="border: 1px solid #dbe2e8;">
+                <div style="display: grid; grid-template-columns: 84px minmax(220px, 1fr) 128px 116px 132px 112px 44px; align-items: center; background: #16304f; color: #ffffff;">
+                  <div style="padding: 11px 12px; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase;">Item</div>
+                  <div style="padding: 11px 12px; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase;">Product</div>
+                  <div style="padding: 11px 12px; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase;">Availability</div>
+                  <div style="padding: 11px 12px; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; text-align: right;">Unit ex GST</div>
+                  <div style="padding: 11px 12px; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase;">Quantity</div>
+                  <div style="padding: 11px 12px; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; text-align: right;">Line total</div>
+                  <div style="padding: 11px 8px;"></div>
+                </div>
+                <sc-for list="{{ lines }}" as="l" hint-placeholder-count="0">
+                  <div>
+                    <div style="display: grid; grid-template-columns: 84px minmax(220px, 1fr) 128px 116px 132px 112px 44px; align-items: center; border-top: 1px solid #eef2f5;">
+                      <div style="padding: 12px;">
+                        <div style="{{ l.imgStyle }}"></div>
+                      </div>
+                      <div style="padding: 12px; min-width: 0;">
+                        <a href="/product.html" style="display: block; font-size: 15px; font-weight: 600; line-height: 1.35; color: #16304f; text-decoration: none;" style-hover="color: #06708f;">{{ l.name }}</a>
+                        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #667380; margin-top: 3px;">{{ l.skuLine }}</div>
+                      </div>
+                      <div style="padding: 12px; font-size: 13.5px; color: {{ l.stockFg }};">{{ l.stockText }}</div>
+                      <div style="padding: 12px; text-align: right;">
+                        <div style="font-size: 15px; font-weight: 600; color: #0b1c2e; font-variant-numeric: tabular-nums;">{{ l.unit }}</div>
+                        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: {{ l.tierFg }};">{{ l.tierLabel }}</div>
+                      </div>
+                      <div style="padding: 10px 12px;">
+                        <div style="display: flex; border: 1px solid #dbe2e8; height: 34px; width: 106px;">
+                          <button onClick="{{ l.dec }}" style="width: 32px; border: 0; background: none; cursor: pointer; color: #667380; font-size: 16.5px;" style-hover="background: #f4f6f8;">−</button>
+                          <div style="flex: 1 1 auto; display: flex; align-items: center; justify-content: center; font-size: 14.5px; font-weight: 600; font-variant-numeric: tabular-nums; border-left: 1px solid #eef2f5; border-right: 1px solid #eef2f5;">{{ l.qty }}</div>
+                          <button onClick="{{ l.inc }}" style="width: 32px; border: 0; background: none; cursor: pointer; color: #667380; font-size: 16.5px;" style-hover="background: #f4f6f8;">+</button>
+                        </div>
+                      </div>
+                      <div style="padding: 12px; text-align: right; font-size: 16.5px; font-weight: 700; color: #0b1c2e; font-variant-numeric: tabular-nums;">{{ l.total }}</div>
+                      <div style="padding: 12px 8px; text-align: center;">
+                        <button onClick="{{ l.remove }}" aria-label="Remove line" style="border: 0; background: none; color: #667380; font-size: 17.5px; line-height: 1; cursor: pointer; padding: 4px;" style-hover="color: #c2364a;">×</button>
+                      </div>
+                    </div>
+                    <sc-if value="{{ l.hasNudge }}" hint-placeholder-val="{{ false }}">
+                      <div style="display: flex; align-items: center; gap: 12px; padding: 9px 12px 11px 96px; background: #f2f9fd; border-top: 1px solid #dbe2e8;">
+                        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #06708f;">Buy more for less</span>
+                        <span style="font-size: 14px; color: #24456b;">{{ l.nudge }}</span>
+                        <button onClick="{{ l.takeNudge }}" style="margin-left: auto; border: 1px solid #0b9fd8; background: #ffffff; color: #06708f; font-size: 13.5px; font-weight: 600; padding: 6px 12px; cursor: pointer;" style-hover="background: #0673a2; color: #ffffff;">{{ l.nudgeCta }}</button>
+                      </div>
+                    </sc-if>
+                  </div>
+                </sc-for>
+              </div>
+
+              <sc-if value="{{ hasBackorder }}" hint-placeholder-val="{{ false }}">
+                <div style="display: flex; align-items: flex-start; gap: 13px; border-left: 3px solid #d99b2b; background: #fdf8ef; padding: 15px 17px; margin-top: 16px;">
+                  <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #a5620a; flex: 0 0 auto; padding-top: 2px;">Backorder</span>
+                  <div>
+                    <div style="font-size: 15px; font-weight: 600; color: #6b4a12; margin-bottom: 4px;">{{ backorderTitle }}</div>
+                    <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #6b4a12;">These lines go onto our purchasing run and we confirm the lead time in writing the same day. You can also split the order — we will ship what is on the shelf now and the rest when it lands, at no extra freight.</p>
+                  </div>
+                </div>
+              </sc-if>
+            </sc-if>
+
+            <div style="border: 1px solid #dbe2e8; margin-top: 18px;">
+              <div style="padding: 13px 16px; background: #f7f9fb; border-bottom: 1px solid #dbe2e8; display: flex; align-items: baseline; justify-content: space-between; gap: 12px;">
+                <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #667380;">Add more by part number</span>
+                <span style="font-size: 13.5px; color: #667380;">Comma separated — paste straight from your parts list</span>
+              </div>
+              <div style="padding: 16px; display: flex; gap: 8px;">
+                <input type="text" placeholder="KTA-402, ULC-141, PSM-900" value="{{ padValue }}" onInput="{{ onPad }}" onKeyDown="{{ onPadKey }}" style="flex: 1 1 auto; height: 44px; border: 1px solid #dbe2e8; padding: 0 13px; font-size: 15.5px; font-family: 'IBM Plex Mono', monospace; outline: none; min-width: 0;" aria-label="Add by part number" />
+                <button onClick="{{ addPad }}" style="flex: 0 0 auto; height: 44px; padding: 0 22px; background: #16304f; color: #ffffff; border: 0; font-size: 15px; font-weight: 600; cursor: pointer;" style-hover="background: #0673a2;">Add to order</button>
+              </div>
+              <div style="padding: 0 16px 16px; font-size: 13.5px; color: {{ padNoteFg }}; min-height: 22px;">{{ padNote }}</div>
+            </div>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ isAccount }}" hint-placeholder-val="{{ false }}">
+          <div>
+            <h1 style="margin: 0 0 7px; font-size: 31px; line-height: 1.1; font-weight: 700; letter-spacing: -0.025em; color: #0b1c2e;">Sign in to continue</h1>
+            <p style="margin: 0 0 22px; font-size: 16px; line-height: 1.6; color: #667380; max-width: 58em;">Ocean Controls does not take guest orders. An account keeps your invoices, order history and datasheet downloads in one place — and lets us apply your agreed pricing if you are a trade customer.</p>
+
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: #dbe2e8; border: 1px solid #dbe2e8;">
+              <div style="background: #ffffff; padding: 24px;">
+                <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #06708f; margin-bottom: 14px;">Existing customer</div>
+                <h2 style="margin: 0 0 16px; font-size: 20.5px; font-weight: 700; letter-spacing: -0.015em; color: #0b1c2e;">Sign in</h2>
+                <div style="display: flex; flex-direction: column; gap: 12px;">
+                  <label style="display: flex; flex-direction: column; gap: 5px;">
+                    <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #667380;">Email</span>
+                    <input type="text" placeholder="you@company.com.au" style="height: 44px; border: 1px solid #dbe2e8; padding: 0 12px; font-size: 15.5px; outline: none;" />
+                  </label>
+                  <label style="display: flex; flex-direction: column; gap: 5px;">
+                    <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #667380;">Password</span>
+                    <input type="password" placeholder="••••••••" style="height: 44px; border: 1px solid #dbe2e8; padding: 0 12px; font-size: 15.5px; outline: none;" />
+                  </label>
+                  <button onClick="{{ signIn }}" style="height: 46px; background: #16304f; color: #ffffff; border: 0; font-size: 15.5px; font-weight: 600; cursor: pointer;" style-hover="background: #0673a2;">Sign in and continue</button>
+                  <a href="#" style="font-size: 14px;">Forgotten your password?</a>
+                </div>
+              </div>
+              <div style="background: #ffffff; padding: 24px;">
+                <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #06708f; margin-bottom: 14px;">New customer</div>
+                <h2 style="margin: 0 0 16px; font-size: 20.5px; font-weight: 700; letter-spacing: -0.015em; color: #0b1c2e;">Create an account</h2>
+                <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 16px;">
+                  <sc-for list="{{ accountPerks }}" as="a" hint-placeholder-count="0">
+                    <div style="display: flex; align-items: flex-start; gap: 10px;">
+                      <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #0673a2; padding-top: 3px;">{{ a.n }}</span>
+                      <span style="font-size: 14.5px; line-height: 1.55; color: #4b5560;">{{ a.t }}</span>
+                    </div>
+                  </sc-for>
+                </div>
+                <button onClick="{{ signIn }}" style="width: 100%; height: 46px; background: #ffffff; border: 1px solid #16304f; color: #16304f; font-size: 15.5px; font-weight: 600; cursor: pointer; margin-bottom: 10px;" style-hover="background: #f4f6f8;">Register and continue</button>
+                <div style="border-top: 1px solid #eef2f5; padding-top: 14px;">
+                  <div style="font-size: 14.5px; font-weight: 600; color: #0b1c2e; margin-bottom: 4px;">Buying for a business?</div>
+                  <p style="margin: 0 0 8px; font-size: 14px; line-height: 1.55; color: #667380;">Apply for a trade or overseas wholesale account and your contract price replaces retail across the whole catalogue.</p>
+                  <a href="/trade-account.html" style="font-size: 14px; font-weight: 600;">Apply for a trade account →</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ isDelivery }}" hint-placeholder-val="{{ false }}">
+          <div>
+            <h1 style="margin: 0 0 7px; font-size: 31px; line-height: 1.1; font-weight: 700; letter-spacing: -0.025em; color: #0b1c2e;">Delivery</h1>
+            <p style="margin: 0 0 22px; font-size: 16px; line-height: 1.6; color: #667380;">Signed in as <strong style="color: #16304f;">ivan@oceancontrols.com.au</strong> · Approved trade account</p>
+
+            <div style="border: 1px solid #dbe2e8; margin-bottom: 18px;">
+              <div style="padding: 13px 16px; background: #f7f9fb; border-bottom: 1px solid #dbe2e8; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #667380;">How would you like it?</div>
+              <sc-for list="{{ shipMethods }}" as="m" hint-placeholder-count="0">
+                <button onClick="{{ m.pick }}" style="{{ m.style }}">
+                  <span style="{{ m.radioStyle }}"></span>
+                  <span style="flex: 1 1 auto; text-align: left;">
+                    <span style="display: block; font-size: 15.5px; font-weight: 600; color: #0b1c2e;">{{ m.title }}</span>
+                    <span style="display: block; font-size: 14px; line-height: 1.5; color: #667380; margin-top: 2px;">{{ m.body }}</span>
+                  </span>
+                  <span style="flex: 0 0 auto; text-align: right;">
+                    <span style="display: block; font-size: 16px; font-weight: 700; color: #0b1c2e; font-variant-numeric: tabular-nums;">{{ m.price }}</span>
+                    <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #667380;">{{ m.eta }}</span>
+                  </span>
+                </button>
+              </sc-for>
+            </div>
+
+            <sc-if value="{{ needsAddress }}" hint-placeholder-val="{{ true }}">
+              <div style="border: 1px solid #dbe2e8;">
+                <div style="padding: 13px 16px; background: #f7f9fb; border-bottom: 1px solid #dbe2e8; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #667380;">Delivery address</div>
+                <div style="padding: 18px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px;">
+                  <sc-for list="{{ addressFields }}" as="f" hint-placeholder-count="0">
+                    <label style="{{ f.wrapStyle }}">
+                      <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #667380;">{{ f.label }}</span>
+                      <input type="text" placeholder="{{ f.placeholder }}" value="{{ f.value }}" onInput="{{ f.onInput }}" style="{{ f.inputStyle }}" />
+                    </label>
+                  </sc-for>
+                  <label style="grid-column: span 2; display: flex; flex-direction: column; gap: 5px;">
+                    <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #667380;">Delivery instructions — optional</span>
+                    <textarea placeholder="Gate code, dock hours, who to call on arrival" style="height: 74px; border: 1px solid #dbe2e8; padding: 10px 12px; font-size: 15.5px; outline: none; resize: vertical;"></textarea>
+                  </label>
+                </div>
+              </div>
+            </sc-if>
+
+            <sc-if value="{{ isPickup }}" hint-placeholder-val="{{ false }}">
+              <div style="border: 1px solid #dbe2e8;">
+                <div style="padding: 13px 16px; background: #f7f9fb; border-bottom: 1px solid #dbe2e8; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #667380;">Collection point</div>
+                <div style="padding: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: #dbe2e8; border: 1px solid #dbe2e8;">
+                  <div style="background: #ffffff; padding: 15px 16px;">
+                    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #667380;">Address</div>
+                    <div style="font-size: 15px; font-weight: 600; color: #16304f; margin-top: 4px; line-height: 1.5;">44 Frankston Gardens Drive<br />Carrum Downs VIC 3201</div>
+                  </div>
+                  <div style="background: #ffffff; padding: 15px 16px;">
+                    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #667380;">Counter hours</div>
+                    <div style="font-size: 15px; font-weight: 600; color: #16304f; margin-top: 4px;">Mon–Fri, 9am–5pm</div>
+                    <div style="font-size: 14px; color: #667380; margin-top: 3px;">Order by 11am, collect after 2pm</div>
+                  </div>
+                </div>
+              </div>
+            </sc-if>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ isPayment }}" hint-placeholder-val="{{ false }}">
+          <div>
+            <h1 style="margin: 0 0 7px; font-size: 31px; line-height: 1.1; font-weight: 700; letter-spacing: -0.025em; color: #0b1c2e;">Payment</h1>
+            <p style="margin: 0 0 22px; font-size: 16px; line-height: 1.6; color: #667380;">All amounts in AUD. Your invoice is issued against this order and appears in your account immediately.</p>
+
+            <div style="border: 1px solid #dbe2e8; margin-bottom: 18px;">
+              <sc-for list="{{ payMethods }}" as="m" hint-placeholder-count="0">
+                <button onClick="{{ m.pick }}" style="{{ m.style }}">
+                  <span style="{{ m.radioStyle }}"></span>
+                  <span style="flex: 1 1 auto; text-align: left;">
+                    <span style="display: block; font-size: 15.5px; font-weight: 600; color: #0b1c2e;">{{ m.title }}</span>
+                    <span style="display: block; font-size: 14px; line-height: 1.5; color: #667380; margin-top: 2px;">{{ m.body }}</span>
+                  </span>
+                  <span style="flex: 0 0 auto; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.08em; color: #667380;">{{ m.tag }}</span>
+                </button>
+              </sc-for>
+            </div>
+
+            <sc-if value="{{ isCard }}" hint-placeholder-val="{{ true }}">
+              <div style="border: 1px solid #dbe2e8;">
+                <div style="padding: 13px 16px; background: #f7f9fb; border-bottom: 1px solid #dbe2e8; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #667380;">Card details</div>
+                <div style="padding: 18px; display: grid; grid-template-columns: repeat(auto-fit, minmax(265px, 1fr)); gap: 14px;">
+                  <label style="grid-column: span 3; display: flex; flex-direction: column; gap: 5px;">
+                    <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #667380;">Card number</span>
+                    <input type="text" placeholder="0000 0000 0000 0000" style="height: 44px; border: 1px solid #dbe2e8; padding: 0 12px; font-size: 15.5px; font-family: 'IBM Plex Mono', monospace; outline: none;" />
+                  </label>
+                  <label style="display: flex; flex-direction: column; gap: 5px;">
+                    <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #667380;">Expiry</span>
+                    <input type="text" placeholder="MM / YY" style="height: 44px; border: 1px solid #dbe2e8; padding: 0 12px; font-size: 15.5px; font-family: 'IBM Plex Mono', monospace; outline: none;" />
+                  </label>
+                  <label style="display: flex; flex-direction: column; gap: 5px;">
+                    <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #667380;">CVC</span>
+                    <input type="text" placeholder="123" style="height: 44px; border: 1px solid #dbe2e8; padding: 0 12px; font-size: 15.5px; font-family: 'IBM Plex Mono', monospace; outline: none;" />
+                  </label>
+                  <label style="display: flex; flex-direction: column; gap: 5px;">
+                    <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #667380;">Name on card</span>
+                    <input type="text" placeholder="I. Garcia" style="height: 44px; border: 1px solid #dbe2e8; padding: 0 12px; font-size: 15.5px; outline: none;" />
+                  </label>
+                </div>
+              </div>
+            </sc-if>
+
+            <sc-if value="{{ isOnAccount }}" hint-placeholder-val="{{ false }}">
+              <div style="border: 1px solid #dbe2e8;">
+                <div style="padding: 13px 16px; background: #f7f9fb; border-bottom: 1px solid #dbe2e8; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #667380;">Account terms</div>
+                <div style="padding: 18px;">
+                  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(265px, 1fr)); gap: 1px; background: #dbe2e8; border: 1px solid #dbe2e8; margin-bottom: 16px;">
+                    <div style="background: #ffffff; padding: 14px 16px;">
+                      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #667380;">Terms</div>
+                      <div style="font-size: 15.5px; font-weight: 600; color: #16304f; margin-top: 4px;">30 days from invoice</div>
+                    </div>
+                    <div style="background: #ffffff; padding: 14px 16px;">
+                      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #667380;">Credit available</div>
+                      <div style="font-size: 15.5px; font-weight: 600; color: #157a45; margin-top: 4px;">$12,480.00</div>
+                    </div>
+                    <div style="background: #ffffff; padding: 14px 16px;">
+                      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #667380;">Account</div>
+                      <div style="font-size: 15.5px; font-weight: 600; color: #16304f; margin-top: 4px;">TRADE-0418</div>
+                    </div>
+                  </div>
+                  <label style="display: flex; flex-direction: column; gap: 5px;">
+                    <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #667380;">Your purchase order number</span>
+                    <input type="text" placeholder="e.g. PO-88213" value="{{ poValue }}" onInput="{{ onPo }}" style="height: 44px; border: 1px solid #dbe2e8; padding: 0 12px; font-size: 15.5px; font-family: 'IBM Plex Mono', monospace; outline: none;" />
+                  </label>
+                </div>
+              </div>
+            </sc-if>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ isReview }}" hint-placeholder-val="{{ false }}">
+          <div>
+            <h1 style="margin: 0 0 7px; font-size: 31px; line-height: 1.1; font-weight: 700; letter-spacing: -0.025em; color: #0b1c2e;">Check and place the order</h1>
+            <p style="margin: 0 0 22px; font-size: 16px; line-height: 1.6; color: #667380;">Nothing is charged until you press the button.</p>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(265px, 1fr)); gap: 1px; background: #dbe2e8; border: 1px solid #dbe2e8; margin-bottom: 18px;">
+              <sc-for list="{{ reviewCards }}" as="c" hint-placeholder-count="0">
+                <div style="background: #ffffff; padding: 16px;">
+                  <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 10px; margin-bottom: 8px;">
+                    <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #667380;">{{ c.k }}</span>
+                    <button onClick="{{ c.edit }}" style="border: 0; background: none; padding: 0; font-family: inherit; font-size: 13px; color: #06708f; cursor: pointer; text-decoration: underline;">Change</button>
+                  </div>
+                  <div style="font-size: 14.5px; line-height: 1.55; color: #16304f; font-weight: 500;">{{ c.v }}</div>
+                </div>
+              </sc-for>
+            </div>
+
+            <div style="border: 1px solid #dbe2e8;">
+              <div style="padding: 13px 16px; background: #f7f9fb; border-bottom: 1px solid #dbe2e8; display: flex; align-items: baseline; justify-content: space-between;">
+                <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #667380;">{{ reviewLinesLabel }}</span>
+                <button onClick="{{ goCart }}" style="border: 0; background: none; padding: 0; font-family: inherit; font-size: 13px; color: #06708f; cursor: pointer; text-decoration: underline;">Edit the order</button>
+              </div>
+              <sc-for list="{{ lines }}" as="l" hint-placeholder-count="0">
+                <div style="display: grid; grid-template-columns: 64px minmax(0, 1fr) 90px 120px; align-items: center; gap: 14px; padding: 12px 16px; border-bottom: 1px solid #eef2f5;">
+                  <div style="{{ l.imgStyle }}"></div>
+                  <div style="min-width: 0;">
+                    <div style="font-size: 14.5px; font-weight: 600; color: #16304f;">{{ l.name }}</div>
+                    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #667380; margin-top: 2px;">{{ l.skuLine }}</div>
+                  </div>
+                  <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13.5px; color: #4b5560; text-align: center;">× {{ l.qty }}</div>
+                  <div style="text-align: right; font-size: 15.5px; font-weight: 700; color: #0b1c2e; font-variant-numeric: tabular-nums;">{{ l.total }}</div>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ isDone }}" hint-placeholder-val="{{ false }}">
+          <div style="animation: ocRise 0.4s ease-out;">
+            <div style="border: 1px solid #dbe2e8; border-top: 3px solid #2fd07e;">
+              <div style="padding: 32px 30px; border-bottom: 1px solid #dbe2e8;">
+                <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #157a45; margin-bottom: 14px;">Order received</div>
+                <h1 style="margin: 0 0 12px; font-size: 33px; line-height: 1.1; font-weight: 700; letter-spacing: -0.025em; color: #0b1c2e;">Thanks — order {{ orderNo }} is in.</h1>
+                <p style="margin: 0 0 20px; font-size: 16.5px; line-height: 1.65; color: #4b5560; max-width: 56em;">A confirmation is on its way to ivan@oceancontrols.com.au, and the invoice is already in your account. In-stock lines are picked in Carrum Downs today and dispatched within two business days.</p>
+                <div style="display: flex; gap: 12px;">
+                  <a href="/account.html" style="padding: 13px 22px; background: #16304f; color: #ffffff; font-size: 15px; font-weight: 600; text-decoration: none;" style-hover="background: #0673a2; text-decoration: none;">Track it in your account</a>
+                  <a href="/shop.html" style="padding: 13px 22px; border: 1px solid #c9d3dc; color: #16304f; font-size: 15px; font-weight: 600; text-decoration: none;" style-hover="border-color: #16304f; text-decoration: none;">Keep shopping</a>
+                </div>
+              </div>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(235px, 1fr)); gap: 1px; background: #dbe2e8;">
+                <sc-for list="{{ doneFacts }}" as="d" hint-placeholder-count="0">
+                  <div style="background: #ffffff; padding: 16px 18px;">
+                    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #667380;">{{ d.k }}</div>
+                    <div style="font-size: 15.5px; font-weight: 600; color: #16304f; margin-top: 4px; line-height: 1.45;">{{ d.v }}</div>
+                  </div>
+                </sc-for>
+              </div>
+            </div>
+
+            <sc-if value="{{ hasBackorder }}" hint-placeholder-val="{{ false }}">
+              <div style="display: flex; align-items: flex-start; gap: 13px; border-left: 3px solid #d99b2b; background: #fdf8ef; padding: 16px 18px; margin-top: 18px;">
+                <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #a5620a; flex: 0 0 auto; padding-top: 2px;">Parts to order</span>
+                <div>
+                  <div style="font-size: 15px; font-weight: 600; color: #6b4a12; margin-bottom: 4px;">{{ backorderTitle }}</div>
+                  <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #6b4a12;">Those lines have gone onto our purchasing run. You will get the confirmed lead time by email today, and the status updates in your account as the consignment moves.</p>
+                </div>
+              </div>
+            </sc-if>
+          </div>
+        </sc-if>
+      </div>
+
+      <div style="position: sticky; top: 24px;">
+        <div style="border: 1px solid #dbe2e8;">
+          <div style="padding: 15px 18px; background: #16304f; color: #ffffff; display: flex; align-items: baseline; justify-content: space-between; gap: 12px;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase;">Order summary</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #90b4d4;">{{ itemCountLabel }}</span>
+          </div>
+
+          <div style="padding: 16px 18px; display: flex; flex-direction: column; gap: 9px; border-bottom: 1px solid #dbe2e8;">
+            <div style="display: flex; align-items: baseline; justify-content: space-between; font-size: 15px; color: #4b5560;"><span>Subtotal, ex GST</span><span style="font-weight: 600; font-variant-numeric: tabular-nums;">{{ subtotal }}</span></div>
+            <sc-if value="{{ hasSavings }}" hint-placeholder-val="{{ false }}">
+              <div style="display: flex; align-items: baseline; justify-content: space-between; font-size: 15px; color: #157a45;"><span>Quantity breaks applied</span><span style="font-weight: 600; font-variant-numeric: tabular-nums;">−{{ savings }}</span></div>
+            </sc-if>
+            <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 14px; font-size: 15px; color: #4b5560;"><span>Freight</span><span style="font-size: 14px; font-weight: 600; text-align: right;">{{ freightLabel }}</span></div>
+            <div style="display: flex; align-items: baseline; justify-content: space-between; font-size: 15px; color: #4b5560;"><span>GST 10%</span><span style="font-weight: 600; font-variant-numeric: tabular-nums;">{{ gst }}</span></div>
+            <div style="display: flex; align-items: baseline; justify-content: space-between; padding-top: 11px; border-top: 1px solid #dbe2e8;">
+              <span style="font-size: 16.5px; font-weight: 700; color: #0b1c2e;">Total inc GST</span>
+              <span style="display: flex; align-items: baseline; gap: 7px;">
+                <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; color: #667380;">AUD</span>
+                <span style="font-size: 25px; font-weight: 800; letter-spacing: -0.02em; color: #0b1c2e; font-variant-numeric: tabular-nums;">{{ total }}</span>
+              </span>
+            </div>
+          </div>
+
+          <sc-if value="{{ showCta }}" hint-placeholder-val="{{ true }}">
+            <div style="padding: 16px 18px; border-bottom: 1px solid #dbe2e8;">
+              <button onClick="{{ advance }}" style="width: 100%; height: 50px; background: #16304f; color: #ffffff; border: 0; font-size: 16.5px; font-weight: 700; cursor: pointer;" style-hover="background: #0673a2;">{{ ctaLabel }}</button>
+              <sc-if value="{{ canBack }}" hint-placeholder-val="{{ false }}">
+                <button onClick="{{ back }}" style="width: 100%; height: 40px; margin-top: 8px; background: #ffffff; border: 1px solid #dbe2e8; color: #16304f; font-size: 14.5px; font-weight: 600; cursor: pointer;" style-hover="border-color: #16304f;">{{ backLabel }}</button>
+              </sc-if>
+              <div style="font-size: 13px; line-height: 1.5; color: #667380; margin-top: 10px;">{{ ctaNote }}</div>
+            </div>
+          </sc-if>
+
+          <div style="padding: 14px 18px; border-bottom: 1px solid #dbe2e8;">
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #667380; margin-bottom: 10px;">On this order</div>
+            <sc-for list="{{ miniLines }}" as="m" hint-placeholder-count="0">
+              <div style="display: flex; align-items: center; gap: 10px; padding: 7px 0;">
+                <div style="{{ m.imgStyle }}"></div>
+                <div style="flex: 1 1 auto; min-width: 0;">
+                  <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #667380;">{{ m.sku }}</div>
+                  <div style="font-size: 13.5px; color: #16304f; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{ m.name }}</div>
+                </div>
+                <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #4b5560; flex: 0 0 auto;">× {{ m.qty }}</div>
+              </div>
+            </sc-for>
+          </div>
+
+          <div style="padding: 14px 18px; background: #f7f9fb;">
+            <sc-for list="{{ assurances }}" as="a" hint-placeholder-count="0">
+              <div style="display: flex; align-items: flex-start; gap: 10px; padding: 7px 0;">
+                <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #0673a2; padding-top: 2px; flex: 0 0 auto;">{{ a.n }}</span>
+                <span style="font-size: 13.5px; line-height: 1.5; color: #4b5560;">{{ a.t }}</span>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+
+        <div style="border: 1px solid #dbe2e8; border-top: 0; padding: 15px 18px;">
+          <div style="font-size: 14.5px; font-weight: 600; color: #0b1c2e; margin-bottom: 5px;">Rather order by phone or email?</div>
+          <p style="margin: 0 0 8px; font-size: 14px; line-height: 1.55; color: #667380;">Send the parts list and we will confirm stock and freight before anything is charged.</p>
+          <a href="#" style="font-family: 'IBM Plex Mono', monospace; font-size: 13.5px; font-weight: 500;">orders@oceancontrols.com.au</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer data-screen-label="Footer" style="background: #0b1c2e; color: #a9bed4;">
+    <div style="max-width: 1440px; margin: 0 auto; padding: 34px 36px; display: flex; align-items: center; gap: 40px;">
+      <div style="background: #ffffff; padding: 9px 11px;">
+        <img src="/uploads/OceanControls-Design-Assets/02-brand-assets/ocean-controls-logo.png" alt="Ocean Controls" style="height: 28px; width: auto; display: block;" />
+      </div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; line-height: 1.8; color: #a9bed4;">
+        <div>44 Frankston Gardens Drive, Carrum Downs VIC 3201</div>
+        <div>+61 3 9708 2390 · ABN 28 659 967 398</div>
+      </div>
+      <div style="margin-left: auto; display: flex; align-items: center; gap: 20px;">
+        <div style="display: flex; gap: 6px;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; border: 1px solid #3a5878; padding: 5px 9px; color: #d6e4f2;">VISA</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; border: 1px solid #3a5878; padding: 5px 9px; color: #d6e4f2;">MASTERCARD</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; border: 1px solid #3a5878; padding: 5px 9px; color: #d6e4f2;">AMEX</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; border: 1px solid #3a5878; padding: 5px 9px; color: #d6e4f2;">EFT</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; border: 1px solid #3a5878; padding: 5px 9px; color: #d6e4f2;">ACCOUNT</span>
+        </div>
+        <span style="display: flex; gap: 18px; font-size: 13.5px;">
+          <a href="#" style="color: #a9bed4; text-decoration: none;">Terms of sale</a>
+          <a href="#" style="color: #a9bed4; text-decoration: none;">Privacy</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <sc-if value="{{ toastOn }}" hint-placeholder-val="{{ false }}">
+    <div style="position: fixed; right: 28px; bottom: 28px; z-index: 90; background: #0b1c2e; color: #ffffff; border-left: 3px solid #2fd07e; padding: 14px 20px; box-shadow: 0 24px 48px -18px rgba(11,28,46,0.6); animation: ocFade 0.18s ease-out; max-width: 360px;">
+      <div style="font-size: 15px; font-weight: 600; margin-bottom: 3px;">{{ toastTitle }}</div>
+      <div style="font-size: 14px; color: #a9bed4;">{{ toast }}</div>
+    </div>
+  </sc-if>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440},&quot;startStep&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Order&quot;,&quot;Account&quot;,&quot;Delivery&quot;,&quot;Payment&quot;,&quot;Review&quot;],&quot;default&quot;:&quot;Order&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Checkout&quot;}}">
+const IMGDIR = 'uploads/OceanControls-Design-Assets/03-product-images/';
+
+// [sku, name, brand, price, stock, tiers, category, imageFile]
+const RAW = [
+  ['KTA-387','Modbus Data Logger — Dual RS-485, 100-Channel, SD Card Logging','Ocean Controls',145.03,1,3,'Data Loggers','Data-Loggers__KTA-387.png'],
+  ['GJS-002','DS18B20 1-Wire Waterproof Digital Temperature Sensor, 15 m cable','GJY Electronics',19.93,18,3,'Sensors','Sensors__GJS-002.jpg'],
+  ['ADW-002','HD67671 BACnet/IP Slave / Modbus Master Converter','ADF Web',489.31,6,2,'Modbus, BACnet & M-Bus','Modbus-Bacnet-MBus-Products__ADW-002.jpg'],
+  ['CGL-004','PG9 Grey Cable Gland','SMS',1.76,39,2,'Electrical Terminals & Wiring','Electrical-Terminals-Wiring__CGL-004.jpg'],
+  ['ADW-003','HD67933 Modbus Master / MQTT Converter','ADF Web',520.72,1,2,'Modbus, BACnet & M-Bus','Modbus-Bacnet-MBus-Products__ADW-003.jpg'],
+  ['KTA-402','BACnet MS/TP Weather Station Gateway for Davis Weather Stations','Ocean Controls',241.50,48,3,'Weather','Weather__KTA-402.jpg'],
+  ['ULC-141','UR41L 4G Mini Industrial Cellular Router','Milesight',138.53,8,2,'Industrial IoT','Industrial-IoT__ULC-141.webp'],
+  ['PSM-900','20 kA Surge Protector','Mean Well / ESI',19.98,2,0,'Power Supplies','Power-Supplies__PSM-900.jpg'],
+  ['TCS-001','TST100 1-Wire Temperature Sensor with IP65 Protection','Teracom',39.43,6,3,'Sensors','Sensors__TCS-001.jpg'],
+  ['HNR-100','Multi-Function Timer MA4N-B','Hanyoung Nux',43.19,9,3,'Timers','Timers__HNR-100.jpg'],
+  ['AKB-001','NPT4 Slimline Temperature Transmitter','Akytec',121.42,5,3,'Signal Conditioners','Signal-Conditioners__AKB-001.jpg'],
+  ['SPE-015','Grey CE-Approved ABS Waterproof Enclosure, 400 × 300 × 160 mm','Saip Group',81.40,41,0,'Enclosures','Enclosures__SPE-015.jpg'],
+  ['ULC-075','UR75 Industrial 5G Router','Milesight',681.12,6,2,'Industrial IoT','Industrial-IoT__ULC-075.webp'],
+  ['HET-100','Signal Generator 4-20 mA / 0-10 V / 0-5 V Voltage & Current Simulator','Z_AE',104.97,10,3,'Test Equipment','Test-Equipment__HET-100.jpg']
+];
+
+const MPN = {
+  'GJS-002': 'DS18B20', 'ADW-002': 'HD67671', 'ADW-003': 'HD67933', 'CGL-004': 'PG9',
+  'ULC-141': 'UR41L', 'ULC-075': 'UR75', 'TCS-001': 'TST100', 'HNR-100': 'MA4N-B', 'AKB-001': 'NPT4'
+};
+
+const CATALOGUE = {};
+RAW.forEach(function (r) {
+  CATALOGUE[r[0]] = {
+    sku: r[0], name: r[1], brand: r[2], price: r[3], stock: r[4], tiers: r[5], cat: r[6],
+    img: IMGDIR + r[7].replace(/&/g, '%26')
+  };
+});
+
+const STEPS = [
+  ['Order', 'Review the lines'],
+  ['Account', 'Sign in — no guest orders'],
+  ['Delivery', 'Ship or collect'],
+  ['Payment', 'Card, EFT or account'],
+  ['Review', 'Place the order']
+];
+
+const SHIP_METHODS = [
+  ['Store collection — Carrum Downs', 'Free. Order by 11am and collect after 2pm, Mon–Fri.', 0, 'Today'],
+  ['Australia Post parcel post', 'Live rate against this order\'s weight and dimensions.', 14.95, '3–6 days'],
+  ['Australia Post express', 'Next business day to most metro addresses.', 24.50, '1–2 days'],
+  ['DHL / FedEx — freight quote', 'For heavy or international consignments. We come back with a rate before charging.', -1, 'Quoted']
+];
+
+const PAY_METHODS = [
+  ['Credit or debit card', 'Visa, Mastercard and Amex. Charged when you place the order.', 'SECURE'],
+  ['Bank transfer / EFT', 'We email the invoice with our account details. Goods ship on cleared funds.', 'EFT'],
+  ['On account — 30 days', 'Approved trade accounts only. Your purchase order number goes on the invoice.', 'TRADE']
+];
+
+const PERKS = [
+  ['01', 'Every invoice and order in one place, exportable for your accounts.'],
+  ['02', 'Reorder a whole past order in one click, or paste a parts list.'],
+  ['03', 'Datasheets for everything you have bought, kept together.'],
+  ['04', 'Quantity breaks apply automatically — no code to enter.']
+];
+
+const ASSURANCES = [
+  ['01', 'Stock figures come from our own Carrum Downs warehouse, not a supplier feed.'],
+  ['02', 'Freight is a live carrier rate against real weights and dimensions.'],
+  ['03', 'Nothing is charged until you press place order.']
+];
+
+function tierFactor(n) { return n >= 25 ? 0.86 : n >= 10 ? 0.9 : n >= 5 ? 0.95 : 1; }
+function nextBreak(n) { return n < 5 ? 5 : n < 10 ? 10 : n < 25 ? 25 : null; }
+
+class Component extends DCLogic {
+  state = {
+    step: null,
+    cart: { 'KTA-387': 2, 'GJS-002': 6, 'ADW-002': 1, 'CGL-004': 24, 'ADW-003': 1 },
+    ship: 1, pay: 0, po: '',
+    addr: { company: 'Ocean Controls Pty Ltd', contact: 'Ivan Garcia', line1: '44 Frankston Gardens Drive', suburb: 'Carrum Downs', state: 'VIC', post: '3201', phone: '+61 3 9708 2390', email: 'ivan@oceancontrols.com.au' },
+    padValue: '', padNote: '', padOk: true,
+    toast: '', toastTitle: '', orderNo: ''
+  };
+
+  componentWillUnmount() { clearTimeout(this._t); }
+
+  // The prop seeds which step opens; the rail and the CTAs take over after that.
+  stepIdx() {
+    if (this.state.step !== null) return this.state.step;
+    const i = STEPS.map(s => s[0]).indexOf(this.props.startStep);
+    return i > -1 ? i : 0;
+  }
+
+  money(v) { return '$' + v.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ','); }
+
+  box(url, h, opts) {
+    const o = opts || {};
+    return 'width: ' + (o.w || '100%') + '; height: ' + h + '; flex: 0 0 auto;'
+      + ' background-image: url("' + url + '");'
+      + ' background-size: contain; background-position: center; background-repeat: no-repeat;'
+      + (o.extra || '');
+  }
+
+  fire(title, body) {
+    this.setState({ toastTitle: title, toast: body });
+    clearTimeout(this._t);
+    this._t = setTimeout(() => this.setState({ toast: '', toastTitle: '' }), 3000);
+  }
+
+  setLine(sku, q) {
+    this.setState(s => {
+      const c = Object.assign({}, s.cart);
+      if (q <= 0) delete c[sku]; else c[sku] = q;
+      return { cart: c };
+    });
+  }
+
+  runPad() {
+    const tokens = this.state.padValue.toUpperCase().split(/[,;\s]+/).filter(Boolean);
+    if (!tokens.length) { this.setState({ padNote: 'Type or paste a part number first.', padOk: false }); return; }
+    const found = tokens.filter(t => CATALOGUE[t]);
+    const missing = tokens.filter(t => !CATALOGUE[t]);
+    if (!found.length) {
+      this.setState({ padNote: 'No match for ' + missing.join(', ') + '. Try KTA-402 or ULC-141.', padOk: false });
+      return;
+    }
+    this.setState(s => {
+      const c = Object.assign({}, s.cart);
+      found.forEach(t => { c[t] = (c[t] || 0) + 1; });
+      return {
+        cart: c, padValue: '', padOk: true,
+        padNote: found.length + ' line' + (found.length > 1 ? 's' : '') + ' added' + (missing.length ? ' · not found: ' + missing.join(', ') : '')
+      };
+    });
+    this.fire('Added to order', found.join(', '));
+  }
+
+  stockOf(sku) {
+    const p = CATALOGUE[sku];
+    if (p.stock <= 0) return { text: 'Backorder', fg: '#a5620a', back: true };
+    if (p.stock <= 3) return { text: 'Low — ' + p.stock + ' left', fg: '#a5620a', back: false };
+    return { text: 'In stock', fg: '#157a45', back: false };
+  }
+
+  freight() {
+    const m = SHIP_METHODS[this.state.ship];
+    return m[2] > 0 ? m[2] : 0;
+  }
+
+  totals() {
+    const cart = this.state.cart;
+    const skus = Object.keys(cart);
+    let sub = 0, listSub = 0;
+    skus.forEach(s => {
+      const p = CATALOGUE[s];
+      const n = cart[s];
+      const f = p.tiers > 0 ? tierFactor(n) : 1;
+      sub += p.price * f * n;
+      listSub += p.price * n;
+    });
+    const freight = this.freight();
+    const gst = (sub + freight) * 0.1;
+    return { sub: sub, savings: listSub - sub, freight: freight, gst: gst, total: sub + freight + gst, count: skus.reduce((t, s) => t + cart[s], 0) };
+  }
+
+  advance() {
+    const step = this.stepIdx();
+    if (step === 0 && Object.keys(this.state.cart).length === 0) {
+      this.fire('Nothing to check out', 'Add a line before continuing.');
+      return;
+    }
+    if (step === 4) {
+      this.setState({ step: 5, orderNo: 'OC-' + (48210 + Math.floor(Math.random() * 780)) });
+      window.scrollTo(0, 0);
+      return;
+    }
+    this.setState({ step: Math.min(4, step + 1) });
+    window.scrollTo(0, 0);
+  }
+
+  goStep(i) {
+    const step = this.stepIdx();
+    if (i <= step || i === step + 1) {
+      this.setState({ step: i });
+      window.scrollTo(0, 0);
+    }
+  }
+
+  field(key, label, placeholder, span) {
+    const st = this.state;
+    return {
+      label: label, placeholder: placeholder, value: st.addr[key],
+      wrapStyle: 'display: flex; flex-direction: column; gap: 5px;' + (span ? ' grid-column: span 2;' : ''),
+      inputStyle: 'height: 44px; border: 1px solid #dbe2e8; padding: 0 12px; font-size: 15.5px; outline: none;',
+      onInput: e => {
+        const v = e.target.value;
+        this.setState(s => ({ addr: Object.assign({}, s.addr, { [key]: v }) }));
+      }
+    };
+  }
+
+  renderVals() {
+    const st = this.state;
+    const step = this.stepIdx();
+    const t = this.totals();
+    const cart = st.cart;
+    const skus = Object.keys(cart);
+    const shipM = SHIP_METHODS[st.ship];
+    const backSkus = skus.filter(s => this.stockOf(s).back);
+
+    const lines = skus.map(s => {
+      const p = CATALOGUE[s];
+      const n = cart[s];
+      const f = p.tiers > 0 ? tierFactor(n) : 1;
+      const unit = p.price * f;
+      const stock = this.stockOf(s);
+      const nb = p.tiers > 0 ? nextBreak(n) : null;
+      const nbFactor = nb ? tierFactor(nb) : 1;
+      const saveEach = nb ? p.price * (f - nbFactor) : 0;
+      return {
+        name: p.name,
+        skuLine: 'SKU ' + p.sku + (MPN[p.sku] ? '  ·  MPN ' + MPN[p.sku] : ''),
+        imgStyle: this.box(p.img, '60px', { extra: ' border: 1px solid #eef2f5;' }),
+        stockText: stock.text, stockFg: stock.fg,
+        unit: this.money(unit),
+        tierLabel: f < 1 ? 'tier applied · ' + Math.round((1 - f) * 100) + '% off' : (p.tiers > 0 ? 'list price' : 'single price'),
+        tierFg: f < 1 ? '#157a45' : '#667380',
+        qty: n,
+        total: this.money(unit * n),
+        hasNudge: !!(nb && saveEach > 0.02),
+        nudge: nb ? 'Add ' + (nb - n) + ' more (' + nb + ' total) and the unit price drops to ' + this.money(p.price * nbFactor) + ' — saves ' + this.money(saveEach * nb) + ' on the line.' : '',
+        nudgeCta: nb ? 'Make it ' + nb : '',
+        takeNudge: () => this.setLine(s, nb),
+        inc: () => this.setLine(s, n + 1),
+        dec: () => this.setLine(s, n - 1),
+        remove: () => this.setLine(s, 0)
+      };
+    });
+
+    const ctaLabels = ['Continue to sign in', 'Continue to delivery', 'Continue to payment', 'Review the order', 'Place the order'];
+    const backLabels = ['', 'Back to the order', 'Back to sign in', 'Back to delivery', 'Back to payment'];
+
+    return {
+      steps: STEPS.map((s, i) => {
+        const on = i === step;
+        const done = i < step || step === 5;
+        return {
+          num: done && !on ? '✓' : String(i + 1),
+          label: s[0], hint: s[1],
+          pick: () => this.goStep(i),
+          style: 'display: flex; align-items: center; gap: 12px; padding: 15px 22px 15px 18px; border: 0; cursor: pointer; flex: 1 1 0; min-width: 0;'
+            + ' background: ' + (on ? '#ffffff' : 'transparent') + ';'
+            + ' border-top: 2px solid ' + (on ? '#0673a2' : 'transparent') + ';'
+            + ' border-right: 1px solid #dbe2e8;'
+            + ' color: ' + (on ? '#0b1c2e' : (done ? '#24456b' : '#667380')) + ';',
+          numStyle: 'width: 26px; height: 26px; flex: 0 0 auto; display: flex; align-items: center; justify-content: center;'
+            + ' font-family: "IBM Plex Mono", monospace; font-size: 13px; font-weight: 600;'
+            + ' background: ' + (on ? '#0673a2' : (done ? '#157a45' : '#e4eaf0')) + ';'
+            + ' color: ' + (on || done ? '#ffffff' : '#667380') + ';'
+        };
+      }),
+      stepAnim: 'animation: ' + (step % 2 ? 'ocFade' : 'ocRise') + ' 0.3s ease-out;',
+      isCart: step === 0,
+      isAccount: step === 1,
+      isDelivery: step === 2,
+      isPayment: step === 3,
+      isReview: step === 4,
+      isDone: step === 5,
+
+      cartSummaryLine: skus.length + ' line' + (skus.length === 1 ? '' : 's') + ' · ' + t.count + ' item' + (t.count === 1 ? '' : 's') + ' · prices shown ex GST in AUD',
+      cartEmpty: skus.length === 0,
+      hasLines: skus.length > 0,
+      lines: lines,
+      clearCart: () => this.setState({ cart: {} }),
+
+      hasBackorder: backSkus.length > 0,
+      backorderTitle: backSkus.length + ' line' + (backSkus.length === 1 ? '' : 's') + ' on this order are backordered — ' + backSkus.join(', '),
+
+      padValue: st.padValue,
+      onPad: e => this.setState({ padValue: e.target.value, padNote: '' }),
+      onPadKey: e => { if (e.key === 'Enter') this.runPad(); },
+      addPad: () => this.runPad(),
+      padNote: st.padNote,
+      padNoteFg: st.padOk ? '#157a45' : '#a5620a',
+
+      accountPerks: PERKS.map(p => ({ n: p[0], t: p[1] })),
+      signIn: () => { this.setState({ step: 2 }); window.scrollTo(0, 0); },
+
+      shipMethods: SHIP_METHODS.map((m, i) => {
+        const on = i === st.ship;
+        return {
+          title: m[0], body: m[1], eta: m[3],
+          price: m[2] === 0 ? 'Free' : (m[2] < 0 ? 'Quoted' : this.money(m[2])),
+          pick: () => this.setState({ ship: i }),
+          style: 'width: 100%; display: flex; align-items: flex-start; gap: 13px; padding: 15px 17px; border: 0; cursor: pointer; text-align: left;'
+            + ' border-bottom: 1px solid #eef2f5;'
+            + ' background: ' + (on ? '#f2f9fd' : '#ffffff') + ';'
+            + (on ? ' box-shadow: inset 3px 0 0 #0b9fd8;' : ''),
+          radioStyle: 'width: 16px; height: 16px; border-radius: 50%; flex: 0 0 auto; margin-top: 2px;'
+            + ' border: ' + (on ? '5px solid #0b9fd8' : '1px solid #c9d3dc') + ';'
+            + ' background: #ffffff;'
+        };
+      }),
+      needsAddress: st.ship !== 0,
+      isPickup: st.ship === 0,
+      addressFields: [
+        this.field('company', 'Company', 'Company name'),
+        this.field('contact', 'Contact name', 'Who receives it'),
+        this.field('line1', 'Street address', 'Street and number', true),
+        this.field('suburb', 'Suburb', 'Suburb'),
+        this.field('state', 'State', 'VIC'),
+        this.field('post', 'Postcode', '3201'),
+        this.field('phone', 'Phone', 'For the courier')
+      ],
+
+      payMethods: PAY_METHODS.map((m, i) => {
+        const on = i === st.pay;
+        return {
+          title: m[0], body: m[1], tag: m[2],
+          pick: () => this.setState({ pay: i }),
+          style: 'width: 100%; display: flex; align-items: flex-start; gap: 13px; padding: 15px 17px; border: 0; cursor: pointer; text-align: left;'
+            + ' border-bottom: 1px solid #eef2f5;'
+            + ' background: ' + (on ? '#f2f9fd' : '#ffffff') + ';'
+            + (on ? ' box-shadow: inset 3px 0 0 #0b9fd8;' : ''),
+          radioStyle: 'width: 16px; height: 16px; border-radius: 50%; flex: 0 0 auto; margin-top: 2px;'
+            + ' border: ' + (on ? '5px solid #0b9fd8' : '1px solid #c9d3dc') + ';'
+            + ' background: #ffffff;'
+        };
+      }),
+      isCard: st.pay === 0,
+      isOnAccount: st.pay === 2,
+      poValue: st.po,
+      onPo: e => this.setState({ po: e.target.value }),
+
+      reviewCards: [
+        { k: 'Account', v: 'ivan@oceancontrols.com.au · Approved trade account TRADE-0418', edit: () => this.goStep(1) },
+        { k: 'Delivery', v: st.ship === 0 ? 'Collect from 44 Frankston Gardens Drive, Carrum Downs' : shipM[0] + ' — ' + st.addr.line1 + ', ' + st.addr.suburb + ' ' + st.addr.state + ' ' + st.addr.post, edit: () => this.goStep(2) },
+        { k: 'Payment', v: PAY_METHODS[st.pay][0] + (st.pay === 2 && st.po ? ' · PO ' + st.po : ''), edit: () => this.goStep(3) }
+      ],
+      reviewLinesLabel: skus.length + ' lines · ' + t.count + ' items',
+      goCart: () => this.goStep(0),
+
+      orderNo: st.orderNo,
+      doneFacts: [
+        { k: 'Order', v: st.orderNo },
+        { k: 'Total charged', v: this.money(t.total) + ' AUD' },
+        { k: st.ship === 0 ? 'Collection' : 'Delivery', v: st.ship === 0 ? 'Carrum Downs, after 2pm' : shipM[0] + ' · ' + shipM[3] },
+        { k: 'Invoice', v: 'In your account now' }
+      ],
+
+      itemCountLabel: t.count + ' item' + (t.count === 1 ? '' : 's'),
+      subtotal: this.money(t.sub),
+      hasSavings: t.savings > 0.02,
+      savings: this.money(t.savings),
+      freightLabel: step === 0 ? 'Calculated at delivery step' : (shipM[2] === 0 ? 'Free — store collection' : (shipM[2] < 0 ? 'Quoted after order' : this.money(shipM[2]) + ' · ' + shipM[0].split(' — ')[0])),
+      gst: this.money(t.gst),
+      total: this.money(t.total),
+
+      showCta: step < 5,
+      ctaLabel: ctaLabels[step] || 'Continue',
+      ctaNote: step === 0
+        ? 'You will need an account to check out — we do not take guest orders.'
+        : (step === 4 ? 'Placing the order charges ' + this.money(t.total) + ' and issues your invoice.' : 'Nothing is charged until the final step.'),
+      canBack: step > 0,
+      backLabel: backLabels[step],
+      advance: () => this.advance(),
+      back: () => this.goStep(Math.max(0, step - 1)),
+
+      miniLines: skus.slice(0, 6).map(s => {
+        const p = CATALOGUE[s];
+        return {
+          sku: p.sku, name: p.name, qty: cart[s],
+          imgStyle: this.box(p.img, '34px', { w: '34px', extra: ' border: 1px solid #eef2f5;' })
+        };
+      }),
+      assurances: ASSURANCES.map(a => ({ n: a[0], t: a[1] })),
+
+      toastOn: !!st.toast,
+      toastTitle: st.toastTitle,
+      toast: st.toast
+    };
+  }
+}
+
+</script>
+</body>
+</html>

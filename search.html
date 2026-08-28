@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="/support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="icon" type="image/png" href="/favicon.png" />
+<link rel="apple-touch-icon" href="/favicon.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  body { margin: 0; background: #ffffff; color: #1f2429; font-family: Archivo, Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: #06708f; text-decoration: none; }
+  a:hover { color: #16304f; text-decoration: underline; }
+  p { text-wrap: pretty; }
+  input, button, select, textarea { font-family: inherit; }
+  :focus-visible { outline: 2px solid #0b9fd8; outline-offset: 2px; }
+  ::selection { background: #bfe8f8; }
+  @keyframes ocFade { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes ocRise { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+
+  /* Responsive layout — media queries cannot be expressed as inline styles.
+     Everything that must change together fires at the same width. */
+  @media (max-width: 1180px) {
+    [style*="grid-template-columns: 262px"], [style*="grid-template-columns: 264px"],
+    [style*="grid-template-columns: 268px"], [style*="grid-template-columns: 274px"],
+    [style*="grid-template-columns: 296px"], [style*="grid-template-columns: 300px"],
+    [style*="grid-template-columns: 400px"], [style*="grid-template-columns: 1fr 400px"],
+    [style*="1fr) 340px"], [style*="1fr) 360px"], [style*="1fr) 380px"],
+    [style*="1fr) 396px"], [style*="1fr) 400px"], [style*="1fr) 404px"],
+    [style*="1fr) 412px"], [style*="1fr) 420px"], [style*="1fr) 424px"],
+    [style*="1fr) 430px"], [style*="1fr) 460px"], [style*="1fr) 480px"] {
+      grid-template-columns: 1fr !important;
+    }
+    [style*="position: sticky"] { position: static !important; }
+    [style*="display: flex"] { flex-wrap: wrap; }
+    [style*="flex: 1 1 auto"] { min-width: 0; }
+    [style*="height: 84px"], [style*="height: 82px"], [style*="height: 48px"] { height: auto !important; }
+    [style*="height: 38px"] { height: auto !important; padding-top: 7px; padding-bottom: 7px; }
+    [style*="max-width: 660px"], [style*="max-width: 620px"], [style*="max-width: 560px"],
+    [style*="max-width: 480px"] { max-width: 100% !important; }
+  }
+  @media (max-width: 900px) {
+    [style*="grid-template-columns: repeat"] {
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)) !important;
+    }
+    [style*="columns: 3"] { columns: 2 !important; }
+  }
+  @media (max-width: 700px) {
+    [style*="display: grid"] { grid-template-columns: 1fr !important; }
+    [style*="columns: 3"] { columns: 1 !important; }
+  }
+</style>
+</helmet>
+
+<div style="width: 100%; background: #ffffff;">
+
+  <div style="background: #0b1c2e; color: #a9bed4; font-size: 13.5px;">
+    <div style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 36px); height: 38px; display: flex; align-items: center; gap: 26px;">
+      <span style="display: flex; align-items: center; gap: 8px;"><span style="width: 6px; height: 6px; border-radius: 50%; background: #2fd07e;"></span>Searching 2,279 products, 237 categories, 48 brands and 3,319 documents</span>
+      <span style="margin-left: auto; display: flex; align-items: center; gap: 22px;">
+        <a href="/datasheets.html" style="color: #d6e4f2; text-decoration: none;">Datasheets</a>
+        <a href="/brands.html" style="color: #d6e4f2; text-decoration: none;">Brands</a>
+        <a href="/contact.html" style="color: #d6e4f2; text-decoration: none;">Contact</a>
+        <a href="#" style="color: #ffffff; font-family: 'IBM Plex Mono', monospace; text-decoration: none;">+61 3 9708 2390</a>
+      </span>
+    </div>
+  </div>
+
+  <div style="background: #ffffff; border-bottom: 1px solid #dbe2e8;">
+    <div style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 36px); height: 84px; display: flex; align-items: center; gap: 28px;">
+      <a href="/index.html" style="flex: 0 0 auto; display: block;" aria-label="Ocean Controls home">
+        <img src="/uploads/OceanControls-Design-Assets/02-brand-assets/ocean-controls-logo.png" alt="Ocean Controls" style="height: 42px; width: auto; display: block;" />
+      </a>
+      <div style="flex: 1 1 auto; max-width: 660px; display: flex; height: 48px; border: 1.5px solid #16304f;">
+        <input type="text" ref="{{ searchRef }}" placeholder="Search products, SKUs, categories, brands, datasheets and articles" value="{{ query }}" onInput="{{ onQuery }}" style="flex: 1 1 auto; border: 0; outline: none; padding: 0 15px; font-size: 16px; min-width: 0;" aria-label="Search everything" />
+        <sc-if value="{{ hasQuery }}" hint-placeholder-val="{{ false }}">
+          <button onClick="{{ clearQuery }}" aria-label="Clear search" style="width: 42px; border: 0; background: none; color: #667380; font-size: 19.5px; cursor: pointer;">×</button>
+        </sc-if>
+        <a href="/search.html" style="display: flex; align-items: center; justify-content: center; text-decoration: none; flex: 0 0 auto; border: 0; background: #16304f; color: #ffffff; padding: 0 26px; font-size: 15px; font-weight: 600; cursor: pointer;" style-hover="background: #0673a2;">Search</a>
+      </div>
+      <div style="margin-left: auto; display: flex; align-items: center; gap: 8px;">
+        <a href="#" style="display: flex; flex-direction: column; padding: 7px 14px; border: 1px solid #dbe2e8; text-decoration: none; color: #16304f;" style-hover="border-color: #16304f; text-decoration: none;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #667380;">Account</span>
+          <span style="font-size: 14.5px; font-weight: 600;">Sign in</span>
+        </a>
+        <a href="/cart.html" style="display: flex; align-items: center; gap: 11px; padding: 9px 15px; background: #16304f; color: #ffffff; text-decoration: none;" style-hover="background: #0b1c2e; text-decoration: none;">
+          <span style="position: relative; display: block; width: 17px; height: 17px; border: 1.5px solid #ffffff; border-top-color: transparent;">
+            <span style="position: absolute; top: -5px; left: 2px; right: 2px; height: 5px; border: 1.5px solid #ffffff; border-bottom: 0;"></span>
+          </span>
+          <span style="display: flex; flex-direction: column; line-height: 1.25;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #90b4d4;">{{ cartCountLabel }}</span>
+            <span style="font-size: 14.5px; font-weight: 600; font-variant-numeric: tabular-nums;">{{ cartTotal }}</span>
+          </span>
+        </a>
+      </div>
+    </div>
+
+    <div style="background: #16304f;">
+      <div style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 36px); display: flex; align-items: stretch;">
+        <a href="/shop.html" style="display: flex; align-items: center; gap: 11px; padding: 0 20px; height: 48px; background: #0673a2; color: #ffffff; font-size: 15px; font-weight: 600; text-decoration: none; flex: 0 0 auto;" style-hover="background: #06708f; text-decoration: none;">
+          <span style="display: flex; flex-direction: column; gap: 3px;">
+            <span style="display: block; width: 15px; height: 2px; background: #ffffff;"></span>
+            <span style="display: block; width: 15px; height: 2px; background: #ffffff;"></span>
+            <span style="display: block; width: 15px; height: 2px; background: #ffffff;"></span>
+          </span>
+          Shop by category
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; font-weight: 600; color: #ffffff;">237</span>
+        </a>
+        <a href="/shop.html" style="display: flex; align-items: center; padding: 0 15px; color: #d6e4f2; font-size: 15px; font-weight: 500; text-decoration: none;" style-hover="background: #24456b; color: #ffffff; text-decoration: none;">New arrivals</a>
+        <a href="/shop.html" style="display: flex; align-items: center; padding: 0 15px; color: #d6e4f2; font-size: 15px; font-weight: 500; text-decoration: none;" style-hover="background: #24456b; color: #ffffff; text-decoration: none;">Clearance</a>
+        <a href="/brands.html" style="display: flex; align-items: center; padding: 0 15px; color: #d6e4f2; font-size: 15px; font-weight: 500; text-decoration: none;" style-hover="background: #24456b; color: #ffffff; text-decoration: none;">Brands</a>
+        <a href="/about.html" style="display: flex; align-items: center; padding: 0 15px; color: #d6e4f2; font-size: 15px; font-weight: 500; text-decoration: none;" style-hover="background: #24456b; color: #ffffff; text-decoration: none;">Engineering services</a>
+        <a href="/datasheets.html" style="display: flex; align-items: center; padding: 0 15px; color: #d6e4f2; font-size: 15px; font-weight: 500; text-decoration: none;" style-hover="background: #24456b; color: #ffffff; text-decoration: none;">Datasheets</a>
+        <a href="/contact.html" style="display: flex; align-items: center; padding: 0 15px; color: #d6e4f2; font-size: 15px; font-weight: 500; text-decoration: none;" style-hover="background: #24456b; color: #ffffff; text-decoration: none;">Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <div style="background: #f7f9fb; border-bottom: 1px solid #dbe2e8;">
+    <div style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 36px); height: 44px; display: flex; align-items: center; gap: 10px; font-size: 14px; color: #667380;">
+      <a href="/index.html" style="color: #06708f;">Home</a>
+      <span style="color: #c9d3dc;">/</span>
+      <span style="color: #16304f; font-weight: 600;">Search</span>
+      <span style="margin-left: auto; font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; color: #667380;">{{ crumbNote }}</span>
+    </div>
+  </div>
+
+  <section data-screen-label="Search head" style="background: #ffffff; border-bottom: 1px solid #dbe2e8;">
+    <div style="max-width: 1440px; margin: 0 auto; padding: 26px 36px 0;">
+      <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 44px; margin-bottom: 20px;">
+        <div>
+          <div style="display: flex; align-items: center; gap: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #06708f; margin-bottom: 12px;">
+            <span style="width: 22px; height: 1px; background: #0673a2;"></span>Site search
+          </div>
+          <h1 style="margin: 0 0 8px; font-size: 33px; line-height: 1.12; font-weight: 700; letter-spacing: -0.025em; color: #0b1c2e;">{{ headline }}</h1>
+          <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #667380;">{{ subline }}</p>
+        </div>
+        <sc-if value="{{ hasResults }}" hint-placeholder-val="{{ false }}">
+          <div style="flex: 0 0 auto; display: grid; grid-template-columns: repeat(3, max-content); gap: 1px; background: #dbe2e8; border: 1px solid #dbe2e8;">
+            <sc-for list="{{ headStats }}" as="s" hint-placeholder-count="0">
+              <div style="background: #ffffff; padding: 11px 18px;">
+                <div style="font-size: 19.5px; font-weight: 700; color: #0b1c2e; letter-spacing: -0.02em; font-variant-numeric: tabular-nums;">{{ s.n }}</div>
+                <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #667380; margin-top: 3px;">{{ s.k }}</div>
+              </div>
+            </sc-for>
+          </div>
+        </sc-if>
+      </div>
+
+      <sc-if value="{{ hasSuggestion }}" hint-placeholder-val="{{ false }}">
+        <div style="display: flex; align-items: center; gap: 12px; border-left: 3px solid #0b9fd8; background: #f2f9fd; padding: 12px 16px; margin-bottom: 20px;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #06708f; flex: 0 0 auto;">Did you mean</span>
+          <button onClick="{{ takeSuggestion }}" style="border: 0; background: none; padding: 0; font-family: inherit; font-size: 15.5px; font-weight: 700; color: #16304f; cursor: pointer; text-decoration: underline;">{{ suggestion }}</button>
+          <span style="font-size: 14.5px; color: #667380;">{{ suggestionNote }}</span>
+        </div>
+      </sc-if>
+
+      <div style="display: flex; align-items: stretch; gap: 0;">
+        <sc-for list="{{ typeTabs }}" as="t" hint-placeholder-count="0">
+          <button onClick="{{ t.pick }}" style="{{ t.style }}">
+            <span>{{ t.label }}</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; opacity: 0.72; font-variant-numeric: tabular-nums;">{{ t.count }}</span>
+          </button>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Results" style="background: #ffffff;">
+    <div style="max-width: 1440px; margin: 0 auto; padding: 26px 36px 78px; display: grid; grid-template-columns: 262px minmax(0, 1fr); gap: 32px; align-items: start;">
+
+      <aside style="position: sticky; top: 20px;">
+        <div style="border: 1px solid #dbe2e8;">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 13px 16px; background: #16304f; color: #ffffff;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase;">Narrow it down</span>
+            <sc-if value="{{ hasFilters }}" hint-placeholder-val="{{ false }}">
+              <button onClick="{{ clearFilters }}" style="border: 0; background: none; padding: 0; font-family: inherit; font-size: 13.5px; font-weight: 600; color: #6fd0f5; cursor: pointer;">Clear</button>
+            </sc-if>
+          </div>
+          <sc-for list="{{ facetGroups }}" as="g" hint-placeholder-count="0">
+            <div style="{{ g.wrapStyle }}">
+              <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #667380; margin-bottom: 10px;">{{ g.label }}</div>
+              <sc-for list="{{ g.options }}" as="o" hint-placeholder-count="0">
+                <button onClick="{{ o.toggle }}" style="{{ o.style }}">
+                  <span style="{{ o.boxStyle }}">{{ o.tick }}</span>
+                  <span style="flex: 1 1 auto; text-align: left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{ o.label }}</span>
+                  <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #667380; font-variant-numeric: tabular-nums;">{{ o.count }}</span>
+                </button>
+              </sc-for>
+            </div>
+          </sc-for>
+        </div>
+
+        <div style="border: 1px solid #dbe2e8; border-top: 0; background: #f7f9fb; padding: 16px;">
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #667380; margin-bottom: 11px;">Popular searches</div>
+          <div style="display: flex; flex-wrap: wrap; gap: 7px;">
+            <sc-for list="{{ popular }}" as="p" hint-placeholder-count="0">
+              <button onClick="{{ p.pick }}" style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; border: 1px solid #dbe2e8; background: #ffffff; color: #24456b; padding: 6px 10px; cursor: pointer;" style-hover="border-color: #0673a2; color: #06708f;">{{ p.label }}</button>
+            </sc-for>
+          </div>
+        </div>
+
+        <div style="border: 1px solid #dbe2e8; border-top: 0; padding: 16px;">
+          <div style="font-size: 15px; font-weight: 600; color: #0b1c2e; margin-bottom: 5px;">Still can't find it?</div>
+          <p style="margin: 0 0 10px; font-size: 14px; line-height: 1.55; color: #667380;">Send us the model number you are replacing and we will tell you what fits — or build it.</p>
+          <a href="/contact.html" style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; font-weight: 500;">+61 3 9708 2390</a>
+        </div>
+      </aside>
+
+      <div>
+        <sc-if value="{{ hasResults }}" hint-placeholder-val="{{ false }}">
+          <div style="display: flex; align-items: center; gap: 16px; border: 1px solid #dbe2e8; background: #f7f9fb; padding: 11px 15px; margin-bottom: 16px;">
+            <span style="font-size: 14.5px; color: #4b5560;">{{ showingLabel }}</span>
+            <div style="margin-left: auto; display: flex; align-items: center; gap: 8px;">
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #667380;">Sort</span>
+              <sc-for list="{{ sortOpts }}" as="s" hint-placeholder-count="0">
+                <button onClick="{{ s.pick }}" style="{{ s.style }}">{{ s.label }}</button>
+              </sc-for>
+            </div>
+            <div style="display: flex; align-items: center; gap: 8px; padding-left: 16px; border-left: 1px solid #dbe2e8;">
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #667380;">View</span>
+              <sc-for list="{{ viewOpts }}" as="v" hint-placeholder-count="0">
+                <button onClick="{{ v.pick }}" style="{{ v.style }}">{{ v.label }}</button>
+              </sc-for>
+            </div>
+          </div>
+
+          <sc-if value="{{ hasPills }}" hint-placeholder-val="{{ false }}">
+            <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 16px;">
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #667380;">Filtering by</span>
+              <sc-for list="{{ pills }}" as="p" hint-placeholder-count="0">
+                <button onClick="{{ p.remove }}" style="display: flex; align-items: center; gap: 8px; background: #16304f; border: 0; color: #ffffff; font-size: 13.5px; padding: 6px 10px; cursor: pointer;" style-hover="background: #0673a2;">
+                  <span>{{ p.label }}</span><span style="opacity: 0.7;">×</span>
+                </button>
+              </sc-for>
+              <button onClick="{{ clearFilters }}" style="border: 0; background: none; padding: 0; font-family: inherit; font-size: 13.5px; font-weight: 600; color: #06708f; cursor: pointer; text-decoration: underline;">Clear all</button>
+            </div>
+          </sc-if>
+
+          <sc-for list="{{ sections }}" as="sec" hint-placeholder-count="0">
+            <div style="margin-bottom: 30px;">
+              <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 20px; border-bottom: 2px solid #16304f; padding-bottom: 12px; margin-bottom: 18px;">
+                <div style="display: flex; align-items: baseline; gap: 12px;">
+                  <h2 style="margin: 0; font-size: 21.5px; font-weight: 700; letter-spacing: -0.02em; color: #0b1c2e;">{{ sec.label }}</h2>
+                  <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; color: #667380;">{{ sec.count }}</span>
+                </div>
+                <sc-if value="{{ sec.hasMore }}" hint-placeholder-val="{{ false }}">
+                  <button onClick="{{ sec.showAll }}" style="border: 0; background: none; padding: 0; font-family: inherit; font-size: 14.5px; font-weight: 600; color: #06708f; cursor: pointer;">{{ sec.moreLabel }}</button>
+                </sc-if>
+              </div>
+
+              <sc-if value="{{ sec.isProductGrid }}" hint-placeholder-val="{{ false }}">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(235px, 1fr)); gap: 16px;">
+                  <sc-for list="{{ sec.items }}" as="p" hint-placeholder-count="0">
+                    <div style="background: #ffffff; border: 1px solid #dbe2e8; border-top: 2px solid #dbe2e8; display: flex; flex-direction: column;" style-hover="border-color: #b6c6d4; border-top-color: #0673a2; box-shadow: 0 14px 30px -20px rgba(11,28,46,0.5);">
+                      <div style="position: relative; padding: 16px; border-bottom: 1px solid #eef2f5;">
+                        <sc-if value="{{ p.hasBadge }}" hint-placeholder-val="{{ false }}">
+                          <span style="{{ p.badgeStyle }}">{{ p.badge }}</span>
+                        </sc-if>
+                        <div style="{{ p.imgStyle }}"></div>
+                      </div>
+                      <div style="padding: 12px 14px 14px; display: flex; flex-direction: column; flex: 1 1 auto;">
+                        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; color: #667380; margin-bottom: 6px;">{{ p.brand }}</div>
+                        <a href="/product.html" style="font-size: 14.5px; font-weight: 500; line-height: 1.35; color: #16304f; height: 82px; overflow: hidden; text-decoration: none;" style-hover="color: #06708f; text-decoration: none;">{{ p.pre }}<span style="background: #fff3bf; color: #0b1c2e;">{{ p.mid }}</span>{{ p.post }}</a>
+                        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #667380; margin: 8px 0 5px;">{{ p.skuLabel }}</div>
+                        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; color: #06708f; min-height: 17px; margin-bottom: 5px;">{{ p.why }}</div>
+                        <div style="display: flex; align-items: center; gap: 6px; font-size: 13px; color: {{ p.stockFg }}; margin-bottom: 10px;">
+                          <span style="{{ p.dotStyle }}"></span>{{ p.stock }}
+                        </div>
+                        <div style="margin-top: auto;">
+                          <div style="display: flex; align-items: baseline; gap: 8px;">
+                            <span style="font-size: 21.5px; font-weight: 700; letter-spacing: -0.015em; color: #0b1c2e; font-variant-numeric: tabular-nums;">{{ p.price }}</span>
+                            <span style="font-size: 12.5px; color: #667380;">ex GST</span>
+                          </div>
+                          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #06708f; height: 17px; overflow: hidden;">{{ p.tier }}</div>
+                          <button onClick="{{ p.add }}" style="width: 100%; height: 36px; margin-top: 8px; background: #16304f; color: #ffffff; border: 0; font-size: 14px; font-weight: 600; cursor: pointer;" style-hover="background: #0673a2;">Add to cart</button>
+                        </div>
+                      </div>
+                    </div>
+                  </sc-for>
+                </div>
+              </sc-if>
+
+              <sc-if value="{{ sec.isProductRows }}" hint-placeholder-val="{{ false }}">
+                <div style="border: 1px solid #dbe2e8;">
+                  <sc-for list="{{ sec.items }}" as="p" hint-placeholder-count="0">
+                    <div style="display: grid; grid-template-columns: 112px minmax(0, 1fr) 230px; gap: 20px; padding: 16px 18px; border-bottom: 1px solid #eef2f5;" style-hover="background: #f7f9fb;">
+                      <div style="{{ p.imgStyleRow }}"></div>
+                      <div style="min-width: 0;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 6px;">
+                          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; color: #667380;">{{ p.brand }}</span>
+                          <sc-if value="{{ p.hasBadge }}" hint-placeholder-val="{{ false }}">
+                            <span style="{{ p.badgeStyleInline }}">{{ p.badge }}</span>
+                          </sc-if>
+                        </div>
+                        <a href="/product.html" style="display: block; font-size: 17.5px; font-weight: 600; line-height: 1.32; color: #0b1c2e; margin-bottom: 7px; text-decoration: none;" style-hover="color: #06708f; text-decoration: none;">{{ p.pre }}<span style="background: #fff3bf;">{{ p.mid }}</span>{{ p.post }}</a>
+                        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; color: #667380; margin-bottom: 9px;">{{ p.skuLabel }}</div>
+                        <div style="display: flex; align-items: center; gap: 14px; flex-wrap: wrap;">
+                          <span style="display: flex; align-items: center; gap: 6px; font-size: 14px; color: {{ p.stockFg }};">
+                            <span style="{{ p.dotStyle }}"></span>{{ p.stock }}
+                          </span>
+                          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; background: #f4f6f8; color: #24456b; padding: 4px 8px;">{{ p.docLabel }}</span>
+                          <sc-if value="{{ p.hasWhy }}" hint-placeholder-val="{{ false }}">
+                            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #06708f;">{{ p.why }}</span>
+                          </sc-if>
+                        </div>
+                      </div>
+                      <div style="border-left: 1px solid #eef2f5; padding-left: 20px; display: flex; flex-direction: column;">
+                        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #667380;">Retail, ex GST</div>
+                        <div style="font-size: 25px; font-weight: 700; letter-spacing: -0.02em; color: #0b1c2e; margin-top: 2px; font-variant-numeric: tabular-nums;">{{ p.price }}</div>
+                        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #06708f; margin-top: 4px; min-height: 32px; line-height: 16px;">{{ p.tier }}</div>
+                        <button onClick="{{ p.add }}" style="width: 100%; height: 40px; margin-top: auto; background: #16304f; color: #ffffff; border: 0; font-size: 14.5px; font-weight: 600; cursor: pointer;" style-hover="background: #0673a2;">Add to cart</button>
+                      </div>
+                    </div>
+                  </sc-for>
+                </div>
+              </sc-if>
+
+              <sc-if value="{{ sec.isRowList }}" hint-placeholder-val="{{ false }}">
+                <div style="border: 1px solid #dbe2e8;">
+                  <sc-for list="{{ sec.items }}" as="r" hint-placeholder-count="0">
+                    <a href="{{ r.href }}" style="display: grid; grid-template-columns: 56px minmax(0, 1fr) 150px 116px; gap: 16px; align-items: center; padding: 14px 18px; border-bottom: 1px solid #eef2f5; text-decoration: none;" style-hover="background: #f7f9fb; text-decoration: none;">
+                      <span style="{{ r.iconStyle }}">{{ r.icon }}</span>
+                      <span style="min-width: 0;">
+                        <span style="display: block; font-size: 16px; font-weight: 600; color: #0b1c2e; line-height: 1.35;">{{ r.pre }}<span style="background: #fff3bf;">{{ r.mid }}</span>{{ r.post }}</span>
+                        <span style="display: block; font-size: 14px; line-height: 1.5; color: #667380; margin-top: 3px;">{{ r.body }}</span>
+                      </span>
+                      <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #667380;">{{ r.meta }}</span>
+                      <span style="text-align: right; font-size: 14px; font-weight: 600; color: #06708f;">{{ r.cta }}</span>
+                    </a>
+                  </sc-for>
+                </div>
+              </sc-if>
+            </div>
+          </sc-for>
+        </sc-if>
+
+        <sc-if value="{{ noResults }}" hint-placeholder-val="{{ false }}">
+          <div style="border: 1px solid #dbe2e8; animation: ocRise 0.3s ease-out;">
+            <div style="padding: 44px 36px 36px; border-bottom: 1px solid #dbe2e8;">
+              <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #a5620a; margin-bottom: 14px;">No matches</div>
+              <h2 style="margin: 0 0 12px; font-size: 28px; line-height: 1.14; font-weight: 700; letter-spacing: -0.025em; color: #0b1c2e;">{{ noResultsTitle }}</h2>
+              <p style="margin: 0 0 22px; font-size: 16.5px; line-height: 1.7; color: #4b5560; max-width: 56em;">We carry 2,279 products and can order well beyond that. If it is not here, it is worth asking — send the model number you are replacing and we will tell you what fits, or build it.</p>
+              <div style="display: flex; gap: 12px;">
+                <a href="/contact.html" style="padding: 14px 24px; background: #16304f; color: #ffffff; font-size: 15.5px; font-weight: 600; text-decoration: none;" style-hover="background: #0673a2; text-decoration: none;">Ask us to source it</a>
+                <a href="#" style="padding: 14px 24px; border: 1px solid #c9d3dc; color: #16304f; font-size: 15.5px; font-weight: 600; text-decoration: none;" style-hover="border-color: #16304f; text-decoration: none;">Call +61 3 9708 2390</a>
+              </div>
+            </div>
+            <div style="padding: 22px 36px 26px;">
+              <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #667380; margin-bottom: 14px;">Things worth trying</div>
+              <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: #dbe2e8; border: 1px solid #dbe2e8;">
+                <sc-for list="{{ tips }}" as="t" hint-placeholder-count="0">
+                  <div style="background: #ffffff; padding: 16px 18px; display: flex; gap: 12px;">
+                    <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #0673a2; flex: 0 0 auto; padding-top: 3px;">{{ t.n }}</span>
+                    <span>
+                      <span style="display: block; font-size: 15px; font-weight: 600; color: #0b1c2e; margin-bottom: 3px;">{{ t.title }}</span>
+                      <span style="display: block; font-size: 14px; line-height: 1.55; color: #667380;">{{ t.body }}</span>
+                    </span>
+                  </div>
+                </sc-for>
+              </div>
+              <div style="display: flex; align-items: center; gap: 9px; flex-wrap: wrap; margin-top: 18px;">
+                <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #667380;">Or start here</span>
+                <sc-for list="{{ popular }}" as="p" hint-placeholder-count="0">
+                  <button onClick="{{ p.pick }}" style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; border: 1px solid #dbe2e8; background: #ffffff; color: #24456b; padding: 7px 11px; cursor: pointer;" style-hover="border-color: #0673a2; color: #06708f;">{{ p.label }}</button>
+                </sc-for>
+              </div>
+            </div>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ isEmptyQuery }}" hint-placeholder-val="{{ true }}">
+          <div>
+            <div style="border: 1px solid #dbe2e8; margin-bottom: 24px;">
+              <div style="padding: 14px 18px; background: #f7f9fb; border-bottom: 1px solid #dbe2e8; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #667380;">Search the whole site from one field</div>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(195px, 1fr)); gap: 1px; background: #dbe2e8;">
+                <sc-for list="{{ scopeCards }}" as="s" hint-placeholder-count="0">
+                  <div style="background: #ffffff; padding: 20px 18px 22px;">
+                    <div style="font-size: 25px; font-weight: 800; color: #0b1c2e; letter-spacing: -0.03em; font-variant-numeric: tabular-nums;">{{ s.n }}</div>
+                    <div style="font-size: 15px; font-weight: 600; color: #16304f; margin-top: 5px;">{{ s.label }}</div>
+                    <p style="margin: 5px 0 0; font-size: 13.5px; line-height: 1.55; color: #667380;">{{ s.body }}</p>
+                  </div>
+                </sc-for>
+              </div>
+            </div>
+
+            <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 20px; border-bottom: 2px solid #16304f; padding-bottom: 12px; margin-bottom: 18px;">
+              <h2 style="margin: 0; font-size: 21.5px; font-weight: 700; letter-spacing: -0.02em; color: #0b1c2e;">People search for these</h2>
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; color: #667380;">Tap to try</span>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: #dbe2e8; border: 1px solid #dbe2e8;">
+              <sc-for list="{{ exampleRows }}" as="e" hint-placeholder-count="0">
+                <button onClick="{{ e.pick }}" style="background: #ffffff; border: 0; padding: 16px 18px; cursor: pointer; text-align: left; display: flex; align-items: center; gap: 14px;" style-hover="background: #f7f9fb;">
+                  <span style="font-family: 'IBM Plex Mono', monospace; font-size: 14.5px; font-weight: 500; color: #16304f; flex: 0 0 auto; min-width: 96px;">{{ e.term }}</span>
+                  <span style="flex: 1 1 auto; font-size: 14.5px; line-height: 1.5; color: #667380;">{{ e.body }}</span>
+                  <span style="flex: 0 0 auto; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #06708f;">{{ e.count }}</span>
+                </button>
+              </sc-for>
+            </div>
+          </div>
+        </sc-if>
+      </div>
+    </div>
+  </section>
+
+  <footer data-screen-label="Footer" style="background: #0b1c2e; color: #a9bed4; padding: 54px 0 0;">
+    <div style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 36px);">
+      <div style="display: grid; grid-template-columns: 1.3fr 1fr 1fr 1fr 1.2fr; gap: 44px; padding-bottom: 46px; border-bottom: 1px solid #24456b;">
+        <div>
+          <div style="background: #ffffff; display: inline-block; padding: 10px 12px; margin-bottom: 20px;">
+            <img src="/uploads/OceanControls-Design-Assets/02-brand-assets/ocean-controls-logo.png" alt="Ocean Controls" style="height: 34px; width: auto; display: block;" />
+          </div>
+          <p style="margin: 0 0 18px; font-size: 15px; line-height: 1.65; color: #a9bed4; max-width: 30em;">Australia's specialist supplier of industrial automation and control equipment, and a custom engineering shop for the jobs the catalogue can't cover.</p>
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; line-height: 1.9; color: #a9bed4;">
+            <div>44 Frankston Gardens Drive</div>
+            <div>Carrum Downs VIC 3201, Australia</div>
+            <div style="margin-top: 8px; color: #d6e4f2;">+61 3 9708 2390</div>
+            <div><a href="#" style="color: #6fd0f5;">info@oceancontrols.com.au</a></div>
+            <div style="margin-top: 8px;">ABN 28 659 967 398</div>
+          </div>
+        </div>
+        <div>
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #9ab0c6; margin-bottom: 16px;">Search inside</div>
+          <div style="display: flex; flex-direction: column; gap: 9px; font-size: 15px;">
+            <sc-for list="{{ footerScopes }}" as="f" hint-placeholder-count="0">
+              <button onClick="{{ f.pick }}" style="border: 0; background: none; padding: 0; font-family: inherit; font-size: 15px; color: #d6e4f2; cursor: pointer; text-align: left;" style-hover="color: #6fd0f5;">{{ f.label }}</button>
+            </sc-for>
+          </div>
+        </div>
+        <div>
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #9ab0c6; margin-bottom: 16px;">Shop</div>
+          <div style="display: flex; flex-direction: column; gap: 9px; font-size: 15px;">
+            <a href="/shop.html" style="color: #d6e4f2; text-decoration: none;">All products</a>
+            <a href="/shop.html" style="color: #d6e4f2; text-decoration: none;">New arrivals</a>
+            <a href="/shop.html" style="color: #d6e4f2; text-decoration: none;">Clearance &amp; sale</a>
+            <a href="/brands.html" style="color: #d6e4f2; text-decoration: none;">All brands</a>
+            <a href="/datasheets.html" style="color: #d6e4f2; text-decoration: none;">Datasheets</a>
+          </div>
+        </div>
+        <div>
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #9ab0c6; margin-bottom: 16px;">Company</div>
+          <div style="display: flex; flex-direction: column; gap: 9px; font-size: 15px;">
+            <a href="/about.html" style="color: #d6e4f2; text-decoration: none;">About us</a>
+            <a href="/about.html" style="color: #d6e4f2; text-decoration: none;">Engineering services</a>
+            <a href="/contact.html" style="color: #d6e4f2; text-decoration: none;">Contact us</a>
+            <a href="/contact.html" style="color: #d6e4f2; text-decoration: none;">Distributors</a>
+            <a href="#" style="color: #d6e4f2; text-decoration: none;">Shipping &amp; delivery</a>
+            <a href="#" style="color: #d6e4f2; text-decoration: none;">Returns &amp; warranty</a>
+          </div>
+        </div>
+        <div>
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #9ab0c6; margin-bottom: 16px;">Product updates</div>
+          <p style="margin: 0 0 14px; font-size: 15px; line-height: 1.6; color: #a9bed4;">New releases, price changes and application notes. Roughly monthly, no marketing filler.</p>
+          <div style="display: flex; margin-bottom: 22px;">
+            <input type="text" placeholder="you@company.com.au" style="flex: 1 1 auto; height: 42px; background: rgba(255,255,255,0.06); border: 1px solid #3a5878; border-right: 0; color: #ffffff; padding: 0 12px; font-size: 14.5px; outline: none; min-width: 0;" aria-label="Email address" />
+            <button style="flex: 0 0 auto; height: 42px; padding: 0 16px; background: #0673a2; color: #ffffff; border: 0; font-size: 14px; font-weight: 600; cursor: pointer;" style-hover="background: #ffffff; color: #0b1c2e;">Join</button>
+          </div>
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #9ab0c6; margin-bottom: 10px;">Payment accepted</div>
+          <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; border: 1px solid #3a5878; padding: 5px 9px; color: #d6e4f2;">VISA</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; border: 1px solid #3a5878; padding: 5px 9px; color: #d6e4f2;">MASTERCARD</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; border: 1px solid #3a5878; padding: 5px 9px; color: #d6e4f2;">AMEX</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; border: 1px solid #3a5878; padding: 5px 9px; color: #d6e4f2;">EFTPOS</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; border: 1px solid #3a5878; padding: 5px 9px; color: #d6e4f2;">ACCOUNT</span>
+          </div>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; justify-content: space-between; gap: 30px; padding: 22px 0 26px; font-size: 13.5px; color: #9ab0c6;">
+        <span>© 2026 Ocean Controls Pty Ltd. All prices in AUD and exclude GST unless stated.</span>
+        <span style="display: flex; gap: 22px;">
+          <a href="#" style="color: #a9bed4; text-decoration: none;">Privacy</a>
+          <a href="#" style="color: #a9bed4; text-decoration: none;">Terms of sale</a>
+          <a href="#" style="color: #a9bed4; text-decoration: none;">Sitemap</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <sc-if value="{{ toastOn }}" hint-placeholder-val="{{ false }}">
+    <div style="position: fixed; right: 28px; bottom: 28px; z-index: 90; background: #0b1c2e; color: #ffffff; border-left: 3px solid #2fd07e; padding: 14px 20px; box-shadow: 0 24px 48px -18px rgba(11,28,46,0.6); animation: ocFade 0.18s ease-out; max-width: 360px;">
+      <div style="font-size: 15px; font-weight: 600; margin-bottom: 3px;">{{ toastTitle }}</div>
+      <div style="font-size: 14px; color: #a9bed4;">{{ toast }}</div>
+    </div>
+  </sc-if>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440},&quot;initialQuery&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;4-20 mA&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Search&quot;},&quot;defaultView&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Grid&quot;,&quot;List&quot;],&quot;default&quot;:&quot;Grid&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Search&quot;}}">
+const IMGDIR = 'uploads/OceanControls-Design-Assets/03-product-images/';
+
+// [sku, name, brand, price, stock, tiers, category, image, mpn, docs, specTerms]
+const PRODUCTS = [
+  ['KTA-387', 'Modbus Data Logger — Dual RS-485, 100-Channel, SD Card Logging', 'Ocean Controls', 145.03, 1, 3, 'Data Loggers', 'Data-Loggers__KTA-387.png', '', 1, 'modbus rtu rs-485 sd card din rail logging 100 channel'],
+  ['KTA-397', '4G LTE SMS Controller with Relay Outputs', 'Ocean Controls', 293.93, 41, 2, 'Controllers', 'Controllers__KTA-397.jpg', '', 1, '4g lte sms relay din rail remote'],
+  ['KTA-401', 'BACnet IP Weather Station Gateway for Davis Weather Stations', 'Ocean Controls', 241.50, 8, 3, 'Weather', 'Weather__KTA-401.jpg', '', 12, 'bacnet ip ethernet davis weather gateway'],
+  ['KTA-402', 'BACnet MS/TP Weather Station Gateway for Davis Weather Stations', 'Ocean Controls', 241.50, 48, 3, 'Weather', 'Weather__KTA-402.jpg', '', 12, 'bacnet ms/tp rs-485 davis weather gateway'],
+  ['KTA-367A', 'Universal Input to 4-20 mA Transmitter with IP65 Rating', 'Ocean Controls', 95.57, 15, 3, 'Signal Conditioners', 'Signal-Conditioners__KTA-367A.jpg', '', 0, '4-20 ma universal input ip65 transmitter'],
+  ['GJS-002', 'DS18B20 1-Wire Waterproof Digital Temperature Sensor, 15 m cable', 'GJY Electronics', 19.93, 18, 3, 'Sensors', 'Sensors__GJS-002.jpg', 'DS18B20', 1, '1-wire digital temperature waterproof probe'],
+  ['TCS-001', 'TST100 1-Wire Temperature Sensor with IP65 Protection', 'Teracom', 39.43, 6, 3, 'Sensors', 'Sensors__TCS-001.jpg', 'TST100', 1, '1-wire temperature ip65'],
+  ['RKS-070', 'RK95-51 Mounting Bracket for PH, EC, DO, ORP Sensors', 'Rika Sensor', 73.74, 3, 3, 'Sensors', 'Sensors__RKS-070.png', 'RK95-51', 0, 'bracket ph ec do orp mounting'],
+  ['RKS-002A', 'RK100-01G Wind Speed Sensor, 0–10 VDC Output', 'Rika Sensor', 158.65, 5, 3, 'Weather', 'Weather__RKS-002A.jpg', 'RK100-01G', 0, 'wind speed anemometer 0-10 v weather'],
+  ['ADW-001', 'HD67671 BACnet MS/TP Slave / Modbus Master Converter', 'ADF Web', 489.31, 3, 2, 'Modbus, BACnet & M-Bus', 'Modbus-Bacnet-MBus-Products__ADW-001.jpg', 'HD67671', 3, 'bacnet ms/tp modbus master gateway converter din rail'],
+  ['ADW-002', 'HD67671 BACnet/IP Slave / Modbus Master Converter', 'ADF Web', 489.31, 6, 2, 'Modbus, BACnet & M-Bus', 'Modbus-Bacnet-MBus-Products__ADW-002.jpg', 'HD67671', 3, 'bacnet ip modbus master gateway converter ethernet'],
+  ['ADW-003', 'HD67933 Modbus Master / MQTT Converter', 'ADF Web', 520.72, 1, 2, 'Modbus, BACnet & M-Bus', 'Modbus-Bacnet-MBus-Products__ADW-003.jpg', 'HD67933', 3, 'modbus mqtt gateway converter ethernet cloud'],
+  ['AKB-001', 'NPT4 Slimline Temperature Transmitter', 'Akytec', 121.42, 5, 3, 'Signal Conditioners', 'Signal-Conditioners__AKB-001.jpg', 'NPT4', 3, '4-20 ma temperature transmitter pt100 slimline'],
+  ['FMI-150', 'FEMA 4-20 mA Input Signal Converter with ±10 VDC Output', 'Fema', 231.00, 2, 3, 'Signal Conditioners', 'Signal-Conditioners__FMI-150.jpg', '', 1, '4-20 ma 10 vdc converter isolator signal'],
+  ['DBI-032', 'AC Volt-Current Input 4-Digit Process Indicator, 1 Relay, 24 VDC (48 × 96 mm)', 'DCBox', 112.36, 3, 3, 'Panel Meters', 'Panel-Meters__DBI-032.jpg', '', 2, 'panel meter 48x96 relay 24 vdc process indicator'],
+  ['ULC-075', 'UR75 Industrial 5G Router', 'Milesight', 681.12, 6, 2, 'Industrial IoT', 'Industrial-IoT__ULC-075.webp', 'UR75', 0, '5g router industrial ethernet cellular din rail'],
+  ['ULC-141', 'UR41L 4G Mini Industrial Cellular Router', 'Milesight', 138.53, 8, 2, 'Industrial IoT', 'Industrial-IoT__ULC-141.webp', 'UR41L', 0, '4g lte router cellular industrial mini'],
+  ['ULC-008C', 'UC300 IoT Controller (Cellular / LoRaWAN)', 'Milesight', 226.63, 7, 2, 'Industrial IoT', 'Industrial-IoT__ULC-008C.jpg', 'UC300', 7, 'lorawan cellular iot controller modbus'],
+  ['PSM-900', '20 kA Surge Protector', 'Mean Well / ESI', 19.98, 2, 0, 'Power Supplies', 'Power-Supplies__PSM-900.jpg', '', 1, 'surge protector 20 ka din rail'],
+  ['SMC-055', 'EM882S 8.2 A Open-Loop Stepper Drive', 'Leadshine', 134.06, 2, 3, 'Motor Drivers & Controllers', 'Motor-Drivers-%26-Controllers__SMC-055.jpg', 'EM882S', 3, 'stepper drive open loop 8.2 a motion'],
+  ['HET-100', 'Signal Generator 4-20 mA / 0-10 V / 0-5 V Voltage & Current Simulator', 'Z_AE', 104.97, 10, 3, 'Test Equipment', 'Test-Equipment__HET-100.jpg', '', 0, '4-20 ma 0-10 v signal generator calibrator simulator loop'],
+  ['LAJ-002', 'CB25 LabJack Terminal Board for Digital I/O', 'LabJack', 101.67, 4, 3, 'Data Acquisition', 'Data-Acquisition__LAJ-002.jpg', 'CB25', 1, 'labjack terminal board digital io daq'],
+  ['CGL-004', 'PG9 Grey Cable Gland', 'SMS', 1.76, 39, 2, 'Electrical Terminals & Wiring', 'Electrical-Terminals-Wiring__CGL-004.jpg', 'PG9', 0, 'cable gland pg9 grey'],
+  ['NTR-180', '10 Input Relay Alarm Module', 'Foxtam Controls', 282.35, 1, 3, 'Relays & Relay Cards', 'Relays-%26-Relay-Cards__NTR-180.jpg', '', 1, 'relay alarm module 10 input fault din rail'],
+  ['HNL-022', '24 VDC Multi-Level Signal Tower (R/Y/G/B/W) + Buzzer', 'Hanyoung Nux', 112.48, 9, 3, 'Lighting', 'Lighting__HNL-022.jpg', '', 1, 'signal tower light buzzer 24 vdc warning'],
+  ['SPE-015', 'Grey CE-Approved ABS Waterproof Enclosure, 400 × 300 × 160 mm', 'Saip Group', 81.40, 41, 0, 'Enclosures', 'Enclosures__SPE-015.jpg', '', 0, 'enclosure abs waterproof ip65 400 300 160'],
+  ['HNR-100', 'Multi-Function Timer MA4N-B', 'Hanyoung Nux', 43.19, 9, 3, 'Timers', 'Timers__HNR-100.jpg', 'MA4N-B', 1, 'timer multi-function panel mount'],
+  ['FMI-110', 'Fema B44-C1 4-Digit Counter, 100 mm Display, IP65, 24 VDC', 'Fema', 825.57, 2, 3, 'Large Displays', 'Large-Displays__FMI-110.jpg', 'B44-C1', 2, 'large display counter 100 mm ip65 24 vdc']
+];
+
+const CATALOGUE = {};
+PRODUCTS.forEach(function (r) {
+  CATALOGUE[r[0]] = {
+    sku: r[0], name: r[1], brand: r[2], price: r[3], stock: r[4], tiers: r[5],
+    cat: r[6], img: IMGDIR + r[7], mpn: r[8], docs: r[9], terms: r[10]
+  };
+});
+
+const NEW_SKUS = { 'KTA-387': 1, 'KTA-397': 1, 'ULC-075': 1, 'ADW-003': 1 };
+const SALE = { 'AKB-001': 202.35 };
+
+// [name, products, subcategories, parentOrNull]
+const CATEGORIES = [
+  ['Sensors', 569, 27, null], ['Power Supplies', 281, 16, null], ['Modbus, BACnet & M-Bus', 139, 11, null],
+  ['Controllers', 127, 12, null], ['Panel Meters', 124, 15, null], ['Relays & Relay Cards', 112, 8, null],
+  ['Motor Drivers & Controllers', 102, 10, null], ['Weather', 77, 7, null], ['Signal Conditioners', 68, 6, null],
+  ['Industrial IoT', 22, 5, null], ['Data Loggers', 30, 5, null], ['Data Acquisition', 43, 3, null],
+  ['Test Equipment', 12, 5, null], ['Enclosures', 48, 8, null], ['Large Displays', 13, 8, null],
+  ['Pressure Transducers', 81, 0, 'Sensors'], ['Temperature & Humidity', 65, 0, 'Sensors'],
+  ['RTD - PT100', 34, 0, 'Sensors'], ['Thermocouples', 23, 0, 'Sensors'], ['1 Wire', 19, 0, 'Sensors'],
+  ['Inductive Proximity Sensors', 85, 0, 'Sensors'], ['Ultrasonic', 24, 0, 'Sensors'],
+  ['Gateways', 30, 0, 'Modbus, BACnet & M-Bus'], ['IO Modules Modbus RTU', 62, 0, 'Modbus, BACnet & M-Bus'],
+  ['Process (PID)', 53, 0, 'Controllers'], ['Signal Isolators', 38, 0, 'Signal Conditioners'],
+  ['Calibrators & Generators', 12, 0, 'Test Equipment'], ['DIN Rail', 33, 0, 'Power Supplies']
+];
+
+// [name, products, files, focus]
+const BRANDS = [
+  ['Mean Well / ESI', 303, 303, 'Power supplies, DC-DC converters and pressure transducers'],
+  ['Novus', 218, 636, 'Process controllers, transmitters and large indicators'],
+  ['Leadshine', 132, 195, 'Stepper and servo drives, motors and motion accessories'],
+  ['Hanyoung Nux', 116, 120, '22 mm switchgear, photoelectric switches and light towers'],
+  ['Ocean Controls', 93, 181, 'Our own range — designed and assembled in Carrum Downs'],
+  ['ADF Web', 19, 51, 'Protocol converters — BACnet, Modbus, MQTT, M-Bus'],
+  ['LabJack', 42, 100, 'USB and Ethernet data acquisition modules'],
+  ['Milesight', 22, 48, '4G and 5G industrial routers, LoRaWAN controllers'],
+  ['Davis Instruments', 30, 138, 'Vantage Pro weather stations and accessories'],
+  ['Akytec', 43, 109, 'Modbus I/O, programmable relays and panel meters'],
+  ['Teracom', 44, 79, 'Ethernet and 4G monitoring, 1-Wire sensing'],
+  ['Rika Sensor', 44, 49, 'Weather sensors — wind, rain, radiation, water quality'],
+  ['Fema', 22, 38, 'Signal isolators, panel meters and large counters'],
+  ['Senix', 24, 58, 'ToughSonic ultrasonic distance and level sensors'],
+  ['AzeoTech', 4, 0, 'DAQFactory — HMI and SCADA software for data acquisition']
+];
+
+// [title, kind, date, body]
+const ARTICLES = [
+  ['Humidity & Temperature Sensor TSH202B', 'Product release', '12 Feb 2026', 'A fully calibrated 1-Wire sensor with 3.0% RH accuracy and a 64-bit serial code.'],
+  ['Davis Instruments gateway upgrade', 'Range change', '5 Feb 2025', 'KTA-402 replaces the KTA-302 for BACnet MS/TP; the new KTA-382 combines Modbus TCP and RTU.'],
+  ['A 25-tonne press, instrumented', 'Case study', '8 May 2024', 'Australian Compliance Laboratory runs precision load-deflection tests with a LabJack U6 and nine transducers.'],
+  ['Leadshine stepper motors, closed and open loop', 'Buying guide', '10 Oct 2025', 'Which drive pairs with which motor, when the encoder is worth it, and the tuning cable you will need.'],
+  ['The journey of your order', 'Behind the scenes', '10 Oct 2025', 'From website to warehouse to anti-static bubble wrap and biodegradable pellets.'],
+  ['LabJack and IoT software', 'Product news', 'Jun 2021', 'LabJack teamed up with Machinechat to produce an easy-to-configure SCADA system.'],
+  ['Ocean Controls a distributor for Emko Elektronik', 'Announcement', '28 May 2021', 'Since 1986 Emko has designed and manufactured measurement and control instruments.']
+];
+
+const DOC_KINDS = ['Datasheet', 'User manual', 'Wiring diagram', 'Configuration software', 'Declaration of conformity', 'Dimensional drawing', 'Quick start guide', 'Firmware', 'Application note', 'BACnet object list', 'Modbus register map', 'Test report'];
+
+const DOCS = [];
+PRODUCTS.forEach(function (r) {
+  for (let i = 0; i < r[9]; i++) {
+    DOCS.push({
+      sku: r[0], product: r[1], brand: r[2], cat: r[6],
+      kind: DOC_KINDS[i % DOC_KINDS.length],
+      name: r[0] + ' — ' + DOC_KINDS[i % DOC_KINDS.length].toLowerCase() + '.pdf',
+      terms: r[10]
+    });
+  }
+});
+
+const TYPES = ['All results', 'Products', 'Categories', 'Brands', 'Datasheets', 'Articles'];
+const SORTS = ['Relevance', 'Price ↑', 'Price ↓', 'Name', 'In stock'];
+const VIEWS = ['Grid', 'List'];
+
+const POPULAR = ['4-20 mA', 'Modbus', 'PT100', 'BACnet', 'KTA-402', 'Mean Well', 'DIN rail', 'IP65', '1-Wire', 'stepper'];
+
+const SPELLING = {
+  'modbuss': 'Modbus', 'modubs': 'Modbus', 'bacnett': 'BACnet', 'bacent': 'BACnet',
+  'pt-100': 'PT100', 'pt 100': 'PT100', 'sensro': 'sensor', 'sesnor': 'sensor',
+  'labjak': 'LabJack', 'meanwell': 'Mean Well', 'stepp': 'stepper', 'thermocuple': 'thermocouple',
+  'transducr': 'transducer', 'enclosre': 'enclosure', 'gatway': 'gateway', 'reley': 'relay'
+};
+
+const TIPS = [
+  ['01', 'Search by part number', 'Ours or the manufacturer\'s — KTA-402, HD67671, UR75, EM882S all resolve.'],
+  ['02', 'Search by spec, not name', 'Terms like 4-20 mA, 24 VDC, IP65, RS-485 and DIN rail match the specification text.'],
+  ['03', 'Try the category instead', 'If you are not sure what the part is called, browse the 237 categories and filter down.'],
+  ['04', 'Ask us', 'We stock 2,279 lines and can order beyond that. A phone call is often faster than a search.']
+];
+
+const EXAMPLES = [
+  ['4-20 mA', 'The most common analogue loop — transmitters, isolators, generators', '6 matches'],
+  ['Modbus', 'RTU and TCP gateways, I/O modules and loggers', '8 matches'],
+  ['BACnet', 'MS/TP and IP gateways for building management systems', '5 matches'],
+  ['DIN rail', 'Anything that clips into a panel', '9 matches'],
+  ['KTA-402', 'A specific SKU — jumps straight to the product', '1 match'],
+  ['Mean Well', 'A brand — 303 products, 303 datasheets', '1 brand'],
+  ['IP65', 'Sealed and washdown-rated equipment', '4 matches'],
+  ['weather', 'Davis stations, gateways, wind and rain sensors', '7 matches']
+];
+
+const AVAIL = [['In stock', 'in'], ['Low stock', 'low'], ['Backorder', 'out']];
+const PRICES = [['Under $25', 0, 25], ['$25 – $100', 25, 100], ['$100 – $300', 100, 300], ['$300 and over', 300, 1e9]];
+
+class Component extends DCLogic {
+  state = {
+    query: null, type: 0, sort: null, view: null,
+    cats: {}, brands: {}, avail: {}, price: {},
+    expanded: {}, cart: {}, toast: '', toastTitle: ''
+  };
+
+  // Props seed the initial query and view; local state takes over once the
+  // user types or switches.
+  q() { return this.state.query === null ? (this.props.initialQuery || '4-20 mA') : this.state.query; }
+  viewIdx() {
+    if (this.state.view !== null) return this.state.view;
+    return this.props.defaultView === 'List' ? 1 : 0;
+  }
+
+  constructor(props) {
+    super(props);
+    this.searchRef = React.createRef();
+  }
+
+  componentWillUnmount() { clearTimeout(this._t); }
+
+  money(v) { return '$' + v.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ','); }
+
+  box(url, h, opts) {
+    const o = opts || {};
+    return 'display: block; width: ' + (o.w || '100%') + '; height: ' + h + '; flex: 0 0 auto;'
+      + ' background-image: url("' + url + '");'
+      + ' background-size: contain; background-position: center; background-repeat: no-repeat;'
+      + (o.extra || '');
+  }
+
+  facetRow(on) {
+    return 'width: 100%; display: flex; align-items: center; gap: 9px; padding: 6px 0; border: 0; background: none; cursor: pointer;'
+      + ' font-family: inherit; font-size: 14px; color: ' + (on ? '#0b1c2e' : '#4b5560') + '; font-weight: ' + (on ? '600' : '400') + ';';
+  }
+
+  facetBox(on) {
+    return 'width: 15px; height: 15px; flex: 0 0 auto; display: flex; align-items: center; justify-content: center;'
+      + ' font-size: 12px; line-height: 1; color: #ffffff; border: 1px solid ' + (on ? '#0673a2' : '#c9d3dc') + ';'
+      + ' background: ' + (on ? '#0673a2' : '#ffffff') + ';';
+  }
+
+  smallBtn(on) {
+    return 'font-family: inherit; font-size: 13.5px; padding: 6px 10px; cursor: pointer;'
+      + ' border: 1px solid ' + (on ? '#16304f' : '#dbe2e8') + ';'
+      + ' background: ' + (on ? '#16304f' : '#ffffff') + ';'
+      + ' color: ' + (on ? '#ffffff' : '#24456b') + ';';
+  }
+
+  flip(group, key) {
+    this.setState(s => {
+      const g = Object.assign({}, s[group]);
+      if (g[key]) delete g[key]; else g[key] = true;
+      return { [group]: g };
+    });
+  }
+
+  fire(title, body) {
+    this.setState({ toastTitle: title, toast: body });
+    clearTimeout(this._t);
+    this._t = setTimeout(() => this.setState({ toast: '', toastTitle: '' }), 2800);
+  }
+
+  add(sku) {
+    this.setState(s => ({ cart: Object.assign({}, s.cart, { [sku]: (s.cart[sku] || 0) + 1 }) }));
+    this.fire('Added to order', sku + ' — ' + CATALOGUE[sku].name);
+  }
+
+  stockOf(sku) {
+    const p = CATALOGUE[sku];
+    if (p.stock <= 0) return { text: 'Backorder', fg: '#a5620a', band: 'out' };
+    if (p.stock <= 3) return { text: 'Low stock — ' + p.stock + ' left', fg: '#a5620a', band: 'low' };
+    return { text: 'In stock (' + p.stock + ')', fg: '#157a45', band: 'in' };
+  }
+
+  split(text, i, len) {
+    if (i == null || i < 0) return { pre: text, mid: '', post: '' };
+    return { pre: text.slice(0, i), mid: text.slice(i, i + len), post: text.slice(i + len) };
+  }
+
+  // Match a product across name, SKU, MPN, brand, category and spec terms.
+  matchProduct(sku, q) {
+    const p = CATALOGUE[sku];
+    const ni = p.name.toLowerCase().indexOf(q);
+    if (ni > -1) return { hit: true, i: ni, why: '', rank: ni };
+    if (p.sku.toLowerCase().indexOf(q) > -1) return { hit: true, i: -1, why: 'matched SKU', rank: 0 };
+    if (p.mpn && p.mpn.toLowerCase().indexOf(q) > -1) return { hit: true, i: -1, why: 'matched MPN', rank: 1 };
+    if (p.brand.toLowerCase().indexOf(q) > -1) return { hit: true, i: -1, why: 'matched brand', rank: 60 };
+    if (p.cat.toLowerCase().indexOf(q) > -1) return { hit: true, i: -1, why: 'matched category', rank: 70 };
+    if (p.terms.indexOf(q) > -1) return { hit: true, i: -1, why: 'matched specification', rank: 40 };
+    return { hit: false };
+  }
+
+  results(q) {
+    if (!q) return { products: [], cats: [], brands: [], docs: [], articles: [] };
+
+    const products = [];
+    PRODUCTS.forEach(r => {
+      const m = this.matchProduct(r[0], q);
+      if (m.hit) products.push({ sku: r[0], i: m.i, why: m.why, rank: m.rank });
+    });
+    products.sort((a, b) => a.rank - b.rank);
+
+    const cats = [];
+    CATEGORIES.forEach(c => {
+      const i = c[0].toLowerCase().indexOf(q);
+      if (i > -1) cats.push({ name: c[0], n: c[1], subs: c[2], parent: c[3], i: i });
+    });
+    cats.sort((a, b) => a.i - b.i || b.n - a.n);
+
+    const brands = [];
+    BRANDS.forEach(b => {
+      const i = b[0].toLowerCase().indexOf(q);
+      if (i > -1) brands.push({ name: b[0], n: b[1], files: b[2], focus: b[3], i: i });
+      else if (b[3].toLowerCase().indexOf(q) > -1) brands.push({ name: b[0], n: b[1], files: b[2], focus: b[3], i: -1 });
+    });
+
+    const docs = [];
+    DOCS.forEach(d => {
+      const i = d.name.toLowerCase().indexOf(q);
+      if (i > -1) { docs.push(Object.assign({}, d, { i: i })); return; }
+      if (d.kind.toLowerCase().indexOf(q) > -1 || d.terms.indexOf(q) > -1 || d.sku.toLowerCase().indexOf(q) > -1) {
+        docs.push(Object.assign({}, d, { i: -1 }));
+      }
+    });
+
+    const articles = [];
+    ARTICLES.forEach(a => {
+      const i = a[0].toLowerCase().indexOf(q);
+      if (i > -1) { articles.push({ title: a[0], kind: a[1], date: a[2], body: a[3], i: i }); return; }
+      if ((a[1] + ' ' + a[3]).toLowerCase().indexOf(q) > -1) articles.push({ title: a[0], kind: a[1], date: a[2], body: a[3], i: -1 });
+    });
+
+    return { products: products, cats: cats, brands: brands, docs: docs, articles: articles };
+  }
+
+  renderVals() {
+    const st = this.state;
+    const sortIdx = st.sort === null ? 0 : st.sort;
+    const viewIdx = this.viewIdx();
+    const raw = this.q().trim();
+    const q = raw.toLowerCase();
+    const all = this.results(q);
+    const L = raw.length;
+
+    // product-level filters
+    let prodList = all.products;
+    const catKeys = Object.keys(st.cats);
+    if (catKeys.length) prodList = prodList.filter(x => catKeys.indexOf(CATALOGUE[x.sku].cat) > -1);
+    const brandKeys = Object.keys(st.brands);
+    if (brandKeys.length) prodList = prodList.filter(x => brandKeys.indexOf(CATALOGUE[x.sku].brand) > -1);
+    const avKeys = Object.keys(st.avail);
+    if (avKeys.length) prodList = prodList.filter(x => avKeys.indexOf(this.stockOf(x.sku).band) > -1);
+    const prKeys = Object.keys(st.price);
+    if (prKeys.length) prodList = prodList.filter(x => prKeys.some(k => {
+      const d = PRICES[parseInt(k, 10)];
+      return CATALOGUE[x.sku].price >= d[1] && CATALOGUE[x.sku].price < d[2];
+    }));
+
+    if (sortIdx === 1) prodList = prodList.slice().sort((a, b) => CATALOGUE[a.sku].price - CATALOGUE[b.sku].price);
+    if (sortIdx === 2) prodList = prodList.slice().sort((a, b) => CATALOGUE[b.sku].price - CATALOGUE[a.sku].price);
+    if (sortIdx === 3) prodList = prodList.slice().sort((a, b) => CATALOGUE[a.sku].name.localeCompare(CATALOGUE[b.sku].name));
+    if (sortIdx === 4) prodList = prodList.slice().sort((a, b) => CATALOGUE[b.sku].stock - CATALOGUE[a.sku].stock);
+
+    const counts = [
+      prodList.length + all.cats.length + all.brands.length + all.docs.length + all.articles.length,
+      prodList.length, all.cats.length, all.brands.length, all.docs.length, all.articles.length
+    ];
+    const total = counts[0];
+
+    // spelling suggestion
+    let suggestion = '';
+    if (total === 0 && q) {
+      Object.keys(SPELLING).forEach(k => { if (!suggestion && q.indexOf(k) > -1) suggestion = SPELLING[k]; });
+    }
+
+    const productCard = x => {
+      const p = CATALOGUE[x.sku];
+      const s = this.stockOf(x.sku);
+      const sp = this.split(p.name, x.i, L);
+      const was = SALE[x.sku];
+      const badge = was ? '-' + Math.round((1 - p.price / was) * 100) + '%' : (NEW_SKUS[x.sku] ? 'NEW' : '');
+      return {
+        pre: sp.pre, mid: sp.mid, post: sp.post,
+        brand: p.brand,
+        skuLabel: 'SKU ' + p.sku + (p.mpn ? '   ·   MPN ' + p.mpn : ''),
+        why: x.why, hasWhy: !!x.why,
+        price: this.money(p.price),
+        tier: p.tiers > 0 ? 'Buy more for less — 5+ ' + this.money(p.price * 0.95) : 'Single price',
+        stock: s.text, stockFg: s.fg,
+        dotStyle: 'display: block; width: 6px; height: 6px; border-radius: 50%; flex: 0 0 auto; background: ' + s.fg + ';',
+        docLabel: p.docs > 0 ? p.docs + (p.docs === 1 ? ' FILE' : ' FILES') : 'NO FILES',
+        imgStyle: this.box(p.img, '122px'),
+        imgStyleRow: this.box(p.img, '96px'),
+        hasBadge: !!badge, badge: badge,
+        badgeStyle: 'position: absolute; top: 10px; left: 10px; font-family: "IBM Plex Mono", monospace; font-size: 11.5px; font-weight: 600; letter-spacing: 0.08em; padding: 3px 6px; color: #ffffff; background: ' + (was ? '#c2364a' : '#0673a2') + ';',
+        badgeStyleInline: 'font-family: "IBM Plex Mono", monospace; font-size: 11.5px; font-weight: 600; letter-spacing: 0.08em; padding: 3px 6px; color: #ffffff; background: ' + (was ? '#c2364a' : '#0673a2') + ';',
+        add: () => this.add(x.sku)
+      };
+    };
+
+    const iconStyle = (bg, fg) => 'display: flex; align-items: center; justify-content: center; width: 56px; height: 44px;'
+      + ' font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase;'
+      + ' background: ' + bg + '; color: ' + fg + ';';
+
+    // build sections according to the active type tab
+    const sections = [];
+    const show = i => st.type === 0 || st.type === i;
+    const cap = key => st.expanded[key] ? 999 : (st.type === 0 ? 4 : 999);
+
+    if (show(1) && prodList.length) {
+      const lim = st.expanded.products || st.type === 1 ? 999 : 8;
+      const items = prodList.slice(0, lim).map(productCard);
+      sections.push({
+        label: 'Products', count: prodList.length + (prodList.length === 1 ? ' match' : ' matches'),
+        isProductGrid: viewIdx === 0, isProductRows: viewIdx === 1, isRowList: false,
+        items: items,
+        hasMore: prodList.length > items.length,
+        moreLabel: 'Show all ' + prodList.length + ' products →',
+        showAll: () => this.setState(s => ({ expanded: Object.assign({}, s.expanded, { products: true }) }))
+      });
+    }
+
+    if (show(2) && all.cats.length) {
+      const lim = cap('cats');
+      const items = all.cats.slice(0, lim).map(c => {
+        const sp = this.split(c.name, c.i, L);
+        return {
+          pre: sp.pre, mid: sp.mid, post: sp.post,
+          body: c.parent ? 'Subcategory of ' + c.parent : (c.subs + ' subcategories'),
+          meta: c.n + ' products',
+          cta: 'Browse →',
+          href: '/shop.html',
+          icon: 'CAT', iconStyle: iconStyle('#f4f6f8', '#24456b')
+        };
+      });
+      sections.push({
+        label: 'Categories', count: all.cats.length + ' found',
+        isProductGrid: false, isProductRows: false, isRowList: true, items: items,
+        hasMore: all.cats.length > items.length,
+        moreLabel: 'Show all ' + all.cats.length + ' categories →',
+        showAll: () => this.setState(s => ({ expanded: Object.assign({}, s.expanded, { cats: true }) }))
+      });
+    }
+
+    if (show(3) && all.brands.length) {
+      const lim = cap('brands');
+      const items = all.brands.slice(0, lim).map(b => {
+        const sp = this.split(b.name, b.i, L);
+        return {
+          pre: sp.pre, mid: sp.mid, post: sp.post,
+          body: b.focus,
+          meta: b.n + ' products · ' + b.files + ' files',
+          cta: 'Brand page →',
+          href: '/brands.html',
+          icon: 'BRAND', iconStyle: iconStyle('#eaf6fc', '#06708f')
+        };
+      });
+      sections.push({
+        label: 'Brands', count: all.brands.length + ' found',
+        isProductGrid: false, isProductRows: false, isRowList: true, items: items,
+        hasMore: all.brands.length > items.length,
+        moreLabel: 'Show all ' + all.brands.length + ' brands →',
+        showAll: () => this.setState(s => ({ expanded: Object.assign({}, s.expanded, { brands: true }) }))
+      });
+    }
+
+    if (show(4) && all.docs.length) {
+      const lim = cap('docs');
+      const items = all.docs.slice(0, lim).map(d => {
+        const sp = this.split(d.name, d.i, L);
+        return {
+          pre: sp.pre, mid: sp.mid, post: sp.post,
+          body: d.product,
+          meta: d.brand,
+          cta: 'Download ↓',
+          href: '/datasheets.html',
+          icon: d.kind.split(' ')[0], iconStyle: iconStyle('#16304f', '#ffffff')
+        };
+      });
+      sections.push({
+        label: 'Datasheets &amp; documents', count: all.docs.length + ' found',
+        isProductGrid: false, isProductRows: false, isRowList: true, items: items,
+        hasMore: all.docs.length > items.length,
+        moreLabel: 'Show all ' + all.docs.length + ' documents →',
+        showAll: () => this.setState(s => ({ expanded: Object.assign({}, s.expanded, { docs: true }) }))
+      });
+    }
+
+    if (show(5) && all.articles.length) {
+      const lim = cap('articles');
+      const items = all.articles.slice(0, lim).map(a => {
+        const sp = this.split(a.title, a.i, L);
+        return {
+          pre: sp.pre, mid: sp.mid, post: sp.post,
+          body: a.body, meta: a.date,
+          cta: 'Read →', href: '#',
+          icon: 'NEWS', iconStyle: iconStyle('#f7f9fb', '#667380')
+        };
+      });
+      sections.push({
+        label: 'Articles &amp; application notes', count: all.articles.length + ' found',
+        isProductGrid: false, isProductRows: false, isRowList: true, items: items,
+        hasMore: all.articles.length > items.length,
+        moreLabel: 'Show all ' + all.articles.length + ' articles →',
+        showAll: () => this.setState(s => ({ expanded: Object.assign({}, s.expanded, { articles: true }) }))
+      });
+    }
+
+    // facets computed over the unfiltered product matches
+    const catCount = {};
+    const brandCount = {};
+    all.products.forEach(x => {
+      const p = CATALOGUE[x.sku];
+      catCount[p.cat] = (catCount[p.cat] || 0) + 1;
+      brandCount[p.brand] = (brandCount[p.brand] || 0) + 1;
+    });
+    const catNames = Object.keys(catCount).sort((a, b) => catCount[b] - catCount[a]);
+    const brandNames = Object.keys(brandCount).sort((a, b) => brandCount[b] - brandCount[a]).slice(0, 8);
+
+    const facetGroups = [];
+    const wrap = last => 'padding: 14px 16px 16px;' + (last ? '' : ' border-bottom: 1px solid #dbe2e8;');
+    if (catNames.length) {
+      facetGroups.push({
+        label: 'Category', wrapStyle: wrap(false),
+        options: catNames.map(c => {
+          const on = !!st.cats[c];
+          return { label: c, count: catCount[c], tick: on ? '✓' : '', style: this.facetRow(on), boxStyle: this.facetBox(on), toggle: () => this.flip('cats', c) };
+        })
+      });
+    }
+    if (brandNames.length) {
+      facetGroups.push({
+        label: 'Brand', wrapStyle: wrap(false),
+        options: brandNames.map(b => {
+          const on = !!st.brands[b];
+          return { label: b, count: brandCount[b], tick: on ? '✓' : '', style: this.facetRow(on), boxStyle: this.facetBox(on), toggle: () => this.flip('brands', b) };
+        })
+      });
+    }
+    facetGroups.push({
+      label: 'Availability', wrapStyle: wrap(false),
+      options: AVAIL.map(a => {
+        const on = !!st.avail[a[1]];
+        return {
+          label: a[0], count: all.products.filter(x => this.stockOf(x.sku).band === a[1]).length,
+          tick: on ? '✓' : '', style: this.facetRow(on), boxStyle: this.facetBox(on), toggle: () => this.flip('avail', a[1])
+        };
+      })
+    });
+    facetGroups.push({
+      label: 'Price, ex GST', wrapStyle: wrap(true),
+      options: PRICES.map((d, i) => {
+        const on = !!st.price[i];
+        return {
+          label: d[0], count: all.products.filter(x => CATALOGUE[x.sku].price >= d[1] && CATALOGUE[x.sku].price < d[2]).length,
+          tick: on ? '✓' : '', style: this.facetRow(on), boxStyle: this.facetBox(on), toggle: () => this.flip('price', i)
+        };
+      })
+    });
+
+    const pills = [];
+    Object.keys(st.cats).forEach(k => pills.push({ label: k, remove: () => this.flip('cats', k) }));
+    Object.keys(st.brands).forEach(k => pills.push({ label: k, remove: () => this.flip('brands', k) }));
+    Object.keys(st.avail).forEach(k => {
+      const d = AVAIL.filter(a => a[1] === k)[0];
+      pills.push({ label: d ? d[0] : k, remove: () => this.flip('avail', k) });
+    });
+    Object.keys(st.price).forEach(k => pills.push({ label: PRICES[parseInt(k, 10)][0], remove: () => this.flip('price', k) }));
+
+    const cartSkus = Object.keys(st.cart);
+    const cartSub = cartSkus.reduce((t, s) => t + CATALOGUE[s].price * st.cart[s], 0);
+    const cartN = cartSkus.reduce((t, s) => t + st.cart[s], 0);
+
+    return {
+      searchRef: this.searchRef,
+      query: this.q(),
+      onQuery: e => this.setState({ query: e.target.value, expanded: {}, cats: {}, brands: {} }),
+      hasQuery: !!raw,
+      clearQuery: () => this.setState({ query: '', cats: {}, brands: {}, avail: {}, price: {}, expanded: {} }),
+
+      cartCountLabel: cartN === 1 ? '1 item' : cartN + ' items',
+      cartTotal: this.money(cartSub),
+
+      crumbNote: raw ? total + ' results for “' + raw + '”' : 'Search the whole site',
+      headline: raw
+        ? (total > 0 ? total + (total === 1 ? ' result' : ' results') + ' for “' + raw + '”' : 'No results for “' + raw + '”')
+        : 'Search the whole site',
+      subline: raw
+        ? 'Matching across product names, SKUs, manufacturer part numbers, specification text, categories, brands, documents and articles.'
+        : 'One field searches every product, category, brand, datasheet and article we publish. Search by part number, by brand, or by the spec you need.',
+
+      hasResults: !!raw && total > 0,
+      noResults: !!raw && total === 0,
+      isEmptyQuery: !raw,
+
+      headStats: [
+        { n: prodList.length, k: 'products' },
+        { n: all.docs.length, k: 'documents' },
+        { n: all.cats.length + all.brands.length, k: 'categories & brands' }
+      ],
+
+      hasSuggestion: !!suggestion,
+      suggestion: suggestion,
+      suggestionNote: '— that spelling returns results.',
+      takeSuggestion: () => this.setState({ query: suggestion }),
+
+      typeTabs: TYPES.map((t, i) => {
+        const on = i === st.type;
+        return {
+          label: t, count: counts[i],
+          pick: () => this.setState({ type: i, expanded: {} }),
+          style: 'display: flex; align-items: center; gap: 9px; padding: 14px 20px; border: 0; cursor: pointer; font-family: inherit;'
+            + ' font-size: 15.5px; font-weight: ' + (on ? '700' : '500') + ';'
+            + ' background: ' + (on ? '#16304f' : 'transparent') + ';'
+            + ' color: ' + (on ? '#ffffff' : (counts[i] === 0 ? '#667380' : '#24456b')) + ';'
+        };
+      }),
+
+      hasFilters: pills.length > 0,
+      hasPills: pills.length > 0,
+      pills: pills,
+      clearFilters: () => this.setState({ cats: {}, brands: {}, avail: {}, price: {} }),
+      facetGroups: facetGroups,
+
+      showingLabel: 'Showing ' + sections.reduce((t, s) => t + s.items.length, 0) + ' of ' + total + ' results',
+      sortOpts: SORTS.map((s, i) => ({ label: s, style: this.smallBtn(i === sortIdx), pick: () => this.setState({ sort: i }) })),
+      viewOpts: VIEWS.map((v, i) => ({ label: v, style: this.smallBtn(i === viewIdx), pick: () => this.setState({ view: i }) })),
+      sections: sections,
+
+      noResultsTitle: 'Nothing matched “' + raw + '”',
+      tips: TIPS.map(t => ({ n: t[0], title: t[1], body: t[2] })),
+      popular: POPULAR.map(p => ({ label: p, pick: () => this.setState({ query: p, type: 0, cats: {}, brands: {}, expanded: {} }) })),
+
+      scopeCards: [
+        { n: '2,279', label: 'Products', body: 'By name, SKU, MPN or specification text.' },
+        { n: '237', label: 'Categories', body: 'Top-level groups and every subcategory.' },
+        { n: '48', label: 'Brands', body: 'Manufacturer names and what they supply.' },
+        { n: '3,319', label: 'Documents', body: 'Datasheets, manuals, wiring and software.' },
+        { n: '48', label: 'Articles', body: 'Product news, guides and case studies.' }
+      ],
+      exampleRows: EXAMPLES.map(e => ({
+        term: e[0], body: e[1], count: e[2],
+        pick: () => this.setState({ query: e[0], type: 0, cats: {}, brands: {}, expanded: {} })
+      })),
+
+      footerScopes: ['Products', 'Categories', 'Brands', 'Datasheets', 'Articles'].map((l, i) => ({
+        label: l,
+        pick: () => { this.setState({ type: i + 1 }); window.scrollTo(0, 280); }
+      })),
+
+      toastOn: !!st.toast,
+      toastTitle: st.toastTitle,
+      toast: st.toast
+    };
+  }
+}
+
+</script>
+</body>
+</html>

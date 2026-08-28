@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="/support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="icon" type="image/png" href="/favicon.png" />
+<link rel="apple-touch-icon" href="/favicon.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  body { margin: 0; background: #ffffff; color: #1f2429; font-family: Archivo, Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: #06708f; text-decoration: none; }
+  a:hover { color: #16304f; text-decoration: underline; }
+  p { text-wrap: pretty; }
+  input, button, select, textarea { font-family: inherit; }
+  :focus-visible { outline: 2px solid #0673a2; outline-offset: 2px; }
+  ::selection { background: #bfe8f8; }
+  @keyframes ocFade { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes ocRise { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+
+  /* Responsive layout — media queries cannot be expressed as inline styles.
+     Everything that must change together fires at the same width. */
+  @media (max-width: 1180px) {
+    [style*="grid-template-columns: 262px"], [style*="grid-template-columns: 264px"],
+    [style*="grid-template-columns: 268px"], [style*="grid-template-columns: 274px"],
+    [style*="grid-template-columns: 296px"], [style*="grid-template-columns: 300px"],
+    [style*="grid-template-columns: 400px"], [style*="grid-template-columns: 1fr 400px"],
+    [style*="1fr) 340px"], [style*="1fr) 360px"], [style*="1fr) 380px"],
+    [style*="1fr) 396px"], [style*="1fr) 400px"], [style*="1fr) 404px"],
+    [style*="1fr) 412px"], [style*="1fr) 420px"], [style*="1fr) 424px"],
+    [style*="1fr) 430px"], [style*="1fr) 460px"], [style*="1fr) 480px"] {
+      grid-template-columns: 1fr !important;
+    }
+    [style*="position: sticky"] { position: static !important; }
+    [style*="display: flex"] { flex-wrap: wrap; }
+    [style*="flex: 1 1 auto"] { min-width: 0; }
+    [style*="height: 84px"], [style*="height: 82px"], [style*="height: 48px"] { height: auto !important; }
+    [style*="height: 38px"] { height: auto !important; padding-top: 7px; padding-bottom: 7px; }
+    [style*="max-width: 660px"], [style*="max-width: 620px"], [style*="max-width: 560px"],
+    [style*="max-width: 480px"] { max-width: 100% !important; }
+  }
+  @media (max-width: 900px) {
+    [style*="grid-template-columns: repeat"] {
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)) !important;
+    }
+    [style*="columns: 3"] { columns: 2 !important; }
+  }
+  @media (max-width: 700px) {
+    [style*="display: grid"] { grid-template-columns: 1fr !important; }
+    [style*="columns: 3"] { columns: 1 !important; }
+  }
+</style>
+</helmet>
+
+<div style="width: 100%; background: #ffffff;">
+
+  <div style="background: #0b1c2e; color: #a9bed4; font-size: 13.5px;">
+    <div style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 36px); height: 38px; display: flex; align-items: center; gap: 26px;">
+      <span style="display: flex; align-items: center; gap: 8px;"><span style="width: 6px; height: 6px; border-radius: 50%; background: #2fd07e;"></span>In-stock orders dispatched within 2 business days · free collection from Carrum Downs</span>
+      <span style="margin-left: auto; display: flex; align-items: center; gap: 22px;">
+        <a href="/datasheets.html" style="color: #d6e4f2; text-decoration: none;">Datasheets</a>
+        <a href="/contact.html" style="color: #d6e4f2; text-decoration: none;">Contact</a>
+        <a href="#" style="color: #ffffff; font-family: 'IBM Plex Mono', monospace; text-decoration: none;">+61 3 9708 2390</a>
+      </span>
+    </div>
+  </div>
+
+  <div style="background: #ffffff; border-bottom: 1px solid #dbe2e8;">
+    <div style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 36px); height: 84px; display: flex; align-items: center; gap: 28px;">
+      <a href="/index.html" style="flex: 0 0 auto; display: block;" aria-label="Ocean Controls home">
+        <img src="/uploads/OceanControls-Design-Assets/02-brand-assets/ocean-controls-logo.png" alt="Ocean Controls" style="height: 42px; width: auto; display: block;" />
+      </a>
+      <div style="flex: 1 1 auto; max-width: 560px; display: flex; height: 46px; border: 1.5px solid #16304f;">
+        <input type="text" placeholder="Search 2,279 products — name, SKU, MPN or spec" style="flex: 1 1 auto; border: 0; outline: none; padding: 0 14px; font-size: 15.5px; min-width: 0;" aria-label="Search products" />
+        <a href="/search.html" style="display: flex; align-items: center; justify-content: center; text-decoration: none; flex: 0 0 auto; background: #16304f; color: #ffffff; padding: 0 24px; font-size: 14.5px; font-weight: 600;">Search</a>
+      </div>
+      <div style="margin-left: auto; display: flex; align-items: center; gap: 8px;">
+        <a href="/sign-in.html" style="display: flex; flex-direction: column; padding: 7px 14px; border: 1px solid #dbe2e8; text-decoration: none; color: #16304f;" style-hover="border-color: #16304f; text-decoration: none;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #667380;">Account</span>
+          <span style="font-size: 14.5px; font-weight: 600;">Sign in</span>
+        </a>
+        <a href="/cart.html" style="display: flex; align-items: center; gap: 11px; padding: 9px 15px; background: #16304f; color: #ffffff; text-decoration: none;" style-hover="background: #0b1c2e; text-decoration: none;">
+          <span style="position: relative; display: block; width: 17px; height: 17px; border: 1.5px solid #ffffff; border-top-color: transparent;">
+            <span style="position: absolute; top: -5px; left: 2px; right: 2px; height: 5px; border: 1.5px solid #ffffff; border-bottom: 0;"></span>
+          </span>
+          <span style="display: flex; flex-direction: column; line-height: 1.25;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #90b4d4;">0 items</span>
+            <span style="font-size: 14.5px; font-weight: 600;">$0.00</span>
+          </span>
+        </a>
+      </div>
+    </div>
+
+    <div style="background: #16304f;">
+      <div style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 36px); display: flex; align-items: stretch;">
+        <a href="/shop.html" style="display: flex; align-items: center; gap: 11px; padding: 0 20px; height: 48px; background: #0673a2; color: #ffffff; font-size: 15px; font-weight: 600; text-decoration: none; flex: 0 0 auto;" style-hover="background: #06708f; text-decoration: none;">
+          <span style="display: flex; flex-direction: column; gap: 3px;">
+            <span style="display: block; width: 15px; height: 2px; background: #ffffff;"></span>
+            <span style="display: block; width: 15px; height: 2px; background: #ffffff;"></span>
+            <span style="display: block; width: 15px; height: 2px; background: #ffffff;"></span>
+          </span>
+          Shop by category
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; font-weight: 600; color: #ffffff;">237</span>
+        </a>
+        <a href="/brands.html" style="display: flex; align-items: center; padding: 0 15px; color: #d6e4f2; font-size: 15px; font-weight: 500; text-decoration: none;" style-hover="background: #24456b; color: #ffffff; text-decoration: none;">Brands</a>
+        <a href="/about.html" style="display: flex; align-items: center; padding: 0 15px; color: #d6e4f2; font-size: 15px; font-weight: 500; text-decoration: none;" style-hover="background: #24456b; color: #ffffff; text-decoration: none;">Engineering services</a>
+        <a href="/datasheets.html" style="display: flex; align-items: center; padding: 0 15px; color: #d6e4f2; font-size: 15px; font-weight: 500; text-decoration: none;" style-hover="background: #24456b; color: #ffffff; text-decoration: none;">Datasheets</a>
+        <a href="/articles.html" style="display: flex; align-items: center; padding: 0 15px; color: #d6e4f2; font-size: 15px; font-weight: 500; text-decoration: none;" style-hover="background: #24456b; color: #ffffff; text-decoration: none;">Articles</a>
+        <a href="/contact.html" style="display: flex; align-items: center; padding: 0 15px; color: #d6e4f2; font-size: 15px; font-weight: 500; text-decoration: none;" style-hover="background: #24456b; color: #ffffff; text-decoration: none;">Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <div style="background: #f7f9fb; border-bottom: 1px solid #dbe2e8;">
+    <div style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 36px); height: 44px; display: flex; align-items: center; gap: 10px; font-size: 14px; color: #667380;">
+      <a href="/index.html" style="color: #06708f;">Home</a>
+      <span style="color: #c9d3dc;">/</span>
+      <span style="color: #16304f; font-weight: 600;">{{ doc.title }}</span>
+      <span style="margin-left: auto; font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; color: #667380;">Last updated {{ doc.updated }}</span>
+    </div>
+  </div>
+
+  <section data-screen-label="Policy" style="background: #ffffff;">
+    <div style="max-width: 1440px; margin: 0 auto; padding: 34px 36px 78px; display: grid; grid-template-columns: 268px minmax(0, 1fr) 300px; gap: 40px; align-items: start;">
+
+      <aside style="position: sticky; top: 20px;">
+        <div style="border: 1px solid #dbe2e8;">
+          <div style="padding: 13px 16px; background: #16304f; color: #ffffff; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase;">Policies &amp; terms</div>
+          <sc-for list="{{ nav }}" as="n" hint-placeholder-count="0">
+            <button onClick="{{ n.pick }}" style="{{ n.style }}">
+              <span style="flex: 1 1 auto; text-align: left;">{{ n.label }}</span>
+              <span style="flex: 0 0 auto; color: #667380; font-size: 16.5px; line-height: 1;">›</span>
+            </button>
+          </sc-for>
+        </div>
+
+        <div style="border: 1px solid #dbe2e8; border-top: 0; background: #f7f9fb; padding: 16px;">
+          <div style="font-size: 15px; font-weight: 600; color: #0b1c2e; margin-bottom: 5px;">Something not covered?</div>
+          <p style="margin: 0 0 10px; font-size: 14px; line-height: 1.6; color: #667380;">These are the standard terms. If your situation is unusual, call and talk it through rather than guessing.</p>
+          <a href="#" style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; font-weight: 500;">+61 3 9708 2390</a>
+        </div>
+      </aside>
+
+      <div style="{{ docAnim }}">
+        <div style="display: flex; align-items: center; gap: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #06708f; margin-bottom: 14px;">
+          <span style="width: 22px; height: 1px; background: #0673a2;"></span>{{ doc.kicker }}
+        </div>
+        <h1 style="margin: 0 0 14px; font-size: 36px; line-height: 1.1; font-weight: 700; letter-spacing: -0.03em; color: #0b1c2e; max-width: 18em;">{{ doc.title }}</h1>
+        <p style="margin: 0 0 30px; font-size: 18.5px; line-height: 1.62; color: #4b5560; max-width: 40em;">{{ doc.standfirst }}</p>
+
+        <sc-if value="{{ doc.hasKeyFacts }}" hint-placeholder-val="{{ false }}">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(235px, 1fr)); gap: 1px; background: #dbe2e8; border: 1px solid #dbe2e8; margin-bottom: 32px;">
+            <sc-for list="{{ doc.keyFacts }}" as="k" hint-placeholder-count="0">
+              <div style="background: #ffffff; padding: 16px 18px;">
+                <div style="font-size: 20.5px; font-weight: 700; color: #0b1c2e; letter-spacing: -0.02em; font-variant-numeric: tabular-nums;">{{ k.n }}</div>
+                <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #667380; margin-top: 4px; line-height: 1.45;">{{ k.k }}</div>
+              </div>
+            </sc-for>
+          </div>
+        </sc-if>
+
+        <sc-for list="{{ doc.sections }}" as="s" hint-placeholder-count="0">
+          <div ref="{{ s.ref }}" style="margin-bottom: 34px;">
+            <h2 style="margin: 0 0 12px; font-size: 23px; line-height: 1.24; font-weight: 700; letter-spacing: -0.02em; color: #0b1c2e;">{{ s.heading }}</h2>
+            <sc-for list="{{ s.paras }}" as="p" hint-placeholder-count="0">
+              <p style="margin: 0 0 15px; font-size: 17px; line-height: 1.75; color: #2f3941; max-width: 40em;">{{ p.t }}</p>
+            </sc-for>
+            <sc-if value="{{ s.hasRows }}" hint-placeholder-val="{{ false }}">
+              <div style="display: flex; flex-direction: column; gap: 1px; background: #dbe2e8; border: 1px solid #dbe2e8; margin: 18px 0 4px; max-width: 46em;">
+                <sc-for list="{{ s.rows }}" as="r" hint-placeholder-count="0">
+                  <div style="background: #ffffff; display: grid; grid-template-columns: 210px minmax(0, 1fr); gap: 18px; padding: 15px 17px;">
+                    <span style="font-size: 15px; font-weight: 600; color: #0b1c2e; line-height: 1.5;">{{ r.k }}</span>
+                    <span style="font-size: 15px; line-height: 1.65; color: #4b5560;">{{ r.v }}</span>
+                  </div>
+                </sc-for>
+              </div>
+            </sc-if>
+            <sc-if value="{{ s.hasNote }}" hint-placeholder-val="{{ false }}">
+              <div style="display: flex; align-items: flex-start; gap: 13px; border-left: 3px solid #d99b2b; background: #fdf8ef; padding: 15px 17px; margin: 18px 0 4px; max-width: 46em;">
+                <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #a5620a; flex: 0 0 auto; padding-top: 2px;">{{ s.noteLabel }}</span>
+                <p style="margin: 0; font-size: 15px; line-height: 1.7; color: #6b4a12;">{{ s.note }}</p>
+              </div>
+            </sc-if>
+          </div>
+        </sc-for>
+
+        <div style="border-top: 1px solid #dbe2e8; padding-top: 24px; display: flex; align-items: center; gap: 18px; max-width: 46em;">
+          <div style="flex: 1 1 auto;">
+            <div style="font-size: 15.5px; font-weight: 600; color: #0b1c2e; margin-bottom: 4px;">{{ doc.footTitle }}</div>
+            <div style="font-size: 14.5px; line-height: 1.6; color: #667380;">{{ doc.footBody }}</div>
+          </div>
+          <a href="/contact.html" style="flex: 0 0 auto; padding: 13px 22px; background: #16304f; color: #ffffff; font-size: 15px; font-weight: 600; text-decoration: none;" style-hover="background: #0673a2; text-decoration: none;">Contact us</a>
+        </div>
+      </div>
+
+      <div style="position: sticky; top: 20px;">
+        <div style="border: 1px solid #dbe2e8; margin-bottom: 20px;">
+          <div style="padding: 13px 16px; background: #f7f9fb; border-bottom: 1px solid #dbe2e8; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #667380;">On this page</div>
+          <sc-for list="{{ doc.toc }}" as="t" hint-placeholder-count="0">
+            <button onClick="{{ t.go }}" style="width: 100%; display: flex; align-items: baseline; gap: 11px; padding: 11px 16px; border: 0; border-bottom: 1px solid #eef2f5; background: none; cursor: pointer; text-align: left;" style-hover="background: #f7f9fb;">
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #0673a2; flex: 0 0 auto;">{{ t.n }}</span>
+              <span style="font-size: 14px; color: #24456b; line-height: 1.45;">{{ t.label }}</span>
+            </button>
+          </sc-for>
+        </div>
+
+        <div style="border: 1px solid #dbe2e8;">
+          <div style="padding: 13px 16px; background: #f7f9fb; border-bottom: 1px solid #dbe2e8; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #667380;">The business</div>
+          <sc-for list="{{ entity }}" as="e" hint-placeholder-count="0">
+            <div style="display: grid; grid-template-columns: 86px minmax(0, 1fr); gap: 12px; padding: 11px 16px; border-bottom: 1px solid #eef2f5;">
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #667380; padding-top: 2px;">{{ e.k }}</span>
+              <span style="font-size: 14px; line-height: 1.55; color: #16304f; font-weight: 500; white-space: pre-line;">{{ e.v }}</span>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer data-screen-label="Footer" style="background: #0b1c2e; color: #a9bed4;">
+    <div style="max-width: 1440px; margin: 0 auto; padding: 34px 36px; display: flex; align-items: center; gap: 40px;">
+      <div style="background: #ffffff; padding: 9px 11px;">
+        <img src="/uploads/OceanControls-Design-Assets/02-brand-assets/ocean-controls-logo.png" alt="Ocean Controls" style="height: 28px; width: auto; display: block;" />
+      </div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; line-height: 1.8; color: #a9bed4;">
+        <div>44 Frankston Gardens Drive, Carrum Downs VIC 3201</div>
+        <div>+61 3 9708 2390 · info@oceancontrols.com.au · ABN 28 659 967 398</div>
+      </div>
+      <span style="margin-left: auto; display: flex; gap: 20px; font-size: 13.5px;">
+        <sc-for list="{{ nav }}" as="n" hint-placeholder-count="0">
+          <button onClick="{{ n.pick }}" style="border: 0; background: none; padding: 0; font-family: inherit; font-size: 13.5px; color: #a9bed4; cursor: pointer;" style-hover="color: #6fd0f5;">{{ n.label }}</button>
+        </sc-for>
+      </span>
+    </div>
+  </footer>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440},&quot;policy&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;shipping&quot;,&quot;returns&quot;,&quot;terms&quot;,&quot;privacy&quot;],&quot;default&quot;:&quot;shipping&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Page&quot;}}">
+// Content follows the current oceancontrols.com.au shipping and returns pages.
+const DOCS = [
+  {
+    key: 'shipping',
+    label: 'Shipping & delivery',
+    kicker: 'Getting it to you',
+    title: 'Shipping & delivery',
+    updated: '28 August 2026',
+    standfirst: 'We deliver across Australia and internationally. In-stock orders leave Carrum Downs within two business days, and collection from the counter is free.',
+    keyFacts: [['2 days', 'dispatch on in-stock items'], ['4', 'carrier options'], ['11am', 'same-day pickup cut-off'], ['Free', 'store collection']],
+    sections: [
+      {
+        heading: 'Dispatch',
+        paras: ['In-stock orders are dispatched within 2 business days.',
+          'If a line is not on the shelf it goes onto our purchasing list the same day. Some items come from overseas and can take a few weeks, so we confirm the lead time in writing rather than leaving you guessing. You can also ask us to split the order — we will ship what is in stock now and the rest when it lands, at no extra freight.']
+      },
+      {
+        heading: 'Shipping options',
+        paras: ['We deliver across Australia and internationally by any of the following methods. Transit times vary depending on the shipping method and destination.'],
+        rows: [
+          ['Australia Post Express', 'Next business day to most metropolitan addresses.'],
+          ['Australia Post Parcel Post', 'The standard domestic option, typically three to six business days.'],
+          ['DHL', 'Domestic and international consignments.'],
+          ['FedEx', 'International only.'],
+          ['Your own freight account', 'We will email the packaging dimensions when the shipment is ready to be booked.']
+        ]
+      },
+      {
+        heading: 'Pickup — Carrum Downs, Victoria 3201',
+        paras: ['Order before 11am to collect after 2pm the same day. Monday to Friday, 9am to 5pm, excluding public holidays. There is no charge for collection.'],
+        note: 'We recommend calling ahead before visiting to confirm stock availability. The website inventory is kept up to date, but we would rather have the part waiting for you than have you drive out for nothing.',
+        noteLabel: 'Tip'
+      },
+      {
+        heading: 'Freight charges',
+        paras: ['Freight is calculated at checkout from the real weight and dimensions of what you have ordered, using live carrier rates. You see the cost before you commit — there is no flat fee hiding an under- or over-charge.',
+          'Approved trade and overseas wholesale accounts can have freight quoted against their agreed arrangement rather than paid at checkout.']
+      },
+      {
+        heading: 'International orders',
+        paras: ['We ship worldwide. Duties, taxes and customs charges in the destination country are the responsibility of the receiver and are not included in the freight quoted at checkout.',
+          'Our own range is also resold by nine distributors across North America, Central America and Europe. For those products it is often faster and cheaper to buy locally — the distributor list is on the contact page.']
+      }
+    ],
+    footTitle: 'Need it faster, or somewhere unusual?',
+    footBody: 'Call the counter before you place the order and we will tell you what is actually achievable.'
+  },
+  {
+    key: 'returns',
+    label: 'Returns & warranty',
+    kicker: 'If something is wrong',
+    title: 'Returns & warranty',
+    updated: '28 August 2026',
+    standfirst: 'Contact us before sending anything back. We will confirm eligibility, give you the return address, and in most cases sort it out faster than the paperwork suggests.',
+    keyFacts: [['14 days', 'return window from dispatch'], ['7 days', 'to report a fault on arrival'], ['12–24 mo', 'typical manufacturer warranty'], ['In-house', 'repairs on our own range']],
+    sections: [
+      {
+        heading: 'How to return an item',
+        paras: ['Contact us before sending anything back. Email info@oceancontrols.com.au or call +61 3 9708 2390. We will confirm eligibility and guide you to the right return address.',
+          'Do not pay to ship anything back before you have spoken to us. If the item is faulty we arrange and pay for the return freight, and sending it unannounced makes that harder, not easier.']
+      },
+      {
+        heading: 'Return window',
+        paras: ['14 days from the dispatch date.'],
+        rows: [
+          ['Change of mind', 'Unopened, unused stock in original packaging. Return freight is at your cost, and a restocking fee may apply.'],
+          ['Faulty on arrival', 'Tell us within 7 days. We replace or refund, including freight both ways.'],
+          ['Special orders', 'Items brought in specifically for your order, and configured or programmed products, are non-returnable unless faulty.'],
+          ['Software licences', 'Non-returnable once the licence key has been issued.']
+        ]
+      },
+      {
+        heading: 'Warranty',
+        paras: ['Each product carries the manufacturer\'s warranty. Most of the range is covered for 12 to 24 months from the date of purchase — the product page states the period where the manufacturer specifies one.',
+          'The 93 products in the Ocean Controls range are warranted and repaired by us, in Carrum Downs. That means a fault goes to the people who designed the board rather than into an overseas support queue.']
+      },
+      {
+        heading: 'What is not covered',
+        paras: ['Damage from incorrect wiring, over-voltage, water ingress on equipment not rated for it, or use outside the published specification is not a warranty fault. Neither is a product that turns out to be the wrong choice for the application.'],
+        note: 'That last one is avoidable. Advice is freely given by our engineering staff over the phone or by email — no purchase order needed to ask. A five-minute call before ordering is cheaper for both of us than a return.',
+        noteLabel: 'Worth saying'
+      },
+      {
+        heading: 'Australian Consumer Law',
+        paras: ['Nothing in this policy limits your rights under the Australian Consumer Law. Our goods come with guarantees that cannot be excluded, including the right to a replacement or refund for a major failure and compensation for any other reasonably foreseeable loss or damage.']
+      }
+    ],
+    footTitle: 'Starting a return',
+    footBody: 'Have your order number and the SKU ready. Signed-in customers can also raise it from their order history.'
+  },
+  {
+    key: 'terms',
+    label: 'Terms of sale',
+    kicker: 'The commercial terms',
+    title: 'Terms of sale',
+    updated: '28 August 2026',
+    standfirst: 'The terms that apply when you buy from Ocean Controls Pty Ltd. Written to be read, not to be survived.',
+    keyFacts: [['AUD', 'all prices'], ['ex GST', 'unless stated'], ['30 days', 'approved account terms'], ['Required', 'account at checkout']],
+    sections: [
+      {
+        heading: 'Who you are buying from',
+        paras: ['Ocean Controls Pty Ltd, ABN 28 659 967 398, of 44 Frankston Gardens Drive, Carrum Downs, Victoria 3201, Australia.']
+      },
+      {
+        heading: 'Prices and GST',
+        paras: ['All prices are in Australian dollars and exclude GST unless stated otherwise. GST is added at checkout for Australian orders.',
+          'Quantity breaks are shown on the product page and apply automatically in the cart — there is no code to enter. Approved trade and overseas wholesale accounts see their contract rate in place of retail once signed in, and receive whichever is lower where a volume tier beats the contract rate.',
+          'We publish prices in good faith but they can change without notice, particularly on imported lines where exchange rates move. The price that applies is the one shown when you place the order.']
+      },
+      {
+        heading: 'Ordering',
+        paras: ['An account is required to check out. We do not take guest orders — this keeps invoices, order history and documentation together, and means a repeat order takes one paste into the order pad.',
+          'You can also order by phone on +61 3 9708 2390, by email to info@oceancontrols.com.au, or across the counter at Carrum Downs.'],
+        rows: [
+          ['Order acceptance', 'Your order is an offer. It is accepted when we confirm it, not when the website takes payment details.'],
+          ['Stock figures', 'Quantities shown come from our own warehouse and are accurate at the time of display. Very occasionally a line sells twice; we will tell you the same day.'],
+          ['Pricing errors', 'If a price is obviously wrong we will contact you before processing rather than either honouring or silently cancelling it.']
+        ]
+      },
+      {
+        heading: 'Payment',
+        paras: ['We accept Visa, Mastercard, American Express and EFTPOS, in store and online. A surcharge may apply to American Express transactions.',
+          'Approved trade accounts may order on 30-day terms against a purchase order number. Title in the goods does not pass until payment is received in full.']
+      },
+      {
+        heading: 'Delivery and risk',
+        paras: ['Delivery terms are set out in the shipping policy. Risk in the goods passes to you on delivery, or on collection from Carrum Downs.',
+          'Delivery dates given are estimates based on carrier information. We are not liable for consequential loss arising from a late delivery, though we will always tell you as soon as we know.']
+      },
+      {
+        heading: 'Liability',
+        paras: ['Our liability for any product is limited, at our option, to replacing it, repairing it, or refunding the purchase price. Nothing here limits your rights under the Australian Consumer Law.',
+          'Products are supplied for the applications described in the manufacturer documentation. Where equipment is used in a safety-critical role, the specification and validation of that use is the responsibility of the system designer.']
+      }
+    ],
+    footTitle: 'Buying on behalf of a business?',
+    footBody: 'Trade and overseas wholesale accounts have their own credit terms, agreed at application.'
+  },
+  {
+    key: 'privacy',
+    label: 'Privacy policy',
+    kicker: 'What we do with your data',
+    title: 'Privacy policy',
+    updated: '28 August 2026',
+    standfirst: 'We collect what we need to process your order and answer your questions. We do not sell it, and we do not pass it to anyone who is not part of getting your order to you.',
+    keyFacts: [['No', 'data sold to third parties'], ['Opt-in', 'marketing email'], ['Australia', 'where records are held'], ['Any time', 'request your data']],
+    sections: [
+      {
+        heading: 'What we collect',
+        paras: ['When you register or place an order we collect your name, company, email address, phone number, and the delivery and billing addresses you give us. If you apply for a trade account we also collect your ABN and the trade references you supply.',
+          'We do not store full card numbers. Card payments are handled by our payment provider, and what reaches us is a transaction reference, not your card.']
+      },
+      {
+        heading: 'What we use it for',
+        paras: ['Processing and delivering your order, issuing invoices, answering enquiries, handling returns and warranty claims, and — if you opted in — sending the product update email.'],
+        rows: [
+          ['Carriers', 'Australia Post, DHL and FedEx receive the delivery address and contact number so they can deliver.'],
+          ['Payment provider', 'Receives what is needed to process the transaction.'],
+          ['Accounting', 'Order and invoice records are held in our accounting system as required by Australian tax law.'],
+          ['Nobody else', 'We do not sell, rent or trade your details, and we do not pass them to advertisers.']
+        ]
+      },
+      {
+        heading: 'Marketing email',
+        paras: ['The product update email is opt-in. It goes out roughly monthly and carries new releases, price changes and application notes. Every email has an unsubscribe link, and unsubscribing does not affect your ability to order or your access to order history.']
+      },
+      {
+        heading: 'Cookies',
+        paras: ['The site uses cookies to keep you signed in, remember your cart between visits, and understand which pages people actually use. You can block them in your browser, though the cart and sign-in will stop working if you do.']
+      },
+      {
+        heading: 'Your data, your call',
+        paras: ['You can ask us what we hold about you, ask us to correct it, or ask us to delete it — subject to the records we are legally required to keep for tax purposes. Email info@oceancontrols.com.au or call +61 3 9708 2390.'],
+        note: 'Records are held in Australia. If that changes we will say so here before it happens, not afterwards.',
+        noteLabel: 'Location'
+      }
+    ],
+    footTitle: 'Questions about your data',
+    footBody: 'A real person will answer. We are not big enough to have a privacy department, which is rather the point.'
+  }
+];
+
+const ENTITY = [
+  ['Entity', 'Ocean Controls Pty Ltd'],
+  ['ABN', '28 659 967 398'],
+  ['Address', '44 Frankston Gardens Drive\nCarrum Downs VIC 3201'],
+  ['Phone', '+61 3 9708 2390'],
+  ['Email', 'info@oceancontrols.com.au'],
+  ['Hours', 'Mon–Fri, 9am – 5pm']
+];
+
+class Component extends DCLogic {
+  state = { doc: null };
+
+  constructor(props) {
+    super(props);
+    this.refs0 = DOCS.map(d => d.sections.map(() => React.createRef()));
+  }
+
+  // The prop seeds which policy opens; the rail takes over after that.
+  idx() {
+    if (this.state.doc !== null) return this.state.doc;
+    const i = DOCS.map(d => d.key).indexOf(this.props.policy);
+    return i > -1 ? i : 0;
+  }
+
+  pick(i) {
+    this.setState({ doc: i });
+    window.scrollTo(0, 0);
+  }
+
+  renderVals() {
+    const i = this.idx();
+    const d = DOCS[i];
+    const refs = this.refs0[i];
+
+    return {
+      docAnim: 'animation: ' + (i % 2 ? 'ocFade' : 'ocRise') + ' 0.3s ease-out;',
+
+      nav: DOCS.map((x, j) => {
+        const on = j === i;
+        return {
+          label: x.label,
+          pick: () => this.pick(j),
+          style: 'width: 100%; display: flex; align-items: center; gap: 10px; padding: 13px 16px; border: 0; cursor: pointer;'
+            + ' border-bottom: 1px solid #eef2f5; font-family: inherit; font-size: 15px;'
+            + ' border-left: 3px solid ' + (on ? '#0673a2' : 'transparent') + ';'
+            + ' background: ' + (on ? '#f2f9fd' : '#ffffff') + ';'
+            + ' color: ' + (on ? '#0b1c2e' : '#24456b') + '; font-weight: ' + (on ? '600' : '400') + ';'
+        };
+      }),
+
+      doc: {
+        kicker: d.kicker,
+        title: d.title,
+        updated: d.updated,
+        standfirst: d.standfirst,
+        hasKeyFacts: !!d.keyFacts,
+        keyFacts: (d.keyFacts || []).map(k => ({ n: k[0], k: k[1] })),
+        sections: d.sections.map((s, k) => ({
+          ref: refs[k],
+          heading: s.heading,
+          paras: s.paras.map(t => ({ t: t })),
+          hasRows: !!s.rows,
+          rows: (s.rows || []).map(r => ({ k: r[0], v: r[1] })),
+          hasNote: !!s.note,
+          note: s.note || '',
+          noteLabel: s.noteLabel || 'Note'
+        })),
+        toc: d.sections.map((s, k) => ({
+          n: '0' + (k + 1),
+          label: s.heading,
+          go: () => {
+            const r = refs[k];
+            if (r && r.current) window.scrollTo({ top: Math.max(0, r.current.offsetTop - 24), behavior: 'smooth' });
+          }
+        })),
+        footTitle: d.footTitle,
+        footBody: d.footBody
+      },
+
+      entity: ENTITY.map(e => ({ k: e[0], v: e[1] }))
+    };
+  }
+}
+
+</script>
+</body>
+</html>

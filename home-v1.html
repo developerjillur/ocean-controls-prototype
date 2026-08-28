@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="/support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="icon" type="image/png" href="/favicon.png" />
+<link rel="apple-touch-icon" href="/favicon.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  body { margin: 0; background: #ffffff; color: #1f2429; font-family: Archivo, Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: #06708f; text-decoration: none; }
+  a:hover { color: #16304f; text-decoration: underline; }
+  p { text-wrap: pretty; }
+  input, button, select { font-family: inherit; }
+  ::selection { background: #bfe8f8; }
+  @keyframes ocFade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+  @keyframes ocRise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+
+  /* Responsive layout — media queries cannot be expressed as inline styles.
+     Everything that must change together fires at the same width. */
+  @media (max-width: 1180px) {
+    [style*="grid-template-columns: 262px"], [style*="grid-template-columns: 264px"],
+    [style*="grid-template-columns: 268px"], [style*="grid-template-columns: 274px"],
+    [style*="grid-template-columns: 296px"], [style*="grid-template-columns: 300px"],
+    [style*="grid-template-columns: 400px"], [style*="grid-template-columns: 1fr 400px"],
+    [style*="1fr) 340px"], [style*="1fr) 360px"], [style*="1fr) 380px"],
+    [style*="1fr) 396px"], [style*="1fr) 400px"], [style*="1fr) 404px"],
+    [style*="1fr) 412px"], [style*="1fr) 420px"], [style*="1fr) 424px"],
+    [style*="1fr) 430px"], [style*="1fr) 460px"], [style*="1fr) 480px"] {
+      grid-template-columns: 1fr !important;
+    }
+    [style*="position: sticky"] { position: static !important; }
+    [style*="display: flex"] { flex-wrap: wrap; }
+    [style*="flex: 1 1 auto"] { min-width: 0; }
+    [style*="height: 84px"], [style*="height: 82px"], [style*="height: 48px"] { height: auto !important; }
+    [style*="height: 38px"] { height: auto !important; padding-top: 7px; padding-bottom: 7px; }
+    [style*="max-width: 660px"], [style*="max-width: 620px"], [style*="max-width: 560px"],
+    [style*="max-width: 480px"] { max-width: 100% !important; }
+  }
+  @media (max-width: 900px) {
+    [style*="grid-template-columns: repeat"] {
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)) !important;
+    }
+    [style*="columns: 3"] { columns: 2 !important; }
+  }
+  @media (max-width: 700px) {
+    [style*="display: grid"] { grid-template-columns: 1fr !important; }
+    [style*="columns: 3"] { columns: 1 !important; }
+  }
+</style>
+</helmet>
+
+<div style="min-width: 1180px; background: #ffffff;">
+
+  <div style="background: #0b1c2e; color: #a9bed4; font-size: 13.5px; letter-spacing: 0.01em;">
+    <div style="max-width: 1400px; margin: 0 auto; padding: 0 32px; height: 38px; display: flex; align-items: center; gap: 28px;">
+      <span style="display: flex; align-items: center; gap: 8px;"><span style="width: 6px; height: 6px; border-radius: 50%; background: #2fd07e;"></span>In-stock orders dispatched within 2 business days</span>
+      <span style="display: flex; align-items: center; gap: 8px;"><span style="font-family: 'IBM Plex Mono', monospace; color: #9ab0c6;">PICKUP</span>Order by 11am, collect from Carrum Downs after 2pm</span>
+      <span style="margin-left: auto; display: flex; align-items: center; gap: 24px;">
+        <a href="#" style="color: #d6e4f2; text-decoration: none;">+61 3 9708 2390</a>
+        <a href="#" style="color: #d6e4f2; text-decoration: none;">Distributors</a>
+        <a href="#" style="color: #d6e4f2; text-decoration: none;">Shipping</a>
+        <a href="#" style="color: #d6e4f2; text-decoration: none;">Contact</a>
+      </span>
+    </div>
+  </div>
+
+  <div style="position: sticky; top: 0; z-index: 60; background: #ffffff; border-bottom: 1px solid #dbe2e8; box-shadow: 0 1px 0 rgba(11,28,46,0.04), 0 8px 24px -18px rgba(11,28,46,0.35);">
+    <div style="max-width: 1400px; margin: 0 auto; padding: 0 32px; height: 84px; display: flex; align-items: center; gap: 32px;">
+
+      <a href="#" style="flex: 0 0 auto; display: block;">
+        <img src="/uploads/OceanControls-Design-Assets/02-brand-assets/ocean-controls-logo.png" alt="Ocean Controls" style="height: 42px; width: auto; display: block;" />
+      </a>
+
+      <div style="flex: 1 1 auto; max-width: 620px; position: relative;">
+        <div style="display: flex; height: 46px; border: 1.5px solid #16304f; border-radius: 3px; overflow: hidden; background: #ffffff;">
+          <div style="flex: 0 0 auto; display: flex; align-items: center; gap: 7px; padding: 0 14px; background: #f4f6f8; border-right: 1px solid #dbe2e8; font-size: 14px; font-weight: 500; color: #16304f; cursor: pointer;">All categories<span style="color: #667380;">▾</span></div>
+          <input type="text" placeholder="Search 2,279 products by name, SKU or MPN — e.g. KTA-387, 4-20mA, PT100" value="{{ searchQ }}" onInput="{{ onSearch }}" onFocus="{{ openSearch }}" style="flex: 1 1 auto; border: 0; outline: none; padding: 0 14px; font-size: 15.5px; color: #1f2429; min-width: 0;" />
+          <button onClick="{{ openSearch }}" style="flex: 0 0 auto; border: 0; background: #16304f; color: #ffffff; padding: 0 22px; font-size: 14.5px; font-weight: 600; letter-spacing: 0.02em; cursor: pointer;" style-hover="background: #0673a2;">Search</button>
+        </div>
+
+        <sc-if value="{{ searchOpen }}" hint-placeholder-val="{{ false }}">
+          <div style="position: absolute; top: 52px; left: 0; right: 0; background: #ffffff; border: 1px solid #c9d3dc; border-radius: 3px; box-shadow: 0 24px 48px -18px rgba(11,28,46,0.4); overflow: hidden; animation: ocFade 0.14s ease-out;">
+            <div style="display: flex; align-items: center; justify-content: space-between; padding: 10px 14px; background: #f4f6f8; border-bottom: 1px solid #dbe2e8; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #667380;">
+              <span>{{ searchLabel }}</span>
+              <span onClick="{{ closeSearch }}" style="cursor: pointer; color: #06708f;">Close</span>
+            </div>
+            <sc-for list="{{ suggestions }}" as="s" hint-placeholder-count="0">
+              <div style="display: flex; align-items: center; gap: 12px; padding: 9px 14px; border-bottom: 1px solid #eef2f5; cursor: pointer;" style-hover="background: #f4f6f8;">
+                <img src="{{ s.img }}" alt="" style="width: 34px; height: 34px; object-fit: contain; background: #ffffff; border: 1px solid #eef2f5; flex: 0 0 auto;" />
+                <div style="flex: 1 1 auto; min-width: 0;">
+                  <div style="font-size: 14px; font-weight: 500; color: #16304f; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{ s.name }}</div>
+                  <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #667380; margin-top: 2px;">{{ s.metaLine }}</div>
+                </div>
+                <div style="font-size: 14.5px; font-weight: 600; color: #1f2429; font-variant-numeric: tabular-nums; flex: 0 0 auto;">{{ s.priceMain }}</div>
+              </div>
+            </sc-for>
+            <div style="padding: 10px 14px; display: flex; gap: 16px; font-size: 13.5px; color: #667380;">
+              <span>Search inside: </span><a href="#">Specifications</a><a href="#">Datasheets</a><a href="#">Brands</a><a href="#">Articles</a>
+            </div>
+          </div>
+        </sc-if>
+      </div>
+
+      <div style="flex: 0 0 auto; margin-left: auto; display: flex; align-items: center; gap: 10px;">
+        <div style="display: flex; border: 1px solid #dbe2e8; border-radius: 3px; overflow: hidden; background: #f4f6f8;">
+          <div onClick="{{ setRetail }}" style="padding: 7px 12px; font-size: 13px; font-weight: 600; cursor: pointer; background: {{ retailBg }}; color: {{ retailFg }};">Retail</div>
+          <div onClick="{{ setTrade }}" style="padding: 7px 12px; font-size: 13px; font-weight: 600; cursor: pointer; background: {{ tradeBg }}; color: {{ tradeFg }};">Trade</div>
+        </div>
+        <a href="#" style="display: flex; flex-direction: column; padding: 6px 12px; border: 1px solid #dbe2e8; border-radius: 3px; text-decoration: none; color: #16304f;" style-hover="border-color: #16304f; text-decoration: none;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #667380;">Account</span>
+          <span style="font-size: 14.5px; font-weight: 600;">Sign in</span>
+        </a>
+        <div onClick="{{ noop }}" style="display: flex; align-items: center; gap: 10px; padding: 7px 14px; background: #16304f; border-radius: 3px; color: #ffffff; cursor: pointer;" style-hover="background: #0b1c2e;">
+          <span style="font-size: 17.5px; line-height: 1;">⌗</span>
+          <div style="display: flex; flex-direction: column; line-height: 1.25;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #90b4d4;">{{ cartCountLabel }}</span>
+            <span style="font-size: 14.5px; font-weight: 600; font-variant-numeric: tabular-nums;">{{ cartTotalLabel }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="background: #16304f; position: relative;">
+      <div style="max-width: 1400px; margin: 0 auto; padding: 0 32px; display: flex; align-items: stretch; gap: 2px;">
+        <div onClick="{{ toggleMenu }}" style="display: flex; align-items: center; gap: 10px; padding: 0 20px; height: 48px; background: #0673a2; color: #ffffff; font-size: 15px; font-weight: 600; letter-spacing: 0.01em; cursor: pointer; flex: 0 0 auto;" style-hover="background: #06708f;">
+          <span style="display: flex; flex-direction: column; gap: 3px;">
+            <span style="display: block; width: 15px; height: 2px; background: #ffffff;"></span>
+            <span style="display: block; width: 15px; height: 2px; background: #ffffff;"></span>
+            <span style="display: block; width: 15px; height: 2px; background: #ffffff;"></span>
+          </span>
+          Shop all 237 categories
+        </div>
+        <a href="#" style="display: flex; align-items: center; padding: 0 16px; color: #d6e4f2; font-size: 15px; font-weight: 500; text-decoration: none;" style-hover="background: #24456b; color: #ffffff; text-decoration: none;">New arrivals</a>
+        <a href="#" style="display: flex; align-items: center; padding: 0 16px; color: #d6e4f2; font-size: 15px; font-weight: 500; text-decoration: none;" style-hover="background: #24456b; color: #ffffff; text-decoration: none;">Clearance</a>
+        <a href="#" style="display: flex; align-items: center; padding: 0 16px; color: #d6e4f2; font-size: 15px; font-weight: 500; text-decoration: none;" style-hover="background: #24456b; color: #ffffff; text-decoration: none;">Brands</a>
+        <a href="#" style="display: flex; align-items: center; padding: 0 16px; color: #d6e4f2; font-size: 15px; font-weight: 500; text-decoration: none;" style-hover="background: #24456b; color: #ffffff; text-decoration: none;">Engineering services</a>
+        <a href="#" style="display: flex; align-items: center; padding: 0 16px; color: #d6e4f2; font-size: 15px; font-weight: 500; text-decoration: none;" style-hover="background: #24456b; color: #ffffff; text-decoration: none;">Articles</a>
+        <a href="#" style="display: flex; align-items: center; padding: 0 16px; color: #d6e4f2; font-size: 15px; font-weight: 500; text-decoration: none;" style-hover="background: #24456b; color: #ffffff; text-decoration: none;">About</a>
+        <a href="#" style="margin-left: auto; display: flex; align-items: center; gap: 8px; padding: 0 16px; color: #ffffff; font-size: 14.5px; font-weight: 600; text-decoration: none; border-left: 1px solid #24456b;" style-hover="background: #24456b; text-decoration: none;">
+          <span style="width: 7px; height: 7px; border-radius: 50%; background: #2fd07e;"></span>Apply for a trade account
+        </a>
+      </div>
+
+      <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+        <div style="position: absolute; left: 0; right: 0; top: 48px; background: #ffffff; border-bottom: 1px solid #c9d3dc; box-shadow: 0 32px 64px -24px rgba(11,28,46,0.45); z-index: 70; animation: ocFade 0.16s ease-out;">
+          <div style="max-width: 1400px; margin: 0 auto; padding: 0 32px; display: grid; grid-template-columns: 300px 1fr 260px;">
+            <div style="border-right: 1px solid #dbe2e8; padding: 14px 0; max-height: 520px; overflow-y: auto; background: #f8fafb;">
+              <sc-for list="{{ megaCats }}" as="c" hint-placeholder-count="10">
+                <div onMouseEnter="{{ c.hover }}" onClick="{{ c.hover }}" style="display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 8px 20px 8px 16px; cursor: pointer; border-left: 3px solid {{ c.edge }}; background: {{ c.bg }};">
+                  <span style="font-size: 14.5px; font-weight: {{ c.weight }}; color: {{ c.fg }};">{{ c.name }}</span>
+                  <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #667380; font-variant-numeric: tabular-nums;">{{ c.count }}</span>
+                </div>
+              </sc-for>
+            </div>
+
+            <div style="padding: 22px 32px 26px;">
+              <div style="display: flex; align-items: baseline; gap: 14px; margin-bottom: 4px;">
+                <h3 style="margin: 0; font-size: 21.5px; font-weight: 700; letter-spacing: -0.01em; color: #0b1c2e;">{{ megaName }}</h3>
+                <a href="#" style="font-size: 14px; font-weight: 600;">{{ megaViewAll }}</a>
+              </div>
+              <p style="margin: 0 0 18px; font-size: 14px; color: #667380;">{{ megaSubline }}</p>
+              <div style="columns: 3; column-gap: 28px;">
+                <sc-for list="{{ megaSubs }}" as="s" hint-placeholder-count="12">
+                  <a href="#" style="display: flex; align-items: baseline; justify-content: space-between; gap: 10px; padding: 5px 0; break-inside: avoid; text-decoration: none; border-bottom: 1px solid #f1f4f7;" style-hover="text-decoration: none;">
+                    <span style="font-size: 14px; color: #24456b;">{{ s.name }}</span>
+                    <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #667380; font-variant-numeric: tabular-nums;">{{ s.count }}</span>
+                  </a>
+                </sc-for>
+              </div>
+            </div>
+
+            <div style="border-left: 1px solid #dbe2e8; padding: 22px; background: #f8fafb; display: flex; flex-direction: column; gap: 14px;">
+              <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #667380;">Popular in {{ megaName }}</div>
+              <div style="background: #ffffff; border: 1px solid #dbe2e8; padding: 14px;">
+                <img src="{{ megaPickImg }}" alt="" style="width: 100%; height: 130px; object-fit: contain; display: block; margin-bottom: 12px;" />
+                <div style="font-size: 14px; font-weight: 500; color: #16304f; line-height: 1.35; height: 40px; overflow: hidden;">{{ megaPickName }}</div>
+                <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #667380; margin-top: 6px;">{{ megaPickSku }}</div>
+                <div style="font-size: 17.5px; font-weight: 600; margin-top: 8px; font-variant-numeric: tabular-nums;">{{ megaPickPrice }}</div>
+              </div>
+              <a href="#" style="display: block; text-align: center; padding: 10px; background: #16304f; color: #ffffff; font-size: 14px; font-weight: 600; text-decoration: none;" style-hover="background: #0673a2; text-decoration: none;">Browse the full catalogue</a>
+            </div>
+          </div>
+        </div>
+      </sc-if>
+    </div>
+  </div>
+
+  <section data-screen-label="Hero" style="background: #0b1c2e; position: relative; overflow: hidden;">
+    <div style="position: absolute; inset: 0; background-image: linear-gradient(90deg, rgba(11,159,216,0.09) 1px, transparent 1px), linear-gradient(180deg, rgba(11,159,216,0.09) 1px, transparent 1px); background-size: 56px 56px;"></div>
+    <div style="position: absolute; top: -180px; right: -120px; width: 620px; height: 620px; border-radius: 50%; background: radial-gradient(circle, rgba(11,159,216,0.22), rgba(11,159,216,0) 65%);"></div>
+    <div style="position: relative; max-width: 1400px; margin: 0 auto; padding: 68px 32px 60px; display: grid; grid-template-columns: 1fr 400px; gap: 72px; align-items: start;">
+
+      <div style="animation: ocRise 0.5s ease-out;">
+        <div style="display: inline-flex; align-items: center; gap: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #6fd0f5; border: 1px solid rgba(111,208,245,0.35); padding: 6px 12px; margin-bottom: 26px;">
+          <span style="width: 6px; height: 6px; background: #6fd0f5;"></span>Carrum Downs, Victoria — shipping Australia-wide
+        </div>
+        <h1 style="margin: 0 0 20px; font-size: 54px; line-height: 1.03; font-weight: 700; letter-spacing: -0.025em; color: #ffffff; max-width: 15em;">2,279 industrial parts, specified properly and stocked locally.</h1>
+        <p style="margin: 0 0 30px; font-size: 18.5px; line-height: 1.6; color: #a9bed4; max-width: 40em;">Sensors, controllers, power supplies, Modbus and BACnet gateways from 48 manufacturers. Every product page carries the spec table, the datasheet, the SKU and the live stock figure — because you are comparing numbers, not photographs.</p>
+
+        <div style="display: flex; gap: 12px; margin-bottom: 38px;">
+          <a href="#" style="display: inline-flex; align-items: center; gap: 10px; padding: 15px 26px; background: #0673a2; color: #ffffff; font-size: 16px; font-weight: 600; text-decoration: none;" style-hover="background: #ffffff; color: #0b1c2e; text-decoration: none;">Browse the catalogue<span>→</span></a>
+          <a href="#" style="display: inline-flex; align-items: center; padding: 15px 26px; border: 1px solid #3a5878; color: #ffffff; font-size: 16px; font-weight: 600; text-decoration: none;" style-hover="border-color: #ffffff; text-decoration: none;">Talk to an engineer</a>
+        </div>
+
+        <div style="border-top: 1px solid #24456b; padding-top: 26px; max-width: 520px;">
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #9ab0c6; margin-bottom: 10px;">Reordering? Paste your part numbers</div>
+          <div style="display: flex; gap: 8px;">
+            <input type="text" placeholder="KTA-387, LAJ-047, PSM-900…" style="flex: 1 1 auto; height: 46px; background: rgba(255,255,255,0.05); border: 1px solid #3a5878; color: #ffffff; padding: 0 14px; font-size: 15.5px; font-family: 'IBM Plex Mono', monospace; outline: none;" />
+            <button style="flex: 0 0 auto; height: 46px; padding: 0 22px; background: #ffffff; color: #0b1c2e; border: 0; font-size: 15px; font-weight: 600; cursor: pointer;" style-hover="background: #0673a2; color: #ffffff;">Add to order</button>
+          </div>
+        </div>
+      </div>
+
+      <div style="background: #ffffff; border: 1px solid #24456b; animation: ocRise 0.6s ease-out;">
+        <div style="display: flex; align-items: center; justify-content: space-between; padding: 10px 16px; background: #f4f6f8; border-bottom: 1px solid #dbe2e8;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #16304f;">Just released — built in-house</span>
+          <span style="background: #0673a2; color: #ffffff; font-size: 12px; font-weight: 700; letter-spacing: 0.08em; padding: 3px 7px;">NEW</span>
+        </div>
+        <div style="padding: 22px 22px 0;">
+          <img src="/uploads/OceanControls-Design-Assets/03-product-images/Data-Loggers__KTA-387.png" alt="KTA-387 Modbus Data Logger" style="width: 100%; height: 210px; object-fit: contain; display: block;" />
+        </div>
+        <div style="padding: 18px 22px 22px;">
+          <div style="display: flex; align-items: center; gap: 8px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #667380; margin-bottom: 8px;">
+            <span>OCEAN CONTROLS</span><span style="color: #c9d3dc;">/</span><span>SKU KTA-387</span>
+          </div>
+          <h3 style="margin: 0 0 12px; font-size: 18.5px; line-height: 1.3; font-weight: 600; color: #0b1c2e;">Modbus Data Logger — Dual RS-485, 100 channels, SD card logging</h3>
+          <div style="display: flex; gap: 6px; margin-bottom: 16px;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; background: #eef2f5; color: #24456b; padding: 4px 7px;">SPEC SHEET</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; background: #eef2f5; color: #24456b; padding: 4px 7px;">1 DOWNLOAD</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; background: #fdf3e3; color: #a5620a; padding: 4px 7px;">BACKORDER</span>
+          </div>
+          <div style="display: flex; align-items: flex-end; justify-content: space-between; border-top: 1px solid #dbe2e8; padding-top: 14px;">
+            <div>
+              <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #667380;">{{ heroPriceLabel }}</div>
+              <div style="font-size: 31px; font-weight: 700; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; color: #0b1c2e;">{{ heroPrice }}</div>
+              <div style="font-size: 13px; color: #667380;">{{ heroPriceNote }}</div>
+            </div>
+            <button onClick="{{ addHero }}" style="padding: 13px 20px; background: #16304f; color: #ffffff; border: 0; font-size: 15px; font-weight: 600; cursor: pointer;" style-hover="background: #0673a2;">Add to cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="position: relative; border-top: 1px solid #24456b; background: rgba(255,255,255,0.03);">
+      <div style="max-width: 1400px; margin: 0 auto; padding: 0 32px; display: grid; grid-template-columns: repeat(auto-fit, minmax(195px, 1fr));">
+        <div style="padding: 22px 24px 22px 0; border-right: 1px solid #24456b;">
+          <div style="font-size: 27px; font-weight: 700; color: #ffffff; font-variant-numeric: tabular-nums; letter-spacing: -0.02em;">2,279</div>
+          <div style="font-size: 14px; color: #a9bed4; margin-top: 2px;">products in the catalogue</div>
+        </div>
+        <div style="padding: 22px 24px; border-right: 1px solid #24456b;">
+          <div style="font-size: 27px; font-weight: 700; color: #ffffff; font-variant-numeric: tabular-nums; letter-spacing: -0.02em;">237</div>
+          <div style="font-size: 14px; color: #a9bed4; margin-top: 2px;">categories, properly nested</div>
+        </div>
+        <div style="padding: 22px 24px; border-right: 1px solid #24456b;">
+          <div style="font-size: 27px; font-weight: 700; color: #ffffff; font-variant-numeric: tabular-nums; letter-spacing: -0.02em;">48</div>
+          <div style="font-size: 14px; color: #a9bed4; margin-top: 2px;">manufacturers represented</div>
+        </div>
+        <div style="padding: 22px 24px; border-right: 1px solid #24456b;">
+          <div style="font-size: 27px; font-weight: 700; color: #ffffff; font-variant-numeric: tabular-nums; letter-spacing: -0.02em;">1,743</div>
+          <div style="font-size: 14px; color: #a9bed4; margin-top: 2px;">datasheets on file</div>
+        </div>
+        <div style="padding: 22px 0 22px 24px;">
+          <div style="font-size: 27px; font-weight: 700; color: #ffffff; font-variant-numeric: tabular-nums; letter-spacing: -0.02em;">2,097</div>
+          <div style="font-size: 14px; color: #a9bed4; margin-top: 2px;">products with quantity breaks</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Categories" style="padding: 72px 0 76px; background: #ffffff;">
+    <div style="max-width: 1400px; margin: 0 auto; padding: 0 32px;">
+      <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 40px; margin-bottom: 32px;">
+        <div>
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #06708f; margin-bottom: 12px;">Shop by category</div>
+          <h2 style="margin: 0 0 10px; font-size: 33px; line-height: 1.12; font-weight: 700; letter-spacing: -0.02em; color: #0b1c2e;">Start where the panel starts</h2>
+          <p style="margin: 0; font-size: 17px; line-height: 1.6; color: #667380; max-width: 44em;">Eighteen of the twenty-nine top-level groups, sized by what is actually on the shelf. Every group opens into its own nested subcategories.</p>
+        </div>
+        <a href="#" style="flex: 0 0 auto; display: inline-flex; align-items: center; gap: 8px; padding: 12px 18px; border: 1px solid #c9d3dc; font-size: 15px; font-weight: 600; color: #16304f; text-decoration: none;" style-hover="border-color: #16304f; background: #f4f6f8; text-decoration: none;">All 237 categories<span>→</span></a>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 1px; background: #dbe2e8; border: 1px solid #dbe2e8;">
+        <sc-for list="{{ catTiles }}" as="t" hint-placeholder-count="18">
+          <a href="#" style="display: block; background: #ffffff; padding: 18px 16px 16px; text-decoration: none; position: relative;" style-hover="background: #f8fafb; text-decoration: none;">
+            <img src="{{ t.img }}" alt="" style="width: 100%; height: 92px; object-fit: contain; display: block; margin-bottom: 14px;" />
+            <div style="font-size: 15px; font-weight: 600; color: #16304f; line-height: 1.3; height: 42px; overflow: hidden;">{{ t.name }}</div>
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 8px; border-top: 1px solid #eef2f5; padding-top: 8px;">
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #667380; font-variant-numeric: tabular-nums;">{{ t.countLabel }}</span>
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #667380;">{{ t.subLabel }}</span>
+            </div>
+          </a>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Instant browse" style="padding: 0 0 80px; background: #ffffff;">
+    <div style="max-width: 1400px; margin: 0 auto; padding: 0 32px;">
+      <div style="background: #f4f6f8; border: 1px solid #dbe2e8;">
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 32px; padding: 24px 28px; border-bottom: 1px solid #dbe2e8; background: #ffffff;">
+          <div>
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #06708f; margin-bottom: 10px;">Instant browse — no page reload</div>
+            <h2 style="margin: 0 0 8px; font-size: 29px; line-height: 1.15; font-weight: 700; letter-spacing: -0.02em; color: #0b1c2e;">Click a category. Products appear.</h2>
+            <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #667380; max-width: 52em;">The behaviour you asked for: the catalogue swaps in place while the header, filters and cart stay put. Try the rail on the left.</p>
+          </div>
+          <div style="flex: 0 0 auto; display: flex; align-items: center; gap: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; color: #667380;">
+            <span style="width: 8px; height: 8px; border-radius: 50%; background: #2fd07e;"></span>{{ browseLatency }}
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 264px 1fr;">
+          <div style="border-right: 1px solid #dbe2e8; background: #ffffff; padding: 12px 0;">
+            <sc-for list="{{ browseCats }}" as="b" hint-placeholder-count="8">
+              <div onClick="{{ b.pick }}" style="display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 11px 18px; cursor: pointer; border-left: 3px solid {{ b.edge }}; background: {{ b.bg }};">
+                <span style="font-size: 15px; font-weight: {{ b.weight }}; color: {{ b.fg }};">{{ b.name }}</span>
+                <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #667380; font-variant-numeric: tabular-nums;">{{ b.count }}</span>
+              </div>
+            </sc-for>
+            <div style="margin: 12px 18px 4px; padding-top: 14px; border-top: 1px solid #eef2f5;">
+              <a href="#" style="font-size: 14px; font-weight: 600;">See all 29 groups →</a>
+            </div>
+          </div>
+
+          <div style="padding: 20px 24px 24px;">
+            <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 18px;">
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #667380; margin-right: 4px;">Refine</span>
+              <sc-for list="{{ browseChips }}" as="c" hint-placeholder-count="5">
+                <span style="font-size: 13.5px; background: #ffffff; border: 1px solid #dbe2e8; color: #24456b; padding: 6px 11px; cursor: pointer;" style-hover="border-color: #0b9fd8; color: #06708f;">{{ c }}</span>
+              </sc-for>
+              <span style="margin-left: auto; font-size: 14px; color: #667380;">{{ browseCount }}</span>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(235px, 1fr)); gap: 16px;">
+              <sc-for list="{{ browseProducts }}" as="p" hint-placeholder-count="4">
+                <div style="background: #ffffff; border: 1px solid #dbe2e8; display: flex; flex-direction: column;" style-hover="border-color: #0b9fd8; box-shadow: 0 12px 28px -18px rgba(11,28,46,0.45);">
+                  <div style="position: relative; padding: 16px; border-bottom: 1px solid #eef2f5;">
+                    <sc-if value="{{ p.hasBadge }}" hint-placeholder-val="{{ false }}">
+                      <span style="position: absolute; top: 10px; left: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; font-weight: 600; letter-spacing: 0.08em; padding: 3px 6px; color: #ffffff; background: {{ p.badgeBg }};">{{ p.badge }}</span>
+                    </sc-if>
+                    <img src="{{ p.img }}" alt="" style="width: 100%; height: 122px; object-fit: contain; display: block;" />
+                  </div>
+                  <div style="padding: 12px 14px 14px; display: flex; flex-direction: column; flex: 1 1 auto;">
+                    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; color: #667380; margin-bottom: 6px;">{{ p.brand }}</div>
+                    <div style="font-size: 14.5px; font-weight: 500; line-height: 1.35; color: #16304f; height: 82px; overflow: hidden;">{{ p.name }}</div>
+                    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #667380; margin: 8px 0 6px;">{{ p.skuLabel }}</div>
+                    <div style="display: flex; align-items: center; gap: 6px; font-size: 13px; color: {{ p.stockFg }}; margin-bottom: 10px;">
+                      <span style="width: 6px; height: 6px; border-radius: 50%; background: {{ p.stockFg }};"></span>{{ p.stockText }}
+                    </div>
+                    <div style="margin-top: auto;">
+                      <div style="display: flex; align-items: baseline; gap: 8px;">
+                        <span style="font-size: 20.5px; font-weight: 700; letter-spacing: -0.01em; font-variant-numeric: tabular-nums; color: #0b1c2e;">{{ p.priceMain }}</span>
+                        <span style="font-size: 12.5px; color: #667380;">{{ p.priceUnit }}</span>
+                      </div>
+                      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; line-height: 15px; color: #06708f; height: 46px; overflow: hidden;">{{ p.tierText }}</div>
+                      <div style="display: flex; gap: 6px; margin-top: 10px;">
+                        <div style="display: flex; border: 1px solid #dbe2e8; height: 34px; flex: 0 0 auto;">
+                          <div onClick="{{ p.dec }}" style="width: 28px; display: flex; align-items: center; justify-content: center; cursor: pointer; color: #667380; font-size: 15.5px;" style-hover="background: #f4f6f8;">−</div>
+                          <div style="width: 30px; display: flex; align-items: center; justify-content: center; font-size: 14.5px; font-weight: 600; font-variant-numeric: tabular-nums; border-left: 1px solid #eef2f5; border-right: 1px solid #eef2f5;">{{ p.qty }}</div>
+                          <div onClick="{{ p.inc }}" style="width: 28px; display: flex; align-items: center; justify-content: center; cursor: pointer; color: #667380; font-size: 15.5px;" style-hover="background: #f4f6f8;">+</div>
+                        </div>
+                        <button onClick="{{ p.add }}" style="flex: 1 1 auto; height: 34px; background: #16304f; color: #ffffff; border: 0; font-size: 14px; font-weight: 600; cursor: pointer;" style-hover="background: #0673a2;">Add</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </sc-for>
+
+              <a href="#" style="background: #ffffff; border: 1px dashed #c9d3dc; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; padding: 24px; text-decoration: none; min-height: 300px;" style-hover="border-color: #0b9fd8; background: #f8fbfd; text-decoration: none;">
+                <span style="font-size: 31px; font-weight: 700; letter-spacing: -0.02em; color: #16304f; font-variant-numeric: tabular-nums;">{{ browseRemaining }}</span>
+                <span style="font-size: 14.5px; font-weight: 600; color: #16304f; text-align: center; line-height: 1.4;">more in {{ browseName }}</span>
+                <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #06708f;">View category →</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Deals" style="padding: 0 0 80px; background: #ffffff;">
+    <div style="max-width: 1400px; margin: 0 auto; padding: 0 32px;">
+      <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 40px; border-bottom: 2px solid #16304f; padding-bottom: 16px; margin-bottom: 26px;">
+        <div style="display: flex; align-items: baseline; gap: 28px;">
+          <h2 style="margin: 0; font-size: 29px; font-weight: 700; letter-spacing: -0.02em; color: #0b1c2e;">Moving stock</h2>
+          <div style="display: flex; gap: 4px;">
+            <sc-for list="{{ dealTabs }}" as="d" hint-placeholder-count="3">
+              <div onClick="{{ d.pick }}" style="padding: 8px 16px; font-size: 14.5px; font-weight: 600; cursor: pointer; background: {{ d.bg }}; color: {{ d.fg }}; border: 1px solid {{ d.edge }};">{{ d.label }}</div>
+            </sc-for>
+          </div>
+        </div>
+        <a href="#" style="font-size: 15px; font-weight: 600;">{{ dealAllLabel }}</a>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 16px;">
+        <sc-for list="{{ dealProducts }}" as="p" hint-placeholder-count="6">
+          <div style="background: #ffffff; border: 1px solid #dbe2e8; display: flex; flex-direction: column;" style-hover="border-color: #0b9fd8; box-shadow: 0 12px 28px -18px rgba(11,28,46,0.45);">
+            <div style="position: relative; padding: 16px; border-bottom: 1px solid #eef2f5;">
+              <sc-if value="{{ p.hasBadge }}" hint-placeholder-val="{{ true }}">
+                <span style="position: absolute; top: 10px; left: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; font-weight: 600; letter-spacing: 0.08em; padding: 3px 6px; color: #ffffff; background: {{ p.badgeBg }};">{{ p.badge }}</span>
+              </sc-if>
+              <img src="{{ p.img }}" alt="" style="width: 100%; height: 118px; object-fit: contain; display: block;" />
+            </div>
+            <div style="padding: 12px 14px 14px; display: flex; flex-direction: column; flex: 1 1 auto;">
+              <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; color: #667380; margin-bottom: 6px;">{{ p.brand }}</div>
+              <div style="font-size: 14.5px; font-weight: 500; line-height: 1.35; color: #16304f; height: 82px; overflow: hidden;">{{ p.name }}</div>
+              <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #667380; margin: 8px 0 6px;">{{ p.skuLabel }}</div>
+              <div style="display: flex; align-items: center; gap: 6px; font-size: 13px; color: {{ p.stockFg }}; margin-bottom: 10px;">
+                <span style="width: 6px; height: 6px; border-radius: 50%; background: {{ p.stockFg }};"></span>{{ p.stockText }}
+              </div>
+              <div style="margin-top: auto;">
+                <div style="height: 15px; font-size: 13px; color: #667380; text-decoration: line-through; font-variant-numeric: tabular-nums;">{{ p.priceWas }}</div>
+                <div style="display: flex; align-items: baseline; gap: 8px;">
+                  <span style="font-size: 20.5px; font-weight: 700; letter-spacing: -0.01em; font-variant-numeric: tabular-nums; color: {{ p.priceFg }};">{{ p.priceMain }}</span>
+                  <span style="font-size: 12.5px; color: #667380;">{{ p.priceUnit }}</span>
+                </div>
+                <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; line-height: 15px; color: #06708f; height: 46px; overflow: hidden;">{{ p.tierText }}</div>
+                <button onClick="{{ p.add }}" style="width: 100%; height: 34px; margin-top: 10px; background: #16304f; color: #ffffff; border: 0; font-size: 14px; font-weight: 600; cursor: pointer;" style-hover="background: #0673a2;">Add to cart</button>
+              </div>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Trade accounts" style="background: #16304f; color: #ffffff;">
+    <div style="max-width: 1400px; margin: 0 auto; padding: 0 32px; display: grid; grid-template-columns: 1.15fr 1fr;">
+      <div style="padding: 58px 60px 58px 0;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #6fd0f5; margin-bottom: 16px;">Two ways to buy</div>
+        <h2 style="margin: 0 0 16px; font-size: 33px; line-height: 1.15; font-weight: 700; letter-spacing: -0.02em;">Quantity breaks for everyone. Contract pricing for approved accounts.</h2>
+        <p style="margin: 0 0 28px; font-size: 17px; line-height: 1.65; color: #b7cade; max-width: 40em;">Retail buyers see tiered pricing on 2,097 products the moment they land — no login, no quote request. Approved trade customers sign in and the whole catalogue re-prices to their agreed rate. An account is required to check out either way, so your order history, invoices and datasheet downloads all stay in one place.</p>
+        <div style="display: flex; gap: 12px;">
+          <a href="#" style="padding: 14px 24px; background: #0673a2; color: #ffffff; font-size: 15.5px; font-weight: 600; text-decoration: none;" style-hover="background: #ffffff; color: #0b1c2e; text-decoration: none;">Apply for a trade account</a>
+          <a href="#" style="padding: 14px 24px; border: 1px solid #3a5878; color: #ffffff; font-size: 15.5px; font-weight: 600; text-decoration: none;" style-hover="border-color: #ffffff; text-decoration: none;">Create a retail account</a>
+        </div>
+      </div>
+      <div style="border-left: 1px solid #24456b; padding: 58px 0 58px 60px; display: flex; flex-direction: column; gap: 2px;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #9ab0c6; margin-bottom: 14px;">Example — NPT4 slimline temperature transmitter</div>
+        <sc-for list="{{ tierRows }}" as="r" hint-placeholder-count="4">
+          <div style="display: grid; grid-template-columns: 1fr auto auto; gap: 18px; align-items: center; padding: 13px 16px; background: {{ r.bg }}; border: 1px solid {{ r.edge }};">
+            <span style="font-size: 15px; font-weight: 500; color: {{ r.fg }};">{{ r.qty }}</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 16.5px; font-weight: 500; font-variant-numeric: tabular-nums; color: {{ r.fg }};">{{ r.each }}</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; color: {{ r.saveFg }}; min-width: 74px; text-align: right;">{{ r.save }}</span>
+          </div>
+        </sc-for>
+        <div style="margin-top: 14px; font-size: 13.5px; color: #a9bed4;">{{ tierNote }}</div>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Brands" style="padding: 72px 0 76px; background: #ffffff;">
+    <div style="max-width: 1400px; margin: 0 auto; padding: 0 32px;">
+      <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 40px; margin-bottom: 28px;">
+        <div>
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #06708f; margin-bottom: 12px;">Authorised distributor</div>
+          <h2 style="margin: 0 0 10px; font-size: 33px; line-height: 1.12; font-weight: 700; letter-spacing: -0.02em; color: #0b1c2e;">Forty-eight manufacturers, one purchase order</h2>
+          <p style="margin: 0; font-size: 17px; line-height: 1.6; color: #667380; max-width: 44em;">Including our own range — 93 products designed and built in Carrum Downs, supported by the people who made them.</p>
+        </div>
+        <a href="#" style="flex: 0 0 auto; display: inline-flex; align-items: center; gap: 8px; padding: 12px 18px; border: 1px solid #c9d3dc; font-size: 15px; font-weight: 600; color: #16304f; text-decoration: none;" style-hover="border-color: #16304f; background: #f4f6f8; text-decoration: none;">All brands<span>→</span></a>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1px; background: #dbe2e8; border: 1px solid #dbe2e8;">
+        <sc-for list="{{ brands }}" as="b" hint-placeholder-count="24">
+          <a href="#" style="background: #ffffff; padding: 20px 16px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; text-decoration: none; min-height: 116px;" style-hover="background: #f8fafb; text-decoration: none;">
+            <img src="{{ b.img }}" alt="{{ b.name }}" style="max-width: 100%; max-height: 40px; object-fit: contain; display: block;" />
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.06em; color: #667380; font-variant-numeric: tabular-nums;">{{ b.count }}</span>
+          </a>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Services and about" style="padding: 0 0 80px; background: #ffffff;">
+    <div style="max-width: 1400px; margin: 0 auto; padding: 0 32px; display: grid; grid-template-columns: 1fr 400px; gap: 40px; align-items: start;">
+      <div>
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #06708f; margin-bottom: 12px;">Engineering services</div>
+        <h2 style="margin: 0 0 10px; font-size: 33px; line-height: 1.12; font-weight: 700; letter-spacing: -0.02em; color: #0b1c2e;">When the part you need isn't on a shelf</h2>
+        <p style="margin: 0 0 28px; font-size: 17px; line-height: 1.6; color: #667380; max-width: 46em;">We are a supplier with a workshop behind it. The same team that answers the phone about a 4–20&nbsp;mA loop also designs the board, writes the PLC code and builds the panel.</p>
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: #dbe2e8; border: 1px solid #dbe2e8;">
+          <div style="background: #ffffff; padding: 24px;">
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 23px; color: #0b9fd8; margin-bottom: 12px;">01</div>
+            <h3 style="margin: 0 0 8px; font-size: 18px; font-weight: 600; color: #0b1c2e;">Custom hardware design</h3>
+            <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #667380;">Circuit and PCB design through to a housed, labelled, DIN-mountable product — the way our own KTA range was built.</p>
+          </div>
+          <div style="background: #ffffff; padding: 24px;">
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 23px; color: #0b9fd8; margin-bottom: 12px;">02</div>
+            <h3 style="margin: 0 0 8px; font-size: 18px; font-weight: 600; color: #0b1c2e;">PLC programming</h3>
+            <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #667380;">Delta, Teco, Akytec and HNC platforms — new machine logic, retrofits, and rescuing undocumented code someone else left behind.</p>
+          </div>
+          <div style="background: #ffffff; padding: 24px;">
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 23px; color: #0b9fd8; margin-bottom: 12px;">03</div>
+            <h3 style="margin: 0 0 8px; font-size: 18px; font-weight: 600; color: #0b1c2e;">HMI &amp; SCADA screens</h3>
+            <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #667380;">Operator interfaces that a shift worker can read at a glance, wired through Modbus, BACnet or MQTT to whatever is already installed.</p>
+          </div>
+          <div style="background: #ffffff; padding: 24px;">
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 23px; color: #0b9fd8; margin-bottom: 12px;">04</div>
+            <h3 style="margin: 0 0 8px; font-size: 18px; font-weight: 600; color: #0b1c2e;">Embedded &amp; data acquisition</h3>
+            <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #667380;">Logging, remote monitoring and test rigs — like the 25-tonne hydraulic press we instrumented with a LabJack U6 for an Australian compliance lab.</p>
+          </div>
+        </div>
+        <div style="margin-top: 22px; display: flex; gap: 12px;">
+          <a href="#" style="padding: 13px 22px; background: #16304f; color: #ffffff; font-size: 15px; font-weight: 600; text-decoration: none;" style-hover="background: #0673a2; text-decoration: none;">Discuss a project</a>
+          <a href="#" style="padding: 13px 22px; border: 1px solid #c9d3dc; color: #16304f; font-size: 15px; font-weight: 600; text-decoration: none;" style-hover="border-color: #16304f; text-decoration: none;">Read the LabJack case study</a>
+        </div>
+      </div>
+
+      <div style="background: #f4f6f8; border: 1px solid #dbe2e8; padding: 28px;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #06708f; margin-bottom: 14px;">About Ocean Controls</div>
+        <h3 style="margin: 0 0 14px; font-size: 22.5px; line-height: 1.25; font-weight: 700; letter-spacing: -0.01em; color: #0b1c2e;">A supply shop run by engineers, in Carrum Downs</h3>
+        <p style="margin: 0 0 14px; font-size: 15.5px; line-height: 1.65; color: #4b5560;">You can walk into our store on Frankston Gardens Drive, Monday to Friday, and talk to someone who knows the difference between a PT100 and a thermocouple. We hold stock rather than drop-ship, we publish the datasheet next to the price, and we ship worldwide through distributors in nine countries.</p>
+        <p style="margin: 0 0 22px; font-size: 15.5px; line-height: 1.65; color: #4b5560;">Ninety-three of the products we sell carry our own name — designed here, built here, and still supported by the person who drew the schematic.</p>
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: #dbe2e8; border: 1px solid #dbe2e8; margin-bottom: 22px;">
+          <div style="background: #ffffff; padding: 14px 16px;">
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #667380;">Store hours</div>
+            <div style="font-size: 15px; font-weight: 600; color: #16304f; margin-top: 4px;">Mon–Fri, 9am–5pm</div>
+          </div>
+          <div style="background: #ffffff; padding: 14px 16px;">
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #667380;">Dispatch</div>
+            <div style="font-size: 15px; font-weight: 600; color: #16304f; margin-top: 4px;">Within 2 business days</div>
+          </div>
+          <div style="background: #ffffff; padding: 14px 16px;">
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #667380;">Carriers</div>
+            <div style="font-size: 15px; font-weight: 600; color: #16304f; margin-top: 4px;">AusPost, DHL, FedEx</div>
+          </div>
+          <div style="background: #ffffff; padding: 14px 16px;">
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #667380;">Own range</div>
+            <div style="font-size: 15px; font-weight: 600; color: #16304f; margin-top: 4px;">93 products</div>
+          </div>
+        </div>
+        <a href="#" style="display: inline-flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 600;">Read our story<span>→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Articles" style="padding: 0 0 84px; background: #ffffff;">
+    <div style="max-width: 1400px; margin: 0 auto; padding: 0 32px;">
+      <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 40px; border-bottom: 2px solid #16304f; padding-bottom: 16px; margin-bottom: 26px;">
+        <h2 style="margin: 0; font-size: 29px; font-weight: 700; letter-spacing: -0.02em; color: #0b1c2e;">Product news &amp; application notes</h2>
+        <a href="#" style="font-size: 15px; font-weight: 600;">All articles →</a>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(235px, 1fr)); gap: 1px; background: #dbe2e8; border: 1px solid #dbe2e8;">
+        <sc-for list="{{ articles }}" as="a" hint-placeholder-count="4">
+          <a href="#" style="background: #ffffff; padding: 24px; display: flex; flex-direction: column; gap: 12px; text-decoration: none; min-height: 210px;" style-hover="background: #f8fafb; text-decoration: none;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #06708f;">{{ a.kind }}</span>
+            <span style="font-size: 18px; line-height: 1.3; font-weight: 600; color: #0b1c2e;">{{ a.title }}</span>
+            <span style="font-size: 15px; line-height: 1.6; color: #667380; flex: 1 1 auto;">{{ a.excerpt }}</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #667380;">{{ a.date }}</span>
+          </a>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Support band" style="background: #f4f6f8; border-top: 1px solid #dbe2e8; border-bottom: 1px solid #dbe2e8;">
+    <div style="max-width: 1400px; margin: 0 auto; padding: 0 32px; display: grid; grid-template-columns: repeat(auto-fit, minmax(235px, 1fr)); gap: 1px; background: #dbe2e8;">
+      <div style="background: #f4f6f8; padding: 34px 28px 34px 0;">
+        <div style="font-size: 17px; font-weight: 600; color: #0b1c2e; margin-bottom: 6px;">Talk to a technician</div>
+        <p style="margin: 0 0 10px; font-size: 15px; line-height: 1.6; color: #667380;">Not sure which sensor suits the range? Call before you order.</p>
+        <a href="#" style="font-family: 'IBM Plex Mono', monospace; font-size: 15.5px; font-weight: 500;">+61 3 9708 2390</a>
+      </div>
+      <div style="background: #f4f6f8; padding: 34px 28px;">
+        <div style="font-size: 17px; font-weight: 600; color: #0b1c2e; margin-bottom: 6px;">1,743 datasheets</div>
+        <p style="margin: 0 0 10px; font-size: 15px; line-height: 1.6; color: #667380;">Manuals, wiring diagrams and configuration software, free to download.</p>
+        <a href="#" style="font-size: 15px; font-weight: 600;">Browse downloads →</a>
+      </div>
+      <div style="background: #f4f6f8; padding: 34px 28px;">
+        <div style="font-size: 17px; font-weight: 600; color: #0b1c2e; margin-bottom: 6px;">Returns &amp; warranty</div>
+        <p style="margin: 0 0 10px; font-size: 15px; line-height: 1.6; color: #667380;">Clear terms on every product page, not buried in a PDF.</p>
+        <a href="#" style="font-size: 15px; font-weight: 600;">Read the policy →</a>
+      </div>
+      <div style="background: #f4f6f8; padding: 34px 0 34px 28px;">
+        <div style="font-size: 17px; font-weight: 600; color: #0b1c2e; margin-bottom: 6px;">Become a distributor</div>
+        <p style="margin: 0 0 10px; font-size: 15px; line-height: 1.6; color: #667380;">Our range is resold across North America, Central America and Europe.</p>
+        <a href="#" style="font-size: 15px; font-weight: 600;">Distributor enquiries →</a>
+      </div>
+    </div>
+  </section>
+
+  <footer data-screen-label="Footer" style="background: #0b1c2e; color: #a9bed4; padding: 56px 0 0;">
+    <div style="max-width: 1400px; margin: 0 auto; padding: 0 32px;">
+      <div style="display: grid; grid-template-columns: 1.3fr 1fr 1fr 1fr 1.2fr; gap: 40px; padding-bottom: 44px; border-bottom: 1px solid #24456b;">
+        <div>
+          <div style="background: #ffffff; display: inline-block; padding: 10px 12px; margin-bottom: 20px;">
+            <img src="/uploads/OceanControls-Design-Assets/02-brand-assets/ocean-controls-logo.png" alt="Ocean Controls" style="height: 34px; width: auto; display: block;" />
+          </div>
+          <p style="margin: 0 0 18px; font-size: 15px; line-height: 1.65; color: #a9bed4; max-width: 30em;">Australia's specialist supplier of industrial automation and control equipment, and a custom engineering shop for the jobs the catalogue can't cover.</p>
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; line-height: 1.9; color: #a9bed4;">
+            <div>44 Frankston Gardens Drive</div>
+            <div>Carrum Downs VIC 3201, Australia</div>
+            <div style="margin-top: 8px; color: #d6e4f2;">+61 3 9708 2390</div>
+            <div><a href="#" style="color: #6fd0f5;">info@oceancontrols.com.au</a></div>
+            <div style="margin-top: 8px;">ABN 28 659 967 398</div>
+          </div>
+        </div>
+        <div>
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #9ab0c6; margin-bottom: 16px;">Top categories</div>
+          <div style="display: flex; flex-direction: column; gap: 9px; font-size: 15px;">
+            <a href="#" style="color: #d6e4f2; text-decoration: none;">Sensors</a>
+            <a href="#" style="color: #d6e4f2; text-decoration: none;">Power Supplies</a>
+            <a href="#" style="color: #d6e4f2; text-decoration: none;">Modbus, BACnet &amp; M-Bus</a>
+            <a href="#" style="color: #d6e4f2; text-decoration: none;">Controllers</a>
+            <a href="#" style="color: #d6e4f2; text-decoration: none;">Panel Meters</a>
+            <a href="#" style="color: #d6e4f2; text-decoration: none;">Relays &amp; Relay Cards</a>
+            <a href="#" style="color: #d6e4f2; text-decoration: none;">Motor Drivers &amp; Controllers</a>
+            <a href="#" style="color: #d6e4f2; text-decoration: none;">PLCs &amp; HMIs</a>
+          </div>
+        </div>
+        <div>
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #9ab0c6; margin-bottom: 16px;">Shop</div>
+          <div style="display: flex; flex-direction: column; gap: 9px; font-size: 15px;">
+            <a href="#" style="color: #d6e4f2; text-decoration: none;">New arrivals</a>
+            <a href="#" style="color: #d6e4f2; text-decoration: none;">Clearance &amp; sale</a>
+            <a href="#" style="color: #d6e4f2; text-decoration: none;">Coming soon</a>
+            <a href="#" style="color: #d6e4f2; text-decoration: none;">All brands</a>
+            <a href="#" style="color: #d6e4f2; text-decoration: none;">Ocean Controls range</a>
+            <a href="#" style="color: #d6e4f2; text-decoration: none;">Weather stations</a>
+            <a href="#" style="color: #d6e4f2; text-decoration: none;">Software</a>
+          </div>
+        </div>
+        <div>
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #9ab0c6; margin-bottom: 16px;">Company</div>
+          <div style="display: flex; flex-direction: column; gap: 9px; font-size: 15px;">
+            <a href="#" style="color: #d6e4f2; text-decoration: none;">About us</a>
+            <a href="#" style="color: #d6e4f2; text-decoration: none;">Engineering services</a>
+            <a href="#" style="color: #d6e4f2; text-decoration: none;">Articles &amp; news</a>
+            <a href="#" style="color: #d6e4f2; text-decoration: none;">Distributors &amp; resellers</a>
+            <a href="#" style="color: #d6e4f2; text-decoration: none;">Contact us</a>
+            <a href="#" style="color: #d6e4f2; text-decoration: none;">Shipping &amp; delivery</a>
+            <a href="#" style="color: #d6e4f2; text-decoration: none;">Returns &amp; warranty</a>
+          </div>
+        </div>
+        <div>
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #9ab0c6; margin-bottom: 16px;">Product updates</div>
+          <p style="margin: 0 0 14px; font-size: 15px; line-height: 1.6; color: #a9bed4;">New releases, price changes and application notes. Roughly monthly, no marketing filler.</p>
+          <div style="display: flex; margin-bottom: 22px;">
+            <input type="text" placeholder="you@company.com.au" style="flex: 1 1 auto; height: 42px; background: rgba(255,255,255,0.06); border: 1px solid #3a5878; border-right: 0; color: #ffffff; padding: 0 12px; font-size: 14.5px; outline: none; min-width: 0;" />
+            <button style="flex: 0 0 auto; height: 42px; padding: 0 16px; background: #0673a2; color: #ffffff; border: 0; font-size: 14px; font-weight: 600; cursor: pointer;" style-hover="background: #ffffff; color: #0b1c2e;">Join</button>
+          </div>
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #9ab0c6; margin-bottom: 10px;">Payment accepted</div>
+          <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; border: 1px solid #3a5878; padding: 5px 9px; color: #d6e4f2;">VISA</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; border: 1px solid #3a5878; padding: 5px 9px; color: #d6e4f2;">MASTERCARD</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; border: 1px solid #3a5878; padding: 5px 9px; color: #d6e4f2;">AMEX</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; border: 1px solid #3a5878; padding: 5px 9px; color: #d6e4f2;">EFTPOS</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; border: 1px solid #3a5878; padding: 5px 9px; color: #d6e4f2;">ACCOUNT</span>
+          </div>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; justify-content: space-between; gap: 30px; padding: 22px 0 26px; font-size: 13.5px; color: #9ab0c6;">
+        <span>© 2026 Ocean Controls Pty Ltd. All prices in AUD and exclude GST unless stated.</span>
+        <span style="display: flex; gap: 22px;">
+          <a href="#" style="color: #a9bed4; text-decoration: none;">Privacy</a>
+          <a href="#" style="color: #a9bed4; text-decoration: none;">Terms of sale</a>
+          <a href="#" style="color: #a9bed4; text-decoration: none;">Sitemap</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <sc-if value="{{ toastOn }}" hint-placeholder-val="{{ false }}">
+    <div style="position: fixed; right: 28px; bottom: 28px; z-index: 90; background: #0b1c2e; color: #ffffff; border-left: 3px solid #2fd07e; padding: 14px 20px; box-shadow: 0 24px 48px -18px rgba(11,28,46,0.6); animation: ocFade 0.18s ease-out; max-width: 340px;">
+      <div style="font-size: 15px; font-weight: 600; margin-bottom: 3px;">Added to cart</div>
+      <div style="font-size: 14px; color: #a9bed4;">{{ toast }}</div>
+    </div>
+  </sc-if>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;priceMode&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;retail&quot;,&quot;trade&quot;],&quot;default&quot;:&quot;retail&quot;,&quot;tsType&quot;:&quot;'retail' | 'trade'&quot;,&quot;section&quot;:&quot;Commerce&quot;},&quot;tradeDiscount&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;min&quot;:5,&quot;max&quot;:40,&quot;step&quot;:1,&quot;unit&quot;:&quot;%&quot;,&quot;default&quot;:15,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Commerce&quot;},&quot;showQtyBreaks&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Commerce&quot;},&quot;showStockCounts&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Commerce&quot;}}">
+const IMG = 'uploads/OceanControls-Design-Assets/03-product-images/';
+const BR = 'uploads/OceanControls-Design-Assets/02-brand-assets/brand-logos/';
+
+// sku, name, brand, price, stock (-1 = backorder), tiers, image file, badge
+const RAW = [
+  ['KTA-387','Modbus Data Logger — Dual RS-485, 100-Channel, SD Card Logging','Ocean Controls',145.03,-1,3,'Data-Loggers__KTA-387.png','NEW'],
+  ['AKD-001','MSD200 Modbus Datalogger','Akytec',293.14,4,3,'Data-Loggers__AKD-001.jpg',''],
+  ['HNC-061','TH500A Communication Converter (USB Flash Drive)','Hanyoung Nux',323.23,1,3,'Data-Loggers__HNC-061.jpg',''],
+  ['GJS-002','DS18B20 1-Wire Waterproof Digital Temperature Sensor, 15 m cable','GJY Electronics',19.93,18,3,'Sensors__GJS-002.jpg',''],
+  ['TCS-001','TST100 1-Wire Temperature Sensor with IP65 Protection','Teracom',39.43,6,3,'Sensors__TCS-001.jpg',''],
+  ['RKS-070','RK95-51 Mounting Bracket for PH, EC, DO, ORP Sensors','Rika Sensor',73.74,3,3,'Sensors__RKS-070.png',''],
+  ['RKS-002A','RK100-01G Wind Speed Sensor, 0–10 VDC Output','Rika Sensor',158.65,5,3,'Weather__RKS-002A.jpg',''],
+  ['KTA-397','4G LTE SMS Controller with Relay Outputs','Ocean Controls',293.93,41,2,'Controllers__KTA-397.jpg','NEW'],
+  ['TCC-039','4G LTE Universal IO Module TCG120-4G','Teracom',391.06,2,3,'Controllers__TCC-039.jpg',''],
+  ['LEA-002','698-960 / 1700-2700 MHz 3G/4G 5 dB LTE Antenna','Z_AE',7.67,1,3,'Controllers__LEA-002.jpg',''],
+  ['PSM-900','20 kA Surge Protector','Mean Well / ESI',19.98,2,0,'Power-Supplies__PSM-900.jpg',''],
+  ['PSM-997','Mean Well DRL-01 L-Shaped DIN Rail Bracket','Mean Well / ESI',0.85,11,0,'Power-Supplies__PSM-997.jpg',''],
+  ['PSM-9971','Mean Well DRL-02 L-Shaped DIN Rail Bracket','Mean Well / ESI',0.85,5,0,'Power-Supplies__PSM-9971.jpg',''],
+  ['ADW-001','HD67671 BACnet MS/TP Slave / Modbus Master Converter','ADF Web',489.31,3,2,'Modbus-Bacnet-MBus-Products__ADW-001.jpg',''],
+  ['ADW-002','HD67671 BACnet/IP Slave / Modbus Master Converter','ADF Web',489.31,6,2,'Modbus-Bacnet-MBus-Products__ADW-002.jpg',''],
+  ['ADW-003','HD67933 Modbus Master / MQTT Converter','ADF Web',520.72,1,2,'Modbus-Bacnet-MBus-Products__ADW-003.jpg','NEW'],
+  ['NTR-150','Engine Start Attempt & Alarm Relay','Foxtam Controls',94.16,1,3,'Relays-%26-Relay-Cards__NTR-150.jpg',''],
+  ['NTR-180','10 Input Relay Alarm Module','Foxtam Controls',282.35,1,3,'Relays-%26-Relay-Cards__NTR-180.jpg',''],
+  ['NTR-190','Plug-In Alarm Integrator','Foxtam Controls',65.07,1,3,'Relays-%26-Relay-Cards__NTR-190.jpg',''],
+  ['DBI-032','AC Volt-Current Input 4-Digit Process Indicator, 1 Relay, 24 VDC (48×96 mm)','DCBox',112.36,3,3,'Panel-Meters__DBI-032.jpg',''],
+  ['DBI-033','DC Volt Input 4-Digit Process Indicator, 1 Relay, 24 VDC (48×96 mm)','DCBox',112.36,2,3,'Panel-Meters__DBI-033.jpg',''],
+  ['FMI-905','Fema WME Wall-Mount Housing for 96×48 mm Panel Meters','Fema',165.68,1,3,'Panel-Meters__FMI-905.jpg',''],
+  ['ULC-141','UR41L 4G Mini Industrial Cellular Router','Milesight',138.53,8,2,'Industrial-IoT__ULC-141.webp',''],
+  ['ULC-075','UR75 Industrial 5G Router','Milesight',681.12,6,2,'Industrial-IoT__ULC-075.webp','NEW'],
+  ['ULC-008C','UC300 IoT Controller (Cellular / LoRaWAN)','Milesight',226.63,7,2,'Industrial-IoT__ULC-008C.jpg',''],
+  ['AKB-001','NPT4 Slimline Temperature Transmitter','Akytec',121.42,5,3,'Signal-Conditioners__AKB-001.jpg','-40%'],
+  ['FMI-150','FEMA 4-20 mA Input Signal Converter with ±10 VDC Output','Fema',231.00,2,3,'Signal-Conditioners__FMI-150.jpg',''],
+  ['KTA-367A','Universal Input to 4-20 mA Transmitter with IP65 Rating','Ocean Controls',95.57,15,3,'Signal-Conditioners__KTA-367A.jpg',''],
+  ['SIG-130','Novus DigiRail NxProg Programmable IO Module 2AI, 2AO, 4DI, 2RO, 1ETH','Novus',273.34,3,3,'Arduino__SIG-130.jpg',''],
+  ['SIG-131','Novus DigiRail NxProg Programmable IO Module 2AI, 2AO, 4DI, 3DO, 1ETH','Novus',390.49,2,3,'Arduino__SIG-131.jpg','NEW'],
+  ['KTA-401','BACnet IP Weather Station Gateway for Davis Weather Stations','Ocean Controls',241.50,8,3,'Weather__KTA-401.jpg',''],
+  ['KTA-402','BACnet MS/TP Weather Station Gateway for Davis Weather Stations','Ocean Controls',241.50,48,3,'Weather__KTA-402.jpg',''],
+  ['HET-100','Signal Generator 4-20 mA / 0-10 V / 0-5 V Voltage & Current Simulator','Z_AE',104.97,10,3,'Test-Equipment__HET-100.jpg',''],
+  ['HET-115','Signal Process Generator Pocket Precision LB02A','Z_AE',209.97,3,3,'Test-Equipment__HET-115.jpg',''],
+  ['HNL-022','24 VDC Multi-Level Signal Tower (R/Y/G/B/W) + Buzzer','Hanyoung Nux',112.48,9,3,'Lighting__HNL-022.jpg',''],
+  ['SPE-015','Grey CE-Approved ABS Waterproof Enclosure, 400×300×160 mm','Saip Group',81.40,41,0,'Enclosures__SPE-015.jpg',''],
+  ['HER-300','22 mm Rotary Potentiometer 10 k','Z_AE',24.47,19,3,'Electrical-Switches__HER-300.jpg',''],
+  ['SMC-055','EM882S 8.2 A Open-Loop Stepper Drive','Leadshine',134.06,2,3,'Motor-Drivers-%26-Controllers__SMC-055.jpg',''],
+  ['DEI-100','DOP Series HMI USB Programming Cable','DELTA',32.80,4,0,'PLCs-%26-HMIs__DEI-100.jpg',''],
+  ['FMI-110','Fema B44-C1 4-Digit Counter, Large 100 mm Display, IP65, 24 VDC','Fema',825.57,2,3,'Large-Displays__FMI-110.jpg',''],
+  ['IPI-103','Universal Input N1500G Large Indicator 230 VAC, Analog Out, RS-485','Novus',517.32,1,3,'Large-Displays__IPI-103.jpg',''],
+  ['DTC-012','RJ12 Terminal Card','Ocean Controls',27.97,5,3,'Communications__DTC-012.jpg',''],
+  ['HNR-100','Multi-Function Timer MA4N-B','Hanyoung Nux',43.19,9,3,'Timers__HNR-100.jpg',''],
+  ['CIR-003','Circuit Breaker 10 A Panel Mount','Z_ALT',6.52,59,2,'Prototyping__CIR-003.jpg',''],
+  ['KPR-106','Wired Photoelectric Smoke Detector','King Pigeon',21.00,8,3,'Security__KPR-106.jpg',''],
+  ['AZE-012','DAQFactory Lite Software','AzeoTech',296.10,32,0,'Software__AZE-012.jpg',''],
+  ['CGL-004','PG9 Grey Cable Gland','SMS',1.76,39,2,'Electrical-Terminals-Wiring__CGL-004.jpg',''],
+  ['LSK-073','RS485 Modbus / EtherCAT Cable for EL8/7/6 Drivers','Leadshine',8.62,2,3,'Motors-%26-Accessories__LSK-073.png','']
+];
+
+const CATALOGUE = {};
+RAW.forEach(function (r) {
+  CATALOGUE[r[0]] = { sku: r[0], name: r[1], brand: r[2], price: r[3], stock: r[4], tiers: r[5], img: IMG + r[6], badge: r[7] };
+});
+
+// name, total products, subcategory count, tile image, [subcategories "name|count"]
+const CATS = [
+  ['Sensors', 569, 27, 'Sensors__GJS-002.jpg', ['Inductive Proximity Sensors|85','Pressure Transducers|81','Temperature & Humidity|65','PhotoElectric Switches|44','Inclinometers / Tilt Sensors|39','Current Transducers|34','RTD - PT100|34','Float Switches|32','Length & Distance|31','Liquid Level Sensors|31','Ultrasonic|24','Thermocouples|23','Temperature Other|20','1 Wire|19','Capacitive Proximity Sensors|17','Limit Switches|13','Load Cells|10','Current Transformer|10','CO2 Sensors|8','Flow Sensors|8','Light Sensor|7','Current / Voltage|7','Accelerometers|4','VOC - Air Quality|3','Electronic Compasses|2','Hall Effect|2']],
+  ['Power Supplies', 281, 16, 'Power-Supplies__PSM-900.jpg', ['DC-DC Converter Cage|80','Caged / Enclosed|45','DIN Rail ≥100 W|36','DIN Rail|33','IP67 & LED Supplies|21','DC-DC Converter DIN Rail|15','MultiRail|13','DIN Rail (3Φ / 415 VAC)|13','Power Adapters / Plug Packs|13','DC-AC Inverters|11','Battery Management|10','Accessories|6','DIN Rail with UPS Function|2','KNX|2','Motor Drive Supplies|1','DIN Rail 24 VAC to DC|1']],
+  ['Modbus, BACnet & M-Bus', 139, 11, 'Modbus-Bacnet-MBus-Products__ADW-002.jpg', ['IO Modules Modbus RTU|62','Gateways|30','HVAC|22','IO Modules Modbus TCP|18','Loggers|10','Temp / Humidity|5','Software|3','Wireless|3','IO Modules BACnet|1','IO Modules MQTT|1','M-Bus|0']],
+  ['Controllers', 127, 12, 'Controllers__KTA-397.jpg', ['Process (PID)|53','Temperature|29','HVAC|15','Ethernet|12','4G / 5G|11','Process (On-Off)|11','Temperature & Humidity|8','PC Based|4','Level|3','Temperature Solar|3','Generator Controllers|2','IR & RF Remote|1']],
+  ['Panel Meters', 124, 15, 'Panel-Meters__DBI-032.jpg', ['Process Meters (≥48×96 mm)|29','Counters|15','Process Meters (24×48 mm)|14','Speed & Tachometers|13','Timers|11','IP65-7 Waterproof|9','Temperature Meters|9','Load Cell Meters|8','MultiChannel|7','Flow & Totaliser Meters|7','Process Meters (48×48 mm)|7','AC Power Meters|5','DC Generator|5','Serial RS-485|4','Accessories|3']],
+  ['Relays & Relay Cards', 112, 8, 'Relays-%26-Relay-Cards__NTR-180.jpg', ['SSRs & Accessories|28','Alarm & Fault|22','DIN Rail Mount|19','Relay Cards|15','Panel Mount & PCB|11','Contactors|10','Slimline|6','Latching and Sequence|3']],
+  ['Motor Drivers & Controllers', 102, 10, 'Motor-Drivers-%26-Controllers__SMC-055.jpg', ['Accessories|34','Stepper Drivers (Open Loop)|22','Variable Frequency Drives|14','Motors and Motion Controllers|13','Industrial Servo Drivers|9','Stepper Drivers (Closed Loop)|7','Single Phase Motor Controller|2','VFD Accessories|2','DC Motor Drivers|1','Stepper Power Supplies|1']],
+  ['Electrical Terminals & Wiring', 90, 5, 'Electrical-Terminals-Wiring__CGL-004.jpg', ['DIN Rail and Accessories|26','DIN Rail Special Function Terminals|25','Wire Labels|17','DIN Rail Screw Terminals|13','Cable Glands|9']],
+  ['Motors & Accessories', 85, 11, 'Motors-%26-Accessories__LSK-073.png', ['Stepper Motors with Encoder (Closed Loop)|17','Stepper Motors (Open Loop)|16','Shaft Couplers & Adaptors|13','Encoders|7','Integrated Stepper Motors (Closed Loop)|7','Industrial Servo Motors|6','Integrated Stepper Motors (Open Loop)|5','DC Motors|4','Gear Boxes|3','RC Servo Motors|3','Integrated Servo Motors|2']],
+  ['Communications', 82, 10, 'Communications__DTC-012.jpg', ['Adapters|21','Wireless Accessories|18','Fibre Converters|12','Serial Converters|11','Serial Servers|7','Wireless|7','Ethernet|6','Surge Protection|5','USB Converters|4','CAN Bus|3']],
+  ['Weather', 77, 7, 'Weather__RKS-002A.jpg', ['Sensors|53','Weather Station Accessories|15','Modbus Gateways|3','Weather Station Kits|3','BACnet Gateways|2','BACnet Weather Station Kit|2','Modbus Weather Station Kits|1']],
+  ['Signal Conditioners', 68, 6, 'Signal-Conditioners__FMI-150.jpg', ['Signal Isolators|38','Isolated Converters|21','Non-isolated Converters|14','Load Cell|9','Surge Arrester|3','Signal Amplifiers|0']],
+  ['Electrical Switches', 59, 3, 'Electrical-Switches__HER-300.jpg', ['22 mm Switches & Indicators|37','Control Stations|21','Foot / Lever|2']],
+  ['PLCs & HMIs', 58, 10, 'PLCs-%26-HMIs__DEI-100.jpg', ['PLRs Teco|17','PLCs Delta|10','PLRs Akytec|9','I/O Modules Delta|8','Accessories|7','HMIs Emko|6','HMIs Delta|5','HMIs Conch|2','PLCs HNC Electric|0','UniPi|0']],
+  ['Enclosures', 48, 8, 'Enclosures__SPE-015.jpg', ['Plastic|25','ABS Control Box|22','DIN Rail PCB Mounts|15','DIN Rail Enclosures|4','Aluminium|2','Accessories|1','Panel Mount|0','Protoboard Enclosures|0']],
+  ['Data Acquisition', 43, 3, 'Data-Acquisition__LAJ-002.jpg', ['RS-485 ASCII Protocol|31','LabJack Accessories|27','LabJack Modules|15']],
+  ['Prototyping', 39, 8, 'Prototyping__CIR-003.jpg', ['Circuit Breakers|14','Fans|12','Wireless & RFID|12','Switches & Buttons|3','Regulators & Converters|2','Solar Panel|1','Current Sensors|0','Potentiometers|0']],
+  ['Lighting', 33, 5, 'Lighting__HNL-022.jpg', ['Strip Lighting|14','Light Towers|9','Strip Lighting Accessories|6','Warning Lights|4','Floodlight|0']],
+  ['Data Loggers', 30, 5, 'Data-Loggers__KTA-387.png', ['Universal Input|14','Accessories|6','Temperature & Humidity|5','Voltage & Current|5','Event and Pulse|3']],
+  ['Industrial IoT', 22, 5, 'Industrial-IoT__ULC-075.webp', ['Wireless|24','3G / 4G Routers|8','Remote Monitoring & Cloud|5','SMS Alarming|3','Accessories|2']],
+  ['Computer Products', 20, 2, 'Computer-Products__CAB-102.jpg', ['Leads & Cables|17','Gender Changers & Adapters|3']],
+  ['Timers', 17, 3, 'Timers__HNR-100.jpg', ['Panel Mount|11','Timeclocks|7','DIN Rail|6']],
+  ['Security', 15, 2, 'Security__KPR-106.jpg', ['Detection|14','Identification|2']],
+  ['Large Displays', 13, 8, 'Large-Displays__FMI-110.jpg', ['Process 4-20 mA / 0-10 V|6','Counter / Timer|3','Freq-Tacho|3','Modbus-Serial|2','Temperature|2','Universal|2','Accessories|1','Load Cell|1']],
+  ['Test Equipment', 12, 5, 'Test-Equipment__HET-100.jpg', ['Calibrators & Generators|12','Configuration Services|1','Temperature|1','Analysis Meters|0','Tachometers|0']],
+  ['Software', 8, 0, 'Software__AZE-012.jpg', ['DAQFactory|3','Configuration tools|3','Modbus utilities|2']],
+  ['CNC', 17, 2, 'CNC__CND-902.jpg', ['CNC Accessories|9','CNC Controllers|8']],
+  ['Arduino', 7, 0, 'Arduino__SIG-130.jpg', ['Shields|4','Modules|3']],
+  ['Clearance & SALE', 83, 1, 'Signal-Conditioners__AKB-001.jpg', ['SALE|39','Clearance|44']]
+];
+
+const CAT_PICK = ['GJS-002','PSM-900','ADW-002','KTA-397','DBI-032','NTR-180','SMC-055','CGL-004','LSK-073','DTC-012','RKS-002A','FMI-150','HER-300','DEI-100','SPE-015','GJS-002','CIR-003','HNL-022','KTA-387','ULC-075','DTC-012','HNR-100','KPR-106','FMI-110','HET-100','AZE-012','LSK-073','SIG-130','AKB-001'];
+
+const BROWSE = [
+  ['Sensors', 569, ['GJS-002','TCS-001','RKS-070'], ['1-Wire','PT100 / RTD','4-20 mA output','IP67 rated','In stock only']],
+  ['Controllers', 127, ['KTA-397','TCC-039','LEA-002'], ['PID','4G / 5G','DIN rail','24 VDC','Modbus RTU']],
+  ['Modbus & BACnet', 139, ['ADW-001','ADW-002','ADW-003'], ['Gateway','MS/TP','BACnet IP','MQTT','TCP slave']],
+  ['Panel Meters', 124, ['DBI-032','DBI-033','FMI-905'], ['48×96 mm','With relay','RS-485','IP65','Load cell']],
+  ['Relays & Relay Cards', 112, ['NTR-150','NTR-180','NTR-190'], ['SSR','DIN rail','Alarm & fault','240 VAC','Plug-in']],
+  ['Industrial IoT', 22, ['ULC-141','ULC-075','ULC-008C'], ['5G','LoRaWAN','Cellular router','Cloud','SMS alarming']],
+  ['Data Loggers', 30, ['KTA-387','AKD-001','HNC-061'], ['SD card','Modbus','Universal input','4G','Temp / humidity']],
+  ['Test Equipment', 12, ['HET-100','HET-115','FMI-905'], ['Loop calibrator','Signal generator','Pocket','4-20 mA','0-10 V']]
+];
+
+const DEALS = [
+  ['New arrivals', 'All new arrivals →', ['KTA-387','ULC-075','SIG-131','ADW-003','KTA-397','RKS-002A']],
+  ['Clearance', 'All 83 clearance items →', ['AKB-001','FMI-905','LEA-002','HNC-061','IPI-103','CIR-003']],
+  ['Best sellers', 'Top 100 by volume →', ['KTA-402','GJS-002','CGL-004','HNR-100','ULC-141','KTA-367A']]
+];
+
+const SALE_WAS = { 'AKB-001': 202.35, 'FMI-905': 234.00, 'LEA-002': 12.20, 'HNC-061': 412.00, 'IPI-103': 646.65, 'CIR-003': 8.60 };
+
+const BRANDS = [
+  ['Mean Well / ESI','Mean-Well---ESI.png',303],['Novus','Novus.jpg',218],['Leadshine','Leadshine.png',132],['Hanyoung Nux','Hanyoung-Nux.gif',117],
+  ['IBEST','IBEST.png',103],['Ocean Controls','Ocean-Controls.png',93],['DCBox','DCBox.png',84],['SMS','SMS.jpeg',71],
+  ['Conch','Conch.png',61],['Foxtam Controls','Foxtam-Controls.png',59],['Emko','Emko.png',55],['Comeco','Comeco.png',47],
+  ['RION','RION.png',44],['Teracom','Teracom.png',44],['Rika Sensor','Rika-Sensor.png',44],['Akytec','Akytec.png',43],
+  ['LabJack','LabJack.png',42],['Weibo','Weibo.png',42],['Produal','Produal.png',40],['DELTA','DELTA.png',37],
+  ['Alish','Alish.gif',35],['TECO','TECO.png',34],['Davis Instruments','Davis-Instruments.webp',30],['3onedata','3onedata.png',29],
+  ['Simex','Simex.png',26],['Senix','Senix.png',24],['Fema','Fema.jpg',22],['Milesight','Milesight.png',22],
+  ['ATOP','ATOP.png',21],['Cledlight','Cledlight.jpg',19],['ADF Web','ADF-Web.png',19],['Yotta Control','Yotta-Control.png',19]
+];
+
+const ARTICLES = [
+  ['Product release','Humidity & Temperature Sensor TSH202B','A fully calibrated 1-Wire sensor with 3.0% RH accuracy and a 64-bit serial code, built for fleet and multi-zone monitoring.','12 February 2026'],
+  ['Range change','Davis Instruments gateway upgrade','KTA-402 replaces the KTA-302 for BACnet MS/TP, and the new KTA-382 combines Modbus TCP and RTU in one unit at the old price.','5 February 2025'],
+  ['Case study','A 25-tonne press, instrumented','How Australian Compliance Laboratory runs precision load-deflection tests with a LabJack U6, nine transducers and custom automation cycles.','8 May 2024'],
+  ['Buying guide','Leadshine stepper motors, closed and open loop','Which drive pairs with which motor, when the encoder is worth it, and the tuning cable you will need on the bench.','20 January 2026']
+];
+
+class Component extends DCLogic {
+  state = {
+    menuOpen: false, megaCat: 0, browseCat: 0, dealTab: 0,
+    searchQ: '', searchOpen: false,
+    cartCount: 0, cartValue: 0, toast: '', qty: {},
+    priceMode: null
+  };
+
+  componentWillUnmount() { clearTimeout(this._t); }
+
+  mode() { return this.state.priceMode || this.props.priceMode || 'retail'; }
+  disc() { const d = Number(this.props.tradeDiscount); return d > 0 ? d : 15; }
+
+  money(v) { return '$' + v.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ','); }
+
+  fire(name) {
+    this.setState({ toast: name });
+    clearTimeout(this._t);
+    this._t = setTimeout(() => this.setState({ toast: '' }), 2600);
+  }
+
+  add(sku) {
+    const p = CATALOGUE[sku];
+    const n = this.state.qty[sku] || 1;
+    const unit = this.mode() === 'trade' ? p.price * (1 - this.disc() / 100) : p.price;
+    this.setState(s => ({ cartCount: s.cartCount + n, cartValue: s.cartValue + unit * n }));
+    this.fire(n + ' × ' + p.sku + ' — ' + p.name);
+  }
+
+  bump(sku, d) {
+    this.setState(s => {
+      const q = Math.max(1, (s.qty[sku] || 1) + d);
+      return { qty: Object.assign({}, s.qty, { [sku]: q }) };
+    });
+  }
+
+  view(sku, opts) {
+    const o = opts || {};
+    const p = CATALOGUE[sku];
+    const trade = this.mode() === 'trade';
+    const eff = trade ? p.price * (1 - this.disc() / 100) : p.price;
+    const was = o.was;
+
+    let stockText, stockFg;
+    if (p.stock < 0) { stockText = 'Available for backorder'; stockFg = '#a5620a'; }
+    else if (p.stock === 0) { stockText = 'Out of stock'; stockFg = '#c2364a'; }
+    else if (p.stock <= 3) { stockText = this.props.showStockCounts === false ? 'Low stock' : 'Low stock — ' + p.stock + ' left'; stockFg = '#a5620a'; }
+    else { stockText = this.props.showStockCounts === false ? 'In stock' : 'In stock (' + p.stock + ')'; stockFg = '#157a45'; }
+
+    let tierText = '';
+    if (this.props.showQtyBreaks !== false && p.tiers > 0 && !trade) {
+      tierText = '5+ ' + this.money(p.price * 0.95) + '  ·  10+ ' + this.money(p.price * 0.9);
+    } else if (trade) {
+      tierText = 'Trade rate applied — ' + this.disc() + '% off retail';
+    }
+
+    return {
+      sku: p.sku,
+      name: p.name,
+      brand: p.brand,
+      img: p.img,
+      skuLabel: 'SKU ' + p.sku,
+      qty: this.state.qty[p.sku] || 1,
+      hasBadge: !!(p.badge || (was && !trade)),
+      badge: was && !trade ? '-' + Math.round((1 - p.price / was) * 100) + '%' : p.badge,
+      badgeBg: (was && !trade) || (p.badge || '').indexOf('-') === 0 ? '#c2364a' : '#0673a2',
+      stockText: stockText,
+      stockFg: stockFg,
+      priceMain: this.money(eff),
+      priceUnit: trade ? 'trade, ex GST' : 'ex GST',
+      priceFg: was && !trade ? '#c2364a' : '#0b1c2e',
+      priceWas: was && !trade ? this.money(was) : '',
+      tierText: tierText,
+      add: () => this.add(p.sku),
+      inc: () => this.bump(p.sku, 1),
+      dec: () => this.bump(p.sku, -1)
+    };
+  }
+
+  renderVals() {
+    const st = this.state;
+    const trade = this.mode() === 'trade';
+    const mega = CATS[st.megaCat];
+    const pick = CATALOGUE[CAT_PICK[st.megaCat]] || CATALOGUE['GJS-002'];
+    const bc = BROWSE[st.browseCat];
+    const deal = DEALS[st.dealTab];
+
+    const q = st.searchQ.trim().toLowerCase();
+    const matches = q
+      ? RAW.filter(r => (r[0] + ' ' + r[1] + ' ' + r[2]).toLowerCase().indexOf(q) > -1).slice(0, 6)
+      : ['KTA-387', 'GJS-002', 'ULC-075', 'ADW-002', 'AKB-001', 'KTA-402'].map(s => RAW.find(r => r[0] === s));
+
+    const base = CATALOGUE['AKB-001'].price;
+    const tiers = [[ '1 – 4 items', 1, 0 ], [ '5 – 9 items', 0.95, 5 ], [ '10 – 24 items', 0.9, 10 ], [ 'Trade account', 1 - this.disc() / 100, this.disc() ]];
+
+    return {
+      // header
+      searchQ: st.searchQ,
+      onSearch: e => this.setState({ searchQ: e.target.value, searchOpen: true }),
+      openSearch: () => this.setState({ searchOpen: true }),
+      closeSearch: () => this.setState({ searchOpen: false }),
+      searchOpen: st.searchOpen,
+      searchLabel: q ? matches.length + ' matches for “' + st.searchQ + '”' : 'Popular right now',
+      suggestions: matches.filter(Boolean).map(r => {
+        const v = this.view(r[0]);
+        v.metaLine = r[0] + '  ·  ' + r[2];
+        return v;
+      }),
+      noop: () => {},
+
+      retailBg: trade ? 'transparent' : '#16304f', retailFg: trade ? '#667380' : '#ffffff',
+      tradeBg: trade ? '#0673a2' : 'transparent', tradeFg: trade ? '#ffffff' : '#667380',
+      setRetail: () => this.setState({ priceMode: 'retail' }),
+      setTrade: () => this.setState({ priceMode: 'trade' }),
+
+      cartCountLabel: st.cartCount === 1 ? '1 item' : st.cartCount + ' items',
+      cartTotalLabel: this.money(st.cartValue),
+
+      // mega menu
+      menuOpen: st.menuOpen,
+      toggleMenu: () => this.setState({ menuOpen: !st.menuOpen }),
+      megaCats: CATS.map((c, i) => ({
+        name: c[0], count: c[1],
+        edge: i === st.megaCat ? '#0673a2' : 'transparent',
+        bg: i === st.megaCat ? '#ffffff' : 'transparent',
+        fg: i === st.megaCat ? '#0b1c2e' : '#24456b',
+        weight: i === st.megaCat ? '600' : '400',
+        hover: () => this.setState({ megaCat: i })
+      })),
+      megaName: mega[0],
+      megaViewAll: 'View all ' + mega[1] + ' products →',
+      megaSubline: mega[2] > 0 ? mega[2] + ' subcategories · ' + mega[1] + ' products in stock or on order' : mega[1] + ' products',
+      megaSubs: mega[4].map(s => ({ name: s.split('|')[0], count: s.split('|')[1] })),
+      megaPickImg: pick.img, megaPickName: pick.name, megaPickSku: 'SKU ' + pick.sku,
+      megaPickPrice: this.money(trade ? pick.price * (1 - this.disc() / 100) : pick.price),
+
+      // hero
+      heroPriceLabel: trade ? 'Your trade price, ex GST' : 'Retail price, ex GST',
+      heroPrice: this.money(trade ? 145.03 * (1 - this.disc() / 100) : 145.03),
+      heroPriceNote: trade ? 'Retail ' + this.money(145.03) + ' · quantity breaks still apply' : '3 quantity breaks · trade pricing on sign-in',
+      addHero: () => this.add('KTA-387'),
+
+      // category tiles
+      catTiles: CATS.slice(0, 18).map(c => ({
+        name: c[0], img: IMG + c[3],
+        countLabel: c[1] + ' products',
+        subLabel: c[2] > 0 ? c[2] + ' sub' : '—'
+      })),
+
+      // instant browse
+      browseCats: BROWSE.map((b, i) => ({
+        name: b[0], count: b[1],
+        edge: i === st.browseCat ? '#0673a2' : 'transparent',
+        bg: i === st.browseCat ? '#f4f6f8' : 'transparent',
+        fg: i === st.browseCat ? '#0b1c2e' : '#24456b',
+        weight: i === st.browseCat ? '600' : '400',
+        pick: () => this.setState({ browseCat: i })
+      })),
+      browseName: bc[0],
+      browseCount: 'Showing 3 of ' + bc[1] + ' products',
+      browseChips: bc[3],
+      browseProducts: bc[2].map(s => this.view(s)),
+      browseRemaining: '+' + (bc[1] - 3),
+      browseLatency: 'Swapped in place — 0 page loads',
+
+      // deals
+      dealTabs: DEALS.map((d, i) => ({
+        label: d[0],
+        bg: i === st.dealTab ? '#16304f' : '#ffffff',
+        fg: i === st.dealTab ? '#ffffff' : '#24456b',
+        edge: i === st.dealTab ? '#16304f' : '#dbe2e8',
+        pick: () => this.setState({ dealTab: i })
+      })),
+      dealAllLabel: deal[1],
+      dealProducts: deal[2].map(s => this.view(s, { was: st.dealTab === 1 ? SALE_WAS[s] : null })),
+
+      // trade tier table
+      tierRows: tiers.map((t, i) => ({
+        qty: t[0],
+        each: this.money(base * t[1]) + ' ea',
+        save: t[2] ? 'save ' + t[2] + '%' : '—',
+        bg: i === 3 ? 'rgba(11,159,216,0.16)' : 'rgba(255,255,255,0.04)',
+        edge: i === 3 ? '#0673a2' : '#24456b',
+        fg: '#ffffff',
+        saveFg: i === 3 ? '#6fd0f5' : '#a9bed4'
+      })),
+      tierNote: 'Retail tiers are visible to everyone. The trade rate shown is an example — real rates are per-account and appear only after sign-in.',
+
+      brands: BRANDS.map(b => ({ name: b[0], img: BR + b[1], count: b[2] + ' products' })),
+      articles: ARTICLES.map(a => ({ kind: a[0], title: a[1], excerpt: a[2], date: a[3] })),
+
+      toastOn: !!st.toast,
+      toast: st.toast
+    };
+  }
+}
+
+</script>
+</body>
+</html>

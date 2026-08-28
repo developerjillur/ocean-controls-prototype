@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="/support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="icon" type="image/png" href="/favicon.png" />
+<link rel="apple-touch-icon" href="/favicon.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  body { margin: 0; background: #ffffff; color: #1f2429; font-family: Archivo, Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: #06708f; text-decoration: none; }
+  a:hover { color: #16304f; text-decoration: underline; }
+  p { text-wrap: pretty; }
+  input, button, select, textarea { font-family: inherit; }
+  :focus-visible { outline: 2px solid #0b9fd8; outline-offset: 2px; }
+  ::selection { background: #bfe8f8; }
+  @keyframes ocFade { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes ocRise { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+
+  /* Responsive layout — media queries cannot be expressed as inline styles.
+     Everything that must change together fires at the same width. */
+  @media (max-width: 1180px) {
+    [style*="grid-template-columns: 262px"], [style*="grid-template-columns: 264px"],
+    [style*="grid-template-columns: 268px"], [style*="grid-template-columns: 274px"],
+    [style*="grid-template-columns: 296px"], [style*="grid-template-columns: 300px"],
+    [style*="grid-template-columns: 400px"], [style*="grid-template-columns: 1fr 400px"],
+    [style*="1fr) 340px"], [style*="1fr) 360px"], [style*="1fr) 380px"],
+    [style*="1fr) 396px"], [style*="1fr) 400px"], [style*="1fr) 404px"],
+    [style*="1fr) 412px"], [style*="1fr) 420px"], [style*="1fr) 424px"],
+    [style*="1fr) 430px"], [style*="1fr) 460px"], [style*="1fr) 480px"] {
+      grid-template-columns: 1fr !important;
+    }
+    [style*="position: sticky"] { position: static !important; }
+    [style*="display: flex"] { flex-wrap: wrap; }
+    [style*="flex: 1 1 auto"] { min-width: 0; }
+    [style*="height: 84px"], [style*="height: 82px"], [style*="height: 48px"] { height: auto !important; }
+    [style*="height: 38px"] { height: auto !important; padding-top: 7px; padding-bottom: 7px; }
+    [style*="max-width: 660px"], [style*="max-width: 620px"], [style*="max-width: 560px"],
+    [style*="max-width: 480px"] { max-width: 100% !important; }
+  }
+  @media (max-width: 900px) {
+    [style*="grid-template-columns: repeat"] {
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)) !important;
+    }
+    [style*="columns: 3"] { columns: 2 !important; }
+  }
+  @media (max-width: 700px) {
+    [style*="display: grid"] { grid-template-columns: 1fr !important; }
+    [style*="columns: 3"] { columns: 1 !important; }
+  }
+</style>
+</helmet>
+
+<div style="width: 100%; background: #ffffff;">
+
+  <div style="background: #0b1c2e; color: #a9bed4; font-size: 13.5px;">
+    <div style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 36px); height: 38px; display: flex; align-items: center; gap: 26px;">
+      <span style="display: flex; align-items: center; gap: 8px;"><span style="width: 6px; height: 6px; border-radius: 50%; background: #2fd07e;"></span>Authorised Australian distributor — local stock, local warranty support</span>
+      <span style="margin-left: auto; display: flex; align-items: center; gap: 22px;">
+        <a href="/datasheets.html" style="color: #d6e4f2; text-decoration: none;">Datasheets</a>
+        <a href="#" style="color: #d6e4f2; text-decoration: none;">Shipping</a>
+        <a href="/contact.html" style="color: #d6e4f2; text-decoration: none;">Distributors</a>
+        <a href="#" style="color: #ffffff; font-family: 'IBM Plex Mono', monospace; text-decoration: none;">+61 3 9708 2390</a>
+      </span>
+    </div>
+  </div>
+
+  <div style="background: #ffffff; border-bottom: 1px solid #dbe2e8;">
+    <div style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 36px); height: 84px; display: flex; align-items: center; gap: 28px;">
+      <a href="/index.html" style="flex: 0 0 auto; display: block;" aria-label="Ocean Controls home">
+        <img src="/uploads/OceanControls-Design-Assets/02-brand-assets/ocean-controls-logo.png" alt="Ocean Controls" style="height: 42px; width: auto; display: block;" />
+      </a>
+      <div style="flex: 1 1 auto; max-width: 560px; display: flex; height: 46px; border: 1.5px solid #16304f;">
+        <input type="text" placeholder="Search 2,279 products — name, SKU, MPN or spec" style="flex: 1 1 auto; border: 0; outline: none; padding: 0 14px; font-size: 15.5px; min-width: 0;" aria-label="Search products" />
+        <a href="/search.html" style="display: flex; align-items: center; justify-content: center; text-decoration: none; flex: 0 0 auto; border: 0; background: #16304f; color: #ffffff; padding: 0 24px; font-size: 14.5px; font-weight: 600; cursor: pointer;" style-hover="background: #0673a2;">Search</a>
+      </div>
+      <div style="margin-left: auto; display: flex; align-items: center; gap: 8px;">
+        <a href="#" style="display: flex; flex-direction: column; padding: 7px 14px; border: 1px solid #dbe2e8; text-decoration: none; color: #16304f;" style-hover="border-color: #16304f; text-decoration: none;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #667380;">Account</span>
+          <span style="font-size: 14.5px; font-weight: 600;">Sign in</span>
+        </a>
+        <a href="/cart.html" style="display: flex; align-items: center; gap: 11px; padding: 9px 15px; background: #16304f; color: #ffffff; text-decoration: none;" style-hover="background: #0b1c2e; text-decoration: none;">
+          <span style="position: relative; display: block; width: 17px; height: 17px; border: 1.5px solid #ffffff; border-top-color: transparent;">
+            <span style="position: absolute; top: -5px; left: 2px; right: 2px; height: 5px; border: 1.5px solid #ffffff; border-bottom: 0;"></span>
+          </span>
+          <span style="display: flex; flex-direction: column; line-height: 1.25;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #90b4d4;">0 items</span>
+            <span style="font-size: 14.5px; font-weight: 600;">$0.00</span>
+          </span>
+        </a>
+      </div>
+    </div>
+
+    <div style="background: #16304f;">
+      <div style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 36px); display: flex; align-items: stretch;">
+        <a href="/shop.html" style="display: flex; align-items: center; gap: 11px; padding: 0 20px; height: 48px; background: #0673a2; color: #ffffff; font-size: 15px; font-weight: 600; text-decoration: none; flex: 0 0 auto;" style-hover="background: #06708f; text-decoration: none;">
+          <span style="display: flex; flex-direction: column; gap: 3px;">
+            <span style="display: block; width: 15px; height: 2px; background: #ffffff;"></span>
+            <span style="display: block; width: 15px; height: 2px; background: #ffffff;"></span>
+            <span style="display: block; width: 15px; height: 2px; background: #ffffff;"></span>
+          </span>
+          Shop by category
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; font-weight: 600; color: #ffffff;">237</span>
+        </a>
+        <a href="/shop.html" style="display: flex; align-items: center; padding: 0 15px; color: #d6e4f2; font-size: 15px; font-weight: 500; text-decoration: none;" style-hover="background: #24456b; color: #ffffff; text-decoration: none;">New arrivals</a>
+        <a href="/shop.html" style="display: flex; align-items: center; padding: 0 15px; color: #d6e4f2; font-size: 15px; font-weight: 500; text-decoration: none;" style-hover="background: #24456b; color: #ffffff; text-decoration: none;">Clearance</a>
+        <a href="/brands.html" style="display: flex; align-items: center; padding: 0 15px; background: #24456b; color: #ffffff; font-size: 15px; font-weight: 600; text-decoration: none; box-shadow: inset 0 -2px 0 #0b9fd8;">Brands</a>
+        <a href="/about.html" style="display: flex; align-items: center; padding: 0 15px; color: #d6e4f2; font-size: 15px; font-weight: 500; text-decoration: none;" style-hover="background: #24456b; color: #ffffff; text-decoration: none;">Engineering services</a>
+        <a href="/datasheets.html" style="display: flex; align-items: center; padding: 0 15px; color: #d6e4f2; font-size: 15px; font-weight: 500; text-decoration: none;" style-hover="background: #24456b; color: #ffffff; text-decoration: none;">Datasheets</a>
+        <a href="/about.html" style="display: flex; align-items: center; padding: 0 15px; color: #d6e4f2; font-size: 15px; font-weight: 500; text-decoration: none;" style-hover="background: #24456b; color: #ffffff; text-decoration: none;">About</a>
+        <a href="/contact.html" style="margin-left: auto; display: flex; align-items: center; gap: 9px; padding: 0 18px; background: #0673a2; color: #ffffff; font-size: 14.5px; font-weight: 600; text-decoration: none;" style-hover="background: #6fd0f5; color: #0b1c2e; text-decoration: none;">Become a distributor<span>→</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div style="background: #f7f9fb; border-bottom: 1px solid #dbe2e8;">
+    <div style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 36px); height: 44px; display: flex; align-items: center; gap: 10px; font-size: 14px; color: #667380;">
+      <a href="/index.html" style="color: #06708f;">Home</a>
+      <span style="color: #c9d3dc;">/</span>
+      <button onClick="{{ goIndex }}" style="border: 0; background: none; padding: 0; font-family: inherit; font-size: 14px; color: #06708f; cursor: pointer;">Brands</button>
+      <sc-if value="{{ isBrand }}" hint-placeholder-val="{{ false }}">
+        <span style="color: #c9d3dc;">/</span>
+        <span style="color: #16304f; font-weight: 600;">{{ brand.name }}</span>
+      </sc-if>
+      <span style="margin-left: auto; font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; color: #667380;">{{ crumbNote }}</span>
+    </div>
+  </div>
+
+  <sc-if value="{{ isIndex }}" hint-placeholder-val="{{ true }}">
+    <div style="animation: ocFade 0.24s ease-out;">
+
+      <section data-screen-label="Brands hero" style="background: #0b1c2e; position: relative; overflow: hidden;">
+        <div style="position: absolute; inset: 0; background-image: linear-gradient(90deg, rgba(11,159,216,0.08) 1px, transparent 1px), linear-gradient(180deg, rgba(11,159,216,0.08) 1px, transparent 1px); background-size: 60px 60px;"></div>
+        <div style="position: absolute; top: -220px; right: -150px; width: 660px; height: 660px; border-radius: 50%; background: radial-gradient(circle, rgba(11,159,216,0.2), rgba(11,159,216,0) 66%);"></div>
+        <div style="position: relative; max-width: 1440px; margin: 0 auto; padding: 56px 36px 0; display: grid; grid-template-columns: minmax(0, 1fr) 430px; gap: 72px; align-items: start;">
+          <div style="animation: ocRise 0.5s ease-out;">
+            <div style="display: inline-flex; align-items: center; gap: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #6fd0f5; border: 1px solid rgba(111,208,245,0.35); padding: 6px 12px; margin-bottom: 24px;">
+              <span style="width: 6px; height: 6px; background: #6fd0f5;"></span>Authorised distributor
+            </div>
+            <h1 style="margin: 0 0 18px; font-size: 52px; line-height: 1.04; font-weight: 800; letter-spacing: -0.03em; color: #ffffff; max-width: 17em;">Forty-eight manufacturers, one purchase order.</h1>
+            <p style="margin: 0 0 30px; font-size: 18.5px; line-height: 1.6; color: #a9bed4; max-width: 40em;">Mean Well power supplies, Novus instrumentation, Leadshine motion, ADF Web gateways, Davis weather stations — held on our shelves in Carrum Downs, invoiced together, warranted locally. Plus 93 products of our own.</p>
+            <div style="display: flex; gap: 12px;">
+              <a href="/shop.html" style="display: inline-flex; align-items: center; gap: 10px; padding: 15px 26px; background: #0673a2; color: #ffffff; font-size: 16px; font-weight: 600; text-decoration: none;" style-hover="background: #ffffff; color: #0b1c2e; text-decoration: none;">Browse the catalogue<span>→</span></a>
+              <a href="#" style="display: inline-flex; align-items: center; padding: 15px 26px; border: 1px solid #3a5878; color: #ffffff; font-size: 16px; font-weight: 600; text-decoration: none;" style-hover="border-color: #ffffff; text-decoration: none;">Distributor enquiries</a>
+            </div>
+          </div>
+
+          <div style="background: #ffffff; border: 1px solid #24456b; animation: ocRise 0.6s ease-out;">
+            <div style="padding: 13px 18px; background: #f4f6f8; border-bottom: 1px solid #dbe2e8; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #16304f;">Deepest ranges we carry</div>
+            <sc-for list="{{ topFive }}" as="t" hint-placeholder-count="0">
+              <button onClick="{{ t.open }}" style="width: 100%; display: grid; grid-template-columns: 76px minmax(0, 1fr) 62px; align-items: center; gap: 14px; padding: 12px 18px; border: 0; border-bottom: 1px solid #eef2f5; background: none; cursor: pointer; text-align: left;" style-hover="background: #f7f9fb;">
+                <div style="{{ t.logoStyle }}"></div>
+                <span style="min-width: 0;">
+                  <span style="display: block; font-size: 15px; font-weight: 600; color: #16304f;">{{ t.name }}</span>
+                  <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #667380; margin-top: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{ t.focus }}</span>
+                </span>
+                <span style="font-family: 'IBM Plex Mono', monospace; font-size: 14.5px; font-weight: 500; color: #0b1c2e; text-align: right; font-variant-numeric: tabular-nums;">{{ t.count }}</span>
+              </button>
+            </sc-for>
+            <div style="padding: 12px 18px; background: #f7f9fb; font-size: 13.5px; color: #667380;">Those five alone account for {{ topFiveShare }} of the catalogue.</div>
+          </div>
+        </div>
+
+        <div style="position: relative; border-top: 1px solid #24456b; margin-top: 48px; background: rgba(255,255,255,0.03);">
+          <div style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 36px); display: grid; grid-template-columns: repeat(auto-fit, minmax(195px, 1fr));">
+            <sc-for list="{{ stats }}" as="s" hint-placeholder-count="0">
+              <div style="{{ s.cellStyle }}">
+                <div style="font-size: 27px; font-weight: 800; color: #ffffff; font-variant-numeric: tabular-nums; letter-spacing: -0.03em;">{{ s.n }}</div>
+                <div style="font-size: 14px; line-height: 1.4; color: #a9bed4; margin-top: 3px;">{{ s.label }}</div>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </section>
+
+      <section data-screen-label="Brand directory" style="background: #ffffff; padding: 40px 0 78px;">
+        <div style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 36px);">
+
+          <div style="display: flex; align-items: center; gap: 14px; border: 1px solid #dbe2e8; background: #f7f9fb; padding: 12px 16px; margin-bottom: 18px;">
+            <div style="display: flex; height: 40px; flex: 0 0 320px; border: 1px solid #dbe2e8; background: #ffffff;">
+              <input type="text" placeholder="Filter brands by name" value="{{ query }}" onInput="{{ onQuery }}" style="flex: 1 1 auto; border: 0; outline: none; padding: 0 12px; font-size: 14.5px; min-width: 0;" aria-label="Filter brands" />
+              <span style="flex: 0 0 auto; display: flex; align-items: center; padding-right: 11px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #667380;">{{ resultCount }}</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #667380;">Focus</span>
+              <sc-for list="{{ focusFilters }}" as="f" hint-placeholder-count="0">
+                <button onClick="{{ f.pick }}" style="{{ f.style }}">{{ f.label }}</button>
+              </sc-for>
+            </div>
+            <div style="margin-left: auto; display: flex; align-items: center; gap: 8px;">
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #667380;">Sort</span>
+              <sc-for list="{{ sortOpts }}" as="s" hint-placeholder-count="0">
+                <button onClick="{{ s.pick }}" style="{{ s.style }}">{{ s.label }}</button>
+              </sc-for>
+            </div>
+          </div>
+
+          <sc-if value="{{ hasBrands }}" hint-placeholder-val="{{ true }}">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(235px, 1fr)); gap: 16px;">
+              <sc-for list="{{ brands }}" as="b" hint-placeholder-count="0">
+                <button onClick="{{ b.open }}" style="background: #ffffff; border: 1px solid #dbe2e8; border-top: 2px solid #dbe2e8; display: flex; flex-direction: column; padding: 0; cursor: pointer; text-align: left;" style-hover="border-color: #b6c6d4; border-top-color: #0673a2; box-shadow: 0 14px 30px -20px rgba(11,28,46,0.5);">
+                  <span style="display: flex; align-items: center; justify-content: center; height: 92px; width: 100%; padding: 18px 20px; border-bottom: 1px solid #eef2f5;">
+                    <span style="{{ b.logoStyle }}"></span>
+                  </span>
+                  <span style="display: flex; flex-direction: column; flex: 1 1 auto; padding: 14px 16px 16px; width: 100%;">
+                    <span style="display: flex; align-items: baseline; justify-content: space-between; gap: 10px;">
+                      <span style="font-size: 16px; font-weight: 700; color: #0b1c2e; letter-spacing: -0.01em;">{{ b.name }}</span>
+                      <sc-if value="{{ b.isOwn }}" hint-placeholder-val="{{ false }}">
+                        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.08em; background: #0673a2; color: #ffffff; padding: 3px 6px;">OURS</span>
+                      </sc-if>
+                    </span>
+                    <span style="display: block; font-size: 14px; line-height: 1.5; color: #667380; margin: 6px 0 12px; min-height: 40px;">{{ b.focus }}</span>
+                    <span style="display: grid; grid-template-columns: repeat(auto-fit, minmax(265px, 1fr)); gap: 1px; background: #eef2f5; border: 1px solid #eef2f5; margin-top: auto;">
+                      <span style="display: block; background: #ffffff; padding: 8px 9px;">
+                        <span style="display: block; font-size: 15.5px; font-weight: 700; color: #16304f; font-variant-numeric: tabular-nums;">{{ b.count }}</span>
+                        <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: #667380; margin-top: 2px;">products</span>
+                      </span>
+                      <span style="display: block; background: #ffffff; padding: 8px 9px;">
+                        <span style="display: block; font-size: 15.5px; font-weight: 700; color: #16304f; font-variant-numeric: tabular-nums;">{{ b.dl }}</span>
+                        <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: #667380; margin-top: 2px;">files</span>
+                      </span>
+                      <span style="display: block; background: #ffffff; padding: 8px 9px;">
+                        <span style="display: block; font-size: 15.5px; font-weight: 700; color: #16304f; font-variant-numeric: tabular-nums;">{{ b.from }}</span>
+                        <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: #667380; margin-top: 2px;">from</span>
+                      </span>
+                    </span>
+                  </span>
+                </button>
+              </sc-for>
+            </div>
+          </sc-if>
+
+          <sc-if value="{{ noBrands }}" hint-placeholder-val="{{ false }}">
+            <div style="border: 1px dashed #c9d3dc; padding: 60px 32px; text-align: center;">
+              <div style="font-size: 18.5px; font-weight: 600; color: #16304f; margin-bottom: 8px;">{{ noBrandsTitle }}</div>
+              <p style="margin: 0 auto 20px; font-size: 15.5px; line-height: 1.6; color: #667380; max-width: 42em;">We represent 48 manufacturers, and we can source from more. Call +61 3 9708 2390 and tell us the brand you are after.</p>
+              <button onClick="{{ clearFilters }}" style="border: 1px solid #16304f; background: #ffffff; color: #16304f; font-size: 14.5px; font-weight: 600; padding: 12px 20px; cursor: pointer;" style-hover="background: #16304f; color: #ffffff;">Show all 48 brands</button>
+            </div>
+          </sc-if>
+        </div>
+      </section>
+
+      <section data-screen-label="Distributor band" style="background: #16304f; color: #ffffff;">
+        <div style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 36px); display: grid; grid-template-columns: minmax(0, 1fr) 1fr;">
+          <div style="padding: 56px 60px 58px 0;">
+            <div style="display: flex; align-items: center; gap: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #6fd0f5; margin-bottom: 16px;">
+              <span style="width: 22px; height: 1px; background: #6fd0f5;"></span>Working the other way round
+            </div>
+            <h2 style="margin: 0 0 16px; font-size: 33px; line-height: 1.14; font-weight: 700; letter-spacing: -0.025em;">We are also somebody else's supplier</h2>
+            <p style="margin: 0 0 22px; font-size: 17px; line-height: 1.7; color: #b7cade; max-width: 40em;">The 93 products in our own range are resold by nine distributors across North America, Central America and Europe — six countries in total. If you want to carry the Ocean Controls range, or you want us to look at representing your equipment in Australia, that is a conversation worth having.</p>
+            <div style="display: flex; gap: 12px;">
+              <a href="/contact.html" style="padding: 14px 24px; background: #0673a2; color: #ffffff; font-size: 15.5px; font-weight: 600; text-decoration: none;" style-hover="background: #ffffff; color: #0b1c2e; text-decoration: none;">Become a distributor</a>
+              <a href="#" style="padding: 14px 24px; border: 1px solid #3a5878; color: #ffffff; font-size: 15.5px; font-weight: 600; text-decoration: none;" style-hover="border-color: #ffffff; text-decoration: none;">Propose a brand</a>
+            </div>
+          </div>
+          <div style="border-left: 1px solid #24456b; padding: 56px 0 58px 60px;">
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #9ab0c6; margin-bottom: 16px;">What being an authorised distributor means here</div>
+            <sc-for list="{{ distributorPoints }}" as="d" hint-placeholder-count="0">
+              <div style="display: flex; align-items: flex-start; gap: 14px; padding: 14px 0; border-bottom: 1px solid #24456b;">
+                <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; color: #0673a2; flex: 0 0 auto; padding-top: 3px;">{{ d.n }}</span>
+                <span>
+                  <span style="display: block; font-size: 16px; font-weight: 600; color: #ffffff; margin-bottom: 4px;">{{ d.title }}</span>
+                  <span style="display: block; font-size: 14.5px; line-height: 1.6; color: #a9bed4;">{{ d.body }}</span>
+                </span>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </section>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ isBrand }}" hint-placeholder-val="{{ false }}">
+    <div style="animation: ocFade 0.24s ease-out;">
+
+      <section data-screen-label="Brand header" style="background: #ffffff; border-bottom: 1px solid #dbe2e8;">
+        <div style="max-width: 1440px; margin: 0 auto; padding: 32px 36px 0;">
+          <div style="display: grid; grid-template-columns: 260px minmax(0, 1fr) 300px; gap: 40px; align-items: start;">
+            <div style="border: 1px solid #dbe2e8; padding: 26px; display: flex; align-items: center; justify-content: center; height: 148px;">
+              <div style="{{ brand.logoBigStyle }}"></div>
+            </div>
+
+            <div>
+              <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+                <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; background: #16304f; color: #ffffff; padding: 4px 9px;">{{ brand.tag }}</span>
+                <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; color: #667380;">{{ brand.origin }}</span>
+              </div>
+              <h1 style="margin: 0 0 12px; font-size: 35px; line-height: 1.08; font-weight: 700; letter-spacing: -0.025em; color: #0b1c2e;">{{ brand.name }}</h1>
+              <p style="margin: 0 0 18px; font-size: 17px; line-height: 1.7; color: #4b5560; max-width: 58em;">{{ brand.blurb }}</p>
+              <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+                <a href="/shop.html" style="display: inline-flex; align-items: center; gap: 8px; padding: 12px 20px; background: #16304f; color: #ffffff; font-size: 15px; font-weight: 600; text-decoration: none;" style-hover="background: #0673a2; text-decoration: none;">{{ brand.shopLabel }}<span>→</span></a>
+                <a href="#" style="display: inline-flex; align-items: center; padding: 12px 18px; border: 1px solid #c9d3dc; color: #16304f; font-size: 15px; font-weight: 600; text-decoration: none;" style-hover="border-color: #16304f; text-decoration: none;">{{ brand.docsLabel }}</a>
+                <a href="#" style="display: inline-flex; align-items: center; padding: 12px 18px; border: 1px solid #c9d3dc; color: #16304f; font-size: 15px; font-weight: 600; text-decoration: none;" style-hover="border-color: #16304f; text-decoration: none;">Ask about this range</a>
+              </div>
+            </div>
+
+            <div style="border: 1px solid #dbe2e8;">
+              <div style="padding: 12px 16px; background: #16304f; color: #ffffff; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase;">This range, in numbers</div>
+              <sc-for list="{{ brand.metrics }}" as="m" hint-placeholder-count="0">
+                <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding: 11px 16px; border-bottom: 1px solid #eef2f5;">
+                  <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #667380;">{{ m.k }}</span>
+                  <span style="font-size: 15.5px; font-weight: 700; color: {{ m.fg }}; font-variant-numeric: tabular-nums;">{{ m.v }}</span>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+
+          <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap; padding: 24px 0 22px;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #667380; margin-right: 4px;">Where this brand sits</span>
+            <sc-for list="{{ brand.cats }}" as="c" hint-placeholder-count="0">
+              <a href="/shop.html" style="display: flex; align-items: center; gap: 9px; padding: 8px 13px; border: 1px solid #dbe2e8; font-size: 14px; color: #24456b; text-decoration: none;" style-hover="border-color: #0673a2; color: #06708f; text-decoration: none;">
+                <span>{{ c.name }}</span>
+                <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #667380; font-variant-numeric: tabular-nums;">{{ c.n }}</span>
+              </a>
+            </sc-for>
+          </div>
+        </div>
+      </section>
+
+      <section data-screen-label="Brand products" style="background: #ffffff; padding: 34px 0 76px;">
+        <div style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 36px);">
+          <div style="display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 34px; align-items: start;">
+            <div>
+              <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 30px; border-bottom: 2px solid #16304f; padding-bottom: 14px; margin-bottom: 22px;">
+                <h2 style="margin: 0; font-size: 25px; font-weight: 700; letter-spacing: -0.02em; color: #0b1c2e;">{{ brand.productsHeading }}</h2>
+                <a href="/shop.html" style="font-size: 15px; font-weight: 600;">{{ brand.shopLabel }} →</a>
+              </div>
+
+              <sc-if value="{{ brand.hasProducts }}" hint-placeholder-val="{{ true }}">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(265px, 1fr)); gap: 16px;">
+                  <sc-for list="{{ brand.products }}" as="p" hint-placeholder-count="0">
+                    <a href="/product.html" style="background: #ffffff; border: 1px solid #dbe2e8; border-top: 2px solid #dbe2e8; display: flex; flex-direction: column; text-decoration: none;" style-hover="border-color: #b6c6d4; border-top-color: #0673a2; box-shadow: 0 14px 30px -20px rgba(11,28,46,0.5); text-decoration: none;">
+                      <span style="display: block; padding: 18px; border-bottom: 1px solid #eef2f5;">
+                        <span style="{{ p.imgStyle }}"></span>
+                      </span>
+                      <span style="display: flex; flex-direction: column; flex: 1 1 auto; padding: 13px 15px 15px;">
+                        <span style="display: block; font-size: 14.5px; font-weight: 500; line-height: 1.4; color: #16304f; min-height: 62px;">{{ p.name }}</span>
+                        <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #667380; margin: 8px 0 8px;">{{ p.sku }}</span>
+                        <span style="display: flex; align-items: center; gap: 6px; font-size: 13px; color: {{ p.stockFg }}; margin-bottom: 10px;">
+                          <span style="{{ p.dotStyle }}"></span>{{ p.stock }}
+                        </span>
+                        <span style="display: flex; align-items: baseline; justify-content: space-between; gap: 10px; margin-top: auto; border-top: 1px solid #eef2f5; padding-top: 11px;">
+                          <span style="font-size: 19.5px; font-weight: 700; letter-spacing: -0.015em; color: #0b1c2e; font-variant-numeric: tabular-nums;">{{ p.price }}</span>
+                          <span style="font-size: 12.5px; color: #667380;">ex GST</span>
+                        </span>
+                      </span>
+                    </a>
+                  </sc-for>
+                </div>
+              </sc-if>
+
+              <sc-if value="{{ brand.noProducts }}" hint-placeholder-val="{{ false }}">
+                <div style="border: 1px dashed #c9d3dc; padding: 44px 32px; text-align: center;">
+                  <div style="font-size: 17px; font-weight: 600; color: #16304f; margin-bottom: 8px;">{{ brand.count }} products in this range</div>
+                  <p style="margin: 0 auto 18px; font-size: 15px; line-height: 1.65; color: #667380; max-width: 46em;">This prototype only carries photography for a subset of the catalogue, so there is nothing to show for {{ brand.name }} here yet. On the live site every one of its {{ brand.count }} products appears with its own image, spec table and downloads.</p>
+                  <a href="/shop.html" style="display: inline-block; padding: 12px 20px; background: #16304f; color: #ffffff; font-size: 14.5px; font-weight: 600; text-decoration: none;" style-hover="background: #0673a2; text-decoration: none;">Open the catalogue</a>
+                </div>
+              </sc-if>
+            </div>
+
+            <div>
+              <div style="border: 1px solid #dbe2e8; margin-bottom: 20px;">
+                <div style="padding: 13px 16px; background: #f7f9fb; border-bottom: 1px solid #dbe2e8; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #667380;">Buying this brand from us</div>
+                <sc-for list="{{ brandAssurances }}" as="a" hint-placeholder-count="0">
+                  <div style="display: flex; align-items: flex-start; gap: 11px; padding: 13px 16px; border-bottom: 1px solid #eef2f5;">
+                    <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #0673a2; flex: 0 0 auto; padding-top: 3px;">{{ a.n }}</span>
+                    <span>
+                      <span style="display: block; font-size: 14.5px; font-weight: 600; color: #16304f; margin-bottom: 3px;">{{ a.title }}</span>
+                      <span style="display: block; font-size: 14px; line-height: 1.55; color: #667380;">{{ a.body }}</span>
+                    </span>
+                  </div>
+                </sc-for>
+                <div style="padding: 14px 16px; background: #f7f9fb;">
+                  <div style="font-size: 14.5px; font-weight: 600; color: #0b1c2e; margin-bottom: 4px;">Need something not listed?</div>
+                  <p style="margin: 0 0 8px; font-size: 14px; line-height: 1.55; color: #667380;">We can usually order the rest of a manufacturer's range. Send the model number.</p>
+                  <a href="#" style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; font-weight: 500;">+61 3 9708 2390</a>
+                </div>
+              </div>
+
+              <div style="border: 1px solid #dbe2e8;">
+                <div style="padding: 13px 16px; background: #f7f9fb; border-bottom: 1px solid #dbe2e8; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #667380;">Other brands in {{ brand.primaryCat }}</div>
+                <sc-for list="{{ brand.related }}" as="r" hint-placeholder-count="0">
+                  <button onClick="{{ r.open }}" style="width: 100%; display: grid; grid-template-columns: 64px minmax(0, 1fr) 46px; align-items: center; gap: 12px; padding: 11px 16px; border: 0; border-bottom: 1px solid #eef2f5; background: none; cursor: pointer; text-align: left;" style-hover="background: #f7f9fb;">
+                    <span style="{{ r.logoStyle }}"></span>
+                    <span style="min-width: 0;">
+                      <span style="display: block; font-size: 14px; font-weight: 600; color: #16304f;">{{ r.name }}</span>
+                      <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; color: #667380; margin-top: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{ r.focus }}</span>
+                    </span>
+                    <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #4b5560; text-align: right; font-variant-numeric: tabular-nums;">{{ r.count }}</span>
+                  </button>
+                </sc-for>
+                <div style="padding: 13px 16px;">
+                  <button onClick="{{ goIndex }}" style="border: 0; background: none; padding: 0; font-family: inherit; font-size: 14px; font-weight: 600; color: #06708f; cursor: pointer;">← All 48 brands</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </sc-if>
+
+  <footer data-screen-label="Footer" style="background: #0b1c2e; color: #a9bed4; padding: 54px 0 0;">
+    <div style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 36px);">
+      <div style="display: grid; grid-template-columns: 1.3fr 1fr 1fr 1fr 1.2fr; gap: 44px; padding-bottom: 46px; border-bottom: 1px solid #24456b;">
+        <div>
+          <div style="background: #ffffff; display: inline-block; padding: 10px 12px; margin-bottom: 20px;">
+            <img src="/uploads/OceanControls-Design-Assets/02-brand-assets/ocean-controls-logo.png" alt="Ocean Controls" style="height: 34px; width: auto; display: block;" />
+          </div>
+          <p style="margin: 0 0 18px; font-size: 15px; line-height: 1.65; color: #a9bed4; max-width: 30em;">Australia's specialist supplier of industrial automation and control equipment, and a custom engineering shop for the jobs the catalogue can't cover.</p>
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; line-height: 1.9; color: #a9bed4;">
+            <div>44 Frankston Gardens Drive</div>
+            <div>Carrum Downs VIC 3201, Australia</div>
+            <div style="margin-top: 8px; color: #d6e4f2;">+61 3 9708 2390</div>
+            <div><a href="#" style="color: #6fd0f5;">info@oceancontrols.com.au</a></div>
+            <div style="margin-top: 8px;">ABN 28 659 967 398</div>
+          </div>
+        </div>
+        <div>
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #9ab0c6; margin-bottom: 16px;">Major brands</div>
+          <div style="display: flex; flex-direction: column; gap: 9px; font-size: 15px;">
+            <sc-for list="{{ footerBrands }}" as="f" hint-placeholder-count="0">
+              <button onClick="{{ f.open }}" style="border: 0; background: none; padding: 0; font-family: inherit; font-size: 15px; color: #d6e4f2; cursor: pointer; text-align: left;" style-hover="color: #6fd0f5;">{{ f.name }}</button>
+            </sc-for>
+          </div>
+        </div>
+        <div>
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #9ab0c6; margin-bottom: 16px;">Shop</div>
+          <div style="display: flex; flex-direction: column; gap: 9px; font-size: 15px;">
+            <a href="/shop.html" style="color: #d6e4f2; text-decoration: none;">All products</a>
+            <a href="/shop.html" style="color: #d6e4f2; text-decoration: none;">New arrivals</a>
+            <a href="/shop.html" style="color: #d6e4f2; text-decoration: none;">Clearance &amp; sale</a>
+            <a href="/shop.html" style="color: #d6e4f2; text-decoration: none;">Ocean Controls range</a>
+            <a href="/shop.html" style="color: #d6e4f2; text-decoration: none;">Weather stations</a>
+            <a href="#" style="color: #d6e4f2; text-decoration: none;">Software</a>
+          </div>
+        </div>
+        <div>
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #9ab0c6; margin-bottom: 16px;">Company</div>
+          <div style="display: flex; flex-direction: column; gap: 9px; font-size: 15px;">
+            <a href="/about.html" style="color: #d6e4f2; text-decoration: none;">About us</a>
+            <a href="/about.html" style="color: #d6e4f2; text-decoration: none;">Engineering services</a>
+            <a href="/articles.html" style="color: #d6e4f2; text-decoration: none;">Articles &amp; news</a>
+            <a href="/contact.html" style="color: #d6e4f2; text-decoration: none;">Distributors &amp; resellers</a>
+            <a href="/contact.html" style="color: #d6e4f2; text-decoration: none;">Contact us</a>
+            <a href="#" style="color: #d6e4f2; text-decoration: none;">Returns &amp; warranty</a>
+          </div>
+        </div>
+        <div>
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #9ab0c6; margin-bottom: 16px;">Product updates</div>
+          <p style="margin: 0 0 14px; font-size: 15px; line-height: 1.6; color: #a9bed4;">New releases, price changes and application notes. Roughly monthly, no marketing filler.</p>
+          <div style="display: flex; margin-bottom: 22px;">
+            <input type="text" placeholder="you@company.com.au" style="flex: 1 1 auto; height: 42px; background: rgba(255,255,255,0.06); border: 1px solid #3a5878; border-right: 0; color: #ffffff; padding: 0 12px; font-size: 14.5px; outline: none; min-width: 0;" aria-label="Email address" />
+            <button style="flex: 0 0 auto; height: 42px; padding: 0 16px; background: #0673a2; color: #ffffff; border: 0; font-size: 14px; font-weight: 600; cursor: pointer;" style-hover="background: #ffffff; color: #0b1c2e;">Join</button>
+          </div>
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #9ab0c6; margin-bottom: 10px;">Payment accepted</div>
+          <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; border: 1px solid #3a5878; padding: 5px 9px; color: #d6e4f2;">VISA</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; border: 1px solid #3a5878; padding: 5px 9px; color: #d6e4f2;">MASTERCARD</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; border: 1px solid #3a5878; padding: 5px 9px; color: #d6e4f2;">AMEX</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; border: 1px solid #3a5878; padding: 5px 9px; color: #d6e4f2;">EFTPOS</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; border: 1px solid #3a5878; padding: 5px 9px; color: #d6e4f2;">ACCOUNT</span>
+          </div>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; justify-content: space-between; gap: 30px; padding: 22px 0 26px; font-size: 13.5px; color: #9ab0c6;">
+        <span>© 2026 Ocean Controls Pty Ltd. All prices in AUD and exclude GST unless stated. Brand names and logos are the property of their respective owners.</span>
+        <span style="display: flex; gap: 22px;">
+          <a href="#" style="color: #a9bed4; text-decoration: none;">Privacy</a>
+          <a href="#" style="color: #a9bed4; text-decoration: none;">Terms of sale</a>
+          <a href="#" style="color: #a9bed4; text-decoration: none;">Sitemap</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440},&quot;brand&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Mean Well / ESI&quot;,&quot;Novus&quot;,&quot;Leadshine&quot;,&quot;Ocean Controls&quot;,&quot;ADF Web&quot;,&quot;LabJack&quot;,&quot;Milesight&quot;,&quot;Davis Instruments&quot;],&quot;default&quot;:null,&quot;tsType&quot;:&quot;string | null&quot;,&quot;section&quot;:&quot;Page&quot;}}">
+const LOGO = 'uploads/OceanControls-Design-Assets/02-brand-assets/brand-logos/';
+const IMGDIR = 'uploads/OceanControls-Design-Assets/03-product-images/';
+
+// Every figure below is counted from the 2,279-row catalogue export.
+// [name, logoFile, products, minPrice, maxPrice, downloadFiles, withSpec, focus, origin, [category|count], [sampleSku]]
+const BRANDS = [
+  ['Mean Well / ESI', 'Mean-Well---ESI.png', 303, 0.85, 870.46, 303, 298, 'Power supplies, DC-DC converters and pressure transducers', 'Taiwan', ['Power Supplies|235', 'Sensors|46', 'Signal Conditioners|11'], ['PSM-900', 'PSM-997', 'PSM-9971']],
+  ['Novus', 'Novus.jpg', 218, 27.66, 1542.80, 636, 186, 'Process controllers, transmitters and large indicators', 'Brazil', ['Controllers|62', 'Sensors|71', 'Panel Meters|24', 'Large Displays|11'], ['SIG-130', 'SIG-131', 'IPI-103', 'NOR-111']],
+  ['Leadshine', 'Leadshine.png', 132, 2.87, 485.31, 195, 113, 'Stepper and servo drives, motors and motion accessories', 'China', ['Motor Drivers & Controllers|63', 'Motors & Accessories|61'], ['SMC-055', 'LSK-001', 'LSK-002', 'LSK-070', 'LSK-071', 'LSK-073']],
+  ['Hanyoung Nux', 'Hanyoung-Nux.gif', 116, 7.38, 932.45, 120, 111, '22 mm switchgear, photoelectric switches and light towers', 'South Korea', ['Electrical Switches|33', 'Sensors|37', 'Lighting|11', 'Timers|8'], ['HNC-061', 'HNL-020', 'HNL-022', 'HNL-0301', 'HNR-100']],
+  ['Z_ALT', '', 104, 1.44, 133.00, 7, 48, 'Assorted leads, breakers, fans and adapters', 'Various', ['Computer Products|17', 'Prototyping|27', 'Power Supplies|13'], ['CAB-101', 'CAB-102', 'CAB-103', 'CIR-001', 'CIR-002', 'CIR-003']],
+  ['IBEST', 'IBEST.png', 103, 7.28, 600.10, 166, 103, 'Inductive and capacitive proximity sensing, shaft couplers', 'China', ['Sensors|80', 'Motors & Accessories|13'], []],
+  ['Ocean Controls', 'Ocean-Controls.png', 93, 0.01, 474.01, 181, 61, 'Our own range — designed and assembled in Carrum Downs', 'Carrum Downs, Australia', ['Communications|23', 'Relays & Relay Cards|14', 'Weather|7', 'Data Loggers|4'], ['KTA-387', 'KTA-397', 'KTA-401', 'KTA-402', 'KTA-367A', 'DTC-012', 'DTC-009', 'DTC-0091']],
+  ['DCBox', 'DCBox.png', 84, 51.49, 1310.85, 110, 84, 'Pressure transducers, load cells and process indicators', 'China', ['Sensors|56', 'Panel Meters|18'], ['DBI-032', 'DBI-033']],
+  ['Z_AE', 'Z_AE.png', 74, 1.37, 209.97, 7, 51, 'Float switches, control stations and signal generators', 'Various', ['Sensors|24', 'Electrical Switches|17', 'Communications|11', 'Test Equipment|6'], ['LEA-002', 'HER-240', 'HER-240G', 'HER-300', 'HET-100', 'HET-105', 'HET-115']],
+  ['SMS', 'SMS.jpeg', 71, 0.20, 33.74, 0, 28, 'DIN rail terminals, wire labels and cable glands', 'China', ['Electrical Terminals & Wiring|62'], ['CGL-001', 'CGL-004', 'CGL-007']],
+  ['Conch', 'Conch.png', 61, 11.49, 574.56, 64, 61, 'Proximity sensing and solid state relays', 'Taiwan', ['Sensors|33', 'Relays & Relay Cards|12', 'PLCs & HMIs|2'], []],
+  ['Foxtam Controls', 'Foxtam-Controls.png', 59, 4.19, 318.82, 65, 59, 'Alarm and fault relays, slimline relays, timers', 'United Kingdom', ['Relays & Relay Cards|43', 'Sensors|7', 'Timers|4'], ['NTR-150', 'NTR-180', 'NTR-190', 'NTR-160']],
+  ['Emko', 'Emko.png', 55, 30.86, 1453.53, 65, 55, 'Temperature controllers and HMI operator panels', 'Turkey', ['Controllers|17', 'Sensors|18', 'PLCs & HMIs|6'], []],
+  ['Comeco', 'Comeco.png', 47, 32.52, 485.70, 66, 45, 'Thermocouples, RTD probes and on-off controllers', 'Turkey', ['Sensors|27', 'Controllers|8'], []],
+  ['Teracom', 'Teracom.png', 44, 18.63, 471.37, 79, 42, 'Ethernet and 4G monitoring, 1-Wire sensing', 'Bulgaria', ['Controllers|13', 'Sensors|18', 'Modbus, BACnet & M-Bus|6'], ['TCC-039', 'TCS-001']],
+  ['Rika Sensor', 'Rika-Sensor.png', 44, 73.74, 3794.64, 49, 43, 'Weather sensors — wind, rain, radiation, water quality', 'China', ['Weather|37', 'Sensors|5'], ['RKS-002A', 'RKS-070']],
+  ['RION', 'RION.png', 44, 108.53, 842.69, 50, 44, 'Inclinometers, accelerometers and electronic compasses', 'China', ['Sensors|44'], []],
+  ['Akytec', 'Akytec.png', 43, 51.56, 479.21, 109, 42, 'Modbus I/O, programmable relays and panel meters', 'Germany', ['Modbus, BACnet & M-Bus|20', 'PLCs & HMIs|9', 'Panel Meters|8'], ['AKD-001', 'AKB-001']],
+  ['LabJack', 'LabJack.png', 42, 11.07, 1580.04, 100, 38, 'USB and Ethernet data acquisition modules', 'United States', ['Data Acquisition|42'], ['LAJ-002', 'LAJ-003', 'LAJ-006']],
+  ['Weibo', 'Weibo.png', 42, 57.40, 293.66, 64, 42, 'Current transducers and signal isolators', 'China', ['Sensors|33', 'Signal Conditioners|9'], []],
+  ['Produal', 'Produal.png', 40, 34.91, 441.08, 62, 40, 'HVAC sensing and building automation I/O', 'Finland', ['Modbus, BACnet & M-Bus|25', 'Sensors|10'], []],
+  ['Saip Group', 'Saip-Group.jpg', 38, 2.02, 244.67, 0, 35, 'ABS control boxes and waterproof enclosures', 'China', ['Enclosures|22', 'Sensors|6', 'Controllers|4'], ['SPE-010', 'SPE-015', 'SPE-018']],
+  ['DELTA', 'DELTA.png', 37, 17.29, 737.75, 71, 32, 'PLCs, HMIs and variable frequency drives', 'Taiwan', ['PLCs & HMIs|26', 'Motor Drivers & Controllers|9'], ['DEC-200', 'DEI-100', 'DEI-101']],
+  ['Alish', 'Alish.gif', 35, 17.88, 699.37, 48, 35, 'Signal isolators, load cell conditioning, large displays', 'China', ['Signal Conditioners|22', 'Large Displays|5', 'Panel Meters|4'], ['DBI-050']],
+  ['TECO', 'TECO.png', 34, 29.40, 2036.02, 80, 20, 'Programmable relays, contactors and VFDs', 'Taiwan', ['PLCs & HMIs|15', 'Relays & Relay Cards|10', 'Motor Drivers & Controllers|9'], []],
+  ['Davis Instruments', 'Davis-Instruments.webp', 30, 91.70, 1948.10, 138, 27, 'Vantage Pro weather stations and accessories', 'United States', ['Weather|30'], []],
+  ['3onedata', '3onedata.png', 29, 4.26, 246.97, 47, 29, 'Fibre and serial converters, industrial Ethernet', 'China', ['Communications|29'], []],
+  ['Simex', 'Simex.png', 26, 102.56, 603.83, 46, 26, 'Modbus I/O modules and waterproof panel meters', 'Poland', ['Modbus, BACnet & M-Bus|11', 'Panel Meters|9', 'Signal Conditioners|2'], []],
+  ['Senix', 'Senix.png', 24, 55.02, 1124.15, 58, 0, 'ToughSonic ultrasonic distance and level sensors', 'United States', ['Sensors|24'], []],
+  ['Milesight', 'Milesight.png', 22, 57.46, 880.99, 48, 20, '4G and 5G industrial routers, LoRaWAN controllers', 'China', ['Industrial IoT|18', 'Controllers|2', 'Communications|1'], ['ULC-008C', 'ULC-075', 'ULC-141']],
+  ['Fema', 'Fema.jpg', 22, 62.98, 868.59, 38, 22, 'Signal isolators, panel meters and large counters', 'Spain', ['Signal Conditioners|7', 'Panel Meters|8', 'Large Displays|3'], ['FMI-110', 'FMI-905', 'FMI-150']],
+  ['ATOP', 'ATOP.png', 21, 22.82, 1209.61, 53, 21, 'Protocol gateways, serial servers, industrial Ethernet', 'Taiwan', ['Modbus, BACnet & M-Bus|7', 'Communications|13'], []],
+  ['Yotta Control', 'Yotta-Control.png', 19, 76.13, 186.76, 41, 19, 'Modbus RTU and TCP I/O modules', 'Taiwan', ['Modbus, BACnet & M-Bus|17', 'Communications|2'], []],
+  ['Cledlight', 'Cledlight.jpg', 19, 2.87, 41.76, 13, 18, 'LED strip lighting and accessories', 'China', ['Lighting|19'], []],
+  ['ADF Web', 'ADF-Web.png', 19, 332.23, 803.47, 51, 19, 'Protocol converters — BACnet, Modbus, MQTT, M-Bus', 'Italy', ['Modbus, BACnet & M-Bus|19'], ['ADW-001', 'ADW-002', 'ADW-003']],
+  ['Microedge', 'Microedge.png', 14, 56.18, 705.14, 25, 12, 'Temperature, voltage and pulse data loggers', 'Canada', ['Data Loggers|14'], []],
+  ['Z_TB', 'Z_TB.png', 13, 7.60, 27.97, 0, 13, 'Small DC motors, RC servos and PCB relays', 'Various', ['Motors & Accessories|7', 'Relays & Relay Cards|3', 'Sensors|2'], []],
+  ['CNCDrive', 'CNCDrive.png', 12, 7.27, 253.46, 17, 8, 'CNC motion controllers and breakout hardware', 'Hungary', ['Motor Drivers & Controllers|8', 'CNC|3', 'Software|1'], ['CND-900', 'CND-901', 'CND-902']],
+  ['King Pigeon', 'King-Pigeon.png', 12, 10.15, 80.50, 5, 12, 'Detection sensors for alarming and monitoring', 'China', ['Security|8', 'Sensors|4'], ['KPR-106']],
+  ['Cixi Sanhe', 'Cixi-Sanhe.jpg', 9, 3.33, 15.93, 6, 9, 'DIN rail PCB mounts and small enclosures', 'China', ['Enclosures|9'], []],
+  ['GJY Electronics', 'GJY-Electronics.png', 6, 10.06, 19.93, 4, 6, '1-Wire and PT100 temperature probes', 'China', ['Sensors|6'], ['GJS-002']],
+  ['Camax', 'Camax.png', 4, 160.75, 382.91, 11, 4, 'Modbus RTU I/O modules', 'Australia', ['Modbus, BACnet & M-Bus|4'], []],
+  ['AzeoTech', 'AzeoTech.png', 4, 147.70, 1189.30, 0, 4, 'DAQFactory — HMI and SCADA software for data acquisition', 'United States', ['Software|4'], ['AZE-011', 'AZE-012', 'AZE-013']],
+  ['Hydreon', 'Hydreon.webp', 4, 41.61, 124.81, 12, 3, 'Optical rain sensors', 'United States', ['Weather|4'], []],
+  ['Xiamen Maxwell Automation', 'Xiamen-Maxwell-Automation.png', 2, 18.03, 56.88, 2, 2, 'Thermocouples and isolated converters', 'China', ['Sensors|1', 'Signal Conditioners|1'], []],
+  ['RFDesign', 'RFDesign.png', 1, 35.14, 35.14, 0, 1, 'Wireless accessories', 'Australia', ['Communications|1'], []],
+  ['Hiland', '', 1, 27.97, 27.97, 1, 1, 'IR and RF remote control', 'China', ['Controllers|1'], []],
+  ['SparkFun', 'SparkFun.webp', 1, 47.45, 47.45, 2, 0, 'Open-source electronics and breakout boards', 'United States', ['Sensors|1'], []]
+];
+
+// Sample products: [sku, name, price, stock, imageFile]
+const PRODUCTS = {
+  'PSM-900': ['20 kA Surge Protector', 19.98, 2, 'Power-Supplies__PSM-900.jpg'],
+  'PSM-997': ['Mean Well DRL-01 L-Shaped DIN Rail Bracket', 0.85, 11, 'Power-Supplies__PSM-997.jpg'],
+  'PSM-9971': ['Mean Well DRL-02 L-Shaped DIN Rail Bracket', 0.85, 5, 'Power-Supplies__PSM-9971.jpg'],
+  'SIG-130': ['Novus DigiRail NxProg Programmable IO Module 2AI, 2AO, 4DI, 2RO, 1ETH', 273.34, 3, 'Arduino__SIG-130.jpg'],
+  'SIG-131': ['Novus DigiRail NxProg Programmable IO Module 2AI, 2AO, 4DI, 3DO, 1ETH', 390.49, 2, 'Arduino__SIG-131.jpg'],
+  'IPI-103': ['Universal Input N1500G Large Indicator 230 VAC, Analog Out, RS-485', 517.32, 1, 'Large-Displays__IPI-103.jpg'],
+  'NOR-111': ['TM 619-2 Weekly Timer 230 VAC', 48.83, 5, 'Timers__NOR-111.jpg'],
+  'SMC-055': ['EM882S 8.2 A Open-Loop Stepper Drive', 134.06, 2, 'Motor-Drivers-%26-Controllers__SMC-055.jpg'],
+  'LSK-001': ['RJ12 Serial Tuning Cable for Leadshine Drives', 2.87, 4, 'Motor-Drivers-%26-Controllers__LSK-001.jpg'],
+  'LSK-002': ['JST-4 Serial Tuning Cable for Leadshine Drives', 2.87, 4, 'Motor-Drivers-%26-Controllers__LSK-002.jpg'],
+  'LSK-070': ['3 m Power Extension for ELM1/2 Series Motors', 15.32, 1, 'Motors-%26-Accessories__LSK-070.png'],
+  'LSK-071': ['3 m Encoder Extension for ELM1/2 Series Motors', 11.49, 1, 'Motors-%26-Accessories__LSK-071.png'],
+  'LSK-073': ['RS485 Modbus / EtherCAT Cable for EL8/7/6 Drivers', 8.62, 2, 'Motors-%26-Accessories__LSK-073.png'],
+  'HNC-061': ['TH500A Communication Converter (USB Flash Drive)', 323.23, 1, 'Data-Loggers__HNC-061.jpg'],
+  'HNL-020': ['24 VDC Multi-Level Signal Tower (Red, Yellow, Green) + Buzzer', 100.32, 1, 'Lighting__HNL-020.jpg'],
+  'HNL-022': ['24 VDC Multi-Level Signal Tower (R/Y/G/B/W) + Buzzer', 112.48, 9, 'Lighting__HNL-022.jpg'],
+  'HNL-0301': ['24 VDC IP65 Signal Tower (Red)', 75.35, 0, 'Lighting__HNL-0301.jpg'],
+  'HNR-100': ['Multi-Function Timer MA4N-B', 43.19, 9, 'Timers__HNR-100.jpg'],
+  'CAB-101': ['D9 Female to D9 Female Gender Changer', 4.14, 1, 'Computer-Products__CAB-101.jpg'],
+  'CAB-102': ['DE9 Male to DE9 Male Gender Changer', 3.47, 5, 'Computer-Products__CAB-102.jpg'],
+  'CAB-103': ['D25 Female to D25 Female Gender Changer', 5.85, 3, 'Computer-Products__CAB-103.jpg'],
+  'CIR-001': ['Circuit Breaker 3 A Panel Mount', 6.52, 1, 'Prototyping__CIR-001.jpg'],
+  'CIR-002': ['Circuit Breaker 5 A Panel Mount', 6.52, 1, 'Prototyping__CIR-002.jpg'],
+  'CIR-003': ['Circuit Breaker 10 A Panel Mount', 6.52, 59, 'Prototyping__CIR-003.jpg'],
+  'KTA-387': ['Modbus Data Logger — Dual RS-485, 100-Channel, SD Card Logging', 145.03, 1, 'Data-Loggers__KTA-387.png'],
+  'KTA-397': ['4G LTE SMS Controller with Relay Outputs', 293.93, 41, 'Controllers__KTA-397.jpg'],
+  'KTA-401': ['BACnet IP Weather Station Gateway for Davis Weather Stations', 241.50, 8, 'Weather__KTA-401.jpg'],
+  'KTA-402': ['BACnet MS/TP Weather Station Gateway for Davis Weather Stations', 241.50, 48, 'Weather__KTA-402.jpg'],
+  'KTA-367A': ['Universal Input to 4-20 mA Transmitter with IP65 Rating', 95.57, 15, 'Signal-Conditioners__KTA-367A.jpg'],
+  'DTC-012': ['RJ12 Terminal Card', 27.97, 5, 'Communications__DTC-012.jpg'],
+  'DTC-009': ['D9 Female Terminal Card', 26.25, 1, 'Communications__DTC-009.jpg'],
+  'DTC-0091': ['D9 Male Terminal Card', 27.30, 10, 'Communications__DTC-0091.jpg'],
+  'DBI-032': ['AC Volt-Current Input 4-Digit Process Indicator, 1 Relay, 24 VDC (48 × 96 mm)', 112.36, 3, 'Panel-Meters__DBI-032.jpg'],
+  'DBI-033': ['DC Volt Input 4-Digit Process Indicator, 1 Relay, 24 VDC (48 × 96 mm)', 112.36, 2, 'Panel-Meters__DBI-033.jpg'],
+  'DBI-050': ['GBMA / GBMC / GBMR / GBMS Spare Remote for 10 cm Displays', 17.88, 2, 'Large-Displays__DBI-050.jpg'],
+  'LEA-002': ['698-960 / 1700-2700 MHz 3G/4G 5 dB LTE Antenna', 7.67, 1, 'Controllers__LEA-002.jpg'],
+  'HER-240': ['22 mm Blanking Plug, Black', 3.50, 116, 'Electrical-Switches__HER-240.jpg'],
+  'HER-240G': ['22 mm Blanking Plug, Grey', 3.50, 100, 'Electrical-Switches__HER-240G.jpg'],
+  'HER-300': ['22 mm Rotary Potentiometer 10 k', 24.47, 19, 'Electrical-Switches__HER-300.jpg'],
+  'HET-100': ['Signal Generator 4-20 mA / 0-10 V / 0-5 V Voltage & Current Simulator', 104.97, 10, 'Test-Equipment__HET-100.jpg'],
+  'HET-105': ['Signal Generator Pocket Precision 4-20 mA / 0-10 V / 0-5 V', 132.97, 2, 'Test-Equipment__HET-105.jpg'],
+  'HET-115': ['Signal Process Generator Pocket Precision LB02A', 209.97, 3, 'Test-Equipment__HET-115.jpg'],
+  'CGL-001': ['PG7 Grey Cable Gland', 1.69, 62, 'Electrical-Terminals-Wiring__CGL-001.jpg'],
+  'CGL-004': ['PG9 Grey Cable Gland', 1.76, 39, 'Electrical-Terminals-Wiring__CGL-004.jpg'],
+  'CGL-007': ['PG11 Grey Cable Gland', 2.00, 27, 'Electrical-Terminals-Wiring__CGL-007.jpg'],
+  'NTR-150': ['Engine Start Attempt & Alarm Relay', 94.16, 1, 'Relays-%26-Relay-Cards__NTR-150.jpg'],
+  'NTR-180': ['10 Input Relay Alarm Module', 282.35, 1, 'Relays-%26-Relay-Cards__NTR-180.jpg'],
+  'NTR-190': ['Plug-In Alarm Integrator', 65.07, 1, 'Relays-%26-Relay-Cards__NTR-190.jpg'],
+  'NTR-160': ['Brown Out Timer 3-300 s, 240 VAC powered', 42.50, 2, 'Timers__NTR-160.jpg'],
+  'TCC-039': ['4G LTE Universal IO Module TCG120-4G', 391.06, 2, 'Controllers__TCC-039.jpg'],
+  'TCS-001': ['TST100 1-Wire Temperature Sensor with IP65 Protection', 39.43, 6, 'Sensors__TCS-001.jpg'],
+  'RKS-002A': ['RK100-01G Wind Speed Sensor, 0–10 VDC Output', 158.65, 5, 'Weather__RKS-002A.jpg'],
+  'RKS-070': ['RK95-51 Mounting Bracket for PH, EC, DO, ORP Sensors', 73.74, 3, 'Sensors__RKS-070.png'],
+  'AKD-001': ['MSD200 Modbus Datalogger', 293.14, 4, 'Data-Loggers__AKD-001.jpg'],
+  'AKB-001': ['NPT4 Slimline Temperature Transmitter', 121.42, 5, 'Signal-Conditioners__AKB-001.jpg'],
+  'LAJ-002': ['CB25 LabJack Terminal Board for Digital I/O', 101.67, 4, 'Data-Acquisition__LAJ-002.jpg'],
+  'LAJ-003': ['EI-1022 Temperature Probe', 89.64, 10, 'Data-Acquisition__LAJ-003.jpg'],
+  'LAJ-006': ['Stainless Steel Temperature Probe', 85.50, 4, 'Data-Acquisition__LAJ-006.jpg'],
+  'SPE-010': ['Grey CE-Approved ABS Waterproof Enclosure, 300 × 200 × 160 mm', 72.22, 14, 'Enclosures__SPE-010.jpg'],
+  'SPE-015': ['Grey CE-Approved ABS Waterproof Enclosure, 400 × 300 × 160 mm', 81.40, 41, 'Enclosures__SPE-015.jpg'],
+  'SPE-018': ['Grey CE-Approved ABS Waterproof Enclosure, 500 × 400 × 190 mm', 103.74, 6, 'Enclosures__SPE-018.jpg'],
+  'DEC-200': ['DVP PLC RS-232 Serial Programming Cable', 17.29, 2, 'PLCs-%26-HMIs__DEC-200.jpg'],
+  'DEI-100': ['DOP Series HMI USB Programming Cable', 32.80, 4, 'PLCs-%26-HMIs__DEI-100.jpg'],
+  'DEI-101': ['DOP HMI to Delta PLC Communication Cable', 21.72, 3, 'PLCs-%26-HMIs__DEI-101.jpg'],
+  'ULC-008C': ['UC300 IoT Controller (Cellular / LoRaWAN)', 226.63, 7, 'Industrial-IoT__ULC-008C.jpg'],
+  'ULC-075': ['UR75 Industrial 5G Router', 681.12, 6, 'Industrial-IoT__ULC-075.webp'],
+  'ULC-141': ['UR41L 4G Mini Industrial Cellular Router', 138.53, 8, 'Industrial-IoT__ULC-141.webp'],
+  'FMI-110': ['Fema B44-C1 4-Digit Counter, 100 mm Display, IP65, 24 VDC', 825.57, 2, 'Large-Displays__FMI-110.jpg'],
+  'FMI-905': ['Fema WME Wall-Mount Housing for 96 × 48 mm Panel Meters', 165.68, 1, 'Panel-Meters__FMI-905.jpg'],
+  'FMI-150': ['FEMA 4-20 mA Input Signal Converter with ±10 VDC Output', 231.00, 2, 'Signal-Conditioners__FMI-150.jpg'],
+  'ADW-001': ['HD67671 BACnet MS/TP Slave / Modbus Master Converter', 489.31, 3, 'Modbus-Bacnet-MBus-Products__ADW-001.jpg'],
+  'ADW-002': ['HD67671 BACnet/IP Slave / Modbus Master Converter', 489.31, 6, 'Modbus-Bacnet-MBus-Products__ADW-002.jpg'],
+  'ADW-003': ['HD67933 Modbus Master / MQTT Converter', 520.72, 1, 'Modbus-Bacnet-MBus-Products__ADW-003.jpg'],
+  'CND-900': ['IDC26-IDC26 Ribbon Cable 250 mm', 8.09, 6, 'CNC__CND-900.jpg'],
+  'CND-901': ['IDC26-DSUB25 Female Ribbon Cable 250 mm', 8.09, 5, 'CNC__CND-901.jpg'],
+  'CND-902': ['Differential Line Driver', 7.27, 4, 'CNC__CND-902.jpg'],
+  'KPR-106': ['Wired Photoelectric Smoke Detector', 21.00, 8, 'Security__KPR-106.jpg'],
+  'GJS-002': ['DS18B20 1-Wire Waterproof Digital Temperature Sensor, 15 m cable', 19.93, 18, 'Sensors__GJS-002.jpg'],
+  'AZE-011': ['DAQFactory Starter Software', 147.70, 5, 'Software__AZE-011.jpg'],
+  'AZE-012': ['DAQFactory Lite Software', 296.10, 32, 'Software__AZE-012.jpg'],
+  'AZE-013': ['DAQFactory Base Software', 594.30, 5, 'Software__AZE-013.jpg']
+};
+
+const FOCUS_GROUPS = [
+  ['All', null],
+  ['Sensing', ['Sensors', 'Weather']],
+  ['Control', ['Controllers', 'PLCs & HMIs', 'Panel Meters', 'Large Displays', 'Timers']],
+  ['Power', ['Power Supplies', 'Signal Conditioners']],
+  ['Motion', ['Motor Drivers & Controllers', 'Motors & Accessories', 'CNC']],
+  ['Networking', ['Modbus, BACnet & M-Bus', 'Communications', 'Industrial IoT', 'Data Acquisition', 'Data Loggers']],
+  ['Panel build', ['Enclosures', 'Electrical Terminals & Wiring', 'Electrical Switches', 'Relays & Relay Cards', 'Lighting', 'Prototyping']]
+];
+
+const SORTS = ['Range size', 'A–Z', 'Documentation'];
+
+const DISTRIBUTOR_POINTS = [
+  ['01', 'Stock on the ground', 'We buy in and hold it here. You are not waiting on an overseas order to be raised after you place yours.'],
+  ['02', 'Warranty handled locally', 'A fault goes through us, not through a support portal in another timezone. Our own range is repaired in Carrum Downs.'],
+  ['03', 'One invoice, one delivery', 'Parts from eight different manufacturers arrive in one carton, on one purchase order, on one tax invoice.'],
+  ['04', 'People who know the product', 'We configure and commission this equipment on our own projects, so the advice comes from use rather than a brochure.']
+];
+
+const BRAND_ASSURANCES = [
+  ['01', 'Authorised supply', 'Genuine stock through the manufacturer or their appointed channel — not grey imports.'],
+  ['02', 'Documentation free', 'Datasheets, manuals and configuration software download without an account.'],
+  ['03', 'Local warranty', 'Faults are handled here. You deal with the people who sold it to you.'],
+  ['04', 'Quantity breaks', 'Tiered pricing applies automatically, and approved trade accounts see their contract rate.']
+];
+
+class Component extends DCLogic {
+  state = { view: null, query: '', focus: 0, sort: 0 };
+
+  money(v) { return '$' + v.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ','); }
+  short(v) { return v < 10 ? '$' + v.toFixed(2) : '$' + Math.round(v); }
+
+  box(url, h, opts) {
+    const o = opts || {};
+    return 'display: block; width: ' + (o.w || '100%') + '; height: ' + h + '; flex: 0 0 auto;'
+      + ' background-image: url("' + url + '");'
+      + ' background-size: contain; background-position: center; background-repeat: no-repeat;'
+      + (o.extra || '');
+  }
+
+  // Brands whose logo file did not come across in the export get a wordmark tile
+  // rather than a broken image.
+  logoStyle(b, h) {
+    if (b[1]) return this.box(LOGO + b[1], h, { extra: ' max-width: 100%;' });
+    return 'display: flex; align-items: center; justify-content: center; width: 100%; height: ' + h + ';'
+      + ' background: #f4f6f8; border: 1px dashed #c9d3dc; color: #667380;'
+      + ' font-family: "IBM Plex Mono", monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase;';
+  }
+
+  find(name) {
+    for (let i = 0; i < BRANDS.length; i++) if (BRANDS[i][0] === name) return BRANDS[i];
+    return null;
+  }
+
+  open(name) {
+    this.setState({ view: name });
+    window.scrollTo(0, 0);
+  }
+
+  stockOf(n) {
+    if (n <= 0) return { text: 'Backorder', fg: '#a5620a' };
+    if (n <= 3) return { text: 'Low — ' + n + ' left', fg: '#a5620a' };
+    return { text: 'In stock (' + n + ')', fg: '#157a45' };
+  }
+
+  productCard(sku) {
+    const p = PRODUCTS[sku];
+    if (!p) return null;
+    const s = this.stockOf(p[2]);
+    return {
+      name: p[0], sku: 'SKU ' + sku, price: this.money(p[1]),
+      stock: s.text, stockFg: s.fg,
+      dotStyle: 'display: block; width: 6px; height: 6px; border-radius: 50%; flex: 0 0 auto; background: ' + s.fg + ';',
+      imgStyle: this.box(IMGDIR + p[3], '124px')
+    };
+  }
+
+  renderVals() {
+    const st = this.state;
+    const total = BRANDS.reduce((t, b) => t + b[2], 0);
+    const files = BRANDS.reduce((t, b) => t + b[5], 0);
+
+    const wanted = st.view || this.props.brand;
+    const active = wanted ? this.find(wanted) : null;
+
+    // ---- index -------------------------------------------------------
+    const q = st.query.trim().toLowerCase();
+    const group = FOCUS_GROUPS[st.focus][1];
+    let list = BRANDS.slice();
+    if (q) list = list.filter(b => (b[0] + ' ' + b[7]).toLowerCase().indexOf(q) > -1);
+    if (group) {
+      list = list.filter(b => b[9].some(c => group.indexOf(c.split('|')[0]) > -1));
+    }
+    if (st.sort === 1) list = list.sort((a, b) => a[0].localeCompare(b[0]));
+    if (st.sort === 2) list = list.sort((a, b) => b[5] - a[5]);
+
+    const topFive = BRANDS.slice(0, 5);
+    const topFiveCount = topFive.reduce((t, b) => t + b[2], 0);
+
+    // ---- brand landing ----------------------------------------------
+    let brandVals = { name: '', metrics: [], cats: [], products: [], related: [] };
+    if (active) {
+      const cats = active[9].map(c => ({ name: c.split('|')[0], n: c.split('|')[1] }));
+      const primary = cats.length ? cats[0].name : 'the catalogue';
+      const cards = active[10].map(s => this.productCard(s)).filter(Boolean).slice(0, 6);
+      const related = BRANDS
+        .filter(b => b[0] !== active[0] && b[9].some(c => c.split('|')[0] === primary))
+        .slice(0, 5)
+        .map(b => ({
+          name: b[0], focus: b[7], count: b[2],
+          logoStyle: this.logoStyle(b, '30px'),
+          open: () => this.open(b[0])
+        }));
+
+      brandVals = {
+        name: active[0],
+        tag: active[0] === 'Ocean Controls' ? 'Our own range' : 'Authorised distributor',
+        origin: active[8],
+        blurb: active[0] === 'Ocean Controls'
+          ? 'The KTA range and everything else that carries our own name — 93 products designed, assembled and supported at 44 Frankston Gardens Drive. Firmware, spares and the engineer who drew the schematic are all in the same building.'
+          : active[7] + '. We hold ' + active[2] + ' ' + active[0] + ' lines in Carrum Downs, with ' + active[5] + ' documentation files on file and ' + active[6] + ' products carrying a published specification table.',
+        logoBigStyle: this.logoStyle(active, '84px'),
+        shopLabel: 'Shop all ' + active[2] + ' products',
+        docsLabel: active[5] > 0 ? active[5] + ' downloads' : 'Request documentation',
+        count: active[2],
+        primaryCat: primary,
+        metrics: [
+          { k: 'Products stocked', v: String(active[2]), fg: '#0b1c2e' },
+          { k: 'Documentation files', v: String(active[5]), fg: '#0b1c2e' },
+          { k: 'With spec table', v: active[6] + ' of ' + active[2], fg: active[6] === active[2] ? '#157a45' : '#0b1c2e' },
+          { k: 'Price from', v: this.money(active[3]), fg: '#0b1c2e' },
+          { k: 'Price to', v: this.money(active[4]), fg: '#0b1c2e' },
+          { k: 'Share of catalogue', v: (active[2] / total * 100).toFixed(1) + '%', fg: '#06708f' }
+        ],
+        cats: cats,
+        productsHeading: cards.length > 0 ? 'In stock from ' + active[0] : active[0] + ' range',
+        hasProducts: cards.length > 0,
+        noProducts: cards.length === 0,
+        products: cards,
+        related: related
+      };
+    }
+
+    return {
+      isIndex: !active,
+      isBrand: !!active,
+      goIndex: () => { this.setState({ view: null }); window.scrollTo(0, 0); },
+      crumbNote: active
+        ? active[2] + ' products · ' + active[8]
+        : list.length + ' of ' + BRANDS.length + ' brands shown',
+
+      stats: [
+        [String(BRANDS.length), 'manufacturers represented'],
+        [total.toLocaleString('en-AU'), 'products across all brands'],
+        ['93', 'products of our own design'],
+        [files.toLocaleString('en-AU'), 'documentation files on file'],
+        ['9', 'overseas distributors resell us']
+      ].map((s, i) => ({
+        n: s[0], label: s[1],
+        cellStyle: 'padding: 22px ' + (i === 4 ? '0' : '24px') + ' 24px ' + (i === 0 ? '0' : '24px') + ';'
+          + (i < 4 ? ' border-right: 1px solid #24456b;' : '')
+      })),
+
+      topFive: topFive.map(b => ({
+        name: b[0], focus: b[7], count: b[2],
+        logoStyle: this.logoStyle(b, '34px'),
+        open: () => this.open(b[0])
+      })),
+      topFiveShare: Math.round(topFiveCount / total * 100) + '%',
+
+      query: st.query,
+      onQuery: e => this.setState({ query: e.target.value }),
+      resultCount: list.length + '/' + BRANDS.length,
+      focusFilters: FOCUS_GROUPS.map((f, i) => ({
+        label: f[0],
+        pick: () => this.setState({ focus: i }),
+        style: 'font-family: inherit; font-size: 13.5px; padding: 7px 11px; cursor: pointer;'
+          + ' border: 1px solid ' + (i === st.focus ? '#16304f' : '#dbe2e8') + ';'
+          + ' background: ' + (i === st.focus ? '#16304f' : '#ffffff') + ';'
+          + ' color: ' + (i === st.focus ? '#ffffff' : '#24456b') + ';'
+      })),
+      sortOpts: SORTS.map((s, i) => ({
+        label: s,
+        pick: () => this.setState({ sort: i }),
+        style: 'font-family: inherit; font-size: 13.5px; padding: 7px 11px; cursor: pointer;'
+          + ' border: 1px solid ' + (i === st.sort ? '#16304f' : '#dbe2e8') + ';'
+          + ' background: ' + (i === st.sort ? '#16304f' : '#ffffff') + ';'
+          + ' color: ' + (i === st.sort ? '#ffffff' : '#24456b') + ';'
+      })),
+      clearFilters: () => this.setState({ query: '', focus: 0 }),
+      hasBrands: list.length > 0,
+      noBrands: list.length === 0,
+      noBrandsTitle: q ? 'No brand matches “' + st.query.trim() + '”' : 'No brands in that group',
+      brands: list.map(b => ({
+        name: b[0],
+        focus: b[7],
+        count: b[2],
+        dl: b[5],
+        from: this.short(b[3]),
+        isOwn: b[0] === 'Ocean Controls',
+        logoStyle: this.logoStyle(b, '48px'),
+        open: () => this.open(b[0])
+      })),
+
+      distributorPoints: DISTRIBUTOR_POINTS.map(d => ({ n: d[0], title: d[1], body: d[2] })),
+      brandAssurances: BRAND_ASSURANCES.map(a => ({ n: a[0], title: a[1], body: a[2] })),
+      brand: brandVals,
+
+      footerBrands: BRANDS.slice(0, 7).map(b => ({ name: b[0], open: () => this.open(b[0]) }))
+    };
+  }
+}
+
+</script>
+</body>
+</html>

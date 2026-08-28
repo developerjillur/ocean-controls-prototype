@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="/support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="icon" type="image/png" href="/favicon.png" />
+<link rel="apple-touch-icon" href="/favicon.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  body { margin: 0; background: #ffffff; color: #1f2429; font-family: Archivo, Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: #06708f; text-decoration: none; }
+  a:hover { color: #16304f; text-decoration: underline; }
+  p { text-wrap: pretty; }
+  input, button, select, textarea { font-family: inherit; }
+  :focus-visible { outline: 2px solid #0b9fd8; outline-offset: 2px; }
+  ::selection { background: #bfe8f8; }
+  @keyframes ocFade { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes ocRise { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+
+  /* Responsive layout — media queries cannot be expressed as inline styles.
+     Everything that must change together fires at the same width. */
+  @media (max-width: 1180px) {
+    [style*="grid-template-columns: 262px"], [style*="grid-template-columns: 264px"],
+    [style*="grid-template-columns: 268px"], [style*="grid-template-columns: 274px"],
+    [style*="grid-template-columns: 296px"], [style*="grid-template-columns: 300px"],
+    [style*="grid-template-columns: 400px"], [style*="grid-template-columns: 1fr 400px"],
+    [style*="1fr) 340px"], [style*="1fr) 360px"], [style*="1fr) 380px"],
+    [style*="1fr) 396px"], [style*="1fr) 400px"], [style*="1fr) 404px"],
+    [style*="1fr) 412px"], [style*="1fr) 420px"], [style*="1fr) 424px"],
+    [style*="1fr) 430px"], [style*="1fr) 460px"], [style*="1fr) 480px"] {
+      grid-template-columns: 1fr !important;
+    }
+    [style*="position: sticky"] { position: static !important; }
+    [style*="display: flex"] { flex-wrap: wrap; }
+    [style*="flex: 1 1 auto"] { min-width: 0; }
+    [style*="height: 84px"], [style*="height: 82px"], [style*="height: 48px"] { height: auto !important; }
+    [style*="height: 38px"] { height: auto !important; padding-top: 7px; padding-bottom: 7px; }
+    [style*="max-width: 660px"], [style*="max-width: 620px"], [style*="max-width: 560px"],
+    [style*="max-width: 480px"] { max-width: 100% !important; }
+  }
+  @media (max-width: 900px) {
+    [style*="grid-template-columns: repeat"] {
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)) !important;
+    }
+    [style*="columns: 3"] { columns: 2 !important; }
+  }
+  @media (max-width: 700px) {
+    [style*="display: grid"] { grid-template-columns: 1fr !important; }
+    [style*="columns: 3"] { columns: 1 !important; }
+  }
+</style>
+</helmet>
+
+<div style="width: 100%; background: #ffffff;">
+
+  <div style="background: #0b1c2e; color: #a9bed4; font-size: 13.5px;">
+    <div style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 36px); height: 38px; display: flex; align-items: center; gap: 26px;">
+      <span style="display: flex; align-items: center; gap: 8px;"><span style="width: 6px; height: 6px; border-radius: 50%; background: #2fd07e;"></span>Registered customers only — Ocean Controls does not take guest orders</span>
+      <span style="margin-left: auto; display: flex; align-items: center; gap: 22px;">
+        <a href="/datasheets.html" style="color: #d6e4f2; text-decoration: none;">Datasheets</a>
+        <a href="/contact.html" style="color: #d6e4f2; text-decoration: none;">Contact</a>
+        <a href="#" style="color: #ffffff; font-family: 'IBM Plex Mono', monospace; text-decoration: none;">+61 3 9708 2390</a>
+      </span>
+    </div>
+  </div>
+
+  <div style="background: #ffffff; border-bottom: 1px solid #dbe2e8;">
+    <div style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 36px); height: 82px; display: flex; align-items: center; gap: 32px;">
+      <a href="/index.html" style="flex: 0 0 auto; display: block;" aria-label="Ocean Controls home">
+        <img src="/uploads/OceanControls-Design-Assets/02-brand-assets/ocean-controls-logo.png" alt="Ocean Controls" style="height: 42px; width: auto; display: block;" />
+      </a>
+      <div style="display: flex; align-items: center; gap: 11px; padding-left: 32px; border-left: 1px solid #dbe2e8;">
+        <span style="position: relative; display: block; width: 15px; height: 17px; border: 1.5px solid #16304f; border-radius: 2px;">
+          <span style="position: absolute; top: -5px; left: 2px; right: 2px; height: 6px; border: 1.5px solid #16304f; border-bottom: 0; border-radius: 3px 3px 0 0;"></span>
+        </span>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #16304f;">Secure sign in</span>
+      </div>
+      <div style="margin-left: auto; display: flex; align-items: center; gap: 20px;">
+        <div style="text-align: right;">
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #667380;">Trouble signing in?</div>
+          <a href="/contact.html" style="font-family: 'IBM Plex Mono', monospace; font-size: 15.5px; font-weight: 500;">+61 3 9708 2390</a>
+        </div>
+        <a href="/shop.html" style="display: flex; align-items: center; gap: 8px; padding: 11px 16px; border: 1px solid #dbe2e8; font-size: 14.5px; font-weight: 600; color: #16304f; text-decoration: none;" style-hover="border-color: #16304f; text-decoration: none;">← Keep shopping</a>
+      </div>
+    </div>
+  </div>
+
+  <section data-screen-label="Account access" style="background: #ffffff;">
+    <div style="max-width: 1440px; margin: 0 auto; padding: 44px 36px 80px; display: grid; grid-template-columns: minmax(0, 1fr) 460px; gap: 48px; align-items: start;">
+
+      <div style="{{ panelAnim }}">
+        <sc-if value="{{ showReturnNote }}" hint-placeholder-val="{{ false }}">
+          <div style="display: flex; align-items: flex-start; gap: 13px; border-left: 3px solid #0b9fd8; background: #f2f9fd; padding: 15px 17px; margin-bottom: 26px;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #06708f; flex: 0 0 auto; padding-top: 2px;">Checkout</span>
+            <div>
+              <div style="font-size: 15px; font-weight: 600; color: #16304f; margin-bottom: 4px;">Your order is waiting — {{ returnItems }}</div>
+              <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #24456b;">Sign in or register and you will land straight back on the delivery step. Nothing in your order is lost.</p>
+            </div>
+          </div>
+        </sc-if>
+
+        <div style="display: flex; align-items: stretch; border-bottom: 2px solid #16304f; margin-bottom: 30px;">
+          <sc-for list="{{ tabs }}" as="t" hint-placeholder-count="0">
+            <button onClick="{{ t.pick }}" style="{{ t.style }}">{{ t.label }}</button>
+          </sc-for>
+        </div>
+
+        <sc-if value="{{ isSignIn }}" hint-placeholder-val="{{ true }}">
+          <div>
+            <h1 style="margin: 0 0 8px; font-size: 31px; line-height: 1.12; font-weight: 700; letter-spacing: -0.025em; color: #0b1c2e;">Sign in to your account</h1>
+            <p style="margin: 0 0 26px; font-size: 16px; line-height: 1.65; color: #667380; max-width: 52em;">Your order history, invoices, saved lists and downloads all sit behind this. Approved trade accounts see contract pricing across the whole catalogue once signed in.</p>
+
+            <sc-if value="{{ hasAuthError }}" hint-placeholder-val="{{ false }}">
+              <div style="display: flex; align-items: flex-start; gap: 12px; border-left: 3px solid #c2364a; background: #fdeef0; padding: 14px 16px; margin-bottom: 22px;">
+                <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #c2364a; flex: 0 0 auto; padding-top: 2px;">Error</span>
+                <p style="margin: 0; font-size: 14.5px; line-height: 1.6; color: #8a2436;">{{ authError }}</p>
+              </div>
+            </sc-if>
+
+            <div style="display: flex; flex-direction: column; gap: 18px; max-width: 44em;">
+              <sc-for list="{{ signInFields }}" as="f" hint-placeholder-count="0">
+                <label style="display: flex; flex-direction: column; gap: 6px;">
+                  <span style="display: flex; align-items: baseline; justify-content: space-between; gap: 10px;">
+                    <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #667380;">{{ f.label }}</span>
+                    <sc-if value="{{ f.hasAction }}" hint-placeholder-val="{{ false }}">
+                      <button onClick="{{ f.action }}" style="border: 0; background: none; padding: 0; font-family: inherit; font-size: 13.5px; font-weight: 600; color: #06708f; cursor: pointer;">{{ f.actionLabel }}</button>
+                    </sc-if>
+                  </span>
+                  <input type="{{ f.type }}" placeholder="{{ f.placeholder }}" value="{{ f.value }}" onInput="{{ f.onInput }}" onKeyDown="{{ onEnter }}" style="{{ f.inputStyle }}" />
+                  <span style="display: block; font-size: 13.5px; color: #c2364a; min-height: 20px;">{{ f.error }}</span>
+                </label>
+              </sc-for>
+
+              <div style="display: flex; align-items: center; justify-content: space-between; gap: 20px;">
+                <button onClick="{{ toggleRemember }}" style="display: flex; align-items: center; gap: 10px; border: 0; background: none; padding: 0; cursor: pointer;">
+                  <span style="{{ rememberBox }}">{{ rememberTick }}</span>
+                  <span style="font-size: 15px; color: #4b5560;">Keep me signed in on this computer</span>
+                </button>
+                <button onClick="{{ goForgot }}" style="border: 0; background: none; padding: 0; font-family: inherit; font-size: 14.5px; font-weight: 600; color: #06708f; cursor: pointer;">Forgotten your password?</button>
+              </div>
+
+              <button onClick="{{ submitSignIn }}" style="height: 52px; background: #16304f; color: #ffffff; border: 0; font-size: 16.5px; font-weight: 700; cursor: pointer;" style-hover="background: #0673a2;">{{ signInCta }}</button>
+
+              <div style="display: flex; align-items: center; gap: 14px; margin-top: 4px;">
+                <span style="flex: 1 1 auto; height: 1px; background: #dbe2e8;"></span>
+                <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #667380;">No account yet</span>
+                <span style="flex: 1 1 auto; height: 1px; background: #dbe2e8;"></span>
+              </div>
+
+              <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: #dbe2e8; border: 1px solid #dbe2e8;">
+                <button onClick="{{ goRegister }}" style="background: #ffffff; border: 0; padding: 20px 22px 22px; cursor: pointer; text-align: left;" style-hover="background: #f7f9fb;">
+                  <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #06708f; margin-bottom: 9px;">Retail</span>
+                  <span style="display: block; font-size: 17.5px; font-weight: 700; color: #0b1c2e; letter-spacing: -0.01em; margin-bottom: 6px;">Create a standard account</span>
+                  <span style="display: block; font-size: 14.5px; line-height: 1.6; color: #667380;">Takes a minute. Retail pricing with quantity breaks applied automatically.</span>
+                  <span style="display: block; font-size: 14.5px; font-weight: 600; color: #06708f; margin-top: 11px;">Register →</span>
+                </button>
+                <a href="/trade-account.html" style="background: #ffffff; padding: 20px 22px 22px; text-decoration: none; display: block;" style-hover="background: #f7f9fb; text-decoration: none;">
+                  <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #06708f; margin-bottom: 9px;">Trade &amp; wholesale</span>
+                  <span style="display: block; font-size: 17.5px; font-weight: 700; color: #0b1c2e; letter-spacing: -0.01em; margin-bottom: 6px;">Apply for contract pricing</span>
+                  <span style="display: block; font-size: 14.5px; line-height: 1.6; color: #667380;">Your agreed rate replaces retail everywhere. 30-day terms on approval.</span>
+                  <span style="display: block; font-size: 14.5px; font-weight: 600; color: #06708f; margin-top: 11px;">Apply →</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ isRegister }}" hint-placeholder-val="{{ false }}">
+          <div>
+            <h1 style="margin: 0 0 8px; font-size: 31px; line-height: 1.12; font-weight: 700; letter-spacing: -0.025em; color: #0b1c2e;">Create your account</h1>
+            <p style="margin: 0 0 26px; font-size: 16px; line-height: 1.65; color: #667380; max-width: 52em;">A standard account, ready to order with. If you are buying for a business and want contract pricing, <a href="/trade-account.html">apply for a trade account</a> instead — you can do that after registering too.</p>
+
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; max-width: 52em;">
+              <sc-for list="{{ registerFields }}" as="f" hint-placeholder-count="0">
+                <label style="{{ f.wrapStyle }}">
+                  <span style="display: flex; align-items: baseline; justify-content: space-between; gap: 10px;">
+                    <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #667380;">{{ f.label }}</span>
+                    <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; color: {{ f.hintFg }};">{{ f.hint }}</span>
+                  </span>
+                  <input type="{{ f.type }}" placeholder="{{ f.placeholder }}" value="{{ f.value }}" onInput="{{ f.onInput }}" style="{{ f.inputStyle }}" />
+                  <span style="display: block; font-size: 13.5px; color: #c2364a; min-height: 20px;">{{ f.error }}</span>
+                </label>
+              </sc-for>
+            </div>
+
+            <div style="max-width: 52em; margin-top: 4px;">
+              <div style="border: 1px solid #dbe2e8; padding: 14px 16px; margin-bottom: 18px;">
+                <div style="display: flex; align-items: center; justify-content: space-between; gap: 14px; margin-bottom: 9px;">
+                  <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #667380;">Password strength</span>
+                  <span style="font-size: 14px; font-weight: 600; color: {{ strengthFg }};">{{ strengthLabel }}</span>
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(235px, 1fr)); gap: 4px; margin-bottom: 10px;">
+                  <sc-for list="{{ strengthBars }}" as="b" hint-placeholder-count="0">
+                    <span style="{{ b.style }}"></span>
+                  </sc-for>
+                </div>
+                <div style="display: flex; flex-wrap: wrap; gap: 12px;">
+                  <sc-for list="{{ passwordRules }}" as="r" hint-placeholder-count="0">
+                    <span style="display: flex; align-items: center; gap: 6px; font-size: 13.5px; color: {{ r.fg }};">
+                      <span style="{{ r.dotStyle }}"></span>{{ r.label }}
+                    </span>
+                  </sc-for>
+                </div>
+              </div>
+
+              <button onClick="{{ toggleMarketing }}" style="display: flex; align-items: flex-start; gap: 11px; border: 0; background: none; padding: 0 0 16px; cursor: pointer; text-align: left;">
+                <span style="{{ marketingBox }}">{{ marketingTick }}</span>
+                <span style="font-size: 14.5px; line-height: 1.6; color: #4b5560;">Email me product releases, price changes and application notes. Roughly monthly, no marketing filler. You can unsubscribe from any email.</span>
+              </button>
+
+              <button onClick="{{ toggleTerms }}" style="display: flex; align-items: flex-start; gap: 11px; border: 0; background: none; padding: 0 0 6px; cursor: pointer; text-align: left;">
+                <span style="{{ termsBox }}">{{ termsTick }}</span>
+                <span style="font-size: 14.5px; line-height: 1.6; color: #4b5560;">I accept the <a href="#">terms of sale</a> and the <a href="#">privacy policy</a>. <span style="color: #c2364a;">Required</span></span>
+              </button>
+              <div style="font-size: 13.5px; color: #c2364a; min-height: 22px; margin-bottom: 10px;">{{ termsError }}</div>
+
+              <button onClick="{{ submitRegister }}" style="width: 100%; height: 52px; background: #16304f; color: #ffffff; border: 0; font-size: 16.5px; font-weight: 700; cursor: pointer;" style-hover="background: #0673a2;">{{ registerCta }}</button>
+              <div style="font-size: 14px; line-height: 1.6; color: #667380; margin-top: 12px;">We use your details to process orders and answer enquiries. Nothing is sold or passed to third parties.</div>
+            </div>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ isForgot }}" hint-placeholder-val="{{ false }}">
+          <div>
+            <h1 style="margin: 0 0 8px; font-size: 31px; line-height: 1.12; font-weight: 700; letter-spacing: -0.025em; color: #0b1c2e;">Reset your password</h1>
+            <p style="margin: 0 0 26px; font-size: 16px; line-height: 1.65; color: #667380; max-width: 52em;">Enter the email address on your account and we will send a reset link. The link works once and expires after an hour.</p>
+
+            <div style="display: flex; flex-direction: column; gap: 18px; max-width: 42em;">
+              <label style="display: flex; flex-direction: column; gap: 6px;">
+                <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #667380;">Email on your account</span>
+                <input type="text" placeholder="you@company.com.au" value="{{ forgotEmail }}" onInput="{{ onForgotEmail }}" onKeyDown="{{ onEnter }}" style="{{ forgotInputStyle }}" />
+                <span style="display: block; font-size: 13.5px; color: #c2364a; min-height: 20px;">{{ forgotError }}</span>
+              </label>
+              <button onClick="{{ submitForgot }}" style="height: 52px; background: #16304f; color: #ffffff; border: 0; font-size: 16.5px; font-weight: 700; cursor: pointer;" style-hover="background: #0673a2;">Send the reset link</button>
+              <button onClick="{{ goSignIn }}" style="border: 0; background: none; padding: 0; font-family: inherit; font-size: 15px; font-weight: 600; color: #06708f; cursor: pointer; text-align: left;">← Back to sign in</button>
+            </div>
+
+            <div style="border: 1px solid #dbe2e8; margin-top: 30px; max-width: 52em;">
+              <div style="padding: 13px 16px; background: #f7f9fb; border-bottom: 1px solid #dbe2e8; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #667380;">If the reset does not arrive</div>
+              <div style="padding: 6px 16px 14px;">
+                <sc-for list="{{ resetTips }}" as="t" hint-placeholder-count="0">
+                  <div style="display: flex; align-items: flex-start; gap: 11px; padding: 11px 0; border-bottom: 1px solid #eef2f5;">
+                    <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #0673a2; flex: 0 0 auto; padding-top: 3px;">{{ t.n }}</span>
+                    <span style="font-size: 14.5px; line-height: 1.6; color: #4b5560;">{{ t.body }}</span>
+                  </div>
+                </sc-for>
+              </div>
+            </div>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ isDone }}" hint-placeholder-val="{{ false }}">
+          <div style="border: 1px solid #dbe2e8; border-top: 3px solid #2fd07e; animation: ocRise 0.4s ease-out;">
+            <div style="padding: 36px 32px 32px; border-bottom: 1px solid #dbe2e8;">
+              <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #157a45; margin-bottom: 14px;">{{ doneKicker }}</div>
+              <h1 style="margin: 0 0 12px; font-size: 30px; line-height: 1.14; font-weight: 700; letter-spacing: -0.025em; color: #0b1c2e;">{{ doneTitle }}</h1>
+              <p style="margin: 0 0 24px; font-size: 16.5px; line-height: 1.7; color: #4b5560; max-width: 54em;">{{ doneBody }}</p>
+              <div style="display: flex; gap: 12px;">
+                <a href="{{ donePrimaryHref }}" style="padding: 14px 24px; background: #16304f; color: #ffffff; font-size: 15.5px; font-weight: 600; text-decoration: none;" style-hover="background: #0673a2; text-decoration: none;">{{ donePrimary }}</a>
+                <button onClick="{{ goSignIn }}" style="padding: 14px 24px; border: 1px solid #c9d3dc; background: #ffffff; color: #16304f; font-size: 15.5px; font-weight: 600; cursor: pointer;" style-hover="border-color: #16304f;">{{ doneSecondary }}</button>
+              </div>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(265px, 1fr)); gap: 1px; background: #dbe2e8;">
+              <sc-for list="{{ doneFacts }}" as="d" hint-placeholder-count="0">
+                <div style="background: #ffffff; padding: 16px 20px;">
+                  <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #667380;">{{ d.k }}</div>
+                  <div style="font-size: 15.5px; font-weight: 600; color: #16304f; margin-top: 4px; line-height: 1.45;">{{ d.v }}</div>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+        </sc-if>
+      </div>
+
+      <div>
+        <div style="background: #0b1c2e; color: #ffffff; position: relative; overflow: hidden;">
+          <div style="position: absolute; inset: 0; background-image: linear-gradient(90deg, rgba(11,159,216,0.08) 1px, transparent 1px), linear-gradient(180deg, rgba(11,159,216,0.08) 1px, transparent 1px); background-size: 46px 46px;"></div>
+          <div style="position: relative; padding: 28px 28px 30px;">
+            <div style="display: flex; align-items: center; gap: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #6fd0f5; margin-bottom: 14px;">
+              <span style="width: 20px; height: 1px; background: #6fd0f5;"></span>Why we require an account
+            </div>
+            <h2 style="margin: 0 0 14px; font-size: 23px; line-height: 1.22; font-weight: 700; letter-spacing: -0.02em;">It is not a marketing wall — it is how the paperwork stays together.</h2>
+            <p style="margin: 0 0 22px; font-size: 15.5px; line-height: 1.7; color: #a9bed4;">Industrial buyers come back for the same parts, need the invoice two years later, and want the datasheet for something bought in 2019. An account keeps all of that in one place instead of in an inbox.</p>
+            <div style="display: flex; flex-direction: column; gap: 1px; background: #24456b; border: 1px solid #24456b;">
+              <sc-for list="{{ perks }}" as="p" hint-placeholder-count="0">
+                <div style="background: #0b1c2e; padding: 15px 17px; display: flex; gap: 13px;">
+                  <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #0b9fd8; flex: 0 0 auto; padding-top: 3px;">{{ p.n }}</span>
+                  <span>
+                    <span style="display: block; font-size: 15.5px; font-weight: 600; color: #ffffff; margin-bottom: 4px;">{{ p.title }}</span>
+                    <span style="display: block; font-size: 14px; line-height: 1.6; color: #a9bed4;">{{ p.body }}</span>
+                  </span>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+        </div>
+
+        <div style="border: 1px solid #dbe2e8; border-top: 0;">
+          <div style="padding: 13px 18px; background: #f7f9fb; border-bottom: 1px solid #dbe2e8; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #667380;">Free without an account</div>
+          <div style="padding: 6px 18px 16px;">
+            <sc-for list="{{ freeItems }}" as="f" hint-placeholder-count="0">
+              <div style="display: flex; align-items: flex-start; gap: 11px; padding: 11px 0; border-bottom: 1px solid #eef2f5;">
+                <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #157a45; flex: 0 0 auto; padding-top: 3px;">✓</span>
+                <span style="font-size: 14.5px; line-height: 1.6; color: #4b5560;">{{ f }}</span>
+              </div>
+            </sc-for>
+            <div style="font-size: 14px; line-height: 1.6; color: #667380; margin-top: 12px;">You only need to sign in at the point of checkout.</div>
+          </div>
+        </div>
+
+        <div style="border: 1px solid #dbe2e8; border-top: 0; padding: 18px;">
+          <div style="font-size: 15px; font-weight: 600; color: #0b1c2e; margin-bottom: 5px;">Prefer to order another way?</div>
+          <p style="margin: 0 0 10px; font-size: 14px; line-height: 1.6; color: #667380;">Phone the counter, or email a purchase order and we will confirm stock and freight before anything is charged.</p>
+          <div style="display: flex; flex-direction: column; gap: 4px;">
+            <a href="#" style="font-family: 'IBM Plex Mono', monospace; font-size: 14.5px; font-weight: 500;">+61 3 9708 2390</a>
+            <a href="#" style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; font-weight: 500;">info@oceancontrols.com.au</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer data-screen-label="Footer" style="background: #0b1c2e; color: #a9bed4;">
+    <div style="max-width: 1440px; margin: 0 auto; padding: 34px 36px; display: flex; align-items: center; gap: 40px;">
+      <div style="background: #ffffff; padding: 9px 11px;">
+        <img src="/uploads/OceanControls-Design-Assets/02-brand-assets/ocean-controls-logo.png" alt="Ocean Controls" style="height: 28px; width: auto; display: block;" />
+      </div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; line-height: 1.8; color: #a9bed4;">
+        <div>44 Frankston Gardens Drive, Carrum Downs VIC 3201</div>
+        <div>+61 3 9708 2390 · info@oceancontrols.com.au · ABN 28 659 967 398</div>
+      </div>
+      <span style="margin-left: auto; display: flex; gap: 20px; font-size: 13.5px;">
+        <a href="#" style="color: #a9bed4; text-decoration: none;">Privacy</a>
+        <a href="#" style="color: #a9bed4; text-decoration: none;">Terms of sale</a>
+        <a href="/contact.html" style="color: #a9bed4; text-decoration: none;">Contact</a>
+      </span>
+    </div>
+  </footer>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440},&quot;startMode&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;signin&quot;,&quot;register&quot;,&quot;forgot&quot;],&quot;default&quot;:&quot;signin&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Access&quot;},&quot;showCheckoutNote&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Access&quot;}}">
+const PERKS = [
+  ['01', 'Every invoice, kept', 'Download any invoice or statement years later without emailing us for a copy.'],
+  ['02', 'Reorder in one click', 'Repeat a whole past order, or paste a parts list into the order pad.'],
+  ['03', 'Backorder visibility', 'The "parts on order for you" panel shows what is coming and when.'],
+  ['04', 'Contract pricing', 'Approved trade accounts see their agreed rate everywhere, automatically.']
+];
+
+const FREE_ITEMS = [
+  'Browse all 2,279 products with live stock figures',
+  'See retail pricing and every quantity break',
+  'Download all 3,319 datasheets, manuals and configuration tools',
+  'Compare products side by side and build an order'
+];
+
+const RESET_TIPS = [
+  ['01', 'Check the junk folder — automated mail from a new domain often lands there first.'],
+  ['02', 'Make sure you are using the address the account was opened with, not a personal one.'],
+  ['03', 'Still nothing after ten minutes? Call +61 3 9708 2390 and we will reset it while you wait.']
+];
+
+const RULES = [
+  ['8 characters or more', p => p.length >= 8],
+  ['A number', p => /[0-9]/.test(p)],
+  ['A capital letter', p => /[A-Z]/.test(p)]
+];
+
+class Component extends DCLogic {
+  state = {
+    mode: null, done: null, touched: false,
+    email: '', password: '', remember: true, authError: '',
+    reg: {}, marketing: true, terms: false,
+    forgotEmail: ''
+  };
+
+  set(key, v) { this.setState({ [key]: v }); }
+
+  // The prop seeds which panel opens; clicking a tab takes over from there.
+  mode() {
+    if (this.state.mode) return this.state.mode;
+    const want = this.props.startMode;
+    return ['signin', 'register', 'forgot'].indexOf(want) > -1 ? want : 'signin';
+  }
+
+  setReg(key, v) {
+    this.setState(s => ({ reg: Object.assign({}, s.reg, { [key]: v }) }));
+  }
+
+  box(on, err) {
+    return 'width: 17px; height: 17px; flex: 0 0 auto; display: flex; align-items: center; justify-content: center;'
+      + ' font-size: 12.5px; line-height: 1; color: #ffffff;'
+      + ' border: 1px solid ' + (on ? '#0673a2' : (err ? '#c2364a' : '#c9d3dc')) + ';'
+      + ' background: ' + (on ? '#0673a2' : '#ffffff') + ';';
+  }
+
+  input(err) {
+    return 'height: 46px; padding: 0 13px; font-size: 16px; outline: none;'
+      + ' border: 1px solid ' + (err ? '#c2364a' : '#dbe2e8') + ';'
+      + ' background: ' + (err ? '#fdeef0' : '#ffffff') + ';';
+  }
+
+  strength() {
+    const p = this.state.reg.password || '';
+    let n = 0;
+    RULES.forEach(r => { if (r[1](p)) n++; });
+    if (p.length >= 12) n++;
+    return Math.min(4, n);
+  }
+
+  submitSignIn() {
+    this.setState({ touched: true, authError: '' });
+    const e = this.state.email.trim();
+    /* eslint-disable no-unused-vars */
+    const p = this.state.password;
+    if (!e || e.indexOf('@') < 1 || !p) return;
+    if (p.length < 6) {
+      this.setState({ authError: 'That email and password do not match an account. Check the address, or reset the password below.' });
+      return;
+    }
+    this.setState({ mode: 'done', done: 'signin' });
+    window.scrollTo(0, 0);
+  }
+
+  submitRegister() {
+    this.setState({ touched: true });
+    const r = this.state.reg;
+    const ok = (r.first || '').trim() && (r.last || '').trim()
+      && (r.email || '').trim().indexOf('@') > 0
+      && (r.password || '').length >= 8
+      && (r.confirm || '') === (r.password || '')
+      && this.state.terms;
+    if (!ok) return;
+    this.setState({ mode: 'done', done: 'register' });
+    window.scrollTo(0, 0);
+  }
+
+  submitForgot() {
+    this.setState({ touched: true });
+    const e = this.state.forgotEmail.trim();
+    if (!e || e.indexOf('@') < 1) return;
+    this.setState({ mode: 'done', done: 'forgot' });
+    window.scrollTo(0, 0);
+  }
+
+  go(mode) {
+    this.setState({ mode: mode, touched: false, authError: '', done: null });
+    window.scrollTo(0, 0);
+  }
+
+  renderVals() {
+    const st = this.state;
+    const mode = this.mode();
+    const t = st.touched;
+    const r = st.reg;
+
+    const emailErr = t && mode === 'signin' && (!st.email.trim() ? 'Enter your email address' : (st.email.indexOf('@') < 1 ? 'That does not look like an email address' : ''));
+    const passErr = t && mode === 'signin' && !st.password ? 'Enter your password' : '';
+
+    const regSpec = [
+      ['first', 'First name', 'text', 'Given name', true, false],
+      ['last', 'Last name', 'text', 'Surname', true, false],
+      ['email', 'Email', 'text', 'you@company.com.au', true, true],
+      ['company', 'Company', 'text', 'Optional if buying as an individual', false, false],
+      ['phone', 'Phone', 'text', 'For order and delivery questions', false, false],
+      ['password', 'Password', 'password', 'At least 8 characters', true, false],
+      ['confirm', 'Confirm password', 'password', 'Type it again', true, false]
+    ];
+
+    const regErr = key => {
+      if (!t) return '';
+      const spec = regSpec.filter(s => s[0] === key)[0];
+      const v = (r[key] || '').trim();
+      if (spec[4] && !v) return spec[1] + ' is required';
+      if (key === 'email' && v && v.indexOf('@') < 1) return 'That does not look like an email address';
+      if (key === 'password' && v && v.length < 8) return 'Use at least 8 characters';
+      if (key === 'confirm' && v !== (r.password || '')) return 'The two passwords do not match';
+      return '';
+    };
+
+    const s = this.strength();
+    const strengthNames = ['Too short', 'Weak', 'Fair', 'Good', 'Strong'];
+    const strengthCols = ['#c2364a', '#c2364a', '#d99b2b', '#06708f', '#157a45'];
+
+    const forgotErr = t && mode === 'forgot'
+      ? (!st.forgotEmail.trim() ? 'Enter the email on your account' : (st.forgotEmail.indexOf('@') < 1 ? 'That does not look like an email address' : ''))
+      : '';
+
+    const doneMap = {
+      signin: {
+        kicker: 'Signed in',
+        title: 'Welcome back.',
+        body: 'You are signed in as ' + (st.email.trim() || 'your account') + '. Contract pricing, order history and your saved lists are all available now.',
+        primary: 'Go to your account', primaryHref: '/account.html',
+        secondary: 'Sign in as someone else',
+        facts: [
+          { k: 'Account', v: st.email.trim() || 'ivan@oceancontrols.com.au' },
+          { k: 'Pricing', v: 'Trade — 15% off retail' },
+          { k: 'Open orders', v: '2 in progress' }
+        ]
+      },
+      register: {
+        kicker: 'Account created',
+        title: 'You are registered.',
+        body: 'A confirmation is on its way to ' + ((r.email || '').trim() || 'your email address') + '. You can order straight away at retail pricing with quantity breaks applied automatically — and apply for trade pricing whenever you are ready.',
+        primary: 'Start shopping', primaryHref: '/shop.html',
+        secondary: 'Back to sign in',
+        facts: [
+          { k: 'Account', v: (r.email || '').trim() || 'you@company.com.au' },
+          { k: 'Pricing', v: 'Retail + quantity breaks' },
+          { k: 'Next step', v: 'Apply for trade pricing' }
+        ]
+      },
+      forgot: {
+        kicker: 'Reset link sent',
+        title: 'Check your email.',
+        body: 'If ' + (st.forgotEmail.trim() || 'that address') + ' matches an account, a reset link is on its way. It works once and expires in an hour. If nothing arrives in ten minutes, call us and we will reset it while you wait.',
+        primary: 'Back to sign in', primaryHref: '#',
+        secondary: 'Try a different address',
+        facts: [
+          { k: 'Sent to', v: st.forgotEmail.trim() || 'your email address' },
+          { k: 'Link expires', v: 'One hour' },
+          { k: 'Need it faster', v: '+61 3 9708 2390' }
+        ]
+      }
+    };
+    const d = doneMap[st.done] || doneMap.signin;
+
+    const tabDefs = [['signin', 'Sign in'], ['register', 'Register'], ['forgot', 'Reset password']];
+
+    return {
+      panelAnim: 'animation: ' + (mode === 'register' ? 'ocFade' : 'ocRise') + ' 0.28s ease-out;',
+      tabs: tabDefs.map(x => {
+        const on = mode === x[0] || (mode === 'done' && st.done === x[0]);
+        return {
+          label: x[1],
+          pick: () => this.go(x[0]),
+          style: 'padding: 13px 22px; border: 0; cursor: pointer; font-family: inherit; font-size: 16px; font-weight: ' + (on ? '700' : '500') + ';'
+            + ' background: ' + (on ? '#16304f' : 'transparent') + ';'
+            + ' color: ' + (on ? '#ffffff' : '#24456b') + ';'
+        };
+      }),
+
+      isSignIn: mode === 'signin',
+      isRegister: mode === 'register',
+      isForgot: mode === 'forgot',
+      isDone: mode === 'done',
+
+      showReturnNote: mode === 'signin' && this.props.showCheckoutNote !== false,
+      returnItems: '5 items, $1,530.90 ex GST',
+
+      hasAuthError: !!st.authError,
+      authError: st.authError,
+
+      signInFields: [
+        {
+          label: 'Email', type: 'text', placeholder: 'you@company.com.au', value: st.email,
+          inputStyle: this.input(!!emailErr), error: emailErr,
+          hasAction: false, actionLabel: '', action: () => {},
+          onInput: e => this.set('email', e.target.value)
+        },
+        {
+          label: 'Password', type: 'password', placeholder: '••••••••', value: st.password,
+          inputStyle: this.input(!!passErr), error: passErr,
+          hasAction: false, actionLabel: '', action: () => {},
+          onInput: e => this.set('password', e.target.value)
+        }
+      ],
+      onEnter: e => {
+        if (e.key !== 'Enter') return;
+        if (mode === 'signin') this.submitSignIn();
+        if (mode === 'forgot') this.submitForgot();
+      },
+      rememberBox: this.box(st.remember, false),
+      rememberTick: st.remember ? '✓' : '',
+      toggleRemember: () => this.setState({ remember: !st.remember }),
+      signInCta: 'Sign in and continue',
+      submitSignIn: () => this.submitSignIn(),
+      goForgot: () => this.go('forgot'),
+      goRegister: () => this.go('register'),
+      goSignIn: () => this.go('signin'),
+
+      registerFields: regSpec.map(spec => {
+        const err = regErr(spec[0]);
+        return {
+          label: spec[1], type: spec[2], placeholder: spec[3],
+          value: r[spec[0]] || '',
+          hint: spec[4] ? 'Required' : 'Optional',
+          hintFg: spec[4] ? '#c2364a' : '#667380',
+          wrapStyle: 'display: flex; flex-direction: column; gap: 6px;' + (spec[5] ? ' grid-column: span 2;' : ''),
+          inputStyle: this.input(!!err),
+          error: err,
+          onInput: e => this.setReg(spec[0], e.target.value)
+        };
+      }),
+      strengthLabel: (r.password || '') ? strengthNames[s] : 'Not set',
+      strengthFg: (r.password || '') ? strengthCols[s] : '#667380',
+      strengthBars: [0, 1, 2, 3].map(i => ({
+        style: 'display: block; height: 5px; background: ' + (i < s ? strengthCols[s] : '#eef2f5') + ';'
+      })),
+      passwordRules: RULES.map(rule => {
+        const ok = rule[1](r.password || '');
+        return {
+          label: rule[0],
+          fg: ok ? '#157a45' : '#667380',
+          dotStyle: 'display: block; width: 5px; height: 5px; border-radius: 50%; background: ' + (ok ? '#157a45' : '#c9d3dc') + ';'
+        };
+      }),
+      marketingBox: this.box(st.marketing, false),
+      marketingTick: st.marketing ? '✓' : '',
+      toggleMarketing: () => this.setState({ marketing: !st.marketing }),
+      termsBox: this.box(st.terms, t && !st.terms),
+      termsTick: st.terms ? '✓' : '',
+      toggleTerms: () => this.setState({ terms: !st.terms }),
+      termsError: t && !st.terms ? 'Please accept the terms of sale to continue' : '',
+      registerCta: 'Create account',
+      submitRegister: () => this.submitRegister(),
+
+      forgotEmail: st.forgotEmail,
+      onForgotEmail: e => this.set('forgotEmail', e.target.value),
+      forgotInputStyle: this.input(!!forgotErr),
+      forgotError: forgotErr,
+      submitForgot: () => this.submitForgot(),
+      resetTips: RESET_TIPS.map(x => ({ n: x[0], body: x[1] })),
+
+      doneKicker: d.kicker,
+      doneTitle: d.title,
+      doneBody: d.body,
+      donePrimary: d.primary,
+      donePrimaryHref: d.primaryHref,
+      doneSecondary: d.secondary,
+      doneFacts: d.facts,
+
+      perks: PERKS.map(p => ({ n: p[0], title: p[1], body: p[2] })),
+      freeItems: FREE_ITEMS
+    };
+  }
+}
+
+</script>
+</body>
+</html>

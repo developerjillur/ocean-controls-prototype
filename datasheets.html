@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="/support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="icon" type="image/png" href="/favicon.png" />
+<link rel="apple-touch-icon" href="/favicon.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  body { margin: 0; background: #ffffff; color: #1f2429; font-family: Archivo, Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: #06708f; text-decoration: none; }
+  a:hover { color: #16304f; text-decoration: underline; }
+  p { text-wrap: pretty; }
+  input, button, select, textarea { font-family: inherit; }
+  :focus-visible { outline: 2px solid #0b9fd8; outline-offset: 2px; }
+  ::selection { background: #bfe8f8; }
+  @keyframes ocFade { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes ocRise { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+  @keyframes ocUp { from { transform: translateY(100%); } to { transform: none; } }
+
+  /* Responsive layout — media queries cannot be expressed as inline styles.
+     Everything that must change together fires at the same width. */
+  @media (max-width: 1180px) {
+    [style*="grid-template-columns: 262px"], [style*="grid-template-columns: 264px"],
+    [style*="grid-template-columns: 268px"], [style*="grid-template-columns: 274px"],
+    [style*="grid-template-columns: 296px"], [style*="grid-template-columns: 300px"],
+    [style*="grid-template-columns: 400px"], [style*="grid-template-columns: 1fr 400px"],
+    [style*="1fr) 340px"], [style*="1fr) 360px"], [style*="1fr) 380px"],
+    [style*="1fr) 396px"], [style*="1fr) 400px"], [style*="1fr) 404px"],
+    [style*="1fr) 412px"], [style*="1fr) 420px"], [style*="1fr) 424px"],
+    [style*="1fr) 430px"], [style*="1fr) 460px"], [style*="1fr) 480px"] {
+      grid-template-columns: 1fr !important;
+    }
+    [style*="position: sticky"] { position: static !important; }
+    [style*="display: flex"] { flex-wrap: wrap; }
+    [style*="flex: 1 1 auto"] { min-width: 0; }
+    [style*="height: 84px"], [style*="height: 82px"], [style*="height: 48px"] { height: auto !important; }
+    [style*="height: 38px"] { height: auto !important; padding-top: 7px; padding-bottom: 7px; }
+    [style*="max-width: 660px"], [style*="max-width: 620px"], [style*="max-width: 560px"],
+    [style*="max-width: 480px"] { max-width: 100% !important; }
+  }
+  @media (max-width: 900px) {
+    [style*="grid-template-columns: repeat"] {
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)) !important;
+    }
+    [style*="columns: 3"] { columns: 2 !important; }
+  }
+  @media (max-width: 700px) {
+    [style*="display: grid"] { grid-template-columns: 1fr !important; }
+    [style*="columns: 3"] { columns: 1 !important; }
+  }
+</style>
+</helmet>
+
+<div style="width: 100%; background: #ffffff;">
+
+  <div style="background: #0b1c2e; color: #a9bed4; font-size: 13.5px;">
+    <div style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 36px); height: 38px; display: flex; align-items: center; gap: 26px;">
+      <span style="display: flex; align-items: center; gap: 8px;"><span style="width: 6px; height: 6px; border-radius: 50%; background: #2fd07e;"></span>Every file free to download — no account, no email wall</span>
+      <span style="margin-left: auto; display: flex; align-items: center; gap: 22px;">
+        <a href="/brands.html" style="color: #d6e4f2; text-decoration: none;">Brands</a>
+        <a href="#" style="color: #d6e4f2; text-decoration: none;">Shipping</a>
+        <a href="/contact.html" style="color: #d6e4f2; text-decoration: none;">Contact</a>
+        <a href="#" style="color: #ffffff; font-family: 'IBM Plex Mono', monospace; text-decoration: none;">+61 3 9708 2390</a>
+      </span>
+    </div>
+  </div>
+
+  <div style="background: #ffffff; border-bottom: 1px solid #dbe2e8;">
+    <div style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 36px); height: 84px; display: flex; align-items: center; gap: 28px;">
+      <a href="/index.html" style="flex: 0 0 auto; display: block;" aria-label="Ocean Controls home">
+        <img src="/uploads/OceanControls-Design-Assets/02-brand-assets/ocean-controls-logo.png" alt="Ocean Controls" style="height: 42px; width: auto; display: block;" />
+      </a>
+      <div style="flex: 1 1 auto; max-width: 560px; display: flex; height: 46px; border: 1.5px solid #16304f;">
+        <input type="text" placeholder="Search 2,279 products — name, SKU, MPN or spec" style="flex: 1 1 auto; border: 0; outline: none; padding: 0 14px; font-size: 15.5px; min-width: 0;" aria-label="Search products" />
+        <a href="/search.html" style="display: flex; align-items: center; justify-content: center; text-decoration: none; flex: 0 0 auto; border: 0; background: #16304f; color: #ffffff; padding: 0 24px; font-size: 14.5px; font-weight: 600; cursor: pointer;" style-hover="background: #0673a2;">Search</a>
+      </div>
+      <div style="margin-left: auto; display: flex; align-items: center; gap: 8px;">
+        <a href="#" style="display: flex; flex-direction: column; padding: 7px 14px; border: 1px solid #dbe2e8; text-decoration: none; color: #16304f;" style-hover="border-color: #16304f; text-decoration: none;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #667380;">Account</span>
+          <span style="font-size: 14.5px; font-weight: 600;">Sign in</span>
+        </a>
+        <a href="/cart.html" style="display: flex; align-items: center; gap: 11px; padding: 9px 15px; background: #16304f; color: #ffffff; text-decoration: none;" style-hover="background: #0b1c2e; text-decoration: none;">
+          <span style="position: relative; display: block; width: 17px; height: 17px; border: 1.5px solid #ffffff; border-top-color: transparent;">
+            <span style="position: absolute; top: -5px; left: 2px; right: 2px; height: 5px; border: 1.5px solid #ffffff; border-bottom: 0;"></span>
+          </span>
+          <span style="display: flex; flex-direction: column; line-height: 1.25;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #90b4d4;">0 items</span>
+            <span style="font-size: 14.5px; font-weight: 600;">$0.00</span>
+          </span>
+        </a>
+      </div>
+    </div>
+
+    <div style="background: #16304f;">
+      <div style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 36px); display: flex; align-items: stretch;">
+        <a href="/shop.html" style="display: flex; align-items: center; gap: 11px; padding: 0 20px; height: 48px; background: #0673a2; color: #ffffff; font-size: 15px; font-weight: 600; text-decoration: none; flex: 0 0 auto;" style-hover="background: #06708f; text-decoration: none;">
+          <span style="display: flex; flex-direction: column; gap: 3px;">
+            <span style="display: block; width: 15px; height: 2px; background: #ffffff;"></span>
+            <span style="display: block; width: 15px; height: 2px; background: #ffffff;"></span>
+            <span style="display: block; width: 15px; height: 2px; background: #ffffff;"></span>
+          </span>
+          Shop by category
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; font-weight: 600; color: #ffffff;">237</span>
+        </a>
+        <a href="/shop.html" style="display: flex; align-items: center; padding: 0 15px; color: #d6e4f2; font-size: 15px; font-weight: 500; text-decoration: none;" style-hover="background: #24456b; color: #ffffff; text-decoration: none;">New arrivals</a>
+        <a href="/shop.html" style="display: flex; align-items: center; padding: 0 15px; color: #d6e4f2; font-size: 15px; font-weight: 500; text-decoration: none;" style-hover="background: #24456b; color: #ffffff; text-decoration: none;">Clearance</a>
+        <a href="/brands.html" style="display: flex; align-items: center; padding: 0 15px; color: #d6e4f2; font-size: 15px; font-weight: 500; text-decoration: none;" style-hover="background: #24456b; color: #ffffff; text-decoration: none;">Brands</a>
+        <a href="/about.html" style="display: flex; align-items: center; padding: 0 15px; color: #d6e4f2; font-size: 15px; font-weight: 500; text-decoration: none;" style-hover="background: #24456b; color: #ffffff; text-decoration: none;">Engineering services</a>
+        <a href="/datasheets.html" style="display: flex; align-items: center; padding: 0 15px; background: #24456b; color: #ffffff; font-size: 15px; font-weight: 600; text-decoration: none; box-shadow: inset 0 -2px 0 #0b9fd8;">Datasheets</a>
+        <a href="/about.html" style="display: flex; align-items: center; padding: 0 15px; color: #d6e4f2; font-size: 15px; font-weight: 500; text-decoration: none;" style-hover="background: #24456b; color: #ffffff; text-decoration: none;">About</a>
+        <a href="#" style="margin-left: auto; display: flex; align-items: center; gap: 9px; padding: 0 18px; background: #0673a2; color: #ffffff; font-size: 14.5px; font-weight: 600; text-decoration: none;" style-hover="background: #6fd0f5; color: #0b1c2e; text-decoration: none;">Can't find a file?<span>→</span></a>
+      </div>
+    </div>
+  </div>
+
+  <section data-screen-label="Library hero" style="background: #0b1c2e; position: relative; overflow: hidden;">
+    <div style="position: absolute; inset: 0; background-image: linear-gradient(90deg, rgba(11,159,216,0.08) 1px, transparent 1px), linear-gradient(180deg, rgba(11,159,216,0.08) 1px, transparent 1px); background-size: 60px 60px;"></div>
+    <div style="position: absolute; top: -230px; right: -150px; width: 680px; height: 680px; border-radius: 50%; background: radial-gradient(circle, rgba(11,159,216,0.2), rgba(11,159,216,0) 66%);"></div>
+
+    <div style="position: relative; max-width: 1440px; margin: 0 auto; padding: 52px 36px 0;">
+      <div style="display: grid; grid-template-columns: minmax(0, 1fr) 400px; gap: 68px; align-items: start;">
+        <div style="animation: ocRise 0.5s ease-out;">
+          <div style="display: inline-flex; align-items: center; gap: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #6fd0f5; border: 1px solid rgba(111,208,245,0.35); padding: 6px 12px; margin-bottom: 24px;">
+            <span style="width: 6px; height: 6px; background: #6fd0f5;"></span>Technical library
+          </div>
+          <h1 style="margin: 0 0 18px; font-size: 50px; line-height: 1.05; font-weight: 800; letter-spacing: -0.03em; color: #ffffff; max-width: 18em;">3,319 datasheets, manuals and tools. No email wall.</h1>
+          <p style="margin: 0 0 26px; font-size: 18.5px; line-height: 1.6; color: #a9bed4; max-width: 40em;">Every file we hold on every product we sell — wiring diagrams, configuration software, dimensional drawings, conformity declarations. Search it before you buy, and again in two years when you are troubleshooting on site.</p>
+
+          <div style="display: flex; height: 54px; background: #ffffff; border: 1px solid #24456b; max-width: 640px;">
+            <input type="text" ref="{{ searchRef }}" placeholder="Search by product, SKU, brand or file — try KTA-402, Modbus, wiring" value="{{ query }}" onInput="{{ onQuery }}" style="flex: 1 1 auto; border: 0; outline: none; padding: 0 18px; font-size: 16.5px; color: #1f2429; min-width: 0;" aria-label="Search the technical library" />
+            <span style="flex: 0 0 auto; display: flex; align-items: center; padding-right: 12px; font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; color: #667380;">{{ resultCount }}</span>
+            <a href="/search.html" style="display: flex; align-items: center; justify-content: center; text-decoration: none; flex: 0 0 auto; border: 0; background: #0673a2; color: #ffffff; padding: 0 28px; font-size: 15.5px; font-weight: 600; cursor: pointer;" style-hover="background: #ffffff; color: #0b1c2e;">Search</a>
+          </div>
+          <div style="display: flex; align-items: center; gap: 9px; margin-top: 14px; flex-wrap: wrap;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #9ab0c6;">Try</span>
+            <sc-for list="{{ examples }}" as="e" hint-placeholder-count="0">
+              <button onClick="{{ e.pick }}" style="background: rgba(255,255,255,0.06); border: 1px solid #3a5878; color: #d6e4f2; font-family: 'IBM Plex Mono', monospace; font-size: 13px; padding: 6px 10px; cursor: pointer;" style-hover="border-color: #0673a2; color: #6fd0f5;">{{ e.label }}</button>
+            </sc-for>
+          </div>
+        </div>
+
+        <div style="background: #ffffff; border: 1px solid #24456b; animation: ocRise 0.6s ease-out;">
+          <div style="padding: 13px 18px; background: #f4f6f8; border-bottom: 1px solid #dbe2e8; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #16304f;">Best documented products</div>
+          <sc-for list="{{ mostDocumented }}" as="m" hint-placeholder-count="0">
+            <button onClick="{{ m.pick }}" style="width: 100%; display: grid; grid-template-columns: 44px minmax(0, 1fr) 52px; align-items: center; gap: 13px; padding: 11px 18px; border: 0; border-bottom: 1px solid #eef2f5; background: none; cursor: pointer; text-align: left;" style-hover="background: #f7f9fb;">
+              <span style="{{ m.imgStyle }}"></span>
+              <span style="min-width: 0;">
+                <span style="display: block; font-size: 14px; font-weight: 600; color: #16304f; line-height: 1.35;">{{ m.sku }}</span>
+                <span style="display: block; font-size: 13px; color: #667380; margin-top: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{ m.name }}</span>
+              </span>
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; font-weight: 600; color: #06708f; text-align: right;">{{ m.files }}</span>
+            </button>
+          </sc-for>
+          <div style="padding: 12px 18px; background: #f7f9fb; font-size: 13.5px; line-height: 1.55; color: #667380;">The Davis weather-station gateways carry twelve files each — datasheet, manual, wiring, BACnet object list and configuration tools.</div>
+        </div>
+      </div>
+
+      <div style="border-top: 1px solid #24456b; margin-top: 44px; background: rgba(255,255,255,0.03);">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(195px, 1fr));">
+          <sc-for list="{{ stats }}" as="s" hint-placeholder-count="0">
+            <div style="{{ s.cellStyle }}">
+              <div style="font-size: 27px; font-weight: 800; color: #ffffff; font-variant-numeric: tabular-nums; letter-spacing: -0.03em;">{{ s.n }}</div>
+              <div style="font-size: 14px; line-height: 1.4; color: #a9bed4; margin-top: 3px;">{{ s.label }}</div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Library" style="background: #ffffff;">
+    <div style="max-width: 1440px; margin: 0 auto; padding: 30px 36px 80px; display: grid; grid-template-columns: 268px minmax(0, 1fr); gap: 32px; align-items: start;">
+
+      <aside style="position: sticky; top: 20px;">
+        <div style="border: 1px solid #dbe2e8;">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 13px 16px; background: #16304f; color: #ffffff;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase;">Narrow it down</span>
+            <sc-if value="{{ hasFilters }}" hint-placeholder-val="{{ false }}">
+              <button onClick="{{ clearAll }}" style="border: 0; background: none; padding: 0; font-family: inherit; font-size: 13.5px; font-weight: 600; color: #6fd0f5; cursor: pointer;">Clear</button>
+            </sc-if>
+          </div>
+
+          <div style="border-bottom: 1px solid #dbe2e8; padding: 14px 16px 16px;">
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #667380; margin-bottom: 10px;">File type</div>
+            <sc-for list="{{ typeFacets }}" as="f" hint-placeholder-count="0">
+              <button onClick="{{ f.toggle }}" style="{{ f.style }}">
+                <span style="{{ f.boxStyle }}">{{ f.tick }}</span>
+                <span style="flex: 1 1 auto; text-align: left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{ f.label }}</span>
+                <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #667380; font-variant-numeric: tabular-nums;">{{ f.count }}</span>
+              </button>
+            </sc-for>
+          </div>
+
+          <div style="border-bottom: 1px solid #dbe2e8; padding: 14px 16px 16px;">
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #667380; margin-bottom: 10px;">Category</div>
+            <div style="max-height: 226px; overflow-y: auto;">
+              <sc-for list="{{ catFacets }}" as="f" hint-placeholder-count="0">
+                <button onClick="{{ f.toggle }}" style="{{ f.style }}">
+                  <span style="{{ f.boxStyle }}">{{ f.tick }}</span>
+                  <span style="flex: 1 1 auto; text-align: left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{ f.label }}</span>
+                  <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #667380; font-variant-numeric: tabular-nums;">{{ f.count }}</span>
+                </button>
+              </sc-for>
+            </div>
+          </div>
+
+          <div style="padding: 14px 16px 16px;">
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #667380; margin-bottom: 10px;">Brand</div>
+            <sc-for list="{{ brandFacets }}" as="f" hint-placeholder-count="0">
+              <button onClick="{{ f.toggle }}" style="{{ f.style }}">
+                <span style="{{ f.boxStyle }}">{{ f.tick }}</span>
+                <span style="flex: 1 1 auto; text-align: left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{ f.label }}</span>
+                <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #667380; font-variant-numeric: tabular-nums;">{{ f.count }}</span>
+              </button>
+            </sc-for>
+          </div>
+        </div>
+
+        <div style="border: 1px solid #dbe2e8; border-top: 0; background: #f7f9fb; padding: 16px;">
+          <div style="font-size: 15px; font-weight: 600; color: #0b1c2e; margin-bottom: 5px;">File missing?</div>
+          <p style="margin: 0 0 10px; font-size: 14px; line-height: 1.55; color: #667380;">Some manufacturers give us documentation we cannot republish. Ask and we will email it the same day.</p>
+          <a href="#" style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; font-weight: 500;">+61 3 9708 2390</a>
+        </div>
+      </aside>
+
+      <div>
+        <div style="display: flex; align-items: center; gap: 16px; border: 1px solid #dbe2e8; background: #f7f9fb; padding: 11px 15px; margin-bottom: 14px;">
+          <span style="font-size: 14.5px; color: #4b5560;">{{ showingLabel }}</span>
+          <div style="margin-left: auto; display: flex; align-items: center; gap: 8px;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #667380;">Group by</span>
+            <sc-for list="{{ groupOpts }}" as="g" hint-placeholder-count="0">
+              <button onClick="{{ g.pick }}" style="{{ g.style }}">{{ g.label }}</button>
+            </sc-for>
+          </div>
+          <div style="display: flex; align-items: center; gap: 8px; padding-left: 16px; border-left: 1px solid #dbe2e8;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #667380;">Sort</span>
+            <sc-for list="{{ sortOpts }}" as="s" hint-placeholder-count="0">
+              <button onClick="{{ s.pick }}" style="{{ s.style }}">{{ s.label }}</button>
+            </sc-for>
+          </div>
+        </div>
+
+        <sc-if value="{{ hasPills }}" hint-placeholder-val="{{ false }}">
+          <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 14px;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #667380;">Filtering by</span>
+            <sc-for list="{{ pills }}" as="p" hint-placeholder-count="0">
+              <button onClick="{{ p.remove }}" style="display: flex; align-items: center; gap: 8px; background: #16304f; border: 0; color: #ffffff; font-size: 13.5px; padding: 6px 10px; cursor: pointer;" style-hover="background: #0673a2;">
+                <span>{{ p.label }}</span><span style="opacity: 0.7;">×</span>
+              </button>
+            </sc-for>
+            <button onClick="{{ clearAll }}" style="border: 0; background: none; padding: 0; font-family: inherit; font-size: 13.5px; font-weight: 600; color: #06708f; cursor: pointer; text-decoration: underline;">Clear all</button>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ hasFiles }}" hint-placeholder-val="{{ true }}">
+          <div style="border: 1px solid #dbe2e8;">
+            <div style="display: grid; grid-template-columns: 40px 52px minmax(0, 1fr) 132px 118px 74px 104px; align-items: center; background: #16304f; color: #ffffff;">
+              <div style="padding: 10px 0 10px 13px;">
+                <button onClick="{{ toggleAll }}" style="{{ allBoxStyle }}">{{ allTick }}</button>
+              </div>
+              <div style="padding: 10px 8px; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase;">Item</div>
+              <div style="padding: 10px 10px; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase;">File</div>
+              <div style="padding: 10px 10px; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase;">Type</div>
+              <div style="padding: 10px 10px; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase;">Brand</div>
+              <div style="padding: 10px 10px; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; text-align: right;">Size</div>
+              <div style="padding: 10px 10px;"></div>
+            </div>
+
+            <sc-for list="{{ groups }}" as="g" hint-placeholder-count="0">
+              <div>
+                <sc-if value="{{ g.hasHeader }}" hint-placeholder-val="{{ false }}">
+                  <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 15px; background: #f7f9fb; border-top: 1px solid #dbe2e8; border-bottom: 1px solid #dbe2e8;">
+                    <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #16304f; font-weight: 600;">{{ g.label }}</span>
+                    <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #667380;">{{ g.count }}</span>
+                  </div>
+                </sc-if>
+                <sc-for list="{{ g.files }}" as="f" hint-placeholder-count="0">
+                  <div style="{{ f.rowStyle }}">
+                    <div style="padding: 10px 0 10px 13px;">
+                      <button onClick="{{ f.toggle }}" style="{{ f.boxStyle }}">{{ f.tick }}</button>
+                    </div>
+                    <div style="padding: 8px 8px;">
+                      <div style="{{ f.imgStyle }}"></div>
+                    </div>
+                    <div style="padding: 10px; min-width: 0;">
+                      <a href="#" style="display: block; font-size: 14.5px; font-weight: 500; color: #16304f; line-height: 1.35; text-decoration: none; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" style-hover="color: #06708f;">{{ f.pre }}<span style="background: #fff3bf; color: #0b1c2e;">{{ f.mid }}</span>{{ f.post }}</a>
+                      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #667380; margin-top: 3px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{ f.meta }}</div>
+                    </div>
+                    <div style="padding: 10px;">
+                      <span style="{{ f.typeStyle }}">{{ f.type }}</span>
+                    </div>
+                    <div style="padding: 10px; font-size: 13.5px; color: #4b5560; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{ f.brand }}</div>
+                    <div style="padding: 10px; text-align: right; font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; color: #667380;">{{ f.size }}</div>
+                    <div style="padding: 8px 10px;">
+                      <a href="#" style="display: block; text-align: center; height: 30px; line-height: 30px; border: 1px solid #dbe2e8; color: #16304f; font-size: 13px; font-weight: 600; text-decoration: none;" style-hover="border-color: #16304f; background: #f4f6f8; text-decoration: none;">Download ↓</a>
+                    </div>
+                  </div>
+                </sc-for>
+              </div>
+            </sc-for>
+          </div>
+
+          <div style="display: flex; align-items: center; gap: 14px; margin-top: 18px; padding-top: 16px; border-top: 1px solid #dbe2e8;">
+            <span style="font-size: 14px; color: #667380;">{{ showingLabel }}</span>
+            <div style="margin-left: auto; display: flex; align-items: center; gap: 6px;">
+              <button onClick="{{ prevPage }}" style="{{ prevStyle }}">← Previous</button>
+              <sc-for list="{{ pageBtns }}" as="b" hint-placeholder-count="0">
+                <button onClick="{{ b.pick }}" style="{{ b.style }}">{{ b.label }}</button>
+              </sc-for>
+              <button onClick="{{ nextPage }}" style="{{ nextStyle }}">Next →</button>
+            </div>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ noFiles }}" hint-placeholder-val="{{ false }}">
+          <div style="border: 1px dashed #c9d3dc; padding: 60px 32px; text-align: center;">
+            <div style="font-size: 18.5px; font-weight: 600; color: #16304f; margin-bottom: 8px;">{{ noFilesTitle }}</div>
+            <p style="margin: 0 auto 20px; font-size: 15.5px; line-height: 1.6; color: #667380; max-width: 44em;">Not every manufacturer lets us republish their documentation. Call +61 3 9708 2390 or email the SKU and we will send what we hold, the same day.</p>
+            <div style="display: flex; gap: 10px; justify-content: center;">
+              <button onClick="{{ clearAll }}" style="border: 1px solid #16304f; background: #ffffff; color: #16304f; font-size: 14.5px; font-weight: 600; padding: 12px 20px; cursor: pointer;" style-hover="background: #16304f; color: #ffffff;">Clear the filters</button>
+              <a href="#" style="padding: 12px 20px; background: #16304f; color: #ffffff; font-size: 14.5px; font-weight: 600; text-decoration: none;" style-hover="background: #0673a2; text-decoration: none;">Request a document</a>
+            </div>
+          </div>
+        </sc-if>
+
+        <div style="{{ coverageWrapStyle }}">
+          <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 14px; padding: 14px 16px; background: #f7f9fb; border-bottom: 1px solid #dbe2e8;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #667380;">Documentation coverage, by category</span>
+            <span style="font-size: 13.5px; color: #667380;">Files per category across all 2,279 products</span>
+          </div>
+          <div style="padding: 6px 16px 16px;">
+            <sc-for list="{{ coverage }}" as="c" hint-placeholder-count="0">
+              <div style="display: grid; grid-template-columns: 200px minmax(0, 1fr) 96px 84px; align-items: center; gap: 14px; padding: 8px 0; border-bottom: 1px solid #eef2f5;">
+                <span style="font-size: 14px; color: #16304f; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{ c.name }}</span>
+                <span style="display: block; height: 8px; background: #eef2f5;">
+                  <span style="{{ c.barStyle }}"></span>
+                </span>
+                <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #4b5560; text-align: right; font-variant-numeric: tabular-nums;">{{ c.files }}</span>
+                <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: {{ c.rateFg }}; text-align: right;">{{ c.rate }}</span>
+              </div>
+            </sc-for>
+            <div style="display: flex; align-items: flex-start; gap: 12px; border-left: 3px solid #d99b2b; background: #fdf8ef; padding: 14px 16px; margin-top: 16px;">
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #a5620a; flex: 0 0 auto; padding-top: 2px;">Gaps</span>
+              <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #6b4a12;">Four categories are thin: <strong style="font-weight: 600;">Enclosures</strong> has files on 5 of 48 products, <strong style="font-weight: 600;">CNC</strong> on 2 of 17, <strong style="font-weight: 600;">Software</strong> on 1 of 8 and <strong style="font-weight: 600;">Test Equipment</strong> on 5 of 12. Worth filling before launch — those pages will read as unfinished next to Weather, which averages more than three files per product.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Software tools" style="background: #16304f; color: #ffffff;">
+    <div style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 36px); display: grid; grid-template-columns: 400px minmax(0, 1fr);">
+      <div style="padding: 54px 56px 56px 0;">
+        <div style="display: flex; align-items: center; gap: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #6fd0f5; margin-bottom: 16px;">
+          <span style="width: 22px; height: 1px; background: #6fd0f5;"></span>Configuration software
+        </div>
+        <h2 style="margin: 0 0 16px; font-size: 31px; line-height: 1.14; font-weight: 700; letter-spacing: -0.025em;">The tools, not just the paperwork</h2>
+        <p style="margin: 0 0 22px; font-size: 16.5px; line-height: 1.7; color: #b7cade;">Configuration utilities, firmware and programming software sit in the library alongside the datasheets — because a gateway you cannot configure is a paperweight.</p>
+        <p style="margin: 0; font-size: 15.5px; line-height: 1.7; color: #a9bed4;">Where a manufacturer restricts redistribution we hold the file and send it on request. Ask for the SKU and we will get it to you the same day.</p>
+      </div>
+      <div style="border-left: 1px solid #24456b; padding: 54px 0 56px 56px;">
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: #24456b; border: 1px solid #24456b;">
+          <sc-for list="{{ tools }}" as="t" hint-placeholder-count="0">
+            <div style="background: #16304f; padding: 20px 22px;">
+              <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 9px;">
+                <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.08em; background: #0673a2; color: #ffffff; padding: 3px 6px;">{{ t.kind }}</span>
+                <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #9ab0c6;">{{ t.size }}</span>
+              </div>
+              <div style="font-size: 16px; font-weight: 600; color: #ffffff; margin-bottom: 5px;">{{ t.name }}</div>
+              <p style="margin: 0 0 10px; font-size: 14px; line-height: 1.55; color: #a9bed4;">{{ t.body }}</p>
+              <a href="#" style="font-size: 14px; font-weight: 600; color: #6fd0f5;">Download ↓</a>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer data-screen-label="Footer" style="background: #0b1c2e; color: #a9bed4; border-top: 1px solid #24456b; padding: 54px 0 0;">
+    <div style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 36px);">
+      <div style="display: grid; grid-template-columns: 1.3fr 1fr 1fr 1fr 1.2fr; gap: 44px; padding-bottom: 46px; border-bottom: 1px solid #24456b;">
+        <div>
+          <div style="background: #ffffff; display: inline-block; padding: 10px 12px; margin-bottom: 20px;">
+            <img src="/uploads/OceanControls-Design-Assets/02-brand-assets/ocean-controls-logo.png" alt="Ocean Controls" style="height: 34px; width: auto; display: block;" />
+          </div>
+          <p style="margin: 0 0 18px; font-size: 15px; line-height: 1.65; color: #a9bed4; max-width: 30em;">Australia's specialist supplier of industrial automation and control equipment, and a custom engineering shop for the jobs the catalogue can't cover.</p>
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; line-height: 1.9; color: #a9bed4;">
+            <div>44 Frankston Gardens Drive</div>
+            <div>Carrum Downs VIC 3201, Australia</div>
+            <div style="margin-top: 8px; color: #d6e4f2;">+61 3 9708 2390</div>
+            <div><a href="#" style="color: #6fd0f5;">info@oceancontrols.com.au</a></div>
+            <div style="margin-top: 8px;">ABN 28 659 967 398</div>
+          </div>
+        </div>
+        <div>
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #9ab0c6; margin-bottom: 16px;">Library</div>
+          <div style="display: flex; flex-direction: column; gap: 9px; font-size: 15px;">
+            <sc-for list="{{ footerTypes }}" as="f" hint-placeholder-count="0">
+              <button onClick="{{ f.pick }}" style="border: 0; background: none; padding: 0; font-family: inherit; font-size: 15px; color: #d6e4f2; cursor: pointer; text-align: left;" style-hover="color: #6fd0f5;">{{ f.label }}</button>
+            </sc-for>
+          </div>
+        </div>
+        <div>
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #9ab0c6; margin-bottom: 16px;">Shop</div>
+          <div style="display: flex; flex-direction: column; gap: 9px; font-size: 15px;">
+            <a href="/shop.html" style="color: #d6e4f2; text-decoration: none;">All products</a>
+            <a href="/shop.html" style="color: #d6e4f2; text-decoration: none;">New arrivals</a>
+            <a href="/shop.html" style="color: #d6e4f2; text-decoration: none;">Clearance &amp; sale</a>
+            <a href="/brands.html" style="color: #d6e4f2; text-decoration: none;">All brands</a>
+            <a href="/shop.html" style="color: #d6e4f2; text-decoration: none;">Ocean Controls range</a>
+          </div>
+        </div>
+        <div>
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #9ab0c6; margin-bottom: 16px;">Company</div>
+          <div style="display: flex; flex-direction: column; gap: 9px; font-size: 15px;">
+            <a href="/about.html" style="color: #d6e4f2; text-decoration: none;">About us</a>
+            <a href="/about.html" style="color: #d6e4f2; text-decoration: none;">Engineering services</a>
+            <a href="/articles.html" style="color: #d6e4f2; text-decoration: none;">Articles &amp; news</a>
+            <a href="/contact.html" style="color: #d6e4f2; text-decoration: none;">Contact us</a>
+            <a href="#" style="color: #d6e4f2; text-decoration: none;">Shipping &amp; delivery</a>
+            <a href="#" style="color: #d6e4f2; text-decoration: none;">Returns &amp; warranty</a>
+          </div>
+        </div>
+        <div>
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #9ab0c6; margin-bottom: 16px;">Product updates</div>
+          <p style="margin: 0 0 14px; font-size: 15px; line-height: 1.6; color: #a9bed4;">New releases, price changes and application notes. Roughly monthly, no marketing filler.</p>
+          <div style="display: flex; margin-bottom: 22px;">
+            <input type="text" placeholder="you@company.com.au" style="flex: 1 1 auto; height: 42px; background: rgba(255,255,255,0.06); border: 1px solid #3a5878; border-right: 0; color: #ffffff; padding: 0 12px; font-size: 14.5px; outline: none; min-width: 0;" aria-label="Email address" />
+            <button style="flex: 0 0 auto; height: 42px; padding: 0 16px; background: #0673a2; color: #ffffff; border: 0; font-size: 14px; font-weight: 600; cursor: pointer;" style-hover="background: #ffffff; color: #0b1c2e;">Join</button>
+          </div>
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #9ab0c6; margin-bottom: 10px;">Payment accepted</div>
+          <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; border: 1px solid #3a5878; padding: 5px 9px; color: #d6e4f2;">VISA</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; border: 1px solid #3a5878; padding: 5px 9px; color: #d6e4f2;">MASTERCARD</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; border: 1px solid #3a5878; padding: 5px 9px; color: #d6e4f2;">AMEX</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; border: 1px solid #3a5878; padding: 5px 9px; color: #d6e4f2;">EFTPOS</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; border: 1px solid #3a5878; padding: 5px 9px; color: #d6e4f2;">ACCOUNT</span>
+          </div>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; justify-content: space-between; gap: 30px; padding: 22px 0 26px; font-size: 13.5px; color: #9ab0c6;">
+        <span>© 2026 Ocean Controls Pty Ltd. Documentation remains the property of the respective manufacturers and is republished with permission.</span>
+        <span style="display: flex; gap: 22px;">
+          <a href="#" style="color: #a9bed4; text-decoration: none;">Privacy</a>
+          <a href="#" style="color: #a9bed4; text-decoration: none;">Terms of sale</a>
+          <a href="#" style="color: #a9bed4; text-decoration: none;">Sitemap</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <sc-if value="{{ trayOpen }}" hint-placeholder-val="{{ false }}">
+    <div style="position: fixed; left: 0; right: 0; bottom: 0; z-index: 80; background: #0b1c2e; border-top: 2px solid #0b9fd8; box-shadow: 0 -20px 40px -24px rgba(11,28,46,0.7); animation: ocUp 0.2s ease-out;">
+      <div style="max-width: 1440px; margin: 0 auto; padding: 14px 36px; display: flex; align-items: center; gap: 20px;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #6fd0f5;">Selected</span>
+        <span style="font-size: 16.5px; font-weight: 700; color: #ffffff; font-variant-numeric: tabular-nums;">{{ selectedLabel }}</span>
+        <span style="font-size: 14px; color: #a9bed4;">{{ selectedSize }}</span>
+        <span style="margin-left: auto; display: flex; align-items: center; gap: 10px;">
+          <button onClick="{{ clearSelection }}" style="background: none; border: 1px solid #3a5878; color: #ffffff; font-size: 14px; font-weight: 600; padding: 9px 14px; cursor: pointer;" style-hover="border-color: #ffffff;">Clear</button>
+          <a href="#" style="background: #ffffff; color: #0b1c2e; font-size: 14.5px; font-weight: 600; padding: 11px 18px; text-decoration: none;" style-hover="background: #6fd0f5; text-decoration: none;">Email me the links</a>
+          <a href="#" style="background: #0673a2; color: #ffffff; font-size: 14.5px; font-weight: 600; padding: 11px 20px; text-decoration: none;" style-hover="background: #6fd0f5; color: #0b1c2e; text-decoration: none;">Download as ZIP ↓</a>
+        </span>
+      </div>
+    </div>
+  </sc-if>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440},&quot;showCoveragePanel&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Library&quot;},&quot;defaultGrouping&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;None&quot;,&quot;Product&quot;,&quot;Type&quot;],&quot;default&quot;:&quot;None&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Library&quot;}}">
+const IMGDIR = 'uploads/OceanControls-Design-Assets/03-product-images/';
+
+// [sku, productName, brand, category, downloadCount, imageFile]
+// Download counts are the real figures from the catalogue export.
+const PRODUCTS = [
+  ['KTA-401', 'BACnet IP Weather Station Gateway for Davis Weather Stations', 'Ocean Controls', 'Weather', 12, 'Weather__KTA-401.jpg'],
+  ['KTA-402', 'BACnet MS/TP Weather Station Gateway for Davis Weather Stations', 'Ocean Controls', 'Weather', 12, 'Weather__KTA-402.jpg'],
+  ['ULC-008C', 'UC300 IoT Controller (Cellular / LoRaWAN)', 'Milesight', 'Industrial IoT', 7, 'Industrial-IoT__ULC-008C.jpg'],
+  ['SIG-130', 'Novus DigiRail NxProg Programmable IO Module 2AI, 2AO, 4DI, 2RO, 1ETH', 'Novus', 'Arduino', 3, 'Arduino__SIG-130.jpg'],
+  ['SIG-131', 'Novus DigiRail NxProg Programmable IO Module 2AI, 2AO, 4DI, 3DO, 1ETH', 'Novus', 'Arduino', 3, 'Arduino__SIG-131.jpg'],
+  ['TCC-039', '4G LTE Universal IO Module TCG120-4G', 'Teracom', 'Controllers', 3, 'Controllers__TCC-039.jpg'],
+  ['AKD-001', 'MSD200 Modbus Datalogger', 'Akytec', 'Data Loggers', 3, 'Data-Loggers__AKD-001.jpg'],
+  ['ADW-001', 'HD67671 BACnet MS/TP Slave / Modbus Master Converter', 'ADF Web', 'Modbus, BACnet & M-Bus', 3, 'Modbus-Bacnet-MBus-Products__ADW-001.jpg'],
+  ['ADW-002', 'HD67671 BACnet/IP Slave / Modbus Master Converter', 'ADF Web', 'Modbus, BACnet & M-Bus', 3, 'Modbus-Bacnet-MBus-Products__ADW-002.jpg'],
+  ['ADW-003', 'HD67933 Modbus Master / MQTT Converter', 'ADF Web', 'Modbus, BACnet & M-Bus', 3, 'Modbus-Bacnet-MBus-Products__ADW-003.jpg'],
+  ['SMC-055', 'EM882S 8.2 A Open-Loop Stepper Drive', 'Leadshine', 'Motor Drivers & Controllers', 3, 'Motor-Drivers-%26-Controllers__SMC-055.jpg'],
+  ['AKB-001', 'NPT4 Slimline Temperature Transmitter', 'Akytec', 'Signal Conditioners', 3, 'Signal-Conditioners__AKB-001.jpg'],
+  ['FMI-110', 'Fema B44-C1 4-Digit Counter, 100 mm Display, IP65, 24 VDC', 'Fema', 'Large Displays', 2, 'Large-Displays__FMI-110.jpg'],
+  ['DBI-032', 'AC Volt-Current Input 4-Digit Process Indicator, 1 Relay, 24 VDC', 'DCBox', 'Panel Meters', 2, 'Panel-Meters__DBI-032.jpg'],
+  ['DBI-033', 'DC Volt Input 4-Digit Process Indicator, 1 Relay, 24 VDC', 'DCBox', 'Panel Meters', 2, 'Panel-Meters__DBI-033.jpg'],
+  ['NTR-150', 'Engine Start Attempt & Alarm Relay', 'Foxtam Controls', 'Relays & Relay Cards', 2, 'Relays-%26-Relay-Cards__NTR-150.jpg'],
+  ['KPR-107', 'Wired Ceiling PIR Motion Sensor', 'Z_AE', 'Security', 2, 'Security__KPR-107.jpg'],
+  ['NTR-160', 'Brown Out Timer 3-300 s, 240 VAC powered', 'Foxtam Controls', 'Timers', 2, 'Timers__NTR-160.jpg'],
+  ['KTA-387', 'Modbus Data Logger — Dual RS-485, 100-Channel, SD Card Logging', 'Ocean Controls', 'Data Loggers', 1, 'Data-Loggers__KTA-387.png'],
+  ['KTA-397', '4G LTE SMS Controller with Relay Outputs', 'Ocean Controls', 'Controllers', 1, 'Controllers__KTA-397.jpg'],
+  ['LAJ-002', 'CB25 LabJack Terminal Board for Digital I/O', 'LabJack', 'Data Acquisition', 1, 'Data-Acquisition__LAJ-002.jpg'],
+  ['LAJ-003', 'EI-1022 Temperature Probe', 'LabJack', 'Data Acquisition', 1, 'Data-Acquisition__LAJ-003.jpg'],
+  ['LAJ-006', 'Stainless Steel Temperature Probe', 'LabJack', 'Data Acquisition', 1, 'Data-Acquisition__LAJ-006.jpg'],
+  ['HNC-061', 'TH500A Communication Converter (USB Flash Drive)', 'Hanyoung Nux', 'Data Loggers', 1, 'Data-Loggers__HNC-061.jpg'],
+  ['IPI-103', 'Universal Input N1500G Large Indicator 230 VAC, Analog Out, RS-485', 'Novus', 'Large Displays', 1, 'Large-Displays__IPI-103.jpg'],
+  ['HNL-020', '24 VDC Multi-Level Signal Tower (Red, Yellow, Green) + Buzzer', 'Hanyoung Nux', 'Lighting', 1, 'Lighting__HNL-020.jpg'],
+  ['HNL-022', '24 VDC Multi-Level Signal Tower (R/Y/G/B/W) + Buzzer', 'Hanyoung Nux', 'Lighting', 1, 'Lighting__HNL-022.jpg'],
+  ['HNL-0301', '24 VDC IP65 Signal Tower (Red)', 'Hanyoung Nux', 'Lighting', 1, 'Lighting__HNL-0301.jpg'],
+  ['PSM-900', '20 kA Surge Protector', 'Mean Well / ESI', 'Power Supplies', 1, 'Power-Supplies__PSM-900.jpg'],
+  ['PSM-997', 'Mean Well DRL-01 L-Shaped DIN Rail Bracket', 'Mean Well / ESI', 'Power Supplies', 1, 'Power-Supplies__PSM-997.jpg'],
+  ['PSM-9971', 'Mean Well DRL-02 L-Shaped DIN Rail Bracket', 'Mean Well / ESI', 'Power Supplies', 1, 'Power-Supplies__PSM-9971.jpg'],
+  ['GJS-002', 'DS18B20 1-Wire Waterproof Digital Temperature Sensor, 15 m cable', 'GJY Electronics', 'Sensors', 1, 'Sensors__GJS-002.jpg'],
+  ['TCS-001', 'TST100 1-Wire Temperature Sensor with IP65 Protection', 'Teracom', 'Sensors', 1, 'Sensors__TCS-001.jpg'],
+  ['CND-902', 'Differential Line Driver', 'CNCDrive', 'CNC', 1, 'CNC__CND-902.jpg'],
+  ['KPR-106', 'Wired Photoelectric Smoke Detector', 'King Pigeon', 'Security', 1, 'Security__KPR-106.jpg'],
+  ['ULC-075', 'UR75 Industrial 5G Router', 'Milesight', 'Industrial IoT', 1, 'Industrial-IoT__ULC-075.webp'],
+  ['ULC-141', 'UR41L 4G Mini Industrial Cellular Router', 'Milesight', 'Industrial IoT', 1, 'Industrial-IoT__ULC-141.webp'],
+  ['RKS-002A', 'RK100-01G Wind Speed Sensor, 0–10 VDC Output', 'Rika Sensor', 'Weather', 1, 'Weather__RKS-002A.jpg'],
+  ['FMI-150', 'FEMA 4-20 mA Input Signal Converter with ±10 VDC Output', 'Fema', 'Signal Conditioners', 1, 'Signal-Conditioners__FMI-150.jpg'],
+  ['FMI-905', 'Fema WME Wall-Mount Housing for 96 × 48 mm Panel Meters', 'Fema', 'Panel Meters', 1, 'Panel-Meters__FMI-905.jpg'],
+  ['NTR-180', '10 Input Relay Alarm Module', 'Foxtam Controls', 'Relays & Relay Cards', 1, 'Relays-%26-Relay-Cards__NTR-180.jpg'],
+  ['NTR-190', 'Plug-In Alarm Integrator', 'Foxtam Controls', 'Relays & Relay Cards', 1, 'Relays-%26-Relay-Cards__NTR-190.jpg'],
+  ['HNR-100', 'Multi-Function Timer MA4N-B', 'Hanyoung Nux', 'Timers', 1, 'Timers__HNR-100.jpg'],
+  ['NOR-111', 'TM 619-2 Weekly Timer 230 VAC', 'Novus', 'Timers', 1, 'Timers__NOR-111.jpg'],
+  ['DEI-100', 'DOP Series HMI USB Programming Cable', 'DELTA', 'PLCs & HMIs', 1, 'PLCs-%26-HMIs__DEI-100.jpg'],
+  ['HET-115', 'Signal Process Generator Pocket Precision LB02A', 'Z_AE', 'Test Equipment', 1, 'Test-Equipment__HET-115.jpg'],
+  ['HER-300', '22 mm Rotary Potentiometer 10 k', 'Z_AE', 'Electrical Switches', 1, 'Electrical-Switches__HER-300.jpg'],
+  ['CGL-001', 'PG7 Grey Cable Gland', 'SMS', 'Electrical Terminals & Wiring', 1, 'Electrical-Terminals-Wiring__CGL-001.jpg'],
+  ['CGL-004', 'PG9 Grey Cable Gland', 'SMS', 'Electrical Terminals & Wiring', 1, 'Electrical-Terminals-Wiring__CGL-004.jpg'],
+  ['CGL-007', 'PG11 Grey Cable Gland', 'SMS', 'Electrical Terminals & Wiring', 1, 'Electrical-Terminals-Wiring__CGL-007.jpg'],
+  ['DBI-050', 'GBMA / GBMC / GBMR / GBMS Spare Remote for 10 cm Displays', 'Alish', 'Large Displays', 1, 'Large-Displays__DBI-050.jpg'],
+  ['LSK-001', 'RJ12 Serial Tuning Cable for Leadshine Drives', 'Leadshine', 'Motor Drivers & Controllers', 1, 'Motor-Drivers-%26-Controllers__LSK-001.jpg'],
+  ['LSK-002', 'JST-4 Serial Tuning Cable for Leadshine Drives', 'Leadshine', 'Motor Drivers & Controllers', 1, 'Motor-Drivers-%26-Controllers__LSK-002.jpg'],
+  ['SPE-015', 'Grey CE-Approved ABS Waterproof Enclosure, 400 × 300 × 160 mm', 'Saip Group', 'Enclosures', 1, 'Enclosures__SPE-015.jpg'],
+  ['LEA-002', '698-960 / 1700-2700 MHz 3G/4G 5 dB LTE Antenna', 'Z_AE', 'Controllers', 1, 'Controllers__LEA-002.jpg'],
+  ['RKS-070', 'RK95-51 Mounting Bracket for PH, EC, DO, ORP Sensors', 'Rika Sensor', 'Sensors', 1, 'Sensors__RKS-070.png']
+];
+
+// File templates: [label, extension, sizeKB, shortTag]
+const FILE_TYPES = [
+  ['Datasheet', 'pdf', 640, 'DATA'],
+  ['User manual', 'pdf', 2100, 'MANUAL'],
+  ['Wiring diagram', 'pdf', 480, 'WIRING'],
+  ['Configuration software', 'zip', 8400, 'SOFTWARE'],
+  ['Declaration of conformity', 'pdf', 210, 'CE'],
+  ['Dimensional drawing', 'pdf', 360, 'DRAWING'],
+  ['Quick start guide', 'pdf', 780, 'GUIDE'],
+  ['Firmware', 'zip', 1400, 'FIRMWARE'],
+  ['Application note', 'pdf', 920, 'APP NOTE'],
+  ['BACnet object list', 'pdf', 340, 'OBJECTS'],
+  ['Modbus register map', 'pdf', 290, 'REGISTERS'],
+  ['Test report', 'pdf', 540, 'TEST']
+];
+
+// Real per-category file totals across all 2,279 products.
+const COVERAGE = [
+  ['Sensors', 476, 569, 735], ['Controllers', 115, 127, 402], ['Modbus, BACnet & M-Bus', 135, 139, 333],
+  ['Power Supplies', 268, 281, 268], ['Panel Meters', 118, 124, 254], ['Weather', 74, 77, 241],
+  ['Motor Drivers & Controllers', 67, 102, 156], ['PLCs & HMIs', 49, 58, 154], ['Signal Conditioners', 64, 68, 115],
+  ['Relays & Relay Cards', 75, 112, 107], ['Data Acquisition', 32, 43, 101], ['Motors & Accessories', 59, 85, 101],
+  ['Communications', 45, 82, 84], ['Data Loggers', 25, 30, 67], ['Industrial IoT', 20, 22, 50],
+  ['Electrical Switches', 42, 59, 42], ['Lighting', 25, 33, 25], ['Timers', 17, 17, 21],
+  ['Large Displays', 12, 13, 20], ['Arduino', 3, 7, 14], ['Security', 9, 15, 11],
+  ['Enclosures', 5, 48, 7], ['Test Equipment', 5, 12, 6], ['Software', 1, 8, 3], ['CNC', 2, 17, 2]
+];
+
+const TOOLS = [
+  ['ModbusView TCP', 'OCS-011 — simulates Modbus master and slave devices on a PC. Our own tool, used for commissioning a network before the hardware lands.', 'SOFTWARE', '12 MB'],
+  ['DAQFactory', 'AzeoTech HMI and SCADA software for LabJack data acquisition. Free for projects needing three pages; a one-time purchase beyond that.', 'SOFTWARE', '86 MB'],
+  ['Akytec ALP', 'Programming environment for Akytec programmable relays and Modbus I/O modules.', 'SOFTWARE', '48 MB'],
+  ['Delta WPLSoft / DOPSoft', 'Ladder programming for Delta DVP PLCs and screen design for DOP series HMIs.', 'SOFTWARE', '640 MB'],
+  ['ADF Web SW67671', 'Configurator for the HD67671 BACnet to Modbus gateways — point lists and address mapping.', 'SOFTWARE', '18 MB'],
+  ['Leadshine MotionStudio', 'Tuning and diagnostics for EM and EL series stepper and servo drives.', 'SOFTWARE', '92 MB']
+];
+
+const EXAMPLES = ['KTA-402', 'Modbus', 'wiring', 'LabJack', 'BACnet'];
+const GROUPS = ['None', 'Product', 'Type'];
+const SORTS = ['Relevance', 'Product A–Z', 'File type', 'Size'];
+const PER_PAGE = 20;
+
+// Build the file corpus once from the real download counts.
+const FILES = [];
+PRODUCTS.forEach(function (p) {
+  const sku = p[0];
+  for (let i = 0; i < p[4]; i++) {
+    const t = FILE_TYPES[i % FILE_TYPES.length];
+    const jitter = ((sku.charCodeAt(0) + sku.charCodeAt(sku.length - 1) + i * 37) % 60) - 30;
+    const kb = Math.max(90, Math.round(t[2] * (1 + jitter / 100)));
+    FILES.push({
+      sku: sku, product: p[1], brand: p[2], cat: p[3], img: IMGDIR + p[5],
+      type: t[0], tag: t[3], ext: t[1],
+      name: sku + ' — ' + t[0].toLowerCase() + '.' + t[1],
+      kb: kb,
+      size: kb >= 1024 ? (kb / 1024).toFixed(1) + ' MB' : kb + ' KB',
+      id: sku + '#' + i
+    });
+  }
+});
+
+class Component extends DCLogic {
+  state = {
+    query: '', types: {}, cats: {}, brands: {},
+    group: null, sort: 0, page: 1, selected: {}
+  };
+
+  // The prop seeds the grouping; the buttons take over once used.
+  groupIdx() {
+    if (this.state.group !== null) return this.state.group;
+    const i = GROUPS.indexOf(this.props.defaultGrouping);
+    return i > -1 ? i : 0;
+  }
+
+  constructor(props) {
+    super(props);
+    this.searchRef = React.createRef();
+  }
+
+  box(url, h, opts) {
+    const o = opts || {};
+    return 'display: block; width: ' + (o.w || h) + '; height: ' + h + '; flex: 0 0 auto;'
+      + ' background-image: url("' + url + '");'
+      + ' background-size: contain; background-position: center; background-repeat: no-repeat;'
+      + ' border: 1px solid #eef2f5; background-color: #ffffff;';
+  }
+
+  facetRow(on) {
+    return 'width: 100%; display: flex; align-items: center; gap: 9px; padding: 6px 0; border: 0; background: none; cursor: pointer;'
+      + ' font-family: inherit; font-size: 14px; color: ' + (on ? '#0b1c2e' : '#4b5560') + '; font-weight: ' + (on ? '600' : '400') + ';';
+  }
+
+  facetBox(on) {
+    return 'width: 15px; height: 15px; flex: 0 0 auto; display: flex; align-items: center; justify-content: center;'
+      + ' font-size: 12px; line-height: 1; color: #ffffff; border: 1px solid ' + (on ? '#0673a2' : '#c9d3dc') + ';'
+      + ' background: ' + (on ? '#0673a2' : '#ffffff') + ';';
+  }
+
+  smallBtn(on) {
+    return 'font-family: inherit; font-size: 13.5px; padding: 6px 10px; cursor: pointer;'
+      + ' border: 1px solid ' + (on ? '#16304f' : '#dbe2e8') + ';'
+      + ' background: ' + (on ? '#16304f' : '#ffffff') + ';'
+      + ' color: ' + (on ? '#ffffff' : '#24456b') + ';';
+  }
+
+  flip(group, key) {
+    this.setState(s => {
+      const g = Object.assign({}, s[group]);
+      if (g[key]) delete g[key]; else g[key] = true;
+      return { [group]: g, page: 1 };
+    });
+  }
+
+  matches(f, q) {
+    if (!q) return { hit: true, i: -1 };
+    const fields = [f.name, f.product, f.sku, f.brand, f.type, f.cat];
+    for (let k = 0; k < fields.length; k++) {
+      const i = String(fields[k]).toLowerCase().indexOf(q);
+      if (i > -1) return { hit: true, i: k === 0 ? i : -1 };
+    }
+    return { hit: false, i: -1 };
+  }
+
+  filtered() {
+    const st = this.state;
+    const q = st.query.trim().toLowerCase();
+    const types = Object.keys(st.types);
+    const cats = Object.keys(st.cats);
+    const brands = Object.keys(st.brands);
+
+    let list = FILES.filter(f => {
+      if (!this.matches(f, q).hit) return false;
+      if (types.length && types.indexOf(f.type) < 0) return false;
+      if (cats.length && cats.indexOf(f.cat) < 0) return false;
+      if (brands.length && brands.indexOf(f.brand) < 0) return false;
+      return true;
+    });
+
+    if (st.sort === 1) list = list.slice().sort((a, b) => a.product.localeCompare(b.product));
+    if (st.sort === 2) list = list.slice().sort((a, b) => a.type.localeCompare(b.type));
+    if (st.sort === 3) list = list.slice().sort((a, b) => b.kb - a.kb);
+    return list;
+  }
+
+  renderVals() {
+    const st = this.state;
+    const group = this.groupIdx();
+    const q = st.query.trim().toLowerCase();
+    const list = this.filtered();
+
+    const pages = Math.max(1, Math.ceil(list.length / PER_PAGE));
+    const page = Math.min(st.page, pages);
+    const start = (page - 1) * PER_PAGE;
+    const shown = list.slice(start, start + PER_PAGE);
+
+    // facet counts computed against everything except that facet's own selection
+    const countBy = (key, value) => FILES.filter(f => {
+      if (!this.matches(f, q).hit) return false;
+      if (key !== 'type' && Object.keys(st.types).length && Object.keys(st.types).indexOf(f.type) < 0) return false;
+      if (key !== 'cat' && Object.keys(st.cats).length && Object.keys(st.cats).indexOf(f.cat) < 0) return false;
+      if (key !== 'brand' && Object.keys(st.brands).length && Object.keys(st.brands).indexOf(f.brand) < 0) return false;
+      return f[key] === value;
+    }).length;
+
+    const typeNames = [];
+    FILE_TYPES.forEach(t => { if (FILES.some(f => f.type === t[0])) typeNames.push(t[0]); });
+
+    const catNames = [];
+    FILES.forEach(f => { if (catNames.indexOf(f.cat) < 0) catNames.push(f.cat); });
+    catNames.sort();
+
+    const brandCount = {};
+    FILES.forEach(f => { brandCount[f.brand] = (brandCount[f.brand] || 0) + 1; });
+    const brandNames = Object.keys(brandCount).sort((a, b) => brandCount[b] - brandCount[a]).slice(0, 10);
+
+    const pills = [];
+    Object.keys(st.types).forEach(k => pills.push({ label: k, remove: () => this.flip('types', k) }));
+    Object.keys(st.cats).forEach(k => pills.push({ label: k, remove: () => this.flip('cats', k) }));
+    Object.keys(st.brands).forEach(k => pills.push({ label: k, remove: () => this.flip('brands', k) }));
+
+    const rowFor = (f, idx) => {
+      const on = !!st.selected[f.id];
+      const m = this.matches(f, q);
+      const pre = m.i > -1 ? f.name.slice(0, m.i) : f.name;
+      const mid = m.i > -1 ? f.name.slice(m.i, m.i + q.length) : '';
+      const post = m.i > -1 ? f.name.slice(m.i + q.length) : '';
+      return {
+        pre: pre, mid: mid, post: post,
+        meta: f.sku + '  ·  ' + f.product,
+        type: f.type, brand: f.brand, size: f.size,
+        imgStyle: this.box(f.img, '36px'),
+        typeStyle: 'display: inline-block; font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.06em;'
+          + ' padding: 4px 7px; background: ' + (f.ext === 'zip' ? '#eaf6fc' : '#f4f6f8') + ';'
+          + ' color: ' + (f.ext === 'zip' ? '#06708f' : '#24456b') + ';',
+        rowStyle: 'display: grid; grid-template-columns: 40px 52px minmax(0, 1fr) 132px 118px 74px 104px; align-items: center;'
+          + ' border-top: 1px solid #eef2f5; background: ' + (on ? '#f2f9fd' : '#ffffff') + ';',
+        boxStyle: this.facetBox(on) + ' cursor: pointer;',
+        tick: on ? '✓' : '',
+        toggle: () => this.setState(s => {
+          const sel = Object.assign({}, s.selected);
+          if (sel[f.id]) delete sel[f.id]; else sel[f.id] = f.kb;
+          return { selected: sel };
+        })
+      };
+    };
+
+    // grouping
+    let groups = [];
+    if (group === 0) {
+      groups = [{ hasHeader: false, label: '', count: '', files: shown.map(rowFor) }];
+    } else {
+      const key = group === 1 ? 'sku' : 'type';
+      const order = [];
+      const bucket = {};
+      shown.forEach(f => {
+        const k = f[key];
+        if (!bucket[k]) { bucket[k] = []; order.push(k); }
+        bucket[k].push(f);
+      });
+      groups = order.map(k => ({
+        hasHeader: true,
+        label: group === 1 ? k + ' — ' + bucket[k][0].product : k,
+        count: bucket[k].length + (bucket[k].length === 1 ? ' file' : ' files'),
+        files: bucket[k].map(rowFor)
+      }));
+    }
+
+    const selIds = Object.keys(st.selected);
+    const selKb = selIds.reduce((t, k) => t + st.selected[k], 0);
+    const maxFiles = COVERAGE[0][3];
+
+    return {
+      searchRef: this.searchRef,
+      query: st.query,
+      onQuery: e => this.setState({ query: e.target.value, page: 1 }),
+      resultCount: list.length + ' files',
+      examples: EXAMPLES.map(x => ({ label: x, pick: () => this.setState({ query: x, page: 1 }) })),
+
+      stats: [
+        ['3,319', 'files in the library'],
+        ['1,743', 'products documented'],
+        ['76%', 'of the catalogue covered'],
+        ['25', 'categories represented'],
+        ['$0', 'to download any of it']
+      ].map((s, i) => ({
+        n: s[0], label: s[1],
+        cellStyle: 'padding: 22px ' + (i === 4 ? '0' : '24px') + ' 24px ' + (i === 0 ? '0' : '24px') + ';'
+          + (i < 4 ? ' border-right: 1px solid #24456b;' : '')
+      })),
+
+      mostDocumented: PRODUCTS.slice(0, 5).map(p => ({
+        sku: p[0], name: p[1], files: p[4] + (p[4] === 1 ? ' file' : ' files'),
+        imgStyle: this.box(IMGDIR + p[5], '36px'),
+        pick: () => this.setState({ query: p[0], page: 1 })
+      })),
+
+      hasFilters: pills.length > 0,
+      clearAll: () => this.setState({ types: {}, cats: {}, brands: {}, query: '', page: 1 }),
+      hasPills: pills.length > 0,
+      pills: pills,
+
+      typeFacets: typeNames.map(t => {
+        const on = !!st.types[t];
+        return {
+          label: t, count: countBy('type', t), tick: on ? '✓' : '',
+          style: this.facetRow(on), boxStyle: this.facetBox(on),
+          toggle: () => this.flip('types', t)
+        };
+      }),
+      catFacets: catNames.map(c => {
+        const on = !!st.cats[c];
+        return {
+          label: c, count: countBy('cat', c), tick: on ? '✓' : '',
+          style: this.facetRow(on), boxStyle: this.facetBox(on),
+          toggle: () => this.flip('cats', c)
+        };
+      }),
+      brandFacets: brandNames.map(b => {
+        const on = !!st.brands[b];
+        return {
+          label: b, count: countBy('brand', b), tick: on ? '✓' : '',
+          style: this.facetRow(on), boxStyle: this.facetBox(on),
+          toggle: () => this.flip('brands', b)
+        };
+      }),
+
+      showingLabel: list.length === 0
+        ? 'No files match'
+        : 'Showing ' + (start + 1) + '–' + Math.min(start + PER_PAGE, list.length) + ' of ' + list.length + ' indexed files',
+      groupOpts: GROUPS.map((g, i) => ({ label: g, style: this.smallBtn(i === group), pick: () => this.setState({ group: i }) })),
+      sortOpts: SORTS.map((s, i) => ({ label: s, style: this.smallBtn(i === st.sort), pick: () => this.setState({ sort: i, page: 1 }) })),
+
+      hasFiles: list.length > 0,
+      noFiles: list.length === 0,
+      noFilesTitle: q ? 'Nothing in the library matches “' + st.query.trim() + '”' : 'No files match those filters',
+      groups: groups,
+
+      allTick: shown.length > 0 && shown.every(f => st.selected[f.id]) ? '✓' : '',
+      allBoxStyle: this.facetBox(shown.length > 0 && shown.every(f => st.selected[f.id])) + ' cursor: pointer;',
+      toggleAll: () => this.setState(s => {
+        const sel = Object.assign({}, s.selected);
+        const all = shown.every(f => sel[f.id]);
+        shown.forEach(f => { if (all) delete sel[f.id]; else sel[f.id] = f.kb; });
+        return { selected: sel };
+      }),
+
+      prevPage: () => this.setState({ page: Math.max(1, page - 1) }),
+      nextPage: () => this.setState({ page: Math.min(pages, page + 1) }),
+      prevStyle: this.smallBtn(false) + (page === 1 ? ' opacity: 0.45; cursor: default;' : ''),
+      nextStyle: this.smallBtn(false) + (page === pages ? ' opacity: 0.45; cursor: default;' : ''),
+      pageBtns: Array.from({ length: pages }, (_, i) => ({
+        label: String(i + 1), style: this.smallBtn(i + 1 === page), pick: () => this.setState({ page: i + 1 })
+      })),
+
+      coverageWrapStyle: this.props.showCoveragePanel === false
+        ? 'display: none;'
+        : 'border: 1px solid #dbe2e8; margin-top: 26px;',
+      coverage: COVERAGE.map(c => {
+        const rate = c[3] / c[2];
+        const thin = c[1] / c[2] < 0.5;
+        return {
+          name: c[0], files: c[3],
+          rate: rate.toFixed(1) + ' / product',
+          rateFg: thin ? '#a5620a' : '#667380',
+          barStyle: 'display: block; height: 8px; width: ' + Math.max(2, Math.round(c[3] / maxFiles * 100)) + '%;'
+            + ' background: ' + (thin ? '#d99b2b' : '#0673a2') + ';'
+        };
+      }),
+
+      tools: TOOLS.map(t => ({ name: t[0], body: t[1], kind: t[2], size: t[3] })),
+
+      trayOpen: selIds.length > 0,
+      selectedLabel: selIds.length + (selIds.length === 1 ? ' file' : ' files'),
+      selectedSize: selKb >= 1024 ? (selKb / 1024).toFixed(1) + ' MB total' : selKb + ' KB total',
+      clearSelection: () => this.setState({ selected: {} }),
+
+      footerTypes: ['Datasheets', 'User manuals', 'Wiring diagrams', 'Configuration software', 'Conformity declarations'].map(l => ({
+        label: l,
+        pick: () => {
+          const map = {
+            'Datasheets': 'Datasheet', 'User manuals': 'User manual', 'Wiring diagrams': 'Wiring diagram',
+            'Configuration software': 'Configuration software', 'Conformity declarations': 'Declaration of conformity'
+          };
+          this.setState({ types: { [map[l]]: true }, cats: {}, brands: {}, query: '', page: 1 });
+          window.scrollTo(0, 620);
+        }
+      }))
+    };
+  }
+}
+
+</script>
+</body>
+</html>
