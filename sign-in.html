@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="/support.js"></script>
+<script src="support.js"></script>
 </head>
 <body>
 <x-dc>
 <helmet>
-<link rel="icon" type="image/png" href="/favicon.png" />
-<link rel="apple-touch-icon" href="/favicon.png" />
+<link rel="icon" type="image/png" href="favicon.png" />
+<link rel="apple-touch-icon" href="favicon.png" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
@@ -66,8 +66,8 @@
     <div style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 36px); height: 38px; display: flex; align-items: center; gap: 26px;">
       <span style="display: flex; align-items: center; gap: 8px;"><span style="width: 6px; height: 6px; border-radius: 50%; background: #2fd07e;"></span>Registered customers only — Ocean Controls does not take guest orders</span>
       <span style="margin-left: auto; display: flex; align-items: center; gap: 22px;">
-        <a href="/datasheets.html" style="color: #d6e4f2; text-decoration: none;">Datasheets</a>
-        <a href="/contact.html" style="color: #d6e4f2; text-decoration: none;">Contact</a>
+        <a href="datasheets.html" style="color: #d6e4f2; text-decoration: none;">Datasheets</a>
+        <a href="contact.html" style="color: #d6e4f2; text-decoration: none;">Contact</a>
         <a href="#" style="color: #ffffff; font-family: 'IBM Plex Mono', monospace; text-decoration: none;">+61 3 9708 2390</a>
       </span>
     </div>
@@ -75,8 +75,8 @@
 
   <div style="background: #ffffff; border-bottom: 1px solid #dbe2e8;">
     <div style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 36px); height: 82px; display: flex; align-items: center; gap: 32px;">
-      <a href="/index.html" style="flex: 0 0 auto; display: block;" aria-label="Ocean Controls home">
-        <img src="/uploads/OceanControls-Design-Assets/02-brand-assets/ocean-controls-logo.png" alt="Ocean Controls" style="height: 42px; width: auto; display: block;" />
+      <a href="index.html" style="flex: 0 0 auto; display: block;" aria-label="Ocean Controls home">
+        <img src="uploads/OceanControls-Design-Assets/02-brand-assets/ocean-controls-logo.png" alt="Ocean Controls" style="height: 42px; width: auto; display: block;" />
       </a>
       <div style="display: flex; align-items: center; gap: 11px; padding-left: 32px; border-left: 1px solid #dbe2e8;">
         <span style="position: relative; display: block; width: 15px; height: 17px; border: 1.5px solid #16304f; border-radius: 2px;">
@@ -87,9 +87,9 @@
       <div style="margin-left: auto; display: flex; align-items: center; gap: 20px;">
         <div style="text-align: right;">
           <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #667380;">Trouble signing in?</div>
-          <a href="/contact.html" style="font-family: 'IBM Plex Mono', monospace; font-size: 15.5px; font-weight: 500;">+61 3 9708 2390</a>
+          <a href="contact.html" style="font-family: 'IBM Plex Mono', monospace; font-size: 15.5px; font-weight: 500;">+61 3 9708 2390</a>
         </div>
-        <a href="/shop.html" style="display: flex; align-items: center; gap: 8px; padding: 11px 16px; border: 1px solid #dbe2e8; font-size: 14.5px; font-weight: 600; color: #16304f; text-decoration: none;" style-hover="border-color: #16304f; text-decoration: none;">← Keep shopping</a>
+        <a href="shop.html" style="display: flex; align-items: center; gap: 8px; padding: 11px 16px; border: 1px solid #dbe2e8; font-size: 14.5px; font-weight: 600; color: #16304f; text-decoration: none;" style-hover="border-color: #16304f; text-decoration: none;">← Keep shopping</a>
       </div>
     </div>
   </div>
@@ -163,7 +163,7 @@
                   <span style="display: block; font-size: 14.5px; line-height: 1.6; color: #667380;">Takes a minute. Retail pricing with quantity breaks applied automatically.</span>
                   <span style="display: block; font-size: 14.5px; font-weight: 600; color: #06708f; margin-top: 11px;">Register →</span>
                 </button>
-                <a href="/trade-account.html" style="background: #ffffff; padding: 20px 22px 22px; text-decoration: none; display: block;" style-hover="background: #f7f9fb; text-decoration: none;">
+                <a href="trade-account.html" style="background: #ffffff; padding: 20px 22px 22px; text-decoration: none; display: block;" style-hover="background: #f7f9fb; text-decoration: none;">
                   <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #06708f; margin-bottom: 9px;">Trade &amp; wholesale</span>
                   <span style="display: block; font-size: 17.5px; font-weight: 700; color: #0b1c2e; letter-spacing: -0.01em; margin-bottom: 6px;">Apply for contract pricing</span>
                   <span style="display: block; font-size: 14.5px; line-height: 1.6; color: #667380;">Your agreed rate replaces retail everywhere. 30-day terms on approval.</span>
@@ -177,7 +177,7 @@
         <sc-if value="{{ isRegister }}" hint-placeholder-val="{{ false }}">
           <div>
             <h1 style="margin: 0 0 8px; font-size: 31px; line-height: 1.12; font-weight: 700; letter-spacing: -0.025em; color: #0b1c2e;">Create your account</h1>
-            <p style="margin: 0 0 26px; font-size: 16px; line-height: 1.65; color: #667380; max-width: 52em;">A standard account, ready to order with. If you are buying for a business and want contract pricing, <a href="/trade-account.html">apply for a trade account</a> instead — you can do that after registering too.</p>
+            <p style="margin: 0 0 26px; font-size: 16px; line-height: 1.65; color: #667380; max-width: 52em;">A standard account, ready to order with. If you are buying for a business and want contract pricing, <a href="trade-account.html">apply for a trade account</a> instead — you can do that after registering too.</p>
 
             <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; max-width: 52em;">
               <sc-for list="{{ registerFields }}" as="f" hint-placeholder-count="0">
@@ -332,7 +332,7 @@
   <footer data-screen-label="Footer" style="background: #0b1c2e; color: #a9bed4;">
     <div style="max-width: 1440px; margin: 0 auto; padding: 34px 36px; display: flex; align-items: center; gap: 40px;">
       <div style="background: #ffffff; padding: 9px 11px;">
-        <img src="/uploads/OceanControls-Design-Assets/02-brand-assets/ocean-controls-logo.png" alt="Ocean Controls" style="height: 28px; width: auto; display: block;" />
+        <img src="uploads/OceanControls-Design-Assets/02-brand-assets/ocean-controls-logo.png" alt="Ocean Controls" style="height: 28px; width: auto; display: block;" />
       </div>
       <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; line-height: 1.8; color: #a9bed4;">
         <div>44 Frankston Gardens Drive, Carrum Downs VIC 3201</div>
@@ -341,7 +341,7 @@
       <span style="margin-left: auto; display: flex; gap: 20px; font-size: 13.5px;">
         <a href="#" style="color: #a9bed4; text-decoration: none;">Privacy</a>
         <a href="#" style="color: #a9bed4; text-decoration: none;">Terms of sale</a>
-        <a href="/contact.html" style="color: #a9bed4; text-decoration: none;">Contact</a>
+        <a href="contact.html" style="color: #a9bed4; text-decoration: none;">Contact</a>
       </span>
     </div>
   </footer>
@@ -500,7 +500,7 @@ class Component extends DCLogic {
         kicker: 'Signed in',
         title: 'Welcome back.',
         body: 'You are signed in as ' + (st.email.trim() || 'your account') + '. Contract pricing, order history and your saved lists are all available now.',
-        primary: 'Go to your account', primaryHref: '/account.html',
+        primary: 'Go to your account', primaryHref: 'account.html',
         secondary: 'Sign in as someone else',
         facts: [
           { k: 'Account', v: st.email.trim() || 'ivan@oceancontrols.com.au' },
@@ -512,7 +512,7 @@ class Component extends DCLogic {
         kicker: 'Account created',
         title: 'You are registered.',
         body: 'A confirmation is on its way to ' + ((r.email || '').trim() || 'your email address') + '. You can order straight away at retail pricing with quantity breaks applied automatically — and apply for trade pricing whenever you are ready.',
-        primary: 'Start shopping', primaryHref: '/shop.html',
+        primary: 'Start shopping', primaryHref: 'shop.html',
         secondary: 'Back to sign in',
         facts: [
           { k: 'Account', v: (r.email || '').trim() || 'you@company.com.au' },

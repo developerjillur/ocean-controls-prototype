@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="/support.js"></script>
+<script src="support.js"></script>
 </head>
 <body>
 <x-dc>
 <helmet>
-<link rel="icon" type="image/png" href="/favicon.png" />
-<link rel="apple-touch-icon" href="/favicon.png" />
+<link rel="icon" type="image/png" href="favicon.png" />
+<link rel="apple-touch-icon" href="favicon.png" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
@@ -66,9 +66,9 @@
     <div style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 36px); height: 38px; display: flex; align-items: center; gap: 26px;">
       <span style="display: flex; align-items: center; gap: 8px;"><span style="width: 6px; height: 6px; border-radius: 50%; background: #2fd07e;"></span>Searching 2,279 products, 237 categories, 48 brands and 3,319 documents</span>
       <span style="margin-left: auto; display: flex; align-items: center; gap: 22px;">
-        <a href="/datasheets.html" style="color: #d6e4f2; text-decoration: none;">Datasheets</a>
-        <a href="/brands.html" style="color: #d6e4f2; text-decoration: none;">Brands</a>
-        <a href="/contact.html" style="color: #d6e4f2; text-decoration: none;">Contact</a>
+        <a href="datasheets.html" style="color: #d6e4f2; text-decoration: none;">Datasheets</a>
+        <a href="brands.html" style="color: #d6e4f2; text-decoration: none;">Brands</a>
+        <a href="contact.html" style="color: #d6e4f2; text-decoration: none;">Contact</a>
         <a href="#" style="color: #ffffff; font-family: 'IBM Plex Mono', monospace; text-decoration: none;">+61 3 9708 2390</a>
       </span>
     </div>
@@ -76,22 +76,22 @@
 
   <div style="background: #ffffff; border-bottom: 1px solid #dbe2e8;">
     <div style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 36px); height: 84px; display: flex; align-items: center; gap: 28px;">
-      <a href="/index.html" style="flex: 0 0 auto; display: block;" aria-label="Ocean Controls home">
-        <img src="/uploads/OceanControls-Design-Assets/02-brand-assets/ocean-controls-logo.png" alt="Ocean Controls" style="height: 42px; width: auto; display: block;" />
+      <a href="index.html" style="flex: 0 0 auto; display: block;" aria-label="Ocean Controls home">
+        <img src="uploads/OceanControls-Design-Assets/02-brand-assets/ocean-controls-logo.png" alt="Ocean Controls" style="height: 42px; width: auto; display: block;" />
       </a>
       <div style="flex: 1 1 auto; max-width: 660px; display: flex; height: 48px; border: 1.5px solid #16304f;">
         <input type="text" ref="{{ searchRef }}" placeholder="Search products, SKUs, categories, brands, datasheets and articles" value="{{ query }}" onInput="{{ onQuery }}" style="flex: 1 1 auto; border: 0; outline: none; padding: 0 15px; font-size: 16px; min-width: 0;" aria-label="Search everything" />
         <sc-if value="{{ hasQuery }}" hint-placeholder-val="{{ false }}">
           <button onClick="{{ clearQuery }}" aria-label="Clear search" style="width: 42px; border: 0; background: none; color: #667380; font-size: 19.5px; cursor: pointer;">×</button>
         </sc-if>
-        <a href="/search.html" style="display: flex; align-items: center; justify-content: center; text-decoration: none; flex: 0 0 auto; border: 0; background: #16304f; color: #ffffff; padding: 0 26px; font-size: 15px; font-weight: 600; cursor: pointer;" style-hover="background: #0673a2;">Search</a>
+        <a href="search.html" style="display: flex; align-items: center; justify-content: center; text-decoration: none; flex: 0 0 auto; border: 0; background: #16304f; color: #ffffff; padding: 0 26px; font-size: 15px; font-weight: 600; cursor: pointer;" style-hover="background: #0673a2;">Search</a>
       </div>
       <div style="margin-left: auto; display: flex; align-items: center; gap: 8px;">
         <a href="#" style="display: flex; flex-direction: column; padding: 7px 14px; border: 1px solid #dbe2e8; text-decoration: none; color: #16304f;" style-hover="border-color: #16304f; text-decoration: none;">
           <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #667380;">Account</span>
           <span style="font-size: 14.5px; font-weight: 600;">Sign in</span>
         </a>
-        <a href="/cart.html" style="display: flex; align-items: center; gap: 11px; padding: 9px 15px; background: #16304f; color: #ffffff; text-decoration: none;" style-hover="background: #0b1c2e; text-decoration: none;">
+        <a href="cart.html" style="display: flex; align-items: center; gap: 11px; padding: 9px 15px; background: #16304f; color: #ffffff; text-decoration: none;" style-hover="background: #0b1c2e; text-decoration: none;">
           <span style="position: relative; display: block; width: 17px; height: 17px; border: 1.5px solid #ffffff; border-top-color: transparent;">
             <span style="position: absolute; top: -5px; left: 2px; right: 2px; height: 5px; border: 1.5px solid #ffffff; border-bottom: 0;"></span>
           </span>
@@ -105,7 +105,7 @@
 
     <div style="background: #16304f;">
       <div style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 36px); display: flex; align-items: stretch;">
-        <a href="/shop.html" style="display: flex; align-items: center; gap: 11px; padding: 0 20px; height: 48px; background: #0673a2; color: #ffffff; font-size: 15px; font-weight: 600; text-decoration: none; flex: 0 0 auto;" style-hover="background: #06708f; text-decoration: none;">
+        <a href="shop.html" style="display: flex; align-items: center; gap: 11px; padding: 0 20px; height: 48px; background: #0673a2; color: #ffffff; font-size: 15px; font-weight: 600; text-decoration: none; flex: 0 0 auto;" style-hover="background: #06708f; text-decoration: none;">
           <span style="display: flex; flex-direction: column; gap: 3px;">
             <span style="display: block; width: 15px; height: 2px; background: #ffffff;"></span>
             <span style="display: block; width: 15px; height: 2px; background: #ffffff;"></span>
@@ -114,19 +114,19 @@
           Shop by category
           <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; font-weight: 600; color: #ffffff;">237</span>
         </a>
-        <a href="/shop.html" style="display: flex; align-items: center; padding: 0 15px; color: #d6e4f2; font-size: 15px; font-weight: 500; text-decoration: none;" style-hover="background: #24456b; color: #ffffff; text-decoration: none;">New arrivals</a>
-        <a href="/shop.html" style="display: flex; align-items: center; padding: 0 15px; color: #d6e4f2; font-size: 15px; font-weight: 500; text-decoration: none;" style-hover="background: #24456b; color: #ffffff; text-decoration: none;">Clearance</a>
-        <a href="/brands.html" style="display: flex; align-items: center; padding: 0 15px; color: #d6e4f2; font-size: 15px; font-weight: 500; text-decoration: none;" style-hover="background: #24456b; color: #ffffff; text-decoration: none;">Brands</a>
-        <a href="/about.html" style="display: flex; align-items: center; padding: 0 15px; color: #d6e4f2; font-size: 15px; font-weight: 500; text-decoration: none;" style-hover="background: #24456b; color: #ffffff; text-decoration: none;">Engineering services</a>
-        <a href="/datasheets.html" style="display: flex; align-items: center; padding: 0 15px; color: #d6e4f2; font-size: 15px; font-weight: 500; text-decoration: none;" style-hover="background: #24456b; color: #ffffff; text-decoration: none;">Datasheets</a>
-        <a href="/contact.html" style="display: flex; align-items: center; padding: 0 15px; color: #d6e4f2; font-size: 15px; font-weight: 500; text-decoration: none;" style-hover="background: #24456b; color: #ffffff; text-decoration: none;">Contact</a>
+        <a href="shop.html" style="display: flex; align-items: center; padding: 0 15px; color: #d6e4f2; font-size: 15px; font-weight: 500; text-decoration: none;" style-hover="background: #24456b; color: #ffffff; text-decoration: none;">New arrivals</a>
+        <a href="shop.html" style="display: flex; align-items: center; padding: 0 15px; color: #d6e4f2; font-size: 15px; font-weight: 500; text-decoration: none;" style-hover="background: #24456b; color: #ffffff; text-decoration: none;">Clearance</a>
+        <a href="brands.html" style="display: flex; align-items: center; padding: 0 15px; color: #d6e4f2; font-size: 15px; font-weight: 500; text-decoration: none;" style-hover="background: #24456b; color: #ffffff; text-decoration: none;">Brands</a>
+        <a href="about.html" style="display: flex; align-items: center; padding: 0 15px; color: #d6e4f2; font-size: 15px; font-weight: 500; text-decoration: none;" style-hover="background: #24456b; color: #ffffff; text-decoration: none;">Engineering services</a>
+        <a href="datasheets.html" style="display: flex; align-items: center; padding: 0 15px; color: #d6e4f2; font-size: 15px; font-weight: 500; text-decoration: none;" style-hover="background: #24456b; color: #ffffff; text-decoration: none;">Datasheets</a>
+        <a href="contact.html" style="display: flex; align-items: center; padding: 0 15px; color: #d6e4f2; font-size: 15px; font-weight: 500; text-decoration: none;" style-hover="background: #24456b; color: #ffffff; text-decoration: none;">Contact</a>
       </div>
     </div>
   </div>
 
   <div style="background: #f7f9fb; border-bottom: 1px solid #dbe2e8;">
     <div style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 36px); height: 44px; display: flex; align-items: center; gap: 10px; font-size: 14px; color: #667380;">
-      <a href="/index.html" style="color: #06708f;">Home</a>
+      <a href="index.html" style="color: #06708f;">Home</a>
       <span style="color: #c9d3dc;">/</span>
       <span style="color: #16304f; font-weight: 600;">Search</span>
       <span style="margin-left: auto; font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; color: #667380;">{{ crumbNote }}</span>
@@ -211,7 +211,7 @@
         <div style="border: 1px solid #dbe2e8; border-top: 0; padding: 16px;">
           <div style="font-size: 15px; font-weight: 600; color: #0b1c2e; margin-bottom: 5px;">Still can't find it?</div>
           <p style="margin: 0 0 10px; font-size: 14px; line-height: 1.55; color: #667380;">Send us the model number you are replacing and we will tell you what fits — or build it.</p>
-          <a href="/contact.html" style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; font-weight: 500;">+61 3 9708 2390</a>
+          <a href="contact.html" style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; font-weight: 500;">+61 3 9708 2390</a>
         </div>
       </aside>
 
@@ -269,7 +269,7 @@
                       </div>
                       <div style="padding: 12px 14px 14px; display: flex; flex-direction: column; flex: 1 1 auto;">
                         <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; color: #667380; margin-bottom: 6px;">{{ p.brand }}</div>
-                        <a href="/product.html" style="font-size: 14.5px; font-weight: 500; line-height: 1.35; color: #16304f; height: 82px; overflow: hidden; text-decoration: none;" style-hover="color: #06708f; text-decoration: none;">{{ p.pre }}<span style="background: #fff3bf; color: #0b1c2e;">{{ p.mid }}</span>{{ p.post }}</a>
+                        <a href="product.html" style="font-size: 14.5px; font-weight: 500; line-height: 1.35; color: #16304f; height: 82px; overflow: hidden; text-decoration: none;" style-hover="color: #06708f; text-decoration: none;">{{ p.pre }}<span style="background: #fff3bf; color: #0b1c2e;">{{ p.mid }}</span>{{ p.post }}</a>
                         <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #667380; margin: 8px 0 5px;">{{ p.skuLabel }}</div>
                         <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; color: #06708f; min-height: 17px; margin-bottom: 5px;">{{ p.why }}</div>
                         <div style="display: flex; align-items: center; gap: 6px; font-size: 13px; color: {{ p.stockFg }}; margin-bottom: 10px;">
@@ -301,7 +301,7 @@
                             <span style="{{ p.badgeStyleInline }}">{{ p.badge }}</span>
                           </sc-if>
                         </div>
-                        <a href="/product.html" style="display: block; font-size: 17.5px; font-weight: 600; line-height: 1.32; color: #0b1c2e; margin-bottom: 7px; text-decoration: none;" style-hover="color: #06708f; text-decoration: none;">{{ p.pre }}<span style="background: #fff3bf;">{{ p.mid }}</span>{{ p.post }}</a>
+                        <a href="product.html" style="display: block; font-size: 17.5px; font-weight: 600; line-height: 1.32; color: #0b1c2e; margin-bottom: 7px; text-decoration: none;" style-hover="color: #06708f; text-decoration: none;">{{ p.pre }}<span style="background: #fff3bf;">{{ p.mid }}</span>{{ p.post }}</a>
                         <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; color: #667380; margin-bottom: 9px;">{{ p.skuLabel }}</div>
                         <div style="display: flex; align-items: center; gap: 14px; flex-wrap: wrap;">
                           <span style="display: flex; align-items: center; gap: 6px; font-size: 14px; color: {{ p.stockFg }};">
@@ -350,7 +350,7 @@
               <h2 style="margin: 0 0 12px; font-size: 28px; line-height: 1.14; font-weight: 700; letter-spacing: -0.025em; color: #0b1c2e;">{{ noResultsTitle }}</h2>
               <p style="margin: 0 0 22px; font-size: 16.5px; line-height: 1.7; color: #4b5560; max-width: 56em;">We carry 2,279 products and can order well beyond that. If it is not here, it is worth asking — send the model number you are replacing and we will tell you what fits, or build it.</p>
               <div style="display: flex; gap: 12px;">
-                <a href="/contact.html" style="padding: 14px 24px; background: #16304f; color: #ffffff; font-size: 15.5px; font-weight: 600; text-decoration: none;" style-hover="background: #0673a2; text-decoration: none;">Ask us to source it</a>
+                <a href="contact.html" style="padding: 14px 24px; background: #16304f; color: #ffffff; font-size: 15.5px; font-weight: 600; text-decoration: none;" style-hover="background: #0673a2; text-decoration: none;">Ask us to source it</a>
                 <a href="#" style="padding: 14px 24px; border: 1px solid #c9d3dc; color: #16304f; font-size: 15.5px; font-weight: 600; text-decoration: none;" style-hover="border-color: #16304f; text-decoration: none;">Call +61 3 9708 2390</a>
               </div>
             </div>
@@ -416,7 +416,7 @@
       <div style="display: grid; grid-template-columns: 1.3fr 1fr 1fr 1fr 1.2fr; gap: 44px; padding-bottom: 46px; border-bottom: 1px solid #24456b;">
         <div>
           <div style="background: #ffffff; display: inline-block; padding: 10px 12px; margin-bottom: 20px;">
-            <img src="/uploads/OceanControls-Design-Assets/02-brand-assets/ocean-controls-logo.png" alt="Ocean Controls" style="height: 34px; width: auto; display: block;" />
+            <img src="uploads/OceanControls-Design-Assets/02-brand-assets/ocean-controls-logo.png" alt="Ocean Controls" style="height: 34px; width: auto; display: block;" />
           </div>
           <p style="margin: 0 0 18px; font-size: 15px; line-height: 1.65; color: #a9bed4; max-width: 30em;">Australia's specialist supplier of industrial automation and control equipment, and a custom engineering shop for the jobs the catalogue can't cover.</p>
           <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; line-height: 1.9; color: #a9bed4;">
@@ -438,20 +438,20 @@
         <div>
           <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #9ab0c6; margin-bottom: 16px;">Shop</div>
           <div style="display: flex; flex-direction: column; gap: 9px; font-size: 15px;">
-            <a href="/shop.html" style="color: #d6e4f2; text-decoration: none;">All products</a>
-            <a href="/shop.html" style="color: #d6e4f2; text-decoration: none;">New arrivals</a>
-            <a href="/shop.html" style="color: #d6e4f2; text-decoration: none;">Clearance &amp; sale</a>
-            <a href="/brands.html" style="color: #d6e4f2; text-decoration: none;">All brands</a>
-            <a href="/datasheets.html" style="color: #d6e4f2; text-decoration: none;">Datasheets</a>
+            <a href="shop.html" style="color: #d6e4f2; text-decoration: none;">All products</a>
+            <a href="shop.html" style="color: #d6e4f2; text-decoration: none;">New arrivals</a>
+            <a href="shop.html" style="color: #d6e4f2; text-decoration: none;">Clearance &amp; sale</a>
+            <a href="brands.html" style="color: #d6e4f2; text-decoration: none;">All brands</a>
+            <a href="datasheets.html" style="color: #d6e4f2; text-decoration: none;">Datasheets</a>
           </div>
         </div>
         <div>
           <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #9ab0c6; margin-bottom: 16px;">Company</div>
           <div style="display: flex; flex-direction: column; gap: 9px; font-size: 15px;">
-            <a href="/about.html" style="color: #d6e4f2; text-decoration: none;">About us</a>
-            <a href="/about.html" style="color: #d6e4f2; text-decoration: none;">Engineering services</a>
-            <a href="/contact.html" style="color: #d6e4f2; text-decoration: none;">Contact us</a>
-            <a href="/contact.html" style="color: #d6e4f2; text-decoration: none;">Distributors</a>
+            <a href="about.html" style="color: #d6e4f2; text-decoration: none;">About us</a>
+            <a href="about.html" style="color: #d6e4f2; text-decoration: none;">Engineering services</a>
+            <a href="contact.html" style="color: #d6e4f2; text-decoration: none;">Contact us</a>
+            <a href="contact.html" style="color: #d6e4f2; text-decoration: none;">Distributors</a>
             <a href="#" style="color: #d6e4f2; text-decoration: none;">Shipping &amp; delivery</a>
             <a href="#" style="color: #d6e4f2; text-decoration: none;">Returns &amp; warranty</a>
           </div>
@@ -865,7 +865,7 @@ class Component extends DCLogic {
           body: c.parent ? 'Subcategory of ' + c.parent : (c.subs + ' subcategories'),
           meta: c.n + ' products',
           cta: 'Browse →',
-          href: '/shop.html',
+          href: 'shop.html',
           icon: 'CAT', iconStyle: iconStyle('#f4f6f8', '#24456b')
         };
       });
@@ -887,7 +887,7 @@ class Component extends DCLogic {
           body: b.focus,
           meta: b.n + ' products · ' + b.files + ' files',
           cta: 'Brand page →',
-          href: '/brands.html',
+          href: 'brands.html',
           icon: 'BRAND', iconStyle: iconStyle('#eaf6fc', '#06708f')
         };
       });
@@ -909,7 +909,7 @@ class Component extends DCLogic {
           body: d.product,
           meta: d.brand,
           cta: 'Download ↓',
-          href: '/datasheets.html',
+          href: 'datasheets.html',
           icon: d.kind.split(' ')[0], iconStyle: iconStyle('#16304f', '#ffffff')
         };
       });
