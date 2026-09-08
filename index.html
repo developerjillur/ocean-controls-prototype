@@ -25,6 +25,7 @@
   [style*="font-size: 12px"] { font-size: 13px !important; }
 }
 </style>
+<style>body{font-family:"Plus Jakarta Sans",-apple-system,system-ui,sans-serif}</style>
 </head>
 <body>
 <x-dc>
@@ -37,13 +38,13 @@
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
 <style>
   *, *::before, *::after { box-sizing: border-box; }
-  body { margin: 0; background: #ffffff; color: #1f2429; font-family: Archivo, Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
-  a { color: #06708f; text-decoration: none; }
-  a:hover { color: #16304f; text-decoration: underline; }
+  body { margin: 0; background: #ffffff; color: #1f2429; font-family: Outfit, Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: #0276b8; text-decoration: none; }
+  a:hover { color: #0e2a52; text-decoration: underline; }
   p { text-wrap: pretty; }
   input, button, select, textarea { font-family: inherit; }
   button { font-family: inherit; }
-  :focus-visible { outline: 2px solid #0b9fd8; outline-offset: 2px; }
+  :focus-visible { outline: 2px solid #00aeef; outline-offset: 2px; }
   ::selection { background: #bfe8f8; }
   @keyframes ocFade { from { opacity: 0; } to { opacity: 1; } }
   @keyframes ocRise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
@@ -89,16 +90,16 @@
 <div style="width: 100%; background: #ffffff;">
 
   <sc-if value="{{ showUtility }}" hint-placeholder-val="{{ true }}">
-    <div style="background: #0b1c2e; color: #a9bed4; font-size: 13.5px;">
+    <div style="background: #0a1f3d; color: #a9bed4; font-size: 13.5px;">
       <div style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 36px); height: 38px; display: flex; align-items: center; gap: 26px;">
         <span style="display: flex; align-items: center; gap: 8px;"><span style="width: 6px; height: 6px; border-radius: 50%; background: #2fd07e;"></span>Local stock in Carrum Downs — in-stock orders dispatched within 2 business days</span>
-        <span style="display: flex; align-items: center; gap: 8px; padding-left: 26px; border-left: 1px solid #24456b;"><span style="font-family: 'IBM Plex Mono', monospace; color: #9ab0c6; letter-spacing: 0.08em;">PICKUP</span>Order by 11am, collect after 2pm</span>
+        <span style="display: flex; align-items: center; gap: 8px; padding-left: 26px; border-left: 1px solid #163d74;"><span style="font-family: 'JetBrains Mono', monospace; color: #9ab0c6; letter-spacing: 0.08em;">PICKUP</span>Order by 11am, collect after 2pm</span>
         <span style="margin-left: auto; display: flex; align-items: center; gap: 22px;">
           <a href="datasheets.html" style="color: #d6e4f2; text-decoration: none;">Datasheets</a>
           <a href="#" style="color: #d6e4f2; text-decoration: none;">Shipping</a>
           <a href="contact.html" style="color: #d6e4f2; text-decoration: none;">Distributors</a>
           <a href="contact.html" style="color: #d6e4f2; text-decoration: none;">Contact</a>
-          <a href="#" style="color: #ffffff; font-family: 'IBM Plex Mono', monospace; text-decoration: none; letter-spacing: 0.02em;">+61 3 9708 2390</a>
+          <a href="#" style="color: #ffffff; font-family: 'JetBrains Mono', monospace; text-decoration: none; letter-spacing: 0.02em;">+61 3 9708 2390</a>
         </span>
       </div>
     </div>
@@ -112,36 +113,36 @@
       </a>
 
       <div ref="{{ searchBoxRef }}" style="flex: 1 1 auto; max-width: 660px; position: relative; z-index: 80;">
-        <div style="display: flex; height: {{ fieldH }}; border: 1.5px solid #16304f; background: #ffffff; transition: height 0.18s ease;">
-          <button onClick="{{ toggleMenu }}" style="flex: 0 0 auto; display: flex; align-items: center; gap: 7px; padding: 0 14px; background: #f4f6f8; border: 0; border-right: 1px solid #dbe2e8; font-size: 14px; font-weight: 500; color: #16304f; cursor: pointer;" style-hover="background: #eef2f5;">All categories<span style="color: #667380;">▾</span></button>
+        <div style="display: flex; height: {{ fieldH }}; border: 1.5px solid #0e2a52; background: #ffffff; transition: height 0.18s ease;">
+          <button onClick="{{ toggleMenu }}" style="flex: 0 0 auto; display: flex; align-items: center; gap: 7px; padding: 0 14px; background: #f4f6f8; border: 0; border-right: 1px solid #dbe2e8; font-size: 14px; font-weight: 500; color: #0e2a52; cursor: pointer;" style-hover="background: #eef2f5;">All categories<span style="color: #667380;">▾</span></button>
           <input type="text" ref="{{ searchRef }}" placeholder="Search products, SKUs, categories, brands and articles" value="{{ searchQ }}" onInput="{{ onSearch }}" onFocus="{{ openSearch }}" style="flex: 1 1 auto; border: 0; outline: none; padding: 0 14px; font-size: 15.5px; color: #1f2429; min-width: 0;" aria-label="Search the whole site" />
           <div style="flex: 0 0 auto; display: flex; align-items: center; padding-right: 10px;">
-            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; color: #667380; border: 1px solid #dbe2e8; padding: 2px 6px;">/</span>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 12.5px; color: #667380; border: 1px solid #dbe2e8; padding: 2px 6px;">/</span>
           </div>
-          <button onClick="{{ openSearch }}" style="flex: 0 0 auto; border: 0; background: #16304f; color: #ffffff; padding: 0 24px; font-size: 14.5px; font-weight: 600; letter-spacing: 0.02em; cursor: pointer;" style-hover="background: #0673a2;">Search</button>
+          <button onClick="{{ openSearch }}" style="flex: 0 0 auto; border: 0; background: #0e2a52; color: #ffffff; padding: 0 24px; font-size: 14.5px; font-weight: 600; letter-spacing: 0.02em; cursor: pointer;" style-hover="background: #0276b8;">Search</button>
         </div>
 
         <sc-if value="{{ searchOpen }}" hint-placeholder-val="{{ false }}">
           <div style="position: absolute; top: calc(100% + 6px); left: 0; right: 0; background: #ffffff; border: 1px solid #c9d3dc; box-shadow: 0 28px 56px -20px rgba(11,28,46,0.45); overflow: hidden; animation: ocFade 0.14s ease-out;">
-            <div style="display: flex; align-items: center; justify-content: space-between; padding: 10px 14px; background: #f4f6f8; border-bottom: 1px solid #dbe2e8; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #667380;">
+            <div style="display: flex; align-items: center; justify-content: space-between; padding: 10px 14px; background: #f4f6f8; border-bottom: 1px solid #dbe2e8; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #667380;">
               <span>{{ searchLabel }}</span>
-              <button onClick="{{ closeSearch }}" style="border: 0; background: none; padding: 0; font-family: inherit; font-size: inherit; letter-spacing: inherit; text-transform: inherit; color: #06708f; cursor: pointer;">Esc — close</button>
+              <button onClick="{{ closeSearch }}" style="border: 0; background: none; padding: 0; font-family: inherit; font-size: inherit; letter-spacing: inherit; text-transform: inherit; color: #0276b8; cursor: pointer;">Esc — close</button>
             </div>
             <div style="max-height: 452px; overflow-y: auto;">
               <sc-for list="{{ searchGroups }}" as="g" hint-placeholder-count="0">
                 <div>
                   <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 9px 14px 7px; border-bottom: 1px solid #eef2f5;">
-                    <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #06708f;">{{ g.label }}</span>
-                    <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; color: #667380;">{{ g.count }}</span>
+                    <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #0276b8;">{{ g.label }}</span>
+                    <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: #667380;">{{ g.count }}</span>
                   </div>
                   <sc-for list="{{ g.items }}" as="i" hint-placeholder-count="0">
                     <a href="#" style="display: flex; align-items: center; gap: 12px; padding: 9px 14px; border-bottom: 1px solid #eef2f5; text-decoration: none;" style-hover="background: #f4f6f8; text-decoration: none;">
                       <div style="{{ i.imgStyle }}"></div>
                       <div style="flex: 1 1 auto; min-width: 0;">
-                        <div style="font-size: 14px; font-weight: 500; color: #16304f; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{ i.pre }}<span style="background: #fff3bf; color: #0b1c2e;">{{ i.mid }}</span>{{ i.post }}</div>
+                        <div style="font-size: 14px; font-weight: 500; color: #0e2a52; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{ i.pre }}<span style="background: #fff3bf; color: #0a1f3d;">{{ i.mid }}</span>{{ i.post }}</div>
                         <div style="display: flex; align-items: center; gap: 9px; margin-top: 3px;">
-                          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #667380;">{{ i.meta }}</span>
-                          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; color: #06708f;">{{ i.note }}</span>
+                          <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #667380;">{{ i.meta }}</span>
+                          <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: #0276b8;">{{ i.note }}</span>
                         </div>
                       </div>
                       <div style="font-size: 13px; color: {{ i.right1Fg }}; flex: 0 0 auto;">{{ i.right1 }}</div>
@@ -152,14 +153,14 @@
               </sc-for>
               <sc-if value="{{ noResults }}" hint-placeholder-val="{{ false }}">
                 <div style="padding: 26px 18px; text-align: center;">
-                  <div style="font-size: 15px; font-weight: 600; color: #16304f; margin-bottom: 5px;">{{ noResultsTitle }}</div>
+                  <div style="font-size: 15px; font-weight: 600; color: #0e2a52; margin-bottom: 5px;">{{ noResultsTitle }}</div>
                   <div style="font-size: 14px; line-height: 1.6; color: #667380;">Try a SKU (KTA-387), a brand (Mean Well), a category (Sensors) or a spec term (4-20 mA).</div>
                 </div>
               </sc-if>
             </div>
             <div style="display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 11px 14px; background: #f7f9fb; border-top: 1px solid #dbe2e8;">
               <span style="display: flex; align-items: center; gap: 14px; font-size: 13.5px; color: #667380;">
-                <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase;">Also in</span>
+                <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase;">Also in</span>
                 <a href="datasheets.html">Datasheets</a>
                 <a href="#">Application notes</a>
                 <a href="about.html">Engineering services</a>
@@ -171,27 +172,27 @@
       </div>
 
       <div style="flex: 0 0 auto; margin-left: auto; display: flex; align-items: center; gap: 8px;">
-        <a href="#" style="display: flex; flex-direction: column; padding: 7px 14px; border: 1px solid #dbe2e8; text-decoration: none; color: #16304f;" style-hover="border-color: #16304f; text-decoration: none;">
-          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #667380;">Trade pricing</span>
+        <a href="#" style="display: flex; flex-direction: column; padding: 7px 14px; border: 1px solid #dbe2e8; text-decoration: none; color: #0e2a52;" style-hover="border-color: #0e2a52; text-decoration: none;">
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #667380;">Trade pricing</span>
           <span style="font-size: 14.5px; font-weight: 600;">Sign in</span>
         </a>
-        <a href="#" style="display: flex; flex-direction: column; padding: 7px 14px; border: 1px solid #dbe2e8; text-decoration: none; color: #16304f;" style-hover="border-color: #16304f; text-decoration: none;">
-          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #667380;">Account</span>
+        <a href="#" style="display: flex; flex-direction: column; padding: 7px 14px; border: 1px solid #dbe2e8; text-decoration: none; color: #0e2a52;" style-hover="border-color: #0e2a52; text-decoration: none;">
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #667380;">Account</span>
           <span style="font-size: 14.5px; font-weight: 600;">Register</span>
         </a>
-        <button onClick="{{ openCart }}" style="display: flex; align-items: center; gap: 11px; padding: 8px 15px; background: #16304f; border: 0; color: #ffffff; cursor: pointer; text-align: left;" style-hover="background: #0b1c2e;">
+        <button onClick="{{ openCart }}" style="display: flex; align-items: center; gap: 11px; padding: 8px 15px; background: #0e2a52; border: 0; color: #ffffff; cursor: pointer; text-align: left;" style-hover="background: #0a1f3d;">
           <span style="position: relative; display: block; width: 17px; height: 17px; border: 1.5px solid #ffffff; border-top-color: transparent;">
             <span style="position: absolute; top: -5px; left: 2px; right: 2px; height: 5px; border: 1.5px solid #ffffff; border-bottom: 0;"></span>
           </span>
           <span style="display: flex; flex-direction: column; line-height: 1.25;">
-            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #90b4d4;">{{ cartCountLabel }}</span>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #90b4d4;">{{ cartCountLabel }}</span>
             <span style="font-size: 14.5px; font-weight: 600; font-variant-numeric: tabular-nums;">{{ cartTotalLabel }}</span>
           </span>
         </button>
       </div>
     </div>
 
-    <div ref="{{ navRef }}" style="background: #16304f; position: relative;">
+    <div ref="{{ navRef }}" style="background: #0e2a52; position: relative;">
       <div style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 36px); display: flex; align-items: stretch;">
         <button onClick="{{ toggleMenu }}" style="display: flex; align-items: center; gap: 11px; padding: 0 20px; height: 48px; background: {{ menuBtnBg }}; border: 0; color: #ffffff; font-size: 15px; font-weight: 600; cursor: pointer; flex: 0 0 auto;">
           <span style="display: flex; flex-direction: column; gap: 3px;">
@@ -200,16 +201,16 @@
             <span style="display: block; width: 15px; height: 2px; background: #ffffff;"></span>
           </span>
           Shop by category
-          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; font-weight: 600; color: #ffffff;">237</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 12.5px; font-weight: 600; color: #ffffff;">237</span>
         </button>
-        <a href="shop.html" style="display: flex; align-items: center; padding: 0 15px; color: #d6e4f2; font-size: 15px; font-weight: 500; text-decoration: none;" style-hover="background: #24456b; color: #ffffff; text-decoration: none;">New arrivals</a>
-        <a href="shop.html" style="display: flex; align-items: center; padding: 0 15px; color: #d6e4f2; font-size: 15px; font-weight: 500; text-decoration: none;" style-hover="background: #24456b; color: #ffffff; text-decoration: none;">Clearance</a>
-        <a href="brands.html" style="display: flex; align-items: center; padding: 0 15px; color: #d6e4f2; font-size: 15px; font-weight: 500; text-decoration: none;" style-hover="background: #24456b; color: #ffffff; text-decoration: none;">Brands</a>
-        <a href="about.html" style="display: flex; align-items: center; padding: 0 15px; color: #d6e4f2; font-size: 15px; font-weight: 500; text-decoration: none;" style-hover="background: #24456b; color: #ffffff; text-decoration: none;">Engineering services</a>
-        <a href="datasheets.html" style="display: flex; align-items: center; padding: 0 15px; color: #d6e4f2; font-size: 15px; font-weight: 500; text-decoration: none;" style-hover="background: #24456b; color: #ffffff; text-decoration: none;">Datasheets</a>
-        <a href="articles.html" style="display: flex; align-items: center; padding: 0 15px; color: #d6e4f2; font-size: 15px; font-weight: 500; text-decoration: none;" style-hover="background: #24456b; color: #ffffff; text-decoration: none;">Articles</a>
-        <a href="about.html" style="display: flex; align-items: center; padding: 0 15px; color: #d6e4f2; font-size: 15px; font-weight: 500; text-decoration: none;" style-hover="background: #24456b; color: #ffffff; text-decoration: none;">About</a>
-        <a href="trade-account.html" style="margin-left: auto; display: flex; align-items: center; gap: 9px; padding: 0 18px; background: #0673a2; color: #ffffff; font-size: 14.5px; font-weight: 600; text-decoration: none;" style-hover="background: #6fd0f5; color: #0b1c2e; text-decoration: none;">
+        <a href="shop.html" style="display: flex; align-items: center; padding: 0 15px; color: #d6e4f2; font-size: 15px; font-weight: 500; text-decoration: none;" style-hover="background: #163d74; color: #ffffff; text-decoration: none;">New arrivals</a>
+        <a href="shop.html" style="display: flex; align-items: center; padding: 0 15px; color: #d6e4f2; font-size: 15px; font-weight: 500; text-decoration: none;" style-hover="background: #163d74; color: #ffffff; text-decoration: none;">Clearance</a>
+        <a href="brands.html" style="display: flex; align-items: center; padding: 0 15px; color: #d6e4f2; font-size: 15px; font-weight: 500; text-decoration: none;" style-hover="background: #163d74; color: #ffffff; text-decoration: none;">Brands</a>
+        <a href="about.html" style="display: flex; align-items: center; padding: 0 15px; color: #d6e4f2; font-size: 15px; font-weight: 500; text-decoration: none;" style-hover="background: #163d74; color: #ffffff; text-decoration: none;">Engineering services</a>
+        <a href="datasheets.html" style="display: flex; align-items: center; padding: 0 15px; color: #d6e4f2; font-size: 15px; font-weight: 500; text-decoration: none;" style-hover="background: #163d74; color: #ffffff; text-decoration: none;">Datasheets</a>
+        <a href="articles.html" style="display: flex; align-items: center; padding: 0 15px; color: #d6e4f2; font-size: 15px; font-weight: 500; text-decoration: none;" style-hover="background: #163d74; color: #ffffff; text-decoration: none;">Articles</a>
+        <a href="about.html" style="display: flex; align-items: center; padding: 0 15px; color: #d6e4f2; font-size: 15px; font-weight: 500; text-decoration: none;" style-hover="background: #163d74; color: #ffffff; text-decoration: none;">About</a>
+        <a href="trade-account.html" style="margin-left: auto; display: flex; align-items: center; gap: 9px; padding: 0 18px; background: #0276b8; color: #ffffff; font-size: 14.5px; font-weight: 600; text-decoration: none;" style-hover="background: #66d9ff; color: #0a1f3d; text-decoration: none;">
           Open a trade account<span>→</span>
         </a>
       </div>
@@ -221,38 +222,38 @@
               <sc-for list="{{ megaCats }}" as="c" hint-placeholder-count="10">
                 <button onMouseEnter="{{ c.hover }}" onClick="{{ c.hover }}" style="width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 8px 18px 8px 15px; cursor: pointer; border: 0; border-left: 3px solid {{ c.edge }}; background: {{ c.bg }}; text-align: left;">
                   <span style="font-size: 14.5px; font-weight: {{ c.weight }}; color: {{ c.fg }};">{{ c.name }}</span>
-                  <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #667380; font-variant-numeric: tabular-nums;">{{ c.count }}</span>
+                  <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #667380; font-variant-numeric: tabular-nums;">{{ c.count }}</span>
                 </button>
               </sc-for>
             </div>
 
             <div style="padding: 24px 34px 28px;">
               <div style="display: flex; align-items: baseline; gap: 14px; margin-bottom: 4px;">
-                <h3 style="margin: 0; font-size: 22.5px; font-weight: 700; letter-spacing: -0.015em; color: #0b1c2e;">{{ megaName }}</h3>
+                <h3 style="margin: 0; font-size: 22.5px; font-weight: 700; letter-spacing: -0.015em; color: #0a1f3d;">{{ megaName }}</h3>
                 <a href="#" style="font-size: 14px; font-weight: 600;">{{ megaViewAll }}</a>
               </div>
               <p style="margin: 0 0 20px; font-size: 14px; color: #667380;">{{ megaSubline }}</p>
               <div style="columns: 3; column-gap: 30px;">
                 <sc-for list="{{ megaSubs }}" as="s" hint-placeholder-count="12">
                   <a href="#" style="display: flex; align-items: baseline; justify-content: space-between; gap: 10px; padding: 5px 0; break-inside: avoid; text-decoration: none; border-bottom: 1px solid #f1f4f7;" style-hover="text-decoration: none;">
-                    <span style="font-size: 14px; color: #24456b;">{{ s.name }}</span>
-                    <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #667380; font-variant-numeric: tabular-nums;">{{ s.count }}</span>
+                    <span style="font-size: 14px; color: #163d74;">{{ s.name }}</span>
+                    <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #667380; font-variant-numeric: tabular-nums;">{{ s.count }}</span>
                   </a>
                 </sc-for>
               </div>
             </div>
 
             <div style="border-left: 1px solid #dbe2e8; padding: 24px; background: #f7f9fb; display: flex; flex-direction: column; gap: 14px;">
-              <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #667380;">Popular in {{ megaName }}</div>
+              <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #667380;">Popular in {{ megaName }}</div>
               <sc-for list="{{ megaPickList }}" as="m" hint-placeholder-count="0">
                 <div style="background: #ffffff; border: 1px solid #dbe2e8; padding: 15px;">
                   <div style="{{ m.imgStyle }}"></div>
-                  <div style="font-size: 14px; font-weight: 500; color: #16304f; line-height: 1.35; height: 40px; overflow: hidden;">{{ m.name }}</div>
-                  <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #667380; margin-top: 6px;">{{ m.sku }}</div>
+                  <div style="font-size: 14px; font-weight: 500; color: #0e2a52; line-height: 1.35; height: 40px; overflow: hidden;">{{ m.name }}</div>
+                  <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #667380; margin-top: 6px;">{{ m.sku }}</div>
                   <div style="font-size: 18.5px; font-weight: 700; margin-top: 8px; font-variant-numeric: tabular-nums;">{{ m.price }}</div>
                 </div>
               </sc-for>
-              <a href="shop.html" style="display: block; text-align: center; padding: 11px; background: #16304f; color: #ffffff; font-size: 14px; font-weight: 600; text-decoration: none;" style-hover="background: #0673a2; text-decoration: none;">Browse the full catalogue</a>
+              <a href="shop.html" style="display: block; text-align: center; padding: 11px; background: #0e2a52; color: #ffffff; font-size: 14px; font-weight: 600; text-decoration: none;" style-hover="background: #0276b8; text-decoration: none;">Browse the full catalogue</a>
             </div>
           </div>
         </div>
@@ -260,62 +261,62 @@
     </div>
   </div>
 
-  <section data-screen-label="Hero" style="background: #0b1c2e; position: relative; overflow: hidden;">
+  <section data-screen-label="Hero" style="background: #0a1f3d; position: relative; overflow: hidden;">
     <div style="position: absolute; inset: 0; background-image: linear-gradient(90deg, rgba(11,159,216,0.08) 1px, transparent 1px), linear-gradient(180deg, rgba(11,159,216,0.08) 1px, transparent 1px); background-size: 60px 60px;"></div>
     <div style="position: absolute; top: -220px; right: -140px; width: 660px; height: 660px; border-radius: 50%; background: radial-gradient(circle, rgba(11,159,216,0.2), rgba(11,159,216,0) 66%);"></div>
     <div style="position: relative; max-width: 1440px; margin: 0 auto; padding: 62px 36px 56px; display: grid; grid-template-columns: 1fr 396px; gap: 76px; align-items: start;">
 
       <div style="animation: ocRise 0.5s ease-out;">
-        <div style="display: inline-flex; align-items: center; gap: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #6fd0f5; border: 1px solid rgba(111,208,245,0.35); padding: 6px 12px; margin-bottom: 26px;">
-          <span style="width: 6px; height: 6px; background: #6fd0f5;"></span>Industrial automation supply · Carrum Downs, Victoria
+        <div style="display: inline-flex; align-items: center; gap: 10px; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #66d9ff; border: 1px solid rgba(111,208,245,0.35); padding: 6px 12px; margin-bottom: 26px;">
+          <span style="width: 6px; height: 6px; background: #66d9ff;"></span>Industrial automation supply · Carrum Downs, Victoria
         </div>
         <h1 style="margin: 0 0 20px; font-size: 56px; line-height: 1.02; font-weight: 800; letter-spacing: -0.03em; color: #ffffff; max-width: 15em;">The part, the spec sheet and the stock figure. On one page.</h1>
         <p style="margin: 0 0 32px; font-size: 19px; line-height: 1.6; color: #a9bed4; max-width: 38em;">2,279 sensors, controllers, power supplies and protocol gateways from 48 manufacturers — held in our own warehouse, not drop-shipped. Compare on numbers, download the datasheet, order without a quote request.</p>
 
         <div style="display: flex; gap: 12px; margin-bottom: 40px;">
-          <a href="shop.html" style="display: inline-flex; align-items: center; gap: 10px; padding: 16px 28px; background: #0673a2; color: #ffffff; font-size: 16px; font-weight: 600; text-decoration: none;" style-hover="background: #ffffff; color: #0b1c2e; text-decoration: none;">Browse the catalogue<span>→</span></a>
+          <a href="shop.html" style="display: inline-flex; align-items: center; gap: 10px; padding: 16px 28px; background: #0276b8; color: #ffffff; font-size: 16px; font-weight: 600; text-decoration: none;" style-hover="background: #ffffff; color: #0a1f3d; text-decoration: none;">Browse the catalogue<span>→</span></a>
           <a href="contact.html" style="display: inline-flex; align-items: center; padding: 16px 28px; border: 1px solid #3a5878; color: #ffffff; font-size: 16px; font-weight: 600; text-decoration: none;" style-hover="border-color: #ffffff; text-decoration: none;">Talk to an engineer</a>
         </div>
 
-        <div style="border: 1px solid #24456b; background: rgba(255,255,255,0.03); padding: 20px 22px; max-width: 560px;">
+        <div style="border: 1px solid #163d74; background: rgba(255,255,255,0.03); padding: 20px 22px; max-width: 560px;">
           <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 12px;">
-            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #6fd0f5;">Quick order pad</div>
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #66d9ff;">Quick order pad</div>
             <div style="font-size: 13.5px; color: #a9bed4;">Paste part numbers, comma separated</div>
           </div>
           <div style="display: flex; gap: 8px;">
-            <input type="text" placeholder="KTA-387, GJS-002, PSM-900" value="{{ padValue }}" onInput="{{ onPad }}" onKeyDown="{{ onPadKey }}" style="flex: 1 1 auto; height: 46px; background: rgba(255,255,255,0.06); border: 1px solid #3a5878; color: #ffffff; padding: 0 14px; font-size: 15.5px; font-family: 'IBM Plex Mono', monospace; outline: none; min-width: 0;" aria-label="Quick order pad" />
-            <a href="cart.html" style="flex: 0 0 auto; height: 46px; padding: 0 22px; background: #ffffff; color: #0b1c2e; border: 0; font-size: 15px; font-weight: 600; cursor: pointer;; display:inline-flex; align-items:center; justify-content:center; text-decoration:none;">Add to order</a>
+            <input type="text" placeholder="KTA-387, GJS-002, PSM-900" value="{{ padValue }}" onInput="{{ onPad }}" onKeyDown="{{ onPadKey }}" style="flex: 1 1 auto; height: 46px; background: rgba(255,255,255,0.06); border: 1px solid #3a5878; color: #ffffff; padding: 0 14px; font-size: 15.5px; font-family: 'JetBrains Mono', monospace; outline: none; min-width: 0;" aria-label="Quick order pad" />
+            <a href="cart.html" style="flex: 0 0 auto; height: 46px; padding: 0 22px; background: #ffffff; color: #0a1f3d; border: 0; font-size: 15px; font-weight: 600; cursor: pointer;; display:inline-flex; align-items:center; justify-content:center; text-decoration:none;">Add to order</a>
           </div>
           <div style="margin-top: 10px; font-size: 13.5px; color: {{ padNoteFg }}; min-height: 20px;">{{ padNote }}</div>
         </div>
       </div>
 
-      <div style="background: #ffffff; border: 1px solid #24456b; animation: ocRise 0.6s ease-out;">
+      <div style="background: #ffffff; border: 1px solid #163d74; animation: ocRise 0.6s ease-out;">
         <div style="display: flex; align-items: center; justify-content: space-between; padding: 10px 16px; background: #f4f6f8; border-bottom: 1px solid #dbe2e8;">
-          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #16304f;">Designed &amp; built in-house</span>
-          <span style="background: #0673a2; color: #ffffff; font-size: 12px; font-weight: 700; letter-spacing: 0.08em; padding: 3px 7px;">NEW</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #0e2a52;">Designed &amp; built in-house</span>
+          <span style="background: #0276b8; color: #ffffff; font-size: 12px; font-weight: 700; letter-spacing: 0.08em; padding: 3px 7px;">NEW</span>
         </div>
         <div style="padding: 24px 24px 0;">
           <img src="uploads/OceanControls-Design-Assets/03-product-images/Data-Loggers__KTA-387.png" alt="KTA-387 Modbus Data Logger" style="width: 100%; height: 206px; object-fit: contain; display: block;" />
         </div>
         <div style="padding: 18px 24px 24px;">
-          <div style="display: flex; align-items: center; gap: 8px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #667380; margin-bottom: 8px;">
+          <div style="display: flex; align-items: center; gap: 8px; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #667380; margin-bottom: 8px;">
             <span>OCEAN CONTROLS</span><span style="color: #c9d3dc;">/</span><span>KTA-387</span>
           </div>
-          <h3 style="margin: 0 0 14px; font-size: 18.5px; line-height: 1.32; font-weight: 600; color: #0b1c2e;">Modbus Data Logger — dual RS-485, 100 channels, SD card</h3>
+          <h3 style="margin: 0 0 14px; font-size: 18.5px; line-height: 1.32; font-weight: 600; color: #0a1f3d;">Modbus Data Logger — dual RS-485, 100 channels, SD card</h3>
           <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: #dbe2e8; border: 1px solid #dbe2e8; margin-bottom: 16px;">
-            <div style="background: #ffffff; padding: 8px 10px;"><div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #667380;">Channels</div><div style="font-size: 14px; font-weight: 600; color: #16304f;">100</div></div>
-            <div style="background: #ffffff; padding: 8px 10px;"><div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #667380;">Ports</div><div style="font-size: 14px; font-weight: 600; color: #16304f;">2 × RS-485</div></div>
-            <div style="background: #ffffff; padding: 8px 10px;"><div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #667380;">Storage</div><div style="font-size: 14px; font-weight: 600; color: #16304f;">SD card</div></div>
-            <div style="background: #ffffff; padding: 8px 10px;"><div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #667380;">Mount</div><div style="font-size: 14px; font-weight: 600; color: #16304f;">DIN rail</div></div>
+            <div style="background: #ffffff; padding: 8px 10px;"><div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #667380;">Channels</div><div style="font-size: 14px; font-weight: 600; color: #0e2a52;">100</div></div>
+            <div style="background: #ffffff; padding: 8px 10px;"><div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #667380;">Ports</div><div style="font-size: 14px; font-weight: 600; color: #0e2a52;">2 × RS-485</div></div>
+            <div style="background: #ffffff; padding: 8px 10px;"><div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #667380;">Storage</div><div style="font-size: 14px; font-weight: 600; color: #0e2a52;">SD card</div></div>
+            <div style="background: #ffffff; padding: 8px 10px;"><div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #667380;">Mount</div><div style="font-size: 14px; font-weight: 600; color: #0e2a52;">DIN rail</div></div>
           </div>
           <div style="display: flex; align-items: flex-end; justify-content: space-between; border-top: 1px solid #dbe2e8; padding-top: 14px;">
             <div>
-              <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #667380;">{{ heroPriceLabel }}</div>
-              <div style="font-size: 32px; font-weight: 800; letter-spacing: -0.025em; font-variant-numeric: tabular-nums; color: #0b1c2e;">{{ heroPrice }}</div>
+              <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #667380;">{{ heroPriceLabel }}</div>
+              <div style="font-size: 32px; font-weight: 800; letter-spacing: -0.025em; font-variant-numeric: tabular-nums; color: #0a1f3d;">{{ heroPrice }}</div>
               <div style="font-size: 13px; color: #667380;">{{ heroPriceNote }}</div>
             </div>
-            <button onClick="{{ addHero }}" style="padding: 13px 20px; background: #16304f; color: #ffffff; border: 0; font-size: 15px; font-weight: 600; cursor: pointer;" style-hover="background: #0673a2;">Add to cart</button>
+            <button onClick="{{ addHero }}" style="padding: 13px 20px; background: #0e2a52; color: #ffffff; border: 0; font-size: 15px; font-weight: 600; cursor: pointer;" style-hover="background: #0276b8;">Add to cart</button>
           </div>
           <div style="display: flex; gap: 14px; margin-top: 14px; padding-top: 14px; border-top: 1px solid #eef2f5;">
             <a href="#" style="font-size: 14px; font-weight: 600;">Datasheet ↓</a>
@@ -326,7 +327,7 @@
       </div>
     </div>
 
-    <div style="position: relative; border-top: 1px solid #24456b; background: rgba(255,255,255,0.03);">
+    <div style="position: relative; border-top: 1px solid #163d74; background: rgba(255,255,255,0.03);">
       <div style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 36px); display: grid; grid-template-columns: repeat(auto-fit, minmax(195px, 1fr));">
         <sc-for list="{{ stats }}" as="s" hint-placeholder-count="0">
           <div style="{{ s.cellStyle }}">
@@ -342,9 +343,9 @@
     <div style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 36px); display: grid; grid-template-columns: repeat(auto-fit, minmax(235px, 1fr));">
       <sc-for list="{{ benefits }}" as="b" hint-placeholder-count="0">
         <div style="{{ b.cellStyle }}">
-          <div style="flex: 0 0 auto; font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; color: #0673a2; padding-top: 3px;">{{ b.n }}</div>
+          <div style="flex: 0 0 auto; font-family: 'JetBrains Mono', monospace; font-size: 12.5px; color: #0276b8; padding-top: 3px;">{{ b.n }}</div>
           <div>
-            <div style="font-size: 16.5px; font-weight: 600; color: #0b1c2e; margin-bottom: 5px;">{{ b.title }}</div>
+            <div style="font-size: 16.5px; font-weight: 600; color: #0a1f3d; margin-bottom: 5px;">{{ b.title }}</div>
             <p style="margin: 0; font-size: 14.5px; line-height: 1.6; color: #667380;">{{ b.body }}</p>
           </div>
         </div>
@@ -356,23 +357,23 @@
     <div style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 36px);">
       <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 44px; margin-bottom: 30px;">
         <div>
-          <div style="display: flex; align-items: center; gap: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #06708f; margin-bottom: 14px;">
-            <span style="width: 22px; height: 1px; background: #0673a2;"></span>01 — Catalogue
+          <div style="display: flex; align-items: center; gap: 10px; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #0276b8; margin-bottom: 14px;">
+            <span style="width: 22px; height: 1px; background: #0276b8;"></span>01 — Catalogue
           </div>
-          <h2 style="margin: 0 0 10px; font-size: 35px; line-height: 1.1; font-weight: 700; letter-spacing: -0.025em; color: #0b1c2e;">Start where the panel starts</h2>
+          <h2 style="margin: 0 0 10px; font-size: 35px; line-height: 1.1; font-weight: 700; letter-spacing: -0.025em; color: #0a1f3d;">Start where the panel starts</h2>
           <p style="margin: 0; font-size: 17px; line-height: 1.6; color: #667380; max-width: 46em;">Twenty-nine top-level groups, sized by what is actually on the shelf. Every tile opens into its own nested subcategories — no flat list of 237 links.</p>
         </div>
-        <a href="shop.html" style="flex: 0 0 auto; display: inline-flex; align-items: center; gap: 8px; padding: 12px 18px; border: 1px solid #c9d3dc; font-size: 15px; font-weight: 600; color: #16304f; text-decoration: none;" style-hover="border-color: #16304f; background: #f4f6f8; text-decoration: none;">All 237 categories<span>→</span></a>
+        <a href="shop.html" style="flex: 0 0 auto; display: inline-flex; align-items: center; gap: 8px; padding: 12px 18px; border: 1px solid #c9d3dc; font-size: 15px; font-weight: 600; color: #0e2a52; text-decoration: none;" style-hover="border-color: #0e2a52; background: #f4f6f8; text-decoration: none;">All 237 categories<span>→</span></a>
       </div>
 
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 1px; background: #dbe2e8; border: 1px solid #dbe2e8;">
         <sc-for list="{{ catTiles }}" as="t" hint-placeholder-count="0">
-          <a href="{{ t.href }}" style="display: block; background: #ffffff; padding: 18px 16px 15px; text-decoration: none; border-top: 2px solid transparent;" style-hover="background: #f7f9fb; border-top-color: #0673a2; text-decoration: none;">
+          <a href="{{ t.href }}" style="display: block; background: #ffffff; padding: 18px 16px 15px; text-decoration: none; border-top: 2px solid transparent;" style-hover="background: #f7f9fb; border-top-color: #0276b8; text-decoration: none;">
             <div style="{{ t.imgStyle }}"></div>
-            <div style="font-size: 15px; font-weight: 600; color: #16304f; line-height: 1.3; height: 42px; overflow: hidden;">{{ t.name }}</div>
+            <div style="font-size: 15px; font-weight: 600; color: #0e2a52; line-height: 1.3; height: 42px; overflow: hidden;">{{ t.name }}</div>
             <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 8px; border-top: 1px solid #eef2f5; padding-top: 8px;">
-              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #667380; font-variant-numeric: tabular-nums;">{{ t.countLabel }}</span>
-              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #667380;">{{ t.subLabel }}</span>
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #667380; font-variant-numeric: tabular-nums;">{{ t.countLabel }}</span>
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #667380;">{{ t.subLabel }}</span>
             </div>
           </a>
         </sc-for>
@@ -385,24 +386,24 @@
       <div style="border: 1px solid #dbe2e8;">
         <div style="display: flex; align-items: center; justify-content: space-between; gap: 36px; padding: 26px 30px; border-bottom: 1px solid #dbe2e8; background: #ffffff;">
           <div>
-            <div style="display: flex; align-items: center; gap: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #06708f; margin-bottom: 12px;">
-              <span style="width: 22px; height: 1px; background: #0673a2;"></span>02 — Instant browse
+            <div style="display: flex; align-items: center; gap: 10px; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #0276b8; margin-bottom: 12px;">
+              <span style="width: 22px; height: 1px; background: #0276b8;"></span>02 — Instant browse
             </div>
-            <h2 style="margin: 0 0 8px; font-size: 30px; line-height: 1.12; font-weight: 700; letter-spacing: -0.025em; color: #0b1c2e;">Click a category. Products appear.</h2>
+            <h2 style="margin: 0 0 8px; font-size: 30px; line-height: 1.12; font-weight: 700; letter-spacing: -0.025em; color: #0a1f3d;">Click a category. Products appear.</h2>
             <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #667380; max-width: 54em;">Filters, sort and category all swap the grid in place — the header, cart and your place on the page stay put. Try the rail, the chips and the sort.</p>
           </div>
-          <div style="flex: 0 0 auto; display: flex; align-items: center; gap: 9px; font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; color: #667380; border: 1px solid #dbe2e8; padding: 8px 12px;">
+          <div style="flex: 0 0 auto; display: flex; align-items: center; gap: 9px; font-family: 'JetBrains Mono', monospace; font-size: 12.5px; color: #667380; border: 1px solid #dbe2e8; padding: 8px 12px;">
             <span style="width: 8px; height: 8px; border-radius: 50%; background: #2fd07e;"></span>0 page reloads
           </div>
         </div>
 
         <div style="display: grid; grid-template-columns: 268px 1fr;">
           <div style="border-right: 1px solid #dbe2e8; background: #f7f9fb; padding: 12px 0;">
-            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #667380; padding: 4px 18px 10px;">Category</div>
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #667380; padding: 4px 18px 10px;">Category</div>
             <sc-for list="{{ browseCats }}" as="b" hint-placeholder-count="8">
               <button onClick="{{ b.pick }}" style="width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 11px 18px; cursor: pointer; border: 0; border-left: 3px solid {{ b.edge }}; background: {{ b.bg }}; text-align: left;">
                 <span style="font-size: 15px; font-weight: {{ b.weight }}; color: {{ b.fg }};">{{ b.name }}</span>
-                <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #667380; font-variant-numeric: tabular-nums;">{{ b.count }}</span>
+                <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #667380; font-variant-numeric: tabular-nums;">{{ b.count }}</span>
               </button>
             </sc-for>
             <div style="margin: 12px 18px 6px; padding-top: 14px; border-top: 1px solid #dbe2e8;">
@@ -412,17 +413,17 @@
 
           <div style="padding: 20px 26px 26px; background: #ffffff;">
             <div style="display: flex; align-items: center; gap: 9px; flex-wrap: wrap; margin-bottom: 18px;">
-              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #667380; margin-right: 3px;">Refine</span>
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #667380; margin-right: 3px;">Refine</span>
               <sc-for list="{{ browseChips }}" as="c" hint-placeholder-count="5">
                 <button onClick="{{ c.toggle }}" style="font-size: 13.5px; background: {{ c.bg }}; border: 1px solid {{ c.edge }}; color: {{ c.fg }}; padding: 6px 11px; cursor: pointer;">{{ c.label }}</button>
               </sc-for>
               <sc-if value="{{ hasChips }}" hint-placeholder-val="{{ false }}">
-                <button onClick="{{ clearChips }}" style="font-size: 13.5px; background: none; border: 0; color: #06708f; cursor: pointer; text-decoration: underline;">Clear</button>
+                <button onClick="{{ clearChips }}" style="font-size: 13.5px; background: none; border: 0; color: #0276b8; cursor: pointer; text-decoration: underline;">Clear</button>
               </sc-if>
               <span style="margin-left: auto; display: flex; align-items: center; gap: 14px;">
                 <span style="font-size: 14px; color: #667380;">{{ browseCount }}</span>
                 <span style="display: flex; align-items: center; gap: 7px; border-left: 1px solid #dbe2e8; padding-left: 14px;">
-                  <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #667380;">Sort</span>
+                  <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #667380;">Sort</span>
                   <sc-for list="{{ sortOpts }}" as="s" hint-placeholder-count="3">
                     <button onClick="{{ s.pick }}" style="font-size: 13.5px; background: {{ s.bg }}; border: 1px solid {{ s.edge }}; color: {{ s.fg }}; padding: 5px 10px; cursor: pointer;">{{ s.label }}</button>
                   </sc-for>
@@ -432,10 +433,10 @@
 
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(235px, 1fr)); gap: 16px;">
               <sc-for list="{{ browseProducts }}" as="p" hint-placeholder-count="0">
-                <div style="background: #ffffff; border: 1px solid #dbe2e8; border-top: 2px solid #dbe2e8; display: flex; flex-direction: column;" style-hover="border-color: #b6c6d4; border-top-color: #0673a2; box-shadow: 0 14px 30px -20px rgba(11,28,46,0.5);">
+                <div style="background: #ffffff; border: 1px solid #dbe2e8; border-top: 2px solid #dbe2e8; display: flex; flex-direction: column;" style-hover="border-color: #b6c6d4; border-top-color: #0276b8; box-shadow: 0 14px 30px -20px rgba(11,28,46,0.5);">
                   <div style="position: relative; padding: 16px; border-bottom: 1px solid #eef2f5;">
                     <sc-if value="{{ p.hasBadge }}" hint-placeholder-val="{{ false }}">
-                      <span style="position: absolute; top: 10px; left: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; font-weight: 600; letter-spacing: 0.08em; padding: 3px 6px; color: #ffffff; background: {{ p.badgeBg }};">{{ p.badge }}</span>
+                      <span style="position: absolute; top: 10px; left: 10px; font-family: 'JetBrains Mono', monospace; font-size: 11.5px; font-weight: 600; letter-spacing: 0.08em; padding: 3px 6px; color: #ffffff; background: {{ p.badgeBg }};">{{ p.badge }}</span>
                     </sc-if>
                     <sc-if value="{{ p.compareOn }}" hint-placeholder-val="{{ false }}">
                       <button onClick="{{ p.toggleCompare }}" style="position: absolute; top: 8px; right: 8px; display: flex; align-items: center; gap: 6px; background: {{ p.cmpBg }}; border: 1px solid {{ p.cmpEdge }}; color: {{ p.cmpFg }}; font-size: 12px; font-weight: 600; padding: 4px 8px; cursor: pointer;">{{ p.cmpLabel }}</button>
@@ -443,26 +444,26 @@
                     <a href="product.html" aria-label="{{ p.name }}" style="{{ p.imgStyle }}"></a>
                   </div>
                   <div style="padding: 12px 14px 14px; display: flex; flex-direction: column; flex: 1 1 auto;">
-                    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; color: #667380; margin-bottom: 6px;">{{ p.brand }}</div>
-                    <a href="product.html" style="display: block; font-size: 14.5px; font-weight: 500; line-height: 1.35; color: #16304f; height: 82px; overflow: hidden; text-decoration: none;" style-hover="color: #06708f;">{{ p.name }}</a>
-                    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #667380; margin: 8px 0 6px;">{{ p.skuLabel }}</div>
+                    <div style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; color: #667380; margin-bottom: 6px;">{{ p.brand }}</div>
+                    <a href="product.html" style="display: block; font-size: 14.5px; font-weight: 500; line-height: 1.35; color: #0e2a52; height: 82px; overflow: hidden; text-decoration: none;" style-hover="color: #0276b8;">{{ p.name }}</a>
+                    <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #667380; margin: 8px 0 6px;">{{ p.skuLabel }}</div>
                     <div style="display: flex; align-items: center; gap: 6px; font-size: 13px; color: {{ p.stockFg }};">
                       <span style="width: 6px; height: 6px; border-radius: 50%; background: {{ p.stockFg }};"></span>{{ p.stockText }}
                     </div>
                     <div style="font-size: 12.5px; color: #667380; margin: 4px 0 10px; min-height: 19px;">{{ p.dispatch }}</div>
                     <div style="margin-top: auto;">
                       <div style="display: flex; align-items: baseline; gap: 8px;">
-                        <span style="font-size: 21.5px; font-weight: 700; letter-spacing: -0.015em; font-variant-numeric: tabular-nums; color: #0b1c2e;">{{ p.priceMain }}</span>
+                        <span style="font-size: 21.5px; font-weight: 700; letter-spacing: -0.015em; font-variant-numeric: tabular-nums; color: #0a1f3d;">{{ p.priceMain }}</span>
                         <span style="font-size: 12.5px; color: #667380;">{{ p.priceUnit }}</span>
                       </div>
-                      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; line-height: 15px; color: #06708f; height: 46px; overflow: hidden;">{{ p.tierText }}</div>
+                      <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; line-height: 15px; color: #0276b8; height: 46px; overflow: hidden;">{{ p.tierText }}</div>
                       <div style="display: flex; gap: 6px; margin-top: 8px;">
                         <div style="display: flex; border: 1px solid #dbe2e8; height: 34px; flex: 0 0 auto;">
                           <button onClick="{{ p.dec }}" style="width: 28px; border: 0; background: none; cursor: pointer; color: #667380; font-size: 15.5px;" style-hover="background: #f4f6f8;">−</button>
                           <div style="width: 30px; display: flex; align-items: center; justify-content: center; font-size: 14.5px; font-weight: 600; font-variant-numeric: tabular-nums; border-left: 1px solid #eef2f5; border-right: 1px solid #eef2f5;">{{ p.qty }}</div>
                           <button onClick="{{ p.inc }}" style="width: 28px; border: 0; background: none; cursor: pointer; color: #667380; font-size: 15.5px;" style-hover="background: #f4f6f8;">+</button>
                         </div>
-                        <button onClick="{{ p.add }}" style="flex: 1 1 auto; height: 34px; background: #16304f; color: #ffffff; border: 0; font-size: 14px; font-weight: 600; cursor: pointer;" style-hover="background: #0673a2;">Add</button>
+                        <button onClick="{{ p.add }}" style="flex: 1 1 auto; height: 34px; background: #0e2a52; color: #ffffff; border: 0; font-size: 14px; font-weight: 600; cursor: pointer;" style-hover="background: #0276b8;">Add</button>
                       </div>
                       <sc-if value="{{ p.showDocs }}" hint-placeholder-val="{{ true }}">
                         <div style="display: flex; gap: 12px; margin-top: 10px; padding-top: 9px; border-top: 1px solid #eef2f5;">
@@ -475,10 +476,10 @@
                 </div>
               </sc-for>
 
-              <a href="#" style="background: #f7f9fb; border: 1px dashed #c9d3dc; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; padding: 24px; text-decoration: none; min-height: 300px;" style-hover="border-color: #0673a2; background: #f2f9fd; text-decoration: none;">
-                <span style="font-size: 33px; font-weight: 800; letter-spacing: -0.03em; color: #16304f; font-variant-numeric: tabular-nums;">{{ browseRemaining }}</span>
-                <span style="font-size: 14.5px; font-weight: 600; color: #16304f; text-align: center; line-height: 1.4;">more in {{ browseName }}</span>
-                <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #06708f;">View category →</span>
+              <a href="#" style="background: #f7f9fb; border: 1px dashed #c9d3dc; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; padding: 24px; text-decoration: none; min-height: 300px;" style-hover="border-color: #0276b8; background: #f2f9fd; text-decoration: none;">
+                <span style="font-size: 33px; font-weight: 800; letter-spacing: -0.03em; color: #0e2a52; font-variant-numeric: tabular-nums;">{{ browseRemaining }}</span>
+                <span style="font-size: 14.5px; font-weight: 600; color: #0e2a52; text-align: center; line-height: 1.4;">more in {{ browseName }}</span>
+                <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #0276b8;">View category →</span>
               </a>
             </div>
           </div>
@@ -489,13 +490,13 @@
 
   <section data-screen-label="Moving stock" style="padding: 0 0 82px; background: #ffffff;">
     <div style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 36px);">
-      <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 44px; border-bottom: 2px solid #16304f; padding-bottom: 16px; margin-bottom: 26px;">
+      <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 44px; border-bottom: 2px solid #0e2a52; padding-bottom: 16px; margin-bottom: 26px;">
         <div style="display: flex; align-items: baseline; gap: 30px;">
           <div>
-            <div style="display: flex; align-items: center; gap: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #06708f; margin-bottom: 10px;">
-              <span style="width: 22px; height: 1px; background: #0673a2;"></span>03 — Moving stock
+            <div style="display: flex; align-items: center; gap: 10px; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #0276b8; margin-bottom: 10px;">
+              <span style="width: 22px; height: 1px; background: #0276b8;"></span>03 — Moving stock
             </div>
-            <h2 style="margin: 0; font-size: 30px; font-weight: 700; letter-spacing: -0.025em; color: #0b1c2e;">New, clearing and best selling</h2>
+            <h2 style="margin: 0; font-size: 30px; font-weight: 700; letter-spacing: -0.025em; color: #0a1f3d;">New, clearing and best selling</h2>
           </div>
           <div style="display: flex; gap: 4px;">
             <sc-for list="{{ dealTabs }}" as="d" hint-placeholder-count="3">
@@ -508,10 +509,10 @@
 
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 16px;">
         <sc-for list="{{ dealProducts }}" as="p" hint-placeholder-count="0">
-          <div style="background: #ffffff; border: 1px solid #dbe2e8; border-top: 2px solid #dbe2e8; display: flex; flex-direction: column;" style-hover="border-color: #b6c6d4; border-top-color: #0673a2; box-shadow: 0 14px 30px -20px rgba(11,28,46,0.5);">
+          <div style="background: #ffffff; border: 1px solid #dbe2e8; border-top: 2px solid #dbe2e8; display: flex; flex-direction: column;" style-hover="border-color: #b6c6d4; border-top-color: #0276b8; box-shadow: 0 14px 30px -20px rgba(11,28,46,0.5);">
             <div style="position: relative; padding: 16px; border-bottom: 1px solid #eef2f5;">
               <sc-if value="{{ p.hasBadge }}" hint-placeholder-val="{{ true }}">
-                <span style="position: absolute; top: 10px; left: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; font-weight: 600; letter-spacing: 0.08em; padding: 3px 6px; color: #ffffff; background: {{ p.badgeBg }};">{{ p.badge }}</span>
+                <span style="position: absolute; top: 10px; left: 10px; font-family: 'JetBrains Mono', monospace; font-size: 11.5px; font-weight: 600; letter-spacing: 0.08em; padding: 3px 6px; color: #ffffff; background: {{ p.badgeBg }};">{{ p.badge }}</span>
               </sc-if>
               <sc-if value="{{ p.compareOn }}" hint-placeholder-val="{{ false }}">
                 <button onClick="{{ p.toggleCompare }}" style="position: absolute; top: 8px; right: 8px; display: flex; align-items: center; gap: 6px; background: {{ p.cmpBg }}; border: 1px solid {{ p.cmpEdge }}; color: {{ p.cmpFg }}; font-size: 12px; font-weight: 600; padding: 4px 8px; cursor: pointer;">{{ p.cmpLabel }}</button>
@@ -519,9 +520,9 @@
               <a href="product.html" aria-label="{{ p.name }}" style="{{ p.imgStyle }}"></a>
             </div>
             <div style="padding: 12px 14px 14px; display: flex; flex-direction: column; flex: 1 1 auto;">
-              <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; color: #667380; margin-bottom: 6px;">{{ p.brand }}</div>
-              <a href="product.html" style="display: block; font-size: 14.5px; font-weight: 500; line-height: 1.35; color: #16304f; height: 82px; overflow: hidden; text-decoration: none;" style-hover="color: #06708f;">{{ p.name }}</a>
-              <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #667380; margin: 8px 0 6px;">{{ p.skuLabel }}</div>
+              <div style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; color: #667380; margin-bottom: 6px;">{{ p.brand }}</div>
+              <a href="product.html" style="display: block; font-size: 14.5px; font-weight: 500; line-height: 1.35; color: #0e2a52; height: 82px; overflow: hidden; text-decoration: none;" style-hover="color: #0276b8;">{{ p.name }}</a>
+              <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #667380; margin: 8px 0 6px;">{{ p.skuLabel }}</div>
               <div style="display: flex; align-items: center; gap: 6px; font-size: 13px; color: {{ p.stockFg }}; margin-bottom: 10px;">
                 <span style="width: 6px; height: 6px; border-radius: 50%; background: {{ p.stockFg }};"></span>{{ p.stockText }}
               </div>
@@ -531,8 +532,8 @@
                   <span style="font-size: 21.5px; font-weight: 700; letter-spacing: -0.015em; font-variant-numeric: tabular-nums; color: {{ p.priceFg }};">{{ p.priceMain }}</span>
                   <span style="font-size: 12.5px; color: #667380;">{{ p.priceUnit }}</span>
                 </div>
-                <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; line-height: 15px; color: #06708f; height: 46px; overflow: hidden;">{{ p.tierText }}</div>
-                <button onClick="{{ p.add }}" style="width: 100%; height: 34px; margin-top: 8px; background: #16304f; color: #ffffff; border: 0; font-size: 14px; font-weight: 600; cursor: pointer;" style-hover="background: #0673a2;">Add to cart</button>
+                <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; line-height: 15px; color: #0276b8; height: 46px; overflow: hidden;">{{ p.tierText }}</div>
+                <button onClick="{{ p.add }}" style="width: 100%; height: 34px; margin-top: 8px; background: #0e2a52; color: #ffffff; border: 0; font-size: 14px; font-weight: 600; cursor: pointer;" style-hover="background: #0276b8;">Add to cart</button>
               </div>
             </div>
           </div>
@@ -541,34 +542,34 @@
     </div>
   </section>
 
-  <section data-screen-label="Trade accounts" style="background: #16304f; color: #ffffff;">
+  <section data-screen-label="Trade accounts" style="background: #0e2a52; color: #ffffff;">
     <div style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 36px); display: grid; grid-template-columns: 1.12fr 1fr;">
       <div style="padding: 60px 64px 60px 0;">
-        <div style="display: flex; align-items: center; gap: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #6fd0f5; margin-bottom: 16px;">
-          <span style="width: 22px; height: 1px; background: #6fd0f5;"></span>04 — Two ways to buy
+        <div style="display: flex; align-items: center; gap: 10px; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #66d9ff; margin-bottom: 16px;">
+          <span style="width: 22px; height: 1px; background: #66d9ff;"></span>04 — Two ways to buy
         </div>
         <h2 style="margin: 0 0 16px; font-size: 35px; line-height: 1.12; font-weight: 700; letter-spacing: -0.025em;">Quantity breaks for everyone. Contract pricing for approved accounts.</h2>
         <p style="margin: 0 0 24px; font-size: 17px; line-height: 1.65; color: #b7cade; max-width: 40em;">Retail buyers see "buy more for less" tiering on 2,097 products the moment they land — no login, no quote request. Approved <strong style="color: #ffffff; font-weight: 600;">trade</strong> and <strong style="color: #ffffff; font-weight: 600;">overseas wholesale</strong> accounts sign in and the whole catalogue re-prices to their agreed rate.</p>
-        <div style="display: flex; align-items: flex-start; gap: 12px; border-left: 3px solid #0b9fd8; background: rgba(11,159,216,0.1); padding: 14px 16px; margin-bottom: 30px; max-width: 40em;">
-          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #6fd0f5; padding-top: 2px; flex: 0 0 auto;">Note</span>
+        <div style="display: flex; align-items: flex-start; gap: 12px; border-left: 3px solid #00aeef; background: rgba(11,159,216,0.1); padding: 14px 16px; margin-bottom: 30px; max-width: 40em;">
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #66d9ff; padding-top: 2px; flex: 0 0 auto;">Note</span>
           <p style="margin: 0; font-size: 15.5px; line-height: 1.6; color: #d6e4f2;">Ocean Controls does not take guest orders. Every checkout requires a registered account, so invoices, order history and datasheet downloads stay in one place — and a repeat order takes one paste into the order pad.</p>
         </div>
         <div style="display: flex; gap: 12px;">
-          <a href="trade-account.html" style="padding: 15px 26px; background: #0673a2; color: #ffffff; font-size: 15.5px; font-weight: 600; text-decoration: none;" style-hover="background: #ffffff; color: #0b1c2e; text-decoration: none;">Apply for a trade account</a>
+          <a href="trade-account.html" style="padding: 15px 26px; background: #0276b8; color: #ffffff; font-size: 15.5px; font-weight: 600; text-decoration: none;" style-hover="background: #ffffff; color: #0a1f3d; text-decoration: none;">Apply for a trade account</a>
           <a href="sign-in.html" style="padding: 15px 26px; border: 1px solid #3a5878; color: #ffffff; font-size: 15.5px; font-weight: 600; text-decoration: none;" style-hover="border-color: #ffffff; text-decoration: none;">Create a retail account</a>
         </div>
       </div>
-      <div style="border-left: 1px solid #24456b; padding: 60px 0 60px 64px; display: flex; flex-direction: column;">
+      <div style="border-left: 1px solid #163d74; padding: 60px 0 60px 64px; display: flex; flex-direction: column;">
         <div style="display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 16px;">
-          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #9ab0c6;">Live example — AKB-001</div>
-          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #6fd0f5; border: 1px solid #3a5878; padding: 5px 10px;">{{ tierModeLabel }}</span>
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #9ab0c6;">Live example — AKB-001</div>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #66d9ff; border: 1px solid #3a5878; padding: 5px 10px;">{{ tierModeLabel }}</span>
         </div>
         <div style="display: flex; flex-direction: column; gap: 2px;">
           <sc-for list="{{ tierRows }}" as="r" hint-placeholder-count="4">
             <div style="display: grid; grid-template-columns: 1fr auto auto; gap: 18px; align-items: center; padding: 14px 16px; background: {{ r.bg }}; border: 1px solid {{ r.edge }};">
               <span style="font-size: 15px; font-weight: 500; color: #ffffff;">{{ r.qty }}</span>
-              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 16.5px; font-weight: 500; font-variant-numeric: tabular-nums; color: #ffffff;">{{ r.each }}</span>
-              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; color: {{ r.saveFg }}; min-width: 74px; text-align: right;">{{ r.save }}</span>
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 16.5px; font-weight: 500; font-variant-numeric: tabular-nums; color: #ffffff;">{{ r.each }}</span>
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 12.5px; color: {{ r.saveFg }}; min-width: 74px; text-align: right;">{{ r.save }}</span>
             </div>
           </sc-for>
         </div>
@@ -577,17 +578,17 @@
     </div>
 
     <div style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 36px) 52px;">
-      <div style="border-top: 1px solid #24456b; padding-top: 26px;">
-        <div style="display: flex; align-items: center; gap: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #6fd0f5; margin-bottom: 6px;">
-          <span style="width: 22px; height: 1px; background: #6fd0f5;"></span>Four ways to place an order
+      <div style="border-top: 1px solid #163d74; padding-top: 26px;">
+        <div style="display: flex; align-items: center; gap: 10px; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #66d9ff; margin-bottom: 6px;">
+          <span style="width: 22px; height: 1px; background: #66d9ff;"></span>Four ways to place an order
         </div>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(235px, 1fr));">
           <sc-for list="{{ orderRoutes }}" as="r" hint-placeholder-count="0">
             <div style="{{ r.cellStyle }}">
-              <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; color: #9ab0c6; margin-bottom: 8px;">{{ r.n }}</div>
+              <div style="font-family: 'JetBrains Mono', monospace; font-size: 12.5px; color: #9ab0c6; margin-bottom: 8px;">{{ r.n }}</div>
               <div style="font-size: 17px; font-weight: 600; color: #ffffff; margin-bottom: 6px;">{{ r.title }}</div>
               <p style="margin: 0 0 8px; font-size: 14.5px; line-height: 1.6; color: #a9bed4;">{{ r.body }}</p>
-              <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #6fd0f5;">{{ r.detail }}</div>
+              <div style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #66d9ff;">{{ r.detail }}</div>
             </div>
           </sc-for>
         </div>
@@ -599,24 +600,24 @@
     <div style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 36px);">
       <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 44px; margin-bottom: 28px;">
         <div>
-          <div style="display: flex; align-items: center; gap: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #06708f; margin-bottom: 14px;">
-            <span style="width: 22px; height: 1px; background: #0673a2;"></span>05 — Authorised distributor
+          <div style="display: flex; align-items: center; gap: 10px; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #0276b8; margin-bottom: 14px;">
+            <span style="width: 22px; height: 1px; background: #0276b8;"></span>05 — Authorised distributor
           </div>
-          <h2 style="margin: 0 0 10px; font-size: 35px; line-height: 1.1; font-weight: 700; letter-spacing: -0.025em; color: #0b1c2e;">Forty-eight manufacturers, one purchase order</h2>
+          <h2 style="margin: 0 0 10px; font-size: 35px; line-height: 1.1; font-weight: 700; letter-spacing: -0.025em; color: #0a1f3d;">Forty-eight manufacturers, one purchase order</h2>
           <p style="margin: 0; font-size: 17px; line-height: 1.6; color: #667380; max-width: 46em;">Including our own range — 93 products designed and built in Carrum Downs, supported by the people who made them.</p>
         </div>
-        <a href="brands.html" style="flex: 0 0 auto; display: inline-flex; align-items: center; gap: 8px; padding: 12px 18px; border: 1px solid #c9d3dc; background: #ffffff; font-size: 15px; font-weight: 600; color: #16304f; text-decoration: none;" style-hover="border-color: #16304f; text-decoration: none;">All brands<span>→</span></a>
+        <a href="brands.html" style="flex: 0 0 auto; display: inline-flex; align-items: center; gap: 8px; padding: 12px 18px; border: 1px solid #c9d3dc; background: #ffffff; font-size: 15px; font-weight: 600; color: #0e2a52; text-decoration: none;" style-hover="border-color: #0e2a52; text-decoration: none;">All brands<span>→</span></a>
       </div>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1px; background: #dbe2e8; border: 1px solid #dbe2e8;">
         <sc-for list="{{ brands }}" as="b" hint-placeholder-count="0">
           <a href="{{ b.href }}" style="background: #ffffff; padding: 20px 16px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; text-decoration: none; min-height: 118px;" style-hover="background: #f7f9fb; text-decoration: none;">
             <div role="img" aria-label="{{ b.name }}" style="{{ b.imgStyle }}"></div>
-            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.06em; color: #667380; font-variant-numeric: tabular-nums;">{{ b.count }}</span>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.06em; color: #667380; font-variant-numeric: tabular-nums;">{{ b.count }}</span>
           </a>
         </sc-for>
-        <a href="#" style="background: #16304f; padding: 20px 16px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; text-decoration: none; min-height: 118px;" style-hover="background: #0673a2; text-decoration: none;">
+        <a href="#" style="background: #0e2a52; padding: 20px 16px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; text-decoration: none; min-height: 118px;" style-hover="background: #0276b8; text-decoration: none;">
           <span style="font-size: 20.5px; font-weight: 700; color: #ffffff; letter-spacing: -0.02em;">+16</span>
-          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #bfe8f8;">more brands</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #bfe8f8;">more brands</span>
         </a>
       </div>
     </div>
@@ -625,23 +626,23 @@
   <section data-screen-label="Services and about" style="padding: 78px 0 82px; background: #ffffff;">
     <div style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 36px); display: grid; grid-template-columns: 1fr 404px; gap: 44px; align-items: start;">
       <div>
-        <div style="display: flex; align-items: center; gap: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #06708f; margin-bottom: 14px;">
-          <span style="width: 22px; height: 1px; background: #0673a2;"></span>06 — Engineering services
+        <div style="display: flex; align-items: center; gap: 10px; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #0276b8; margin-bottom: 14px;">
+          <span style="width: 22px; height: 1px; background: #0276b8;"></span>06 — Engineering services
         </div>
-        <h2 style="margin: 0 0 10px; font-size: 35px; line-height: 1.1; font-weight: 700; letter-spacing: -0.025em; color: #0b1c2e;">When the part you need isn't on a shelf</h2>
+        <h2 style="margin: 0 0 10px; font-size: 35px; line-height: 1.1; font-weight: 700; letter-spacing: -0.025em; color: #0a1f3d;">When the part you need isn't on a shelf</h2>
         <p style="margin: 0 0 28px; font-size: 17px; line-height: 1.6; color: #667380; max-width: 48em;">We are a supplier with a workshop behind it. The same team that answers the phone about a 4–20&nbsp;mA loop also designs the board, writes the PLC code and builds the panel.</p>
         <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: #dbe2e8; border: 1px solid #dbe2e8;">
           <sc-for list="{{ services }}" as="s" hint-placeholder-count="4">
             <div style="background: #ffffff; padding: 26px;">
-              <div style="font-family: 'IBM Plex Mono', monospace; font-size: 23px; color: #0673a2; margin-bottom: 12px;">{{ s.n }}</div>
-              <h3 style="margin: 0 0 8px; font-size: 18px; font-weight: 600; color: #0b1c2e;">{{ s.title }}</h3>
+              <div style="font-family: 'JetBrains Mono', monospace; font-size: 23px; color: #0276b8; margin-bottom: 12px;">{{ s.n }}</div>
+              <h3 style="margin: 0 0 8px; font-size: 18px; font-weight: 600; color: #0a1f3d;">{{ s.title }}</h3>
               <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #667380;">{{ s.body }}</p>
             </div>
           </sc-for>
         </div>
         <div style="margin-top: 22px; display: flex; gap: 12px;">
-          <a href="contact.html" style="padding: 14px 24px; background: #16304f; color: #ffffff; font-size: 15px; font-weight: 600; text-decoration: none;" style-hover="background: #0673a2; text-decoration: none;">Discuss a project</a>
-          <a href="articles.html" style="padding: 14px 24px; border: 1px solid #c9d3dc; color: #16304f; font-size: 15px; font-weight: 600; text-decoration: none;" style-hover="border-color: #16304f; text-decoration: none;">Read the LabJack case study</a>
+          <a href="contact.html" style="padding: 14px 24px; background: #0e2a52; color: #ffffff; font-size: 15px; font-weight: 600; text-decoration: none;" style-hover="background: #0276b8; text-decoration: none;">Discuss a project</a>
+          <a href="articles.html" style="padding: 14px 24px; border: 1px solid #c9d3dc; color: #0e2a52; font-size: 15px; font-weight: 600; text-decoration: none;" style-hover="border-color: #0e2a52; text-decoration: none;">Read the LabJack case study</a>
         </div>
       </div>
 
@@ -651,20 +652,20 @@
             <div style="position: absolute; top: -6px; left: 9px; width: 14px; height: 5px; border: 1.5px solid #b6c6d4; border-bottom: 0;"></div>
             <div style="position: absolute; top: 6px; left: 11px; width: 10px; height: 10px; border: 1.5px solid #b6c6d4; border-radius: 50%;"></div>
           </div>
-          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #667380; text-align: center;">Photography — store &amp; workshop</div>
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #667380; text-align: center;">Photography — store &amp; workshop</div>
           <div style="font-size: 13.5px; line-height: 1.5; color: #667380; text-align: center; max-width: 26em;">The Carrum Downs counter and assembly bench sit here. Send us two or three photos and we'll place them.</div>
         </div>
         <div style="padding: 26px;">
-          <div style="display: flex; align-items: center; gap: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #06708f; margin-bottom: 14px;">
-            <span style="width: 22px; height: 1px; background: #0673a2;"></span>About us
+          <div style="display: flex; align-items: center; gap: 10px; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #0276b8; margin-bottom: 14px;">
+            <span style="width: 22px; height: 1px; background: #0276b8;"></span>About us
           </div>
-          <h3 style="margin: 0 0 14px; font-size: 22.5px; line-height: 1.24; font-weight: 700; letter-spacing: -0.015em; color: #0b1c2e;">A supply shop run by engineers</h3>
+          <h3 style="margin: 0 0 14px; font-size: 22.5px; line-height: 1.24; font-weight: 700; letter-spacing: -0.015em; color: #0a1f3d;">A supply shop run by engineers</h3>
           <p style="margin: 0 0 14px; font-size: 15.5px; line-height: 1.65; color: #4b5560;">You can walk into our store on Frankston Gardens Drive, Monday to Friday, and talk to someone who knows the difference between a PT100 and a thermocouple. We hold stock rather than drop-ship, publish the datasheet next to the price, and ship worldwide through distributors in nine countries.</p>
           <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: #dbe2e8; border: 1px solid #dbe2e8; margin-bottom: 20px;">
             <sc-for list="{{ facts }}" as="f" hint-placeholder-count="4">
               <div style="background: #ffffff; padding: 13px 15px;">
-                <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #667380;">{{ f.k }}</div>
-                <div style="font-size: 15px; font-weight: 600; color: #16304f; margin-top: 4px;">{{ f.v }}</div>
+                <div style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #667380;">{{ f.k }}</div>
+                <div style="font-size: 15px; font-weight: 600; color: #0e2a52; margin-top: 4px;">{{ f.v }}</div>
               </div>
             </sc-for>
           </div>
@@ -676,22 +677,22 @@
 
   <section data-screen-label="Articles" style="padding: 0 0 84px; background: #ffffff;">
     <div style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 36px);">
-      <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 44px; border-bottom: 2px solid #16304f; padding-bottom: 16px; margin-bottom: 26px;">
+      <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 44px; border-bottom: 2px solid #0e2a52; padding-bottom: 16px; margin-bottom: 26px;">
         <div>
-          <div style="display: flex; align-items: center; gap: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #06708f; margin-bottom: 10px;">
-            <span style="width: 22px; height: 1px; background: #0673a2;"></span>07 — Knowledge
+          <div style="display: flex; align-items: center; gap: 10px; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #0276b8; margin-bottom: 10px;">
+            <span style="width: 22px; height: 1px; background: #0276b8;"></span>07 — Knowledge
           </div>
-          <h2 style="margin: 0; font-size: 30px; font-weight: 700; letter-spacing: -0.025em; color: #0b1c2e;">Product news &amp; application notes</h2>
+          <h2 style="margin: 0; font-size: 30px; font-weight: 700; letter-spacing: -0.025em; color: #0a1f3d;">Product news &amp; application notes</h2>
         </div>
         <a href="articles.html" style="font-size: 15px; font-weight: 600;">All articles →</a>
       </div>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(235px, 1fr)); gap: 1px; background: #dbe2e8; border: 1px solid #dbe2e8;">
         <sc-for list="{{ articles }}" as="a" hint-placeholder-count="4">
-          <a href="{{ a.href }}" style="background: #ffffff; padding: 26px; display: flex; flex-direction: column; gap: 12px; text-decoration: none; min-height: 214px; border-top: 2px solid transparent;" style-hover="background: #f7f9fb; border-top-color: #0673a2; text-decoration: none;">
-            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #06708f;">{{ a.kind }}</span>
-            <span style="font-size: 18px; line-height: 1.3; font-weight: 600; color: #0b1c2e;">{{ a.title }}</span>
+          <a href="{{ a.href }}" style="background: #ffffff; padding: 26px; display: flex; flex-direction: column; gap: 12px; text-decoration: none; min-height: 214px; border-top: 2px solid transparent;" style-hover="background: #f7f9fb; border-top-color: #0276b8; text-decoration: none;">
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #0276b8;">{{ a.kind }}</span>
+            <span style="font-size: 18px; line-height: 1.3; font-weight: 600; color: #0a1f3d;">{{ a.title }}</span>
             <span style="font-size: 15px; line-height: 1.6; color: #667380; flex: 1 1 auto;">{{ a.excerpt }}</span>
-            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #667380;">{{ a.date }}</span>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #667380;">{{ a.date }}</span>
           </a>
         </sc-for>
       </div>
@@ -702,7 +703,7 @@
     <div style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 36px); display: grid; grid-template-columns: repeat(auto-fit, minmax(235px, 1fr));">
       <sc-for list="{{ support }}" as="s" hint-placeholder-count="0">
         <div style="{{ s.cellStyle }}">
-          <div style="font-size: 17px; font-weight: 600; color: #0b1c2e; margin-bottom: 6px;">{{ s.title }}</div>
+          <div style="font-size: 17px; font-weight: 600; color: #0a1f3d; margin-bottom: 6px;">{{ s.title }}</div>
           <p style="margin: 0 0 10px; font-size: 15px; line-height: 1.6; color: #667380;">{{ s.body }}</p>
           <a href="{{ s.href }}" style="font-size: 15px; font-weight: 600;">{{ s.cta }}</a>
         </div>
@@ -710,25 +711,25 @@
     </div>
   </section>
 
-  <footer data-screen-label="Footer" style="background: #0b1c2e; color: #a9bed4; padding: 58px 0 0;">
+  <footer data-screen-label="Footer" style="background: #0a1f3d; color: #a9bed4; padding: 58px 0 0;">
     <div style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 36px);">
-      <div style="display: grid; grid-template-columns: 1.3fr 1fr 1fr 1fr 1.2fr; gap: 44px; padding-bottom: 46px; border-bottom: 1px solid #24456b;">
+      <div style="display: grid; grid-template-columns: 1.3fr 1fr 1fr 1fr 1.2fr; gap: 44px; padding-bottom: 46px; border-bottom: 1px solid #163d74;">
         <div>
           <div style="background: #ffffff; display: inline-block; padding: 10px 12px; margin-bottom: 20px;">
             <img src="uploads/OceanControls-Design-Assets/02-brand-assets/ocean-controls-logo.png" alt="Ocean Controls" style="height: 34px; width: auto; display: block;" />
           </div>
           <p style="margin: 0 0 18px; font-size: 15px; line-height: 1.65; color: #a9bed4; max-width: 30em;">Australia's specialist supplier of industrial automation and control equipment, and a custom engineering shop for the jobs the catalogue can't cover.</p>
-          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; line-height: 1.9; color: #a9bed4;">
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 13px; line-height: 1.9; color: #a9bed4;">
             <div>44 Frankston Gardens Drive</div>
             <div>Carrum Downs VIC 3201, Australia</div>
             <div style="margin-top: 8px; color: #d6e4f2;">+61 3 9708 2390</div>
-            <div><a href="#" style="color: #6fd0f5;">info@oceancontrols.com.au</a></div>
+            <div><a href="#" style="color: #66d9ff;">info@oceancontrols.com.au</a></div>
 
             <div style="margin-top: 8px;">ABN 28 659 967 398</div>
           </div>
         </div>
         <div>
-          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #9ab0c6; margin-bottom: 16px;">Top categories</div>
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #9ab0c6; margin-bottom: 16px;">Top categories</div>
           <div style="display: flex; flex-direction: column; gap: 9px; font-size: 15px;">
             <a href="category.html" style="color: #d6e4f2; text-decoration: none;">Sensors</a>
             <a href="category.html" style="color: #d6e4f2; text-decoration: none;">Power Supplies</a>
@@ -741,7 +742,7 @@
           </div>
         </div>
         <div>
-          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #9ab0c6; margin-bottom: 16px;">Shop</div>
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #9ab0c6; margin-bottom: 16px;">Shop</div>
           <div style="display: flex; flex-direction: column; gap: 9px; font-size: 15px;">
             <a href="shop.html" style="color: #d6e4f2; text-decoration: none;">New arrivals</a>
             <a href="shop.html" style="color: #d6e4f2; text-decoration: none;">Clearance &amp; sale</a>
@@ -753,7 +754,7 @@
           </div>
         </div>
         <div>
-          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #9ab0c6; margin-bottom: 16px;">Company</div>
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #9ab0c6; margin-bottom: 16px;">Company</div>
           <div style="display: flex; flex-direction: column; gap: 9px; font-size: 15px;">
             <a href="about.html" style="color: #d6e4f2; text-decoration: none;">About us</a>
             <a href="about.html" style="color: #d6e4f2; text-decoration: none;">Engineering services</a>
@@ -765,19 +766,19 @@
           </div>
         </div>
         <div>
-          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #9ab0c6; margin-bottom: 16px;">Product updates</div>
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #9ab0c6; margin-bottom: 16px;">Product updates</div>
           <p style="margin: 0 0 14px; font-size: 15px; line-height: 1.6; color: #a9bed4;">New releases, price changes and application notes. Roughly monthly, no marketing filler.</p>
           <div style="display: flex; margin-bottom: 22px;">
             <input type="text" placeholder="you@company.com.au" style="flex: 1 1 auto; height: 42px; background: rgba(255,255,255,0.06); border: 1px solid #3a5878; border-right: 0; color: #ffffff; padding: 0 12px; font-size: 14.5px; outline: none; min-width: 0;" aria-label="Email address" />
-            <button style="flex: 0 0 auto; height: 42px; padding: 0 16px; background: #0673a2; color: #ffffff; border: 0; font-size: 14px; font-weight: 600; cursor: pointer;" style-hover="background: #ffffff; color: #0b1c2e;">Join</button>
+            <button style="flex: 0 0 auto; height: 42px; padding: 0 16px; background: #0276b8; color: #ffffff; border: 0; font-size: 14px; font-weight: 600; cursor: pointer;" style-hover="background: #ffffff; color: #0a1f3d;">Join</button>
           </div>
-          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #9ab0c6; margin-bottom: 10px;">Payment accepted</div>
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #9ab0c6; margin-bottom: 10px;">Payment accepted</div>
           <div style="display: flex; flex-wrap: wrap; gap: 6px;">
-            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; border: 1px solid #3a5878; padding: 5px 9px; color: #d6e4f2;">VISA</span>
-            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; border: 1px solid #3a5878; padding: 5px 9px; color: #d6e4f2;">MASTERCARD</span>
-            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; border: 1px solid #3a5878; padding: 5px 9px; color: #d6e4f2;">AMEX</span>
-            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; border: 1px solid #3a5878; padding: 5px 9px; color: #d6e4f2;">EFTPOS</span>
-            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; border: 1px solid #3a5878; padding: 5px 9px; color: #d6e4f2;">ACCOUNT</span>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; border: 1px solid #3a5878; padding: 5px 9px; color: #d6e4f2;">VISA</span>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; border: 1px solid #3a5878; padding: 5px 9px; color: #d6e4f2;">MASTERCARD</span>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; border: 1px solid #3a5878; padding: 5px 9px; color: #d6e4f2;">AMEX</span>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; border: 1px solid #3a5878; padding: 5px 9px; color: #d6e4f2;">EFTPOS</span>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; border: 1px solid #3a5878; padding: 5px 9px; color: #d6e4f2;">ACCOUNT</span>
           </div>
         </div>
       </div>
@@ -793,21 +794,21 @@
   </footer>
 
   <sc-if value="{{ compareBar }}" hint-placeholder-val="{{ false }}">
-    <div style="position: fixed; left: 0; right: 0; bottom: 0; z-index: 80; background: #0b1c2e; border-top: 2px solid #0b9fd8; box-shadow: 0 -20px 40px -24px rgba(11,28,46,0.7); animation: ocFade 0.16s ease-out;">
+    <div style="position: fixed; left: 0; right: 0; bottom: 0; z-index: 80; background: #0a1f3d; border-top: 2px solid #00aeef; box-shadow: 0 -20px 40px -24px rgba(11,28,46,0.7); animation: ocFade 0.16s ease-out;">
       <div style="max-width: 1440px; margin: 0 auto; padding: 14px 36px; display: flex; align-items: center; gap: 20px;">
-        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #6fd0f5;">Compare</span>
+        <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #66d9ff;">Compare</span>
         <div style="display: flex; gap: 8px; flex: 1 1 auto; min-width: 0;">
           <sc-for list="{{ compareItems }}" as="c" hint-placeholder-count="0">
-            <div style="display: flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.06); border: 1px solid #24456b; padding: 6px 10px;">
+            <div style="display: flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.06); border: 1px solid #163d74; padding: 6px 10px;">
               <div style="{{ c.imgStyle }}"></div>
-              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #ffffff;">{{ c.sku }}</span>
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #ffffff;">{{ c.sku }}</span>
               <button onClick="{{ c.remove }}" style="border: 0; background: none; color: #a9bed4; font-size: 15.5px; line-height: 1; cursor: pointer; padding: 0;">×</button>
             </div>
           </sc-for>
         </div>
         <span style="font-size: 14px; color: #a9bed4;">{{ compareHint }}</span>
         <button onClick="{{ clearCompare }}" style="background: none; border: 1px solid #3a5878; color: #ffffff; font-size: 14px; font-weight: 600; padding: 9px 14px; cursor: pointer;" style-hover="border-color: #ffffff;">Clear</button>
-        <button onClick="{{ openCompare }}" style="background: #0673a2; border: 0; color: #ffffff; font-size: 14.5px; font-weight: 600; padding: 10px 20px; cursor: pointer;" style-hover="background: #ffffff; color: #0b1c2e;">Compare specifications →</button>
+        <button onClick="{{ openCompare }}" style="background: #0276b8; border: 0; color: #ffffff; font-size: 14.5px; font-weight: 600; padding: 10px 20px; cursor: pointer;" style-hover="background: #ffffff; color: #0a1f3d;">Compare specifications →</button>
       </div>
     </div>
   </sc-if>
@@ -817,26 +818,26 @@
       <div style="background: #ffffff; border: 1px solid #c9d3dc; width: 100%; max-width: 1100px; max-height: 100%; overflow: auto; box-shadow: 0 40px 80px -30px rgba(11,28,46,0.7);">
         <div style="display: flex; align-items: center; justify-content: space-between; padding: 18px 24px; border-bottom: 1px solid #dbe2e8; background: #f7f9fb; position: sticky; top: 0;">
           <div>
-            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #06708f;">Side-by-side</div>
-            <div style="font-size: 19.5px; font-weight: 700; color: #0b1c2e; letter-spacing: -0.015em;">{{ compareTitle }}</div>
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #0276b8;">Side-by-side</div>
+            <div style="font-size: 19.5px; font-weight: 700; color: #0a1f3d; letter-spacing: -0.015em;">{{ compareTitle }}</div>
           </div>
-          <button onClick="{{ closeCompare }}" style="border: 1px solid #c9d3dc; background: #ffffff; color: #16304f; font-size: 14px; font-weight: 600; padding: 9px 14px; cursor: pointer;" style-hover="border-color: #16304f;">Close</button>
+          <button onClick="{{ closeCompare }}" style="border: 1px solid #c9d3dc; background: #ffffff; color: #0e2a52; font-size: 14px; font-weight: 600; padding: 9px 14px; cursor: pointer;" style-hover="border-color: #0e2a52;">Close</button>
         </div>
         <div style="display: flex; gap: 1px; background: #dbe2e8; padding: 1px;">
           <sc-for list="{{ compareCols }}" as="col" hint-placeholder-count="0">
             <div style="flex: 1 1 0; min-width: 0; background: #ffffff; padding: 20px;">
               <div style="{{ col.imgStyle }}"></div>
-              <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #667380; margin-bottom: 5px;">{{ col.sku }}</div>
-              <div style="font-size: 15px; font-weight: 600; line-height: 1.35; color: #0b1c2e; min-height: 63px;">{{ col.name }}</div>
+              <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #667380; margin-bottom: 5px;">{{ col.sku }}</div>
+              <div style="font-size: 15px; font-weight: 600; line-height: 1.35; color: #0a1f3d; min-height: 63px;">{{ col.name }}</div>
               <div style="display: flex; flex-direction: column; margin: 14px 0;">
                 <sc-for list="{{ col.rows }}" as="r" hint-placeholder-count="6">
                   <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding: 9px 0; border-top: 1px solid #eef2f5;">
-                    <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; color: #667380;">{{ r.k }}</span>
+                    <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; color: #667380;">{{ r.k }}</span>
                     <span style="font-size: 14px; font-weight: 600; color: {{ r.fg }}; text-align: right;">{{ r.v }}</span>
                   </div>
                 </sc-for>
               </div>
-              <button onClick="{{ col.add }}" style="width: 100%; height: 38px; background: #16304f; color: #ffffff; border: 0; font-size: 14.5px; font-weight: 600; cursor: pointer;" style-hover="background: #0673a2;">Add to cart</button>
+              <button onClick="{{ col.add }}" style="width: 100%; height: 38px; background: #0e2a52; color: #ffffff; border: 0; font-size: 14.5px; font-weight: 600; cursor: pointer;" style-hover="background: #0276b8;">Add to cart</button>
             </div>
           </sc-for>
         </div>
@@ -848,9 +849,9 @@
     <div style="position: fixed; inset: 0; z-index: 100; display: flex; justify-content: flex-end;">
       <div onClick="{{ closeCart }}" style="position: absolute; inset: 0; background: rgba(11,28,46,0.5); animation: ocFade 0.16s ease-out;"></div>
       <div style="position: relative; width: 448px; height: 100%; background: #ffffff; border-left: 1px solid #c9d3dc; display: flex; flex-direction: column; animation: ocSlide 0.2s ease-out;">
-        <div style="display: flex; align-items: center; justify-content: space-between; padding: 20px 24px; border-bottom: 1px solid #dbe2e8; background: #0b1c2e; color: #ffffff;">
+        <div style="display: flex; align-items: center; justify-content: space-between; padding: 20px 24px; border-bottom: 1px solid #dbe2e8; background: #0a1f3d; color: #ffffff;">
           <div>
-            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #6fd0f5;">{{ cartModeLabel }}</div>
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #66d9ff;">{{ cartModeLabel }}</div>
             <div style="font-size: 19.5px; font-weight: 700; letter-spacing: -0.015em;">Your order — {{ cartCountLabel }}</div>
           </div>
           <button onClick="{{ closeCart }}" style="border: 1px solid #3a5878; background: none; color: #ffffff; font-size: 14px; font-weight: 600; padding: 9px 13px; cursor: pointer;" style-hover="border-color: #ffffff;">Close</button>
@@ -859,9 +860,9 @@
         <div style="flex: 1 1 auto; overflow-y: auto;">
           <sc-if value="{{ cartEmpty }}" hint-placeholder-val="{{ true }}">
             <div style="padding: 56px 30px; text-align: center;">
-              <div style="font-size: 17px; font-weight: 600; color: #16304f; margin-bottom: 8px;">Nothing on the order yet</div>
+              <div style="font-size: 17px; font-weight: 600; color: #0e2a52; margin-bottom: 8px;">Nothing on the order yet</div>
               <p style="margin: 0 0 20px; font-size: 15px; line-height: 1.6; color: #667380;">Add a product from the grid, or paste your part numbers into the quick order pad in the hero.</p>
-              <button onClick="{{ closeCart }}" style="border: 1px solid #c9d3dc; background: #ffffff; color: #16304f; font-size: 14.5px; font-weight: 600; padding: 11px 18px; cursor: pointer;" style-hover="border-color: #16304f;">Keep browsing</button>
+              <button onClick="{{ closeCart }}" style="border: 1px solid #c9d3dc; background: #ffffff; color: #0e2a52; font-size: 14.5px; font-weight: 600; padding: 11px 18px; cursor: pointer;" style-hover="border-color: #0e2a52;">Keep browsing</button>
             </div>
           </sc-if>
           <sc-for list="{{ cartLines }}" as="l" hint-placeholder-count="0">
@@ -869,10 +870,10 @@
               <div style="{{ l.imgStyle }}"></div>
               <div>
                 <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 10px;">
-                  <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #667380;">{{ l.sku }}</span>
+                  <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #667380;">{{ l.sku }}</span>
                   <button onClick="{{ l.remove }}" style="border: 0; background: none; color: #667380; font-size: 13px; cursor: pointer; padding: 0; text-decoration: underline;">Remove</button>
                 </div>
-                <div style="font-size: 14.5px; font-weight: 500; line-height: 1.35; color: #16304f; margin: 4px 0 8px;">{{ l.name }}</div>
+                <div style="font-size: 14.5px; font-weight: 500; line-height: 1.35; color: #0e2a52; margin: 4px 0 8px;">{{ l.name }}</div>
                 <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px;">
                   <div style="display: flex; border: 1px solid #dbe2e8; height: 30px;">
                     <button onClick="{{ l.dec }}" style="width: 26px; border: 0; background: none; cursor: pointer; color: #667380;" style-hover="background: #f4f6f8;">−</button>
@@ -880,11 +881,11 @@
                     <button onClick="{{ l.inc }}" style="width: 26px; border: 0; background: none; cursor: pointer; color: #667380;" style-hover="background: #f4f6f8;">+</button>
                   </div>
                   <div style="text-align: right;">
-                    <div style="font-size: 16px; font-weight: 700; font-variant-numeric: tabular-nums; color: #0b1c2e;">{{ l.lineTotal }}</div>
-                    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #667380;">{{ l.eachLabel }}</div>
+                    <div style="font-size: 16px; font-weight: 700; font-variant-numeric: tabular-nums; color: #0a1f3d;">{{ l.lineTotal }}</div>
+                    <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #667380;">{{ l.eachLabel }}</div>
                   </div>
                 </div>
-                <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #157a45; margin-top: 6px; min-height: 17px;">{{ l.saveNote }}</div>
+                <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #157a45; margin-top: 6px; min-height: 17px;">{{ l.saveNote }}</div>
               </div>
             </div>
           </sc-for>
@@ -895,15 +896,15 @@
             <div style="display: flex; align-items: baseline; justify-content: space-between; font-size: 15px; color: #4b5560;"><span>Subtotal, ex GST</span><span style="font-variant-numeric: tabular-nums; font-weight: 600;">{{ cartSubtotal }}</span></div>
             <div style="display: flex; align-items: baseline; justify-content: space-between; font-size: 15px; color: #4b5560;"><span>GST 10%</span><span style="font-variant-numeric: tabular-nums; font-weight: 600;">{{ cartGst }}</span></div>
             <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 14px; font-size: 15px; color: #4b5560;"><span>Freight</span><span style="font-size: 13.5px; font-weight: 600; text-align: right;">{{ cartShip }}</span></div>
-            <div style="display: flex; align-items: baseline; justify-content: space-between; padding-top: 10px; border-top: 1px solid #dbe2e8;"><span style="font-size: 16.5px; font-weight: 700; color: #0b1c2e;">Total inc GST, AUD</span><span style="font-size: 21.5px; font-weight: 800; font-variant-numeric: tabular-nums; color: #0b1c2e; letter-spacing: -0.02em;">{{ cartTotalInc }}</span></div>
+            <div style="display: flex; align-items: baseline; justify-content: space-between; padding-top: 10px; border-top: 1px solid #dbe2e8;"><span style="font-size: 16.5px; font-weight: 700; color: #0a1f3d;">Total inc GST, AUD</span><span style="font-size: 21.5px; font-weight: 800; font-variant-numeric: tabular-nums; color: #0a1f3d; letter-spacing: -0.02em;">{{ cartTotalInc }}</span></div>
             <div style="font-size: 13px; line-height: 1.55; color: #667380;">{{ cartTotalNote }}</div>
           </div>
           <div style="display: flex; gap: 8px;">
-            <button style="flex: 1 1 auto; height: 46px; background: #16304f; color: #ffffff; border: 0; font-size: 15px; font-weight: 600; cursor: pointer;" style-hover="background: #0673a2;">Checkout</button>
-            <button style="flex: 0 0 auto; height: 46px; padding: 0 16px; background: #ffffff; border: 1px solid #c9d3dc; color: #16304f; font-size: 15px; font-weight: 600; cursor: pointer;" style-hover="border-color: #16304f;">Request a quote</button>
+            <button style="flex: 1 1 auto; height: 46px; background: #0e2a52; color: #ffffff; border: 0; font-size: 15px; font-weight: 600; cursor: pointer;" style-hover="background: #0276b8;">Checkout</button>
+            <button style="flex: 0 0 auto; height: 46px; padding: 0 16px; background: #ffffff; border: 1px solid #c9d3dc; color: #0e2a52; font-size: 15px; font-weight: 600; cursor: pointer;" style-hover="border-color: #0e2a52;">Request a quote</button>
           </div>
           <div style="display: flex; align-items: flex-start; gap: 10px; margin-top: 14px; padding-top: 12px; border-top: 1px solid #dbe2e8;">
-            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #a5620a; flex: 0 0 auto; padding-top: 1px;">Account</span>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #a5620a; flex: 0 0 auto; padding-top: 1px;">Account</span>
             <div style="font-size: 13px; line-height: 1.55; color: #667380;">{{ cartFootNote }}</div>
           </div>
         </div>
@@ -912,10 +913,10 @@
   </sc-if>
 
   <sc-if value="{{ toastOn }}" hint-placeholder-val="{{ false }}">
-    <div style="position: fixed; right: 28px; bottom: {{ toastBottom }}; z-index: 90; background: #0b1c2e; color: #ffffff; border-left: 3px solid #2fd07e; padding: 14px 20px; box-shadow: 0 24px 48px -18px rgba(11,28,46,0.6); animation: ocFade 0.18s ease-out; max-width: 360px;">
+    <div style="position: fixed; right: 28px; bottom: {{ toastBottom }}; z-index: 90; background: #0a1f3d; color: #ffffff; border-left: 3px solid #2fd07e; padding: 14px 20px; box-shadow: 0 24px 48px -18px rgba(11,28,46,0.6); animation: ocFade 0.18s ease-out; max-width: 360px;">
       <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 3px;">
         <span style="font-size: 15px; font-weight: 600;">{{ toastTitle }}</span>
-        <button onClick="{{ openCart }}" style="border: 0; background: none; color: #6fd0f5; font-size: 13.5px; font-weight: 600; cursor: pointer; padding: 0;">View order →</button>
+        <button onClick="{{ openCart }}" style="border: 0; background: none; color: #66d9ff; font-size: 13.5px; font-weight: 600; cursor: pointer; padding: 0;">View order →</button>
       </div>
       <div style="font-size: 14px; color: #a9bed4;">{{ toast }}</div>
     </div>
@@ -925,10 +926,10 @@
 
 <template id="__bundler_thumbnail">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Ocean Controls">
-    <rect width="200" height="200" fill="#0b1c2e" />
-    <rect x="60" y="60" width="80" height="80" rx="18" fill="none" stroke="#16304f" stroke-width="12" />
-    <path d="M44 92 C 78 74, 112 74, 128 92 C 138 103, 128 116, 116 112 C 106 108, 108 96, 120 98" fill="none" stroke="#0b9fd8" stroke-width="11" stroke-linecap="round" />
-    <path d="M72 122 C 96 138, 130 134, 156 116" fill="none" stroke="#0b9fd8" stroke-width="11" stroke-linecap="round" />
+    <rect width="200" height="200" fill="#0a1f3d" />
+    <rect x="60" y="60" width="80" height="80" rx="18" fill="none" stroke="#0e2a52" stroke-width="12" />
+    <path d="M44 92 C 78 74, 112 74, 128 92 C 138 103, 128 116, 116 112 C 106 108, 108 96, 120 98" fill="none" stroke="#00aeef" stroke-width="11" stroke-linecap="round" />
+    <path d="M72 122 C 96 138, 130 134, 156 116" fill="none" stroke="#00aeef" stroke-width="11" stroke-linecap="round" />
   </svg>
 </template>
 </x-dc>
@@ -1485,20 +1486,20 @@ class Component extends DCLogic {
       qty: this.state.qty[p.sku] || 1,
       hasBadge: !!(p.badge || (was && !trade)),
       badge: was && !trade ? '-' + Math.round((1 - p.price / was) * 100) + '%' : p.badge,
-      badgeBg: (was && !trade) || (p.badge || '').indexOf('-') === 0 ? '#c2364a' : '#0673a2',
+      badgeBg: (was && !trade) || (p.badge || '').indexOf('-') === 0 ? '#c2364a' : '#0276b8',
       stockText: st.text, stockShort: st.short, stockFg: st.fg,
       dispatch: this.props.showDispatchETA === false ? '' : st.dispatch,
       priceMain: this.money(eff),
       priceUnit: trade ? 'trade, ex GST' : 'ex GST',
-      priceFg: was && !trade ? '#c2364a' : '#0b1c2e',
+      priceFg: was && !trade ? '#c2364a' : '#0a1f3d',
       priceWas: was && !trade ? this.money(was) : '',
       tierText: tierText,
       showDocs: this.props.showDatasheetLinks !== false,
       compareOn: this.props.showCompare !== false,
       cmpLabel: cmp ? '✓ Comparing' : '+ Compare',
-      cmpBg: cmp ? '#0673a2' : 'rgba(255,255,255,0.92)',
-      cmpEdge: cmp ? '#0673a2' : '#dbe2e8',
-      cmpFg: cmp ? '#ffffff' : '#16304f',
+      cmpBg: cmp ? '#0276b8' : 'rgba(255,255,255,0.92)',
+      cmpEdge: cmp ? '#0276b8' : '#dbe2e8',
+      cmpFg: cmp ? '#ffffff' : '#0e2a52',
       toggleCompare: () => this.toggleCompare(p.sku),
       add: () => this.add(p.sku),
       inc: () => this.bump(p.sku, 1),
@@ -1562,13 +1563,13 @@ class Component extends DCLogic {
       cartTotalLabel: this.money(sub),
 
       menuOpen: st.menuOpen,
-      menuBtnBg: st.menuOpen ? '#06708f' : '#0673a2',
+      menuBtnBg: st.menuOpen ? '#0276b8' : '#0276b8',
       toggleMenu: () => this.setState({ menuOpen: !st.menuOpen, searchOpen: false }),
       megaCats: CATS.map((c, i) => ({
         name: c[0], count: c[1],
-        edge: i === st.megaCat ? '#0673a2' : 'transparent',
+        edge: i === st.megaCat ? '#0276b8' : 'transparent',
         bg: i === st.megaCat ? '#ffffff' : 'transparent',
-        fg: i === st.megaCat ? '#0b1c2e' : '#24456b',
+        fg: i === st.megaCat ? '#0a1f3d' : '#163d74',
         weight: i === st.megaCat ? '600' : '400',
         hover: () => this.setState({ megaCat: i })
       })),
@@ -1595,7 +1596,7 @@ class Component extends DCLogic {
             + ' background: none; border: 0; font-family: inherit; font-size: 15.5px; font-weight: 600; text-align: left; cursor: pointer;'
             + ' color: ' + (on ? '#ffffff' : '#7f97b1') + ';',
           barStyle: on
-            ? 'position: absolute; top: -1px; left: 0; height: 2px; width: 0; background: #0673a2;'
+            ? 'position: absolute; top: -1px; left: 0; height: 2px; width: 0; background: #0276b8;'
               + ' animation: ocProgress ' + this.SLIDE_MS + 'ms linear forwards;'
               + ' animation-play-state: ' + (st.paused ? 'paused' : 'running') + ';'
             : 'display: none;'
@@ -1612,13 +1613,13 @@ class Component extends DCLogic {
       orderRoutes: ORDER_ROUTES.map((r, i) => ({
         n: '0' + (i + 1), title: r[0], body: r[1], detail: r[2],
         cellStyle: 'padding: 22px ' + (i === 3 ? '0' : '28px') + ' 0 ' + (i === 0 ? '0' : '28px') + ';'
-          + (i < 3 ? ' border-right: 1px solid #24456b;' : '')
+          + (i < 3 ? ' border-right: 1px solid #163d74;' : '')
       })),
       addHero: () => this.add('KTA-387'),
       stats: STATS.map((s, i) => ({
         n: s[0], label: s[1],
         cellStyle: 'padding: 24px ' + (i === 4 ? '0' : '26px') + ' 24px ' + (i === 0 ? '0' : '26px') + ';'
-          + (i < 4 ? ' border-right: 1px solid #24456b;' : '')
+          + (i < 4 ? ' border-right: 1px solid #163d74;' : '')
       })),
       benefits: BENEFITS.map((b, i) => ({
         n: b[0], title: b[1], body: b[2],
@@ -1631,7 +1632,7 @@ class Component extends DCLogic {
       onPadKey: e => { if (e.key === 'Enter') this.runPad(); },
       addPad: () => this.runPad(),
       padNote: st.padNote,
-      padNoteFg: st.padOk ? '#6fd0f5' : '#f0a35a',
+      padNoteFg: st.padOk ? '#66d9ff' : '#f0a35a',
 
       catTiles: CATS.slice(0, 18).map(c => ({
         href: LANDING[c[0]] ? 'category.html' : 'shop.html',
@@ -1643,9 +1644,9 @@ class Component extends DCLogic {
 
       browseCats: BROWSE.map((b, i) => ({
         name: b[0], count: b[1],
-        edge: i === st.browseCat ? '#0673a2' : 'transparent',
+        edge: i === st.browseCat ? '#0276b8' : 'transparent',
         bg: i === st.browseCat ? '#ffffff' : 'transparent',
-        fg: i === st.browseCat ? '#0b1c2e' : '#24456b',
+        fg: i === st.browseCat ? '#0a1f3d' : '#163d74',
         weight: i === st.browseCat ? '600' : '400',
         pick: () => this.setState({ browseCat: i })
       })),
@@ -1655,7 +1656,7 @@ class Component extends DCLogic {
         const on = !!st.chips[st.browseCat + ':' + c];
         return {
           label: c,
-          bg: on ? '#16304f' : '#ffffff', edge: on ? '#16304f' : '#dbe2e8', fg: on ? '#ffffff' : '#24456b',
+          bg: on ? '#0e2a52' : '#ffffff', edge: on ? '#0e2a52' : '#dbe2e8', fg: on ? '#ffffff' : '#163d74',
           toggle: () => this.setState(s => ({ chips: Object.assign({}, s.chips, { [st.browseCat + ':' + c]: !s.chips[st.browseCat + ':' + c] }) }))
         };
       }),
@@ -1663,7 +1664,7 @@ class Component extends DCLogic {
       clearChips: () => this.setState({ chips: {} }),
       sortOpts: sortKeys.map((k, i) => ({
         label: k,
-        bg: i === st.browseSort ? '#16304f' : '#ffffff', edge: i === st.browseSort ? '#16304f' : '#dbe2e8', fg: i === st.browseSort ? '#ffffff' : '#24456b',
+        bg: i === st.browseSort ? '#0e2a52' : '#ffffff', edge: i === st.browseSort ? '#0e2a52' : '#dbe2e8', fg: i === st.browseSort ? '#ffffff' : '#163d74',
         pick: () => this.setState({ browseSort: i })
       })),
       browseProducts: skus.map(s => {
@@ -1675,9 +1676,9 @@ class Component extends DCLogic {
 
       dealTabs: DEALS.map((d, i) => ({
         label: d[0],
-        bg: i === st.dealTab ? '#16304f' : '#ffffff',
-        fg: i === st.dealTab ? '#ffffff' : '#24456b',
-        edge: i === st.dealTab ? '#16304f' : '#dbe2e8',
+        bg: i === st.dealTab ? '#0e2a52' : '#ffffff',
+        fg: i === st.dealTab ? '#ffffff' : '#163d74',
+        edge: i === st.dealTab ? '#0e2a52' : '#dbe2e8',
         pick: () => this.setState({ dealTab: i })
       })),
       dealAllLabel: deal[1],
@@ -1692,8 +1693,8 @@ class Component extends DCLogic {
         each: this.money(base * t[1]) + ' ea',
         save: t[2] ? 'save ' + t[2] + '%' : '—',
         bg: (i === 3) === trade ? 'rgba(11,159,216,0.18)' : 'rgba(255,255,255,0.04)',
-        edge: (i === 3) === trade ? '#0673a2' : '#24456b',
-        saveFg: (i === 3) === trade ? '#6fd0f5' : '#a9bed4'
+        edge: (i === 3) === trade ? '#0276b8' : '#163d74',
+        saveFg: (i === 3) === trade ? '#66d9ff' : '#a9bed4'
       })),
       tierNote: trade
         ? 'You are previewing an approved trade account at ' + this.disc() + '% off retail. Real rates are set per customer in the tiered-pricing rules.'
@@ -1728,12 +1729,12 @@ class Component extends DCLogic {
           sku: p.sku, name: p.name,
           imgStyle: this.box(p.img, '120px', { mb: '14px' }),
           rows: [
-            { k: 'Brand', v: p.brand, fg: '#16304f' },
-            { k: 'Price ' + (trade ? '(trade)' : '(retail)'), v: this.money(this.unit(s)) + ' ex GST', fg: '#0b1c2e' },
-            { k: 'Quantity breaks', v: p.tiers > 0 ? p.tiers + ' tiers' : 'None', fg: '#16304f' },
+            { k: 'Brand', v: p.brand, fg: '#0e2a52' },
+            { k: 'Price ' + (trade ? '(trade)' : '(retail)'), v: this.money(this.unit(s)) + ' ex GST', fg: '#0a1f3d' },
+            { k: 'Quantity breaks', v: p.tiers > 0 ? p.tiers + ' tiers' : 'None', fg: '#0e2a52' },
             { k: 'Availability', v: sInfo.text, fg: sInfo.fg },
-            { k: 'Dispatch', v: sInfo.dispatch, fg: '#16304f' },
-            { k: 'Documentation', v: 'Datasheet + manual', fg: '#06708f' }
+            { k: 'Dispatch', v: sInfo.dispatch, fg: '#0e2a52' },
+            { k: 'Documentation', v: 'Datasheet + manual', fg: '#0276b8' }
           ],
           add: () => this.add(p.sku, 1)
         };
