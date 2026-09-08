@@ -293,22 +293,25 @@
 
       <div style="background: #ffffff; border: 1px solid #163d74; animation: ocRise 0.6s ease-out;">
         <div style="display: flex; align-items: center; justify-content: space-between; padding: 10px 16px; background: #f4f6f8; border-bottom: 1px solid #dbe2e8;">
-          <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #0e2a52;">Designed &amp; built in-house</span>
-          <span style="background: #0276b8; color: #ffffff; font-size: 12px; font-weight: 700; letter-spacing: 0.08em; padding: 3px 7px;">NEW</span>
+          <span id="ocEyebrow" style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #0e2a52;">Designed &amp; built in-house</span>
+          <span style="display:flex; align-items:center; gap:10px;"><span style="background: #0276b8; color: #ffffff; font-size: 12px; font-weight: 700; letter-spacing: 0.08em; padding: 3px 7px;">NEW</span><div style="display:flex; align-items:center; gap:6px;">
+<button type="button" id="ocPrev" aria-label="Previous product" style="width:26px; height:26px; border:1px solid #dbe2e8; background:#ffffff; color:#0e2a52; cursor:pointer; font-size:14px; line-height:1;">&#8249;</button>
+<button type="button" id="ocNext" aria-label="Next product" style="width:26px; height:26px; border:1px solid #dbe2e8; background:#ffffff; color:#0e2a52; cursor:pointer; font-size:14px; line-height:1;">&#8250;</button>
+</div></span>
         </div>
         <div style="padding: 24px 24px 0;">
-          <img src="uploads/OceanControls-Design-Assets/03-product-images/Data-Loggers__KTA-387.png" alt="KTA-387 Modbus Data Logger" style="width: 100%; height: 206px; object-fit: contain; display: block;" />
+          <img id="ocImg" src="uploads/OceanControls-Design-Assets/03-product-images/Data-Loggers__KTA-387.png" alt="KTA-387 Modbus Data Logger" style="width: 100%; height: 206px; object-fit: contain; display: block;" />
         </div>
         <div style="padding: 18px 24px 24px;">
           <div style="display: flex; align-items: center; gap: 8px; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #667380; margin-bottom: 8px;">
-            <span>OCEAN CONTROLS</span><span style="color: #c9d3dc;">/</span><span>KTA-387</span>
+            <span id="ocBrand">OCEAN CONTROLS</span><span style="color: #c9d3dc;">/</span><span id="ocSku">KTA-387</span>
           </div>
-          <h3 style="margin: 0 0 14px; font-size: 18.5px; line-height: 1.32; font-weight: 600; color: #0a1f3d;">Modbus Data Logger — dual RS-485, 100 channels, SD card</h3>
+          <h3 id="ocTitle" style="margin: 0 0 14px; font-size: 18.5px; line-height: 1.32; font-weight: 600; color: #0a1f3d; min-height: 49px;">Modbus Data Logger, dual RS-485, 100 channels, SD card</h3>
           <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: #dbe2e8; border: 1px solid #dbe2e8; margin-bottom: 16px;">
-            <div style="background: #ffffff; padding: 8px 10px;"><div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #667380;">Channels</div><div style="font-size: 14px; font-weight: 600; color: #0e2a52;">100</div></div>
-            <div style="background: #ffffff; padding: 8px 10px;"><div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #667380;">Ports</div><div style="font-size: 14px; font-weight: 600; color: #0e2a52;">2 × RS-485</div></div>
-            <div style="background: #ffffff; padding: 8px 10px;"><div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #667380;">Storage</div><div style="font-size: 14px; font-weight: 600; color: #0e2a52;">SD card</div></div>
-            <div style="background: #ffffff; padding: 8px 10px;"><div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #667380;">Mount</div><div style="font-size: 14px; font-weight: 600; color: #0e2a52;">DIN rail</div></div>
+            <div style="background: #ffffff; padding: 8px 10px;"><div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #667380;" id="ocSpecK1">Channels</div><div style="font-size: 14px; font-weight: 600; color: #0e2a52;" id="ocSpecV1">100</div></div>
+            <div style="background: #ffffff; padding: 8px 10px;"><div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #667380;" id="ocSpecK2">Ports</div><div style="font-size: 14px; font-weight: 600; color: #0e2a52;" id="ocSpecV2">2 × RS-485</div></div>
+            <div style="background: #ffffff; padding: 8px 10px;"><div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #667380;" id="ocSpecK3">Storage</div><div style="font-size: 14px; font-weight: 600; color: #0e2a52;" id="ocSpecV3">SD card</div></div>
+            <div style="background: #ffffff; padding: 8px 10px;"><div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #667380;" id="ocSpecK4">Mount</div><div style="font-size: 14px; font-weight: 600; color: #0e2a52;" id="ocSpecV4">DIN rail</div></div>
           </div>
           <div style="display: flex; align-items: flex-end; justify-content: space-between; border-top: 1px solid #dbe2e8; padding-top: 14px;">
             <div>
@@ -322,7 +325,13 @@
             <a href="#" style="font-size: 14px; font-weight: 600;">Datasheet ↓</a>
             <a href="#" style="font-size: 14px; font-weight: 600;">Manual ↓</a>
             <a href="product.html" style="font-size: 14px; font-weight: 600;">Full specification →</a>
-          </div>
+          </div><div id="ocDots" style="display:flex; gap:6px; padding:0 24px 18px;">
+<button type="button" aria-label="Show product 1" data-i="0" style="flex:1; height:3px; border:0; padding:0; cursor:pointer; background:#0276b8;"></button>
+<button type="button" aria-label="Show product 2" data-i="1" style="flex:1; height:3px; border:0; padding:0; cursor:pointer; background:#dbe2e8;"></button>
+<button type="button" aria-label="Show product 3" data-i="2" style="flex:1; height:3px; border:0; padding:0; cursor:pointer; background:#dbe2e8;"></button>
+<button type="button" aria-label="Show product 4" data-i="3" style="flex:1; height:3px; border:0; padding:0; cursor:pointer; background:#dbe2e8;"></button>
+<button type="button" aria-label="Show product 5" data-i="4" style="flex:1; height:3px; border:0; padding:0; cursor:pointer; background:#dbe2e8;"></button>
+</div>
         </div>
       </div>
     </div>
@@ -1775,6 +1784,66 @@ class Component extends DCLogic {
   }
 }
 
+</script>
+<script>
+/* Hero new-arrivals carousel: five real products, auto-advance, pause on hover. */
+(function () {
+  var P = [
+    { img:'Data-Loggers__KTA-387.png', brand:'OCEAN CONTROLS', sku:'KTA-387', eyebrow:'Designed &amp; built in-house',
+      title:'Modbus Data Logger, dual RS-485, 100 channels, SD card',
+      specs:[['Channels','100'],['Ports','2 &times; RS-485'],['Storage','SD card'],['Mount','DIN rail']] },
+    { img:'Controllers__KTA-397.jpg', brand:'OCEAN CONTROLS', sku:'KTA-397', eyebrow:'Designed &amp; built in-house',
+      title:'4G LTE SMS Controller with relay outputs',
+      specs:[['Network','4G LTE'],['Outputs','Relay'],['Control','SMS'],['Mount','DIN rail']] },
+    { img:'Modbus-Bacnet-MBus-Products__ADW-002.jpg', brand:'ADF WEB', sku:'ADW-002', eyebrow:'Protocol conversion',
+      title:'HD67671 BACnet/IP Slave to Modbus Master converter',
+      specs:[['Protocol','BACnet/IP'],['Role','Slave'],['Bridges','Modbus'],['Mount','DIN rail']] },
+    { img:'Data-Acquisition__LAJ-002.jpg', brand:'LABJACK', sku:'LAJ-002', eyebrow:'Data acquisition',
+      title:'CB25 LabJack terminal board for digital I/O',
+      specs:[['Type','Terminal board'],['For','Digital I/O'],['Fits','LabJack'],['Mount','Screw']] },
+    { img:'Sensors__GJS-002.jpg', brand:'GJY ELECTRONIC', sku:'GJS-002', eyebrow:'Temperature sensing',
+      title:'DS18B20 1-Wire waterproof digital temperature sensor',
+      specs:[['Interface','1-Wire'],['Rating','Waterproof'],['Cable','15 m'],['Output','Digital']] }
+  ];
+  var BASE = 'uploads/OceanControls-Design-Assets/03-product-images/';
+  var i = 0, timer = null, card = document.getElementById('ocImg');
+  if (!card) return;
+  function id(x){ return document.getElementById(x); }
+  function paint(n) {
+    var p = P[n]; if (!p) return;
+    var img = id('ocImg');
+    img.style.opacity = '0';
+    setTimeout(function () {
+      img.src = BASE + p.img;
+      img.alt = p.sku + ' ' + p.title.replace(/&[a-z]+;/g,'');
+      img.style.opacity = '1';
+    }, 140);
+    id('ocEyebrow').innerHTML = p.eyebrow;
+    id('ocBrand').textContent = p.brand;
+    id('ocSku').textContent = p.sku;
+    id('ocTitle').textContent = p.title;
+    for (var k = 0; k < 4; k++) {
+      var K = id('ocSpecK' + (k+1)), V = id('ocSpecV' + (k+1));
+      if (K && p.specs[k]) { K.textContent = p.specs[k][0]; V.innerHTML = p.specs[k][1]; }
+    }
+    var dots = document.querySelectorAll('#ocDots button');
+    for (var d = 0; d < dots.length; d++) dots[d].style.background = (d === n) ? '#0276b8' : '#dbe2e8';
+    i = n;
+  }
+  function next(){ paint((i + 1) % P.length); }
+  function prev(){ paint((i - 1 + P.length) % P.length); }
+  function start(){ stop(); if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) timer = setInterval(next, 6000); }
+  function stop(){ if (timer) { clearInterval(timer); timer = null; } }
+  id('ocImg').style.transition = 'opacity .18s ease';
+  var np = id('ocNext'), pv = id('ocPrev');
+  if (np) np.addEventListener('click', function(){ next(); start(); });
+  if (pv) pv.addEventListener('click', function(){ prev(); start(); });
+  var dots = document.querySelectorAll('#ocDots button');
+  for (var d = 0; d < dots.length; d++) dots[d].addEventListener('click', function(e){ paint(+e.currentTarget.dataset.i); start(); });
+  var shell = id('ocImg').closest('div').parentNode;
+  if (shell) { shell.addEventListener('mouseenter', stop); shell.addEventListener('mouseleave', start); }
+  start();
+})();
 </script>
 </body>
 </html>
