@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-AU">
 <head>
+<title>Ocean Controls on Mobile</title>
+<meta name="description" content="The full catalogue, live stock and part-number search on your phone.">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="support.js"></script>
@@ -231,7 +233,7 @@
       </div>
 
       <div style="padding: 18px 16px 14px;">
-        <h1 style="margin: 0 0 6px; font-size: 26px; line-height: 1.12; font-weight: 700; letter-spacing: -0.025em; color: #0b1c2e;">{{ shopCatName }}</h1>
+        <h2 style="margin: 0 0 6px; font-size: 26px; line-height: 1.12; font-weight: 700; letter-spacing: -0.025em; color: #0b1c2e;">{{ shopCatName }}</h2>
         <p style="margin: 0 0 14px; font-size: 14.5px; line-height: 1.55; color: #667380;">{{ shopBlurb }}</p>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(265px, 1fr)); gap: 1px; background: #dbe2e8; border: 1px solid #dbe2e8;">
           <sc-for list="{{ shopStats }}" as="s" hint-placeholder-count="0">
@@ -341,7 +343,7 @@
           <span style="width: 1px; height: 11px; background: #dbe2e8;"></span>
           <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; color: #667380;">{{ product.mpn }}</span>
         </div>
-        <h1 style="margin: 0 0 12px; font-size: 23px; line-height: 1.24; font-weight: 700; letter-spacing: -0.02em; color: #0b1c2e;">{{ product.name }}</h1>
+        <h2 style="margin: 0 0 12px; font-size: 23px; line-height: 1.24; font-weight: 700; letter-spacing: -0.02em; color: #0b1c2e;">{{ product.name }}</h2>
 
         <div style="display: flex; align-items: baseline; gap: 10px; margin-bottom: 4px;">
           <span style="font-size: 33px; font-weight: 800; color: #0b1c2e; letter-spacing: -0.03em; font-variant-numeric: tabular-nums;">{{ product.price }}</span>
@@ -455,7 +457,7 @@
   <sc-if value="{{ isCart }}" hint-placeholder-val="{{ false }}">
     <div style="animation: ocFade 0.2s ease-out; padding-bottom: 100px;">
       <div style="padding: 20px 16px 14px;">
-        <h1 style="margin: 0 0 5px; font-size: 26px; line-height: 1.12; font-weight: 700; letter-spacing: -0.025em; color: #0b1c2e;">Your order</h1>
+        <h2 style="margin: 0 0 5px; font-size: 26px; line-height: 1.12; font-weight: 700; letter-spacing: -0.025em; color: #0b1c2e;">Your order</h2>
         <p style="margin: 0; font-size: 14.5px; color: #667380;">{{ cartSummary }}</p>
       </div>
 

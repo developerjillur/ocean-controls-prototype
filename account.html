@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-AU">
 <head>
+<title>My Account | Ocean Controls</title>
+<meta name="description" content="Orders, invoices, backorders and downloads in one place.">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="support.js"></script>
@@ -237,7 +239,7 @@
 
         <sc-if value="{{ isOrders }}" hint-placeholder-val="{{ false }}">
           <div>
-            <h1 style="margin: 0 0 7px; font-size: 31px; line-height: 1.1; font-weight: 700; letter-spacing: -0.025em; color: #0b1c2e;">Orders</h1>
+            <h2 style="margin: 0 0 7px; font-size: 31px; line-height: 1.1; font-weight: 700; letter-spacing: -0.025em; color: #0b1c2e;">Orders</h2>
             <p style="margin: 0 0 20px; font-size: 16px; color: #667380;">{{ ordersLine }}</p>
 
             <div style="display: flex; align-items: center; gap: 9px; flex-wrap: wrap; margin-bottom: 16px;">
@@ -304,7 +306,7 @@
 
         <sc-if value="{{ isInvoices }}" hint-placeholder-val="{{ false }}">
           <div>
-            <h1 style="margin: 0 0 7px; font-size: 31px; line-height: 1.1; font-weight: 700; letter-spacing: -0.025em; color: #0b1c2e;">Invoices</h1>
+            <h2 style="margin: 0 0 7px; font-size: 31px; line-height: 1.1; font-weight: 700; letter-spacing: -0.025em; color: #0b1c2e;">Invoices</h2>
             <p style="margin: 0 0 20px; font-size: 16px; color: #667380;">{{ invoiceLine }}</p>
 
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(265px, 1fr)); gap: 1px; background: #dbe2e8; border: 1px solid #dbe2e8; margin-bottom: 20px;">
@@ -355,7 +357,7 @@
 
         <sc-if value="{{ isDownloads }}" hint-placeholder-val="{{ false }}">
           <div>
-            <h1 style="margin: 0 0 7px; font-size: 31px; line-height: 1.1; font-weight: 700; letter-spacing: -0.025em; color: #0b1c2e;">Your downloads</h1>
+            <h2 style="margin: 0 0 7px; font-size: 31px; line-height: 1.1; font-weight: 700; letter-spacing: -0.025em; color: #0b1c2e;">Your downloads</h2>
             <p style="margin: 0 0 20px; font-size: 16px; line-height: 1.6; color: #667380; max-width: 60em;">Documentation for everything you have bought, kept together. Datasheets are free to anyone — this list just saves you finding them again.</p>
             <div style="border: 1px solid #dbe2e8;">
               <sc-for list="{{ userDownloads }}" as="d" hint-placeholder-count="0">
@@ -377,7 +379,7 @@
 
         <sc-if value="{{ isDetails }}" hint-placeholder-val="{{ false }}">
           <div>
-            <h1 style="margin: 0 0 7px; font-size: 31px; line-height: 1.1; font-weight: 700; letter-spacing: -0.025em; color: #0b1c2e;">Account details</h1>
+            <h2 style="margin: 0 0 7px; font-size: 31px; line-height: 1.1; font-weight: 700; letter-spacing: -0.025em; color: #0b1c2e;">Account details</h2>
             <p style="margin: 0 0 22px; font-size: 16px; color: #667380;">Company, contacts and the addresses we ship to.</p>
 
             <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; align-items: start;">

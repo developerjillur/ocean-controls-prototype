@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-AU">
 <head>
+<title>Sign In | Ocean Controls</title>
+<meta name="description" content="Sign in to see your pricing, order history and downloads.">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="support.js"></script>
@@ -176,7 +178,7 @@
 
         <sc-if value="{{ isRegister }}" hint-placeholder-val="{{ false }}">
           <div>
-            <h1 style="margin: 0 0 8px; font-size: 31px; line-height: 1.12; font-weight: 700; letter-spacing: -0.025em; color: #0b1c2e;">Create your account</h1>
+            <h2 style="margin: 0 0 8px; font-size: 31px; line-height: 1.12; font-weight: 700; letter-spacing: -0.025em; color: #0b1c2e;">Create your account</h2>
             <p style="margin: 0 0 26px; font-size: 16px; line-height: 1.65; color: #667380; max-width: 52em;">A standard account, ready to order with. If you are buying for a business and want contract pricing, <a href="trade-account.html">apply for a trade account</a> instead — you can do that after registering too.</p>
 
             <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; max-width: 52em;">
@@ -231,7 +233,7 @@
 
         <sc-if value="{{ isForgot }}" hint-placeholder-val="{{ false }}">
           <div>
-            <h1 style="margin: 0 0 8px; font-size: 31px; line-height: 1.12; font-weight: 700; letter-spacing: -0.025em; color: #0b1c2e;">Reset your password</h1>
+            <h2 style="margin: 0 0 8px; font-size: 31px; line-height: 1.12; font-weight: 700; letter-spacing: -0.025em; color: #0b1c2e;">Reset your password</h2>
             <p style="margin: 0 0 26px; font-size: 16px; line-height: 1.65; color: #667380; max-width: 52em;">Enter the email address on your account and we will send a reset link. The link works once and expires after an hour.</p>
 
             <div style="display: flex; flex-direction: column; gap: 18px; max-width: 42em;">
@@ -262,7 +264,7 @@
           <div style="border: 1px solid #dbe2e8; border-top: 3px solid #2fd07e; animation: ocRise 0.4s ease-out;">
             <div style="padding: 36px 32px 32px; border-bottom: 1px solid #dbe2e8;">
               <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #157a45; margin-bottom: 14px;">{{ doneKicker }}</div>
-              <h1 style="margin: 0 0 12px; font-size: 30px; line-height: 1.14; font-weight: 700; letter-spacing: -0.025em; color: #0b1c2e;">{{ doneTitle }}</h1>
+              <h2 style="margin: 0 0 12px; font-size: 30px; line-height: 1.14; font-weight: 700; letter-spacing: -0.025em; color: #0b1c2e;">{{ doneTitle }}</h2>
               <p style="margin: 0 0 24px; font-size: 16.5px; line-height: 1.7; color: #4b5560; max-width: 54em;">{{ doneBody }}</p>
               <div style="display: flex; gap: 12px;">
                 <a href="{{ donePrimaryHref }}" style="padding: 14px 24px; background: #16304f; color: #ffffff; font-size: 15.5px; font-weight: 600; text-decoration: none;" style-hover="background: #0673a2; text-decoration: none;">{{ donePrimary }}</a>
