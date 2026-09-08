@@ -1786,8 +1786,14 @@ class Component extends DCLogic {
 
 </script>
 <script>
-/* Hero new-arrivals carousel: five real products, auto-advance, pause on hover. */
+/* Hero new-arrivals carousel: five real products, auto-advance, pause on hover.
+   The page template re-renders on its own, which both wipes the card and re-runs
+   this script, so it guards against a second instance and re-asserts the current
+   slide whenever the template overwrites it. */
 (function () {
+  if (window.__ocCarouselReady) return;
+  window.__ocCarouselReady = true;
+
   var P = [
     { img:'Data-Loggers__KTA-387.png', brand:'OCEAN CONTROLS', sku:'KTA-387', eyebrow:'Designed &amp; built in-house',
       title:'Modbus Data Logger, dual RS-485, 100 channels, SD card',
@@ -1806,43 +1812,70 @@ class Component extends DCLogic {
       specs:[['Interface','1-Wire'],['Rating','Waterproof'],['Cable','15 m'],['Output','Digital']] }
   ];
   var BASE = 'uploads/OceanControls-Design-Assets/03-product-images/';
-  var i = 0, timer = null, card = document.getElementById('ocImg');
-  if (!card) return;
+  var i = 0, timer = null, wired = false;
   function id(x){ return document.getElementById(x); }
-  function paint(n) {
-    var p = P[n]; if (!p) return;
-    var img = id('ocImg');
-    img.style.opacity = '0';
-    setTimeout(function () {
+
+  function apply(n, animate) {
+    var p = P[n], img = id('ocImg');
+    if (!img || !p) return;
+    if (animate) {
+      img.style.transition = 'opacity .18s ease';
+      img.style.opacity = '0';
+      setTimeout(function(){ img.src = BASE + p.img; img.style.opacity = '1'; }, 140);
+    } else if (img.getAttribute('src') !== BASE + p.img) {
       img.src = BASE + p.img;
-      img.alt = p.sku + ' ' + p.title.replace(/&[a-z]+;/g,'');
-      img.style.opacity = '1';
-    }, 140);
-    id('ocEyebrow').innerHTML = p.eyebrow;
-    id('ocBrand').textContent = p.brand;
-    id('ocSku').textContent = p.sku;
-    id('ocTitle').textContent = p.title;
+    }
+    img.alt = p.sku + ' ' + p.title;
+    var set = function(el, html){ if (el && el.innerHTML !== html) el.innerHTML = html; };
+    set(id('ocEyebrow'), p.eyebrow);
+    set(id('ocBrand'), p.brand);
+    set(id('ocSku'), p.sku);
+    set(id('ocTitle'), p.title);
     for (var k = 0; k < 4; k++) {
-      var K = id('ocSpecK' + (k+1)), V = id('ocSpecV' + (k+1));
-      if (K && p.specs[k]) { K.textContent = p.specs[k][0]; V.innerHTML = p.specs[k][1]; }
+      if (!p.specs[k]) continue;
+      set(id('ocSpecK' + (k+1)), p.specs[k][0]);
+      set(id('ocSpecV' + (k+1)), p.specs[k][1]);
     }
     var dots = document.querySelectorAll('#ocDots button');
-    for (var d = 0; d < dots.length; d++) dots[d].style.background = (d === n) ? '#0276b8' : '#dbe2e8';
-    i = n;
+    for (var d = 0; d < dots.length; d++) {
+      var want = (d === n) ? '#0276b8' : '#dbe2e8';
+      if (dots[d].getAttribute('data-on') !== want) { dots[d].style.background = want; dots[d].setAttribute('data-on', want); }
+    }
   }
-  function next(){ paint((i + 1) % P.length); }
-  function prev(){ paint((i - 1 + P.length) % P.length); }
-  function start(){ stop(); if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) timer = setInterval(next, 6000); }
+  function go(n){ i = (n + P.length) % P.length; apply(i, true); restart(); }
   function stop(){ if (timer) { clearInterval(timer); timer = null; } }
-  id('ocImg').style.transition = 'opacity .18s ease';
-  var np = id('ocNext'), pv = id('ocPrev');
-  if (np) np.addEventListener('click', function(){ next(); start(); });
-  if (pv) pv.addEventListener('click', function(){ prev(); start(); });
-  var dots = document.querySelectorAll('#ocDots button');
-  for (var d = 0; d < dots.length; d++) dots[d].addEventListener('click', function(e){ paint(+e.currentTarget.dataset.i); start(); });
-  var shell = id('ocImg').closest('div').parentNode;
-  if (shell) { shell.addEventListener('mouseenter', stop); shell.addEventListener('mouseleave', start); }
-  start();
+  function restart(){
+    stop();
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    timer = setInterval(function(){ i = (i + 1) % P.length; apply(i, true); }, 6000);
+  }
+  function wire() {
+    if (!id('ocImg') || !id('ocNext')) return false;
+    if (wired) return true;
+    id('ocNext').addEventListener('click', function(){ go(i + 1); });
+    id('ocPrev').addEventListener('click', function(){ go(i - 1); });
+    var dots = document.querySelectorAll('#ocDots button');
+    for (var d = 0; d < dots.length; d++) {
+      dots[d].addEventListener('click', function(e){ go(+e.currentTarget.getAttribute('data-i')); });
+    }
+    var shell = id('ocImg').closest('div');
+    if (shell && shell.parentNode) {
+      shell.parentNode.addEventListener('mouseenter', stop);
+      shell.parentNode.addEventListener('mouseleave', restart);
+    }
+    wired = true;
+    apply(i, false);
+    restart();
+    return true;
+  }
+  /* the template can render late and can overwrite the card, so keep checking */
+  var tries = 0;
+  var boot = setInterval(function () {
+    if (wire()) { if (++tries > 2) clearInterval(boot); }
+    else if (++tries > 40) clearInterval(boot);
+  }, 250);
+  /* re-assert the current slide if the template repaints over it */
+  setInterval(function(){ if (wired) apply(i, false); }, 700);
 })();
 </script>
 </body>
