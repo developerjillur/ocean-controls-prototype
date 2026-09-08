@@ -108,7 +108,7 @@
       <a href="datasheets.html" style="display: flex; align-items: center; padding: 0 16px; color: #d6e4f2; font-size: 15px; font-weight: 500; text-decoration: none;" style-hover="background: #24456b; color: #ffffff; text-decoration: none;">Datasheets</a>
       <a href="about.html" style="display: flex; align-items: center; padding: 0 16px; color: #d6e4f2; font-size: 15px; font-weight: 500; text-decoration: none;" style-hover="background: #24456b; color: #ffffff; text-decoration: none;">Engineering services</a>
       <span style="margin-left: auto; display: flex; align-items: center; gap: 9px; padding-left: 18px; font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #6fd0f5;">
-        <span style="width: 7px; height: 7px; border-radius: 50%; background: #2fd07e;"></span>Contract pricing active — {{ discountLabel }}
+        <span style="width: 7px; height: 7px; border-radius: 50%; background: #2fd07e;"></span>Trade account active
       </span>
     </div>
   </div>
@@ -611,9 +611,9 @@ class Component extends DCLogic {
     }
     this.setState({
       padValue: '', padOk: true,
-      padNote: found.length + ' line' + (found.length > 1 ? 's' : '') + ' added at your trade rate' + (missing.length ? ' · not found: ' + missing.join(', ') : '')
+      padNote: found.length + ' line' + (found.length > 1 ? 's' : '') + ' added at your account price' + (missing.length ? ' · not found: ' + missing.join(', ') : '')
     });
-    this.fire('Added to order', found.join(', ') + ' — at ' + DISCOUNT + '% off retail');
+    this.fire('Added to order', found.join(', ') + ' — at your account price');
   }
 
   renderVals() {
@@ -697,7 +697,7 @@ class Component extends DCLogic {
       isDownloads: st.view === 4,
       isDetails: st.view === 5,
 
-      dashLine: ORDERS.length + ' orders on file · ' + BACKORDERS.length + ' lines on backorder · contract pricing at ' + DISCOUNT + '% off retail',
+      dashLine: ORDERS.length + ' orders on file · ' + BACKORDERS.length + ' lines on backorder',
       goOrders: () => this.setState({ view: 1 }),
       stats: [
         { k: 'Spend this FY', n: this.money(spendYtd), note: 'inc GST, 6 orders', fg: '#0b1c2e' },
