@@ -26,6 +26,22 @@
 }
 </style>
 <style>body{font-family:"Plus Jakarta Sans",-apple-system,system-ui,sans-serif}</style>
+<style id="oc-cart-mobile">
+/* On a phone a seven column line-item table cannot stay a table, so each line
+   becomes a card: image on the left, everything else stacked beside it. */
+@media (max-width: 760px) {
+  .oc-cart-head { display: none !important; }
+  .oc-cart-row {
+    grid-template-columns: 72px minmax(0, 1fr) !important;
+    gap: 6px 14px !important;
+    padding: 14px !important;
+    align-items: start !important;
+  }
+  .oc-cart-row > *:first-child { grid-row: 1 / span 6; }
+  .oc-cart-row > * { text-align: left !important; justify-content: flex-start !important; }
+  .oc-cart-row img { width: 100% !important; height: auto !important; }
+}
+</style>
 </head>
 <body>
 <x-dc>
@@ -168,7 +184,7 @@
 
             <sc-if value="{{ hasLines }}" hint-placeholder-val="{{ true }}">
               <div style="border: 1px solid #dbe2e8;">
-                <div style="display: grid; grid-template-columns: 84px minmax(220px, 1fr) 128px 116px 132px 112px 44px; align-items: center; background: #0e2a52; color: #ffffff;">
+                <div class="oc-cart-head" style="display: grid; grid-template-columns: 84px minmax(220px, 1fr) 128px 116px 132px 112px 44px; align-items: center; background: #0e2a52; color: #ffffff;">
                   <div style="padding: 11px 12px; font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase;">Item</div>
                   <div style="padding: 11px 12px; font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase;">Product</div>
                   <div style="padding: 11px 12px; font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase;">Availability</div>
@@ -179,7 +195,7 @@
                 </div>
                 <sc-for list="{{ lines }}" as="l" hint-placeholder-count="0">
                   <div>
-                    <div style="display: grid; grid-template-columns: 84px minmax(220px, 1fr) 128px 116px 132px 112px 44px; align-items: center; border-top: 1px solid #eef2f5;">
+                    <div class="oc-cart-row" style="display: grid; grid-template-columns: 84px minmax(220px, 1fr) 128px 116px 132px 112px 44px; align-items: center; border-top: 1px solid #eef2f5;">
                       <div style="padding: 12px;">
                         <div style="{{ l.imgStyle }}"></div>
                       </div>
