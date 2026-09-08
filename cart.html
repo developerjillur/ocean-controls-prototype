@@ -44,6 +44,14 @@
   div.oc-cart-row[style] > * { text-align: left !important; justify-content: flex-start !important; }
   div.oc-cart-row[style] img { width: 100% !important; height: auto !important; }
 }
+
+@media (max-width: 760px) {
+  /* the panel that wraps the lines was sized for a desktop column */
+  div.oc-cart-row[style], div.oc-cart-head[style] { width: auto !important; }
+  div.oc-cart-row[style] { box-sizing: border-box !important; }
+  .oc-cart-row, .oc-cart-head { min-width: 0 !important; }
+  div[style*="grid-template-columns: minmax"] { grid-template-columns: minmax(0, 1fr) !important; }
+}
 </style>
 </head>
 <body>
