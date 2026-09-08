@@ -2,7 +2,7 @@
 <html lang="en-AU">
 <head>
 <title>Trade Accounts | Ocean Controls</title>
-<meta name="description" content="Contract pricing and 30-day terms for panel builders, contractors and resellers.">
+<meta name="description" content="Contract pricing and 30-day terms for panel builders, contractors, integrators and resellers. Accounts are opened by email, not an online form.">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="support.js"></script>
@@ -43,10 +43,10 @@
   a:hover { color: #0e2a52; text-decoration: underline; }
   p { text-wrap: pretty; }
   input, button, select, textarea { font-family: inherit; }
-  :focus-visible { outline: 2px solid #00aeef; outline-offset: 2px; }
+  :focus-visible { outline: 2px solid #0276b8; outline-offset: 2px; }
   ::selection { background: #bfe8f8; }
   @keyframes ocFade { from { opacity: 0; } to { opacity: 1; } }
-  @keyframes ocRise { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+  @keyframes ocRise { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
 
   /* Responsive layout — media queries cannot be expressed as inline styles.
      Everything that must change together fires at the same width. */
@@ -86,8 +86,9 @@
 
   <div style="background: #0a1f3d; color: #a9bed4; font-size: 13.5px;">
     <div style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 36px); height: 38px; display: flex; align-items: center; gap: 26px;">
-      <span style="display: flex; align-items: center; gap: 8px;"><span style="width: 6px; height: 6px; border-radius: 50%; background: #2fd07e;"></span>Trade and overseas wholesale accounts — contract pricing across all 2,279 products</span>
+      <span style="display: flex; align-items: center; gap: 8px;"><span style="width: 6px; height: 6px; border-radius: 50%; background: #2fd07e;"></span>In-stock orders dispatched within 2 business days · free collection from Carrum Downs</span>
       <span style="margin-left: auto; display: flex; align-items: center; gap: 22px;">
+        <a href="datasheets.html" style="color: #d6e4f2; text-decoration: none;">Datasheets</a>
         <a href="contact.html" style="color: #d6e4f2; text-decoration: none;">Contact</a>
         <a href="#" style="color: #ffffff; font-family: 'JetBrains Mono', monospace; text-decoration: none;">+61 3 9708 2390</a>
       </span>
@@ -95,287 +96,119 @@
   </div>
 
   <div style="background: #ffffff; border-bottom: 1px solid #dbe2e8;">
-    <div style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 36px); height: 82px; display: flex; align-items: center; gap: 32px;">
+    <div style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 36px); height: 84px; display: flex; align-items: center; gap: 28px;">
       <a href="index.html" style="flex: 0 0 auto; display: block;" aria-label="Ocean Controls home">
         <img src="uploads/OceanControls-Design-Assets/02-brand-assets/ocean-controls-logo.png" alt="Ocean Controls" style="height: 42px; width: auto; display: block;" />
       </a>
-      <div style="display: flex; align-items: center; gap: 11px; padding-left: 32px; border-left: 1px solid #dbe2e8;">
-        <span style="font-family: 'JetBrains Mono', monospace; font-size: 12.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #0e2a52;">Trade account application</span>
+      <div style="flex: 1 1 auto; max-width: 560px; display: flex; height: 46px; border: 1.5px solid #0e2a52;">
+        <input type="text" placeholder="Search 2,279 products — name, SKU, MPN or spec" style="flex: 1 1 auto; border: 0; outline: none; padding: 0 14px; font-size: 15.5px; min-width: 0;" aria-label="Search products" />
+        <a href="search.html" style="display: flex; align-items: center; justify-content: center; text-decoration: none; flex: 0 0 auto; background: #0e2a52; color: #ffffff; padding: 0 24px; font-size: 14.5px; font-weight: 600;">Search</a>
       </div>
-      <div style="margin-left: auto; display: flex; align-items: center; gap: 20px;">
-        <div style="text-align: right;">
-          <div style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #667380;">Questions about terms?</div>
-          <a href="#" style="font-family: 'JetBrains Mono', monospace; font-size: 15.5px; font-weight: 500;">+61 3 9708 2390</a>
-        </div>
-        <a href="sign-in.html" style="display: flex; align-items: center; gap: 8px; padding: 11px 16px; border: 1px solid #dbe2e8; font-size: 14.5px; font-weight: 600; color: #0e2a52; text-decoration: none;" style-hover="border-color: #0e2a52; text-decoration: none;">Already have an account?</a>
+      <div style="margin-left: auto; display: flex; align-items: center; gap: 8px;">
+        <a href="sign-in.html" style="display: flex; flex-direction: column; padding: 7px 14px; border: 1px solid #dbe2e8; text-decoration: none; color: #0e2a52;" style-hover="border-color: #0e2a52; text-decoration: none;">
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #667380;">Account</span>
+          <span style="font-size: 14.5px; font-weight: 600;">Sign in</span>
+        </a>
+        <a href="cart.html" style="display: flex; align-items: center; gap: 11px; padding: 9px 15px; background: #0e2a52; color: #ffffff; text-decoration: none;" style-hover="background: #0a1f3d; text-decoration: none;">
+          <span style="position: relative; display: block; width: 17px; height: 17px; border: 1.5px solid #ffffff; border-top-color: transparent;">
+            <span style="position: absolute; top: -5px; left: 2px; right: 2px; height: 5px; border: 1.5px solid #ffffff; border-bottom: 0;"></span>
+          </span>
+          <span style="display: flex; flex-direction: column; line-height: 1.25;">
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #90b4d4;">0 items</span>
+            <span style="font-size: 14.5px; font-weight: 600;">$0.00</span>
+          </span>
+        </a>
+      </div>
+    </div>
+
+    <div style="background: #0e2a52;">
+      <div style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 36px); display: flex; align-items: stretch;">
+        <a href="shop.html" style="display: flex; align-items: center; gap: 11px; padding: 0 20px; height: 48px; background: #0276b8; color: #ffffff; font-size: 15px; font-weight: 600; text-decoration: none; flex: 0 0 auto;" style-hover="background: #0276b8; text-decoration: none;">
+          <span style="display: flex; flex-direction: column; gap: 3px;">
+            <span style="display: block; width: 15px; height: 2px; background: #ffffff;"></span>
+            <span style="display: block; width: 15px; height: 2px; background: #ffffff;"></span>
+            <span style="display: block; width: 15px; height: 2px; background: #ffffff;"></span>
+          </span>
+          Shop by category
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 12.5px; font-weight: 600; color: #ffffff;">237</span>
+        </a>
+        <a href="brands.html" style="display: flex; align-items: center; padding: 0 15px; color: #d6e4f2; font-size: 15px; font-weight: 500; text-decoration: none;" style-hover="background: #163d74; color: #ffffff; text-decoration: none;">Brands</a>
+        <a href="about.html" style="display: flex; align-items: center; padding: 0 15px; color: #d6e4f2; font-size: 15px; font-weight: 500; text-decoration: none;" style-hover="background: #163d74; color: #ffffff; text-decoration: none;">Engineering services</a>
+        <a href="datasheets.html" style="display: flex; align-items: center; padding: 0 15px; color: #d6e4f2; font-size: 15px; font-weight: 500; text-decoration: none;" style-hover="background: #163d74; color: #ffffff; text-decoration: none;">Datasheets</a>
+        <a href="articles.html" style="display: flex; align-items: center; padding: 0 15px; color: #d6e4f2; font-size: 15px; font-weight: 500; text-decoration: none;" style-hover="background: #163d74; color: #ffffff; text-decoration: none;">Articles</a>
+        <a href="contact.html" style="display: flex; align-items: center; padding: 0 15px; color: #d6e4f2; font-size: 15px; font-weight: 500; text-decoration: none;" style-hover="background: #163d74; color: #ffffff; text-decoration: none;">Contact</a>
       </div>
     </div>
   </div>
 
-  <sc-if value="{{ notDone }}" hint-placeholder-val="{{ true }}">
-    <div style="background: #f7f9fb; border-bottom: 1px solid #dbe2e8;">
-      <div style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 36px); display: flex; align-items: stretch;">
-        <sc-for list="{{ steps }}" as="s" hint-placeholder-count="0">
-          <button onClick="{{ s.pick }}" style="{{ s.style }}">
-            <span style="{{ s.numStyle }}">{{ s.num }}</span>
-            <span style="display: flex; flex-direction: column; align-items: flex-start; line-height: 1.3;">
-              <span style="font-size: 15px; font-weight: 600;">{{ s.label }}</span>
-              <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.06em; opacity: 0.8;">{{ s.hint }}</span>
-            </span>
-          </button>
-        </sc-for>
+  <div style="background: #f7f9fb; border-bottom: 1px solid #dbe2e8;">
+    <div style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 36px); height: 44px; display: flex; align-items: center; gap: 10px; font-size: 14px; color: #667380;">
+      <a href="index.html" style="color: #0276b8;">Home</a>
+      <span style="color: #c9d3dc;">/</span>
+      <span style="color: #0e2a52; font-weight: 600;">{{ doc.title }}</span>
+      <span style="margin-left: auto; font-family: 'JetBrains Mono', monospace; font-size: 12.5px; color: #667380;">Last updated {{ doc.updated }}</span>
+    </div>
+  </div>
+
+  <section data-screen-label="Trade" style="background: #0a1f3d; color: #ffffff;">
+  <div style="max-width: 1440px; margin: 0 auto; padding: 54px clamp(16px, 3vw, 36px) 46px;">
+    <div style="display: inline-flex; align-items: center; gap: 10px; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #66d9ff; margin-bottom: 16px;">
+      <span style="width: 22px; height: 1px; background: #00aeef;"></span>Trade and wholesale accounts
+    </div>
+    <h1 style="margin: 0 0 16px; font-size: 40px; line-height: 1.08; font-weight: 700; letter-spacing: -0.025em; max-width: 20ch;">Contract pricing for the people who buy regularly</h1>
+    <p style="margin: 0 0 26px; font-size: 17px; line-height: 1.65; color: #d6e4f2; max-width: 62ch;">Panel builders, contractors, integrators and resellers buy from us on agreed rates rather than at retail. Approval is handled by our team directly, so the first step is an email rather than a form.</p>
+    <a href="mailto:info@oceancontrols.com.au?subject=Trade%20account%20enquiry" style="display: inline-flex; align-items: center; gap: 10px; background: #00aeef; color: #05233d; padding: 14px 24px; font-size: 16px; font-weight: 700; text-decoration: none;">Email us about a trade account &#8594;</a>
+  </div>
+</section>
+
+<section data-screen-label="What you get" style="background: #ffffff;">
+  <div style="max-width: 1440px; margin: 0 auto; padding: 54px clamp(16px, 3vw, 36px);">
+    <div style="display: inline-flex; align-items: center; gap: 10px; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #0276b8; margin-bottom: 14px;">
+      <span style="width: 22px; height: 1px; background: #0276b8;"></span>01 — What an account gives you
+    </div>
+    <h2 style="margin: 0 0 26px; font-size: 30px; line-height: 1.14; font-weight: 700; letter-spacing: -0.02em; color: #0a1f3d;">Your rate, everywhere, automatically</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1px; background: #dbe2e8; border: 1px solid #dbe2e8;">
+      <div style="background: #ffffff; padding: 22px 20px;"><div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #0276b8; margin-bottom: 8px;">01</div><div style="font-size: 16px; font-weight: 600; color: #0a1f3d; margin-bottom: 6px;">Contract pricing</div><p style="margin: 0; font-size: 14.5px; line-height: 1.6; color: #667380;">Your agreed rate replaces retail across the whole catalogue the moment you sign in. Quantity breaks still apply on top where they beat it.</p></div>
+      <div style="background: #ffffff; padding: 22px 20px;"><div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #0276b8; margin-bottom: 8px;">02</div><div style="font-size: 16px; font-weight: 600; color: #0a1f3d; margin-bottom: 6px;">30-day terms</div><p style="margin: 0; font-size: 14.5px; line-height: 1.6; color: #667380;">Order against your account and settle monthly, once terms are approved. Statements and invoices stay in your account area.</p></div>
+      <div style="background: #ffffff; padding: 22px 20px;"><div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #0276b8; margin-bottom: 8px;">03</div><div style="font-size: 16px; font-weight: 600; color: #0a1f3d; margin-bottom: 6px;">Consolidated shipping</div><p style="margin: 0; font-size: 14.5px; line-height: 1.6; color: #667380;">Several manufacturers on one consignment, one invoice, one point of contact when something needs chasing.</p></div>
+      <div style="background: #ffffff; padding: 22px 20px;"><div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #0276b8; margin-bottom: 8px;">04</div><div style="font-size: 16px; font-weight: 600; color: #0a1f3d; margin-bottom: 6px;">Backorder visibility</div><p style="margin: 0; font-size: 14.5px; line-height: 1.6; color: #667380;">The parts-on-order panel in your account shows what is coming and when, so you can plan a job around it.</p></div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="How to apply" style="background: #f7f9fb; border-top: 1px solid #dbe2e8;">
+  <div style="max-width: 1440px; margin: 0 auto; padding: 54px clamp(16px, 3vw, 36px); display: grid; grid-template-columns: minmax(0, 1fr) 400px; gap: 48px; align-items: start;">
+    <div>
+      <div style="display: inline-flex; align-items: center; gap: 10px; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #0276b8; margin-bottom: 14px;">
+        <span style="width: 22px; height: 1px; background: #0276b8;"></span>02 — How to apply
+      </div>
+      <h2 style="margin: 0 0 14px; font-size: 30px; line-height: 1.14; font-weight: 700; letter-spacing: -0.02em; color: #0a1f3d;">Send us an email and we will take it from there</h2>
+      <p style="margin: 0 0 16px; font-size: 16px; line-height: 1.7; color: #4b5560; max-width: 62ch;">There is no online form. Trade terms are agreed person to person, so tell us who you are and what you build and our team will come back to you.</p>
+      <p style="margin: 0 0 10px; font-size: 15px; font-weight: 600; color: #0a1f3d;">Include in your email:</p>
+      <ul style="margin: 0 0 20px; padding-left: 18px; color: #4b5560; font-size: 15.5px; line-height: 1.8; max-width: 60ch;">
+        <li>Registered business name and ABN</li>
+        <li>What you build or install, and roughly what you expect to buy</li>
+        <li>Whether you want 30-day terms, and two trade references if so</li>
+        <li>Who we should deal with day to day, and who signs off</li>
+      </ul>
+      <p style="margin: 0; font-size: 15px; line-height: 1.7; color: #667380; max-width: 62ch;">Most accounts are approved within two business days. If you need something before then, order at retail and we will credit the difference once the account is open.</p>
+    </div>
+    <div style="background: #0e2a52; color: #ffffff; padding: 26px;">
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #66d9ff; margin-bottom: 12px;">Apply by email</div>
+      <a href="mailto:info@oceancontrols.com.au?subject=Trade%20account%20enquiry" style="display: block; background: #00aeef; color: #05233d; padding: 13px 18px; font-size: 15px; font-weight: 700; text-align: center; text-decoration: none; margin-bottom: 18px;">info@oceancontrols.com.au</a>
+      <div style="border-top: 1px solid #163d74; padding-top: 14px; margin-bottom: 12px;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #9ab0c6;">Or call the trade desk</div>
+        <a href="tel:+61397082390" style="color: #ffffff; font-family: 'JetBrains Mono', monospace; font-size: 15px; text-decoration: none;">+61 3 9708 2390</a>
+      </div>
+      <div style="border-top: 1px solid #163d74; padding-top: 14px;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #9ab0c6;">Already have an account?</div>
+        <a href="sign-in.html" style="color: #66d9ff; font-size: 15px; text-decoration: none;">Sign in to see your pricing &#8594;</a>
       </div>
     </div>
-  </sc-if>
+  </div>
+</section>
 
-  <section data-screen-label="Application" style="background: #ffffff;">
-    <div style="max-width: 1440px; margin: 0 auto; padding: 36px 36px 80px; display: grid; grid-template-columns: minmax(0, 1fr) 400px; gap: 40px; align-items: start;">
-
-      <div style="{{ stepAnim }}">
-
-        <sc-if value="{{ isIntro }}" hint-placeholder-val="{{ true }}">
-          <div>
-            <div style="display: flex; align-items: center; gap: 10px; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #0276b8; margin-bottom: 14px;">
-              <span style="width: 22px; height: 1px; background: #0276b8;"></span>Before you start
-            </div>
-            <h1 style="margin: 0 0 14px; font-size: 35px; line-height: 1.1; font-weight: 700; letter-spacing: -0.03em; color: #0a1f3d; max-width: 22em;">Apply for contract pricing</h1>
-            <p style="margin: 0 0 16px; font-size: 17px; line-height: 1.7; color: #4b5560; max-width: 58em;">Approved trade and overseas wholesale accounts see their agreed rate everywhere on the site — the catalogue re-prices the moment you sign in, and quantity breaks still apply on top where they beat the contract rate.</p>
-            <p style="margin: 0 0 30px; font-size: 17px; line-height: 1.7; color: #4b5560; max-width: 58em;">The form takes about five minutes. You will need your ABN, and if you want 30-day terms, two trade references.</p>
-
-            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: #dbe2e8; border: 1px solid #dbe2e8; margin-bottom: 26px;">
-              <sc-for list="{{ eligibility }}" as="e" hint-placeholder-count="0">
-                <div style="background: #ffffff; padding: 22px 24px 24px;">
-                  <div style="font-family: 'JetBrains Mono', monospace; font-size: 21.5px; color: #0276b8; margin-bottom: 12px;">{{ e.n }}</div>
-                  <h3 style="margin: 0 0 7px; font-size: 17.5px; font-weight: 700; letter-spacing: -0.01em; color: #0a1f3d;">{{ e.title }}</h3>
-                  <p style="margin: 0; font-size: 15px; line-height: 1.65; color: #667380;">{{ e.body }}</p>
-                </div>
-              </sc-for>
-            </div>
-
-            <div style="border: 1px solid #dbe2e8; margin-bottom: 26px;">
-              <div style="padding: 14px 18px; background: #f7f9fb; border-bottom: 1px solid #dbe2e8; display: flex; align-items: baseline; justify-content: space-between; gap: 14px;">
-                <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #667380;">Which account suits you</span>
-                <span style="font-size: 13.5px; color: #667380;">Pick one — you can change it later</span>
-              </div>
-              <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: #dbe2e8;">
-                <sc-for list="{{ accountTypes }}" as="a" hint-placeholder-count="0">
-                  <button onClick="{{ a.pick }}" style="{{ a.style }}">
-                    <span style="display: flex; align-items: center; gap: 11px; margin-bottom: 9px;">
-                      <span style="{{ a.radioStyle }}"></span>
-                      <span style="font-size: 17.5px; font-weight: 700; letter-spacing: -0.01em;">{{ a.title }}</span>
-                    </span>
-                    <span style="display: block; font-size: 15px; line-height: 1.65; color: {{ a.bodyFg }}; padding-left: 27px;">{{ a.body }}</span>
-                    <span style="display: block; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: {{ a.metaFg }}; margin-top: 10px; padding-left: 27px;">{{ a.meta }}</span>
-                  </button>
-                </sc-for>
-              </div>
-            </div>
-
-            <button onClick="{{ advance }}" style="padding: 16px 30px; background: #0e2a52; color: #ffffff; border: 0; font-size: 16.5px; font-weight: 700; cursor: pointer;" style-hover="background: #0276b8;">Start the application →</button>
-          </div>
-        </sc-if>
-
-        <sc-if value="{{ isForm }}" hint-placeholder-val="{{ false }}">
-          <div>
-            <div style="display: flex; align-items: center; gap: 10px; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #0276b8; margin-bottom: 14px;">
-              <span style="width: 22px; height: 1px; background: #0276b8;"></span>{{ stepKicker }}
-            </div>
-            <h2 style="margin: 0 0 8px; font-size: 31px; line-height: 1.12; font-weight: 700; letter-spacing: -0.025em; color: #0a1f3d;">{{ stepTitle }}</h2>
-            <p style="margin: 0 0 26px; font-size: 16px; line-height: 1.65; color: #667380; max-width: 56em;">{{ stepBlurb }}</p>
-
-            <sc-if value="{{ hasStepNote }}" hint-placeholder-val="{{ false }}">
-              <div style="display: flex; align-items: flex-start; gap: 12px; border-left: 3px solid #00aeef; background: #f2f9fd; padding: 14px 16px; margin-bottom: 24px; max-width: 56em;">
-                <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #0276b8; flex: 0 0 auto; padding-top: 2px;">Note</span>
-                <p style="margin: 0; font-size: 14.5px; line-height: 1.6; color: #163d74;">{{ stepNote }}</p>
-              </div>
-            </sc-if>
-
-            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; max-width: 56em;">
-              <sc-for list="{{ fields }}" as="f" hint-placeholder-count="0">
-                <label style="{{ f.wrapStyle }}">
-                  <span style="display: flex; align-items: baseline; justify-content: space-between; gap: 10px;">
-                    <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #667380;">{{ f.label }}</span>
-                    <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: {{ f.hintFg }};">{{ f.hint }}</span>
-                  </span>
-                  <input type="text" placeholder="{{ f.placeholder }}" value="{{ f.value }}" onInput="{{ f.onInput }}" style="{{ f.inputStyle }}" />
-                  <span style="display: block; font-size: 13.5px; line-height: 1.5; color: {{ f.helpFg }}; min-height: 21px;">{{ f.help }}</span>
-                </label>
-              </sc-for>
-            </div>
-
-            <sc-if value="{{ hasChoices }}" hint-placeholder-val="{{ false }}">
-              <div style="max-width: 56em; margin-top: 10px;">
-                <sc-for list="{{ choiceGroups }}" as="g" hint-placeholder-count="0">
-                  <div style="margin-bottom: 22px;">
-                    <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 11px;">
-                      <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #667380;">{{ g.label }}</span>
-                      <span style="font-size: 13.5px; color: #667380;">{{ g.hint }}</span>
-                    </div>
-                    <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-                      <sc-for list="{{ g.options }}" as="o" hint-placeholder-count="0">
-                        <button onClick="{{ o.toggle }}" style="{{ o.style }}">{{ o.label }}</button>
-                      </sc-for>
-                    </div>
-                    <div style="font-size: 13.5px; color: #c2364a; min-height: 21px; margin-top: 6px;">{{ g.error }}</div>
-                  </div>
-                </sc-for>
-              </div>
-            </sc-if>
-
-            <sc-if value="{{ hasTerms }}" hint-placeholder-val="{{ false }}">
-              <div style="max-width: 56em; border: 1px solid #dbe2e8; margin-top: 8px;">
-                <div style="padding: 13px 16px; background: #f7f9fb; border-bottom: 1px solid #dbe2e8; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #667380;">Credit terms you are applying for</div>
-                <div style="padding: 16px;">
-                  <sc-for list="{{ termOptions }}" as="t" hint-placeholder-count="0">
-                    <button onClick="{{ t.pick }}" style="{{ t.style }}">
-                      <span style="{{ t.radioStyle }}"></span>
-                      <span style="flex: 1 1 auto; text-align: left;">
-                        <span style="display: block; font-size: 16px; font-weight: 600; color: #0a1f3d;">{{ t.title }}</span>
-                        <span style="display: block; font-size: 14px; line-height: 1.55; color: #667380; margin-top: 3px;">{{ t.body }}</span>
-                      </span>
-                      <span style="flex: 0 0 auto; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #667380;">{{ t.tag }}</span>
-                    </button>
-                  </sc-for>
-                </div>
-              </div>
-            </sc-if>
-
-            <div style="display: flex; align-items: center; gap: 12px; margin-top: 26px; padding-top: 22px; border-top: 1px solid #eef2f5; max-width: 56em;">
-              <button onClick="{{ back }}" style="padding: 14px 22px; border: 1px solid #c9d3dc; background: #ffffff; color: #0e2a52; font-size: 15px; font-weight: 600; cursor: pointer;" style-hover="border-color: #0e2a52;">← Back</button>
-              <button onClick="{{ advance }}" style="padding: 15px 28px; background: #0e2a52; color: #ffffff; border: 0; font-size: 16.5px; font-weight: 700; cursor: pointer;" style-hover="background: #0276b8;">{{ advanceLabel }}</button>
-              <span style="margin-left: auto; font-size: 14px; color: #667380;">{{ progressNote }}</span>
-            </div>
-          </div>
-        </sc-if>
-
-        <sc-if value="{{ isReview }}" hint-placeholder-val="{{ false }}">
-          <div>
-            <div style="display: flex; align-items: center; gap: 10px; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #0276b8; margin-bottom: 14px;">
-              <span style="width: 22px; height: 1px; background: #0276b8;"></span>Last look
-            </div>
-            <h2 style="margin: 0 0 8px; font-size: 31px; line-height: 1.12; font-weight: 700; letter-spacing: -0.025em; color: #0a1f3d;">Check and submit</h2>
-            <p style="margin: 0 0 26px; font-size: 16px; line-height: 1.65; color: #667380; max-width: 56em;">Nothing is submitted until you press the button. You can go back and change any section.</p>
-
-            <div style="display: flex; flex-direction: column; gap: 18px; max-width: 60em;">
-              <sc-for list="{{ reviewSections }}" as="r" hint-placeholder-count="0">
-                <div style="border: 1px solid #dbe2e8;">
-                  <div style="display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 13px 16px; background: #f7f9fb; border-bottom: 1px solid #dbe2e8;">
-                    <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #667380;">{{ r.label }}</span>
-                    <button onClick="{{ r.edit }}" style="border: 0; background: none; padding: 0; font-family: inherit; font-size: 13.5px; font-weight: 600; color: #0276b8; cursor: pointer;">Change</button>
-                  </div>
-                  <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: #eef2f5;">
-                    <sc-for list="{{ r.rows }}" as="row" hint-placeholder-count="0">
-                      <div style="background: #ffffff; padding: 12px 16px;">
-                        <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #667380;">{{ row.k }}</div>
-                        <div style="font-size: 15px; font-weight: 500; color: {{ row.fg }}; margin-top: 4px; line-height: 1.5;">{{ row.v }}</div>
-                      </div>
-                    </sc-for>
-                  </div>
-                </div>
-              </sc-for>
-
-              <div style="border: 1px solid #dbe2e8; padding: 18px 20px;">
-                <button onClick="{{ toggleDeclare }}" style="display: flex; align-items: flex-start; gap: 12px; border: 0; background: none; padding: 0; cursor: pointer; text-align: left; margin-bottom: 10px;">
-                  <span style="{{ declareBox }}">{{ declareTick }}</span>
-                  <span style="font-size: 15px; line-height: 1.65; color: #4b5560;">I confirm the information above is accurate, I am authorised to apply on behalf of this business, and I accept the <a href="#">terms of sale</a> and <a href="#">credit terms</a>. <span style="color: #c2364a;">Required</span></span>
-                </button>
-                <div style="font-size: 13.5px; color: #c2364a; min-height: 22px;">{{ declareError }}</div>
-              </div>
-
-              <div style="display: flex; align-items: center; gap: 12px; padding-top: 6px;">
-                <button onClick="{{ back }}" style="padding: 14px 22px; border: 1px solid #c9d3dc; background: #ffffff; color: #0e2a52; font-size: 15px; font-weight: 600; cursor: pointer;" style-hover="border-color: #0e2a52;">← Back</button>
-                <button onClick="{{ advance }}" style="padding: 16px 30px; background: #0e2a52; color: #ffffff; border: 0; font-size: 16.5px; font-weight: 700; cursor: pointer;" style-hover="background: #0276b8;">Submit the application</button>
-              </div>
-            </div>
-          </div>
-        </sc-if>
-
-        <sc-if value="{{ isDone }}" hint-placeholder-val="{{ false }}">
-          <div style="animation: ocRise 0.4s ease-out;">
-            <div style="border: 1px solid #dbe2e8; border-top: 3px solid #2fd07e;">
-              <div style="padding: 36px 32px 32px; border-bottom: 1px solid #dbe2e8;">
-                <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #157a45; margin-bottom: 14px;">Application received</div>
-                <h2 style="margin: 0 0 12px; font-size: 32px; line-height: 1.12; font-weight: 700; letter-spacing: -0.025em; color: #0a1f3d;">Thanks — {{ appRef }} is with the trade desk.</h2>
-                <p style="margin: 0 0 22px; font-size: 16.5px; line-height: 1.7; color: #4b5560; max-width: 56em;">{{ doneBody }}</p>
-                <div style="display: flex; gap: 12px;">
-                  <a href="shop.html" style="padding: 14px 24px; background: #0e2a52; color: #ffffff; font-size: 15.5px; font-weight: 600; text-decoration: none;" style-hover="background: #0276b8; text-decoration: none;">Start shopping at retail</a>
-                  <a href="contact.html" style="padding: 14px 24px; border: 1px solid #c9d3dc; color: #0e2a52; font-size: 15.5px; font-weight: 600; text-decoration: none;" style-hover="border-color: #0e2a52; text-decoration: none;">Talk to the trade desk</a>
-                </div>
-              </div>
-              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(235px, 1fr)); gap: 1px; background: #dbe2e8;">
-                <sc-for list="{{ doneFacts }}" as="d" hint-placeholder-count="0">
-                  <div style="background: #ffffff; padding: 16px 18px;">
-                    <div style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #667380;">{{ d.k }}</div>
-                    <div style="font-size: 15.5px; font-weight: 600; color: #0e2a52; margin-top: 4px; line-height: 1.45;">{{ d.v }}</div>
-                  </div>
-                </sc-for>
-              </div>
-            </div>
-
-            <div style="border: 1px solid #dbe2e8; border-top: 0;">
-              <div style="padding: 14px 18px; background: #f7f9fb; border-bottom: 1px solid #dbe2e8; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #667380;">What happens next</div>
-              <div style="padding: 4px 18px 16px;">
-                <sc-for list="{{ nextSteps }}" as="n" hint-placeholder-count="0">
-                  <div style="display: flex; align-items: flex-start; gap: 14px; padding: 14px 0; border-bottom: 1px solid #eef2f5;">
-                    <span style="width: 26px; height: 26px; flex: 0 0 auto; display: flex; align-items: center; justify-content: center; background: #0e2a52; color: #ffffff; font-family: 'JetBrains Mono', monospace; font-size: 12.5px; font-weight: 600;">{{ n.n }}</span>
-                    <span>
-                      <span style="display: block; font-size: 15.5px; font-weight: 600; color: #0a1f3d; margin-bottom: 3px;">{{ n.title }}</span>
-                      <span style="display: block; font-size: 14.5px; line-height: 1.6; color: #667380;">{{ n.body }}</span>
-                    </span>
-                  </div>
-                </sc-for>
-              </div>
-            </div>
-          </div>
-        </sc-if>
-      </div>
-
-      <div style="position: sticky; top: 24px;">
-        <div style="background: #0e2a52; color: #ffffff;">
-          <div style="padding: 18px 22px 20px; border-bottom: 1px solid #163d74;">
-            <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #66d9ff; margin-bottom: 8px;">What approval gets you</div>
-            <div style="font-size: 20.5px; font-weight: 700; letter-spacing: -0.015em;">{{ typeLabel }}</div>
-          </div>
-          <sc-for list="{{ benefits }}" as="b" hint-placeholder-count="0">
-            <div style="padding: 14px 22px; border-bottom: 1px solid #163d74; display: flex; gap: 13px;">
-              <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #00aeef; flex: 0 0 auto; padding-top: 3px;">{{ b.n }}</span>
-              <span>
-                <span style="display: block; font-size: 15.5px; font-weight: 600; color: #ffffff; margin-bottom: 3px;">{{ b.title }}</span>
-                <span style="display: block; font-size: 14px; line-height: 1.6; color: #a9bed4;">{{ b.body }}</span>
-              </span>
-            </div>
-          </sc-for>
-        </div>
-
-        <div style="border: 1px solid #dbe2e8; border-top: 0;">
-          <div style="padding: 13px 18px; background: #f7f9fb; border-bottom: 1px solid #dbe2e8; display: flex; align-items: baseline; justify-content: space-between; gap: 12px;">
-            <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #667380;">What it looks like</span>
-            <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #667380;">AKB-001</span>
-          </div>
-          <div style="padding: 16px 18px;">
-            <p style="margin: 0 0 14px; font-size: 14px; line-height: 1.6; color: #667380;">An example rate against a real product — the NPT4 slimline temperature transmitter.</p>
-            <div style="display: flex; flex-direction: column; gap: 1px; background: #dbe2e8; border: 1px solid #dbe2e8;">
-              <sc-for list="{{ priceRows }}" as="r" hint-placeholder-count="0">
-                <div style="{{ r.rowStyle }}">
-                  <span style="font-size: 14px; font-weight: {{ r.weight }}; color: #0e2a52;">{{ r.k }}</span>
-                  <span style="font-family: 'JetBrains Mono', monospace; font-size: 14.5px; font-weight: {{ r.weight }}; color: {{ r.fg }}; font-variant-numeric: tabular-nums;">{{ r.v }}</span>
-                </div>
-              </sc-for>
-            </div>
-            <div style="font-size: 13px; line-height: 1.55; color: #667380; margin-top: 11px;">Illustrative only. Real rates are set per account against the volume and mix you actually buy.</div>
-          </div>
-        </div>
-
-        <div style="border: 1px solid #dbe2e8; border-top: 0; padding: 18px;">
-          <div style="font-size: 15px; font-weight: 600; color: #0a1f3d; margin-bottom: 5px;">Not sure you qualify?</div>
-          <p style="margin: 0 0 10px; font-size: 14px; line-height: 1.6; color: #667380;">Call the trade desk before you fill anything in. If a standard account with quantity breaks suits you better, we will say so.</p>
-          <a href="#" style="font-family: 'JetBrains Mono', monospace; font-size: 14.5px; font-weight: 500;">+61 3 9708 2390</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer data-screen-label="Footer" style="background: #0a1f3d; color: #a9bed4;">
+<footer data-screen-label="Footer" style="background: #0a1f3d; color: #a9bed4;">
     <div style="max-width: 1440px; margin: 0 auto; padding: 34px 36px; display: flex; align-items: center; gap: 40px;">
       <div style="background: #ffffff; padding: 9px 11px;">
         <img src="uploads/OceanControls-Design-Assets/02-brand-assets/ocean-controls-logo.png" alt="Ocean Controls" style="height: 28px; width: auto; display: block;" />
@@ -385,395 +218,333 @@
         <div>+61 3 9708 2390 · info@oceancontrols.com.au · ABN 28 659 967 398</div>
       </div>
       <span style="margin-left: auto; display: flex; gap: 20px; font-size: 13.5px;">
-        <a href="#" style="color: #a9bed4; text-decoration: none;">Credit terms</a>
-        <a href="#" style="color: #a9bed4; text-decoration: none;">Privacy</a>
-        <a href="contact.html" style="color: #a9bed4; text-decoration: none;">Contact</a>
+        <sc-for list="{{ nav }}" as="n" hint-placeholder-count="0">
+          <button onClick="{{ n.pick }}" style="border: 0; background: none; padding: 0; font-family: inherit; font-size: 13.5px; color: #a9bed4; cursor: pointer;" style-hover="color: #66d9ff;">{{ n.label }}</button>
+        </sc-for>
       </span>
     </div>
   </footer>
 </div>
 
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440},&quot;accountType&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Australian trade account&quot;,&quot;Overseas wholesale&quot;],&quot;default&quot;:&quot;Australian trade account&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Application&quot;},&quot;exampleDiscount&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;min&quot;:5,&quot;max&quot;:35,&quot;step&quot;:1,&quot;unit&quot;:&quot;%&quot;,&quot;default&quot;:15,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Application&quot;}}">
-const ELIGIBILITY = [
-  ['01', 'You buy as a business', 'A registered ABN, buying for resale, installation, manufacturing or maintenance — not one-off personal purchases.'],
-  ['02', 'Regular or volume ordering', 'Rates are set against the volume and mix you actually buy. A single large order can qualify too — tell us about it.'],
-  ['03', 'Trade references for terms', 'If you want 30-day terms rather than payment up front, we need two trade references we can call.'],
-  ['04', 'Two to three business days', 'Most applications are decided inside three business days. Urgent? Call the trade desk and we will move it along.']
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440},&quot;policy&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;shipping&quot;,&quot;returns&quot;,&quot;terms&quot;,&quot;privacy&quot;],&quot;default&quot;:&quot;shipping&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Page&quot;}}">
+// Content follows the current oceancontrols.com.au shipping and returns pages.
+const DOCS = [
+  {
+    key: 'shipping',
+    label: 'Shipping & delivery',
+    kicker: 'Getting it to you',
+    title: 'Shipping & delivery',
+    updated: '28 August 2026',
+    standfirst: 'We deliver across Australia and internationally. In-stock orders leave Carrum Downs within two business days, and collection from the counter is free.',
+    keyFacts: [['2 days', 'dispatch on in-stock items'], ['4', 'carrier options'], ['11am', 'same-day pickup cut-off'], ['Free', 'store collection']],
+    sections: [
+      {
+        heading: 'Dispatch',
+        paras: ['In-stock orders are dispatched within 2 business days.',
+          'If a line is not on the shelf it goes onto our purchasing list the same day. Some items come from overseas and can take a few weeks, so we confirm the lead time in writing rather than leaving you guessing. You can also ask us to split the order — we will ship what is in stock now and the rest when it lands, at no extra freight.']
+      },
+      {
+        heading: 'Shipping options',
+        paras: ['We deliver across Australia and internationally by any of the following methods. Transit times vary depending on the shipping method and destination.'],
+        rows: [
+          ['Australia Post Express', 'Next business day to most metropolitan addresses.'],
+          ['Australia Post Parcel Post', 'The standard domestic option, typically three to six business days.'],
+          ['DHL', 'Domestic and international consignments.'],
+          ['FedEx', 'International only.'],
+          ['Your own freight account', 'We will email the packaging dimensions when the shipment is ready to be booked.']
+        ]
+      },
+      {
+        heading: 'Pickup — Carrum Downs, Victoria 3201',
+        paras: ['Order before 11am to collect after 2pm the same day. Monday to Friday, 9am to 5pm, excluding public holidays. There is no charge for collection.'],
+        note: 'We recommend calling ahead before visiting to confirm stock availability. The website inventory is kept up to date, but we would rather have the part waiting for you than have you drive out for nothing.',
+        noteLabel: 'Tip'
+      },
+      {
+        heading: 'Freight charges',
+        paras: ['Freight is calculated at checkout from the real weight and dimensions of what you have ordered, using live carrier rates. You see the cost before you commit — there is no flat fee hiding an under- or over-charge.',
+          'Approved trade and overseas wholesale accounts can have freight quoted against their agreed arrangement rather than paid at checkout.']
+      },
+      {
+        heading: 'International orders',
+        paras: ['We ship worldwide. Duties, taxes and customs charges in the destination country are the responsibility of the receiver and are not included in the freight quoted at checkout.',
+          'Our own range is also resold by nine distributors across North America, Central America and Europe. For those products it is often faster and cheaper to buy locally — the distributor list is on the contact page.']
+      }
+    ],
+    footTitle: 'Need it faster, or somewhere unusual?',
+    footBody: 'Call the counter before you place the order and we will tell you what is actually achievable.'
+  },
+  {
+    key: 'returns',
+    label: 'Returns & warranty',
+    kicker: 'If something is wrong',
+    title: 'Returns & warranty',
+    updated: '28 August 2026',
+    standfirst: 'Contact us before sending anything back. We will confirm eligibility, give you the return address, and in most cases sort it out faster than the paperwork suggests.',
+    keyFacts: [['14 days', 'return window from dispatch'], ['7 days', 'to report a fault on arrival'], ['12–24 mo', 'typical manufacturer warranty'], ['In-house', 'repairs on our own range']],
+    sections: [
+      {
+        heading: 'How to return an item',
+        paras: ['Contact us before sending anything back. Email info@oceancontrols.com.au or call +61 3 9708 2390. We will confirm eligibility and guide you to the right return address.',
+          'Do not pay to ship anything back before you have spoken to us. If the item is faulty we arrange and pay for the return freight, and sending it unannounced makes that harder, not easier.']
+      },
+      {
+        heading: 'Return window',
+        paras: ['14 days from the dispatch date.'],
+        rows: [
+          ['Change of mind', 'Unopened, unused stock in original packaging. Return freight is at your cost, and a restocking fee may apply.'],
+          ['Faulty on arrival', 'Tell us within 7 days. We replace or refund, including freight both ways.'],
+          ['Special orders', 'Items brought in specifically for your order, and configured or programmed products, are non-returnable unless faulty.'],
+          ['Software licences', 'Non-returnable once the licence key has been issued.']
+        ]
+      },
+      {
+        heading: 'Warranty',
+        paras: ['Each product carries the manufacturer\'s warranty. Most of the range is covered for 12 to 24 months from the date of purchase — the product page states the period where the manufacturer specifies one.',
+          'The 93 products in the Ocean Controls range are warranted and repaired by us, in Carrum Downs. That means a fault goes to the people who designed the board rather than into an overseas support queue.']
+      },
+      {
+        heading: 'What is not covered',
+        paras: ['Damage from incorrect wiring, over-voltage, water ingress on equipment not rated for it, or use outside the published specification is not a warranty fault. Neither is a product that turns out to be the wrong choice for the application.'],
+        note: 'That last one is avoidable. Advice is freely given by our engineering staff over the phone or by email — no purchase order needed to ask. A five-minute call before ordering is cheaper for both of us than a return.',
+        noteLabel: 'Worth saying'
+      },
+      {
+        heading: 'Australian Consumer Law',
+        paras: ['Nothing in this policy limits your rights under the Australian Consumer Law. Our goods come with guarantees that cannot be excluded, including the right to a replacement or refund for a major failure and compensation for any other reasonably foreseeable loss or damage.']
+      }
+    ],
+    footTitle: 'Starting a return',
+    footBody: 'Have your order number and the SKU ready. Signed-in customers can also raise it from their order history.'
+  },
+  {
+    key: 'terms',
+    label: 'Terms of sale',
+    kicker: 'The commercial terms',
+    title: 'Terms of sale',
+    updated: '28 August 2026',
+    standfirst: 'The terms that apply when you buy from Ocean Controls Pty Ltd. Written to be read, not to be survived.',
+    keyFacts: [['AUD', 'all prices'], ['ex GST', 'unless stated'], ['30 days', 'approved account terms'], ['Required', 'account at checkout']],
+    sections: [
+      {
+        heading: 'Who you are buying from',
+        paras: ['Ocean Controls Pty Ltd, ABN 28 659 967 398, of 44 Frankston Gardens Drive, Carrum Downs, Victoria 3201, Australia.']
+      },
+      {
+        heading: 'Prices and GST',
+        paras: ['All prices are in Australian dollars and exclude GST unless stated otherwise. GST is added at checkout for Australian orders.',
+          'Quantity breaks are shown on the product page and apply automatically in the cart — there is no code to enter. Approved trade and overseas wholesale accounts see their contract rate in place of retail once signed in, and receive whichever is lower where a volume tier beats the contract rate.',
+          'We publish prices in good faith but they can change without notice, particularly on imported lines where exchange rates move. The price that applies is the one shown when you place the order.']
+      },
+      {
+        heading: 'Ordering',
+        paras: ['An account is required to check out. We do not take guest orders — this keeps invoices, order history and documentation together, and means a repeat order takes one paste into the order pad.',
+          'You can also order by phone on +61 3 9708 2390, by email to info@oceancontrols.com.au, or across the counter at Carrum Downs.'],
+        rows: [
+          ['Order acceptance', 'Your order is an offer. It is accepted when we confirm it, not when the website takes payment details.'],
+          ['Stock figures', 'Quantities shown come from our own warehouse and are accurate at the time of display. Very occasionally a line sells twice; we will tell you the same day.'],
+          ['Pricing errors', 'If a price is obviously wrong we will contact you before processing rather than either honouring or silently cancelling it.']
+        ]
+      },
+      {
+        heading: 'Payment',
+        paras: ['We accept Visa, Mastercard, American Express and EFTPOS, in store and online. A surcharge may apply to American Express transactions.',
+          'Approved trade accounts may order on 30-day terms against a purchase order number. Title in the goods does not pass until payment is received in full.']
+      },
+      {
+        heading: 'Delivery and risk',
+        paras: ['Delivery terms are set out in the shipping policy. Risk in the goods passes to you on delivery, or on collection from Carrum Downs.',
+          'Delivery dates given are estimates based on carrier information. We are not liable for consequential loss arising from a late delivery, though we will always tell you as soon as we know.']
+      },
+      {
+        heading: 'Liability',
+        paras: ['Our liability for any product is limited, at our option, to replacing it, repairing it, or refunding the purchase price. Nothing here limits your rights under the Australian Consumer Law.',
+          'Products are supplied for the applications described in the manufacturer documentation. Where equipment is used in a safety-critical role, the specification and validation of that use is the responsibility of the system designer.']
+      }
+    ],
+    footTitle: 'Buying on behalf of a business?',
+    footBody: 'Trade and overseas wholesale accounts have their own credit terms, agreed at application.'
+  },
+  {
+    key: 'privacy',
+    label: 'Privacy policy',
+    kicker: 'What we do with your data',
+    title: 'Privacy policy',
+    updated: '28 August 2026',
+    standfirst: 'We collect what we need to process your order and answer your questions. We do not sell it, and we do not pass it to anyone who is not part of getting your order to you.',
+    keyFacts: [['No', 'data sold to third parties'], ['Opt-in', 'marketing email'], ['Australia', 'where records are held'], ['Any time', 'request your data']],
+    sections: [
+      {
+        heading: 'What we collect',
+        paras: ['When you register or place an order we collect your name, company, email address, phone number, and the delivery and billing addresses you give us. If you apply for a trade account we also collect your ABN and the trade references you supply.',
+          'We do not store full card numbers. Card payments are handled by our payment provider, and what reaches us is a transaction reference, not your card.']
+      },
+      {
+        heading: 'What we use it for',
+        paras: ['Processing and delivering your order, issuing invoices, answering enquiries, handling returns and warranty claims, and — if you opted in — sending the product update email.'],
+        rows: [
+          ['Carriers', 'Australia Post, DHL and FedEx receive the delivery address and contact number so they can deliver.'],
+          ['Payment provider', 'Receives what is needed to process the transaction.'],
+          ['Accounting', 'Order and invoice records are held in our accounting system as required by Australian tax law.'],
+          ['Nobody else', 'We do not sell, rent or trade your details, and we do not pass them to advertisers.']
+        ]
+      },
+      {
+        heading: 'Marketing email',
+        paras: ['The product update email is opt-in. It goes out roughly monthly and carries new releases, price changes and application notes. Every email has an unsubscribe link, and unsubscribing does not affect your ability to order or your access to order history.']
+      },
+      {
+        heading: 'Cookies',
+        paras: ['The site uses cookies to keep you signed in, remember your cart between visits, and understand which pages people actually use. You can block them in your browser, though the cart and sign-in will stop working if you do.']
+      },
+      {
+        heading: 'Your data, your call',
+        paras: ['You can ask us what we hold about you, ask us to correct it, or ask us to delete it — subject to the records we are legally required to keep for tax purposes. Email info@oceancontrols.com.au or call +61 3 9708 2390.'],
+        note: 'Records are held in Australia. If that changes we will say so here before it happens, not afterwards.',
+        noteLabel: 'Location'
+      }
+    ],
+    footTitle: 'Questions about your data',
+    footBody: 'A real person will answer. We are not big enough to have a privacy department, which is rather the point.'
+  }
 ];
 
-const ACCOUNT_TYPES = [
-  ['Australian trade account', 'Contract pricing across the catalogue, optional 30-day terms, freight quoted against your agreed arrangement.', 'For ABN holders in Australia'],
-  ['Overseas wholesale', 'Wholesale pricing for resellers and distributors outside Australia, including our own 93-product range.', 'For overseas resellers and distributors']
+const ENTITY = [
+  ['Entity', 'Ocean Controls Pty Ltd'],
+  ['ABN', '28 659 967 398'],
+  ['Address', '44 Frankston Gardens Drive\nCarrum Downs VIC 3201'],
+  ['Phone', '+61 3 9708 2390'],
+  ['Email', 'info@oceancontrols.com.au'],
+  ['Hours', 'Mon–Fri, 9am – 5pm']
 ];
-
-const BENEFITS_TRADE = [
-  ['01', 'Your rate, everywhere', 'The whole catalogue re-prices the moment you sign in. No quote requests, no waiting.'],
-  ['02', 'Quantity breaks still apply', 'Where a volume tier beats your contract rate, you get the better of the two automatically.'],
-  ['03', '30-day terms on approval', 'Order against a purchase order number and settle monthly, rather than card-by-card.'],
-  ['04', 'Freight against your terms', 'We can quote freight on your account rather than charging it at checkout.']
-];
-
-const BENEFITS_WHOLESALE = [
-  ['01', 'Wholesale pricing', 'Reseller rates on the full catalogue, including the 93 products we design and build ourselves.'],
-  ['02', 'Our own range to resell', 'Nine distributors across six countries already carry the KTA range and our Davis interfaces.'],
-  ['03', 'Support from the makers', 'Technical backup comes from the engineers who wrote the firmware, not a call centre.'],
-  ['04', 'Consolidated shipping', 'Multiple manufacturers on one consignment, one invoice, one point of contact.']
-];
-
-const STEPS = [
-  ['Start', 'Eligibility'],
-  ['Business', 'Company and ABN'],
-  ['Trading', 'Volume and terms'],
-  ['Contacts', 'Who we deal with'],
-  ['Review', 'Check and submit']
-];
-
-// [key, label, placeholder, required, fullWidth, help]
-const BUSINESS_FIELDS = [
-  ['company', 'Registered business name', 'As it appears on your ABN registration', true, true, ''],
-  ['trading', 'Trading name', 'If different from the registered name', false, false, ''],
-  ['abn', 'ABN', '11 digits, spaces are fine', true, false, 'We validate this against the ABR before approval'],
-  ['website', 'Website', 'yourcompany.com.au', false, false, ''],
-  ['years', 'Years trading', 'e.g. 12', false, false, ''],
-  ['address', 'Street address', 'Where invoices should go', true, true, ''],
-  ['suburb', 'Suburb', 'Suburb or town', true, false, ''],
-  ['state', 'State', 'VIC', true, false, ''],
-  ['post', 'Postcode', '3201', true, false, ''],
-  ['country', 'Country', 'Australia', true, false, '']
-];
-
-const TRADING_FIELDS = [
-  ['spend', 'Estimated annual spend, AUD', 'e.g. 40,000', false, false, 'Helps us set the right rate — an estimate is fine'],
-  ['firstOrder', 'Approximate first order value', 'e.g. 5,000', false, false, ''],
-  ['ref1Company', 'Trade reference 1 — company', 'Supplier you have an account with', false, false, ''],
-  ['ref1Contact', 'Trade reference 1 — contact & phone', 'Name and number we can call', false, false, ''],
-  ['ref2Company', 'Trade reference 2 — company', 'Second supplier', false, false, ''],
-  ['ref2Contact', 'Trade reference 2 — contact & phone', 'Name and number we can call', false, false, '']
-];
-
-const CONTACT_FIELDS = [
-  ['contactName', 'Primary contact', 'Who we deal with day to day', true, false, ''],
-  ['contactRole', 'Role', 'e.g. Purchasing manager', false, false, ''],
-  ['contactEmail', 'Email', 'orders go to this address', true, false, ''],
-  ['contactPhone', 'Phone', 'Direct line if possible', true, false, ''],
-  ['apName', 'Accounts payable contact', 'If different from above', false, false, ''],
-  ['apEmail', 'Accounts payable email', 'Where invoices should be sent', false, false, ''],
-  ['notes', 'Anything else we should know', 'Sites, project scope, delivery constraints', false, true, '']
-];
-
-const INDUSTRIES = ['Water & wastewater', 'Building management', 'Manufacturing', 'Mining & resources', 'Food & beverage', 'Rail & transport', 'Agriculture', 'Marine', 'Education & research', 'Electrical wholesale', 'Systems integration', 'Other'];
-const CATEGORIES_OF_INTEREST = ['Sensors', 'Power Supplies', 'Modbus & BACnet', 'Controllers', 'Panel Meters', 'Relays', 'Motor drivers', 'Weather', 'Industrial IoT', 'Enclosures'];
-
-const TERM_OPTIONS = [
-  ['Payment up front', 'Card or EFT at the time of order. Fastest to approve — usually the same day, and no trade references needed.', 'FASTEST'],
-  ['30 days from invoice', 'Order against a purchase order and settle monthly. Requires two trade references and a credit check.', 'REFERENCES'],
-  ['Not sure yet', 'Start with payment up front and we can add terms later once there is a trading history.', 'FLEXIBLE']
-];
-
-const NEXT_STEPS = [
-  ['01', 'We check the ABN', 'Verified against the Australian Business Register the same day it arrives.'],
-  ['02', 'We call your references', 'Only if you applied for 30-day terms. Usually done within two business days.'],
-  ['03', 'We set your rate', 'Based on the volume and product mix you described. You will see it in writing before it goes live.'],
-  ['04', 'Your account switches over', 'Sign in and the whole catalogue re-prices. Nothing else changes.']
-];
-
-const BASE = 121.42;
 
 class Component extends DCLogic {
-  state = {
-    step: 0, type: null, terms: 0, touched: false, declare: false,
-    v: {}, industries: {}, cats: {}, ref: ''
-  };
+  state = { doc: null };
 
-  // Props seed the account type and the worked example; the radios take over.
-  typeIdx() {
-    if (this.state.type !== null) return this.state.type;
-    return this.props.accountType === 'Overseas wholesale' ? 1 : 0;
-  }
-  discount() {
-    const d = Number(this.props.exampleDiscount);
-    if (d > 0) return d;
-    return this.typeIdx() === 1 ? 22 : 15;
+  constructor(props) {
+    super(props);
+    this.refs0 = DOCS.map(d => d.sections.map(() => React.createRef()));
   }
 
-  set(k, val) { this.setState(s => ({ v: Object.assign({}, s.v, { [k]: val }) })); }
-
-  flip(group, key) {
-    this.setState(s => {
-      const g = Object.assign({}, s[group]);
-      if (g[key]) delete g[key]; else g[key] = true;
-      return { [group]: g };
-    });
+  // The prop seeds which policy opens; the rail takes over after that.
+  idx() {
+    if (this.state.doc !== null) return this.state.doc;
+    const i = DOCS.map(d => d.key).indexOf(this.props.policy);
+    return i > -1 ? i : 0;
   }
 
-  money(x) { return '$' + x.toFixed(2); }
-
-  input(err) {
-    return 'height: 46px; padding: 0 13px; font-size: 16px; outline: none;'
-      + ' border: 1px solid ' + (err ? '#c2364a' : '#dbe2e8') + ';'
-      + ' background: ' + (err ? '#fdeef0' : '#ffffff') + ';';
-  }
-
-  chip(on) {
-    return 'font-family: inherit; font-size: 14.5px; font-weight: 500; padding: 10px 14px; cursor: pointer;'
-      + ' border: 1px solid ' + (on ? '#0e2a52' : '#dbe2e8') + ';'
-      + ' background: ' + (on ? '#0e2a52' : '#ffffff') + ';'
-      + ' color: ' + (on ? '#ffffff' : '#163d74') + ';';
-  }
-
-  specFor(step) {
-    if (step === 1) return BUSINESS_FIELDS;
-    if (step === 2) return TRADING_FIELDS;
-    if (step === 3) return CONTACT_FIELDS;
-    return [];
-  }
-
-  errFor(spec, key) {
-    if (!this.state.touched) return '';
-    const f = spec.filter(x => x[0] === key)[0];
-    if (!f) return '';
-    const val = (this.state.v[key] || '').trim();
-    if (f[3] && !val) return f[1] + ' is required';
-    if (key === 'abn' && val && val.replace(/\s/g, '').length !== 11) return 'An ABN is 11 digits';
-    if (key.indexOf('Email') > -1 && val && val.indexOf('@') < 1) return 'That does not look like an email address';
-    return '';
-  }
-
-  valid(step) {
-    const spec = this.specFor(step);
-    const bad = spec.some(f => f[3] && !(this.state.v[f[0]] || '').trim());
-    if (bad) return false;
-    if (step === 1) {
-      const abn = (this.state.v.abn || '').replace(/\s/g, '');
-      if (abn.length !== 11) return false;
-    }
-    if (step === 2 && Object.keys(this.state.industries).length === 0) return false;
-    if (step === 3) {
-      const e = (this.state.v.contactEmail || '').trim();
-      if (e.indexOf('@') < 1) return false;
-    }
-    return true;
-  }
-
-  advance() {
-    const st = this.state;
-    if (st.step === 0) { this.setState({ step: 1, touched: false }); window.scrollTo(0, 0); return; }
-    if (st.step === 4) {
-      this.setState({ touched: true });
-      if (!st.declare) return;
-      this.setState({ step: 5, ref: 'TA-' + (7400 + Math.floor(Math.random() * 500)) });
-      window.scrollTo(0, 0);
-      return;
-    }
-    this.setState({ touched: true });
-    if (!this.valid(st.step)) return;
-    this.setState({ step: st.step + 1, touched: false });
+  pick(i) {
+    this.setState({ doc: i });
     window.scrollTo(0, 0);
   }
 
-  goStep(i) {
-    if (i <= this.state.step) { this.setState({ step: i, touched: false }); window.scrollTo(0, 0); }
-  }
-
   renderVals() {
-    const st = this.state;
-    const spec = this.specFor(st.step);
-    const typeIdx = this.typeIdx();
-    const wholesale = typeIdx === 1;
-    const disc = this.discount();
-
-    const stepMeta = [
-      ['', '', ''],
-      ['Step 1 of 4', 'Your business', 'The legal entity we will invoice. We check the ABN against the Australian Business Register before approving anything.'],
-      ['Step 2 of 4', 'How you trade with us', 'This is what sets your rate. Estimates are fine — nothing here is a commitment.'],
-      ['Step 3 of 4', 'Who we deal with', 'The person who places orders, and the person who pays the invoices. Often not the same person.'],
-      ['', '', '']
-    ];
-    const meta = stepMeta[st.step] || ['', '', ''];
-
-    const stepNotes = {
-      2: 'Trade references are only needed if you are applying for 30-day terms. If you are happy to pay up front, leave them blank and we can usually approve the same day.',
-      3: 'Order confirmations, dispatch notices and backorder ETAs all go to the primary contact. Invoices go to accounts payable if you give us a separate address.'
-    };
-
-    const priceRows = [
-      { k: 'Retail, 1–4', v: this.money(BASE) + ' ea', weight: '400', fg: '#4b5560', rowStyle: 'display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 11px 13px; background: #ffffff;' },
-      { k: 'Retail, 10+', v: this.money(BASE * 0.9) + ' ea', weight: '400', fg: '#4b5560', rowStyle: 'display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 11px 13px; background: #ffffff;' },
-      { k: (wholesale ? 'Wholesale rate' : 'Your trade rate'), v: this.money(BASE * (1 - disc / 100)) + ' ea', weight: '700', fg: '#157a45', rowStyle: 'display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 13px; background: #f2f9fd; box-shadow: inset 3px 0 0 #00aeef;' },
-      { k: 'Saving vs retail', v: disc + '%', weight: '400', fg: '#157a45', rowStyle: 'display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 11px 13px; background: #ffffff;' }
-    ];
-
-    const val = k => (st.v[k] || '').trim() || '—';
-    const industryList = Object.keys(st.industries);
-    const catList = Object.keys(st.cats);
+    const i = this.idx();
+    const d = DOCS[i];
+    const refs = this.refs0[i];
 
     return {
-      notDone: st.step < 5,
-      stepAnim: 'animation: ' + (st.step % 2 ? 'ocFade' : 'ocRise') + ' 0.28s ease-out;',
+      docAnim: 'animation: ' + (i % 2 ? 'ocFade' : 'ocRise') + ' 0.3s ease-out;',
 
-      steps: STEPS.map((s, i) => {
-        const on = i === st.step;
-        const done = i < st.step;
+      nav: DOCS.map((x, j) => {
+        const on = j === i;
         return {
-          num: done ? '✓' : String(i + 1),
-          label: s[0], hint: s[1],
-          pick: () => this.goStep(i),
-          style: 'display: flex; align-items: center; gap: 12px; padding: 15px 22px 15px 18px; border: 0; cursor: pointer; flex: 1 1 0; min-width: 0;'
-            + ' background: ' + (on ? '#ffffff' : 'transparent') + ';'
-            + ' border-top: 2px solid ' + (on ? '#0276b8' : 'transparent') + ';'
-            + ' border-right: 1px solid #dbe2e8;'
-            + ' color: ' + (on ? '#0a1f3d' : (done ? '#163d74' : '#667380')) + ';',
-          numStyle: 'width: 26px; height: 26px; flex: 0 0 auto; display: flex; align-items: center; justify-content: center;'
-            + ' font-family: "JetBrains Mono", monospace; font-size: 13px; font-weight: 600;'
-            + ' background: ' + (on ? '#0276b8' : (done ? '#157a45' : '#e4eaf0')) + ';'
-            + ' color: ' + (on || done ? '#ffffff' : '#667380') + ';'
-        };
-      }),
-
-      isIntro: st.step === 0,
-      isForm: st.step >= 1 && st.step <= 3,
-      isReview: st.step === 4,
-      isDone: st.step === 5,
-
-      eligibility: ELIGIBILITY.map(e => ({ n: e[0], title: e[1], body: e[2] })),
-      accountTypes: ACCOUNT_TYPES.map((a, i) => {
-        const on = i === typeIdx;
-        return {
-          title: a[0], body: a[1], meta: a[2],
-          bodyFg: on ? '#b7cade' : '#667380',
-          metaFg: on ? '#66d9ff' : '#667380',
-          pick: () => this.setState({ type: i }),
-          style: 'display: block; width: 100%; padding: 22px 24px 24px; border: 0; cursor: pointer; text-align: left;'
-            + ' background: ' + (on ? '#0e2a52' : '#ffffff') + ';'
-            + ' color: ' + (on ? '#ffffff' : '#0a1f3d') + ';',
-          radioStyle: 'display: block; width: 17px; height: 17px; border-radius: 50%; flex: 0 0 auto;'
-            + ' border: ' + (on ? '5px solid #00aeef' : '1px solid #c9d3dc') + '; background: #ffffff;'
-        };
-      }),
-
-      stepKicker: meta[0],
-      stepTitle: meta[1],
-      stepBlurb: meta[2],
-      hasStepNote: !!stepNotes[st.step],
-      stepNote: stepNotes[st.step] || '',
-
-      fields: spec.map(f => {
-        const err = this.errFor(spec, f[0]);
-        return {
-          label: f[1], placeholder: f[2],
-          value: st.v[f[0]] || '',
-          hint: f[3] ? 'Required' : 'Optional',
-          hintFg: f[3] ? '#c2364a' : '#667380',
-          wrapStyle: 'display: flex; flex-direction: column; gap: 6px;' + (f[4] ? ' grid-column: span 2;' : ''),
-          inputStyle: this.input(!!err),
-          help: err || f[5],
-          helpFg: err ? '#c2364a' : '#667380',
-          onInput: e => this.set(f[0], e.target.value)
-        };
-      }),
-
-      hasChoices: st.step === 2,
-      choiceGroups: st.step === 2 ? [
-        {
-          label: 'Which industries do you work in?',
-          hint: 'Pick any that apply',
-          error: st.touched && industryList.length === 0 ? 'Pick at least one industry' : '',
-          options: INDUSTRIES.map(i => ({ label: i, style: this.chip(!!st.industries[i]), toggle: () => this.flip('industries', i) }))
-        },
-        {
-          label: 'Which parts of the catalogue matter most?',
-          hint: 'Optional — helps us weight your rate',
-          error: '',
-          options: CATEGORIES_OF_INTEREST.map(c => ({ label: c, style: this.chip(!!st.cats[c]), toggle: () => this.flip('cats', c) }))
-        }
-      ] : [],
-
-      hasTerms: st.step === 2,
-      termOptions: TERM_OPTIONS.map((t, i) => {
-        const on = i === st.terms;
-        return {
-          title: t[0], body: t[1], tag: t[2],
-          pick: () => this.setState({ terms: i }),
-          style: 'width: 100%; display: flex; align-items: flex-start; gap: 13px; padding: 14px 15px; border: 0; cursor: pointer; text-align: left;'
-            + ' border-bottom: 1px solid #eef2f5;'
+          label: x.label,
+          pick: () => this.pick(j),
+          style: 'width: 100%; display: flex; align-items: center; gap: 10px; padding: 13px 16px; border: 0; cursor: pointer;'
+            + ' border-bottom: 1px solid #eef2f5; font-family: inherit; font-size: 15px;'
+            + ' border-left: 3px solid ' + (on ? '#0276b8' : 'transparent') + ';'
             + ' background: ' + (on ? '#f2f9fd' : '#ffffff') + ';'
-            + (on ? ' box-shadow: inset 3px 0 0 #00aeef;' : ''),
-          radioStyle: 'display: block; width: 16px; height: 16px; border-radius: 50%; flex: 0 0 auto; margin-top: 2px;'
-            + ' border: ' + (on ? '5px solid #00aeef' : '1px solid #c9d3dc') + '; background: #ffffff;'
+            + ' color: ' + (on ? '#0a1f3d' : '#163d74') + '; font-weight: ' + (on ? '600' : '400') + ';'
         };
       }),
 
-      advanceLabel: st.step === 3 ? 'Review the application' : 'Continue',
-      progressNote: 'Step ' + st.step + ' of 4 · nothing submitted yet',
-      advance: () => this.advance(),
-      back: () => this.goStep(Math.max(0, st.step - 1)),
+      doc: {
+        kicker: d.kicker,
+        title: d.title,
+        updated: d.updated,
+        standfirst: d.standfirst,
+        hasKeyFacts: !!d.keyFacts,
+        keyFacts: (d.keyFacts || []).map(k => ({ n: k[0], k: k[1] })),
+        sections: d.sections.map((s, k) => ({
+          ref: refs[k],
+          heading: s.heading,
+          paras: s.paras.map(t => ({ t: t })),
+          hasRows: !!s.rows,
+          rows: (s.rows || []).map(r => ({ k: r[0], v: r[1] })),
+          hasNote: !!s.note,
+          note: s.note || '',
+          noteLabel: s.noteLabel || 'Note'
+        })),
+        toc: d.sections.map((s, k) => ({
+          n: '0' + (k + 1),
+          label: s.heading,
+          go: () => {
+            const r = refs[k];
+            if (r && r.current) window.scrollTo({ top: Math.max(0, r.current.offsetTop - 24), behavior: 'smooth' });
+          }
+        })),
+        footTitle: d.footTitle,
+        footBody: d.footBody
+      },
 
-      reviewSections: [
-        {
-          label: 'Account type', edit: () => this.goStep(0),
-          rows: [
-            { k: 'Applying for', v: ACCOUNT_TYPES[typeIdx][0], fg: '#0e2a52' },
-            { k: 'Payment terms', v: TERM_OPTIONS[st.terms][0], fg: '#0e2a52' }
-          ]
-        },
-        {
-          label: 'Business', edit: () => this.goStep(1),
-          rows: [
-            { k: 'Registered name', v: val('company'), fg: '#0e2a52' },
-            { k: 'ABN', v: val('abn'), fg: '#0e2a52' },
-            { k: 'Trading name', v: val('trading'), fg: '#0e2a52' },
-            { k: 'Address', v: val('address') + ', ' + val('suburb') + ' ' + val('state') + ' ' + val('post'), fg: '#0e2a52' }
-          ]
-        },
-        {
-          label: 'Trading', edit: () => this.goStep(2),
-          rows: [
-            { k: 'Industries', v: industryList.length ? industryList.join(', ') : '—', fg: '#0e2a52' },
-            { k: 'Categories of interest', v: catList.length ? catList.join(', ') : '—', fg: '#0e2a52' },
-            { k: 'Estimated annual spend', v: val('spend') === '—' ? '—' : '$' + val('spend'), fg: '#0e2a52' },
-            { k: 'Trade references', v: (st.v.ref1Company || st.v.ref2Company) ? [st.v.ref1Company, st.v.ref2Company].filter(Boolean).join(' · ') : (st.terms === 1 ? 'None given — required for 30-day terms' : 'Not required'), fg: st.terms === 1 && !st.v.ref1Company ? '#a5620a' : '#0e2a52' }
-          ]
-        },
-        {
-          label: 'Contacts', edit: () => this.goStep(3),
-          rows: [
-            { k: 'Primary contact', v: val('contactName') + (st.v.contactRole ? ' · ' + st.v.contactRole : ''), fg: '#0e2a52' },
-            { k: 'Email', v: val('contactEmail'), fg: '#0e2a52' },
-            { k: 'Phone', v: val('contactPhone'), fg: '#0e2a52' },
-            { k: 'Accounts payable', v: val('apEmail'), fg: '#0e2a52' }
-          ]
-        }
-      ],
-      declareBox: 'width: 17px; height: 17px; flex: 0 0 auto; display: flex; align-items: center; justify-content: center; margin-top: 2px;'
-        + ' font-size: 12.5px; line-height: 1; color: #ffffff;'
-        + ' border: 1px solid ' + (st.declare ? '#0276b8' : (st.touched ? '#c2364a' : '#c9d3dc')) + ';'
-        + ' background: ' + (st.declare ? '#0276b8' : '#ffffff') + ';',
-      declareTick: st.declare ? '✓' : '',
-      toggleDeclare: () => this.setState({ declare: !st.declare }),
-      declareError: st.touched && !st.declare ? 'Please confirm the declaration to submit' : '',
-
-      appRef: st.ref,
-      doneBody: 'A copy has gone to ' + ((st.v.contactEmail || '').trim() || 'your email address') + '. '
-        + (st.terms === 1
-          ? 'Because you asked for 30-day terms we will call your two trade references — expect a decision inside three business days.'
-          : 'You asked to pay up front, which means no reference checks. Most of these are approved the same day.')
-        + ' In the meantime you can register a standard account and order at retail with quantity breaks applied.',
-      doneFacts: [
-        { k: 'Reference', v: st.ref },
-        { k: 'Applying for', v: ACCOUNT_TYPES[typeIdx][0] },
-        { k: 'Terms requested', v: TERM_OPTIONS[st.terms][0] },
-        { k: 'Decision expected', v: st.terms === 1 ? '2–3 business days' : 'Usually same day' }
-      ],
-      nextSteps: NEXT_STEPS.map(n => ({ n: n[0], title: n[1], body: n[2] })),
-
-      typeLabel: ACCOUNT_TYPES[typeIdx][0],
-      benefits: (wholesale ? BENEFITS_WHOLESALE : BENEFITS_TRADE).map(b => ({ n: b[0], title: b[1], body: b[2] })),
-      priceRows: priceRows
+      entity: ENTITY.map(e => ({ k: e[0], v: e[1] }))
     };
   }
 }
 
+</script>
+<script>
+/* Display-currency switcher. Prices are held in AUD and converted for display
+   only, which is how the client's own build behaves. Indicative rates. */
+(function () {
+  if (window.__ocCurrencyReady) return;
+  window.__ocCurrencyReady = true;
+  var RATES = { AUD: [1, '$'], USD: [0.66, 'US$'], EUR: [0.61, '\u20ac'], NZD: [1.09, 'NZ$'] };
+  var MONEY = /(?:A?U?S?\$|NZ\$|\u20ac)\s?([0-9][0-9,]*\.[0-9]{2})/g;
+  function walk() {
+    var out = [], w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+      acceptNode: function (n) {
+        if (!n.nodeValue || n.nodeValue.indexOf('$') < 0 && n.nodeValue.indexOf('\u20ac') < 0) return NodeFilter.FILTER_REJECT;
+        var p = n.parentNode;
+        if (!p || p.closest('script,style,select,option,#ocCurrency')) return NodeFilter.FILTER_REJECT;
+        return NodeFilter.FILTER_ACCEPT;
+      }
+    });
+    var n; while ((n = w.nextNode())) out.push(n);
+    return out;
+  }
+  function convert(code) {
+    var r = RATES[code] || RATES.AUD;
+    walk().forEach(function (n) {
+      if (!n.__ocAud) { if (!MONEY.test(n.nodeValue)) { MONEY.lastIndex = 0; return; } MONEY.lastIndex = 0; n.__ocAud = n.nodeValue; }
+      n.nodeValue = n.__ocAud.replace(MONEY, function (_, num) {
+        var v = parseFloat(num.replace(/,/g, '')) * r[0];
+        return r[1] + v.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+      });
+    });
+  }
+  function boot() {
+    var sel = document.getElementById('ocCurrency');
+    if (!sel || sel.__ocWired) return !!sel;
+    sel.__ocWired = true;
+    var saved = null;
+    try { saved = localStorage.getItem('ocCurrency'); } catch (e) {}
+    if (saved && RATES[saved]) { sel.value = saved; convert(saved); }
+    sel.addEventListener('change', function () {
+      convert(sel.value);
+      try { localStorage.setItem('ocCurrency', sel.value); } catch (e) {}
+    });
+    return true;
+  }
+  var tries = 0, t = setInterval(function () { if (boot() || ++tries > 40) clearInterval(t); }, 250);
+  /* the page template repaints, so re-apply the chosen currency */
+  setInterval(function () {
+    var sel = document.getElementById('ocCurrency');
+    if (sel && sel.value && sel.value !== 'AUD') convert(sel.value);
+  }, 1200);
+})();
 </script>
 </body>
 </html>
