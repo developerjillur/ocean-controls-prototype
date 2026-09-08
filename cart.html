@@ -11,10 +11,12 @@
    layout above 1000px is untouched. */
 @media (max-width: 1000px) {
   html, body { max-width: 100%; overflow-x: hidden; }
-  [style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
-  [style*="width:"] { max-width: 100% !important; }
-  [style*="min-width:"] { min-width: 0 !important; }
-  img, table, pre, iframe { max-width: 100% !important; height: auto; }
+  img, table, pre, iframe { max-width: 100%; height: auto; }
+  /* wide fixed-column grids scroll inside their own strip rather than pushing
+     the whole page sideways, so a data table stays a table */
+  [style*="grid-template-columns"] { max-width: 100%; }
+  [style*="px 220px"], [style*="px 128px"], [style*="repeat("] { overflow-x: auto; }
+  /* content rows that were only side-by-side for width may wrap */
   [style*="display: flex"], [style*="display:flex"] { flex-wrap: wrap; }
 }
 @media (max-width: 560px) {
