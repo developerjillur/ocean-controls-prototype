@@ -28,18 +28,21 @@
 <style>body{font-family:"Plus Jakarta Sans",-apple-system,system-ui,sans-serif}</style>
 <style id="oc-cart-mobile">
 /* On a phone a seven column line-item table cannot stay a table, so each line
-   becomes a card: image on the left, everything else stacked beside it. */
+   becomes a card: image on the left, everything else stacked beside it.
+   The exported template ships its own rule that flattens every inline grid at
+   700px, so these selectors are deliberately more specific than that one. */
 @media (max-width: 760px) {
-  .oc-cart-head { display: none !important; }
-  .oc-cart-row {
+  div.oc-cart-head[style] { display: none !important; }
+  div.oc-cart-row[style] {
     grid-template-columns: 72px minmax(0, 1fr) !important;
     gap: 6px 14px !important;
     padding: 14px !important;
     align-items: start !important;
+    max-width: 100% !important;
   }
-  .oc-cart-row > *:first-child { grid-row: 1 / span 6; }
-  .oc-cart-row > * { text-align: left !important; justify-content: flex-start !important; }
-  .oc-cart-row img { width: 100% !important; height: auto !important; }
+  div.oc-cart-row[style] > *:first-child { grid-row: 1 / span 6; }
+  div.oc-cart-row[style] > * { text-align: left !important; justify-content: flex-start !important; }
+  div.oc-cart-row[style] img { width: 100% !important; height: auto !important; }
 }
 </style>
 </head>
