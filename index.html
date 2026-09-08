@@ -316,8 +316,8 @@
           <div style="display: flex; align-items: flex-end; justify-content: space-between; border-top: 1px solid #dbe2e8; padding-top: 14px;">
             <div>
               <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #667380;">{{ heroPriceLabel }}</div>
-              <div style="font-size: 32px; font-weight: 800; letter-spacing: -0.025em; font-variant-numeric: tabular-nums; color: #0a1f3d;">{{ heroPrice }}</div>
-              <div style="font-size: 13px; color: #667380;">{{ heroPriceNote }}</div>
+              <div id="ocPrice" style="font-size: 32px; font-weight: 800; letter-spacing: -0.025em; font-variant-numeric: tabular-nums; color: #0a1f3d;">{{ heroPrice }}</div>
+              <div id="ocPriceNote" style="font-size: 13px; color: #667380;">{{ heroPriceNote }}</div>
             </div>
             <button onClick="{{ addHero }}" style="padding: 13px 20px; background: #0e2a52; color: #ffffff; border: 0; font-size: 15px; font-weight: 600; cursor: pointer;" style-hover="background: #0276b8;">Add to cart</button>
           </div>
@@ -1795,19 +1795,19 @@ class Component extends DCLogic {
   window.__ocCarouselReady = true;
 
   var P = [
-    { img:'Data-Loggers__KTA-387.png', brand:'OCEAN CONTROLS', sku:'KTA-387', eyebrow:'Designed &amp; built in-house',
+    { img:'Data-Loggers__KTA-387.png', brand:'OCEAN CONTROLS', sku:'KTA-387', price:'$227.90', note:'AUD · 3 quantity breaks · trade pricing on sign-in', eyebrow:'Designed &amp; built in-house',
       title:'Modbus Data Logger, dual RS-485, 100 channels, SD card',
       specs:[['Channels','100'],['Ports','2 &times; RS-485'],['Storage','SD card'],['Mount','DIN rail']] },
-    { img:'Controllers__KTA-397.jpg', brand:'OCEAN CONTROLS', sku:'KTA-397', eyebrow:'Designed &amp; built in-house',
+    { img:'Controllers__KTA-397.jpg', brand:'OCEAN CONTROLS', sku:'KTA-397', price:'$461.89', note:'AUD · 2 quantity breaks · trade pricing on sign-in', eyebrow:'Designed &amp; built in-house',
       title:'4G LTE SMS Controller with relay outputs',
       specs:[['Network','4G LTE'],['Outputs','Relay'],['Control','SMS'],['Mount','DIN rail']] },
-    { img:'Modbus-Bacnet-MBus-Products__ADW-002.jpg', brand:'ADF WEB', sku:'ADW-002', eyebrow:'Protocol conversion',
+    { img:'Modbus-Bacnet-MBus-Products__ADW-002.jpg', brand:'ADF WEB', sku:'ADW-002', price:'$768.91', note:'AUD · trade pricing on sign-in', eyebrow:'Protocol conversion',
       title:'HD67671 BACnet/IP Slave to Modbus Master converter',
       specs:[['Protocol','BACnet/IP'],['Role','Slave'],['Bridges','Modbus'],['Mount','DIN rail']] },
-    { img:'Data-Acquisition__LAJ-002.jpg', brand:'LABJACK', sku:'LAJ-002', eyebrow:'Data acquisition',
+    { img:'Data-Acquisition__LAJ-002.jpg', brand:'LABJACK', sku:'LAJ-002', price:'$159.76', note:'AUD · 3 quantity breaks · trade pricing on sign-in', eyebrow:'Data acquisition',
       title:'CB25 LabJack terminal board for digital I/O',
       specs:[['Type','Terminal board'],['For','Digital I/O'],['Fits','LabJack'],['Mount','Screw']] },
-    { img:'Sensors__GJS-002.jpg', brand:'GJY ELECTRONIC', sku:'GJS-002', eyebrow:'Temperature sensing',
+    { img:'Sensors__GJS-002.jpg', brand:'GJY ELECTRONIC', sku:'GJS-002', price:'$31.32', note:'AUD · 4 quantity breaks · trade pricing on sign-in', eyebrow:'Temperature sensing',
       title:'DS18B20 1-Wire waterproof digital temperature sensor',
       specs:[['Interface','1-Wire'],['Rating','Waterproof'],['Cable','15 m'],['Output','Digital']] }
   ];
@@ -1831,6 +1831,8 @@ class Component extends DCLogic {
     set(id('ocBrand'), p.brand);
     set(id('ocSku'), p.sku);
     set(id('ocTitle'), p.title);
+    if (p.price) set(id('ocPrice'), p.price);
+    if (p.note) set(id('ocPriceNote'), p.note);
     for (var k = 0; k < 4; k++) {
       if (!p.specs[k]) continue;
       set(id('ocSpecK' + (k+1)), p.specs[k][0]);
