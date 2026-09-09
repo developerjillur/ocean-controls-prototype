@@ -528,7 +528,7 @@ const CHANNELS = [
 
 const SELF_SERVE = [
   ['Track an order', 'Order status, invoices and backorder ETAs all sit in your account — no need to ask.', 'Open your account', 'account.html'],
-  ['Find a datasheet', '3,319 files across 1,743 products, free to download without signing in.', 'Search the library', 'datasheets.html'],
+  ['Find a datasheet', '1,241 files, free to download without signing in.', 'Search the library', 'datasheets.html'],
   ['Check stock and price', 'Live quantities from the Carrum Downs shelf, with quantity breaks shown on every product.', 'Browse the catalogue', 'shop.html']
 ];
 
@@ -762,7 +762,7 @@ class Component extends DCLogic {
         { k: 'Distributors', v: String(DISTRIBUTORS.length) },
         { k: 'Countries', v: '6' },
         { k: 'Regions', v: '3' },
-        { k: 'Own products resold', v: '93' }
+        { k: 'Own products resold', v: '94' }
       ],
       pickDistributor: () => {
         this.setState({ topic: 4, sent: false, touched: false });

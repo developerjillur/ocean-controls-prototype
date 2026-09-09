@@ -898,7 +898,7 @@ const SPECS = {
 const DESCRIPTIONS = {
   'KTA-387': [
     'The KTA-387 sits on a DIN rail between your instruments and your records. Two independent RS-485 ports let it poll one network while reporting on the other, and up to 100 channels of Modbus registers are written to a removable SD card.',
-    'One of the 93 products we design and build ourselves in Carrum Downs — so the person who answers the phone can open the firmware, not just the manual.'
+    'One of the 94 products we design and build ourselves in Carrum Downs — so the person who answers the phone can open the firmware, not just the manual.'
   ],
   'GJS-002': [
     'The DS18B20 is the workhorse digital temperature sensor: one data line, a 64-bit unique address per device, and enough of them on a single bus to instrument a whole plant room without a cable per point.',
@@ -1207,7 +1207,7 @@ class Component extends DCLogic {
       }),
 
       // home
-      stats: [['2,279', 'products stocked'], ['224', 'categories'], ['48', 'manufacturers'], ['3,319', 'datasheets free']].map(s => ({ n: s[0], label: s[1] })),
+      stats: [['2,279', 'products stocked'], ['224', 'categories'], ['48', 'manufacturers'], ['1,241', 'datasheets free']].map(s => ({ n: s[0], label: s[1] })),
       catTiles: HOME_TILES.map(name => {
         const c = CATS.filter(x => x[0] === name)[0];
         return {
@@ -1220,7 +1220,7 @@ class Component extends DCLogic {
       tierRows: [['1 – 4 items', this.money(121.42)], ['5 – 9 items', this.money(115.35)], ['10 – 24 items', this.money(109.28)], ['Trade account', this.money(103.21)]].map(t => ({ qty: t[0], each: t[1] + ' ea' })),
       benefits: [
         ['01', 'We hold the stock', 'One to three of every in-stock line on the shelf at Carrum Downs. Real counts, not a supplier feed.'],
-        ['02', 'The datasheet is free', '3,319 files across 1,743 products, no account needed.'],
+        ['02', 'The datasheet is free', '1,241 files, no account needed.'],
         ['03', 'Engineers answer', 'Advice is freely given by phone or email. No purchase order needed to ask.']
       ].map(b => ({ n: b[0], title: b[1], body: b[2] })),
 

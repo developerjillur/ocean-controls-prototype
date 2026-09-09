@@ -178,7 +178,7 @@
               <span style="width: 6px; height: 6px; background: #66d9ff;"></span>Authorised distributor
             </div>
             <h1 style="margin: 0 0 18px; font-size: 52px; line-height: 1.04; font-weight: 800; letter-spacing: -0.03em; color: #ffffff; max-width: 17em;">Forty-eight manufacturers, one purchase order.</h1>
-            <p style="margin: 0 0 30px; font-size: 18.5px; line-height: 1.6; color: #a9bed4; max-width: 40em;">Mean Well power supplies, Novus instrumentation, Leadshine motion, ADF Web gateways, Davis weather stations — held on our shelves in Carrum Downs, invoiced together, warranted locally. Plus 93 products of our own.</p>
+            <p style="margin: 0 0 30px; font-size: 18.5px; line-height: 1.6; color: #a9bed4; max-width: 40em;">Mean Well power supplies, Novus instrumentation, Leadshine motion, ADF Web gateways, Davis weather stations — held on our shelves in Carrum Downs, invoiced together, warranted locally. Plus 94 products of our own.</p>
             <div style="display: flex; gap: 12px;">
               <a href="shop.html" style="display: inline-flex; align-items: center; gap: 10px; padding: 15px 26px; background: #0276b8; color: #ffffff; font-size: 16px; font-weight: 600; text-decoration: none;" style-hover="background: #ffffff; color: #0a1f3d; text-decoration: none;">Browse the catalogue<span>→</span></a>
               <a href="#" style="display: inline-flex; align-items: center; padding: 15px 26px; border: 1px solid #3a5878; color: #ffffff; font-size: 16px; font-weight: 600; text-decoration: none;" style-hover="border-color: #ffffff; text-decoration: none;">Distributor enquiries</a>
@@ -287,7 +287,7 @@
               <span style="width: 22px; height: 1px; background: #66d9ff;"></span>Working the other way round
             </div>
             <h2 style="margin: 0 0 16px; font-size: 33px; line-height: 1.14; font-weight: 700; letter-spacing: -0.025em;">We are also somebody else's supplier</h2>
-            <p style="margin: 0 0 22px; font-size: 17px; line-height: 1.7; color: #b7cade; max-width: 40em;">The 93 products in our own range are resold by nine distributors across North America, Central America and Europe — six countries in total. If you want to carry the Ocean Controls range, or you want us to look at representing your equipment in Australia, that is a conversation worth having.</p>
+            <p style="margin: 0 0 22px; font-size: 17px; line-height: 1.7; color: #b7cade; max-width: 40em;">The 94 products in our own range are resold by nine distributors across North America, Central America and Europe — six countries in total. If you want to carry the Ocean Controls range, or you want us to look at representing your equipment in Australia, that is a conversation worth having.</p>
             <div style="display: flex; gap: 12px;">
               <a href="contact.html" style="padding: 14px 24px; background: #0276b8; color: #ffffff; font-size: 15.5px; font-weight: 600; text-decoration: none;" style-hover="background: #ffffff; color: #0a1f3d; text-decoration: none;">Become a distributor</a>
               <a href="#" style="padding: 14px 24px; border: 1px solid #3a5878; color: #ffffff; font-size: 15.5px; font-weight: 600; text-decoration: none;" style-hover="border-color: #ffffff; text-decoration: none;">Propose a brand</a>
@@ -777,7 +777,7 @@ class Component extends DCLogic {
         tag: active[0] === 'Ocean Controls' ? 'Our own range' : 'Authorised distributor',
         origin: active[8],
         blurb: active[0] === 'Ocean Controls'
-          ? 'The KTA range and everything else that carries our own name — 93 products designed, assembled and supported at 44 Frankston Gardens Drive. Firmware, spares and the engineer who drew the schematic are all in the same building.'
+          ? 'The KTA range and everything else that carries our own name — 94 products designed, assembled and supported at 44 Frankston Gardens Drive. Firmware, spares and the engineer who drew the schematic are all in the same building.'
           : active[7] + '. We hold ' + active[2] + ' ' + active[0] + ' lines in Carrum Downs, with ' + active[5] + ' documentation files on file and ' + active[6] + ' products carrying a published specification table.',
         logoBigStyle: this.logoStyle(active, '84px'),
         shopLabel: 'Shop all ' + active[2] + ' products',
@@ -812,7 +812,7 @@ class Component extends DCLogic {
       stats: [
         [String(BRANDS.length), 'manufacturers represented'],
         [total.toLocaleString('en-AU'), 'products across all brands'],
-        ['93', 'products of our own design'],
+        ['94', 'products of our own design'],
         [files.toLocaleString('en-AU'), 'documentation files on file'],
         ['9', 'overseas distributors resell us']
       ].map((s, i) => ({

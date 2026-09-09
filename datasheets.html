@@ -164,7 +164,7 @@
           <div style="display: inline-flex; align-items: center; gap: 10px; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #66d9ff; border: 1px solid rgba(111,208,245,0.35); padding: 6px 12px; margin-bottom: 24px;">
             <span style="width: 6px; height: 6px; background: #66d9ff;"></span>Technical library
           </div>
-          <h1 style="margin: 0 0 18px; font-size: 50px; line-height: 1.05; font-weight: 800; letter-spacing: -0.03em; color: #ffffff; max-width: 18em;">3,319 datasheets, manuals and tools. No email wall.</h1>
+          <h1 style="margin: 0 0 18px; font-size: 50px; line-height: 1.05; font-weight: 800; letter-spacing: -0.03em; color: #ffffff; max-width: 18em;">1,241 datasheets, manuals and tools. No email wall.</h1>
           <p style="margin: 0 0 26px; font-size: 18.5px; line-height: 1.6; color: #a9bed4; max-width: 40em;">Every file we hold on every product we sell — wiring diagrams, configuration software, dimensional drawings, conformity declarations. Search it before you buy, and again in two years when you are troubleshooting on site.</p>
 
           <div style="display: flex; height: 54px; background: #ffffff; border: 1px solid #163d74; max-width: 640px;">
@@ -811,10 +811,10 @@ class Component extends DCLogic {
       examples: EXAMPLES.map(x => ({ label: x, pick: () => this.setState({ query: x, page: 1 }) })),
 
       stats: [
-        ['3,319', 'files in the library'],
-        ['1,743', 'products documented'],
-        ['76%', 'of the catalogue covered'],
-        ['25', 'categories represented'],
+        ['1,241', 'files in the library'],
+        ['1,138', 'datasheets and manuals'],
+        ['106', 'configuration tools'],
+        ['48', 'manufacturers covered'],
         ['$0', 'to download any of it']
       ].map((s, i) => ({
         n: s[0], label: s[1],
