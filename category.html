@@ -140,7 +140,7 @@
             <span style="display: block; width: 15px; height: 2px; background: #ffffff;"></span>
           </span>
           Shop by category
-          <span style="font-family: 'JetBrains Mono', monospace; font-size: 12.5px; font-weight: 600; color: #ffffff;">237</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 12.5px; font-weight: 600; color: #ffffff;">224</span>
         </a>
         <a href="shop.html" style="display: flex; align-items: center; padding: 0 15px; color: #d6e4f2; font-size: 15px; font-weight: 500; text-decoration: none;" style-hover="background: #163d74; color: #ffffff; text-decoration: none;">New arrivals</a>
         <a href="shop.html" style="display: flex; align-items: center; padding: 0 15px; color: #d6e4f2; font-size: 15px; font-weight: 500; text-decoration: none;" style-hover="background: #163d74; color: #ffffff; text-decoration: none;">Clearance</a>
@@ -492,19 +492,21 @@ const SALE = { 'AKB-001': 202.35 };
 const CATEGORIES = [
   {
     name: 'Sensors',
-    eyebrow: 'Largest group in the catalogue · 569 products',
+    eyebrow: 'Largest group in the catalogue · 597 products',
     intro: 'Twenty-six subcategories covering proximity, pressure, temperature, level, flow, tilt, distance and current — from IBEST, Rika Sensor, DCBox, RION, Teracom and Senix.',
     intro2: 'If you are matching a sensor to an existing loop, the specification table on each product gives you the output signal, supply range and IP rating without opening the datasheet.',
-    shopCta: 'Shop all 569 sensors',
+    shopCta: 'Shop all 597 sensors',
     stats: [],
     subHeading: 'Twenty-six subcategories, sized by what is on the shelf',
     subBlurb: 'The bigger the number, the deeper the range. Inductive proximity and pressure transduction are where most of our sensor stock sits.',
     subs: [
       ['Inductive Proximity Sensors', 85], ['Pressure Transducers', 81], ['Temperature & Humidity', 65], ['PhotoElectric Switches', 44],
-      ['Inclinometers / Tilt Sensors', 39], ['Current Transducers', 34], ['RTD — PT100', 34], ['Float Switches', 32],
+      ['Inclinometers / Tilt Sensors', 39], ['Current Transducers', 34], ['RTD - PT100', 34], ['Float Switches', 32],
       ['Length & Distance', 31], ['Liquid Level Sensors', 31], ['Ultrasonic', 24], ['Thermocouples', 23],
-      ['Temperature Other', 20], ['1 Wire', 19], ['Capacitive Proximity', 17], ['Limit Switches', 13],
-      ['Load Cells', 10], ['Current Transformer', 10], ['CO2 Sensors', 8], ['Flow Sensors', 8]
+      ['Temperature Other', 20], ['1 Wire', 19], ['Capacitive Proximity Sensors', 17], ['Limit Switches', 13],
+      ['Current Transformer', 10], ['Load Cells', 10], ['CO2 Sensors', 8], ['Flow Sensors', 8],
+      ['Current / Voltage', 7], ['Light Sensor', 6], ['Accelerometers', 4], ['VOC - Air Quality', 3],
+      ['Electronic Compasses', 2], ['Hall Effect', 2]
     ],
     chooseHeading: 'Four questions that decide the sensor',
     chooseBlurb: 'Most returns in this category come down to one of four things being wrong. Answer these before you order and the part fits first time.',
@@ -516,12 +518,12 @@ const CATEGORIES = [
     ],
     popularHeading: '', products: [],
     brands: [
-      ['IBEST', 'IBEST.png', 80, 103, 'Inductive and capacitive proximity, shaft couplers'],
-      ['DCBox', 'DCBox.png', 56, 84, 'Pressure transducers and load cells'],
+      ['IBEST', 'IBEST.png', 79, 103, 'Inductive and capacitive proximity, shaft couplers'],
+      ['DCBox', 'DCBox.png', 62, 84, 'Pressure transducers and load cells'],
       ['RION', 'RION.png', 44, 44, 'Inclinometers, accelerometers, compasses'],
-      ['Rika Sensor', 'Rika-Sensor.png', 5, 44, 'Weather and water quality sensing'],
+      ['Teracom', 'Teracom.png', 25, 44, 'Ethernet monitoring and 1-Wire sensing'],
       ['Senix', 'Senix.png', 24, 24, 'ToughSonic ultrasonic distance and level'],
-      ['Teracom', 'Teracom.png', 18, 44, 'Ethernet monitoring and 1-Wire sensing']
+      ['Rika Sensor', 'Rika-Sensor.png', 9, 42, 'Weather and water quality sensing']
     ],
     docsHeadline: '735 files on 476 products',
     docRows: [['Files in this group', '735', '#0a1f3d'], ['Products documented', '476 of 569', '#157a45'], ['Coverage', '84%', '#157a45'], ['Files per product', '1.5', '#0a1f3d']],
@@ -530,14 +532,14 @@ const CATEGORIES = [
     articleTitle: 'Humidity & Temperature Sensor TSH202B',
     articleBody: 'A fully calibrated 1-Wire sensor with 3.0% RH accuracy and a 64-bit serial code — built for multi-zone monitoring where cable cost dominates.',
     related: [
-      ['Signal Conditioners', 68, 'Isolate and convert the signal your sensor produces'],
-      ['Panel Meters', 124, 'Display and alarm on the reading'],
-      ['Data Loggers', 30, 'Record it without a PC on site'],
+      ['Signal Conditioners', 73, 'Isolate and convert the signal your sensor produces'],
+      ['Panel Meters', 129, 'Display and alarm on the reading'],
+      ['Data Loggers', 37, 'Record it without a PC on site'],
       ['Weather', 77, 'Outdoor and environmental sensing']
     ],
     aboutHeading: 'The largest range we carry, and the one people call about most',
     aboutParas: [
-      'Sensors are 569 of our 2,279 products — a quarter of the catalogue — across twenty-six subcategories. Everything is held in our own warehouse at Carrum Downs, which means the quantity shown on a product page is a real count from a real shelf rather than a supplier feed.',
+      'Sensors are 597 of our 2,279 products — a quarter of the catalogue — across twenty-six subcategories. Everything is held in our own warehouse at Carrum Downs, which means the quantity shown on a product page is a real count from a real shelf rather than a supplier feed.',
       'The range spans the cheap and cheerful through to instrument grade: a DS18B20 probe at $19.93 sits in the same category as a Rika water quality sensor at $3,794. We stock both because both jobs come through the door.',
       'What we will not do is guess on your behalf. If the application is marginal — long cable runs, chemical exposure, a control loop that has to be stable at the bottom of the range — call before you order. Advice is freely given by our engineering staff over the phone or by email.'
     ],
@@ -553,14 +555,14 @@ const CATEGORIES = [
     eyebrow: 'Protocol gateways and IO · 139 products',
     intro: 'The parts that make a legacy plant talk to a modern building management system — Modbus RTU and TCP, BACnet MS/TP and IP, MQTT and M-Bus, from ADF Web, Novus, Teracom, Akytec and our own KTA range.',
     intro2: 'Sixty-two Modbus RTU IO modules, thirty dedicated gateways and twenty-two HVAC-specific units, all held in Carrum Downs.',
-    shopCta: 'Shop all 139 products',
+    shopCta: 'Shop all 152 products',
     stats: [],
-    subHeading: 'Eleven subcategories, mostly IO and gateways',
+    subHeading: 'Ten subcategories, mostly IO and gateways',
     subBlurb: 'If you are bridging two protocols, start with Gateways. If you are adding points to an existing network, start with the IO modules.',
     subs: [
       ['IO Modules Modbus RTU', 62], ['Gateways', 30], ['HVAC', 22], ['IO Modules Modbus TCP', 18],
       ['Loggers', 10], ['Temp / Humidity', 5], ['Software', 3], ['Wireless', 3],
-      ['IO Modules BACnet', 1], ['IO Modules MQTT', 1], ['M-Bus', 0]
+      ['IO Modules BACnet', 1], ['IO Modules MQTT', 1]
     ],
     chooseHeading: 'Get the direction right before you order',
     chooseBlurb: 'The most common reason a gateway comes back is that the conversion runs the wrong way. Master and slave are not interchangeable, and neither are RTU and TCP.',
@@ -573,11 +575,11 @@ const CATEGORIES = [
     popularHeading: '', products: [],
     brands: [
       ['ADF Web', 'ADF-Web.png', 19, 19, 'BACnet, Modbus, MQTT and M-Bus converters'],
+      ['Produal', 'Produal.png', 29, 40, 'HVAC sensing and building automation I/O'],
       ['Akytec', 'Akytec.png', 20, 43, 'Modbus I/O and programmable relays'],
-      ['Produal', 'Produal.png', 25, 40, 'HVAC sensing and building automation I/O'],
       ['Yotta Control', 'Yotta-Control.png', 17, 19, 'Modbus RTU and TCP I/O modules'],
-      ['Simex', 'Simex.png', 11, 26, 'Modbus I/O and waterproof panel meters'],
-      ['ATOP', 'ATOP.png', 7, 21, 'Protocol gateways and serial servers']
+      ['Simex', 'Simex.png', 9, 26, 'Modbus I/O and waterproof panel meters'],
+      ['ATOP', 'ATOP.png', 8, 21, 'Protocol gateways and serial servers']
     ],
     docsHeadline: '333 files on 135 products',
     docRows: [['Files in this group', '333', '#0a1f3d'], ['Products documented', '135 of 139', '#157a45'], ['Coverage', '97%', '#157a45'], ['Files per product', '2.4', '#157a45']],
@@ -586,10 +588,10 @@ const CATEGORIES = [
     articleTitle: 'Davis Instruments gateway upgrade',
     articleBody: 'KTA-402 replaces the KTA-302 for BACnet MS/TP, and the new KTA-382 combines Modbus TCP and RTU in one unit at the old price.',
     related: [
-      ['Controllers', 127, 'PID and process control on the same networks'],
-      ['Communications', 82, 'Serial converters, fibre and Ethernet'],
-      ['Industrial IoT', 22, 'Cellular routers and LoRaWAN controllers'],
-      ['Data Loggers', 30, 'Record what the network is carrying']
+      ['Controllers', 152, 'PID and process control on the same networks'],
+      ['Communications', 91, 'Serial converters, fibre and Ethernet'],
+      ['Industrial IoT', 39, 'Cellular routers and LoRaWAN controllers'],
+      ['Data Loggers', 37, 'Record what the network is carrying']
     ],
     aboutHeading: 'The bridge between what is installed and what the client wants',
     aboutParas: [
@@ -606,10 +608,10 @@ const CATEGORIES = [
   },
   {
     name: 'Power Supplies',
-    eyebrow: 'Second largest group · 281 products',
+    eyebrow: 'Second largest group · 282 products',
     intro: 'DIN rail, caged and enclosed supplies, DC-DC converters, plug packs, inverters and battery management — overwhelmingly Mean Well, whose range we hold 303 lines of.',
     intro2: 'Sixteen subcategories from a $0.85 mounting bracket to three-phase 415 VAC DIN rail units.',
-    shopCta: 'Shop all 281 supplies',
+    shopCta: 'Shop all 282 supplies',
     stats: [],
     subHeading: 'Sixteen subcategories, dominated by DC-DC and DIN rail',
     subBlurb: 'Most panel work starts in DIN Rail or DIN Rail ≥100 W. The DC-DC cage converters are for board-level and embedded jobs.',
@@ -629,26 +631,23 @@ const CATEGORIES = [
     ],
     popularHeading: '', products: [],
     brands: [
-      ['Mean Well / ESI', 'Mean-Well---ESI.png', 235, 303, 'The bulk of our power supply range'],
-      ['Saip Group', 'Saip-Group.jpg', 4, 38, 'Enclosures and control boxes'],
-      ['Novus', 'Novus.jpg', 6, 218, 'Process instrumentation and transmitters'],
-      ['Conch', 'Conch.png', 2, 61, 'Proximity sensing and solid state relays'],
-      ['DELTA', 'DELTA.png', 2, 37, 'PLCs, HMIs and drives'],
-      ['3onedata', '3onedata.png', 3, 29, 'Industrial Ethernet and converters']
+      ['Mean Well / ESI', 'Mean-Well---ESI.png', 267, 303, 'The bulk of our power supply range'],
+      ['Ocean Controls', 'Ocean-Controls.png', 2, 94, 'Our own DIN rail and bench supplies'],
+      ['Leadshine', 'Leadshine.png', 1, 132, 'Stepper and servo drive supplies']
     ],
     docsHeadline: '268 files on 268 products',
-    docRows: [['Files in this group', '268', '#0a1f3d'], ['Products documented', '268 of 281', '#157a45'], ['Coverage', '95%', '#157a45'], ['Files per product', '1.0', '#0a1f3d']],
+    docRows: [['Files in this group', '268', '#0a1f3d'], ['Products documented', '268 of 282', '#157a45'], ['Coverage', '95%', '#157a45'], ['Files per product', '1.0', '#0a1f3d']],
     hasArticle: false,
     articleKind: '', articleTitle: '', articleBody: '',
     related: [
       ['Electrical Terminals & Wiring', 90, 'DIN rail, terminals and cable glands'],
-      ['Enclosures', 48, 'Somewhere to mount it all'],
+      ['Enclosures', 69, 'Somewhere to mount it all'],
       ['Relays & Relay Cards', 112, 'Switching what the supply powers'],
-      ['Signal Conditioners', 68, 'Isolators and surge protection']
+      ['Signal Conditioners', 73, 'Isolators and surge protection']
     ],
     aboutHeading: 'Mostly Mean Well, because it is what people specify',
     aboutParas: [
-      'Two hundred and eighty-one power supplies across sixteen subcategories, and 235 of them are Mean Well. That is not laziness — it is what specifiers ask for, what electricians recognise, and what has the documentation and the compliance marks already sorted.',
+      'Two hundred and eighty-two power supplies across sixteen subcategories, and 267 of them are Mean Well. That is not laziness — it is what specifiers ask for, what electricians recognise, and what has the documentation and the compliance marks already sorted.',
       'The range runs from an $0.85 DIN rail mounting bracket to three-phase 415 VAC units. Documentation coverage is 95%, which for a category where the datasheet contains the derating curve is the number that matters.',
       'If you are building a panel and want the supply, the terminals, the enclosure and the surge protection on one purchase order, that is exactly what this catalogue is for. Call if you want the load sized properly first.'
     ],

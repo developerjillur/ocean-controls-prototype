@@ -154,7 +154,7 @@
           <span style="width: 18px; height: 1px; background: #0276b8;"></span>01 — Catalogue
         </div>
         <h2 style="margin: 0 0 4px; font-size: 23px; line-height: 1.15; font-weight: 700; letter-spacing: -0.02em; color: #0a1f3d;">Shop by category</h2>
-        <p style="margin: 0 0 16px; font-size: 15px; line-height: 1.55; color: #667380;">Twenty-nine groups, 237 categories.</p>
+        <p style="margin: 0 0 16px; font-size: 15px; line-height: 1.55; color: #667380;">Twenty-eight product groups, 224 categories.</p>
       </div>
       <div style="padding: 0 16px 8px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: #dbe2e8; border: 1px solid #dbe2e8;">
         <sc-for list="{{ catTiles }}" as="t" hint-placeholder-count="0">
@@ -166,7 +166,7 @@
         </sc-for>
       </div>
       <div style="padding: 12px 16px 22px;">
-        <button onClick="{{ openMenu }}" style="width: 100%; height: 44px; border: 1px solid #c9d3dc; background: #ffffff; color: #0e2a52; font-size: 15px; font-weight: 600; cursor: pointer;">All 237 categories →</button>
+        <button onClick="{{ openMenu }}" style="width: 100%; height: 44px; border: 1px solid #c9d3dc; background: #ffffff; color: #0e2a52; font-size: 15px; font-weight: 600; cursor: pointer;">All 224 categories →</button>
       </div>
 
       <div style="background: #f7f9fb; border-top: 1px solid #dbe2e8; padding: 22px 16px 24px;">
@@ -848,30 +848,34 @@ const NEW_SKUS = { 'KTA-387': 1, 'KTA-397': 1, 'ULC-075': 1, 'ADW-003': 1 };
 const SALE = { 'AKB-001': 202.35 };
 
 const CATS = [
-  ['Sensors', 569, ['Inductive Proximity|85', 'Pressure Transducers|81', 'Temperature & Humidity|65', 'PhotoElectric Switches|44', 'Inclinometers / Tilt|39', 'Current Transducers|34', 'RTD - PT100|34', 'Float Switches|32']],
-  ['Power Supplies', 281, ['DC-DC Converter Cage|80', 'Caged / Enclosed|45', 'DIN Rail ≥100 W|36', 'DIN Rail|33', 'IP67 & LED|21', 'MultiRail|13']],
-  ['Modbus, BACnet & M-Bus', 139, ['IO Modules Modbus RTU|62', 'Gateways|30', 'HVAC|22', 'IO Modules Modbus TCP|18', 'Loggers|10']],
-  ['Controllers', 127, ['Process (PID)|53', 'Temperature|29', 'HVAC|15', 'Ethernet|12', '4G / 5G|11', 'Process (On-Off)|11']],
-  ['Panel Meters', 124, ['Process Meters ≥48×96|29', 'Counters|15', 'Process Meters 24×48|14', 'Speed & Tachometers|13', 'Timers|11']],
-  ['Relays & Relay Cards', 112, ['SSRs & Accessories|28', 'Alarm & Fault|22', 'DIN Rail Mount|19', 'Relay Cards|15', 'Contactors|10']],
-  ['Motor Drivers & Controllers', 102, ['Accessories|34', 'Stepper Drivers Open Loop|22', 'VFDs|14', 'Motion Controllers|13']],
-  ['Electrical Terminals & Wiring', 90, ['DIN Rail & Accessories|26', 'Special Function Terminals|25', 'Wire Labels|17', 'Cable Glands|9']],
-  ['Motors & Accessories', 85, ['Stepper w/ Encoder|17', 'Stepper Open Loop|16', 'Shaft Couplers|13', 'Encoders|7']],
-  ['Communications', 82, ['Adapters|21', 'Wireless Accessories|18', 'Fibre Converters|12', 'Serial Converters|11']],
-  ['Weather', 77, ['Sensors|53', 'Station Accessories|15', 'Modbus Gateways|3', 'Station Kits|3', 'BACnet Gateways|2']],
-  ['Signal Conditioners', 68, ['Signal Isolators|38', 'Isolated Converters|21', 'Non-isolated|14', 'Load Cell|9']],
-  ['Electrical Switches', 59, ['22 mm Switches|37', 'Control Stations|21', 'Foot / Lever|2']],
-  ['PLCs & HMIs', 58, ['PLRs Teco|17', 'PLCs Delta|10', 'PLRs Akytec|9', 'I/O Modules Delta|8', 'HMIs Emko|6']],
-  ['Enclosures', 48, ['Plastic|25', 'ABS Control Box|22', 'DIN Rail PCB Mounts|15', 'DIN Rail Enclosures|4']],
-  ['Data Acquisition', 43, ['RS-485 ASCII|31', 'LabJack Accessories|27', 'LabJack Modules|15']],
-  ['Prototyping', 39, ['Circuit Breakers|14', 'Fans|12', 'Wireless & RFID|12']],
-  ['Lighting', 33, ['Strip Lighting|14', 'Light Towers|9', 'Strip Accessories|6', 'Warning Lights|4']],
-  ['Data Loggers', 30, ['Universal Input|14', 'Accessories|6', 'Temperature & Humidity|5', 'Voltage & Current|5']],
-  ['Industrial IoT', 22, ['Wireless|24', '3G / 4G Routers|8', 'Remote Monitoring|5', 'SMS Alarming|3']],
-  ['Timers', 17, ['Panel Mount|11', 'Timeclocks|7', 'DIN Rail|6']],
-  ['Large Displays', 13, ['Process 4-20 mA|6', 'Counter / Timer|3', 'Freq-Tacho|3']],
-  ['Test Equipment', 12, ['Calibrators & Generators|12', 'Temperature|1']],
-  ['Software', 8, ['DAQFactory|3', 'Configuration tools|3', 'Modbus utilities|2']]
+  ['Sensors', 597, ['Inductive Proximity Sensors|85','Pressure Transducers|81','Temperature & Humidity|65','PhotoElectric Switches|44','Inclinometers / Tilt Sensors|39','Current Transducers|34','RTD - PT100|34','Float Switches|32','Length & Distance|31','Liquid Level Sensors|31','Ultrasonic|24','Thermocouples|23','Temperature Other|20','1 Wire|19','Capacitive Proximity Sensors|17','Limit Switches|13','Current Transformer|10','Load Cells|10','CO2 Sensors|8','Flow Sensors|8','Current / Voltage|7','Light Sensor|6','Accelerometers|4','VOC - Air Quality|3','Electronic Compasses|2','Hall Effect|2']],
+  ['Power Supplies', 282, ['DC-DC Converter Cage|80','Caged / Enclosed|45','DIN Rail ≥100 W|36','DIN Rail|33','IP67 & LED Supplies|21','DC-DC Converter DIN Rail|15','DIN Rail (3Φ / 415 VAC)|13','MultiRail|13','Power Adapters / Plug Packs|13','DC-AC Inverters|11','Battery Management|10','Accessories|6','DIN Rail with UPS Function|2','KNX|2','DIN Rail 24 VAC to DC|1','Motor Drive Supplies|1']],
+  ['Controllers', 152, ['Process (PID)|53','Temperature|29','HVAC|15','4G / 5G|12','Ethernet|12','Process (On-Off)|11','Temperature & Humidity|8','PC Based|4','Level|3','Temperature Solar|3','Generator Controllers|2','IR & RF Remote|1']],
+  ['Modbus, BACnet & M-Bus', 152, ['IO Modules Modbus RTU|62','Gateways|30','HVAC|22','IO Modules Modbus TCP|18','Loggers|10','Temp / Humidity|5','Software|3','Wireless|3','IO Modules BACnet|1','IO Modules MQTT|1']],
+  ['Panel Meters', 129, ['Process Meters (≥48×96 mm)|29','Counters|15','Process Meters (24×48 mm)|14','Speed & Tachometers|13','Timers|11','IP65-7 Waterproof|9','Temperature Meters|9','Load Cell Meters|8','Flow and Totaliser Meters|7','MultiChannel|7','Process Meters (48×48 mm)|7','AC Power Meters|5','DC Generator|5','Serial RS-485|4','Accessories|3']],
+  ['Relays & Relay Cards', 112, ['SSRs & Accessories|28','Alarm & Fault|22','DIN Rail Mount|19','Relay Cards|15','Panel Mount & PCB|11','Contactors|10','Slimline|6','Latching and Sequence|3']],
+  ['Motor Drivers & Controllers', 105, ['Accessories|34','Stepper Drivers (Open Loop)|22','Variable Frequency Drives|14','Motors and Motion Controllers|13','Industrial Servo Drivers|9','Stepper Drivers (Closed Loop)|7','Single Phase Motor Controller|2','VFD Accessories|2','DC Motor Drivers|1','Stepper Drivers|1','Stepper Power Supplies|1']],
+  ['Communications', 91, ['Adapters|21','Wireless Accessories|18','Fibre Converters|12','Serial Converters|11','Serial Servers|7','Wireless|7','Ethernet|6','Surge Protection|5','USB Converters|4','CAN Bus|3']],
+  ['Electrical Terminals & Wiring', 90, ['DIN Rail and Accessories|26','DIN Rail Special Function Terminals|25','Wire Labels|17','DIN Rail Screw Terminals|13','Cable Glands|9']],
+  ['Motors & Accessories', 86, ['Stepper Motors with Encoder (Closed Loop)|17','Stepper Motors (Open Loop)|16','Shaft Couplers & Adaptors|13','Encoders|7','Integrated Stepper Motors (Closed Loop)|7','Industrial Servo Motors|6','Integrated Stepper Motors (Open Loop)|5','DC Motors|4','Gear Boxes|3','RC Servo Motors|3','Integrated Servo Motors|2']],
+  ['Weather', 77, ['Sensors|51','Weather Station Accessories|15','Modbus Gateways|3','Weather Station Kits|3','BACnet Gateways|2','BACnet Weather Station Kit|2','Modbus Weather Station Kits|1']],
+  ['Data Acquisition', 73, ['RS-485 ASCII Protocol|31','LabJack Accessories|27','LabJack Modules|15']],
+  ['Signal Conditioners', 73, ['Signal Isolators|38','Isolated Converters|21','Non-isolated Converters|14','Load Cell|9','Surge Arrester|3']],
+  ['Enclosures', 69, ['Plastic|25','ABS Control Box|22','DIN Rail PCB Mounts|15','DIN Rail Enclosures|4','Aluminium|2','Accessories|1']],
+  ['PLCs & HMIs', 62, ['PLRs Teco|17','PLCs Delta|10','PLRs Akytec|9','I / O Modules Delta|8','Accessories|7','HMIs Emko|6','HMIs Delta|5','HMIs Conch|2']],
+  ['Electrical Switches', 60, ['22 mm Switches & Indicators|37','Control Stations|21','Foot / Lever|2']],
+  ['Prototyping', 44, ['Circuit Breakers|14','Fans|12','Wireless & RFID|12','Switches & Buttons|3','Regulators & Converters|2','Solar Panel|1']],
+  ['Industrial IoT', 39, ['Wireless|24','3G / 4G Routers|8','Remote Monitoring & Cloud|5','SMS Alarming|4','Accessories|2']],
+  ['Data Loggers', 37, ['Universal Input|14','Accessories|6','Temperature & Humidity|5','Voltage & Current|5','Event and Pulse|3']],
+  ['Lighting', 33, ['Strip Lighting|14','Light Towers|9','Strip Lighting Accessories|6','Warning Lights|4']],
+  ['Timers', 26, ['Panel Mount|11','Timeclocks|7','DIN Rail|6']],
+  ['Computer Products', 20, ['Leads & Cables|17','Gender Changers & Adapters|3']],
+  ['Large Displays', 20, ['Process 4-20mA / 0-10 V|6','Counter / Timer|3','Freq-Tacho|3','Modbus-Serial|2','Temperature|2','Universal|2','Accessories|1','Load Cell|1']],
+  ['CNC', 17, ['CNC Accessories|9','CNC Controllers|8']],
+  ['Security', 17, ['Detection|14','Identification|2']],
+  ['Test Equipment', 14, ['Calibrators & Generators|12','Configuration Services|1','Temperature|1']],
+  ['Software', 8, []],
+  ['Arduino', 7, []]
 ];
 
 const HOME_TILES = ['Sensors', 'Power Supplies', 'Modbus, BACnet & M-Bus', 'Controllers', 'Panel Meters', 'Relays & Relay Cards'];
@@ -1203,7 +1207,7 @@ class Component extends DCLogic {
       }),
 
       // home
-      stats: [['2,279', 'products stocked'], ['237', 'categories'], ['48', 'manufacturers'], ['3,319', 'datasheets free']].map(s => ({ n: s[0], label: s[1] })),
+      stats: [['2,279', 'products stocked'], ['224', 'categories'], ['48', 'manufacturers'], ['3,319', 'datasheets free']].map(s => ({ n: s[0], label: s[1] })),
       catTiles: HOME_TILES.map(name => {
         const c = CATS.filter(x => x[0] === name)[0];
         return {
@@ -1242,10 +1246,10 @@ class Component extends DCLogic {
       shopCatName: st.shopCat || 'All products',
       shopBlurb: st.shopCat
         ? 'Held in stock in Carrum Downs, shipped Australia-wide within two business days.'
-        : 'The full catalogue — 2,279 products across 237 categories from 48 manufacturers.',
+        : 'The full catalogue — 2,279 products across 224 categories from 48 manufacturers.',
       shopStats: st.shopCat
         ? [{ n: shopSkus.length, k: 'shown' }, { n: '48', k: 'brands' }, { n: '2 days', k: 'dispatch' }]
-        : [{ n: '2,279', k: 'products' }, { n: '237', k: 'categories' }, { n: '48', k: 'brands' }],
+        : [{ n: '2,279', k: 'products' }, { n: '224', k: 'categories' }, { n: '48', k: 'brands' }],
       shopShowing: 'Showing ' + shopSkus.length + ' photographed products' + (filterCount ? ' · ' + filterCount + ' filters on' : ''),
       shopProducts: shopSkus.map(s => this.card(s)),
       isTwoCol: st.density === 0,
@@ -1429,7 +1433,7 @@ class Component extends DCLogic {
       closeMenu: () => this.setState({ menuOpen: false, menuCat: null }),
       menuAtRoot: st.menuCat === null,
       menuInCat: st.menuCat !== null,
-      menuTitle: menuCat ? menuCat[0] : '237 categories',
+      menuTitle: menuCat ? menuCat[0] : '224 categories',
       menuCats: CATS.map((c, i) => ({
         name: c[0], count: c[1],
         open: () => this.setState({ menuCat: i })
