@@ -1436,16 +1436,15 @@ class Component extends DCLogic {
       hasPills: pills.length > 0,
       pills: pills,
 
-      allCatCount: all,
+      allCatCount: CATS.reduce(function (n, c) { return n + c[1]; }, 0),
       allCatStyle: 'width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 7px 16px; border: 0; cursor: pointer; text-align: left; font-family: inherit; font-size: 14px;'
         + ' border-left: 3px solid ' + (st.cat === null ? '#0276b8' : 'transparent') + ';'
         + ' background: ' + (st.cat === null ? '#f2f9fd' : 'none') + ';'
         + ' color: ' + (st.cat === null ? '#0a1f3d' : '#163d74') + '; font-weight: ' + (st.cat === null ? '600' : '400') + ';',
       catList: CATS.map((c, i) => {
         const on = st.cat === i;
-        const have = RAW.filter(r => r[8] === c[0]).length;
         return {
-          name: c[0], count: have,
+          name: c[0], count: c[1],
           open: on,
           style: 'width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 7px 16px; border: 0; cursor: pointer; text-align: left; font-family: inherit; font-size: 14px;'
             + ' border-left: 3px solid ' + (on ? '#0276b8' : 'transparent') + ';'
