@@ -1,0 +1,30 @@
+{
+  "name": "ocean-controls-rebuild",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "author": "Jillur Rahman",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 3274 --strictPort",
+    "build": "tsc --noEmit && vite build && node scripts/emit-routes.mjs",
+    "preview": "vite preview --host 127.0.0.1 --port 3275 --strictPort",
+    "test": "node --experimental-strip-types --test src/domain/*.test.ts",
+    "format": "prettier --write src scripts/emit-routes.mjs vite.config.ts"
+  },
+  "dependencies": {
+    "lucide-react": "1.42.0",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@types/react": "19.2.18",
+    "@types/react-dom": "19.2.7",
+    "axe-core": "^4.13.0",
+    "linkedom": "^0.18.13",
+    "playwright-core": "1.63.0",
+    "prettier": "3.9.6",
+    "typescript": "7.0.2",
+    "vite": "8.2.2"
+  }
+}

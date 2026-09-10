@@ -1,0 +1,1535 @@
+{
+  "distributors": [
+    {
+      "name": "Electronics123",
+      "region": "North America",
+      "url": "https://www.electronics123.com/shop",
+      "paras": [
+        "Electronics123 sells a range of our electronic kits and modules. They will also special-order items they do not yet carry in stock. For further information, feel free to contact them at:",
+        "Electronics123 Inc\nJohan Smit PO Box 21, Columbiana, OH 44408\nPh: 1-888-549-3749 (USA & Canada)\nPh: (330) 482-9944\nFax: (330)-266-7307\nEmail: general@electronics123.com"
+      ],
+      "image": "assets/products/distributor-0.JPG",
+      "emails": [
+        "general@electronics123.com"
+      ],
+      "phones": [
+        {
+          "label": "Ph: 1-888-549-3749 (USA & Canada)",
+          "value": "18885493749"
+        },
+        {
+          "label": "Ph: (330) 482-9944",
+          "value": "3304829944"
+        }
+      ]
+    },
+    {
+      "name": "Scales Instruments",
+      "region": "North America",
+      "url": "https://www.scaledinstruments.com/",
+      "paras": [
+        "Scaled Instruments is Davis Instruments recommended part supplier and an authorized dealer.",
+        "Scaled Instruments\nRyan Wilhour\n14260 W Newberry Road #151\nNewberry, FL 32669-2765\nPhone: 352-262-6119\nWeb: www.scaledinstruments.com\nEmail: ryanwilhour@gmail.com"
+      ],
+      "image": "assets/products/distributor-1.png",
+      "emails": [
+        "ryanwilhour@gmail.com"
+      ],
+      "phones": [
+        {
+          "label": "Phone: 352-262-6119",
+          "value": "3522626119"
+        }
+      ]
+    },
+    {
+      "name": "Disime -Mexico",
+      "region": "Central America",
+      "url": "https://disime.com.mx/",
+      "paras": [
+        "Disime sells a range of our electronic kits and also a range of our Davis Instrument Weather Station Interface. For further information, feel free to contact them at:",
+        "DIRECCIÓN :\nPlaya Villa del Mar 180, Iztacalco,\nMilitar Marte, 08830\nCiudad de México, CDMX",
+        "TELEFONO :\n1) (55) 5634 1091\n2) (55) 5634 1095\n3) (55)  5634 1073\n4) (55) 5634 0829",
+        "CORREO :\nventas@disime.com.mx"
+      ],
+      "image": "assets/products/distributor-2.png",
+      "emails": [
+        "ventas@disime.com.mx"
+      ],
+      "phones": []
+    },
+    {
+      "name": "PDIVM",
+      "region": "Central America",
+      "url": "https://pdivm.com.mx/",
+      "paras": [
+        "PDIVM sells a range of our Davis Instrument Weather Station Interface. For further information, feel free to contact them at:",
+        "DIRECCIÓN:\nBosques de América 7\nCol.Bosques de Aragon\nCP. 57170\nNezahualcóyotl, Edo. de Méx.",
+        "TELEFONO:\n(55) 24 56 91 98",
+        "CORREO:\nventas@pdivm.com.mx"
+      ],
+      "image": "assets/products/distributor-3.png",
+      "emails": [
+        "ventas@pdivm.com.mx"
+      ],
+      "phones": []
+    },
+    {
+      "name": "CIMA TECHNOLOGIE",
+      "region": "Europe",
+      "url": "http://www.davis-meteo.com/",
+      "paras": [
+        "CIMA TECHNOLOGIE sells a range of our Davis Instrument Weather Station Interface modules. They can be contacted at:",
+        "CIMA TECHNOLOGIE\n142 Allee du Berfayet\nMontanay 69250\nFrance\nPh: 33/(0)4.78.91.41.05 (France)\nEmail: info@davis-meteo.com"
+      ],
+      "image": "assets/products/distributor-4.JPG",
+      "emails": [
+        "info@davis-meteo.com"
+      ],
+      "phones": [
+        {
+          "label": "Ph: 33/(0)4.78.91.41.05 (France)",
+          "value": "330478914105"
+        }
+      ]
+    },
+    {
+      "name": "Darrera S.A",
+      "region": "Europe",
+      "url": "https://www.darrera.com/wp/en/",
+      "paras": [
+        "Darrera, S.A. sell a range of our Davis Instrument Weather Station Interface modules in Spain and Portugal. They can be contacted at:",
+        "Darrera, S.A.\nCarrer de I'Església 5-7-9\n08950 Esplugues de Llobregat\nBarcelona\nSpain\nPh: +34 934 734 532 (Spain)\nFax: +34 934 735 708\nEmail: sales@darrera.com"
+      ],
+      "image": "assets/products/distributor-5.jpg",
+      "emails": [
+        "sales@darrera.com"
+      ],
+      "phones": [
+        {
+          "label": "Ph: +34 934 734 532 (Spain)",
+          "value": "+34934734532"
+        }
+      ]
+    },
+    {
+      "name": "ILKKA LILJA Oy Ltd",
+      "region": "Europe",
+      "url": "https://iloy.fi/?language=english&file&area",
+      "paras": [
+        "Sell a range of our Davis Instrument Weather Station Interface modules. They can be contacted at:",
+        "ILKKA LILJA Oy Ltd\nITU 2\n40530 Jyvaskyla\nFINLAND\nPh: +358 14 3722134\nFax: +358 14 3721441\nEmail: iloy@iloy.fi"
+      ],
+      "image": "assets/products/distributor-6.JPG",
+      "emails": [
+        "iloy@iloy.fi"
+      ],
+      "phones": [
+        {
+          "label": "Ph: +358 14 3722134",
+          "value": "+358143722134"
+        }
+      ]
+    },
+    {
+      "name": "Meteo-Shopping",
+      "region": "Europe",
+      "url": "https://www.meteo-shopping.com/fr/",
+      "paras": [
+        "Meteo-Shopping sell a range of our Davis Instrument Weather Station Interface modules. They can be contacted at:",
+        "Meteo-Shopping\n2 Rue des peupliers\n56490 Saint Malo des trois fontaines\nFrance\nPh: 33/(0)2.30.96.03.63 (France)\nEmail: commercial@meteo-shopping.fr"
+      ],
+      "image": "assets/products/distributor-7.png",
+      "emails": [
+        "commercial@meteo-shopping.fr"
+      ],
+      "phones": [
+        {
+          "label": "Ph: 33/(0)2.30.96.03.63 (France)",
+          "value": "330230960363"
+        }
+      ]
+    },
+    {
+      "name": "Prodata Weather Systems-The UK Davis Specialists",
+      "region": "Europe",
+      "url": "https://www.weatherstations.co.uk/",
+      "paras": [
+        "Prodata Weather Systems-The UK Davis Specialists sell a range of our Davis Instrument Weather Station Interface modules. They can be contacted at:",
+        "Prodata Weather Systems-The UK Davis Specialists\nProdata Associates Ltd\n14 B Egremont Street\nELY Cambs CB6 1AE\nUK\nPh: 01353 664175 (UK)\nFax: 01353 666604\nEmail: sales@prodata.co.uk"
+      ],
+      "image": "assets/products/distributor-8.JPG",
+      "emails": [
+        "sales@prodata.co.uk"
+      ],
+      "phones": [
+        {
+          "label": "Ph: 01353 664175 (UK)",
+          "value": "01353664175"
+        }
+      ]
+    },
+    {
+      "name": "Salvarani srl",
+      "region": "Europe",
+      "url": "https://www.meteo-shop.com/",
+      "paras": [
+        "Salvarani srl sell a range of our Davis Instrument Weather Station Interface modules. They can be contacted at:",
+        "Via Buonarroti, 2\n42028 Poviglio (RE)\nItaly\nTel: +39 0522 969 177\nFax: +39 0522 960 612\nEmail: simone.m@salvarani.it"
+      ],
+      "image": "assets/products/distributor-9.png",
+      "emails": [
+        "simone.m@salvarani.it"
+      ],
+      "phones": [
+        {
+          "label": "Tel: +39 0522 969 177",
+          "value": "+390522969177"
+        }
+      ]
+    },
+    {
+      "name": "ELJI Elektronik",
+      "region": "Europe",
+      "url": "https://www.elji.se/",
+      "paras": [
+        "ELJI Elektronik sell a range of our Davis Instrument Weather Station Interface modules. For futher information, feel free to contact them at:",
+        "ELJI Elektronik\nSabyvagen 79,\n47193 Kallekarr\nSweden\nTel: 0304-669950\nEmail: info@elji.se"
+      ],
+      "image": "assets/products/distributor-10.gif",
+      "emails": [
+        "info@elji.se"
+      ],
+      "phones": [
+        {
+          "label": "Tel: 0304-669950",
+          "value": "0304669950"
+        }
+      ]
+    },
+    {
+      "name": "Weathershop GmbH",
+      "region": "Europe",
+      "url": "https://www.weathershop.de/",
+      "paras": [
+        "Weathershop GmbH\nLerchenhöhe 5, 85276 Pfaffenhofen\nGermany.\nTel: +49 173605 5148\nEmail: info@weathershop.de"
+      ],
+      "image": "assets/products/distributor-11.png",
+      "emails": [
+        "info@weathershop.de"
+      ],
+      "phones": [
+        {
+          "label": "Tel: +49 173605 5148",
+          "value": "+491736055148"
+        }
+      ]
+    }
+  ],
+  "policies": [
+    {
+      "id": "shipping",
+      "title": "Shipping & Delivery",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "Dispatch"
+        },
+        {
+          "kind": "p",
+          "text": "In-stock orders are dispatched within 2 business days."
+        },
+        {
+          "kind": "p",
+          "text": "Shipping options"
+        },
+        {
+          "kind": "p",
+          "text": "We deliver across Australia and internationally by any of the following methods:"
+        },
+        {
+          "kind": "p",
+          "text": "Australia Post Express"
+        },
+        {
+          "kind": "p",
+          "text": "Australia Post Parcel Post"
+        },
+        {
+          "kind": "p",
+          "text": "DHL"
+        },
+        {
+          "kind": "p",
+          "text": "FedEx (only international)"
+        },
+        {
+          "kind": "p",
+          "text": "Freight account. We'll email packaging dimensions when the shipment is ready to be book."
+        },
+        {
+          "kind": "p",
+          "text": "*Transit times vary depending on the shipping method and destination."
+        },
+        {
+          "kind": "p",
+          "text": "Pickup - Carrum Downs, Victoria, 3201"
+        },
+        {
+          "kind": "p",
+          "text": "Order before 11am to collect after 2pm the same day. Mon–Fri, 9am–5pm, excludes public holidays."
+        }
+      ]
+    },
+    {
+      "id": "returns",
+      "title": "Returns and Warranty",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "RETURNS"
+        },
+        {
+          "kind": "p",
+          "text": "How to return an item Contact us before sending anything back. Email info@oceancontrols.com.au or call +61 3 9708 2390. We'll confirm eligibility and guide you to the return process."
+        },
+        {
+          "kind": "p",
+          "text": "Return window 14 days from dispatch date."
+        },
+        {
+          "kind": "p",
+          "text": "Condition required Items must be unused and in original packaging, including all documentation and manuals."
+        },
+        {
+          "kind": "p",
+          "text": "Restocking fee A 20% restocking fee applies to all accepted returns. Return shipping costs are the customer's responsibility."
+        },
+        {
+          "kind": "p",
+          "text": "Non-returnable items"
+        },
+        {
+          "kind": "p",
+          "text": "Custom-made or specially imported products"
+        },
+        {
+          "kind": "p",
+          "text": "Software licences (some software have trial versions available)"
+        },
+        {
+          "kind": "p",
+          "text": "Items not in original, as-new condition"
+        },
+        {
+          "kind": "p",
+          "text": "WARRANTY"
+        },
+        {
+          "kind": "p",
+          "text": "How to make a warranty claim Before returning anything, please contact us. Our engineers can often resolve the issue remotely. If a return is required, our team will provide you with a warranty form to include with the goods."
+        },
+        {
+          "kind": "p",
+          "text": "What's covered Defects in materials and workmanship under normal use and correct installation."
+        },
+        {
+          "kind": "p",
+          "text": "What's not covered The warranty does not cover damage or failures caused by factors outside our control, including incorrect installation, unauthorised alterations or modifications, or any installation or use not recommended by the manufacturer."
+        },
+        {
+          "kind": "p",
+          "text": "Standard warranty All products carry a 12-month warranty from the date of purchase unless stated otherwise."
+        },
+        {
+          "kind": "p",
+          "text": "Extended warranty"
+        },
+        {
+          "kind": "p",
+          "text": "Labjack: 5 Years"
+        },
+        {
+          "kind": "p",
+          "text": "Atop: 5 Years"
+        },
+        {
+          "kind": "p",
+          "text": "MeanWell: 3 Years"
+        },
+        {
+          "kind": "p",
+          "text": "Teracom: 3 Years"
+        },
+        {
+          "kind": "p",
+          "text": "Novus: 3 Years"
+        }
+      ]
+    }
+  ],
+  "services": [
+    {
+      "kind": "p",
+      "text": "Industrial and Technical Software Services"
+    },
+    {
+      "kind": "p",
+      "text": "Ocean Controls provides engineering design, software solutions, support, and training for the industrial and technical sectors. Using structured methodologies and procedures we can provide a complete reliable system to suit your needs. We offer the following services:"
+    },
+    {
+      "kind": "p",
+      "text": "Custom-designed electronics hardware for volumes from one-off prototypes to tens of thousands of units"
+    },
+    {
+      "kind": "p",
+      "text": "Modification or augmentation of off-the-shelf hardware"
+    },
+    {
+      "kind": "p",
+      "text": "Embedded programming"
+    },
+    {
+      "kind": "p",
+      "text": "PLC programming (Delta, Teco, Akytec, etc) in standard Ladder, C and assembly languages"
+    },
+    {
+      "kind": "p",
+      "text": "Human Machine Interface (HMI) development"
+    },
+    {
+      "kind": "p",
+      "text": "C/C++ for embedded systems and desktop applications"
+    },
+    {
+      "kind": "p",
+      "text": "Instrumentation and custom electronics ranging from one-off and prototype to large-scale"
+    },
+    {
+      "kind": "p",
+      "text": "Custom programming for Arduino open-source controllers"
+    },
+    {
+      "kind": "p",
+      "text": "A range of internet technologies for static and dynamic web pages served by embedded devices"
+    },
+    {
+      "kind": "p",
+      "text": "Electrical engineering analysis and expert advice for your project"
+    },
+    {
+      "kind": "p",
+      "text": "Ocean Controls has the engineering and software expertise to produce solutions for the most demanding of environments. We have produced engineering and technical software for the following types of applications:"
+    },
+    {
+      "kind": "p",
+      "text": "Motion control using stepper motors, servo motors, and linear actuators in a variety of configurations"
+    },
+    {
+      "kind": "p",
+      "text": "Process control programs for water treatment and wastewater treatment plants"
+    },
+    {
+      "kind": "p",
+      "text": "Embedded code for motor controllers and Modbus I/O"
+    },
+    {
+      "kind": "p",
+      "text": "Programs for radio signal level logging and carrying out radio path surveys"
+    },
+    {
+      "kind": "p",
+      "text": "Programs for automatic dialing and monitoring of tank levels"
+    },
+    {
+      "kind": "p",
+      "text": "Ocean Controls also offers a wide range of industrial Automation Equipment like:"
+    },
+    {
+      "kind": "p",
+      "text": "Data Acquisition"
+    },
+    {
+      "kind": "p",
+      "text": "Data Loggers"
+    },
+    {
+      "kind": "p",
+      "text": "Electrical Switches"
+    },
+    {
+      "kind": "p",
+      "text": "Industrial IoT"
+    },
+    {
+      "kind": "p",
+      "text": "Panel Meters"
+    },
+    {
+      "kind": "p",
+      "text": "Large Displays"
+    },
+    {
+      "kind": "p",
+      "text": "Modbus and BACnet Products"
+    },
+    {
+      "kind": "p",
+      "text": "Stepper / Servo Motors"
+    },
+    {
+      "kind": "p",
+      "text": "Motor Drivers"
+    },
+    {
+      "kind": "p",
+      "text": "Sensor (Weather, Distance, Level, etc)"
+    },
+    {
+      "kind": "p",
+      "text": "Signal Conditioner"
+    },
+    {
+      "kind": "p",
+      "text": "Timers"
+    },
+    {
+      "kind": "p",
+      "text": "PLC / HMI"
+    },
+    {
+      "kind": "p",
+      "text": "Software Products Developed"
+    },
+    {
+      "kind": "p",
+      "text": "We have developed the following we sell."
+    },
+    {
+      "kind": "p",
+      "text": "ModbusView TCP: Packages that simulate Modbus master and slave devices on a PC"
+    },
+    {
+      "kind": "p",
+      "text": "Weathercloud Feature: Add to your KTA-382/401/402 to include cloud based dashboard via Weathercloud."
+    },
+    {
+      "kind": "p",
+      "text": "Weatherunderground Feature: Add to your KTA-382/401/402 to include cloud based dashboard via Weatherunderground."
+    },
+    {
+      "kind": "p",
+      "text": "Customers"
+    },
+    {
+      "kind": "p",
+      "text": "Organizations that have contracted us for custom development and product development include companies such as:"
+    },
+    {
+      "kind": "p",
+      "text": "The Shepherd Ag"
+    },
+    {
+      "kind": "p",
+      "text": "Gippsland Water"
+    },
+    {
+      "kind": "p",
+      "text": "Metro Trains"
+    },
+    {
+      "kind": "p",
+      "text": "Schneider Electric"
+    },
+    {
+      "kind": "p",
+      "text": "Queensland Rail"
+    },
+    {
+      "kind": "p",
+      "text": "Australian Universities"
+    },
+    {
+      "kind": "p",
+      "text": "Mining & Industrial Wholesalers"
+    },
+    {
+      "kind": "p",
+      "text": "CSIRO"
+    },
+    {
+      "kind": "p",
+      "text": "The Department of Defence"
+    },
+    {
+      "kind": "p",
+      "text": "Electrical Wholesales"
+    },
+    {
+      "kind": "h",
+      "text": "Quotations and Specifications"
+    },
+    {
+      "kind": "p",
+      "text": "Most custom projects begin with a written outline of your project which we can provide an obligation-free quote. We are happy to help you develop your requirements into a sufficiently detailed specification for us to quote. We can provide fixed-price or hourly rates."
+    },
+    {
+      "kind": "p",
+      "text": "Please contact us with your project ideas or requirements. Advice is freely given by our engineering staff via phone or email."
+    }
+  ],
+  "articles": [
+    {
+      "id": "modbus-rtu-temperature-and-humidity-sensor",
+      "title": "Modbus RTU temperature and humidity sensor - TSH331",
+      "date": "Tuesday, March 10, 2026",
+      "source": "https://oceancontrols.com.au/modbus-rtu-temperature-and-humidity-sensor",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "Keeping industrial equipment and technical infrastructure operating reliably often requires continuous monitoring of environmental conditions. Temperature and humidity fluctuations can affect electronics, automation systems, and sensitive equipment, making dependable sensing an important part of modern industrial monitoring. The TSH331 IP54 temperature and humidity sensor provides accurate environmental measurements designed for integration into industrial automation and Modbus-based monitoring systems."
+        },
+        {
+          "kind": "p",
+          "text": "Manufactured by Teracom Ltd., a trusted developer of environmental monitoring and connectivity solutions, the TSH331 is built for stable long-term operation in demanding environments. The sensor combines a precision capacitive humidity sensing element with a bandgap temperature sensor. Internal electronics digitize both signals through a high-quality 12-bit analog-to-digital converter, ensuring consistent and repeatable measurements. With ±3.0% RH accuracy, 12-bit humidity resolution, and 14-bit temperature resolution, the device delivers reliable environmental data across a wide range of industrial and infrastructure applications."
+        },
+        {
+          "kind": "p",
+          "text": "Designed for easy integration, the sensor communicates via RS-485 using the widely adopted Modbus RTU protocol. It supports multi-drop RS-485 networks, allowing multiple sensors to operate on a single bus with individually assigned Modbus addresses - ideal for distributed monitoring in automation systems, telecom facilities, or technical infrastructure."
+        },
+        {
+          "kind": "p",
+          "text": "The IP54 enclosure protects the device against dust and water sprays, while the cable gland and screwless terminal block simplify wiring and speed up installation."
+        },
+        {
+          "kind": "p",
+          "text": "The TSH331 is compatible with:"
+        },
+        {
+          "kind": "p",
+          "text": "Industrial PLCs supporting Modbus RTU"
+        },
+        {
+          "kind": "p",
+          "text": "SCADA systems and automation controllers"
+        },
+        {
+          "kind": "p",
+          "text": "Teracom monitoring modules and controllers"
+        },
+        {
+          "kind": "p",
+          "text": "Building management systems (BMS)"
+        }
+      ],
+      "images": [
+        "assets/editorial/TSH331-2.webp",
+        "assets/editorial/TSH331-1.webp"
+      ],
+      "related": [],
+      "kind": "Product news",
+      "topics": [
+        "Sensors"
+      ]
+    },
+    {
+      "id": "humidity-temperature-sensor",
+      "title": "Humidity & Temperature Sensor TSH202B",
+      "date": "Thursday, February 12, 2026",
+      "source": "https://oceancontrols.com.au/humidity-temperature-sensor",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "Keeping fleet vehicles and assets operating reliably across Australia’s harsh and changing conditions takes more than just GPS tracking. Environmental monitoring plays a growing role in protecting sensitive cargo, improving compliance, and reducing unexpected maintenance costs - and that’s exactly where the TSH202Bcompact humidity and temperature sensor delivers real value."
+        },
+        {
+          "kind": "p",
+          "text": "Manufactured by Teracom Ltd., a trusted specialist in sensing and connectivity solutions, the TSH202B is built for dependable long-term performance in demanding real-world environments. It is a fully calibrated digital sensor that measures both humidity and temperature with high accuracy and excellent stability. The unit combines a unique capacitive humidity sensing element with a band gap temperature sensor, connected to a high-quality 12-bit analog-to-digital converter for fast response and strong signal reliability. With 3.0% RH accuracy, 12-bit humidity resolution, and 14-bit temperature resolution, it delivers consistent data you can rely on across a wide range of fleet applications."
+        },
+        {
+          "kind": "p",
+          "text": "Designed for simple integration, the sensor supports 1-Wire bus communication and includes a unique 64-bit serial code, allowing multiple sensors to be connected and managed in one system - ideal for multi-zone monitoring in trailers, compartments, or storage units."
+        },
+        {
+          "kind": "p",
+          "text": "The TSH202B is compatible with leading fleet management controller brands widely used in Australia, including:"
+        },
+        {
+          "kind": "p",
+          "text": "Teltonika"
+        },
+        {
+          "kind": "p",
+          "text": "Ruptela"
+        },
+        {
+          "kind": "p",
+          "text": "Queclink"
+        },
+        {
+          "kind": "p",
+          "text": "Xirgo"
+        },
+        {
+          "kind": "p",
+          "text": "Backed by a 3-year warranty, the TSH202B is a cost-effective upgrade for fleets that demand performance, reliability, and confidence long after installation."
+        }
+      ],
+      "images": [
+        "assets/editorial/1-wire-humidity-sensor-tsh202b-gal-1_1.webp",
+        "assets/editorial/1-wire-humidity-sensor-tsh202b-gal-2_3.webp"
+      ],
+      "related": [],
+      "kind": "Product news",
+      "topics": [
+        "Sensors",
+        "1-Wire"
+      ]
+    },
+    {
+      "id": "leadshine-stepper-motor-guide-closed-and-open-loop-",
+      "title": "Leadshine Stepper Motor Guide (Closed and Open-Loop)",
+      "date": "Friday, October 10, 2025",
+      "source": "https://oceancontrols.com.au/leadshine-stepper-motor-guide-closed-and-open-loop-",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "A stepper motor is a type of electric motor that moves in precise steps, making it ideal for applications where accurate positioning is needed, like 3D printers, CNC machines, and robotics. Instead of rotating continuously like regular motors, it moves in small, fixed angles (steps) when electrical pulses are sent to it."
+        },
+        {
+          "kind": "p",
+          "text": "A stepper motor driver is the electronic device that controls the motor. It sends the right sequence of electrical pulses to the motor coils to make it turn the correct amount, direction, and speed. Some drivers are simple (open-loop), while others are more advanced (closed-loop), using sensors to monitor the motor's position and adjust in real time for more accurate control."
+        },
+        {
+          "kind": "p",
+          "text": "Our video for using Leadshine stepper motors and drivers walks through wiring the system, tuning driver parameters (especially for closed‑loop versus open‑loop operation), and performing a test run to verify everything is working properly."
+        }
+      ],
+      "images": [
+        "assets/editorial/1761111540435.webp"
+      ],
+      "related": [],
+      "kind": "Buying guide",
+      "topics": [
+        "Motion control",
+        "Sensors"
+      ]
+    },
+    {
+      "id": "the-journey-of-your-order-1",
+      "title": "The Journey of your order",
+      "date": "Friday, October 10, 2025",
+      "source": "https://oceancontrols.com.au/the-journey-of-your-order-1",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "Most of your orders come to us via our website. Our orders team monitors the website so that we can process orders throughout the day. But normally, we get our largest number of orders overnight. Once the order has been processed into our accounting system, it’s time to collect the items for your order."
+        },
+        {
+          "kind": "p",
+          "text": "Our warehouse is located at Carrum Downs, where we try to keep at least 1-3 of each of our in-stock items on the shelf. If the item is out of stock, we add it to a list so that our purchasing team can see that it is needed ASAP. Some of these items will be coming in from overseas, so they can take a few weeks to come in."
+        },
+        {
+          "kind": "p",
+          "text": "From there, items are securely packed with anti-static bubble wrap and environmentally friendly, biodegradable pellets. It’s like a game of Tetris where we pack the boxes in a way that saves space while also making sure your items will be safe along their journey."
+        },
+        {
+          "kind": "p",
+          "text": "In the late morning, our team switches from packing to labelling so that these parcels will be ready for courier and post pick-ups in the early afternoon. Most of our customers decide to ship with Australia Post Express Post, which will travel interstate by air and aim to deliver in the next business day or so. Couriers such as TNT and Couriers Please are also available should customers need them."
+        },
+        {
+          "kind": "p",
+          "text": "Once the packages are labelled, we scan their tracking information into our system so it can be easily looked up using your order or invoice number. We also send out an email with the invoice and tracking number, so make sure you check your junk mail filters if you do not receive this email. From there, the packages are made ready to be collected by our friends at Australia Post or courier pick-up drivers. From there, the packages are out of our control, but we have done all we can to make sure that those packages are safe and secure for the journey and will arrive with you promptly."
+        }
+      ],
+      "images": [
+        "assets/editorial/ORDERS_3.webp",
+        "assets/editorial/Packing_Bench_1.webp"
+      ],
+      "related": [],
+      "kind": "Behind the scenes",
+      "topics": [
+        "Shipping"
+      ]
+    },
+    {
+      "id": "davis-instruments-gateway-upgrade",
+      "title": "Davis Instruments Gateway UPGRADE",
+      "date": "Wednesday, February 5, 2025",
+      "source": "https://oceancontrols.com.au/davis-instruments-gateway-upgrade",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "Ocean Controls has upgraded our Davis Instruments weather station gateways. As a result, the following products have been discontinued:"
+        },
+        {
+          "kind": "p",
+          "text": "KTA-282 (Modbus TCP/IP)"
+        },
+        {
+          "kind": "p",
+          "text": "KTA-302 (BACnet MS/TP)"
+        },
+        {
+          "kind": "p",
+          "text": "GYW-141 (Modbus RTU)"
+        },
+        {
+          "kind": "p",
+          "text": "The new products are as follows:"
+        },
+        {
+          "kind": "p",
+          "text": "KTA-402:Our new BACnet MS/TP Gateway, which replaces the KTA-302. This model interfaces a Davis Instruments Weather Station to a BACnet MS/TP network. The pricing remains the same as the KTA-302."
+        },
+        {
+          "kind": "p",
+          "text": "KTA-382:"
+        },
+        {
+          "kind": "p",
+          "text": "Our new Modbus Gateway, which combines the features of the KTA-282 and GYW-141 models.The KTA-382 connects a Davis Instruments Weather Station to a Modbus network, supporting both TCP and RTU protocols. A PoE power version (KTA-382P) is also available. With this upgrade, you no longer need separate Modbus TCP and Modbus RTU units. The price for the KTA-382 is the same as the KTA-282."
+        }
+      ],
+      "images": [
+        "assets/editorial/KTA-382-2024-S2.webp"
+      ],
+      "related": [
+        "KTA-402"
+      ],
+      "kind": "Range change",
+      "topics": [
+        "BACnet",
+        "Weather"
+      ]
+    },
+    {
+      "id": "labjack-pro-7-case-study",
+      "title": "Labjack Pro 7 Case Study",
+      "date": "Wednesday, May 8, 2024",
+      "source": "https://oceancontrols.com.au/labjack-pro-7-case-study",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "Crush Tester"
+        },
+        {
+          "kind": "p",
+          "text": "At Australian Compliance Laboratory we work with Ocean Controls to provide us with smart, custom machinery that gives us a competitive edge. We’ve had incredible success with one such project – an automated, 25-tonne, push-pull, hydraulic press that performs precision load-deflection tests on packaging and products."
+        },
+        {
+          "kind": "p",
+          "text": "The machine uses a LabJack U6 data acquisition device for measuring and recording all the information coming in from the sensors. We then interface with the LabJack using DAQFactory software. This software allows us to read inputs and control outputs. The sensors include a primary load cell, a string displacement encoder, and nine modular displacement transducers."
+        },
+        {
+          "kind": "p",
+          "text": "With this system, we’re able to control the hydraulic ram, run tests, and measure and record test data. Furthermore, with these inputs, Ocean Controls was able to program custom automation cycles so that we could test products with minimal manual input."
+        },
+        {
+          "kind": "p",
+          "text": "This kind of machine cannot be purchased off the shelf and suits our business model perfectly. What’s fantastic about it as well is that, as our business grows and we start to test new products, the system can easily be updated to include new automation cycles, sensors, etc."
+        },
+        {
+          "kind": "p",
+          "text": "As a price point as well, the LabJack and DAQFactory come in very competitively when compared with other data-acquisition systems in the market. Furthermore, DAQFactory software is free for small projects only requiring three pages. However, when you have a more complex system, the software is a one-time purchase rather than another annoying subscription service."
+        },
+        {
+          "kind": "p",
+          "text": "We’re very happy with the LabJack-DAQFactory system and have proceeded to use similar systems on other custom test machines."
+        }
+      ],
+      "images": [
+        "assets/editorial/1715145480984.webp",
+        "assets/editorial/1715145959739.webp",
+        "assets/editorial/1715146047458.webp"
+      ],
+      "related": [],
+      "kind": "Case study",
+      "topics": [
+        "LabJack",
+        "Sensors",
+        "Software"
+      ]
+    },
+    {
+      "id": "non-intrusive-level-sensor",
+      "title": "NOVUS Non-Intrusive Level Sensor",
+      "date": "Monday, February 26, 2024",
+      "source": "https://oceancontrols.com.au/non-intrusive-level-sensor",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "NEW PRODUCT FROM NOVUS, NOW AVAILABLE AT OCEAN CONTROLS"
+        },
+        {
+          "kind": "p",
+          "text": "Non-Intrusive Level Sensor TL400-I."
+        },
+        {
+          "kind": "p",
+          "text": "The TL400-I stands out as an advanced sensor for measuring level and volume, utilizing a non-intrusive method ideal for detecting liquids, grains, fluids, and bulk solids in both stationary and dynamic settings. Utilizing a low-power laser beam, it conducts numerous measurements per second, while an advanced algorithm accurately calculates level, converting it into volume and distance across different units.This device offers easy customization through a Bluetooth-enabled configurator app, enabling users to save personalized settings and ensure precise measurements, even within irregular tank setups. With its exceptional performance and user-friendly interface, it proves to be a top choice for a wide range of industrial applications."
+        },
+        {
+          "kind": "p",
+          "text": "Power Supply: 8 to 33 VdcOutput: 4 to 20 mAMeasuring Range: Up to 4 mAccuracy: ± 3 mm"
+        },
+        {
+          "kind": "p",
+          "text": "CLICK HERE TO SEE THE FLYER. OR ORDER YOUR NOL-001"
+        }
+      ],
+      "images": [
+        "assets/editorial/new-item-003.webp"
+      ],
+      "related": [],
+      "kind": "Product news",
+      "topics": [
+        "Sensors"
+      ]
+    },
+    {
+      "id": "fema-i4f-isolated-signal-converter-for-frequency-impulses-rpm-speed-and-flow-signals-1",
+      "title": "FEMA I4F isolated signal converter for frequency, impulses, RPM speed and flow signals",
+      "date": "Friday, October 27, 2023",
+      "source": "https://oceancontrols.com.au/fema-i4f-isolated-signal-converter-for-frequency-impulses-rpm-speed-and-flow-signals-1",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "New Product at Ocean Controls!!"
+        },
+        {
+          "kind": "p",
+          "text": "FEMA ELECTRONICA:"
+        },
+        {
+          "kind": "p",
+          "text": "From the I4 series Signal Isolator/converter. We are happy to announce that we now offer the I4F, an Isolated signal converter for frequency, impulses, RPM speed, and flow signals. Output signal in 4/20mA and 0/10Vdc. Isolated 3 ways."
+        },
+        {
+          "kind": "p",
+          "text": "**Preorder now:"
+        },
+        {
+          "kind": "p",
+          "text": "FMB-007"
+        }
+      ],
+      "images": [
+        "assets/editorial/1698395980859.webp"
+      ],
+      "related": [],
+      "kind": "Product news",
+      "topics": []
+    },
+    {
+      "id": "novus-n20k48-modular-controller",
+      "title": "Novus N20K48 Modular Controller",
+      "date": "Monday, April 18, 2022",
+      "source": "https://oceancontrols.com.au/novus-n20k48-modular-controller.html",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "Global innovation product from NOVUS, we proudly release our N20K48 controller family. Its new and consistent concept is based on a compact, powerful core controller plus a growing family of micromodules that enables it to meet a wide range of application requirements in the industry. Its excellent cost-effective expansion micromodules allow for scalability of I/O, features and connectivity. In addition, it is a single controller model for all family, which avoids dealing with specific and expensive models, allowing easy spare parts inventory management."
+        },
+        {
+          "kind": "p",
+          "text": "The NOVUS ClickNGo technology for N20K48 micromodules ensures expandable capacity for more demanding applications and standardizes the learning and training of industry technical staff."
+        },
+        {
+          "kind": "p",
+          "text": "The native Bluetooth interface offers simple field diagnostic and commissioning through the QuickTune Mobile app, which reduces eventual downtime, while the USB interface provides batch configuration option, optimizing workbench series production."
+        },
+        {
+          "kind": "p",
+          "text": "With a new elegant and distinctive design, the controller features large and bright clear-to-read display, while keeping a compact depth enclosure, making it suitable for installation in restricted spaces."
+        },
+        {
+          "kind": "p",
+          "text": "With a design focused on the best user experience, the QuickTune Mobile app provides to the user an intuitive mobile platform for configuration management for all controllers and micromodules on the shop floor."
+        }
+      ],
+      "images": [],
+      "related": [],
+      "kind": "Product news",
+      "topics": []
+    },
+    {
+      "id": "labjack-and-iot-software",
+      "title": "Labjack and IOT software",
+      "date": "Thursday, July 1, 2021",
+      "source": "https://oceancontrols.com.au/labjack-and-iot-software.html",
+      "blocks": [
+        {
+          "kind": "h",
+          "text": "Powerful, Affordable, 3rd Party IoT Software for Your LabJack"
+        },
+        {
+          "kind": "p",
+          "text": "One of our favorite things at LabJack is sharing new, innovative ways people are using their LabJack data acquisition systems. This is especially true when it can benefit not just new but all LabJack users. JEDI One by Machinechat offers powerful yet lightweight software (less than 30MB) that can be used with LabJack UD and T-Series hardware. Pairing a Labjack with the JEDI One software from Machinechat, you can create rules, alerts and actions, email and text notifications, beautiful dashboards, and network monitoring, among other things. Best of all, this can all be set up in about 15 minutes. Check out a new way to use a LabJack to create rules, alerts and actions, email and text notifications, beautiful dashboards, and network monitoring. All of which can be set up in about 15 minutes."
+        },
+        {
+          "kind": "p",
+          "text": "Try JEDI One by Machinechat free for 30 days. Unlock all their premium features for under $100. The IoT software speeds up development, is flexible just like LabJack, and also includes MQTT broker support. Best of all, Machinechat JEDI One works on Windows, Mac, Linux, Raspberry Pi, and BeagleBone systems giving you even more software options for your next LabJack data acquisition application."
+        }
+      ],
+      "images": [
+        "assets/editorial/MachineChat.webp"
+      ],
+      "related": [],
+      "kind": "Product news",
+      "topics": [
+        "LabJack",
+        "Software"
+      ]
+    },
+    {
+      "id": "distributor-for-fema-electronica",
+      "title": "Distributor for Fema Electronica",
+      "date": "Sunday, June 20, 2021",
+      "source": "https://oceancontrols.com.au/distributor-for-fema-electronica.html",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "Ocean Controls is pleased to announce we have become a distributor for Fema Electronica. Based in Barcelona Spain, Fema has been in operation for over 50 years which is a bit of a rarity in the industrial controls and instrumentation field. In those 50 years, they have helped all kinds of machine builders with their instruments, with standard and customized solutions. They have innovated tirelessly, always striving to provide more reliable and accurate electronic equipment.With a wide catalog of instrumentation for panel meters, signal converters, and large displays, FEMA is your trusted partner for your industry instrumentation"
+        },
+        {
+          "kind": "p",
+          "text": "Large 4 or 6 Digit LED Displays."
+        },
+        {
+          "kind": "p",
+          "text": "The Series B offers a wide range of large format meters, for all type of industrial applications. Its differential feature is the large digit size implemented, with available versions with 60 mm digit height and reading up to 25 meters, and versions with 100 mm digit height and reading up to 50 meters. These instruments can perform control functions, as they can mount relay or transistor outputs, SSR controls, analog retransmission signals, and communications in Modbus RTU, RS-485 or RS-232 ASCII protocols. All circuits are isolated for better performance and protection."
+        },
+        {
+          "kind": "p",
+          "text": "Features include"
+        },
+        {
+          "kind": "p",
+          "text": "60mm and 100mm high digits"
+        },
+        {
+          "kind": "p",
+          "text": "4 or 6 digit"
+        },
+        {
+          "kind": "p",
+          "text": "IP65 Metallic Enclosure"
+        },
+        {
+          "kind": "p",
+          "text": "5 brightness levels to suit most ambient situations"
+        },
+        {
+          "kind": "p",
+          "text": "Supports Modbus RTU communications"
+        },
+        {
+          "kind": "p",
+          "text": "Wide power supply voltages85/265 Vac and 120/370 Vdc or 11 to 36 Vdc"
+        },
+        {
+          "kind": "p",
+          "text": "Red or Green color"
+        },
+        {
+          "kind": "p",
+          "text": "built in keypad programming or wireless remote"
+        },
+        {
+          "kind": "p",
+          "text": "3 different mounting methods"
+        },
+        {
+          "kind": "p",
+          "text": "Functions Supported"
+        },
+        {
+          "kind": "p",
+          "text": "measure process 4-20mA/0-10V signal"
+        },
+        {
+          "kind": "p",
+          "text": "measure Temperature"
+        },
+        {
+          "kind": "p",
+          "text": "measure Potentiometer"
+        },
+        {
+          "kind": "p",
+          "text": "Impulse counter"
+        },
+        {
+          "kind": "p",
+          "text": "Ratemeter"
+        },
+        {
+          "kind": "p",
+          "text": "Periodmeter"
+        },
+        {
+          "kind": "p",
+          "text": "Chronometer Time"
+        },
+        {
+          "kind": "p",
+          "text": "counter"
+        },
+        {
+          "kind": "p",
+          "text": "Modbus RTU repeater"
+        },
+        {
+          "kind": "p",
+          "text": "RS-485/RS-232 ASCII repeater"
+        },
+        {
+          "kind": "p",
+          "text": "Load cells Weight"
+        },
+        {
+          "kind": "p",
+          "text": "The New I4E Universal Signal Converter"
+        },
+        {
+          "kind": "p",
+          "text": "The new I4E, signal converters for electrical signals, are the first of a series of converters with advanced features. A TOP RANGE, for the most demanding applications. The new I4E can be configured to measure voltage signals (AC and DC) with ranges from 0 / 50mV up to 0 / 600V, current signals (AC and DC) from 0 / 5mA up to 0 / 5A, and frequencies from power lines (up to 100Hz). The output is a standard process signal configurable to 4 / 20mA or 0 / 10Vdc."
+        },
+        {
+          "kind": "p",
+          "text": "Built in 4 digit display"
+        },
+        {
+          "kind": "p",
+          "text": "Built in keypad configuration"
+        },
+        {
+          "kind": "p",
+          "text": "Universal power supply 18 to 265 Vac/dc"
+        },
+        {
+          "kind": "p",
+          "text": "Isolation 3KV input/output/power"
+        },
+        {
+          "kind": "p",
+          "text": "Force’ functions temporarily forces the signal output to the minimum or maximum"
+        },
+        {
+          "kind": "p",
+          "text": "‘SOS’ mode manually set the output to a fixed value"
+        },
+        {
+          "kind": "p",
+          "text": "M60-LC Load Cell Indicator (1 to 8 Load Cells)"
+        },
+        {
+          "kind": "p",
+          "text": "Fema Electronica's M60-LC digital panel meter, with 96 x 48 mm (1/8 DIN) size and 6 digits with 14 mm digit height, for load cell signals. Able to connect to load cells of 1mV/V, 2mV/V and 3 mV/V, and signal ranges up to 100mV. Provides excitation voltage configurable to +5 Vdc or +10 Vdc (max. 140mA) to power up to 8 standard 350 Ohms cells. Scalable reading from 999999 to -199999 with configurable decimal point."
+        },
+        {
+          "kind": "p",
+          "text": "Tare function, with configurable controls, and ‘auto-tare’ function for automatic tare correction when weight is removed from the cell. Three working modes with different acquisition speeds and noise rejection to 50 and 60 Hz. Output and control options with 1, 2 and 3 relays, isolated analog outputs, Modbus RTU communications, transistor outputs, SSR control outputs, RS-485 ASCII and RS-232."
+        },
+        {
+          "kind": "p",
+          "text": "Special options up to 4 and 6 relays. Independent alarms configurable as maximum or minimum, with activation at setpoint or when reading is stable, with 1 or 2 setpoints per alarm, hysteresis, independent activation and deactivation delays, configurable inverted activation of the relay and configurable locked alarms"
+        }
+      ],
+      "images": [
+        "assets/editorial/Fema_Series-B.webp",
+        "assets/editorial/FMB-001_1.webp",
+        "assets/editorial/FMI-050.webp"
+      ],
+      "related": [],
+      "kind": "Announcement",
+      "topics": []
+    },
+    {
+      "id": "ocean-controls-a-distributor-for-emko-electronik",
+      "title": "Ocean Controls a Distributor for Emko Electronik",
+      "date": "Friday, May 28, 2021",
+      "source": "https://oceancontrols.com.au/ocean-controls-a-distributor-for-emko-electronik.html",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "Ocean Controls are pleased to announce we have become a distributor for Emko Elektronik. Since 1986 EMKO ELEKTRONIK A.S. has been engaged in the design, manufacture and marketing of Measurement and Control Instruments, HMI's, Temperature and Humidity Sensors and Generator Set Controllers."
+        },
+        {
+          "kind": "p",
+          "text": "HMI Touch Screen Professional Operator Panels."
+        },
+        {
+          "kind": "p",
+          "text": "Emko manufacture a range of 4.3\", 7\" and 10\" sized HMI's. Features include"
+        },
+        {
+          "kind": "p",
+          "text": "High resolution TFT LCD display"
+        },
+        {
+          "kind": "p",
+          "text": "Internal digital and analog I/O options"
+        },
+        {
+          "kind": "p",
+          "text": "Ethernet, RS-232 and RS-485 communication"
+        },
+        {
+          "kind": "p",
+          "text": "Optional WiFi and 2nd Ethernet input"
+        },
+        {
+          "kind": "p",
+          "text": "Supports Modbus RTU and TCP, Bacnet and Siemens Protocols"
+        },
+        {
+          "kind": "p",
+          "text": "Simulation"
+        },
+        {
+          "kind": "p",
+          "text": "Supports Macros"
+        },
+        {
+          "kind": "p",
+          "text": "Supports real time C programming"
+        },
+        {
+          "kind": "p",
+          "text": "Budget price with Free Software"
+        },
+        {
+          "kind": "p",
+          "text": "Process measurement and control instruments."
+        },
+        {
+          "kind": "p",
+          "text": "Emko manufactures a range of"
+        },
+        {
+          "kind": "p",
+          "text": "On/Off Digital Temperature Controllers"
+        },
+        {
+          "kind": "p",
+          "text": "PID Temperature Controllers with Auto-Tuning"
+        },
+        {
+          "kind": "p",
+          "text": "Temperature and Humidity Controller"
+        },
+        {
+          "kind": "p",
+          "text": "Analog Temperature Controllers with Pot Setting"
+        },
+        {
+          "kind": "p",
+          "text": "Cooling Digital Temperature Controllers"
+        },
+        {
+          "kind": "p",
+          "text": "Process Indicators with Universal Inputs"
+        },
+        {
+          "kind": "p",
+          "text": "Timers/Counter"
+        },
+        {
+          "kind": "p",
+          "text": "Voltage/Current Calibrator"
+        },
+        {
+          "kind": "p",
+          "text": "Tachometer"
+        },
+        {
+          "kind": "p",
+          "text": "Temperature Sensors"
+        },
+        {
+          "kind": "p",
+          "text": "Emko manufacture a range of sensors including."
+        },
+        {
+          "kind": "p",
+          "text": "Thermocouples J,K"
+        },
+        {
+          "kind": "p",
+          "text": "PT100 and PT1000 RTD's"
+        },
+        {
+          "kind": "p",
+          "text": "Thermistors NTC and PTC"
+        },
+        {
+          "kind": "p",
+          "text": "The sensors are available with Stainless Steel tips, mineral tips, Screw Bayonet type, Head mount type, Clamp type and Lug Type"
+        },
+        {
+          "kind": "p",
+          "text": "Temperature and Humidity Sensors"
+        },
+        {
+          "kind": "p",
+          "text": "Emko manufacture a range of Temperature and Humidity sensors suitable for HVAC, agriculture, Food Factories and Warehouse. The sensors are available with 4-20mA/0-10V outputs and Modbus RTU. Models include"
+        },
+        {
+          "kind": "p",
+          "text": "Pronem Midi wall and duct mount"
+        },
+        {
+          "kind": "p",
+          "text": "Pronem Mini"
+        },
+        {
+          "kind": "p",
+          "text": "Gen Set Controllers"
+        },
+        {
+          "kind": "p",
+          "text": "Emko also manufacture protection generating systems including Gen-Set controls, Automatic Transfer Switchings, Manual-keystarts"
+        }
+      ],
+      "images": [
+        "assets/editorial/News_01062021_HMI.webp",
+        "assets/editorial/EEC-010_1.webp",
+        "assets/editorial/EES-350.webp",
+        "assets/editorial/EES-001.webp",
+        "assets/editorial/News_01062021_Genset.webp"
+      ],
+      "related": [],
+      "kind": "Announcement",
+      "topics": [
+        "BACnet",
+        "Sensors",
+        "Software"
+      ]
+    },
+    {
+      "id": "digirail-oee",
+      "title": "Digirail OEE",
+      "date": "Thursday, January 14, 2021",
+      "source": "https://oceancontrols.com.au/digirail-oee.html",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "Novus Automation have released their new Digirail OEE. The DigiRail OEE is the ideal tool to read the sensors that monitor the operation of machines, devices or processes. Among its many applications, this multi input module allows you to count operation time and downtime and the amount of approved and rejected parts, signal the need for preventive or corrective maintenance or monitor operating conditions in general."
+        },
+        {
+          "kind": "p",
+          "text": "The device has 6 digital inputs, 2 analog inputs and 2 digital outputs, RS485 interface, USB interface, Wi-Fi or Ethernet communication interface and is compatible with the main clouds on the market. In addition, it can be integrated with MES, SCADA and ERP system"
+        },
+        {
+          "kind": "p",
+          "text": "Native compatibility with main cloud providers. Provided with secure MQTT protocol, DigiRail OEE transmits data natively to Google Cloud, Microsoft Azure, Amazon AWS, NOVUS Cloud, or any other compatible IoT cloud platform."
+        }
+      ],
+      "images": [
+        "assets/editorial/1610597638433.webp",
+        "assets/editorial/1610597481993.webp"
+      ],
+      "related": [],
+      "kind": "Product news",
+      "topics": [
+        "Sensors"
+      ]
+    },
+    {
+      "id": "labjack-application-note-sending-emails",
+      "title": "Labjack - Application Note Sending Emails",
+      "date": "Thursday, December 10, 2020",
+      "source": "https://oceancontrols.com.au/labjack-application-note-sending-emails.html",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "LabJack is excited to provide demonstrations and multiple options for sending emails with free third party services and APIs that have multi-language support. Instructions and example scripts are provided for LabVIEW and Python, and the listed email options can be used with most programming languages commonly used by LabJack users."
+        },
+        {
+          "kind": "p",
+          "text": "This note introduces several options for programmatically sending emails to send data or alerts with code. This functionality allows the data from a remote LabJack Data Acquisition module to be accessible from almost anywhere. Email alerts are best suited for infrequent communication such as notifications or small, sparse data sets. For frequent or high volume data transfer such as logging, see our LabJack via Internet App Note or our Google Sheets Logging App Note."
+        },
+        {
+          "kind": "p",
+          "text": "Follow the link to the email application note"
+        }
+      ],
+      "images": [
+        "assets/editorial/1607644683076.webp"
+      ],
+      "related": [],
+      "kind": "Product news",
+      "topics": [
+        "LabJack"
+      ]
+    },
+    {
+      "id": "new-np400-low-cost-pressure-sensors",
+      "title": "New NP400 Low Cost Pressure Sensors",
+      "date": "Friday, November 27, 2020",
+      "source": "https://oceancontrols.com.au/new-np400-low-cost-pressure-sensors.html",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "Novus NP400 2 wire pressure sensors break the $100 barrier . These compact sensors are ideal for air and water applications. They feature a wide power supply range of 11-33VDC, +/-0.5% accuracy, an Overpressure Range:twice the Max. Range and Rupture Pressure:3 times the pressure range upper value."
+        },
+        {
+          "kind": "p",
+          "text": "Process connections: external thread ¼ NPT, 1/4G, ½ NPT or ½ BSP"
+        },
+        {
+          "kind": "p",
+          "text": "Download User Manual"
+        }
+      ],
+      "images": [
+        "assets/editorial/NOS-230.webp"
+      ],
+      "related": [],
+      "kind": "Product release",
+      "topics": [
+        "Sensors",
+        "New product"
+      ]
+    },
+    {
+      "id": "new-hydreon-rain-gauges",
+      "title": "New Hydreon Rain Gauges",
+      "date": "Wednesday, November 25, 2020",
+      "source": "https://oceancontrols.com.au/new-hydreon-rain-gauges.html",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "The Hydreon RG-11 Optical Rain Gauge is a reliable and cost-effective choice for precipitation measurements. The sensor package is about the size of a tennis ball and completely sealed from the environment. A built-in mounting arm allows for convenient mounting to weather station masts, buildings, and other infrastructure."
+        },
+        {
+          "kind": "p",
+          "text": "The Rain Gauge senses water hitting its outside surface using beams of infrared light, modeling the principle used in automotive rain-sensing windshield wiper controls. The optical gauge bounces the infrared beams within the sensor lens, and as rain drops hit the surface, the infrared light escapes through. Changes in the intensity of the infrared beams during rainfall are directly correlated with the size of the rain drop. The system automatically compensates for condensation and very small drops; it can detect rain drops less than a half millimeter in size!"
+        },
+        {
+          "kind": "p",
+          "text": "Because of these features the RG-11 has been extremely popular with a wide range of customers. Last month Hydreon released two new models the RG-9 and the RG-15 and Ocean Controls have just obtained stock."
+        },
+        {
+          "kind": "p",
+          "text": "RG-9 Rain Sensor"
+        },
+        {
+          "kind": "p",
+          "text": "The Hydreon RG-9 Solid State Rain Sensor is a rainfall sensing device intended to detect and communicate when a pre-selected rain intensity has been reached or exceeded. The sensitivity levels are: Rain Drops, Very Light, Medium, Heavy. The duration of the positive detection is also selectable: No Hold, Hold Time 5 Minutes, Hold Time 10 Minutes, Hold Time 15 Minutes."
+        },
+        {
+          "kind": "p",
+          "text": "The RG-9 has multiple outputs: visual output via an on-board LED, Open Collector output and RS232 serial communications that provide more detailed data, including 8 near real-time rain intensity levels and allow for reading the status and configuration of the device. Power consumption of the RG-9 is very low, and the device is well-suited to solar-power applications."
+        },
+        {
+          "kind": "p",
+          "text": "RG-15 Tipping Rain Bucket Gauge"
+        },
+        {
+          "kind": "p",
+          "text": "The Hydreon RG-15 Solid State Tipping Bucket is a rainfall measuring device intended to replace conventional tipping buckets. The RG-15 is rugged, reliable, maintenance-free and features a nominal accuracy of within 10%. The RG-15 is designed to replace tipping bucket rain gauges in many applications where their maintenance requirements make them impractical."
+        },
+        {
+          "kind": "p",
+          "text": "The RG-15 uses beams of infrared light within a plastic lens about the size of a tennis ball. The round surface of the lens discourages collection of debris, and the RG-15 has no moving parts to stick, and no water-pathways to clog. The device features an open-collector output that emulates a conventional tipping bucket, as well as serial communications that provide more detailed data and allow for configuration of the device."
+        }
+      ],
+      "images": [
+        "assets/editorial/HYS-001-2020-S.webp",
+        "assets/editorial/HYS-005.webp"
+      ],
+      "related": [],
+      "kind": "Product release",
+      "topics": [
+        "Weather",
+        "Sensors",
+        "New product"
+      ]
+    },
+    {
+      "id": "new-quicktune-software",
+      "title": "New QuickTune Software",
+      "date": "Tuesday, October 13, 2020",
+      "source": "https://oceancontrols.com.au/new-quicktune-software.html",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "QuickTune is a free software tool for parameter configuration of NOVUS controllers and indicators. Most controllers and indicators from Novus Automation are fitted with a USB port. QuickTune with its clean interface, any lay or advanced user can friendly access and modify all device functions for proper configuration. Designed for easy and quick commissioning, it provides diagnosis and monitoring resources to field technicians. More than a software, QuickTune is a tool. Furthermore, QuickTune offers the main features to meet most users and profile needs in the industry."
+        },
+        {
+          "kind": "p",
+          "text": "Graphic and Ramp Soak Assistant - Temperature applications with complex profiles. should be translated from process recipe requirements to ramp and soak parameters. The assistant tool provides a wide graphical perspective of the process with intuitive features such as sliders, drag-and-drop and clicks over the chart, transcribing all seeing automatically to ramp and soak data table."
+        },
+        {
+          "kind": "p",
+          "text": "QuickTune will program Controllers: N1020, N1040, N1040T, N1050, N480D, N120, N1200, N1200HC, N2000, N960 and N3000 and Indicators N1040i, N1540, N1500 and N1500LC"
+        }
+      ],
+      "images": [
+        "assets/editorial/1602556830937.webp",
+        "assets/editorial/1602556938735.webp"
+      ],
+      "related": [],
+      "kind": "Product release",
+      "topics": [
+        "Software",
+        "New product"
+      ]
+    },
+    {
+      "id": "airgate-4g-has-been-released",
+      "title": "Airgate 4G has been released",
+      "date": "Wednesday, October 7, 2020",
+      "source": "https://oceancontrols.com.au/airgate-4g-has-been-released.html",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "Remote monitoring was already an increasing demand in several industry segments, and it became even more important during the COVID-19 pandemic as it prevents technicians from having to be in person at the machines and processes place. With new connectivity possibilities, in addition to Wi-Fi and VPN available in the first version, AirGate 4G appears as a device that adds agility and efficiency to the most varied industrial processes, since remote diagnostics optimizes team work and reduces travel and personnel costs."
+        },
+        {
+          "kind": "p",
+          "text": "With the same already known NOVUS products robustness the new version of AirGate 4G allows data access in the cloud by MQTT protocol, alarm notification by SMS or e-mail and Modbus master, which provides remote monitoring of RS485 industrial networks without using PLCs. Alarm notifications by SMS or e-mail ensure that operators or managers will be always informed of any process abnormalities allowing a faster and more efficient resolution."
+        },
+        {
+          "kind": "p",
+          "text": "Further details and pricing are now on our website at"
+        }
+      ],
+      "images": [
+        "assets/editorial/1602048213682.webp"
+      ],
+      "related": [],
+      "kind": "Product release",
+      "topics": [
+        "New product"
+      ]
+    },
+    {
+      "id": "novus-n1500",
+      "title": "New Novus N1500",
+      "date": "Wednesday, October 7, 2020",
+      "source": "https://oceancontrols.com.au/novus-n1500.html",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "The N1500 universal process indicator has been recently updated to be more powerful and with a larger and brighter display. Its fast sampling rate ensures high-performance indication and reaction to fast processes dynamics. With 6 digits for high-resolution variables and the 17mm height display, N1500 provides clear view, making it easier for operators to read and diagnose from a distance."
+        },
+        {
+          "kind": "p",
+          "text": "Its universal input accepts: Thermocouples J, K, T, N, R, S, B, E, Pt100, 0-20 mA, 4-20 mA, 0 -50 mV, 0-5 Vdc, 0-10 Vdc, 4-20 mA no linear, 0-20 mA custom linear, 4-20 mA custom linear, 0-20 mA custom no linear, 4-20 mA custom no linear signalsIts timer function performs wide action capabilities through alarms for safety interlock logic. Furthermore, N1500 is fully compatible with custom signals through its linearized input for up to 30 points.Both electronic robustness and anti-flame material enclosure comply with the main world-class approvals for industry devices."
+        }
+      ],
+      "images": [
+        "assets/editorial/1602474498957.webp"
+      ],
+      "related": [],
+      "kind": "Product release",
+      "topics": [
+        "New product"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,4495 @@
+{
+  "date": "2026-08-21 catalogue / archived website snapshot",
+  "products": [
+    {
+      "sku": "ADW-001",
+      "name": "HD67671 BACnet MS/TP Slave / Modbus Master - Converter",
+      "brand": "ADF Web",
+      "mpn": "HD67671-MSTP-4-A1",
+      "price": "699.01",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": 4,
+          "price": "699.01"
+        },
+        {
+          "min": 5,
+          "max": null,
+          "price": "629.11"
+        }
+      ],
+      "images": [
+        "assets/products/076b2a461311-ADW-001-2025-S.jpg",
+        "assets/products/5f5dad041158-Capture.jpg",
+        "assets/products/d2026f2d9ff9-Capture1.jpg"
+      ],
+      "description": "The HD67671-MSTP-4-A1 BACnet MS/TP Slave / Modbus Master Converter allows you to integrate a BACnet network with a Modbus net. It allows you to connect a BACnet MSTP Master (for example a Supervisory System...) with some Modbus slaves.",
+      "summary": "This product will allow you to communicate between a BACnet MSTP Master and a Modbus Slave.",
+      "categories": [
+        "Modbus-Bacnet-MBus Products >>> Gateways"
+      ],
+      "stock": 3,
+      "backorder": true,
+      "specs": [],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/ADW-001.html",
+      "documents": [
+        "e0d57bf9ec4c76ef",
+        "fd24d37e9774f48f"
+      ],
+      "arrivalRank": 32,
+      "hasDatasheet": true,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "ADW-002",
+      "name": "HD67671 BACnet/IP Slave / Modbus Master - Converter",
+      "brand": "ADF Web",
+      "mpn": "HD67671-IP-4-A1",
+      "price": "699.01",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": 4,
+          "price": "699.01"
+        },
+        {
+          "min": 5,
+          "max": null,
+          "price": "629.11"
+        }
+      ],
+      "images": [
+        "assets/products/a6a523e42d11-ADW-002-2025-S.jpg",
+        "assets/products/cbc50ff2c81b-CaptureIP.jpg",
+        "assets/products/630223f1a1dc-CaptureIP2.jpg"
+      ],
+      "description": "The HD67671-IP-4-A1 BACnet/IP Slave / Modbus Master Converter allows you to integrate a BACnet network with a Modbus net. It allows you to connect a BACnet Master (for example a Supervisory System...) with some Modbus slaves.",
+      "summary": "This product will allow you to communicate between a BACnet IP Master and a Modbus Slave.",
+      "categories": [
+        "Modbus-Bacnet-MBus Products >>> Gateways"
+      ],
+      "stock": 6,
+      "backorder": true,
+      "specs": [],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/ADW-002.html",
+      "documents": [
+        "e0d57bf9ec4c76ef",
+        "233d9269e40ed3b7"
+      ],
+      "arrivalRank": 33,
+      "hasDatasheet": true,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "ADW-003",
+      "name": "HD67933 Modbus Master / MQTT - Converter",
+      "brand": "ADF Web",
+      "mpn": "HD67933-4-B2",
+      "price": "743.88",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": 4,
+          "price": "743.88"
+        },
+        {
+          "min": 5,
+          "max": null,
+          "price": "669.49"
+        }
+      ],
+      "images": [
+        "assets/products/9dfcd5e9e9b8-ADW-005-2020-S_5.jpg",
+        "assets/products/deff33606ca6-Capture1_1.jpg",
+        "assets/products/30385ea8eeec-Capture_1.jpg"
+      ],
+      "description": "The HD67933-4-B2 are Modbus Master / MQTT Converters which will allow you to integrate a Modbus\u00a0 network with the IoT world based on MQTT net. You can publish the data read from the Modbus Slaves into a MQTT Server.\nThese gateways allow a fast and easy access to the IoT world and they are compatible with IoT Servers ( Microsoft Azure, Amazon AWS, IBM Cloud, Google Cloud... etc and customized Servers) that support MQTT protocol.\n\nThe MQTT communication can be encrypted using TLS / SSL protocols, ensuring a SECURE and SAFE communication.",
+      "summary": "This product allows communication between a Modbus Slave and the MQTT net.",
+      "categories": [
+        "Modbus-Bacnet-MBus Products >>> Gateways"
+      ],
+      "stock": 1,
+      "backorder": true,
+      "specs": [],
+      "sale": false,
+      "new": true,
+      "source": "https://oceancontrols.com.au/ADW-003.html",
+      "documents": [
+        "76ca04940f8cbb49",
+        "ee47975d44931314",
+        "2f9114c5ebc22874"
+      ],
+      "arrivalRank": 25,
+      "hasDatasheet": true,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "AKB-001",
+      "name": "NPT4 Slimline temperature transmitter",
+      "brand": "Akytec",
+      "mpn": "NPT4",
+      "price": "173.45",
+      "purchasable": false,
+      "tiers": [
+        {
+          "min": 1,
+          "max": 4,
+          "price": "289.07"
+        },
+        {
+          "min": 5,
+          "max": 9,
+          "price": "260.17"
+        },
+        {
+          "min": 10,
+          "max": null,
+          "price": "245.71"
+        }
+      ],
+      "images": [
+        "assets/products/0488f37af903-AKB-001-2021-S_1.jpg"
+      ],
+      "description": "The NTP4 is a universal temperature transmitter in a 6-mm wide slimline DIN rail mounting enclosure. The device is intended for the conversion of the measurement signal from a TC or a 2-, 3-, or 4-wire RTD into a 4-20 mA or 0(2)-10 V standard signal. The temperature transmitter has an error detection in the event of a sensor break, and its input is protected against short circuit. The power supply circuit is protected against reverse polarity. A wide variety of RTDs and TCs are supported. The NPT4 is configured via a USB interface.\n\n\nFeatures:\nMounts onto DIN rail\nHigh stability\nThermocouples J,N,K,R,S,T,B,A,L\nRTDs PT50,PT100\nPotentiometer, Volts 0-5,0-10V and Current 0-20, 4-20mA\nUSB Configuration",
+      "summary": "The NTP4 is a universal temperature transmitter in a 6-mm wide slimline DIN rail mounting enclosure. The device is intended for the conversion of the measurement signal from a TC or a 2-, 3-, or 4-wire RTD into a 4-20 mA or 0(2)-10 V standard signal.\nEOL - NOT BACKORDER AVAILABLE",
+      "categories": [
+        "Signal Conditioners >>> Isolated Converters"
+      ],
+      "stock": 5,
+      "backorder": false,
+      "specs": [],
+      "sale": true,
+      "new": false,
+      "source": "https://oceancontrols.com.au/AKB-001.html",
+      "documents": [
+        "d6b4dc327d16e29e",
+        "bcaa63ea686e3184"
+      ],
+      "arrivalRank": 34,
+      "hasDatasheet": true,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "AKD-001",
+      "name": "MSD200 Modbus Datalogger",
+      "brand": "Akytec",
+      "mpn": "MSD200",
+      "price": "418.77",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": 4,
+          "price": "418.77"
+        },
+        {
+          "min": 5,
+          "max": 9,
+          "price": "376.90"
+        },
+        {
+          "min": 10,
+          "max": null,
+          "price": "355.96"
+        }
+      ],
+      "images": [
+        "assets/products/4930b5b148d5-AKD-001-2021-S.jpg"
+      ],
+      "description": "The MSD200 data logger is designed for DIN rail mounting and has two RS485 interfaces. The device supports Modbus RTU and ASCII protocols. 64 channels for data querying and archiving are available. Modbus values can be logged as 16 bit integer, 32 bit interger or 32 bit Floating point. The logger is equipped with four (0)4-20 mA analog inputs. The data are stored on a SD card. The integrated USB port enables data reading and device configuration. Use of the included programming tool makes the configuration and data handling easy and comfortable.\nFunctions and features:\nArchiving up to 64 data measuring points\nSD cards up to 32 GB\n4 analog inputs\nAutomatic archive compilation for several days is possible\nExpress data analysis (extreme values identification)\nConfigurable archive memory\nData reading and device configuration via the USB interface\nAreas of application:\nThe MSD200 can be used for data archiving in various processes in the food, chemical, gas and packaging industry as well as in the construction materials and wood processing industries. It can be also applied in many other areas of industrial and building automation.",
+      "summary": "An RS-485 Modbus Master or Modbus Slave datalogger. It logs up to 64 channels to micro SD card.",
+      "categories": [
+        "Data Loggers",
+        "Modbus-Bacnet-MBus Products >>> Loggers",
+        "Data Loggers >>> Voltage & Current"
+      ],
+      "stock": 4,
+      "backorder": true,
+      "specs": [],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/AKD-001.html",
+      "documents": [
+        "645c93d1b5b7f602",
+        "10ec6619d508e259"
+      ],
+      "arrivalRank": 37,
+      "hasDatasheet": false,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "AZE-011",
+      "name": "DAQ Factory - Starter Software",
+      "brand": "AzeoTech",
+      "mpn": "Starter",
+      "price": "211",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": null,
+          "price": "211"
+        }
+      ],
+      "images": [
+        "assets/products/fe609e69a389-DAQ.jpg"
+      ],
+      "description": "DAQFactory Starter offers all the basic features of an HMI / SCADA software tool including data acquisition from a wide range of devices (limited to 16 I/O points), data logging to ASCII and binary files, three user definable screens with 45 screen components, powerful graphing and trending, plus Email and FTP out.\n\nIf you have a small application with less then 16 I/O points and don't need any of the advanced features of DAQFactory, then DAQFactory Starter is probably just right for you. Plus, if your system grows, you can always upgrade.",
+      "summary": "DAQ Factory Provides The Tools You Need To Create Your HMI / SCADA Application With Ease",
+      "categories": [
+        "Software",
+        "Industrial IoT >>> Remote Monitoring & Cloud"
+      ],
+      "stock": 5,
+      "backorder": true,
+      "specs": [],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/AZE-011.html",
+      "documents": [],
+      "arrivalRank": 29,
+      "hasDatasheet": false,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "AZE-012",
+      "name": "DAQ Factory - Lite Software",
+      "brand": "AzeoTech",
+      "mpn": "Base",
+      "price": "423",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": null,
+          "price": "423"
+        }
+      ],
+      "images": [
+        "assets/products/fe609e69a389-DAQ_1.jpg"
+      ],
+      "description": "DAQFactory Lite offers all the basic features of an HMI / SCADA software tool including data acquisition from a wide range of devices (limited to 32 I/O points), data logging to ASCII and binary files, unlimited user definable screens with 44 screen components, powerful graphing and trending, PID loop control plus Email and FTP out. You can also deploy your software using Runtime Licenses.",
+      "summary": "DAQ Factory Provides The Tools You Need To Create Your HMI / SCADA Application With Ease",
+      "categories": [
+        "Software",
+        "Industrial IoT >>> Remote Monitoring & Cloud"
+      ],
+      "stock": 32,
+      "backorder": true,
+      "specs": [],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/AZE-012.html",
+      "documents": [],
+      "arrivalRank": 30,
+      "hasDatasheet": false,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "AZE-013",
+      "name": "DAQ Factory - Base Software",
+      "brand": "AzeoTech",
+      "mpn": "Pro",
+      "price": "849",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": null,
+          "price": "849"
+        }
+      ],
+      "images": [
+        "assets/products/fe609e69a389-DAQ_1_1.jpg"
+      ],
+      "description": "DAQFactory Base offers all the basic features of an HMI / SCADA software tool including data acquisition from a wide range of devices (limited to 64 I/O points), data logging to ASCII and binary files, unlimited user definable screens with 44 screen components, powerful graphing and trending, PID loop control plus Email and FTP out.\n\nIf you have a small application with less then 64 I/O points or need PID control and don't need the advanced features of DAQFactory Pro, then DAQFactory Base is your solution. Plus, if your system grows, you can always upgrade.\nData acquisition (64 tags max)\nData logging\nUnlimited user definable screens\n45 screen components\nPowerful graphing and trending\nPID loop control\nEmail out\nFTP uploading\nand much more...",
+      "summary": "DAQ Factory Provides The Tools You Need To Create Your HMI / SCADA Application With Ease",
+      "categories": [
+        "Software",
+        "Industrial IoT >>> Remote Monitoring & Cloud"
+      ],
+      "stock": 5,
+      "backorder": true,
+      "specs": [],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/AZE-013.html",
+      "documents": [],
+      "arrivalRank": 31,
+      "hasDatasheet": false,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "CAB-101",
+      "name": "D9 Female to D9 Female Gender Changer",
+      "brand": "Manufacturer not specified",
+      "mpn": "P1712",
+      "price": "5.91",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": 4,
+          "price": "5.91"
+        },
+        {
+          "min": 5,
+          "max": null,
+          "price": "5.61"
+        }
+      ],
+      "images": [
+        "assets/products/a2f0d76b3813-CAB-101-2020-S_1_1.jpg"
+      ],
+      "description": "D9 Female to D9 Female Gender Changer",
+      "summary": "D9 Female to D9 Female Gender Changer",
+      "categories": [
+        "Computer Products >>> Gender Changers & Adapters"
+      ],
+      "stock": 1,
+      "backorder": true,
+      "specs": [],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/CAB-101.html",
+      "documents": [],
+      "arrivalRank": 72,
+      "hasDatasheet": false,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "CAB-102",
+      "name": "DE9 Male to DE9 Male Gender Changer",
+      "brand": "Manufacturer not specified",
+      "mpn": "P1710",
+      "price": "4.95",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": 4,
+          "price": "4.95"
+        },
+        {
+          "min": 5,
+          "max": null,
+          "price": "4.71"
+        }
+      ],
+      "images": [
+        "assets/products/8017dd65bc23-CAB-102-2020-S.jpg"
+      ],
+      "description": "DE9 Male to DE9 male gender changer converts a female cable or port into male. It allows two female cables to be joined together. Please note this is not a NULL modem adapter (it does not swap TX and RX pins around, it passes the pins through pin 1 to pin 1, pin 2 to pin 2 etc.)",
+      "summary": "DE9 Male to DE9 male gender changer converts a female cable or port into male. It allows two female cables to be joined together.",
+      "categories": [
+        "Computer Products >>> Gender Changers & Adapters"
+      ],
+      "stock": 5,
+      "backorder": true,
+      "specs": [],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/CAB-102.html",
+      "documents": [],
+      "arrivalRank": 73,
+      "hasDatasheet": false,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "CAB-103",
+      "name": "D25 Female to D25 Female Gender Changer",
+      "brand": "Manufacturer not specified",
+      "mpn": "P1716",
+      "price": "8.36",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": 4,
+          "price": "8.36"
+        },
+        {
+          "min": 5,
+          "max": null,
+          "price": "7.95"
+        }
+      ],
+      "images": [
+        "assets/products/01c485b14ca6-CAB-103-2020-S.jpg"
+      ],
+      "description": "D25 Female to D25 Female Gender Changer",
+      "summary": "D25 Female to D25 Female Gender Changer",
+      "categories": [
+        "Computer Products >>> Gender Changers & Adapters"
+      ],
+      "stock": 3,
+      "backorder": true,
+      "specs": [],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/CAB-103.html",
+      "documents": [],
+      "arrivalRank": 74,
+      "hasDatasheet": false,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "CGL-001",
+      "name": "PG7 Grey Cable Gland",
+      "brand": "SMS",
+      "mpn": "PG7 Grey",
+      "price": "2.41",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": 19,
+          "price": "2.41"
+        },
+        {
+          "min": 20,
+          "max": null,
+          "price": "2.17"
+        }
+      ],
+      "images": [
+        "assets/products/be13dc33967d-CGL-XXX-2020-S.jpg"
+      ],
+      "description": "These grey cable glands have IP68 rating, CE and RoHS certifications. This range of PG cable gland is suitable for cable diameter ranging from 3.5 to 6 mm",
+      "summary": "Nylon Plastic PG7 Grey Cable Gland - Suits cable diameter from 3.5 to 6 mm",
+      "categories": [
+        "Electrical Terminals-Wiring >>> Cable Glands"
+      ],
+      "stock": 62,
+      "backorder": true,
+      "specs": [],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/CGL-001.html",
+      "documents": [],
+      "arrivalRank": 75,
+      "hasDatasheet": false,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "CGL-004",
+      "name": "PG9 Grey Cable Gland",
+      "brand": "SMS",
+      "mpn": "PG9 Grey",
+      "price": "2.51",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": 19,
+          "price": "2.51"
+        },
+        {
+          "min": 20,
+          "max": null,
+          "price": "2.26"
+        }
+      ],
+      "images": [
+        "assets/products/be13dc33967d-CGL-XXX-2020-S.jpg"
+      ],
+      "description": "PG9 Grey Cable Gland - Suit Cable Diameter: 4-8mm",
+      "summary": "PG9 Grey Cable Gland - Suit Cable Diameter: 4-8mm",
+      "categories": [
+        "Electrical Terminals-Wiring >>> Cable Glands"
+      ],
+      "stock": 39,
+      "backorder": true,
+      "specs": [
+        [
+          "PG9 Grey Cable Gland - Suit Cable Diameter",
+          "4-8mm"
+        ]
+      ],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/CGL-004.html",
+      "documents": [],
+      "arrivalRank": 76,
+      "hasDatasheet": false,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "CGL-007",
+      "name": "PG11 Grey Cable Gland",
+      "brand": "SMS",
+      "mpn": "PG11 Grey",
+      "price": "2.85",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": 19,
+          "price": "2.85"
+        },
+        {
+          "min": 20,
+          "max": null,
+          "price": "2.56"
+        }
+      ],
+      "images": [
+        "assets/products/be13dc33967d-CGL-XXX-2020-S.jpg"
+      ],
+      "description": "These grey cable glands have IP68 rating, CE and RoHS certifications. This range of PG cable gland is suitable for cable diameter ranging from 5 to 10 mm",
+      "summary": "Nylon Plastic PG11 Grey Cable Gland - Suits cable diameter from 5 to 10 mm",
+      "categories": [
+        "Electrical Terminals-Wiring >>> Cable Glands"
+      ],
+      "stock": 27,
+      "backorder": true,
+      "specs": [],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/CGL-007.html",
+      "documents": [],
+      "arrivalRank": 77,
+      "hasDatasheet": false,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "CIR-001",
+      "name": "Circuit\u00a0Breaker\u00a0 3A\u00a0Panel\u00a0Mount",
+      "brand": "Manufacturer not specified",
+      "mpn": "S5503",
+      "price": "9.32",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": 4,
+          "price": "9.32"
+        },
+        {
+          "min": 5,
+          "max": null,
+          "price": "8.85"
+        }
+      ],
+      "images": [
+        "assets/products/2c7036a2b55e-CIR-001-2021-S.jpg"
+      ],
+      "description": "All specifications\u00a0at 25\u00b0C\nHold Current: 100% load indefinitely\nTrip Current: Within 1 hr @ 145% load\nTrip Current: Within 1 minute @ 200% load\nMax. Voltage: 250 VAC or 50 VDC\nPanel Cutout: Single hole mount 12mm \u00d8\nDimensions: 36 x 31 x 15 mm",
+      "summary": "Circuit Breaker 3A Panel Mount",
+      "categories": [
+        "Prototyping >>> Circuit Breakers"
+      ],
+      "stock": 1,
+      "backorder": true,
+      "specs": [
+        [
+          "Hold Current",
+          "100% load indefinitely"
+        ],
+        [
+          "Trip Current",
+          "Within 1 hr @ 145% load"
+        ],
+        [
+          "Trip Current",
+          "Within 1 minute @ 200% load"
+        ],
+        [
+          "Max. Voltage",
+          "250 VAC or 50 VDC"
+        ],
+        [
+          "Panel Cutout",
+          "Single hole mount 12mm \u00d8"
+        ],
+        [
+          "Dimensions",
+          "36 x 31 x 15 mm"
+        ]
+      ],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/CIR-001.html",
+      "documents": [],
+      "arrivalRank": 78,
+      "hasDatasheet": false,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "CIR-002",
+      "name": "Circuit\u00a0Breaker\u00a0 5A\u00a0Panel\u00a0Mount",
+      "brand": "Manufacturer not specified",
+      "mpn": "S5505",
+      "price": "9.32",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": 4,
+          "price": "9.32"
+        },
+        {
+          "min": 5,
+          "max": null,
+          "price": "8.85"
+        }
+      ],
+      "images": [
+        "assets/products/2c7036a2b55e-CIR-001-2021-S.jpg"
+      ],
+      "description": "",
+      "summary": "Circuit Breaker 5A Panel Mount",
+      "categories": [
+        "Prototyping >>> Circuit Breakers"
+      ],
+      "stock": 1,
+      "backorder": true,
+      "specs": [],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/CIR-002.html",
+      "documents": [],
+      "arrivalRank": 68,
+      "hasDatasheet": false,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "CIR-003",
+      "name": "Circuit\u00a0Breaker\u00a010A\u00a0Panel\u00a0Mount",
+      "brand": "Manufacturer not specified",
+      "mpn": "S5510",
+      "price": "9.32",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": 4,
+          "price": "9.32"
+        },
+        {
+          "min": 5,
+          "max": null,
+          "price": "8.85"
+        }
+      ],
+      "images": [
+        "assets/products/2c7036a2b55e-CIR-001-2021-S.jpg"
+      ],
+      "description": "All\u00a0specifications\u00a0at 25\u00b0C\nHold Current: 100% load\u00a0indefinitely\nTrip Current: Within 1 hr @ 145% load\nTrip current: Within 1 minute @ 200% load\nMax. Voltage: 250 VAC or 50 V DC\nPanel Cutout: Single hole mount 12 mm \u00d8\nDimensions: 36 x 31 x 15 mm",
+      "summary": "Circuit Breaker 10 A Panel Mount",
+      "categories": [
+        "Prototyping >>> Circuit Breakers"
+      ],
+      "stock": 59,
+      "backorder": true,
+      "specs": [
+        [
+          "Hold Current",
+          "100% load\u00a0indefinitely"
+        ],
+        [
+          "Trip Current",
+          "Within 1 hr @ 145% load"
+        ],
+        [
+          "Trip current",
+          "Within 1 minute @ 200% load"
+        ],
+        [
+          "Max. Voltage",
+          "250 VAC or 50 V DC"
+        ],
+        [
+          "Panel Cutout",
+          "Single hole mount 12 mm \u00d8"
+        ],
+        [
+          "Dimensions",
+          "36 x 31 x 15 mm"
+        ]
+      ],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/CIR-003.html",
+      "documents": [],
+      "arrivalRank": 79,
+      "hasDatasheet": false,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "CND-900",
+      "name": "IDC26-IDC26 Ribbon Cable 250mm",
+      "brand": "CNCDrive",
+      "mpn": "IDC26-IDC26",
+      "price": "11.55",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": 4,
+          "price": "11.55"
+        },
+        {
+          "min": 5,
+          "max": null,
+          "price": "10.98"
+        }
+      ],
+      "images": [
+        "assets/products/c7cbdd90c7c7-CND-900-2025-S.jpg"
+      ],
+      "description": "IDC26 Male - IDC26 Male Ribbon Cable used to connect CNCDrive's Motion Controllers to Parallel Port Breakout Board.\u00a0\nCable length is 250mm.\nCompatible with UC400ETH and AXBB-E Motion Controllers.",
+      "summary": "IDC26 Male - IDC26 Male Ribbon Cable used to connect CNCDrive's Motion Controllers to Parallel Port Breakout Board. Cable length is 250mm.",
+      "categories": [
+        "CNC >>> CNC Accessories"
+      ],
+      "stock": 6,
+      "backorder": true,
+      "specs": [],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/CND-900.html",
+      "documents": [],
+      "arrivalRank": 19,
+      "hasDatasheet": false,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "CND-901",
+      "name": "IDC26-DSUB25 Female Ribbon Cable 250mm",
+      "brand": "CNCDrive",
+      "mpn": "IDC26-DSUB25",
+      "price": "11.55",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": 4,
+          "price": "11.55"
+        },
+        {
+          "min": 5,
+          "max": null,
+          "price": "10.98"
+        }
+      ],
+      "images": [
+        "assets/products/de0e1c1397dd-CND-901-2025-S.jpg",
+        "assets/products/ed99c7f52fc7-IDC26-DSUB25_cable.jpg"
+      ],
+      "description": "IDC26-DSUB25 Female Ribbon Cable used to connect CNCDrive's Motion Controllers to Parallel Port Breakout Board.\u00a0\nCable length is 250mm.\u00a0\nCompatible with UC400ETH and AXBB-E Motion Controllers.",
+      "summary": "IDC26-DSUB25 Female Ribbon Cable used to connect CNCDrive's Motion Controllers to Parallel Port Breakout Board. Cable length is 250mm.",
+      "categories": [
+        "CNC >>> CNC Accessories"
+      ],
+      "stock": 5,
+      "backorder": true,
+      "specs": [],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/CND-901.html",
+      "documents": [],
+      "arrivalRank": 20,
+      "hasDatasheet": false,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "CND-902",
+      "name": "Differential Line Driver",
+      "brand": "CNCDrive",
+      "mpn": "Differential Line Driver",
+      "price": "10.39",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": 4,
+          "price": "10.39"
+        },
+        {
+          "min": 5,
+          "max": 9,
+          "price": "9.87"
+        }
+      ],
+      "images": [
+        "assets/products/36e0839a6950-CND-902-2025-S.jpg"
+      ],
+      "description": "Converts single ended A, B and Index channel lines to Differential A, _A, B, _B, Index, _Index lines\nScrew terminal input.\nRJ45 connector output for easy connection with standard Patch cable.\nHigh noise immunity of output lines.\nOutput is routable up to 100 meters of length.",
+      "summary": "Converts single-ended signals (A, B) into differential signals (A+, A-, B+, B-).",
+      "categories": [
+        "CNC >>> CNC Accessories",
+        "Motors & Accessories >>> Encoders"
+      ],
+      "stock": 4,
+      "backorder": true,
+      "specs": [],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/CND-902.html",
+      "documents": [],
+      "arrivalRank": 7,
+      "hasDatasheet": false,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "DBI-032",
+      "name": "AC Volt-Current Input 4 Digit Process Indicator 1 relay 24VDC (48x96mm)",
+      "brand": "DCBox",
+      "mpn": "MA4-S02-C-R1",
+      "price": "160.51",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": 4,
+          "price": "160.51"
+        },
+        {
+          "min": 5,
+          "max": 9,
+          "price": "144.46"
+        },
+        {
+          "min": 10,
+          "max": null,
+          "price": "136.43"
+        }
+      ],
+      "images": [
+        "assets/products/8c9c90044a9e-DBI-032-2021-S_1.jpg"
+      ],
+      "description": "The MA4 series 4 digit indicator with 20mm high brightness LEDs will allow you to easily monitor a 0-500VAC / 0-50VAC / 0-5A ac / 0-1A ac signal. Using push buttons in the front, the indicator can easily display the AC voltage or current in power systems.\nThe MA4 meters have a number of options available such as 2 alarm relays, RS-485, analog retransmission. If you require the MA4 with these options please Contact us for a price. Lead time is typically 2-3 weeks\nFeatures\nHigh stability\nDiscrete screw terminals allow easy connection\nCE EMC certification",
+      "summary": "A budget priced 4 Digit Process Indicator(48 x 96 mm) with 0-500VAC / 0-50VAC / 0-5A ac / 0-1A ac Input, Alarm relay output and 24 VDC Powered.",
+      "categories": [
+        "Panel Meters >>> AC Power Meters"
+      ],
+      "stock": 3,
+      "backorder": true,
+      "specs": [],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/DBI-032.html",
+      "documents": [
+        "8d5c821e34757674",
+        "de41b44ce029fbb8"
+      ],
+      "arrivalRank": 35,
+      "hasDatasheet": true,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "DBI-033",
+      "name": "DC Volt Input 4 Digit Process Indicator 1 relay 24VDC (48x96mm)",
+      "brand": "DCBox",
+      "mpn": "MA4-S03-C-R1",
+      "price": "160.51",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": 4,
+          "price": "160.51"
+        },
+        {
+          "min": 5,
+          "max": 9,
+          "price": "144.46"
+        },
+        {
+          "min": 10,
+          "max": null,
+          "price": "136.43"
+        }
+      ],
+      "images": [
+        "assets/products/15a957b92fcc-DBI-033-2025-S_1.jpg"
+      ],
+      "description": "The MA4 series 4 digit indicator with 20mm high brightness LEDs will allow you to easily monitor a 0-500VDC / 0-50VDC / 0-100mVDC / 0-50mVDC signal. Using push buttons on the front the indicator can easily display the DC voltage in applications such as solar power systems.\nThe MA4 meters have a number of options available such as 2 alarm relays, RS-485, analog retransmission. If you require the MA4 with these options please Contact us for a price. Lead time is typically 2-3 weeks\nFeatures\nHigh stability\nDiscrete screw terminals allow easy connection\nCE EMC certification",
+      "summary": "A budget priced 4 Digit Process Indicator(48 x 96 mm) with 0-500VDC / 0-50VDC / 0-100mVDC / 0-50mVDC Input, Alarm relay output and 24 VDC Powered.",
+      "categories": [
+        "Panel Meters >>> AC Power Meters",
+        "Panel Meters >>> Process Meters (>=48 x 96mm)"
+      ],
+      "stock": 2,
+      "backorder": true,
+      "specs": [],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/DBI-033.html",
+      "documents": [
+        "8d5c821e34757674",
+        "de41b44ce029fbb8"
+      ],
+      "arrivalRank": 36,
+      "hasDatasheet": true,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "DBI-050",
+      "name": "GBMA/GBMC/GBMR/GBMS Spare Remote for 10\u00a0cm Displays",
+      "brand": "Alish",
+      "mpn": "B-RC-I-18",
+      "price": "25.54",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": 4,
+          "price": "25.54"
+        },
+        {
+          "min": 5,
+          "max": 9,
+          "price": "22.98"
+        },
+        {
+          "min": 10,
+          "max": null,
+          "price": "21.71"
+        }
+      ],
+      "images": [
+        "assets/products/7982aa885478-DBI-050-2021-S_1.jpg"
+      ],
+      "description": "The GBMA/GBMC/GBMR/GBMS range of process displays from DCBox are configured using an infrared remote. Each display comes with a remote but we've got a few spares if you need another or want multiple for configuration.",
+      "summary": "Spare or additional remote for configuring our GBMA/GBMC/GBMR/GBMS 10 cm displays",
+      "categories": [
+        "Large Displays >>> Accessories"
+      ],
+      "stock": 2,
+      "backorder": true,
+      "specs": [],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/DBI-050.html",
+      "documents": [],
+      "arrivalRank": 47,
+      "hasDatasheet": false,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "DEC-200",
+      "name": "DVP PLC RS-232 Serial Programming Cable",
+      "brand": "DELTA",
+      "mpn": "UC-MS030-01A",
+      "price": "24.7",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": null,
+          "price": "24.7"
+        }
+      ],
+      "images": [
+        "assets/products/69259fba8abf-DEC-200-2021-S_1.jpg",
+        "assets/products/9de08ae10e1d-DEC-200_Wiring.jpg"
+      ],
+      "description": "DVPACAB2A30 DVP Series PLC RS232 Serial Programming Cable. Use it between a serial port on your PC to program a DVP series PLC.",
+      "summary": "DVPACAB2A30 RS-232 Serial programming cable suits Delta DVP-SS, SS2, SX2, SA2, SV2 and SE series PLCs.",
+      "categories": [
+        "PLCs & HMIs >>> Accessories"
+      ],
+      "stock": 2,
+      "backorder": true,
+      "specs": [],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/DEC-200.html",
+      "documents": [],
+      "arrivalRank": 63,
+      "hasDatasheet": false,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "DEI-100",
+      "name": "DOP Series HMI USB Programming Cable",
+      "brand": "DELTA",
+      "mpn": "DOP-CAUSBAB",
+      "price": "46.85",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": null,
+          "price": "46.85"
+        }
+      ],
+      "images": [
+        "assets/products/ca436124380d-DEI-100-2020-S.jpg"
+      ],
+      "description": "Delta DOP Series USB programming upload/download cable",
+      "summary": "DOP Series HMI USB Programming Cable",
+      "categories": [
+        "PLCs & HMIs >>> Accessories"
+      ],
+      "stock": 4,
+      "backorder": true,
+      "specs": [],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/DEI-100.html",
+      "documents": [],
+      "arrivalRank": 64,
+      "hasDatasheet": false,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "DEI-101",
+      "name": "DOP HMI to Delta PLC Communication Cable",
+      "brand": "DELTA",
+      "mpn": "UC-MS030-06A",
+      "price": "31.03",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": null,
+          "price": "31.03"
+        }
+      ],
+      "images": [
+        "assets/products/404fc0619ce6-DEI-101-2021-S_1.jpg"
+      ],
+      "description": "RS-232 serial cable with the correct plugs and pinout to connect a Delta Electronics HMI (DOP-B series touchscreen HMIs) to a Delta Electronics PLC. Connects to the first serial port of the HMI. 3m long",
+      "summary": "Connects between a Delta Electronics DOP-B series HMI and Delta Electronics PLC. 3m long.",
+      "categories": [
+        "PLCs & HMIs >>> Accessories"
+      ],
+      "stock": 3,
+      "backorder": true,
+      "specs": [],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/DEI-101.html",
+      "documents": [],
+      "arrivalRank": 65,
+      "hasDatasheet": false,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "DTC-009",
+      "name": "D9 Female Terminal Card",
+      "brand": "Ocean Controls",
+      "mpn": "",
+      "price": "37.5",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": 4,
+          "price": "37.50"
+        },
+        {
+          "min": 5,
+          "max": 9,
+          "price": "33.75"
+        },
+        {
+          "min": 10,
+          "max": null,
+          "price": "31.88"
+        }
+      ],
+      "images": [
+        "assets/products/2314c88259f9-DTC-009b_1.jpg"
+      ],
+      "description": "Our D9 female connector to screw terminal connectors allows you to easily connect to I/O through a D9 connector. The board can be mounted using screws and spacers. Version DTD-009 can be purchased with DIN rail mounting\nDimensions:\u00a072 x 42.4 x 15 (mm)",
+      "summary": "Terminal card breaks a female DE-9 connector out to screw terminals.",
+      "categories": [
+        "Communications >>> Adapters"
+      ],
+      "stock": 1,
+      "backorder": true,
+      "specs": [
+        [
+          "Dimensions",
+          "72 x 42.4 x 15 (mm)"
+        ]
+      ],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/DTC-009.html",
+      "documents": [],
+      "arrivalRank": 80,
+      "hasDatasheet": false,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "DTC-0091",
+      "name": "D9 Male Terminal Card",
+      "brand": "Ocean Controls",
+      "mpn": "",
+      "price": "39",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": 4,
+          "price": "39.00"
+        },
+        {
+          "min": 5,
+          "max": 9,
+          "price": "35.10"
+        },
+        {
+          "min": 10,
+          "max": null,
+          "price": "33.15"
+        }
+      ],
+      "images": [
+        "assets/products/75a13f207304-DTC-0091b.jpg",
+        "assets/products/a7fa594f1e57-DTC-0091a.jpg"
+      ],
+      "description": "Our D9 male connector to screw terminal connectors allows you to easily connect to I/O through a D9 connector. The board can be mounted using screws and spacers. Version DTD-0091 can be purchased with DIN rail mounting\nDimensions:\u00a072 x 42.4 x 15 (mm)",
+      "summary": "D9 Male Terminal Card",
+      "categories": [
+        "Communications >>> Adapters"
+      ],
+      "stock": 10,
+      "backorder": true,
+      "specs": [
+        [
+          "Dimensions",
+          "72 x 42.4 x 15 (mm)"
+        ]
+      ],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/DTC-0091.html",
+      "documents": [],
+      "arrivalRank": 59,
+      "hasDatasheet": false,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "DTC-012",
+      "name": "RJ12 Terminal Card",
+      "brand": "Ocean Controls",
+      "mpn": "",
+      "price": "39.95",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": 4,
+          "price": "39.95"
+        },
+        {
+          "min": 5,
+          "max": 9,
+          "price": "35.96"
+        },
+        {
+          "min": 10,
+          "max": null,
+          "price": "33.96"
+        }
+      ],
+      "images": [
+        "assets/products/a1bdb475373c-DTC-012.jpg"
+      ],
+      "description": "Our RJ12 female connector to screw terminal board allows you to easily connect to I/O through a RJ12 connector. Pins 1 to 4 on the RJ12 are broken out to terminals 3 to 6. Terminals 1,2, 7, and 8 are unused.\nThis card is compatible with the Davis Instruments Weather Stations.\nThe board can be mounted using screws and spacers. Model DTD-012 is fitted with DIN rail mounting to allow easy attachment to DIN rail.\nDimensions:\u00a072 x 42 (mm)",
+      "summary": "Breaks out an RJ12 connector to screw terminals",
+      "categories": [
+        "Communications >>> Adapters",
+        "Weather >>> Weather Station Accessories"
+      ],
+      "stock": 5,
+      "backorder": true,
+      "specs": [
+        [
+          "Dimensions",
+          "72 x 42 (mm)"
+        ]
+      ],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/DTC-012.html",
+      "documents": [],
+      "arrivalRank": 49,
+      "hasDatasheet": false,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "FMI-110",
+      "name": "Fema MODEL B44-C1 4 Digit Counter Large 100mm Display IP65 24VDC",
+      "brand": "Fema",
+      "mpn": "B44-C1-L-R-0-0",
+      "price": "1179.39",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": 4,
+          "price": "1179.39"
+        },
+        {
+          "min": 5,
+          "max": 9,
+          "price": "1061.45"
+        },
+        {
+          "min": 10,
+          "max": null,
+          "price": "1002.48"
+        }
+      ],
+      "images": [
+        "assets/products/6a820a3c16fa-FMI-110-2025-S.jpg"
+      ],
+      "description": "Large format meter with 4 digits and 100 mm digit height, for reading up to 50 meters for industrial applications.\n\nImpulse counter, ratemeter and period meter functions. Versatile and configurable instrument, accepts all type of impulse signals and encoders. Provides excitation voltage to power-up the sensor.\n\nFront keypad for easy access to the configuration menu and connection for remote keypad.\n\nOptional output and control modules for relay output, transistor output, SSR control, analog output retransmission and communications for Modbus RTU and RS-485 ASCII protocols.\n\nSturdy metallic housing with full IP65 protection, for panel mount, wall mount or hanging mount.\n\n\nFeatures:\nDot-matrix digits for better readability when compared to 7-segment displays\nParameters set by front keypad or remote\n\nMin and Max reading retention\nIP65 rating\nAccepts Push-pull, NPN, PNP, Namur, pick-up, TTL, inductive, mechanical contact and quadrature signals\u00a0\nBrackets allow panel mount/wall mount/hanging mount\nPassword protection to prevent tampering\nPlease note the datasheet shows a range of configurations, not all of which we stock. Non-standard options (analog output, extra alarms, RS-485) are available but may be subject to different pricing. Lead time on non-stocked configurations is usually 3 to 5 weeks.",
+      "summary": "Large four digit impulse counter, ratemeter and periodmeter functions. Versatile and configurable instrument, accepts all type of impulse signals and encoders. Provides excitation voltage to power-up the sensor.",
+      "categories": [
+        "Large Displays >>> Counter/Timer"
+      ],
+      "stock": 2,
+      "backorder": true,
+      "specs": [],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/FMI-110.html",
+      "documents": [
+        "1b5e54b168ecc192",
+        "1b0ab3b7f385542d"
+      ],
+      "arrivalRank": 22,
+      "hasDatasheet": true,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "FMI-150",
+      "name": "FEMA 4-20mA Input Signal Converter with -10VDC to 10VDC Output",
+      "brand": "Fema",
+      "mpn": "CCT-32-6.1206",
+      "price": "330",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": 4,
+          "price": "330.00"
+        },
+        {
+          "min": 5,
+          "max": 9,
+          "price": "297.00"
+        },
+        {
+          "min": 10,
+          "max": null,
+          "price": "280.50"
+        }
+      ],
+      "images": [
+        "assets/products/60b432215bcd-FMI-150-2025-S.jpg"
+      ],
+      "description": "The signal converter from FEMA has an input of 4-20mADC current. It can output -10VDC to 10VDC. Galvanic isolation between input, output and power circuits. The unit is powered by 24VDC.",
+      "summary": "The signal converter from FEMA has an input of 4-20mADC current. It can output -10VDC to 10VDC. Galvanic isolation between input, output and power circuits. The unit is powered by 24VDC.\n\nNOT BACKORDER AVAILABLE",
+      "categories": [
+        "Signal Conditioners >>> Isolated Converters"
+      ],
+      "stock": 2,
+      "backorder": false,
+      "specs": [],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/FMI-150.html",
+      "documents": [
+        "0ee3a5077dc9c487"
+      ],
+      "arrivalRank": 18,
+      "hasDatasheet": true,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "FMI-905",
+      "name": "Fema WME Wall mount housing for 96x48mm panel meters",
+      "brand": "Fema",
+      "mpn": "WME",
+      "price": "236.69",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": 4,
+          "price": "236.69"
+        },
+        {
+          "min": 5,
+          "max": 9,
+          "price": "213.02"
+        },
+        {
+          "min": 10,
+          "max": null,
+          "price": "201.19"
+        }
+      ],
+      "images": [
+        "assets/products/9855d7a5c6a9-FMI-905-2023-S.jpg",
+        "assets/products/c6978b7f7c6d-FMI-905.jpg"
+      ],
+      "description": "Fema Electronica's WME-4 wall mount housing for 96x48mm (1/8 DIN) panel meters.\nFull IP65 protection. Connections through cable glands. Suitable for these panel meters\nSeries M\nSeries K\nSeries C\nInstrument LP4",
+      "summary": "Fema Electronica's wall mount housing for 96x48mm (1/8 DIN) panel meters.\nFull IP65 protection. Connections through cable glands.",
+      "categories": [
+        "Panel Meters >>> Accessories"
+      ],
+      "stock": 1,
+      "backorder": false,
+      "specs": [],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/DMI-905.html",
+      "documents": [],
+      "arrivalRank": 23,
+      "hasDatasheet": false,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "GJS-002",
+      "name": "DS18B20 1-Wire Waterproof Digital Temperature Sensor with 15 meter cable",
+      "brand": "GJY Electronics",
+      "mpn": "Ds18b20 (15m)",
+      "price": "28.47",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": 4,
+          "price": "28.47"
+        },
+        {
+          "min": 5,
+          "max": 9,
+          "price": "25.63"
+        },
+        {
+          "min": 10,
+          "max": null,
+          "price": "24.20"
+        }
+      ],
+      "images": [
+        "assets/products/14bb1de71a61-GJS-002-2020-S_1.jpg"
+      ],
+      "description": "The sensor is equipped with a DS18B20 1-Wire temperature sensor embedded into the probe with a 15metre cable and 3 wires at end. In manufacturing the temperature probe a special process is used which ensures the internal sensor is thermally coupled to the tube wall, this helps ensure rapid thermal response to changing conditions.\nThe DS18B20 digital converts the temperature at sensor for up to 12 bits (9 bits primary temperature measurement plus an overflow counter) or 0.0625 \u00b0C of resolution. It features an alarm function with non-volatile user-programmable upper and lower trigger points. Each sensor has a unique serial number and multiple sensors can share a single bus. The DS18B20 communicates over a 1-Wire\u00ae bus that by definition requires only one data line (and ground) for communication with a central microprocessor. It has an operating temperature range of -55 to +125 \u00b0C and is accurate to \u00b10.5 \u00b0C over the range of -10 to +85 \u00b0C. In addition, the DS18B20 can derive power directly from the data line (\"parasite power\"), eliminating the need for an external power supply.\nApplications where this feature is useful include HVAC environmental controls, sensing temperature inside buildings, equipment or machinery \u00a0and process monitoring and control.\nSubmersible, rugged, wide temperature range probe suitable for use in harsh environments.\n15\u00a0m, HYBV polypropylene insulated PVC sheathed cable\n30 mm stainless steel probe.\nDS18B20 digital temperature sensor.\n\u00b10.5 \u00b0C Accuracy from -10 to +85 \u00b0C\nUses 1-Wire communication protocol.\nChemical resistant and waterproof steel probe and cable.\nNo external power required, or can be optionally powered for faster operation.\nAutomatic unique device addressing.\nApplications include thermostatic controls, industrial systems, consumer products, thermometers, or any thermally sensitive system.\nWiring:\n- White Cable Sensor: White (GND), Red (Data), Green (VCC)\n- Black Cable Sensor: Black (GND), Yellow (Data), Red (VCC)",
+      "summary": "DS18B20 digital thermometer in waterproof \u23006 \u00d7 30 mm probe with 15 metre cable. -55 to 125 \u00b0C range with \u00b10.5 \u00b0C accuracy from -10 to 85 \u00b0C.",
+      "categories": [
+        "Sensors >>> 1 Wire",
+        "Sensors >>> Temperature Other"
+      ],
+      "stock": 18,
+      "backorder": true,
+      "specs": [
+        [
+          "- White Cable Sensor",
+          "White (GND), Red (Data), Green (VCC)"
+        ],
+        [
+          "- Black Cable Sensor",
+          "Black (GND), Yellow (Data), Red (VCC)"
+        ]
+      ],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/GJS-002.html",
+      "documents": [
+        "b4ecd22913b1670d"
+      ],
+      "arrivalRank": 48,
+      "hasDatasheet": true,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "HER-240",
+      "name": "22mm Blanking Plug Black",
+      "brand": "Manufacturer not specified",
+      "mpn": "",
+      "price": "5",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": 4,
+          "price": "5.00"
+        },
+        {
+          "min": 5,
+          "max": 9,
+          "price": "4.50"
+        },
+        {
+          "min": 10,
+          "max": null,
+          "price": "4.25"
+        }
+      ],
+      "images": [
+        "assets/products/77f13a132030-HER-240-2020-S.jpg",
+        "assets/products/0f1555a64b27-top-11.jpg"
+      ],
+      "description": "Cover unused holes in cabinets and escutcheon doors. Threaded nut with o-ring gasket.\u00a0\n(Black only)",
+      "summary": "Cover unused holes in cabinets and escutcheon doors. Threaded nut with o-ring gasket.",
+      "categories": [
+        "Electrical Switches >>> 22mm Switches & Indicators"
+      ],
+      "stock": 116,
+      "backorder": true,
+      "specs": [],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/HER-240.html",
+      "documents": [],
+      "arrivalRank": 39,
+      "hasDatasheet": false,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "HER-240G",
+      "name": "22mm Blanking Plug Gray",
+      "brand": "Manufacturer not specified",
+      "mpn": "",
+      "price": "5",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": 4,
+          "price": "5.00"
+        },
+        {
+          "min": 5,
+          "max": 9,
+          "price": "4.50"
+        },
+        {
+          "min": 10,
+          "max": null,
+          "price": "4.25"
+        }
+      ],
+      "images": [
+        "assets/products/b81c49dc0a3e-HER-240G-2023-L.jpg"
+      ],
+      "description": "Cover unused holes in cabinets and escutcheon doors. Threaded nut with o-ring gasket.",
+      "summary": "Cover unused holes in cabinets and escutcheon doors. Threaded nut with o-ring gasket. Gray in color",
+      "categories": [
+        "Electrical Switches >>> 22mm Switches & Indicators"
+      ],
+      "stock": 100,
+      "backorder": true,
+      "specs": [],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/HER-240G.html",
+      "documents": [],
+      "arrivalRank": 16,
+      "hasDatasheet": false,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "HER-300",
+      "name": "22mm Rotary Potentiometer 10k",
+      "brand": "Manufacturer not specified",
+      "mpn": "Shande Electric Factory",
+      "price": "34.95",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": 4,
+          "price": "34.95"
+        },
+        {
+          "min": 5,
+          "max": 9,
+          "price": "31.46"
+        },
+        {
+          "min": 10,
+          "max": null,
+          "price": "29.71"
+        }
+      ],
+      "images": [
+        "assets/products/8df33fdcb107-HER-300-2021-S_1.jpg"
+      ],
+      "description": "Rotary potentiometer to suit standard 22mm diameter mounting. 10k\u03a9 linear taper (see related products for other resistances). Suitable for use with our Variable Frequency Drives and KTA-301 Stepper Motor Controller.",
+      "summary": "Screw terminals. 1/2 watt rated. Linear taper. Suits standard 22mm diameter mounting hole.",
+      "categories": [
+        "Electrical Switches >>> 22mm Switches & Indicators"
+      ],
+      "stock": 19,
+      "backorder": true,
+      "specs": [],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/HER-300.html",
+      "documents": [],
+      "arrivalRank": 43,
+      "hasDatasheet": false,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "HET-100",
+      "name": "Signal Generator 4-20mA /0-10V /0-5V Adjustable Voltage Current Simulator",
+      "brand": "Manufacturer not specified",
+      "mpn": "BRT LB02G",
+      "price": "149.95",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": 4,
+          "price": "149.95"
+        },
+        {
+          "min": 5,
+          "max": 9,
+          "price": "134.96"
+        },
+        {
+          "min": 10,
+          "max": null,
+          "price": "127.46"
+        }
+      ],
+      "images": [
+        "assets/products/68595188faa3-HET-100-2023-S_1.jpg",
+        "assets/products/8725980c1046-HET-001_1_1.jpg",
+        "assets/products/5dea1e765190-HET-001_3.jpg"
+      ],
+      "description": "New Features:\nMax. Output range: max. -10V to 10V., 2/3/4-wire 0-22mA sink or source signal. Voltage output can be exactly 0.00V\nOutput range can be 0-20mA, 4-20mA, 0-22mA, 0-1V, 0-5V, 0-10V, 0-2.5V, 0-3.3V, -5V to 5V, 1-5V, 2-10V, etc. switchable and adjustable.\nDisplay modes can be: actual current/voltage signal value display, 0.0-100.0(%), 0.0-50.0 (Hz), switchable.\nUser can set 9 x fast signal output points, more convenient to do debugging.\nHave battery capacity status indicator, and battery voltage value display function.\nSupport 24V operating power supply via wiring terminals and 5V from USB port, can be used in indoors or outside industrial site.\n1000mAH 3.7V re-chargeable battery embedded inside, *Automatic stopping recharging battery when battery has been fully charged.\nOutput accuracy can be calibrated by user, precision 0.01V, 0.01mA output and LED display output signal value accurately.\nAdjusting steps can be fine adjustment or rough adjustment, switchable.\nHave short-circuited protection circuits and polarity reverse connection protection circuits in Brightwin signal generator.\nRefined user-friendly external shell, refined accurate encoders' knob to adjust output signal, more slim size.\nIts default output range is 0-10V, 0-20mA, user can adjust it to make it output -10V to -10V, 4-20mA, etc., output ranges.\nOutput accuracy can be calibrated by user.",
+      "summary": "The BRT LB02G (Upgraded New Version) is a low cost Signal Generator with rechargeable lithium battery and selectable 0-20mA or 0-10V output",
+      "categories": [
+        "Test Equipment >>> Calibrators & Generators"
+      ],
+      "stock": 10,
+      "backorder": true,
+      "specs": [
+        [
+          "Max. Output range",
+          "max. -10V to 10V., 2/3/4-wire 0-22mA sink or source signal. Voltage output can be exactly 0.00V"
+        ],
+        [
+          "Display modes can be",
+          "actual current/voltage signal value display, 0.0-100.0(%), 0.0-50.0 (Hz), switchable."
+        ]
+      ],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/HET-100.html",
+      "documents": [],
+      "arrivalRank": 17,
+      "hasDatasheet": false,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "HET-105",
+      "name": "Signal Generator Pocket Precision 4-20mA /0-10V /0-5V",
+      "brand": "Manufacturer not specified",
+      "mpn": "BRT LB03",
+      "price": "189.95",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": 4,
+          "price": "189.95"
+        },
+        {
+          "min": 5,
+          "max": 9,
+          "price": "170.96"
+        },
+        {
+          "min": 10,
+          "max": null,
+          "price": "161.46"
+        }
+      ],
+      "images": [
+        "assets/products/628bac24d8f8-HET-105-2023-S_1.jpg",
+        "assets/products/3880dbb69208-HET-105.jpg",
+        "assets/products/798ffdc3d395-HET-105_1.jpg"
+      ],
+      "description": "New Features:\nPocket size: 90x70x28mm, very convenient to carry.\nMax. 0-24mA source/sink signal output, 0-12VDC, 24V output.\nMax. 0-24mA 0-30V input measurement.\n0.01mA, 0.01V accuracy for signal output and input measurement.\nHave current voltage signal conversion functions.\nLarge clear color LCD display input and output signal accurately.\nOne screen task display or upper lower screen display.\n2000mAH rechargeable battery inside, can be used in the lab or in industrial site.\nHave one button fast output, automatic ascending, descending and cycling output mode.\nCustomized min. output value and max. output value are settable.",
+      "summary": "The BRT LB03\u00a0 Pocket Precision 0-20mA 4-20mA 0-10V 24V Signal Generator Current Voltage Signal Measuring Meter",
+      "categories": [
+        "Test Equipment >>> Calibrators & Generators"
+      ],
+      "stock": 2,
+      "backorder": true,
+      "specs": [
+        [
+          "Pocket size",
+          "90x70x28mm, very convenient to carry."
+        ]
+      ],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/HET-105.html",
+      "documents": [],
+      "arrivalRank": 15,
+      "hasDatasheet": false,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "HET-115",
+      "name": "Signal Process Generator Pocket Precision LB02A",
+      "brand": "Manufacturer not specified",
+      "mpn": "BRT LB02",
+      "price": "299.95",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": 4,
+          "price": "299.95"
+        },
+        {
+          "min": 5,
+          "max": 9,
+          "price": "269.96"
+        },
+        {
+          "min": 10,
+          "max": null,
+          "price": "254.96"
+        }
+      ],
+      "images": [
+        "assets/products/9513c58ef147-HET-115-2023-S_1.jpg",
+        "assets/products/7d9519398ac1-HET-115.jpg",
+        "assets/products/840c847460f5-HET-115_1.jpg"
+      ],
+      "description": "BRT LB02A Multifunction Process calibrator is a max. 0.25% high precision process controlling signal calibration meter. It can be used as a mV mA frequency process calibrator and digital multimeter to output and measure 0-20mA, 0-10V, 0-5V, 24V, voltage current signal, type K, J, B, S, T, N, thermocouple signal, PT1000, PT100, CU500 RTD signal, 0-10KHz frequency signal, resistance signal output, curves signal output, etc.\u00a0\nThe LB02A process calibrator can be used as mV mA calibrator, current loop calibrator, frequency calibrator, temperature calibrator, digital multimeter, etc. It has all the calibration functions required in industrial site and support input signal value through button and output signal immediately. Large capacity batter, color LCD screen, simple button layout, it is an perfect calibration tool for technical engineers.\nNew Features:\nHigh reliability and stability, typical accuracy is up to 0.025%+1/2 digits.\nSignal simulation output: 0-10KHz frequency signal, 0-24mA source or sink signal, 0-11V, 0-110mV, 0-2200O, standard type R, E, S, K, J, B, T, N thermocouple, PT1000 PT100, CU50, 24V outputs, etc.\nSignal measurement range: -30V to +30V, -150mV to +150mV, -30mA to +30mA, 0-2500O, 0-10KHz frequency, type R, E, S, K, J, B, T, N thermocouple, PT1000 PT100, CU5 RTD signal, etc. \u00a0\nHave F-FN full-function operating mode, user can enter signal value through digits buttons, the calibrator can output signal directly.\nCan be used as debugging tools, signal generator, frequency calibrator, multifunction process calibrator and simple digital multimeter.\nHigh resolution color LCD display, have back light for different lighting conditions, large screen clear display.\n2200mAH re-chargeable battery inside, have battery status bar, very suitable and convenient to use it in indoors or outside industrial site.\nHave description in Hz, V, mV, mA, RTD, TC, Step, and O buttons, it enables user to operate it easily.\nPrecision AD, DA, reference voltage chips, OP circuits are used to ensure high accuracy, high performance and stability.\nUsing 4 units of PPTC and a quick-break fuse to protect the instrument from damages caused by high voltage.\nTough portable shell: 120x76x30mm, put it into pocket, save energy, save cost, easy to carry.",
+      "summary": "BRT LB02A Multifunction Process calibrator can be used as a mV mA frequency process calibrator and digital multimeter to output and measure 0-20mA, 0-10V, 0-5V, 24V, voltage current signal, type K, J, B, S, T, N, thermocouple signal, PT1000, PT100, CU500 RTD signal, 0-10KHz frequency signal, resistance signal output, curves signal output, etc.",
+      "categories": [
+        "Test Equipment >>> Calibrators & Generators"
+      ],
+      "stock": 3,
+      "backorder": true,
+      "specs": [
+        [
+          "Signal measurement range",
+          "-30V to +30V, -150mV to +150mV, -30mA to +30mA, 0-2500O, 0-10KHz frequency, type R, E, S, K, J, B, T, N thermocouple, PT1000 PT100, CU5 RTD signal, etc."
+        ],
+        [
+          "Tough portable shell",
+          "120x76x30mm, put it into pocket, save energy, save cost, easy to carry."
+        ]
+      ],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/HET-115.html",
+      "documents": [
+        "d6b865c3531ab05e"
+      ],
+      "arrivalRank": 14,
+      "hasDatasheet": true,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "HNC-061",
+      "name": "TH500A (HNC-060) Communication Converter (USB Flash Drive)",
+      "brand": "Hanyoung Nux",
+      "mpn": "EM-310",
+      "price": "461.75",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": 4,
+          "price": "461.75"
+        },
+        {
+          "min": 5,
+          "max": 9,
+          "price": "415.58"
+        },
+        {
+          "min": 10,
+          "max": null,
+          "price": "392.49"
+        }
+      ],
+      "images": [
+        "assets/products/68c2a124062a-Hanyoung-EM310-Data-storage-device.jpg",
+        "assets/products/af6bdd1d2a61-TH500_EMC310_ConnectionDiagram_1.png"
+      ],
+      "description": "You can save the data to USB memory stick in real time after connecting the main body (TH500 (HNC-060), TH300, TD500, TS500) and EM310 (data storage device) by RS232C communication. It is a storage device that can store data also without USB memory stick (limited to 32mb) to the internal non-volatile memory (however, TD500 and TH300 only support RS232 products).",
+      "summary": "The EM310 is a memory storage and communication converter specifically for the TH500 (HNC-060) and 300 series, designed for data logging. It can connect via RS232, and has 32 MB of internal memory, with room for a USB flash drive.",
+      "categories": [
+        "Data Loggers"
+      ],
+      "stock": 1,
+      "backorder": true,
+      "specs": [
+        [
+          "Model",
+          "EM310"
+        ],
+        [
+          "Power voltage",
+          "24 V d.c, 500 mA"
+        ],
+        [
+          "Communication type",
+          "Asynchronous type serial communication (RS232C)"
+        ],
+        [
+          "Communication speed",
+          "Max 38400 bps"
+        ],
+        [
+          "Communication distance",
+          "Max 5 m"
+        ],
+        [
+          "Setting type",
+          "Set by front switch"
+        ],
+        [
+          "Saving media",
+          "USB MEMORY STICK"
+        ],
+        [
+          "File system",
+          "Support FAT16, 32"
+        ],
+        [
+          "Internal memory",
+          "32 Mbyte (non-volatile)"
+        ]
+      ],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/HNC-060A.html",
+      "documents": [
+        "a0a7a2e1287e508a"
+      ],
+      "arrivalRank": 11,
+      "hasDatasheet": true,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "HNL-020",
+      "name": "24VDC Multi-Level Signal Tower (Red, Yellow, Green) + Buzzer",
+      "brand": "Hanyoung Nux",
+      "mpn": "STL060-F-C51-3-L",
+      "price": "143.32",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": 4,
+          "price": "143.32"
+        },
+        {
+          "min": 5,
+          "max": 9,
+          "price": "128.99"
+        },
+        {
+          "min": 10,
+          "max": null,
+          "price": "121.82"
+        }
+      ],
+      "images": [
+        "assets/products/a5d868891e1f-HNL-020-2021-S_1.jpg",
+        "assets/products/39a99c67dbba-HNL-020_1.jpg"
+      ],
+      "description": "Hanyoung Nux STL series LED multi-level signal light (signal tower) uses bright LEDs as a cold, long-life and reliable light source. Each of the LED lamps can be set to continuous on or flashing by individual signals. An internal circuit flashes the red, amber and green sections at approximately 1Hz. Each section can be enabled separately. The buzzer is turned on/off by a separate signal. There is a lever to adjust the volume of the buzzer. LEDs give an expected service time of more than 100,000 hours and save energy.\u00a0Includes mounting hardware and bracket.",
+      "summary": "A multi-level signal tower with constant/flashing red, yellow and green sections plus a buzzer. 24 VDC powered.",
+      "categories": [
+        "Lighting >>> Light Towers"
+      ],
+      "stock": 1,
+      "backorder": true,
+      "specs": [],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/HNL-020.html",
+      "documents": [
+        "71868669a794889d"
+      ],
+      "arrivalRank": 53,
+      "hasDatasheet": true,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "HNL-022",
+      "name": "24VDC Multi-Level Signal Tower (Red, Yellow, Green, Blue, White) + Buzzer",
+      "brand": "Hanyoung Nux",
+      "mpn": "STL060-F-C51-5-L",
+      "price": "160.68",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": 4,
+          "price": "160.68"
+        },
+        {
+          "min": 5,
+          "max": 9,
+          "price": "144.61"
+        },
+        {
+          "min": 10,
+          "max": null,
+          "price": "136.58"
+        }
+      ],
+      "images": [
+        "assets/products/1ffc14f46f3e-HNL-022-2021-S.jpg"
+      ],
+      "description": "Hanyoung Nux STL series LED multi-level signal light (signal tower) uses bright LEDs as a cold, long-life and reliable light source. Each of the LED lamps can be set to continuous on or flashing by individual signals. An internal circuit flashes the red, amber, green, blue and white sections at approximately 1Hz. Each section can be enabled separately. The buzzer is turned on/off by a separate signal. There is a lever to adjust the volume of the buzzer. LEDs give an expected service time of more than 100,000 hours and save energy.\u00a0Includes mounting hardware and bracket.",
+      "summary": "A multi-level signal tower with constant/flashing red, yellow, green, blue and white sections plus a buzzer. 24 VDC powered.",
+      "categories": [
+        "Lighting >>> Light Towers"
+      ],
+      "stock": 9,
+      "backorder": true,
+      "specs": [],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/HNL-022.html",
+      "documents": [
+        "71868669a794889d"
+      ],
+      "arrivalRank": 52,
+      "hasDatasheet": true,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "HNL-0301",
+      "name": "24VDC IP65 Signal Tower (Red)",
+      "brand": "Hanyoung Nux",
+      "mpn": "STE060-AD511M",
+      "price": "107.64",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": 4,
+          "price": "107.64"
+        },
+        {
+          "min": 5,
+          "max": 9,
+          "price": "96.87"
+        },
+        {
+          "min": 10,
+          "max": null,
+          "price": "91.49"
+        }
+      ],
+      "images": [
+        "assets/products/6259c92708f7-HNL-0301-2021-S_1.jpg"
+      ],
+      "description": "Hanyoung Nux STE series LED multi-level signal light (signal tower) uses bright LEDs as a cold, long-life and reliable light source. Depending on the option each of the LED lamps can be set to continuous on or flashing by individual signals. An internal circuit flashes the red. Each section can be enabled separately. There is a lever to adjust the volume of the buzzer. LEDs give an expected service time of more than 100,000 hours and save energy.\nNote this model is constant Red illumination without flashing or buzzer. Includes MP-60 support for easy mounting to a cabinet or surface.",
+      "summary": "A signal tower with a single constant red section. IP65 rating and 24 VDC powered.",
+      "categories": [
+        "Lighting >>> Light Towers"
+      ],
+      "stock": null,
+      "backorder": true,
+      "specs": [],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/HNL-0301.html",
+      "documents": [
+        "b7efd2e521fae5a2"
+      ],
+      "arrivalRank": 42,
+      "hasDatasheet": true,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "HNR-100",
+      "name": "Multi Function Timer MA4N-B",
+      "brand": "Hanyoung Nux",
+      "mpn": "MA4N-B",
+      "price": "61.7",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": 4,
+          "price": "61.70"
+        },
+        {
+          "min": 5,
+          "max": 9,
+          "price": "55.53"
+        },
+        {
+          "min": 10,
+          "max": null,
+          "price": "52.45"
+        }
+      ],
+      "images": [
+        "assets/products/3228933c38fb-HNR-100-2021-S_1.jpg"
+      ],
+      "description": "This easy to configure 11 pin timer features 4 different time units (seconds, minutes, hours and 10hours), 4 different time ranges (0.12-1.2, 0.3-3, 1.2-12, 3-30) and 7 different functions or modes of operation (on delay, flicker off start, interval, signal ON/OFF delay, Signal OFF delay and Flicker ON start). Adjustments for unit, range and mode are all on the front panel making it easy to use. 11 Pin terminal base (Din rail mountable) sold separately NTR-220.\n4 different time units\n4 different time ranges\n7 modes of operation\n2 changeover contact outputs",
+      "summary": "A simple to use and feature packed multi function timer.",
+      "categories": [
+        "Timers >>> DIN Rail"
+      ],
+      "stock": 9,
+      "backorder": true,
+      "specs": [],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/HNR-100.html",
+      "documents": [
+        "481c0be59bdc28e9"
+      ],
+      "arrivalRank": 51,
+      "hasDatasheet": false,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "IPI-103",
+      "name": "Universal Input N1500G Large Indicator 230\u00a0VAC, Analog Out, RS-485",
+      "brand": "Novus",
+      "mpn": "81500G0210",
+      "price": "739.03",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": 4,
+          "price": "739.03"
+        },
+        {
+          "min": 5,
+          "max": 9,
+          "price": "665.12"
+        },
+        {
+          "min": 10,
+          "max": null,
+          "price": "628.17"
+        }
+      ],
+      "images": [
+        "assets/products/01f2a01848ac-IPI-103-2021-S.jpg"
+      ],
+      "description": "Packed with features this large high performance universal digital panel meter features a bright 56 mm high display for high visibility at long distances. Setup can be done via its keyboard.\nSuitable for Thermocouples, RTDs, 4-20 mA and 0-5 V signals\nFeatures\nAccepts and linearises non-linear 4 to 20 mA signals from thermocouple transmitters\nAccepts front panel input of custom created non-linear curve with up to 20 segments\nKey panel protection through a key combination to prevent tampering\nAlarm functions: HI, LO, differential HI, diff. LO and sensor break detection\nHold capability and peak and valley detection\nTare function via front panel or via digital input\nUniversal switching power supply",
+      "summary": "Wall mount, five digit universal process indicator accepts Load cells, thermocouples, Pt100, 4 to 20 mA, 50 mV and 5 V signals. Analog retransmission and RS-485. 100 to 240 VAC Powered.",
+      "categories": [
+        "Large Displays >>> Load Cell"
+      ],
+      "stock": 1,
+      "backorder": true,
+      "specs": [
+        [
+          "Alarm functions",
+          "HI, LO, differential HI, diff. LO and sensor break detection"
+        ]
+      ],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/IPI-103.html",
+      "documents": [
+        "580267d57ff8bb9e"
+      ],
+      "arrivalRank": 81,
+      "hasDatasheet": false,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "KPR-106",
+      "name": "Wired Photoelectric Smoke Detector",
+      "brand": "King Pigeon",
+      "mpn": "SM-04",
+      "price": "30",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": 4,
+          "price": "30.00"
+        },
+        {
+          "min": 5,
+          "max": 9,
+          "price": "27.00"
+        },
+        {
+          "min": 10,
+          "max": null,
+          "price": "25.50"
+        }
+      ],
+      "images": [
+        "assets/products/9bc572901f14-KPR-106-2025-S.jpg",
+        "assets/products/18d2be3efe27-KPR-106_Manual.jpg"
+      ],
+      "description": "The Wired Smoke Detector is used for fire detection which is triggered by smoke and heat. The SM-04 is photoelectric type. It can be used independently or as a front-end detector of an alarm system. Upon detection of smoke and heat, the SM-04 automatically generates an alarm signal to control panel and Led indication alarm. The unit has RF and EMI Immunity to interference produced by radio device.\nNewly-developed photoelectric Smoke & Heat sensor unit inside\nIndependently or as a front-end detector of an alarm system\nWired transmitting digital signal to control panel\nIntelligent logic control, eliminate false alarm\nMicrocontroller temperature analysis and Automatic temperature compensation for best summertime detection\nTightly-mated bug guard to protect the sensor optics from insects, spiders and dust\n\nStrong adaptability to circumstance requirements\nSMT adopted, RF and EMI Immunity\nManual test, auto-reset, and low power consumption\nThin structure design\nAlarm output contacts of relay: N.C./ N.O. optional",
+      "summary": "Wired Photoelectric Smoke detector. Can be used with S110 and other types of Security Alarm System.",
+      "categories": [
+        "Security >>> Detection"
+      ],
+      "stock": 8,
+      "backorder": true,
+      "specs": [
+        [
+          "Alarm output contacts of relay",
+          "N.C./ N.O. optional"
+        ]
+      ],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/KPR-106.html",
+      "documents": [
+        "dd7693819e4fdaee"
+      ],
+      "arrivalRank": 66,
+      "hasDatasheet": false,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "KPR-107",
+      "name": "Wired Ceiling PIR Motion Sensor",
+      "brand": "Manufacturer not specified",
+      "mpn": "",
+      "price": "39",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": 4,
+          "price": "39.00"
+        },
+        {
+          "min": 5,
+          "max": 9,
+          "price": "35.10"
+        },
+        {
+          "min": 10,
+          "max": null,
+          "price": "33.15"
+        }
+      ],
+      "images": [
+        "assets/products/b99ba2ffb2f3-KPR-107-2021-S_1.jpg"
+      ],
+      "description": "The CPIR-03 PIR motion detector is designed to provide detection of criminal intrusion into a room by sensing infrared energy (heat) emitting from an intruder\u2019s body. The sensor is commonly referred to as a PIR, which stands for passive Infrared. Upon detection of intrusion, the PIR-02 automatically generates an alarm signal to control panel. The sensor also provides a tamper contact output. The unit has RF and EMI Immunity to interference produced by radio devices. The unit is mounted on the ceiling.\nNewly-developed dual element passive infrared sensor unit\nWired transmitting digital signal to control panel\nIntelligent logic control eliminates false alarms\nMicrocontroller temperature analysis and Automatic temperature compensation for best summertime detection\nTightly-mated bug guard to protect the sensor optics from insects, spiders and dust\nSelectable detection sensitivity (standard/high) for different environmental requirements\nSMT adopted, RF and EMI Immunity\nAdjustable detecting distance\nAlarm output contacts of relay: N.C./ N.O. optional",
+      "summary": "Wired Ceiling PIR Motion Sensor. Suitable for use with the S110 and other types of alarm systems",
+      "categories": [
+        "Security >>> Detection"
+      ],
+      "stock": 5,
+      "backorder": true,
+      "specs": [
+        [
+          "Alarm output contacts of relay",
+          "N.C./ N.O. optional"
+        ]
+      ],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/KPR-107.html",
+      "documents": [],
+      "arrivalRank": 67,
+      "hasDatasheet": false,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "KTA-367A",
+      "name": "Universal Input to 4-20mA Transmitter with IP65 Rating",
+      "brand": "Ocean Controls",
+      "mpn": "",
+      "price": "136.53",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": 4,
+          "price": "136.53"
+        },
+        {
+          "min": 5,
+          "max": 9,
+          "price": "122.87"
+        },
+        {
+          "min": 10,
+          "max": null,
+          "price": "116.05"
+        }
+      ],
+      "images": [
+        "assets/products/fa49a6fe0926-KTA-367-2020-S_1.jpg",
+        "assets/products/7fc11c4be6e6-KTA-367-2-2020-S_1.jpg"
+      ],
+      "description": "Novus TxBlock non-isolated (SIG-001) / isolated (SIG-010) 4-20mA loop powered hockey puck transmitter is fitted in an IP65 enclosure.\nWill accept Thermocouple: J, K, T, E, N, R, S, B. RTD's Pt100, Pt1000, NTC and 0-50 mV. Enclosure external dimensions: 85L x 80W x 55H mm.\nProgramming software comes with the TxBlock units, but requires a USB programming cable. The latest version of the TXConfigII software can also be downloaded directly from the Novus Automation website.\nTxBlock-USB can also be programmed by Android devices. The TxDroid Config can be downloaded from Google Play store for free.\nNote: We can program the modules in small quantities for a small fee.",
+      "summary": "Universal Thermocouple, RTD and voltage Input to 4-20mA Transmitter via IP65 rating.",
+      "categories": [
+        "Signal Conditioners"
+      ],
+      "stock": 15,
+      "backorder": true,
+      "specs": [
+        [
+          "Will accept Thermocouple",
+          "J, K, T, E, N, R, S, B. RTD's Pt100, Pt1000, NTC and 0-50 mV. Enclosure external dimensions: 85L x 80W x 55H mm."
+        ],
+        [
+          "Note",
+          "We can program the modules in small quantities for a small fee."
+        ]
+      ],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/KTA-367.html",
+      "documents": [],
+      "arrivalRank": 24,
+      "hasDatasheet": false,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "KTA-387",
+      "name": "NEW Modbus Data Logger - Dual RS-485, 100-Channel, SD Card Logging",
+      "brand": "Ocean Controls",
+      "mpn": "KTA-387",
+      "price": "207.18",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": 4,
+          "price": "207.18"
+        },
+        {
+          "min": 5,
+          "max": 9,
+          "price": "186.46"
+        },
+        {
+          "min": 10,
+          "max": null,
+          "price": "176.10"
+        }
+      ],
+      "images": [
+        "assets/products/2190d74c8fc8-KTA-387_Clipart.png",
+        "assets/products/03521d5929f7-KTA-387_Connection_Diagram.drawio_1_.png",
+        "assets/products/aea9b2ef72ce-KTA-387_Mechanical_Dimensions.png"
+      ],
+      "description": "The KTA-387 Modbus Data logger is an easy to use solution when data from one or two Modbus networks need to be recorded.\nThe device works as either a Modbus Master, polling slave devices for register data, or a Modbus Slave, with another master writing to it, in both cases the data is recorded as a plain text CSV (Comma Separated Values) file, along with an accurate timestamp to a Micro SD card.\nSee downloads for full documentation in the manual.\nMicro SD and Micro SDHC cards are both supported, provided they are formatted as FAT16 or FAT32.\nAll configuration is done via a webpage that the KTA-387 will host under a Wi-Fi access point. Details on how to use the webpage and access this AP are in the manual.",
+      "summary": "The KTA-387 is our updated low-profile modbus data logger. It is equipped with 2x configurable RS485 serial ports which can act as either a master or slave independently. It will log up to 100 channels and is configurable on a mobile phone or PC via a user-friendly webpage.\nBattery for RTC is not included (CR1225)",
+      "categories": [
+        "Data Loggers",
+        "Modbus-Bacnet-MBus Products >>> Loggers"
+      ],
+      "stock": 1,
+      "backorder": true,
+      "specs": [
+        [
+          "Digital Input",
+          "1x Non-isolated digital input"
+        ],
+        [
+          "Digital Output",
+          "1x Isolated open-collector output"
+        ],
+        [
+          "Serial Interface",
+          "2x RS-485 (Modbus RTU)"
+        ],
+        [
+          "Backup Battery (RTC)",
+          "CR1225"
+        ],
+        [
+          "Backup Time (RTC)",
+          "3-4 Years"
+        ],
+        [
+          "SD Card Type",
+          "Micro SD FAT32 \u226432GB"
+        ],
+        [
+          "File Type",
+          "*.CSV"
+        ]
+      ],
+      "sale": false,
+      "new": true,
+      "source": "https://oceancontrols.com.au/KTA-387-modbus-data-logger-dual-rs485.html",
+      "documents": [
+        "b5d07a1d550a5942"
+      ],
+      "arrivalRank": 0,
+      "hasDatasheet": false,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "KTA-397",
+      "name": "4G LTE SMS Controller with Relay Outputs",
+      "brand": "Ocean Controls",
+      "mpn": "KTA-397",
+      "price": "419.9",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": 4,
+          "price": "419.90"
+        },
+        {
+          "min": 5,
+          "max": null,
+          "price": "377.91"
+        }
+      ],
+      "images": [
+        "assets/products/1ca5d8b28206-KTA_397_ov.jpg"
+      ],
+      "description": "Built for Australian conditions, the KTA-397 connects to any 4G network via a standard Micro SIM. It comes with a magnetic base antenna and operates on a wide 9\u201336VDC supply, making it suitable for solar, battery, and mains-powered installations.\n\nHOW IT WORKS\nConfigure up to 10 phone numbers to receive alerts. When a digital input changes state - such as a float switch triggering on a tank - the KTA-397 immediately sends an SMS to your nominated contacts. To control equipment, send a simple plain-text command like \"Pump ON\" or \"Pump OFF\".\n\nCOMMON APPLICATIONS\n\u2022 Remote pump control on farms, irrigation systems, and water tanks\n\u2022 Gate and access control via SMS command\n\u2022 Generator start/stop monitoring and alerts\n\u2022 Tank level alarms (high/low float switch)\n\u2022 Industrial alarm notification systems\n\u2022 Remote reset of equipment or circuit breakers\n\nWHAT IS IN THE BOX\n\u2022 KTA-397 LTE SMS controller\n\u2022 Magnetic base SMA antenna with 1.5m cable",
+      "summary": "The KTA-397 is a 4G LTE SMS controller designed for remote monitoring and control of industrial equipment - without needing an internet connection, app, or laptop. Simply send a text message from your mobile phone to switch relay outputs on or off, and receive automatic SMS alerts when inputs change state.",
+      "categories": [
+        "Controllers >>> 4G/5G",
+        "Industrial IoT >>> SMS Alarming"
+      ],
+      "stock": 41,
+      "backorder": true,
+      "specs": [],
+      "sale": false,
+      "new": true,
+      "source": "https://oceancontrols.com.au/4g-lte-sms-controller-kta-397.html",
+      "documents": [
+        "319241e7aad547d6"
+      ],
+      "arrivalRank": 1,
+      "hasDatasheet": false,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "KTA-401",
+      "name": "BACnet IP Weather Station Gateway For Davis Weather Stations",
+      "brand": "Ocean Controls",
+      "mpn": "",
+      "price": "345",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": 4,
+          "price": "345.00"
+        },
+        {
+          "min": 5,
+          "max": 9,
+          "price": "310.50"
+        },
+        {
+          "min": 10,
+          "max": null,
+          "price": "293.25"
+        }
+      ],
+      "images": [
+        "assets/products/a2034ec70274-KTA-402-2025-S_1.jpg"
+      ],
+      "description": "The KTA-401 BACnet IP Weather Station Gateway connects a Davis Instruments Weather Station to a BACnet IP network, specifically built to meet the needs of building automation systems.\nThis gateway provides a simple way to integrate your BACnet network with one of the following Davis weather stations:\nCabled Vantage Pro 2\nCabled Vantage Pro 2 Plus\nWireless Vantage Pro 2\nWireless Vantage Pro 2 Plus\nThe gateway connects to the weather station's console via the Davis WeatherLink cable (Weather Link for Vantage Pro Serial) and becomes part of the BACnet network. This enables your SCADA system or other BACnet devices on the network to monitor and take action based on data such as wind speed, wind direction, temperature, and more.\u00a0\nIf you are looking for a complete solution please chek our BACnet Weather Station Kits. They have everything you'll need to get the weather station data on your BACnet network.",
+      "summary": "The new KTA-401 gateway interfaces a Davis Instruments Weather Station to a BACnet IP network.\nContact us for cloud-based dashboard available via\u00a0Weatherunderground\u00a0-\u00a0Available for $75+GST",
+      "categories": [
+        "Weather >>> BACnet Gateways"
+      ],
+      "stock": 8,
+      "backorder": true,
+      "specs": [],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/KTA-401.html",
+      "documents": [
+        "b29e7900ba77c215",
+        "822f4fc444d312d1",
+        "0052037634f052a0",
+        "688aa6fb34d8135b",
+        "38f98f0ddf41210d",
+        "f9ea1c41bb14d7d9",
+        "7fb4880c4a1de4d8",
+        "53ef12f04989f38f",
+        "617acaaaf96db990"
+      ],
+      "arrivalRank": 6,
+      "hasDatasheet": true,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "KTA-402",
+      "name": "BACnet MS/TP Weather Station Gateway For Davis Weather Stations",
+      "brand": "Ocean Controls",
+      "mpn": "KTA-402",
+      "price": "345",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": 4,
+          "price": "345.00"
+        },
+        {
+          "min": 5,
+          "max": 9,
+          "price": "310.50"
+        },
+        {
+          "min": 10,
+          "max": null,
+          "price": "293.25"
+        }
+      ],
+      "images": [
+        "assets/products/a2034ec70274-KTA-402-2025-S_1.jpg"
+      ],
+      "description": "The KTA-402 BACnet MS/TP Weather Station Gateway connects a Davis Instruments Weather Station to a BACnet MS/TP network, specifically built to meet the needs of building automation systems.\nThis gateway provides a simple way to integrate your BACnet network with one of the following Davis weather stations:\nCabled Vantage Pro 2\nCabled Vantage Pro 2 Plus\nWireless Vantage Pro 2\nWireless Vantage Pro 2 Plus\nThe gateway connects to the weather station's console via the Davis WeatherLink cable (Weather Link for Vantage Pro Serial) and becomes part of the BACnet network. This enables your SCADA system or other BACnet devices on the network to monitor and take action based on data such as wind speed, wind direction, temperature, and more.\u00a0\nIf you are looking for a complete solution please chek our BACnet Weather Station Kits. They have everything you'll need to get the weather station data on your BACnet network.",
+      "summary": "Our New KTA-402 is an upgraded version of our previous KTA-302. It interfaces a Davis Instruments Weather Station to a BACnet MS/TP network.\nContact us for cloud-based dashboard available via\u00a0Weatherunderground\u00a0-\u00a0Available for $75+GST",
+      "categories": [
+        "Weather >>> BACnet Gateways"
+      ],
+      "stock": 48,
+      "backorder": true,
+      "specs": [],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/KTA-402.HTML",
+      "documents": [
+        "822f4fc444d312d1",
+        "688aa6fb34d8135b",
+        "38f98f0ddf41210d",
+        "f9ea1c41bb14d7d9",
+        "7fb4880c4a1de4d8",
+        "53ef12f04989f38f",
+        "617acaaaf96db990",
+        "5885ba388411c22b",
+        "276f9a0750d4f515"
+      ],
+      "arrivalRank": 8,
+      "hasDatasheet": true,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "LAJ-002",
+      "name": "CB25 - Labjack Terminal Board for Digital I/O",
+      "brand": "LabJack",
+      "mpn": "CB25",
+      "price": "145.24",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": 4,
+          "price": "145.24"
+        },
+        {
+          "min": 5,
+          "max": 9,
+          "price": "130.71"
+        },
+        {
+          "min": 10,
+          "max": null,
+          "price": "123.45"
+        }
+      ],
+      "images": [
+        "assets/products/24b468cb1142-LAJ-002-2020-S_1.jpg"
+      ],
+      "description": "The CB25 adds an extra 16 digital I/O on the LabJack U12 via screw terminals connections. On board there is a green LED power indicator that is connected directly to the +5 V supply.\nThe board comes with short circuit and over-voltage protection, therefore the minimum safe continuous voltage is \u2248 -20 V and maximum safe continuous voltage that can be handled by each D line is \u224825 V.",
+      "summary": "Screw terminal connections, with short-circuit and overvoltage protection, for the extra 16 digital I/O on the LabJack U12.",
+      "categories": [
+        "Data Acquisition >>> LabJack Accessories"
+      ],
+      "stock": 4,
+      "backorder": true,
+      "specs": [],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/LAJ-002.html",
+      "documents": [
+        "614c624f310b5771"
+      ],
+      "arrivalRank": 83,
+      "hasDatasheet": true,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "LAJ-003",
+      "name": "EI-1022 Temperature Probe",
+      "brand": "LabJack",
+      "mpn": "EI-1022",
+      "price": "128.05",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": 4,
+          "price": "128.05"
+        },
+        {
+          "min": 5,
+          "max": 9,
+          "price": "115.24"
+        },
+        {
+          "min": 10,
+          "max": null,
+          "price": "108.84"
+        }
+      ],
+      "images": [
+        "assets/products/7f9403569846-LAJ-003-2023-S.jpg"
+      ],
+      "description": "Easy to use and inexpensive temperature probe from Electronic Innovations Corp. Features a plastic probe, a high-level linear output of 10 mV per degree K, a typical accuracy of \u00b11 degrees C (\u00b11.8 degrees F) at room temperature, and a range of -40 to +100 degrees C (-40 to +212 degrees F).\nCan be used with all models of Labjack Data Acquisition Modules. U3, U6, UE9, U12, T4, T7.\nConnection the red wire to +5V, black wire to GND, and white wire is output.\nPlease note: The user should be aware that even though the probe itself can operate at the rated temperatures the cable is rated to between -20 and 80 degC. The use of the cable in environments of over 80 degrees C and lower than -20 degrees C is at your own risk.",
+      "summary": "EI-1022 is a plastic temperature probe, with a linear output of 10 mV per degree K. Operating temperature range from -40 to +100 \u00b0C.",
+      "categories": [
+        "Data Acquisition >>> LabJack Accessories",
+        "Sensors >>> Temperature Other"
+      ],
+      "stock": 10,
+      "backorder": true,
+      "specs": [],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/LAJ-003P.html",
+      "documents": [
+        "2bbc65dfaf0564b1"
+      ],
+      "arrivalRank": 84,
+      "hasDatasheet": true,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "LAJ-006",
+      "name": "Stainless Steel Temperature Probe",
+      "brand": "LabJack",
+      "mpn": "EI1034",
+      "price": "122.14",
+      "purchasable": false,
+      "tiers": [
+        {
+          "min": 1,
+          "max": 4,
+          "price": "203.55"
+        },
+        {
+          "min": 5,
+          "max": 9,
+          "price": "183.20"
+        },
+        {
+          "min": 10,
+          "max": null,
+          "price": "173.02"
+        }
+      ],
+      "images": [
+        "assets/products/d6fd65200abc-LAJ-006-2023-S.jpg"
+      ],
+      "description": "The EI-1034 is intended to be connected to a LabJack for 5 V power but can be used as a stand-alone temperature sensor when connected to a voltage measuring device and a power supply in the range of 5 to 30 volts.\nIt uses the highest grade available of the LM34 sensor from National Semiconductor with a typical room temperature accuracy of \u00b10.4 \u00b0F or \u00b10.25 \u00b0C.\nThe sensor is mounted in a stainless steel sheath and features a high-level linear output of 10 mV per \u00b0F and has an operating temperature range of 0 to +300 \u00b0F (-17 to +150\u00a0\u00b0C with U3/UE9 or -12 \u00b0C to 150 \u00b0C with U12).\nThe probe is suitable for air and liquid applications, and can be conveniently secured into pipes, vessels and chambers by using available \u00bc inch compression fittings.\nPlease note the cable is only rated for -20 to 80 \u00b0C and can be used up to 100 \u00b0C.\nNote:\u00a0When operating at voltages less than 5 Volts the maximum operating temperature is reduced, typically at 4 Volts supply the maximum temperature limit is 200 \u00b0F",
+      "summary": "High-level linear voltage output and high accuracy. Operating temperature range from 0 to +150 \u00b0C.\n\nEOL - NOT AVAILABLE FOR BACKORDER.",
+      "categories": [
+        "Data Acquisition >>> LabJack Accessories",
+        "Sensors >>> Temperature Other"
+      ],
+      "stock": 4,
+      "backorder": false,
+      "specs": [
+        [
+          "Note",
+          "When operating at voltages less than 5 Volts the maximum operating temperature is reduced, typically at 4 Volts supply the maximum temperature limit is 200 \u00b0F"
+        ]
+      ],
+      "sale": true,
+      "new": false,
+      "source": "https://oceancontrols.com.au/LAJ-006.html",
+      "documents": [
+        "62b3a04211643400"
+      ],
+      "arrivalRank": 85,
+      "hasDatasheet": true,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "LEA-002",
+      "name": "698-960/1700-2700Mhz 3G/4G 5dB LTE Antenna Huawei",
+      "brand": "Manufacturer not specified",
+      "mpn": "",
+      "price": "10.95",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": 4,
+          "price": "10.95"
+        },
+        {
+          "min": 5,
+          "max": 9,
+          "price": "9.86"
+        },
+        {
+          "min": 10,
+          "max": null,
+          "price": "9.31"
+        }
+      ],
+      "images": [
+        "assets/products/581846de37ca-LEA-002-2021-S_1.jpg"
+      ],
+      "description": "This rubber duck antenna will allow you to make 3G/4G cellular connections. Operates on 700-2700 MHz frequencies. Comes with a standard male SMA connection.",
+      "summary": "698-960/1700-2700Mhz 3G/4G 5dB \u00a0LTE Rubber Duck Antenna Huawei.",
+      "categories": [
+        "Controllers >>> 4G/5G",
+        "Industrial IoT >>> Accessories"
+      ],
+      "stock": 1,
+      "backorder": true,
+      "specs": [],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/LEA-002.html",
+      "documents": [],
+      "arrivalRank": 50,
+      "hasDatasheet": false,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "LSK-001",
+      "name": "RJ12 Serial Tuning Cable for Leadshine Drives",
+      "brand": "Leadshine",
+      "mpn": "CABLE-PC",
+      "price": "4.1",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": 4,
+          "price": "4.10"
+        },
+        {
+          "min": 5,
+          "max": 9,
+          "price": "3.69"
+        },
+        {
+          "min": 10,
+          "max": null,
+          "price": "3.49"
+        }
+      ],
+      "images": [
+        "assets/products/18a4b6a6a394-LSK-001-2025-S.jpg"
+      ],
+      "description": "PC Serial Tuning Cable for Microstepper Drives. Used with ProTuner software to tune the following stepper and servo motor drives\nCompatible Drives:\nSMC-007 DM556 Anti-Resonance Stepper Motor Drive\nSMC-008 DM432 Anti-Resonance Stepper Motor Drive\nSMC-009 DM856 Anti-Resonance Stepper Motor Drive\nSMC-011 AM882 Anti-Resonance Stepper Motor Drive\nSMC-012 DM442 Anti-Resonance Stepper Motor Drive\nSMC-180 ES-D508 Stepper Motor Drive with Encoder Feedback\nSMC-182 ES-D808 Stepper Motor Drive with Encoder Feedback\nSMC-184 ES-D1008 Stepper Motor Drive with Encoder Feedback\nSMC-220 HBS57 Stepper Motor Drive with Encoder Feedback\nSMC-223 HBS86 Stepper Motor Drive with Encoder Feedback\nSMC-242 DCS-810 Servo Motor Drive\nSMC-400 ACS-606 Brushless Servo Motor Drive\nSMC-410 ACS-806 Brushless Servo Motor Drive",
+      "summary": "DE-9 to RJ12 Programming cable to suit our Leadshine stepper and servo motor drives.",
+      "categories": [
+        "Motor Drivers & Controllers >>> Accessories"
+      ],
+      "stock": 4,
+      "backorder": true,
+      "specs": [
+        [
+          "DE-9 Pin:",
+          "RJ12 Pin:"
+        ],
+        [
+          "2",
+          "3"
+        ],
+        [
+          "3",
+          "5"
+        ],
+        [
+          "5",
+          "4"
+        ]
+      ],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/LSK-001.html",
+      "documents": [],
+      "arrivalRank": 60,
+      "hasDatasheet": false,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "LSK-002",
+      "name": "JST-4 Serial Tuning Cable for Leadshine Drives",
+      "brand": "Leadshine",
+      "mpn": "CABLE-PC-1",
+      "price": "4.1",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": 4,
+          "price": "4.10"
+        },
+        {
+          "min": 5,
+          "max": 9,
+          "price": "3.69"
+        },
+        {
+          "min": 10,
+          "max": null,
+          "price": "3.49"
+        }
+      ],
+      "images": [
+        "assets/products/5d8b89911473-LSK-002-2025-S.jpg",
+        "assets/products/920e6059d4f8-LSK-002-01.jpg"
+      ],
+      "description": "PC Serial Tuning Cable for Microstepper Drives. Used with ProTuner software to tune the following stepper and servo motor drives. Suits SMC-010 DM422 anti-resonance stepper motor drive, SMC-161,162 and SMC-243 DCS303 brushed servo drive.",
+      "summary": "Cable-PC-1 DE-9 to 4 pin programming cable. 1.2-meter (3.9-foot) RS232 cable for tuning the EM402, DM422, DM422C, DCS303 and ACS306 drives with ProTuner.",
+      "categories": [
+        "Motor Drivers & Controllers >>> Accessories"
+      ],
+      "stock": 4,
+      "backorder": true,
+      "specs": [],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/LSK-002.html",
+      "documents": [],
+      "arrivalRank": 61,
+      "hasDatasheet": false,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "LSK-070",
+      "name": "3M Power extension for ELM1/2 series motors",
+      "brand": "Leadshine",
+      "mpn": "CABLE-RZSH3M0-114-TS",
+      "price": "21.89",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": 4,
+          "price": "21.89"
+        },
+        {
+          "min": 5,
+          "max": 9,
+          "price": "19.70"
+        },
+        {
+          "min": 10,
+          "max": null,
+          "price": "18.60"
+        }
+      ],
+      "images": [
+        "assets/products/2888ae208e55-CABLE-RZSH3M0-114-TS.png"
+      ],
+      "description": "MPN:\u00a0CABLE-RZSH3M0-114-TS",
+      "summary": "3-meter (9.8-foot), for ELM1/2 series direct connector motors, suitable for EL6/EL7/EL8 series drivers, with brake",
+      "categories": [
+        "Motors & Accessories"
+      ],
+      "stock": 1,
+      "backorder": true,
+      "specs": [
+        [
+          "MPN",
+          "CABLE-RZSH3M0-114-TS"
+        ]
+      ],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/LSK-080",
+      "documents": [],
+      "arrivalRank": 3,
+      "hasDatasheet": false,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "LSK-071",
+      "name": "3M Encoder extension for ELM1/2 series motors",
+      "brand": "Leadshine",
+      "mpn": "CABLE-BMAH3M0-114-TS",
+      "price": "16.42",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": 4,
+          "price": "16.42"
+        },
+        {
+          "min": 5,
+          "max": 9,
+          "price": "14.77"
+        },
+        {
+          "min": 10,
+          "max": null,
+          "price": "13.95"
+        }
+      ],
+      "images": [
+        "assets/products/67242937fc74-435b9545c970f51b26ce99eb6171dd45_1676961647137.png"
+      ],
+      "description": "This cable will extend the encoder from MOT-710, MOT-775, and MOT-740.\nIt is for incremental encoders ONLY.\u00a0\nIf you need the absolute encoder, contact us for the custom cable.\nMPN:\u00a0CABLE-BMH3M0-114-TS",
+      "summary": "Incremental encoder extension 3-meter (9.8-foot), for ELM1/2 series direct connector motors, suitable for EL6/EL7/EL8 series drivers.",
+      "categories": [
+        "Motors & Accessories"
+      ],
+      "stock": 1,
+      "backorder": true,
+      "specs": [
+        [
+          "MPN",
+          "CABLE-BMH3M0-114-TS"
+        ]
+      ],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/LSK-081",
+      "documents": [],
+      "arrivalRank": 4,
+      "hasDatasheet": false,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "LSK-073",
+      "name": "RS485 Modbus/EtherCAT Cable for EL8/7/6 Drivers",
+      "brand": "Leadshine",
+      "mpn": "CABLE-TX1M5-BUS",
+      "price": "12.31",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": 4,
+          "price": "12.31"
+        },
+        {
+          "min": 5,
+          "max": 9,
+          "price": "11.08"
+        },
+        {
+          "min": 10,
+          "max": null,
+          "price": "10.47"
+        }
+      ],
+      "images": [
+        "assets/products/93e1885c0e61-RS-485Cable.png"
+      ],
+      "description": "MPN: CABLE-TX1M5-BUS",
+      "summary": "1.5 meter RS485/Ethercat cable for EL6, EL7 and EL8 series",
+      "categories": [
+        "Motors & Accessories"
+      ],
+      "stock": 2,
+      "backorder": true,
+      "specs": [
+        [
+          "MPN",
+          "CABLE-TX1M5-BUS"
+        ]
+      ],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/LSK-083.html",
+      "documents": [],
+      "arrivalRank": 5,
+      "hasDatasheet": false,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "NOR-111",
+      "name": "TM 619-2 Weekly Timer 230 VAC",
+      "brand": "Novus",
+      "mpn": "8828002100",
+      "price": "69.76",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": 4,
+          "price": "69.76"
+        },
+        {
+          "min": 5,
+          "max": null,
+          "price": "66.28"
+        }
+      ],
+      "images": [
+        "assets/products/0d74eab6928c-NOR-111-2025-S.jpg"
+      ],
+      "description": "The TM-619 is a weekly timer cabale of switching a large load at pre-programmed times during the week. The timer has spade-type connectors for power and relay contacts. It comes with suitable matching cable crimps.\nThese timers find broad application in heating and refrigerating systems, boilers, ovens, dryers, defrosting equipment, swimming pools, hatcheries, illumination, etc\u00a0\nIn the event of a power failure, the switch retains its program data via an internal CR2032 battery.\nFeatures:\u00a0\u00a0\nDay and week clock\nHigh contrast LCD\nBattery backup for power failure\nReset function and manual override",
+      "summary": "230 VAC powered weekly timer with 8 programs and 16 A SPDT relay",
+      "categories": [
+        "Timers"
+      ],
+      "stock": 5,
+      "backorder": true,
+      "specs": [],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/NOR-111.html",
+      "documents": [
+        "b3c0a9a9b0ae454b"
+      ],
+      "arrivalRank": 62,
+      "hasDatasheet": false,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "NTR-150",
+      "name": "Engine Start Attempt & Alarm Relay",
+      "brand": "Foxtam Controls",
+      "mpn": "11R2ES",
+      "price": "134.51",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": 4,
+          "price": "134.51"
+        },
+        {
+          "min": 5,
+          "max": 9,
+          "price": "121.06"
+        },
+        {
+          "min": 10,
+          "max": null,
+          "price": "114.33"
+        }
+      ],
+      "images": [
+        "assets/products/11b72479a9e5-NTR-150-2022-S_1.jpg"
+      ],
+      "description": "An 11 pin plug in engine start attempt relay for use in starting combustion engines connected to generators.\nThe number of start attempts is selected by the middle selector switch 1 to 8. The start time is set by the top potentiometer between 3 to 30 secs and the recovery time by the bottom potentiometer between 6 to 60 secs.\nWhen the auxiliary supply (9 to 30 VDC) is first applied (+2 & -10) the \"Start\" relay energises immediately for the \"Start\" time. After expiration of the \"Start\" time the relay de-energises for the \"Recovery\" time. This cycle continues for 1 to 8 times as set by the number on the \"Attempts\" switch.\nThe \"Alarm\" relay will energise after the last start attempt thus an \"engine fail to start alarm\" this status will remain until the auxiliary supply is removed.",
+      "summary": "An 11 pin plug in engine start attempt relay for use in starting combustion engines connected to generators. 9 to 30 VDC auxiliary power. Features LED indication, separate start and alarm relay output.",
+      "categories": [
+        "Relays & Relay Cards >>> Alarm & Fault"
+      ],
+      "stock": 1,
+      "backorder": true,
+      "specs": [],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/NTR-150.html",
+      "documents": [
+        "d8fa80c01227ca80",
+        "465f2d8e680cb7b2"
+      ],
+      "arrivalRank": 55,
+      "hasDatasheet": true,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "NTR-160",
+      "name": "Brown Out Timer 3-300s, 240 VAC powered",
+      "brand": "Foxtam Controls",
+      "mpn": "YRAFTU",
+      "price": "60.71",
+      "purchasable": false,
+      "tiers": [
+        {
+          "min": 1,
+          "max": 4,
+          "price": "101.18"
+        },
+        {
+          "min": 5,
+          "max": 9,
+          "price": "91.06"
+        },
+        {
+          "min": 10,
+          "max": null,
+          "price": "86.00"
+        }
+      ],
+      "images": [
+        "assets/products/ff312206d13c-NTR-160-2022-S_1.jpg"
+      ],
+      "description": "Din rail mounted SPCO \"mains restoration auto restart timers\". The voltage and supply sensing built into these units are designed to sense voltage dips.\nThese timers are designed and operate in such a way that they reset as quick, if not quicker, than standard contactor and relay coils.\nThis phenomena is a particular threat in the water industry and regularly occurs at remove pumping locations, especially during electrical storms. Left unchecked, a supply dip can \"lock out\" all or part of a control system, causing system malfunctions over a wide area necessitating engineers' site visits, just to reset and restart a control system.\nWiring Diagram:\n\nWe carry a selection of the full range of options listed in the datasheet. Non-stocked configurations may be available but may be subject to minimum order quantities or different pricing. Contact Us for more information",
+      "summary": "DIN-rail mount, SPCO, single time range timer designed to reset and restart a control system when its voltage dips below 80% of the nominal supply voltage.\n\nEOL - NOT AVAILABLE FOR BACKORDER",
+      "categories": [
+        "Timers"
+      ],
+      "stock": 2,
+      "backorder": false,
+      "specs": [
+        [
+          "Constant ambient:",
+          "\u00b10.5% of set value"
+        ],
+        [
+          "Cross temp range:",
+          "\u00b13%"
+        ],
+        [
+          "Setting accuracy:",
+          "0 to +30%"
+        ],
+        [
+          "Response time:",
+          "Better than 100mSec"
+        ],
+        [
+          "Supply voltage tolerance:",
+          "-20% to +15%"
+        ],
+        [
+          "Frequency:",
+          "50/60Hz"
+        ],
+        [
+          "Max power consumption:",
+          "10VA"
+        ],
+        [
+          "Output contacts:",
+          "\"Q & A\" SPCO units 5Amps/250V AC1"
+        ],
+        [
+          "Max switching voltage:",
+          "250VAC, 250VDC"
+        ],
+        [
+          "Mechanical life:",
+          "20 Million ops"
+        ],
+        [
+          "Electrical life:",
+          "50K ops at max rated load"
+        ],
+        [
+          "Operating temperature:",
+          "-20\u00b0C to +40\u00b0C"
+        ],
+        [
+          "Storage temperature:",
+          "-20\u00b0C to +60\u00b0C"
+        ],
+        [
+          "CE marked:",
+          "Yes"
+        ],
+        [
+          "In accordance with:",
+          "EN61000-6-1: 2007"
+        ],
+        [
+          "Housing material:",
+          "Thermo plastic ABS (DIN7728), auto"
+        ],
+        [
+          "Manufacturer's P/N:",
+          "YRAFTU"
+        ]
+      ],
+      "sale": true,
+      "new": false,
+      "source": "https://oceancontrols.com.au/NTR-160.html",
+      "documents": [
+        "465f2d8e680cb7b2",
+        "271da95f6ab00967"
+      ],
+      "arrivalRank": 56,
+      "hasDatasheet": true,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "NTR-180",
+      "name": "10 Input Relay Alarm Module",
+      "brand": "Foxtam Controls",
+      "mpn": "YWA10",
+      "price": "403.36",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": 4,
+          "price": "403.36"
+        },
+        {
+          "min": 5,
+          "max": 9,
+          "price": "363.03"
+        },
+        {
+          "min": 10,
+          "max": null,
+          "price": "342.86"
+        }
+      ],
+      "images": [
+        "assets/products/a097d9f8856b-NTR-180-2023-S.jpg"
+      ],
+      "description": "Often in the design of a control system the requirement to provide a \"common\" alarm signal to drive an audible alarm or signal a BMS system is required.\nHowever, it is sometimes required that after an alarm input signal is received the output relay is cancelled. In other words, silencing the audible part of the alarm even if the alarm input is still present, but also with an alarm contact remain to give the silent indication. The YWA10 achieves this function.\nThe YWA10 features 10 inputs and 2 separate relay outputs. Output terminal \"A\" relay has NO contact type, which closes on alarm and opens when reset. Output terminal \"B\" has NO contact type which closes on alarm.",
+      "summary": "The YWA10 is a relay alarm module that features 10 inputs, 2 separate relay outputs. Accepts 24 VAC/DC input signals and can be DIN rail mounted.",
+      "categories": [
+        "Relays & Relay Cards >>> Alarm & Fault"
+      ],
+      "stock": 1,
+      "backorder": true,
+      "specs": [],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/NTR-180.html",
+      "documents": [
+        "07e9449dcfc549c8"
+      ],
+      "arrivalRank": 57,
+      "hasDatasheet": true,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "NTR-190",
+      "name": "Plug In Alarm Integrator",
+      "brand": "Foxtam Controls",
+      "mpn": "11WA8",
+      "price": "92.95",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": 4,
+          "price": "92.95"
+        },
+        {
+          "min": 5,
+          "max": 9,
+          "price": "83.66"
+        },
+        {
+          "min": 10,
+          "max": null,
+          "price": "79.01"
+        }
+      ],
+      "images": [
+        "assets/products/feae6d852fb8-NTR-190-2022-S_1.jpg"
+      ],
+      "description": "Often in the design of a control system a range of alarm conditions need to be ganged together into a single common alarm signal. This relay provides an 8 input, single output contact function to suit this purpose.\nFull electrical isolation of the input channels means input alarm signals remain separate. Indicators or other equipment can still be used to identify which condition has caused the alarm while the common output can be sent to a sounder or management system.",
+      "summary": "The 11WA8 is a plug in alarm integrator that has 8 inputs and 1 relay output. The output is active when any one of the inputs is active (logical OR function) It accepts 24 VAC/DC input signals.",
+      "categories": [
+        "Relays & Relay Cards >>> Alarm & Fault"
+      ],
+      "stock": 1,
+      "backorder": true,
+      "specs": [],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/NTR-190.html",
+      "documents": [
+        "272ffc9299957c77"
+      ],
+      "arrivalRank": 54,
+      "hasDatasheet": true,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "OCS-011",
+      "name": "ModbusView TCP Software",
+      "brand": "Ocean Controls",
+      "mpn": "",
+      "price": "75",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": 4,
+          "price": "75.00"
+        },
+        {
+          "min": 5,
+          "max": 9,
+          "price": "67.50"
+        },
+        {
+          "min": 10,
+          "max": null,
+          "price": "63.75"
+        }
+      ],
+      "images": [
+        "assets/products/2ba8e1faf4a9-ModbusView_TCP.png",
+        "assets/products/1311def025a4-ModbusView_TCP_2.png"
+      ],
+      "description": "ModbusView TCP is an easy to use program that monitors and simulates Modbus ASCII, RTU and TCP/IP communications on your PC. It enables your PC to act as both a Modbus master and a slave device making it easy for you to simulate the action of your HMI machine, instruments, PLCs etc. ModbusView TCP can be downloaded below and will operate in a 15-minute trial mode. Once purchased, you will be emailed with a serial number to enable unlimited use.\nDownload a copy of the unregistered program from this site. The unregistered version of ModbusView TCP has all the features of the registered version except there is a time limit of 15 minutes. After 15 minutes you have to restart the program. This will allow you to trial the program before buying.\nAbout Modbus:\nModbus is an industrial control protocol run over serial or Ethernet networks. Many PLCs, panel meters, PID controllers, HMIs, IO modules and pieces of industrial equipment can speak Modbus. ModbusView TCP allows you to interrogate and control these devices from your computer.\nThe Modbus master establishes a connection with the slave. The slave waits for an incoming command from the master and responds appropriately. ModbusView TCP can act as either a Modbus master or slave.\nThe slave can have 4 different types of internal variables that can be accessed by the master.\nCoils which are digital bits that can be read and written to. They are numbered from 00001 to 09999\nInput Status which are digital bits that can be read. They are numbered from 10001 to 19999\nInput Registers which are 16 bit integers that can be read. They are numbered from 30001 to 39999\nHolding Registers which are 16 bit integers that can be read and written to. They are numbered from 40001 to 49999\nEach type in the Modbus specification can have up to 9,999 variables. The protocol can be extended to represent up to 65,536 variables using full 16 bit addressing. ModbusView TCP allows both specification-compliant and full 16 bit addressing.\nThe Modbus protocol has a number of different functions, some of which are specific to certain Modicon controllers and some of which are rarely used. ModbusView TCP sends and responds to a wide range of the most common Modbus commands including:\nFunction 1: Read Coil Status\nFunction 2: Read Input Status\nFunction 3: Read Input Registers\nFunction 4: Read Holding Registers\nFunction 5: Write to a Coil\nFunction 6: Write to a Holding Registers\nFunction 15: Write to Multiple Coils\nFunction 16: Write to Multiple Holding Registers\nFor a more detailed explanation of the Modbus protocol family visit the Web Site www.modbus.org.",
+      "summary": "ModbusView TCP software for simulating Modbus ASCII, RTU, and TCP masters and slaves.\nThe license takes a day or 2 to be emailed to you.",
+      "categories": [
+        "Modbus-Bacnet-MBus Products >>> Software",
+        "Software"
+      ],
+      "stock": 24,
+      "backorder": true,
+      "specs": [
+        [
+          "Function 1",
+          "Read Coil Status"
+        ],
+        [
+          "Function 2",
+          "Read Input Status"
+        ],
+        [
+          "Function 3",
+          "Read Input Registers"
+        ],
+        [
+          "Function 4",
+          "Read Holding Registers"
+        ],
+        [
+          "Function 5",
+          "Write to a Coil"
+        ],
+        [
+          "Function 6",
+          "Write to a Holding Registers"
+        ],
+        [
+          "Function 15",
+          "Write to Multiple Coils"
+        ],
+        [
+          "Function 16",
+          "Write to Multiple Holding Registers"
+        ]
+      ],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/software-modbusview-tcp-ocs-011.html",
+      "documents": [
+        "751c2c34804c4c1e"
+      ],
+      "arrivalRank": 69,
+      "hasDatasheet": false,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "OCS-382",
+      "name": "Wunderground Cloud Function for KTA-382/401/402",
+      "brand": "Ocean Controls",
+      "mpn": "OCS-382",
+      "price": "75",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": 4,
+          "price": "75.00"
+        },
+        {
+          "min": 5,
+          "max": 9,
+          "price": "67.50"
+        },
+        {
+          "min": 10,
+          "max": null,
+          "price": "63.75"
+        }
+      ],
+      "images": [
+        "assets/products/d3384f3f5a1a-OCS-382-1.jpg"
+      ],
+      "description": "",
+      "summary": "Optional additional functionality to add WeatherUnderground cloud upload to our KTA series weather station gateways. Suitable for the KTA-382/401/402.",
+      "categories": [
+        "Modbus-Bacnet-MBus Products >>> Software",
+        "Software"
+      ],
+      "stock": 24,
+      "backorder": true,
+      "specs": [],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/OCS-382.html",
+      "documents": [
+        "0052037634f052a0"
+      ],
+      "arrivalRank": 70,
+      "hasDatasheet": false,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "OCS-482",
+      "name": "Weathercloud Cloud Function for KTA-382/401/402",
+      "brand": "Ocean Controls",
+      "mpn": "OCS-382",
+      "price": "75",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": 4,
+          "price": "75.00"
+        },
+        {
+          "min": 5,
+          "max": 9,
+          "price": "67.50"
+        },
+        {
+          "min": 10,
+          "max": null,
+          "price": "63.75"
+        }
+      ],
+      "images": [
+        "assets/products/13a92f233cd1-weathercloud_1_1.png",
+        "assets/products/f09609b173ff-weathercloud_2_1.png"
+      ],
+      "description": "",
+      "summary": "Optional additional functionality to add Weathercloud cloud upload to our KTA series weather station gateways. Suitable for the KTA-382/401/402.\nLicense will be loaded with your purchase of KTA-382/401/402.\nIf you already have a unit, license will take 1-3 business days to be sent.",
+      "categories": [
+        "Modbus-Bacnet-MBus Products >>> Software",
+        "Software"
+      ],
+      "stock": null,
+      "backorder": true,
+      "specs": [],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/OCS-482.html",
+      "documents": [],
+      "arrivalRank": 71,
+      "hasDatasheet": false,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "PIR-005",
+      "name": "PIR Detector",
+      "brand": "Manufacturer not specified",
+      "mpn": "S5314A",
+      "price": "45.41",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": 4,
+          "price": "45.41"
+        },
+        {
+          "min": 5,
+          "max": null,
+          "price": "43.14"
+        }
+      ],
+      "images": [
+        "assets/products/40a27bf3dddf-PIR-005-2024-S.jpg"
+      ],
+      "description": "Easy to install PIR with dual look down detection. Features excellent temperature compensation and selectable pulse count. Its stylish contoured shape virtually disappears once installed into the corner of any room.\n\nVertical range is adjustable and a high quality noise reduction circuit ensures reliable detection. Superior RFI/EMI immunity.\u00a0A swivel bracket part number PIR-006 is available for this detector.",
+      "summary": "PIR Detector",
+      "categories": [
+        "Security"
+      ],
+      "stock": 5,
+      "backorder": true,
+      "specs": [],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/PIR-005.html",
+      "documents": [
+        "02b769e77e2d7c14"
+      ],
+      "arrivalRank": 82,
+      "hasDatasheet": false,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "PSM-900",
+      "name": "20kA Surge Protector",
+      "brand": "Mean Well / ESI",
+      "mpn": "SPD-20-240P",
+      "price": "28.54",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": null,
+          "price": "28.54"
+        }
+      ],
+      "images": [
+        "assets/products/19192558e318-PSM-900.jpg"
+      ],
+      "description": "Meanwell's SPD-20 series 20kA Surge Protection Device is used for protecting power supplies and other equipment from over voltage conditions.\nLine to Ground and Line to Line Protection\n3 Wire Parallel Connection\nLED Status Indicators\nSuitable for LED Driver Surge Protection\nIP67, Suitable for indoor and outdoor installation",
+      "summary": "20kA Surge Protection Device for protecting power supplies and other equipment from over voltage conditions.",
+      "categories": [
+        "Power Supplies >>> Accessories"
+      ],
+      "stock": 2,
+      "backorder": true,
+      "specs": [],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/PSM-900.html",
+      "documents": [],
+      "arrivalRank": 58,
+      "hasDatasheet": false,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "PSM-997",
+      "name": "Mean Well DRL-01 L shaped bracket",
+      "brand": "Mean Well / ESI",
+      "mpn": "DRL-01",
+      "price": "1.22",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": null,
+          "price": "1.22"
+        }
+      ],
+      "images": [
+        "assets/products/fcb69182812d-PSM-997-2020-S.jpg"
+      ],
+      "description": "Mean Well L-bracket for mounting cage power supplies. Suitable for case 903, 905, 931, 932, 971.",
+      "summary": "Mean Well L-bracket for mounting cage power supplies. Suitable for case 903, 905, 931, 932, 971.",
+      "categories": [
+        "Power Supplies >>> Accessories",
+        "Power Supplies",
+        "Power Supplies >>> Caged/Enclosed",
+        "Power Supplies >>> MultiRail",
+        "Power Supplies >>> DC-DC Converter Cage"
+      ],
+      "stock": 11,
+      "backorder": true,
+      "specs": [],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/PSM-997.html",
+      "documents": [
+        "78201833312a7df3"
+      ],
+      "arrivalRank": 41,
+      "hasDatasheet": true,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "PSM-9971",
+      "name": "Mean Well DRL-02 L shaped bracket",
+      "brand": "Mean Well / ESI",
+      "mpn": "DRL-02",
+      "price": "1.22",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": null,
+          "price": "1.22"
+        }
+      ],
+      "images": [
+        "assets/products/670303f77857-psm-997.jpg"
+      ],
+      "description": "Mean Well L-bracket for mounting cage power supplies. Suitable for case 901, 902, 906, 915, 916 and 920.",
+      "summary": "Mean Well L-bracket for mounting cage power supplies. Suitable for case 901, 902, 906, 915, 916 and 920.",
+      "categories": [
+        "Power Supplies >>> Accessories",
+        "Power Supplies",
+        "Power Supplies >>> Caged/Enclosed",
+        "Power Supplies >>> MultiRail",
+        "Power Supplies >>> DC-DC Converter Cage"
+      ],
+      "stock": 5,
+      "backorder": true,
+      "specs": [],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/PSM-9971.html",
+      "documents": [
+        "679ab0b98ac9027c"
+      ],
+      "arrivalRank": 38,
+      "hasDatasheet": true,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "RKS-002A",
+      "name": "RK100-01G Wind Speed Sensor 0-10VDC Output",
+      "brand": "Rika Sensor",
+      "mpn": "RK100-01-CB-3000",
+      "price": "226.64",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": 4,
+          "price": "226.64"
+        },
+        {
+          "min": 5,
+          "max": 9,
+          "price": "203.97"
+        },
+        {
+          "min": 10,
+          "max": null,
+          "price": "192.64"
+        }
+      ],
+      "images": [
+        "assets/products/1918776fae87-RS100-01G.jpg"
+      ],
+      "description": "Overview\nThe RK100-01G wind speed sensor utilizes precision die-cast aluminium alloy technology, with small dimensional tolerances, high surface accuracy, high-performance circuits, exceptional strength, IP65 ingress protection, corrosion resistance, and excellent weather resistance and performance. This sensor is widely used in applications requiring wind speed measurement, such as solar farms, meteorology, maritime vessels, docks, tower cranes, ports, agriculture and more...\nFeatures\nEasy to carry and install\nHigh measurement accuracy and stable performance\nIP65-rated protection\nStrong anti-electromagnetic\nAluminium alloy material is light in weight and high in strength\nUnique internal treatment, enhanced anti-vibration suppression",
+      "summary": "Easy to use wind speed sensor up 60m/sec with 0 to 10VDC signal output and 3 meter cable.",
+      "categories": [
+        "Weather >>> Sensors",
+        "Weather"
+      ],
+      "stock": 5,
+      "backorder": true,
+      "specs": [],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/rk100-01g-wind-speed-sensor-0-10vdc-output",
+      "documents": [
+        "d25450d518a99d01"
+      ],
+      "arrivalRank": 2,
+      "hasDatasheet": true,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "RKS-070",
+      "name": "RK95-51 Mounting Bracket for PH, EC, DO, ORP Sensors",
+      "brand": "Rika Sensor",
+      "mpn": "RK95-51",
+      "price": "105.34",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": 4,
+          "price": "105.34"
+        },
+        {
+          "min": 5,
+          "max": 9,
+          "price": "94.80"
+        },
+        {
+          "min": 10,
+          "max": null,
+          "price": "89.54"
+        }
+      ],
+      "images": [
+        "assets/products/2f5eba79d44f-bracket.png",
+        "assets/products/edec920b6f7f-Illustration.png",
+        "assets/products/b46988ca7a60-Full.png"
+      ],
+      "description": "1 meter PVC material mounting bracket for Rika sensors.",
+      "summary": "Rika RK95-51 Mouting Bracket for PH, EC, DO, OR Sensors",
+      "categories": [
+        "Sensors"
+      ],
+      "stock": 3,
+      "backorder": true,
+      "specs": [],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/RKS-070.html",
+      "documents": [],
+      "arrivalRank": 12,
+      "hasDatasheet": false,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "SIG-130",
+      "name": "Novus DigiRail NxProg RAMIX Programmable IO Module 2AI,2AO,4DI,2RO 1ETH",
+      "brand": "Novus",
+      "mpn": "8811711440",
+      "price": "390.48",
+      "purchasable": false,
+      "tiers": [
+        {
+          "min": 1,
+          "max": 4,
+          "price": "557.84"
+        },
+        {
+          "min": 5,
+          "max": 9,
+          "price": "502.05"
+        },
+        {
+          "min": 10,
+          "max": null,
+          "price": "474.16"
+        }
+      ],
+      "images": [
+        "assets/products/f487d03786d3-SIG-130-2020-S.jpg",
+        "assets/products/2d4835808633-SIG-130_1.jpg"
+      ],
+      "description": "DigiRail NXprog gathers the best of both, easy programming of Arduino community and industrial device reliability and robustness \u00a0for automation applications. Its integrated I/O handles analog and digital signals, allowing DigiRail NXprog be used as an I/O extension of standard automation systems or as a brain of custom applications.\nArduino compatible, DigiRail NXprog enables the use of high level programming languages such as C / C ++ that enable the user to implement complex algorithms such as recursive logic, state machines, statistical analysis and mathematical equations. This is an excellent advantage over the mid-level programming hardship (IEC standard) found on most PLCs in the global market, considered archaic by the new generation of automation technicians.\nAccess our Arduino library on GitHub: https://github.com/NOVUS-Products/DigiRail-NXprog.\nFeatures\nProgrammable using Arduino IDE\nMany library Functions for I/O and Communications\nInputs: 4 digital and 2 universal analog (T/C, RTD, Current and Voltage)\nOutputs: 2 Relay and 2 analog (4-20mA/0-10V)\nModbus TCP communications\nModbus RTU communications",
+      "summary": "DigiRail NXprog is an Arduino IDE programmable device that has analog and digital inputs and outputs and RS485 and Ethernet communication interfaces \u00a0that \u00a0meets \u00a0the \u00a0requirements \u00a0for use \u00a0in \u00a0industrial \u00a0environments \u00a0\n*On Sale for a Limited Time!",
+      "categories": [
+        "Arduino"
+      ],
+      "stock": 3,
+      "backorder": false,
+      "specs": [
+        [
+          "Access our Arduino library on GitHub",
+          "https://github.com/NOVUS-Products/DigiRail-NXprog."
+        ],
+        [
+          "Inputs",
+          "4 digital and 2 universal analog (T/C, RTD, Current and Voltage)"
+        ],
+        [
+          "Outputs",
+          "2 Relay and 2 analog (4-20mA/0-10V)"
+        ]
+      ],
+      "sale": true,
+      "new": false,
+      "source": "https://oceancontrols.com.au/SIG-130.html",
+      "documents": [
+        "842ba2f59b624b35",
+        "8378feb812447604"
+      ],
+      "arrivalRank": 26,
+      "hasDatasheet": true,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "SIG-131",
+      "name": "Novus DigiRail NxProg RAMIX Programmable IO Module 2AI,2AO,4DI,3DO 1ETH",
+      "brand": "Novus",
+      "mpn": "8811711420",
+      "price": "557.84",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": 4,
+          "price": "557.84"
+        },
+        {
+          "min": 5,
+          "max": 9,
+          "price": "502.05"
+        },
+        {
+          "min": 10,
+          "max": null,
+          "price": "474.16"
+        }
+      ],
+      "images": [
+        "assets/products/ecc85fa84662-SIG-131-2024-S.jpg",
+        "assets/products/2d4835808633-SIG-130_1_1.jpg"
+      ],
+      "description": "DigiRail NXprog gathers the best of both, easy programming of Arduino community and industrial device reliability and robustness \u00a0for automation applications. Its integrated I/O handles analog and digital signals, allowing DigiRail NXprog be used as an I/O extension of standard automation systems or as a brain of custom applications.\nArduino compatible, DigiRail NXprog enables the use of high level programming languages such as C / C ++ that enable the user to implement complex algorithms such as recursive logic, state machines, statistical analysis and mathematical equations. This is an excellent advantage over the mid-level programming hardship (IEC standard) found on most PLCs in the global market, considered archaic by the new generation of automation technicians.\nAccess our Arduino library on GitHub: https://github.com/NOVUS-Products/DigiRail-NXprog.\nFeatures\nProgrammable using Arduino IDE\nMany library Functions for I/O and Communications\nInputs: 4 digital and 2 universal analog (T/C, RTD, Current and Voltage)\nOutputs: 3 Open Collector and 2 analog (4-20mA/0-10V)\nModbus TCP communications\nModbus RTU communications",
+      "summary": "DigiRail NXprog is an Arduino IDE programmable device that has analog and digital inputs and outputs and RS485 and Ethernet communication interfaces \u00a0that \u00a0meets \u00a0the \u00a0requirements \u00a0for use \u00a0in \u00a0industrial \u00a0environments",
+      "categories": [
+        "Arduino"
+      ],
+      "stock": 2,
+      "backorder": true,
+      "specs": [
+        [
+          "Access our Arduino library on GitHub",
+          "https://github.com/NOVUS-Products/DigiRail-NXprog."
+        ],
+        [
+          "Inputs",
+          "4 digital and 2 universal analog (T/C, RTD, Current and Voltage)"
+        ],
+        [
+          "Outputs",
+          "3 Open Collector and 2 analog (4-20mA/0-10V)"
+        ]
+      ],
+      "sale": false,
+      "new": true,
+      "source": "https://oceancontrols.com.au/SIG-131.html",
+      "documents": [
+        "842ba2f59b624b35",
+        "8378feb812447604"
+      ],
+      "arrivalRank": 27,
+      "hasDatasheet": true,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "SMC-055",
+      "name": "EM882S 8.2A Open Loop Stepper Drive",
+      "brand": "Leadshine",
+      "mpn": "EM882S",
+      "price": "191.52",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": 4,
+          "price": "191.52"
+        },
+        {
+          "min": 5,
+          "max": 9,
+          "price": "172.37"
+        },
+        {
+          "min": 10,
+          "max": null,
+          "price": "162.79"
+        }
+      ],
+      "images": [
+        "assets/products/65624a22b135-SMC-055-2023-S_1.jpg"
+      ],
+      "description": "The EM882S is a new digital stepper drive based on Leadshine\u2019s widely implemented DM stepper drives (10 millions of units in field). While retaining features of simple design, easy setup, high precision and reliability, Leadshine has also upgraded it by adopting the latest stepper control technology and added additional advanced features for better torque (10-25%), quicker response time, control command smoothing, easy self-test, etc.\nThe EM882S is able to power 2 phase and 4 phase stepper motors smoothly with very low motor heating & noise. It can take 20-80VDC supply voltage and output 0.5 to 8.2A current. Its control type (step & direction or CW/CCW) and command smooth filtering can also be configured via Leadshine ProTuner. Therefore, the EM882S is an ideal choice for many applications requiring simple step & direction or CW/CCW control of NEMA 23, 24 and 34 stepper motors.\nFeatures:\nStep & direction (PUL/DIR) or CW/CCW (double pulse) control\n20-80VDC supply voltage\n200 KHz max pulse input frequency\n16 micro-step resolutions of 400-51200 via DIP switches\n8 output current settings of 2.1 \u2013 8.2A via DIP Switches\nConfigurable control command smoothing for performance excellence\nAutomatic idle current reduction to 50% or 90%\nConvenient self-test for easy diagnosis\nAutomatic self-configuration to match wide-range NEMA 17, 23, and 24 stepper motors\nAnti-Resonance for optimal torque, extra smooth motion, low motor heating and noise\nSoft-start with no \u201cjump\u201d when powered on\nOptically isolated inputs\nFault output\nOver-voltage and over-current protections\nCE certified and RoHS compliant\nSmall size: 139 * 97 * 52 mm\u00a0\nThe EM882S is suitable for a wide range of stepping motors of size Nema 23, 24 and 34, and suits various kinds of machines, including X-Y tables, labeling machines, laser cutters, engraving machines and pick-place devices.\nDocuments:\n\n\nDownload datasheet file",
+      "summary": "New -\u00a0the EM882S from Leadshine is able to power 2 phase (1.8deg) and 4 phase (0.9deg) stepper motors smoothly with very low motor heating & noise. It can take 20-80VDC supply voltage and output 2.1 to 8.2A (5.86A RMS) current.",
+      "categories": [
+        "Motor Drivers & Controllers >>> Stepper Drivers"
+      ],
+      "stock": 2,
+      "backorder": true,
+      "specs": [
+        [
+          "Small size",
+          "139 * 97 * 52 mm"
+        ]
+      ],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/SMC-055.html",
+      "documents": [
+        "ea42133ea1718840",
+        "20cedcf7c5e672a4",
+        "42b89d772071fa53",
+        "7943a51584b44848"
+      ],
+      "arrivalRank": 28,
+      "hasDatasheet": true,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "SPE-010",
+      "name": "Grey CE Approved ABS Waterproof Enclosures. Size 300*200*160mm",
+      "brand": "Saip Group",
+      "mpn": "SP-AG-302016",
+      "price": "103.17",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": null,
+          "price": "103.17"
+        }
+      ],
+      "images": [
+        "assets/products/488a332b6626-SPE-010-2023-S.jpg",
+        "assets/products/49d73034f38d-spe-010.jpg"
+      ],
+      "description": "This product is made from high quality ABS thermoplastic. The base and cover are a standard color - gray RAL 7035. It exhibits a strong performance, light weight and is suitable for applications such as control box, transfer box, junction box, distribution box and meter box.\nThe enclosure comes with a plastic grid mounting plate which allows easy screw mounting of DIN rail and panel mount type components. A plastic key and lock is mounted to the cover for security of internal components and circuitry, Wall hole and mounting screws are outside the sealed area. The enclosure is suitable for electrical components such as switches, terminals, indicators, communications equipment, relays and signal meters.",
+      "summary": "Grey CE Approved ABS Waterproof Enclosures. Size 300 \u00d7 200 \u00d7 160 mm.",
+      "categories": [
+        "Enclosures >>> ABS Control Box"
+      ],
+      "stock": 14,
+      "backorder": true,
+      "specs": [],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/SPE-010.html",
+      "documents": [],
+      "arrivalRank": 46,
+      "hasDatasheet": false,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "SPE-015",
+      "name": "Grey CE Approved ABS Waterproof Enclosures. Size 400*300*160mm",
+      "brand": "Saip Group",
+      "mpn": "SP-AG-403016",
+      "price": "116.28",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": null,
+          "price": "116.28"
+        }
+      ],
+      "images": [
+        "assets/products/fb80f7fcef28-SPE-015-2023-S.jpg",
+        "assets/products/49d73034f38d-spe-010.jpg"
+      ],
+      "description": "This product is made from high quality ABS thermoplastic. The base and cover are a standard color - gray RAL 7035. It exhibits a strong performance, light weight and is suitable for applications such as control box, transfer box, junction box, distribution box and meter box.\nThe enclosure comes with a plastic grid mounting plate which allows easy screw mounting of DIN rail and panel mount type components. A plastic key and lock is mounted to the cover for security of internal components and circuitry, Wall hole and mounting screws are outside the sealed area. The enclosure is suitable for electrical components such as switches, terminals, indicators, communications equipment, relays and signal meters.",
+      "summary": "Grey CE Approved ABS Waterproof Enclosures. Size 400 \u00d7 300 \u00d7 160 mm",
+      "categories": [
+        "Enclosures >>> ABS Control Box"
+      ],
+      "stock": 41,
+      "backorder": true,
+      "specs": [],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/SPE-015.html",
+      "documents": [],
+      "arrivalRank": 45,
+      "hasDatasheet": false,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "SPE-018",
+      "name": "Grey CE Approved ABS Waterproof Enclosures. Size 500*400*190mm",
+      "brand": "Saip Group",
+      "mpn": "SP-AG-504019",
+      "price": "148.2",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": null,
+          "price": "148.2"
+        }
+      ],
+      "images": [
+        "assets/products/8ae39fc901c6-SPE-018-2023-S.jpg",
+        "assets/products/8f166943b8d0-spe-018.jpg"
+      ],
+      "description": "This product is made from high quality ABS thermoplastic. The base and cover are a standard color - gray RAL 7035. It exhibits a strong performance, light weight and is suitable for applications such as control box, transfer box, junction box, distribution box and meter box.\nThe enclosure comes with a plastic grid mounting plate which allows easy screw mounting of DIN rail and panel mount type components. A plastic key and lock is mounted to the cover for security of internal components and circuitry, Wall hole and mounting screws are outside the sealed area. The enclosure is suitable for electrical components such as switches, terminals, indicators, communications equipment, relays and signal meters.",
+      "summary": "Grey CE Approved ABS Waterproof Enclosures. Size 500 \u00d7 400 \u00d7 190 mm",
+      "categories": [
+        "Enclosures >>> ABS Control Box"
+      ],
+      "stock": 6,
+      "backorder": true,
+      "specs": [],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/SPE-018.html",
+      "documents": [],
+      "arrivalRank": 44,
+      "hasDatasheet": false,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "TCC-039",
+      "name": "4G LTE universal IO module TCG120-4G",
+      "brand": "Teracom",
+      "mpn": "TCG120-4G",
+      "price": "558.66",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": 4,
+          "price": "558.66"
+        },
+        {
+          "min": 5,
+          "max": 9,
+          "price": "502.80"
+        },
+        {
+          "min": 10,
+          "max": null,
+          "price": "474.86"
+        }
+      ],
+      "images": [
+        "assets/products/3e7ae1f5395d-TCC-039-2025-S.jpg",
+        "assets/products/bd5acbcd3ff3-TCC-039-3.jpg",
+        "assets/products/4f671e4ed14b-TCC-039-4.jpg"
+      ],
+      "description": "TCG120-4 is a 4G LTE wireless I/O module. The input/output peripherals of the device include 2 digital inputs, 2 analog inputs, and two relays with normally open and normally closed contacts. The module also supports a 1-Wire interface for up to 4 sensors.\nThe initial setup of the device is made through the graphical interface using a standard browser. On the field, the device can be set up remotely either with SMS or HTTP API commands.\nThe device can operate in offline mode. In this mode, the relays can be activated by the alarm state of any of the monitored parameters \u2013 digital/analog inputs or sensors. In this way, the device can directly control some processes.\n4G LTE wireless I/O module may be part of supervisory control and data acquisition systems. For this purpose, the supported protocols for M2M communication are used \u2013 HTTP API and MQTT.\nIn the case of HTTP API is used, the module periodically sends its whole status via XML or JSON file. While if MQTT is used, only a specific parameter can be sent. MQTT is optimized to work on networks with even the scarcest of bandwidth.\u00a0\nFeatures:\nMulti-band connectivity;\nSetup via USB, SMS, and HTTP API;\n2 digital \"dry contact\" inputs;\n2 analog inputs with 0 to 60VDC range;\n2 relays with NO and NC contacts;\n1-Wire support for all Teracom sensors (up to 4 sensors);\nMQTT 3.1.1 support;\nSMS alarm alerts for up to 5 numbers;\nEmail alarm alerts for up to 5 email recipients;\nPeriodical HTTP/HTTPS Post with current status in XML or JSON file to a remote server;\nHTTP API commands;\nFirmware update over USB or Internet.",
+      "summary": "TCG120-4G is a 4G LTE universal IO module for remote monitoring and control over cellular networks. It has digital I/Os, analog inputs and utilises 1-Wire interface. The module supports MQTT, SMS alarm, HTTP/HTTPS post and API commands.\nNOTE:\u00a0 The device can be used only in networks that support IPV4 addresses (IPV6 is not supported). \u00a0The device exclusively relies on the IMS (IP Multimedia Subsystem) for SMS functionality. We recommend contacting your mobile operator to verify IPv4 and IMS support.",
+      "categories": [
+        "Controllers >>> 4G/5G"
+      ],
+      "stock": 2,
+      "backorder": true,
+      "specs": [],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/TCC-039.html",
+      "documents": [
+        "ebb59edfd615022a"
+      ],
+      "arrivalRank": 21,
+      "hasDatasheet": false,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "TCS-001",
+      "name": "TST100 1-Wire temperature sensor with IP65 protection",
+      "brand": "Teracom",
+      "mpn": "TST100",
+      "price": "56.33",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": 4,
+          "price": "56.33"
+        },
+        {
+          "min": 5,
+          "max": 9,
+          "price": "50.69"
+        },
+        {
+          "min": 10,
+          "max": null,
+          "price": "47.88"
+        }
+      ],
+      "images": [
+        "assets/products/32f24df51a20-TCS-001-2021-S_1.jpg"
+      ],
+      "description": "TST100 is 1-Wire temperature sensor for indoor and outdoor usage. It provides a low cost option for temperature monitoring for home and industrial automation. The head of the sensor is made of aluminum, allowing low thermal resistance to the controlled object. The sensor communicates over a 1-Wire bus. Each sensor has a unique 64-bit serial code, which allows multiple sensors to function on the same 1-Wire bus.\nTST100 measures temperatures in range from -40 to +85\u00b0C (-40 to 185\u00b0F). Used digital signal processing allows accuracy as low as \u00b10.5\u00b0C in -40 to +85\u00b0C range.\n1-Wire temperature sensor is delivered with 1 meter cable, with soldered wires for direct connection to the screw terminals of Teracom controllers TCW1xx, TCW2xx and TCG1xx.",
+      "summary": "TST100 is 1-Wire temperature sensor for indoor and outdoor usage. Suitable for use with Teracom controllers. -55 to 125 \u00b0C range with \u00b10.5 \u00b0C accuracy from -10 to 85 \u00b0C.",
+      "categories": [
+        "Sensors >>> 1 Wire",
+        "Sensors >>> Temperature Other"
+      ],
+      "stock": 6,
+      "backorder": true,
+      "specs": [],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/TCS-001.html",
+      "documents": [
+        "ba9ddf8612b4506f"
+      ],
+      "arrivalRank": 40,
+      "hasDatasheet": true,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "ULC-008C",
+      "name": "UC300 IoT Controller (Cellular/LoRaWan)",
+      "brand": "Milesight",
+      "mpn": "UC300",
+      "price": "323.76",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": 4,
+          "price": "323.76"
+        },
+        {
+          "min": 5,
+          "max": 9,
+          "price": "307.58"
+        }
+      ],
+      "images": [
+        "assets/products/4e5d4ef0f229-ULC-008-2025-S.jpg"
+      ],
+      "description": "UC300\u00a0series\u00a0is\u00a0an\u00a0IoT\u00a0controller\u00a0used\u00a0for\u00a0remote\u00a0control\u00a0and\u00a0data acquisition\u00a0from\u00a0diverse\u00a0devices.\u00a0It\u00a0contains\u00a0multiple\u00a0I/O\u00a0interfaces\nincluding\u00a0analog\u00a0input,\u00a0digital\u00a0input,\u00a0relay\u00a0output,\u00a0serial\u00a0port,\u00a0and PT100RTD\u00a0input,\u00a0which\u00a0support\u00a0remote\u00a0device\u00a0data\u00a0transmission\u00a0via3/4G\u00a0or LoRaWAN\u00a0networks.\u00a0Besides,\u00a0the UC300\u00a0series\u00a0support multiple\u00a0trigger\u00a0conditions\u00a0and\u00a0actions\u00a0which\u00a0can\u00a0work\u00a0autonomouslyeven\u00a0when\u00a0the\u00a0network\u00a0drops.\u00a0Combining\u00a0with\u00a0Milesight\u00a0IoT\u00a0Cloud solution,\u00a0it\u00a0can\u00a0monitor\u00a0and\u00a0control\u00a0remote\u00a0devices\u00a0via\u00a0web\u00a0server\u00a0ormobile\u00a0App\u00a0easily.\u00a0\n\u00a0Easy\u00a0to\u00a0connect\u00a0with\u00a0diverse\u00a0wired\u00a0devices\u00a0through\u00a0DIO/AI/RS232/RS485/PT100RTD\u00a0input\u00a0interfaces\nSupport\u00a0LoRaWAN\u00ae\u00a0or\u00a03/4G\u00a0wireless\u00a0communication\nMultiple\u00a0triggering\u00a0conditions\u00a0and\u00a0actions\nEmbedded\u00a0watchdog\u00a0for\u00a0device\u00a0working\u00a0stability\nIndustrial\u00a0metal\u00a0case\u00a0design\u00a0with\u00a0wide\u00a0operating\u00a0temperature\u00a0range\nCompliant\u00a0with\u00a0standard\u00a0LoRaWAN\u00ae\u00a0gateways\u00a0and\u00a0network\u00a0servers\nQuick\u00a0and\u00a0easy\u00a0management\u00a0with\u00a0Milesight\u00a0IoT\u00a0Cloud\u00a0solution",
+      "summary": "UC300\u00a0series\u00a0is\u00a0an\u00a0IoT\u00a0controller\u00a0used\u00a0for\u00a0remote\u00a0control\u00a0and\u00a0data acquisition\u00a0from\u00a0diverse\u00a0devices.\u00a0It\u00a0contains\u00a0multiple\u00a0I/O\u00a0interfaces\nincluding\u00a0analog\u00a0input,\u00a0digital\u00a0input,\u00a0relay\u00a0output,\u00a0serial\u00a0port,\u00a0and PT100RTD\u00a0input. It\u00a0supports\u00a0remote\u00a0device\u00a0data\u00a0transmission\u00a0via4G\u00a0or LoRaWAN networks.",
+      "categories": [
+        "Industrial IoT >>> 3G/4G Routers",
+        "Industrial IoT >>> Wireless"
+      ],
+      "stock": 7,
+      "backorder": true,
+      "specs": [],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/ULC-008.html",
+      "documents": [
+        "0f2f49f49dbb8e54",
+        "7e621ec2055f2455",
+        "e2fab851d7df3f0a",
+        "1300042724dce54f"
+      ],
+      "arrivalRank": 13,
+      "hasDatasheet": true,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "ULC-075",
+      "name": "UR75 - Industrial 5G Router",
+      "brand": "Milesight",
+      "mpn": "UR75-504AE-P-W2",
+      "price": "973.03",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": 4,
+          "price": "973.03"
+        },
+        {
+          "min": 5,
+          "max": 9,
+          "price": "924.38"
+        }
+      ],
+      "images": [
+        "assets/products/bd3d4eb0fd42-ur75_1.webp",
+        "assets/products/93c0cb121b44-ur75_3.webp",
+        "assets/products/b111834b8015-ur75-1.webp"
+      ],
+      "description": "Ultra Series to Deliver Ultra High Performance\nMilesight UR75, a state-of-the-art 5G router designed for industrial-grade IoT applications. It is a powerful and reliable solution that allows for seamless data transmission and remote management in demanding environments.\n\n\nAdvanced OpenCPU System\nUR75 equips upgraded quad-core CPU ARM Cortex-A55, with bigger memory for faster data transmission.\u00a0Adopting the OpenCPU system, UR75 has a more simplified yet efficient framework with the benefits of:\nLower Power Consumption\nReduced Investment Cost\nIncreased Flexibility and Performance\nUltra-high Reliability\nQuick Network BackupAutomated failover/failback backup among Ethernet, Cellular(dual SIM) and Wi-Fi\n\nEmbedded WatchdogEmbedded with hardware watchdog to automatically recover from various failures\n\nSecurity ProtectionEquipped with multiple security protection measures such as ACL, DMZ, SYN-Flood protection, and data filtering to ensure that the network is secured\n\nRich Interfaces for Multiple Applications\nUR75 supports serial ports (RS232/RS485), I/O (input/output), and GPS, enabling you to scale up M2M applications. UR75 also supports USB 3.0 (Type-C) for power supply, network supply, and debug.\nIndustrial Grade Design for Harsh Environment\nWith a wide operating temperature range from -30\u00b0C to 60\u00b0C and IP30-rated metal housing, UR75 stays performant under harsh environments.\nMilesightVPN\nUR75 supports connection and management with MilesightVPN\nEasy Connection via Authentication Code\nConnection Status Overview\nRemote and Secure Access to Field Devices\nMagnetic Version\nDeviceHub\nMilesight DeviceHub offers a high-efficiency and low-maintenance solution to easily deploy Milesight Industrial Cellular Routers across multiple locations, reducing complexity and increasing productivity.\nCentral Management\nDevice Status Monitoring\nRemote & Bulk Configuration\nFlexible Installation",
+      "summary": "Featuring the latest and fastest cellular technology \u2013 5G, UR75 is not only an intelligent industrial IoT router but also an unrivaled wireless networking solution.\nEquipped with 5-port Ethernet interface for mission-critical communications, featured with multiple network protocols and VPN tunnels, UR75 provides secure and reliable solutions for a range of M2M/IoT deployments.",
+      "categories": [
+        "Industrial IoT >>> 3G/4G Routers"
+      ],
+      "stock": 6,
+      "backorder": true,
+      "specs": [],
+      "sale": false,
+      "new": true,
+      "source": "https://oceancontrols.com.au/ULC-075.html",
+      "documents": [
+        "5cb017a9ad0d2483",
+        "4b23eb3aba4dfeba"
+      ],
+      "arrivalRank": 10,
+      "hasDatasheet": true,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    },
+    {
+      "sku": "ULC-141",
+      "name": "UR41L - 4G Mini Industrial Cellular Router",
+      "brand": "Milesight",
+      "mpn": "UR41L",
+      "price": "197.9",
+      "purchasable": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": 4,
+          "price": "197.90"
+        },
+        {
+          "min": 5,
+          "max": 9,
+          "price": "188.01"
+        }
+      ],
+      "images": [
+        "assets/products/92f25e4555c9-UR41_3.webp",
+        "assets/products/cb63255c344d-UR41_2.webp",
+        "assets/products/7130baee6cac-UR41_1.webp"
+      ],
+      "description": "Mini Industrial Cellular Router UR41L",
+      "summary": "Industrial Grade Design for Harsh Environment\nRugged and Lightweight\nSecure 4G Connectivity in a Compact Design\nLow Power Consumption with Smart Operating Modes\nSupports SMS and SMTP (E-mail)\nRemote Management on MilesightVPN and DeviceHub",
+      "categories": [
+        "Industrial IoT >>> 3G/4G Routers"
+      ],
+      "stock": 8,
+      "backorder": true,
+      "specs": [],
+      "sale": false,
+      "new": false,
+      "source": "https://oceancontrols.com.au/ULC-141.html",
+      "documents": [
+        "29c33cb3e0f91f3c",
+        "28e7d419939f9d6b"
+      ],
+      "arrivalRank": 9,
+      "hasDatasheet": true,
+      "priceTaxBasis": "exclusive",
+      "priceSource": "Archived retail offer and SKU quantity table",
+      "snapshot": "2026-08-21"
+    }
+  ],
+  "categories": [
+    "Arduino",
+    "CNC",
+    "Communications",
+    "Computer Products",
+    "Controllers",
+    "Data Acquisition",
+    "Data Loggers",
+    "Electrical Switches",
+    "Electrical Terminals-Wiring",
+    "Enclosures",
+    "Industrial IoT",
+    "Large Displays",
+    "Lighting",
+    "Modbus-Bacnet-MBus Products",
+    "Motor Drivers & Controllers",
+    "Motors & Accessories",
+    "PLCs & HMIs",
+    "Panel Meters",
+    "Power Supplies",
+    "Prototyping",
+    "Relays & Relay Cards",
+    "Security",
+    "Sensors",
+    "Signal Conditioners",
+    "Software",
+    "Test Equipment",
+    "Timers",
+    "Weather"
+  ],
+  "categoryPaths": [
+    "Arduino",
+    "CNC",
+    "CNC >>> CNC Accessories",
+    "CNC >>> CNC Controllers",
+    "Communications",
+    "Communications >>> Adapters",
+    "Communications >>> CAN Bus",
+    "Communications >>> Ethernet",
+    "Communications >>> Fibre Converters",
+    "Communications >>> Serial Converters",
+    "Communications >>> Serial Servers",
+    "Communications >>> Surge Protection",
+    "Communications >>> USB Converters",
+    "Communications >>> Wireless",
+    "Communications >>> Wireless Accessories",
+    "Computer Products",
+    "Computer Products >>> Gender Changers & Adapters",
+    "Computer Products >>> Leads & Cables",
+    "Controllers",
+    "Controllers >>> 4G/5G",
+    "Controllers >>> Ethernet",
+    "Controllers >>> Generator Controllers",
+    "Controllers >>> HVAC",
+    "Controllers >>> IR & RF Remote",
+    "Controllers >>> Level",
+    "Controllers >>> PC Based",
+    "Controllers >>> Process (On-Off)",
+    "Controllers >>> Process (PID)",
+    "Controllers >>> Temperature",
+    "Controllers >>> Temperature & Humidity",
+    "Controllers >>> Temperature Solar",
+    "Data Acquisition",
+    "Data Acquisition >>> LabJack Accessories",
+    "Data Acquisition >>> LabJack Modules",
+    "Data Acquisition >>> RS-485 ASCII Protocol",
+    "Data Loggers",
+    "Data Loggers >>> Accessories",
+    "Data Loggers >>> Event and Pulse",
+    "Data Loggers >>> Temperature & Humidity",
+    "Data Loggers >>> Universal Input",
+    "Data Loggers >>> Voltage & Current",
+    "Electrical Switches",
+    "Electrical Switches >>> 22mm Switches & Indicators",
+    "Electrical Switches >>> Control Stations",
+    "Electrical Switches >>> Foot/Lever",
+    "Electrical Terminals-Wiring",
+    "Electrical Terminals-Wiring >>> Cable Glands",
+    "Electrical Terminals-Wiring >>> DIN Rail Screw Terminals",
+    "Electrical Terminals-Wiring >>> DIN Rail Special Function Terminals",
+    "Electrical Terminals-Wiring >>> DIN Rail and Accessories",
+    "Electrical Terminals-Wiring >>> Wire Labels",
+    "Enclosures",
+    "Enclosures >>> ABS Control Box",
+    "Enclosures >>> Accessories",
+    "Enclosures >>> Aluminium",
+    "Enclosures >>> DIN Rail Enclosures",
+    "Enclosures >>> DIN Rail PCB Mounts",
+    "Enclosures >>> Plastic",
+    "Industrial IoT",
+    "Industrial IoT >>> 3G/4G Routers",
+    "Industrial IoT >>> Accessories",
+    "Industrial IoT >>> Remote Monitoring & Cloud",
+    "Industrial IoT >>> SMS Alarming",
+    "Industrial IoT >>> Wireless",
+    "Large Displays",
+    "Large Displays >>> Accessories",
+    "Large Displays >>> Counter/Timer",
+    "Large Displays >>> Freq-Tacho",
+    "Large Displays >>> Load Cell",
+    "Large Displays >>> Modbus-Serial",
+    "Large Displays >>> Process 4-20mA/0-10V",
+    "Large Displays >>> Temperature",
+    "Large Displays >>> Universal",
+    "Lighting",
+    "Lighting >>> Light Towers",
+    "Lighting >>> Strip Lighting",
+    "Lighting >>> Strip Lighting Accessories",
+    "Lighting >>> Warning Lights",
+    "Modbus-Bacnet-MBus Products",
+    "Modbus-Bacnet-MBus Products >>> Gateways",
+    "Modbus-Bacnet-MBus Products >>> HVAC",
+    "Modbus-Bacnet-MBus Products >>> IO Modules Bacnet",
+    "Modbus-Bacnet-MBus Products >>> IO Modules MQTT",
+    "Modbus-Bacnet-MBus Products >>> IO Modules Modbus RTU",
+    "Modbus-Bacnet-MBus Products >>> IO Modules Modbus TCP",
+    "Modbus-Bacnet-MBus Products >>> Loggers",
+    "Modbus-Bacnet-MBus Products >>> Software",
+    "Modbus-Bacnet-MBus Products >>> Temp Humidity",
+    "Modbus-Bacnet-MBus Products >>> Wireless",
+    "Motor Drivers & Controllers",
+    "Motor Drivers & Controllers >>> Accessories",
+    "Motor Drivers & Controllers >>> DC Motor Drivers",
+    "Motor Drivers & Controllers >>> Industrial Servo Drivers",
+    "Motor Drivers & Controllers >>> Motors and Motion Controllers",
+    "Motor Drivers & Controllers >>> Single Phase Motor Controller",
+    "Motor Drivers & Controllers >>> Stepper Drivers",
+    "Motor Drivers & Controllers >>> Stepper Drivers (Closed Loop)",
+    "Motor Drivers & Controllers >>> Stepper Drivers (Open Loop)",
+    "Motor Drivers & Controllers >>> Stepper Power Supplies",
+    "Motor Drivers & Controllers >>> VFD Accessories",
+    "Motor Drivers & Controllers >>> Variable Frequency Drives",
+    "Motors & Accessories",
+    "Motors & Accessories >>> DC Motors",
+    "Motors & Accessories >>> Encoders",
+    "Motors & Accessories >>> Gear Boxes",
+    "Motors & Accessories >>> Industrial Servo Motors",
+    "Motors & Accessories >>> Integrated Servo Motors",
+    "Motors & Accessories >>> Integrated Stepper Motors (Closed Loop)",
+    "Motors & Accessories >>> Integrated Stepper Motors (Open Loop)",
+    "Motors & Accessories >>> RC Servo Motors",
+    "Motors & Accessories >>> Shaft Couplers & Adaptors",
+    "Motors & Accessories >>> Stepper Motors  with Encoder (Closed Loop)",
+    "Motors & Accessories >>> Stepper Motors (Open Loop)",
+    "PLCs & HMIs",
+    "PLCs & HMIs >>> Accessories",
+    "PLCs & HMIs >>> HMIs Conch",
+    "PLCs & HMIs >>> HMIs Delta",
+    "PLCs & HMIs >>> HMIs Emko",
+    "PLCs & HMIs >>> I/O Modules Delta",
+    "PLCs & HMIs >>> PLCs Delta",
+    "PLCs & HMIs >>> PLRs Akytec",
+    "PLCs & HMIs >>> PLRs Teco",
+    "Panel Meters",
+    "Panel Meters >>> AC Power Meters",
+    "Panel Meters >>> Accessories",
+    "Panel Meters >>> Counters",
+    "Panel Meters >>> DC Generator",
+    "Panel Meters >>> Flow and Totaliser Meters",
+    "Panel Meters >>> IP65-7 Waterproof",
+    "Panel Meters >>> Load Cell Meters",
+    "Panel Meters >>> MultiChannel",
+    "Panel Meters >>> Process Meters (24x48mm)",
+    "Panel Meters >>> Process Meters (>=48 x 96mm)",
+    "Panel Meters >>> Process Meters(48x48mm)",
+    "Panel Meters >>> Serial RS-485",
+    "Panel Meters >>> Speed & Tachometers",
+    "Panel Meters >>> Temperature Meters",
+    "Panel Meters >>> Timers",
+    "Power Supplies",
+    "Power Supplies >>> Accessories",
+    "Power Supplies >>> Battery Management",
+    "Power Supplies >>> Caged/Enclosed",
+    "Power Supplies >>> DC-AC Inverters",
+    "Power Supplies >>> DC-DC Converter Cage",
+    "Power Supplies >>> DC-DC Converter DIN Rail",
+    "Power Supplies >>> DIN Rail",
+    "Power Supplies >>> DIN Rail (3\u03a6/415 VAC)",
+    "Power Supplies >>> DIN Rail 24VAC to DC",
+    "Power Supplies >>> DIN Rail >=100W",
+    "Power Supplies >>> DIN Rail with UPS Function",
+    "Power Supplies >>> IP67 & LED Supplies",
+    "Power Supplies >>> KNX",
+    "Power Supplies >>> Motor Drive Supplies",
+    "Power Supplies >>> MultiRail",
+    "Power Supplies >>> Power Adapters/ Plug Packs",
+    "Prototyping",
+    "Prototyping >>> Circuit Breakers",
+    "Prototyping >>> Fans",
+    "Prototyping >>> Regulators & Converters",
+    "Prototyping >>> Solar Panel",
+    "Prototyping >>> Switches & Buttons",
+    "Prototyping >>> Wireless & RFID",
+    "Relays & Relay Cards",
+    "Relays & Relay Cards >>> Alarm & Fault",
+    "Relays & Relay Cards >>> Contactors",
+    "Relays & Relay Cards >>> DIN Rail Mount",
+    "Relays & Relay Cards >>> Latching and Sequence",
+    "Relays & Relay Cards >>> Panel Mount & PCB",
+    "Relays & Relay Cards >>> Relay Cards",
+    "Relays & Relay Cards >>> SSRs & Accessories",
+    "Relays & Relay Cards >>> Slimline",
+    "Security",
+    "Security >>> Detection",
+    "Security >>> Identification",
+    "Sensors",
+    "Sensors >>> 1 Wire",
+    "Sensors >>> Accelerometers",
+    "Sensors >>> CO2 sensors",
+    "Sensors >>> Capacitive Proximity Sensors",
+    "Sensors >>> Current / Voltage",
+    "Sensors >>> Current Transducers",
+    "Sensors >>> Current Transformer",
+    "Sensors >>> Electronic Compasses",
+    "Sensors >>> Float Switches",
+    "Sensors >>> Flow Sensors",
+    "Sensors >>> Hall Effect",
+    "Sensors >>> Inclinometers / Tilt Sensors",
+    "Sensors >>> Inductive Proximity Sensors",
+    "Sensors >>> Length & Distance",
+    "Sensors >>> Light Sensor",
+    "Sensors >>> Limit Switches",
+    "Sensors >>> Liquid Level Sensors",
+    "Sensors >>> Load Cells",
+    "Sensors >>> PhotoElectric Switches",
+    "Sensors >>> Pressure Transducers",
+    "Sensors >>> RTD - PT100",
+    "Sensors >>> Temperature & Humidity",
+    "Sensors >>> Temperature Other",
+    "Sensors >>> Thermocouples",
+    "Sensors >>> Ultrasonic",
+    "Sensors >>> VOC - Air Quality",
+    "Signal Conditioners",
+    "Signal Conditioners >>> Isolated Converters",
+    "Signal Conditioners >>> Load Cell",
+    "Signal Conditioners >>> Non-isolated Converters",
+    "Signal Conditioners >>> Signal Isolators",
+    "Signal Conditioners >>> Surge Arrester",
+    "Software",
+    "Test Equipment",
+    "Test Equipment >>> Calibrators & Generators",
+    "Test Equipment >>> Configuration Services",
+    "Test Equipment >>> Temperature",
+    "Timers",
+    "Timers >>> DIN Rail",
+    "Timers >>> Panel Mount",
+    "Timers >>> Timeclocks",
+    "Weather",
+    "Weather >>> BACnet Gateways",
+    "Weather >>> BACnet Weather Station Kit",
+    "Weather >>> Modbus Gateways",
+    "Weather >>> Modbus Weather Station Kits",
+    "Weather >>> Sensors",
+    "Weather >>> Weather Station Accessories",
+    "Weather >>> Weather Station Kits"
+  ],
+  "brandLogos": {
+    "ADF Web": "assets/brands/ADF-Web.png",
+    "Akytec": "assets/brands/Akytec.png",
+    "Alish": "assets/brands/Alish.gif",
+    "AzeoTech": "assets/brands/AzeoTech.png",
+    "CNCDrive": "assets/brands/CNCDrive.png",
+    "DCBox": "assets/brands/DCBox.png",
+    "DELTA": "assets/brands/DELTA.png",
+    "Fema": "assets/brands/Fema.jpg",
+    "Foxtam Controls": "assets/brands/Foxtam-Controls.png",
+    "GJY Electronics": "assets/brands/GJY-Electronics.png",
+    "Hanyoung Nux": "assets/brands/Hanyoung-Nux.gif",
+    "King Pigeon": "assets/brands/King-Pigeon.png",
+    "LabJack": "assets/brands/LabJack.png",
+    "Leadshine": "assets/brands/Leadshine.png",
+    "Mean Well / ESI": "assets/brands/Mean-Well---ESI.png",
+    "Milesight": "assets/brands/Milesight.png",
+    "Novus": "assets/brands/Novus.jpg",
+    "Ocean Controls": "assets/brands/ocean-controls-logo.png",
+    "Rika Sensor": "assets/brands/Rika-Sensor.png",
+    "SMS": "assets/brands/SMS.jpeg",
+    "Saip Group": "assets/brands/Saip-Group.jpg",
+    "Teracom": "assets/brands/Teracom.png"
+  },
+  "industries": [
+    "Manufacturing",
+    "Mining",
+    "Agribusiness",
+    "Marine",
+    "Transport",
+    "Government",
+    "Construction",
+    "HVAC"
+  ],
+  "industryMap": {}
+}

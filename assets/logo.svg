@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 220" width="100%" height="100%">
+  <defs>
+    <linearGradient id="cyanWaveGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00C2FF" />
+      <stop offset="100%" stop-color="#0090D6" />
+    </linearGradient>
+  </defs>
+
+  <!-- O Outer Rounded Box in Dark Blue #0e2a52 -->
+  <rect x="94" y="60" width="130" height="104" rx="28" fill="none" stroke="#0e2a52" stroke-width="20" stroke-linejoin="round" />
+
+  <!-- Dynamic Cyan Wave slicing through the O -->
+  <path d="M 102 96 C 130 96, 140 76, 172 76 C 196 76, 204 90, 204 104 C 204 126, 172 136, 156 136 C 130 136, 142 120, 160 120 C 172 120, 176 114, 176 108 C 176 102, 170 98, 162 98 C 146 98, 138 126, 114 126 C 96 126, 88 116, 88 108 C 88 102, 94 96, 102 96 Z" fill="url(#cyanWaveGrad)" />
+  <path d="M 88 98 L 180 98" stroke="#00C2FF" stroke-width="12" stroke-linecap="round" />
+  <path d="M 160 98 Q 192 98 192 116 Q 192 138 152 142 Q 132 144 140 128 Q 146 118 164 118" fill="none" stroke="#00C2FF" stroke-width="10" stroke-linecap="round" />
+
+  <!-- CEAN in bold geometric dark blue #0e2a52 -->
+  <g fill="#0e2a52">
+    <!-- C -->
+    <path d="M 292 68 C 260 68, 240 88, 240 120 C 240 152, 260 172, 292 172 C 314 172, 328 160, 332 150 L 308 140 C 304 146, 298 152, 290 152 C 274 152, 262 138, 262 120 C 262 102, 274 88, 290 88 C 298 88, 304 94, 308 100 L 332 90 C 328 80, 314 68, 292 68 Z" />
+    
+    <!-- E -->
+    <path d="M 346 70 L 412 70 L 412 88 L 368 88 L 368 110 L 406 110 L 406 128 L 368 128 L 368 154 L 414 154 L 414 172 L 346 172 Z" />
+
+    <!-- A -->
+    <path d="M 448 70 L 424 172 L 446 172 L 452 146 L 478 146 L 484 172 L 506 172 L 482 70 Z M 456 128 L 465 92 L 474 128 Z" />
+
+    <!-- N -->
+    <path d="M 518 70 L 518 172 L 540 172 L 572 106 L 572 172 L 592 172 L 592 70 L 570 70 L 538 136 L 538 70 Z" />
+  </g>
+
+  <!-- Cyan accent horizontal bar under CEAN -->
+  <rect x="238" y="122" width="228" height="6" rx="3" fill="#00ADEF" />
+
+  <!-- CONTROLS in bold italic uppercase dark blue #0e2a52 -->
+  <text x="230" y="210" font-family="'Outfit', 'Plus Jakarta Sans', system-ui, sans-serif" font-weight="900" font-size="44" letter-spacing="4" fill="#0e2a52" font-style="italic">
+    CONTROLS
+  </text>
+</svg>

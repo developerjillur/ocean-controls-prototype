@@ -1,0 +1,839 @@
+{
+  "brands": [
+    {
+      "name": "Mean Well / ESI",
+      "logo": "assets/brands/Mean-Well---ESI.png",
+      "description": "Power supplies, DC-DC converters and pressure transducers",
+      "origin": "Taiwan",
+      "categories": [
+        "Power Supplies",
+        "Sensors"
+      ],
+      "sourceSKUs": [
+        "PSM-900",
+        "PSM-997",
+        "PSM-9971"
+      ]
+    },
+    {
+      "name": "Novus",
+      "logo": "assets/brands/Novus.jpg",
+      "description": "Process controllers, transmitters and large indicators",
+      "origin": "Brazil",
+      "categories": [
+        "Controllers",
+        "Sensors",
+        "Panel Meters",
+        "Large Displays"
+      ],
+      "sourceSKUs": [
+        "SIG-130",
+        "SIG-131",
+        "IPI-103",
+        "NOR-111"
+      ]
+    },
+    {
+      "name": "Leadshine",
+      "logo": "assets/brands/Leadshine.png",
+      "description": "Stepper and servo drives, motors and motion accessories",
+      "origin": "China",
+      "categories": [
+        "Motor Drivers & Controllers",
+        "Motors & Accessories"
+      ],
+      "sourceSKUs": [
+        "SMC-055",
+        "LSK-001",
+        "LSK-002",
+        "LSK-070",
+        "LSK-071",
+        "LSK-073"
+      ]
+    },
+    {
+      "name": "Hanyoung Nux",
+      "logo": "assets/brands/Hanyoung-Nux.gif",
+      "description": "22 mm switchgear, photoelectric switches and light towers",
+      "origin": "South Korea",
+      "categories": [
+        "Electrical Switches",
+        "Sensors",
+        "Lighting",
+        "Timers"
+      ],
+      "sourceSKUs": [
+        "HNC-061",
+        "HNL-020",
+        "HNL-022",
+        "HNL-0301",
+        "HNR-100"
+      ]
+    },
+    {
+      "name": "Unbranded / assorted",
+      "logo": "",
+      "description": "Assorted leads, breakers, fans and adapters",
+      "origin": "Various",
+      "categories": [
+        "Computer Products",
+        "Prototyping",
+        "Power Supplies"
+      ],
+      "sourceSKUs": [
+        "CAB-101",
+        "CAB-102",
+        "CAB-103",
+        "CIR-001",
+        "CIR-002",
+        "CIR-003"
+      ]
+    },
+    {
+      "name": "IBEST",
+      "logo": "assets/brands/IBEST.png",
+      "description": "Inductive and capacitive proximity sensing, shaft couplers",
+      "origin": "China",
+      "categories": [
+        "Sensors",
+        "Motors & Accessories"
+      ],
+      "sourceSKUs": []
+    },
+    {
+      "name": "Ocean Controls",
+      "logo": "assets/brands/Ocean-Controls.png",
+      "description": "Our own range — designed and assembled in Carrum Downs",
+      "origin": "Carrum Downs, Australia",
+      "categories": [
+        "Communications",
+        "Relays & Relay Cards",
+        "Weather",
+        "Data Loggers"
+      ],
+      "sourceSKUs": [
+        "KTA-387",
+        "KTA-397",
+        "KTA-401",
+        "KTA-402",
+        "KTA-367A",
+        "DTC-012",
+        "DTC-009",
+        "DTC-0091"
+      ]
+    },
+    {
+      "name": "DCBox",
+      "logo": "assets/brands/DCBox.png",
+      "description": "Pressure transducers, load cells and process indicators",
+      "origin": "China",
+      "categories": [
+        "Sensors",
+        "Panel Meters"
+      ],
+      "sourceSKUs": [
+        "DBI-032",
+        "DBI-033"
+      ]
+    },
+    {
+      "name": "Unbranded / control gear",
+      "logo": "",
+      "description": "Float switches, control stations and signal generators",
+      "origin": "Various",
+      "categories": [
+        "Sensors",
+        "Electrical Switches",
+        "Communications",
+        "Test Equipment"
+      ],
+      "sourceSKUs": [
+        "LEA-002",
+        "HER-240",
+        "HER-240G",
+        "HER-300",
+        "HET-100",
+        "HET-105",
+        "HET-115"
+      ]
+    },
+    {
+      "name": "SMS",
+      "logo": "assets/brands/SMS.jpeg",
+      "description": "DIN rail terminals, wire labels and cable glands",
+      "origin": "China",
+      "categories": [
+        "Electrical Terminals & Wiring"
+      ],
+      "sourceSKUs": [
+        "CGL-001",
+        "CGL-004",
+        "CGL-007"
+      ]
+    },
+    {
+      "name": "Conch",
+      "logo": "assets/brands/Conch.png",
+      "description": "Proximity sensing and solid state relays",
+      "origin": "Taiwan",
+      "categories": [
+        "Sensors",
+        "Relays & Relay Cards",
+        "PLCs & HMIs"
+      ],
+      "sourceSKUs": []
+    },
+    {
+      "name": "Foxtam Controls",
+      "logo": "assets/brands/Foxtam-Controls.png",
+      "description": "Alarm and fault relays, slimline relays, timers",
+      "origin": "United Kingdom",
+      "categories": [
+        "Relays & Relay Cards",
+        "Sensors",
+        "Timers"
+      ],
+      "sourceSKUs": [
+        "NTR-150",
+        "NTR-180",
+        "NTR-190",
+        "NTR-160"
+      ]
+    },
+    {
+      "name": "Emko",
+      "logo": "assets/brands/Emko.png",
+      "description": "Temperature controllers and HMI operator panels",
+      "origin": "Turkey",
+      "categories": [
+        "Controllers",
+        "Sensors",
+        "PLCs & HMIs"
+      ],
+      "sourceSKUs": []
+    },
+    {
+      "name": "Comeco",
+      "logo": "assets/brands/Comeco.png",
+      "description": "Thermocouples, RTD probes and on-off controllers",
+      "origin": "Turkey",
+      "categories": [
+        "Sensors",
+        "Controllers"
+      ],
+      "sourceSKUs": []
+    },
+    {
+      "name": "Teracom",
+      "logo": "assets/brands/Teracom.png",
+      "description": "Ethernet and 4G monitoring, 1-Wire sensing",
+      "origin": "Bulgaria",
+      "categories": [
+        "Controllers",
+        "Sensors"
+      ],
+      "sourceSKUs": [
+        "TCC-039",
+        "TCS-001"
+      ]
+    },
+    {
+      "name": "Rika Sensor",
+      "logo": "assets/brands/Rika-Sensor.png",
+      "description": "Weather sensors — wind, rain, radiation, water quality",
+      "origin": "China",
+      "categories": [
+        "Weather",
+        "Sensors"
+      ],
+      "sourceSKUs": [
+        "RKS-002A",
+        "RKS-070"
+      ]
+    },
+    {
+      "name": "RION",
+      "logo": "assets/brands/RION.png",
+      "description": "Inclinometers, accelerometers and electronic compasses",
+      "origin": "China",
+      "categories": [
+        "Sensors"
+      ],
+      "sourceSKUs": []
+    },
+    {
+      "name": "Akytec",
+      "logo": "assets/brands/Akytec.png",
+      "description": "Modbus I/O, programmable relays and panel meters",
+      "origin": "Germany",
+      "categories": [
+        "PLCs & HMIs",
+        "Panel Meters"
+      ],
+      "sourceSKUs": [
+        "AKD-001",
+        "AKB-001"
+      ]
+    },
+    {
+      "name": "LabJack",
+      "logo": "assets/brands/LabJack.png",
+      "description": "USB and Ethernet data acquisition modules",
+      "origin": "United States",
+      "categories": [
+        "Data Acquisition"
+      ],
+      "sourceSKUs": [
+        "LAJ-002",
+        "LAJ-003",
+        "LAJ-006"
+      ]
+    },
+    {
+      "name": "Weibo",
+      "logo": "assets/brands/Weibo.png",
+      "description": "Current transducers and signal isolators",
+      "origin": "China",
+      "categories": [
+        "Sensors",
+        "Signal Conditioners"
+      ],
+      "sourceSKUs": []
+    },
+    {
+      "name": "Produal",
+      "logo": "assets/brands/Produal.png",
+      "description": "HVAC sensing and building automation I/O",
+      "origin": "Finland",
+      "categories": [
+        "Sensors"
+      ],
+      "sourceSKUs": []
+    },
+    {
+      "name": "Saip Group",
+      "logo": "assets/brands/Saip-Group.jpg",
+      "description": "ABS control boxes and waterproof enclosures",
+      "origin": "China",
+      "categories": [
+        "Enclosures",
+        "Sensors",
+        "Controllers"
+      ],
+      "sourceSKUs": [
+        "SPE-010",
+        "SPE-015",
+        "SPE-018"
+      ]
+    },
+    {
+      "name": "DELTA",
+      "logo": "assets/brands/DELTA.png",
+      "description": "PLCs, HMIs and variable frequency drives",
+      "origin": "Taiwan",
+      "categories": [
+        "PLCs & HMIs",
+        "Motor Drivers & Controllers"
+      ],
+      "sourceSKUs": [
+        "DEC-200",
+        "DEI-100",
+        "DEI-101"
+      ]
+    },
+    {
+      "name": "Alish",
+      "logo": "assets/brands/Alish.gif",
+      "description": "Signal isolators, load cell conditioning, large displays",
+      "origin": "China",
+      "categories": [
+        "Signal Conditioners",
+        "Large Displays",
+        "Panel Meters"
+      ],
+      "sourceSKUs": [
+        "DBI-050"
+      ]
+    },
+    {
+      "name": "TECO",
+      "logo": "assets/brands/TECO.png",
+      "description": "Programmable relays, contactors and VFDs",
+      "origin": "Taiwan",
+      "categories": [
+        "PLCs & HMIs",
+        "Relays & Relay Cards",
+        "Motor Drivers & Controllers"
+      ],
+      "sourceSKUs": []
+    },
+    {
+      "name": "Davis Instruments",
+      "logo": "assets/brands/Davis-Instruments.webp",
+      "description": "Vantage Pro weather stations and accessories",
+      "origin": "United States",
+      "categories": [
+        "Weather"
+      ],
+      "sourceSKUs": []
+    },
+    {
+      "name": "3onedata",
+      "logo": "assets/brands/3onedata.png",
+      "description": "Fibre and serial converters, industrial Ethernet",
+      "origin": "China",
+      "categories": [
+        "Communications"
+      ],
+      "sourceSKUs": []
+    },
+    {
+      "name": "Simex",
+      "logo": "assets/brands/Simex.png",
+      "description": "Modbus I/O modules and waterproof panel meters",
+      "origin": "Poland",
+      "categories": [
+        "Panel Meters",
+        "Signal Conditioners"
+      ],
+      "sourceSKUs": []
+    },
+    {
+      "name": "Senix",
+      "logo": "assets/brands/Senix.png",
+      "description": "ToughSonic ultrasonic distance and level sensors",
+      "origin": "United States",
+      "categories": [
+        "Sensors"
+      ],
+      "sourceSKUs": []
+    },
+    {
+      "name": "Milesight",
+      "logo": "assets/brands/Milesight.png",
+      "description": "4G and 5G industrial routers, LoRaWAN controllers",
+      "origin": "China",
+      "categories": [
+        "Industrial IoT",
+        "Controllers",
+        "Communications"
+      ],
+      "sourceSKUs": [
+        "ULC-008C",
+        "ULC-075",
+        "ULC-141"
+      ]
+    },
+    {
+      "name": "Fema",
+      "logo": "assets/brands/Fema.jpg",
+      "description": "Signal isolators, panel meters and large counters",
+      "origin": "Spain",
+      "categories": [
+        "Signal Conditioners",
+        "Panel Meters",
+        "Large Displays"
+      ],
+      "sourceSKUs": [
+        "FMI-110",
+        "FMI-905",
+        "FMI-150"
+      ]
+    },
+    {
+      "name": "ATOP",
+      "logo": "assets/brands/ATOP.png",
+      "description": "Protocol gateways, serial servers, industrial Ethernet",
+      "origin": "Taiwan",
+      "categories": [
+        "Communications"
+      ],
+      "sourceSKUs": []
+    },
+    {
+      "name": "Yotta Control",
+      "logo": "assets/brands/Yotta-Control.png",
+      "description": "Modbus RTU and TCP I/O modules",
+      "origin": "Taiwan",
+      "categories": [
+        "Communications"
+      ],
+      "sourceSKUs": []
+    },
+    {
+      "name": "Cledlight",
+      "logo": "assets/brands/Cledlight.jpg",
+      "description": "LED strip lighting and accessories",
+      "origin": "China",
+      "categories": [
+        "Lighting"
+      ],
+      "sourceSKUs": []
+    },
+    {
+      "name": "ADF Web",
+      "logo": "assets/brands/ADF-Web.png",
+      "description": "Protocol converters — BACnet, Modbus, MQTT, M-Bus",
+      "origin": "Italy",
+      "categories": [
+        "Modbus",
+        "BACnet & M-Bus"
+      ],
+      "sourceSKUs": [
+        "ADW-001",
+        "ADW-002",
+        "ADW-003"
+      ]
+    },
+    {
+      "name": "Microedge",
+      "logo": "assets/brands/Microedge.png",
+      "description": "Temperature, voltage and pulse data loggers",
+      "origin": "Canada",
+      "categories": [
+        "Data Loggers"
+      ],
+      "sourceSKUs": []
+    },
+    {
+      "name": "Unbranded / drives",
+      "logo": "",
+      "description": "Small DC motors, RC servos and PCB relays",
+      "origin": "Various",
+      "categories": [
+        "Motors & Accessories",
+        "Relays & Relay Cards",
+        "Sensors"
+      ],
+      "sourceSKUs": []
+    },
+    {
+      "name": "CNCDrive",
+      "logo": "assets/brands/CNCDrive.png",
+      "description": "CNC motion controllers and breakout hardware",
+      "origin": "Hungary",
+      "categories": [
+        "Motor Drivers & Controllers",
+        "CNC",
+        "Software"
+      ],
+      "sourceSKUs": [
+        "CND-900",
+        "CND-901",
+        "CND-902"
+      ]
+    },
+    {
+      "name": "King Pigeon",
+      "logo": "assets/brands/King-Pigeon.png",
+      "description": "Detection sensors for alarming and monitoring",
+      "origin": "China",
+      "categories": [
+        "Security",
+        "Sensors"
+      ],
+      "sourceSKUs": [
+        "KPR-106"
+      ]
+    },
+    {
+      "name": "Cixi Sanhe",
+      "logo": "assets/brands/Cixi-Sanhe.jpg",
+      "description": "DIN rail PCB mounts and small enclosures",
+      "origin": "China",
+      "categories": [
+        "Enclosures"
+      ],
+      "sourceSKUs": []
+    },
+    {
+      "name": "GJY Electronics",
+      "logo": "assets/brands/GJY-Electronics.png",
+      "description": "1-Wire and PT100 temperature probes",
+      "origin": "China",
+      "categories": [
+        "Sensors"
+      ],
+      "sourceSKUs": [
+        "GJS-002"
+      ]
+    },
+    {
+      "name": "Camax",
+      "logo": "assets/brands/Camax.png",
+      "description": "Modbus RTU I/O modules",
+      "origin": "Australia",
+      "categories": [
+        "Modbus",
+        "BACnet & M-Bus"
+      ],
+      "sourceSKUs": []
+    },
+    {
+      "name": "AzeoTech",
+      "logo": "assets/brands/AzeoTech.png",
+      "description": "DAQFactory — HMI and SCADA software for data acquisition",
+      "origin": "United States",
+      "categories": [
+        "Software"
+      ],
+      "sourceSKUs": [
+        "AZE-011",
+        "AZE-012",
+        "AZE-013"
+      ]
+    },
+    {
+      "name": "Hydreon",
+      "logo": "assets/brands/Hydreon.webp",
+      "description": "Optical rain sensors",
+      "origin": "United States",
+      "categories": [
+        "Weather"
+      ],
+      "sourceSKUs": []
+    },
+    {
+      "name": "Xiamen Maxwell Automation",
+      "logo": "assets/brands/Xiamen-Maxwell-Automation.png",
+      "description": "Thermocouples and isolated converters",
+      "origin": "China",
+      "categories": [
+        "Sensors",
+        "Signal Conditioners"
+      ],
+      "sourceSKUs": []
+    },
+    {
+      "name": "RFDesign",
+      "logo": "assets/brands/RFDesign.png",
+      "description": "Wireless accessories",
+      "origin": "Australia",
+      "categories": [
+        "Communications"
+      ],
+      "sourceSKUs": []
+    },
+    {
+      "name": "Hiland",
+      "logo": "",
+      "description": "IR and RF remote control",
+      "origin": "China",
+      "categories": [
+        "Controllers"
+      ],
+      "sourceSKUs": []
+    },
+    {
+      "name": "SparkFun",
+      "logo": "assets/brands/SparkFun.webp",
+      "description": "Open-source electronics and breakout boards",
+      "origin": "United States",
+      "categories": [
+        "Sensors"
+      ],
+      "sourceSKUs": []
+    }
+  ],
+  "categoryCards": [
+    {
+      "name": "Sensors",
+      "category": "Sensors",
+      "image": "assets/categories/Sensors__GJS-002.webp"
+    },
+    {
+      "name": "Power Supplies",
+      "category": "Power Supplies",
+      "image": "assets/categories/Power-Supplies__PSM-900.webp"
+    },
+    {
+      "name": "Controllers",
+      "category": "Controllers",
+      "image": "assets/categories/Controllers__KTA-397.webp"
+    },
+    {
+      "name": "Modbus, BACnet & M-Bus",
+      "category": "Modbus-Bacnet-MBus Products",
+      "image": "assets/categories/Modbus-Bacnet-MBus-Products__ADW-002.webp"
+    },
+    {
+      "name": "Panel Meters",
+      "category": "Panel Meters",
+      "image": "assets/categories/Panel-Meters__DBI-032.webp"
+    },
+    {
+      "name": "Relays & Relay Cards",
+      "category": "Relays & Relay Cards",
+      "image": "assets/categories/Relays-&-Relay-Cards__NTR-180.webp"
+    },
+    {
+      "name": "Motor Drivers & Controllers",
+      "category": "Motor Drivers & Controllers",
+      "image": "assets/categories/Motor-Drivers-&-Controllers__SMC-055.webp"
+    },
+    {
+      "name": "Communications",
+      "category": "Communications",
+      "image": "assets/categories/Communications__DTC-012.webp"
+    },
+    {
+      "name": "Electrical Terminals & Wiring",
+      "category": "Electrical Terminals-Wiring",
+      "image": "assets/categories/Electrical-Terminals-Wiring__CGL-004.webp"
+    },
+    {
+      "name": "Motors & Accessories",
+      "category": "Motors & Accessories",
+      "image": "assets/categories/Motors-&-Accessories__LSK-073.webp"
+    },
+    {
+      "name": "Weather",
+      "category": "Weather",
+      "image": "assets/categories/Weather__RKS-002A.webp"
+    },
+    {
+      "name": "Data Acquisition",
+      "category": "Data Acquisition",
+      "image": "assets/categories/Data-Acquisition__LAJ-002.webp"
+    },
+    {
+      "name": "Signal Conditioners",
+      "category": "Signal Conditioners",
+      "image": "assets/categories/Signal-Conditioners__FMI-150.webp"
+    },
+    {
+      "name": "Enclosures",
+      "category": "Enclosures",
+      "image": "assets/categories/Enclosures__SPE-015.webp"
+    },
+    {
+      "name": "PLCs & HMIs",
+      "category": "PLCs & HMIs",
+      "image": "assets/categories/PLCs-&-HMIs__DEI-100.webp"
+    },
+    {
+      "name": "Electrical Switches",
+      "category": "Electrical Switches",
+      "image": "assets/categories/Electrical-Switches__HER-300.webp"
+    },
+    {
+      "name": "Prototyping",
+      "category": "Prototyping",
+      "image": "assets/categories/Prototyping__CIR-003.webp"
+    },
+    {
+      "name": "Industrial IoT",
+      "category": "Industrial IoT",
+      "image": "assets/categories/Industrial-IoT__ULC-075.webp"
+    },
+    {
+      "name": "Data Loggers",
+      "category": "Data Loggers",
+      "image": "assets/categories/Data-Loggers__KTA-387.webp"
+    },
+    {
+      "name": "Lighting",
+      "category": "Lighting",
+      "image": "assets/categories/Lighting__HNL-022.webp"
+    },
+    {
+      "name": "Timers",
+      "category": "Timers",
+      "image": "assets/categories/Timers__HNR-100.webp"
+    },
+    {
+      "name": "Computer Products",
+      "category": "Computer Products",
+      "image": "assets/categories/Computer-Products__CAB-102.webp"
+    },
+    {
+      "name": "Large Displays",
+      "category": "Large Displays",
+      "image": "assets/categories/Large-Displays__FMI-110.webp"
+    },
+    {
+      "name": "CNC",
+      "category": "CNC",
+      "image": "assets/categories/CNC__CND-902.webp"
+    },
+    {
+      "name": "Security",
+      "category": "Security",
+      "image": "assets/categories/Security__KPR-106.webp"
+    },
+    {
+      "name": "Test Equipment",
+      "category": "Test Equipment",
+      "image": "assets/categories/Test-Equipment__HET-100.webp"
+    },
+    {
+      "name": "Software",
+      "category": "Software",
+      "image": "assets/categories/Software__AZE-012.webp"
+    },
+    {
+      "name": "Arduino",
+      "category": "Arduino",
+      "image": "assets/categories/Arduino__SIG-130.webp"
+    }
+  ],
+  "focusGroups": [
+    [
+      "All",
+      null
+    ],
+    [
+      "Sensing",
+      [
+        "Sensors",
+        "Weather"
+      ]
+    ],
+    [
+      "Control",
+      [
+        "Controllers",
+        "PLCs & HMIs",
+        "Panel Meters",
+        "Large Displays",
+        "Timers"
+      ]
+    ],
+    [
+      "Power",
+      [
+        "Power Supplies",
+        "Signal Conditioners"
+      ]
+    ],
+    [
+      "Motion",
+      [
+        "Motor Drivers & Controllers",
+        "Motors & Accessories",
+        "CNC"
+      ]
+    ],
+    [
+      "Networking",
+      [
+        "Modbus, BACnet & M-Bus",
+        "Communications",
+        "Industrial IoT",
+        "Data Acquisition",
+        "Data Loggers"
+      ]
+    ],
+    [
+      "Panel build",
+      [
+        "Enclosures",
+        "Electrical Terminals & Wiring",
+        "Electrical Switches",
+        "Relays & Relay Cards",
+        "Lighting",
+        "Prototyping"
+      ]
+    ]
+  ]
+}

@@ -1,0 +1,274 @@
+{
+  "DISCIPLINES": [
+    {
+      "tab": "Hardware & electronics",
+      "title": "Custom-designed electronics, prototype to production",
+      "blurb": "Circuit and PCB design through to a housed, labelled, DIN-mountable product. We also modify and augment off-the-shelf hardware when that is the cheaper answer — and we will say so if it is.",
+      "items": [
+        "Custom-designed electronics hardware for volumes from one-off prototypes to tens of thousands of units",
+        "Modification or augmentation of off-the-shelf hardware",
+        "Instrumentation and custom electronics, one-off and prototype through to large scale",
+        "Electrical engineering analysis and expert advice for your project"
+      ],
+      "platforms": [
+        "Circuit design",
+        "PCB layout",
+        "DIN-rail housings",
+        "IP-rated enclosures",
+        "Panel build",
+        "Small-run assembly"
+      ],
+      "parts": [
+        "SPE-015",
+        "DTC-012",
+        "KTA-367A"
+      ]
+    },
+    {
+      "tab": "PLC & machine control",
+      "title": "PLC programming and motion control",
+      "blurb": "New machine logic, retrofits, and rescuing undocumented code somebody else left behind. Written in standard Ladder, C and assembly so the next person can read it.",
+      "items": [
+        "PLC programming on Delta, Teco, Akytec and similar platforms, in standard Ladder, C and assembly languages",
+        "Motion control using stepper motors, servo motors and linear actuators in a variety of configurations",
+        "Process control programs for water treatment and wastewater treatment plants",
+        "Embedded code for motor controllers and Modbus I/O"
+      ],
+      "platforms": [
+        "Delta",
+        "Teco",
+        "Akytec",
+        "HNC Electric",
+        "Ladder",
+        "C",
+        "Assembly",
+        "Modbus RTU"
+      ],
+      "parts": [
+        "SMC-055",
+        "DEC-200",
+        "LSK-001"
+      ]
+    },
+    {
+      "tab": "Embedded & software",
+      "title": "Embedded firmware and desktop software",
+      "blurb": "From the firmware on a board we designed to the desktop application an operator uses to configure it. Including custom work on Arduino open-source controllers where that suits the budget.",
+      "items": [
+        "Embedded programming",
+        "C/C++ for embedded systems and desktop applications",
+        "Custom programming for Arduino open-source controllers",
+        "Programs for radio signal level logging and carrying out radio path surveys"
+      ],
+      "platforms": [
+        "C",
+        "C++",
+        "Arduino",
+        "Embedded Linux",
+        "Serial protocols",
+        "Data logging"
+      ],
+      "parts": [
+        "SIG-130",
+        "KTA-387",
+        "GJS-002"
+      ]
+    },
+    {
+      "tab": "HMI, SCADA & connectivity",
+      "title": "Operator interfaces and getting data out",
+      "blurb": "Screens a shift worker can read at a glance, wired through Modbus, BACnet or MQTT to whatever is already installed — plus the web front ends that embedded devices serve themselves.",
+      "items": [
+        "Human Machine Interface (HMI) development",
+        "A range of internet technologies for static and dynamic web pages served by embedded devices",
+        "Programs for automatic dialling and monitoring of tank levels",
+        "SCADA integration with building management systems and industrial controllers"
+      ],
+      "platforms": [
+        "Modbus TCP",
+        "BACnet MS/TP",
+        "BACnet IP",
+        "MQTT",
+        "M-Bus",
+        "DAQFactory",
+        "Delta HMI",
+        "Emko HMI"
+      ],
+      "parts": [
+        "ADW-002",
+        "ADW-003",
+        "ULC-008C"
+      ]
+    }
+  ],
+  "PROJECTS": [
+    {
+      "tab": "Crush tester",
+      "kind": "Case study",
+      "date": "May 2024",
+      "title": "An automated 25-tonne hydraulic press for precision load-deflection testing",
+      "client": "Australian Compliance Laboratory",
+      "paras": [
+        "Australian Compliance Laboratory came to us for a new crush tester: an automated, 25-tonne, push-pull hydraulic press that performs precision load-deflection tests on packaging and products. It is not a machine you can buy off a shelf.",
+        "The build uses a LabJack U6 data acquisition device to measure and record everything arriving from the sensors — a primary load cell, a string displacement encoder and nine modular displacement transducers. DAQFactory sits on top, reading the inputs and driving the outputs.",
+        "With that in place the lab can control the hydraulic ram, run tests, and measure and record the results. We then programmed custom automation cycles so the machine runs whole test sequences with minimal manual input.",
+        "It was also built to grow. As the lab starts testing new products, the system takes new automation cycles and new sensors without being rebuilt — and on price the LabJack and DAQFactory combination came in competitively against other data-acquisition systems, with DAQFactory a one-time purchase rather than a subscription."
+      ],
+      "hasQuote": true,
+      "quote": "We work with Ocean Controls to provide us with smart, custom machinery that gives us a competitive edge. This kind of machine cannot be purchased off the shelf and suits our business model perfectly.",
+      "quoteBy": "Australian Compliance Laboratory",
+      "specs": [
+        [
+          "25 t",
+          "push-pull press capacity"
+        ],
+        [
+          "9",
+          "modular displacement transducers"
+        ],
+        [
+          "1",
+          "primary load cell"
+        ],
+        [
+          "1",
+          "string displacement encoder"
+        ]
+      ],
+      "partsLabel": "Related data acquisition equipment",
+      "parts": [
+        "LAJ-002",
+        "AZE-013",
+        "LAJ-003"
+      ],
+      "partsNote": "The LabJack U6 itself, plus terminal boards, probes and DAQFactory licences, all sit in our Data Acquisition and Software categories.",
+      "images": [
+        "assets/editorial/1715145480984.webp"
+      ],
+      "credits": [
+        {
+          "src": "assets/editorial/1715145959739.webp",
+          "name": "Australian Compliance Laboratory"
+        },
+        {
+          "src": "assets/editorial/1715146047458.webp",
+          "name": "Ocean Controls"
+        }
+      ]
+    },
+    {
+      "tab": "Loch Sport pump stations",
+      "kind": "Project",
+      "date": "Gippsland, Victoria",
+      "title": "Sewer pump station control for a $40 million reticulated sewerage rollout",
+      "client": "Gippsland Water",
+      "paras": [
+        "Gippsland Water undertook a $40 million project to deliver reticulated sewerage services to approximately 2,700 properties in the lakeside township of Loch Sport, Victoria.",
+        "Ocean Controls was contracted on the sewer pump station work — the kind of job where process control, remote monitoring and tank level management all have to survive being installed once and then left alone in the weather for years.",
+        "It is representative of a strand of work that runs through our project list: process control programs for water treatment and wastewater treatment plants, and programs for automatic dialling and monitoring of tank levels."
+      ],
+      "hasQuote": false,
+      "quote": "",
+      "quoteBy": "",
+      "specs": [
+        [
+          "$40 m",
+          "total project value"
+        ],
+        [
+          "2,700",
+          "properties connected"
+        ],
+        [
+          "Loch Sport",
+          "lakeside township, VIC"
+        ],
+        [
+          "Water",
+          "sector"
+        ]
+      ],
+      "partsLabel": "Typical equipment for this work",
+      "parts": [
+        "KTA-397",
+        "ADW-002",
+        "HET-100"
+      ],
+      "partsNote": "Level monitoring, SMS alarming and protocol gateways from the same catalogue we sell to everyone else.",
+      "images": [],
+      "credits": []
+    }
+  ],
+  "CUSTOMERS": [
+    "The Shepherd Ag",
+    "Gippsland Water",
+    "Metro Trains",
+    "Schneider Electric",
+    "Queensland Rail",
+    "Australian Universities",
+    "Mining & Industrial Wholesalers",
+    "CSIRO",
+    "Department of Defence",
+    "Electrical Wholesalers"
+  ],
+  "SOFTWARE": [
+    [
+      "OCS-011",
+      "ModbusView TCP",
+      "Simulates Modbus master and slave devices on a PC — the tool we reach for when commissioning a network before the hardware arrives."
+    ],
+    [
+      "OCS-482",
+      "Weathercloud Feature",
+      "Adds a cloud dashboard via Weathercloud to a KTA-382, KTA-401 or KTA-402 weather station gateway."
+    ],
+    [
+      "OCS-382",
+      "Weather Underground Feature",
+      "The same idea through Weather Underground, for sites already reporting into that network."
+    ]
+  ],
+  "APPLICATIONS": [
+    "Motion control using stepper motors, servo motors and linear actuators in a variety of configurations",
+    "Process control programs for water treatment and wastewater treatment plants",
+    "Embedded code for motor controllers and Modbus I/O",
+    "Programs for radio signal level logging and carrying out radio path surveys",
+    "Programs for automatic dialling and monitoring of tank levels",
+    "Custom test rigs and data acquisition, including the 25-tonne crush tester above"
+  ],
+  "PROCESS": [
+    [
+      "01",
+      "No obligation",
+      "Tell us the idea",
+      "Send a written outline, a drawing, or just describe the problem. Advice is freely given by our engineering staff over the phone or by email."
+    ],
+    [
+      "02",
+      "We help with this",
+      "Shape the specification",
+      "If the requirement is not yet a spec, we are happy to help you develop it into something detailed enough to quote against properly."
+    ],
+    [
+      "03",
+      "Fixed or hourly",
+      "Obligation-free quote",
+      "We quote fixed-price or hourly rates depending on how well defined the job is. You see the basis, not just a number."
+    ],
+    [
+      "04",
+      "Same building",
+      "Build, commission, support",
+      "Structured methodologies and procedures, so what you get is a complete reliable system — and the people who built it are still here afterwards."
+    ]
+  ],
+  "SECTIONS": [
+    "Who we are",
+    "Services",
+    "Projects",
+    "Clients",
+    "Own range",
+    "Process",
+    "Visit us"
+  ]
+}
